@@ -42,9 +42,16 @@ a { color: var(--blue); }
 a.match { text-decoration: none; color: var(--text); }
 .match .vs { color: var(--muted); margin: 0 5px; }
 .match em { color: var(--gold); font-style: normal; font-size: 11px; }
-.match em.live { color: var(--red); }
+.match em.live { color: var(--red); font-weight: 700; }
+.match em.ft { color: var(--green); }
 tr.started { opacity: .55; }
 .back { font-size: 13px; }
+
+.pairings { margin-top: 26px; border-top: 2px solid var(--line); padding-top: 4px; }
+.pairings table { opacity: .72; }
+.pairings h3 { margin: 14px 4px 6px; }
+code { background: var(--panel); border: 1px solid var(--line); border-radius: 3px;
+  padding: 0 4px; font-size: 12px; }
 
 .hda { display: flex; border-radius: 8px; overflow: hidden;
   border: 1px solid var(--line); margin: 14px 4px; }

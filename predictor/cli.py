@@ -761,6 +761,43 @@ def cmd_refresh_results(a):
           "Fixtures: run refresh-fixtures." % len(ok))
 
 
+def cmd_update(a):
+    """Everything online in one go: results then fixtures. Additive only."""
+    from . import refresh
+    rows = refresh.refresh_all(a.data, since=a.since)
+    print("%-5s %-10s %8s %8s  %s"
+          % ("Div", "Wrote to", "Added", "Total", "Note"))
+    print("-" * 74)
+    for r in rows:
+        print("%-5s %-10s %8d %8d  %s" % (r["div"], r["file"], r["added"],
+                                           r["total"], r["note"]))
+    print("\nDone. The engine re-fits from this pool on its next load - "
+          "no model file to retrain.")
+
+
+def cmd_refresh_openfootball(a):
+    """Second source: add / refresh an African division from openfootball."""
+    from . import refresh
+    raw = a.raw
+    out = a.outdir
+    os.makedirs(raw, exist_ok=True)
+    os.makedirs(out, exist_ok=True)
+    for div in a.leagues or refresh.OPENFOOTBALL_WORLD:
+        try:
+            r = refresh._latest_openfootball(raw, out, div)
+        except ValueError as e:
+            print("skip %s: %s" % (div, e))
+            continue
+        print("%s <- %s" % (div, r["source"]))
+        print("   wrote %d rows to %s.csv" % (r["written"].get(div, 0), div))
+        if div in r["merges"]:
+            print("   merges: %s" % "; ".join(
+                "%s -> %s" % (", ".join(v[1:]), v[0])
+                for v in r["merges"][div].items()))
+    print("\nThese leagues live in the repo bundle; the engine merges them "
+          "with the football-data pool automatically.")
+
+
 def cmd_leagues(a):
     df = loader.load(a.data)
     g = df.groupby("Div").agg(matches=("Date", "size"), first=("Date", "min"),
@@ -886,6 +923,26 @@ def build_parser():
                    help="also re-pull every season back to this start year, "
                         "e.g. 2023 rebuilds three seasons of history")
     s.set_defaults(func=cmd_refresh_results)
+
+    s = sub.add_parser("update",
+                       help="refresh everything online: football-data results "
+                            "then the fixtures feed (additive only)")
+    s.add_argument("--since", type=int, default=None,
+                   help="also re-pull every season back to this start year")
+    s.set_defaults(func=cmd_update)
+
+    s = sub.add_parser("refresh-openfootball",
+                       help="refresh African divisions from the public-domain "
+                            "openfootball/world repo (second source)")
+    s.add_argument("--leagues", nargs="*",
+                   help="division codes to refresh (default: all covered)")
+    s.add_argument("--raw", default=os.path.join(
+        os.path.dirname(__file__), os.pardir, "data", "raw"),
+                   help="where openfootball txt files are kept (default data/raw)")
+    s.add_argument("--outdir", default=os.path.join(
+        os.path.dirname(__file__), os.pardir, "data", "leagues"),
+                   help="where rebuilt league CSVs go (default data/leagues)")
+    s.set_defaults(func=cmd_refresh_openfootball)
 
     s = sub.add_parser("table", help="team attack and defence ratings")
     common(s)

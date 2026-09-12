@@ -27,6 +27,68 @@ function useFetch(url) {
   return state;
 }
 
+// ---- live scores (best-effort; never wrongly match) ------------------------
+const ABBREV = {
+  utd: "united", manu: "manchester", man: "manchester",
+  spurs: "tottenham", "nott'm": "nottingham", nottm: "nottingham",
+  wba: "westbromwich", bha: "brighton",
+  fc: "", sc: "", cf: "", afc: "", ac: "", as: "", us: "", st: "",
+  de: "", ol: "", om: "", cfc: "", pdfc: "", bsc: "", hsc: "", ssc: "",
+  "": "",
+};
+
+function toks(name) {
+  if (!name) return new Set();
+  const s = name.replace(/&/g, " ").replace(/[^a-z0-9 ]+/gi, " ");
+  const out = new Set();
+  for (let w of s.toLowerCase().split(/\s+/)) {
+    w = ABBREV[w] ?? w;
+    if (w.length >= 4) out.add(w);
+  }
+  return out;
+}
+
+function subMatch(a, b) {
+  const ta = toks(a), tb = toks(b);
+  if (!ta.size || !tb.size) return false;
+  if (ta.size === tb.size) return [...ta].every((w) => tb.has(w));
+  const s = ta.size < tb.size ? ta : tb;
+  const l = ta.size < tb.size ? tb : ta;
+  return [...s].every((w) => l.has(w)) && l.size - s.size <= 1;
+}
+
+function useLive(interval = 60000) {
+  const [live, setLive] = useState(null);
+  useEffect(() => {
+    let alive = true;
+    const poll = () =>
+      fetch("/api/live")
+        .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+        .then((d) => alive && setLive(d))
+        .catch(() => alive && setLive((prev) => prev || { enabled: false }));
+    poll();
+    const t = setInterval(poll, interval);
+    return () => { alive = false; clearInterval(t); };
+  }, [interval]);
+  return live;
+}
+
+function LiveChip({ m, live }) {
+  if (!live || !live.enabled) return null;
+  const row = live.matches.find((lm) => subMatch(lm.home, m.home) && subMatch(lm.away, m.away));
+  if (!row) return null;
+  const st = row.status;
+  const liveNow = ["1H", "HT", "2H", "ET", "BT", "P", "INT"].includes(st);
+  const ft = ["FT", "AET", "PEN"].includes(st) || st === "TBD";
+  if (st === "NS" || st === "POSTP" || st === "CANC" || st === "SUSP") return null;
+  return (
+    <em className={liveNow ? "live" : "ft"}>
+      {liveNow ? row.minute + "' " : "FT "}
+      {row.hg}-{row.ag}
+    </em>
+  );
+}
+
 const pct = (p) => Math.round(p * 100) + "%";
 
 function Bar({ p }) {
@@ -45,6 +107,7 @@ function Bar({ p }) {
 
 function Slate() {
   const { loading, data, error } = useFetch("/api/slate?days=2");
+  const live = useLive();
   if (loading) return <p className="muted pad">Loading the slate…</p>;
   if (error) return <p className="muted pad">Can't reach the service: {error}. Is it running on :8000?</p>;
 
@@ -56,6 +119,9 @@ function Slate() {
         <div>
           <h1>Football Predictor</h1>
           <p className="muted">Generated {new Date(data.generated).toLocaleString()} · {total} fixtures · model vs price where priced</p>
+          {live && !live.enabled && (
+            <p className="muted note">Live scores off — set <code>LIVE_API_KEY</code> on the service.</p>
+          )}
         </div>
       </header>
 
@@ -81,32 +147,57 @@ function Slate() {
               </tr>
             </thead>
             <tbody>
-              {g.matches.map((m, mi) => {
-                const q = m.pick + "-" + encodeURIComponent(m.home) + "&away=" + encodeURIComponent(m.away) + "&div=" + m.div;
-                return (
-                  <tr key={mi} className={m.started ? "started" : ""}>
-                    <td className="kof nowrap">{m.kickoff_label}</td>
-                    <td>
-                      <a className="match" href={"#/card?pick=" + m.pick + "&home=" + encodeURIComponent(m.home) + "&away=" + encodeURIComponent(m.away) + "&div=" + m.div}>
-                        <span className="hm">{m.home}</span>
-                        <span className="vs">v</span>
-                        <span className="aw">{m.away}</span>
-                        {m.new && <em> new</em>}
-                        {m.started && <em className="live"> started</em>}
-                      </a>
-                    </td>
-                    <td className="num">{pct(m.p["1"])}</td>
-                    <td className="num">{pct(m.p.X)}</td>
-                    <td className="num">{pct(m.p["2"])}</td>
-                    <td className="num">{pct(m.o25)}</td>
-                    <td className="num">{pct(m.btts)}</td>
-                  </tr>
-                );
-              })}
+              {g.matches.map((m, mi) => (
+                <tr key={mi} className={m.started ? "started" : ""}>
+                  <td className="kof nowrap">{m.kickoff_label}</td>
+                  <td>
+                    <a className="match" href={"#/card?pick=" + m.pick + "&home=" + encodeURIComponent(m.home) + "&away=" + encodeURIComponent(m.away) + "&div=" + m.div}>
+                      <span className="hm">{m.home}</span>
+                      <span className="vs">v</span>
+                      <span className="aw">{m.away}</span>
+                      {m.new && <em> new</em>}
+                      {m.started && <em className="live"> started</em>}
+                      <LiveChip m={m} live={live} />
+                    </a>
+                  </td>
+                  <td className="num">{pct(m.p["1"])}</td>
+                  <td className="num">{pct(m.p.X)}</td>
+                  <td className="num">{pct(m.p["2"])}</td>
+                  <td className="num">{pct(m.o25)}</td>
+                  <td className="num">{pct(m.btts)}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </section>
       ))}
+
+      {data.pairings.length > 0 && (
+        <section className="pairings">
+          <h2>Head-to-head ratings — not scheduled fixtures</h2>
+          <p className="muted">These pairings have no published kick-off in the loaded schedule; treat them as ratings of a matchup, not fixtures.</p>
+          {data.pairings.map((g) => (
+            <div key={g.code}>
+              <h3>{g.league}</h3>
+              <table>
+                <thead>
+                  <tr><th>Match</th><th className="num">1</th><th className="num">X</th><th className="num">2</th></tr>
+                </thead>
+                <tbody>
+                  {g.matches.map((m, mi) => (
+                    <tr key={mi}>
+                      <td className="nowrap"><span className="hm">{m.home}</span> <span className="vs">v</span> <span className="aw">{m.away}</span></td>
+                      <td className="num">{pct(m.p["1"])}</td>
+                      <td className="num">{pct(m.p.X)}</td>
+                      <td className="num">{pct(m.p["2"])}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </section>
+      )}
     </div>
   );
 }

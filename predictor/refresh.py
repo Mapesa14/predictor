@@ -9,7 +9,9 @@ result is written back into the same place.
 from __future__ import annotations
 
 import glob
+import json
 import os
+import re
 import tempfile
 import urllib.error
 import urllib.request
@@ -128,3 +130,71 @@ def refresh_footballdata(root: str, divs: list[str], season: str | None = None,
 DIVS = ["E0", "E1", "E2", "E3", "EC", "D1", "D2", "SP1", "SP2",
         "I1", "I2", "F1", "F2", "N1", "N2", "B1", "B2",
         "T1", "G1", "SC0", "SC1", "SC2", "SC3", "P1", "P2"]
+
+
+# --------------------------------------------------- second source: openfootball
+# African federations have no football-data feed, but the public-domain
+# openfootball/world repo carries them, one txt file per season such as
+#   africa/tanzania/2025-26_tz1.txt
+# The engine's football.txt adapter (adapters.py) turns those into the same
+# Div, Date, HomeTeam, AwayTeam, FTHG, FTAG league shape as everything else.
+OPENFOOTBALL_WORLD = {
+    "TZ1": "tanzania", "EG1": "egypt", "DZ1": "algeria", "MA1": "morocco",
+    "ZA1": "south-africa", "NG1": "nigeria", "GH1": "ghana", "KE1": "kenya",
+    "UG1": "uganda", "ZM1": "zambia", "RW1": "rwanda",
+}
+
+
+def _github_dir(repo: str, path: str) -> list[dict]:
+    import urllib.request as _ur
+    url = "https://api.github.com/repos/%s/contents/%s" % (repo, path)
+    req = _ur.Request(url, headers={"User-Agent": "football-predictor"})
+    with _ur.urlopen(req, timeout=TOP) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def _latest_openfootball(raw_dir: str, out_dir: str, div: str) -> dict:
+    """Grab this division's newest openfootball season into data/raw, then
+    rebuild every CSV that build_csvs owns (additive: earlier seasons from the
+    same repo folder stay). Returns what changed.
+    """
+    from . import adapters
+    folder = OPENFOOTBALL_WORLD.get(div)
+    if not folder:
+        raise ValueError("openfootball source covers only: %s"
+                         % ", ".join(sorted(OPENFOOTBALL_WORLD)))
+    base = "africa/%s" % folder
+    entries = [e for e in _github_dir("openfootball/world", base)
+               if e["type"] == "file" and e["name"].endswith(".txt")]
+    if not entries:
+        raise ValueError("no league files under %s" % base)
+    name = sorted(entries, key=lambda e: e["name"], reverse=True)[0]["name"]
+
+    m = re.search(r"(\d{4})-(\d{2})", name)          # 2025-26_tz1.txt
+    season = "%d-%02d" % (int(m.group(1)), int(m.group(2))) \
+        if m else "latest"
+    dest = os.path.join(raw_dir, "%s_%s.txt" % (div, season))
+    if not os.path.exists(dest):
+        url = ("https://raw.githubusercontent.com/openfootball/"
+               "world/master/%s/%s" % (base, name))
+        with urllib.request.urlopen(url, timeout=TOP) as r:
+            data = r.read()
+        with open(dest, "wb") as f:
+            f.write(data)
+    written, merges = adapters.build_csvs(raw_dir, out_dir)
+    return {"source": "openfootball/%s/%s" % (base, name),
+            "raw": dest, "written": written, "merges": merges}
+
+
+def refresh_all(root: str, since: int | None = None) -> list[dict]:
+    """football-data results for every division we track, then the fixtures
+    feed - the two things a running product needs to stay self-learning."""
+    from . import fixtures
+    out = refresh_footballdata(root, DIVS, since=since)
+    dest = os.path.join(root, "fixtures.csv")
+    fixtures.refresh(dest)
+    fx = fixtures.from_csv(dest)
+    out.append({"div": "FIX", "file": dest, "added": int(len(fx)),
+                "total": int(len(fx)),
+                "note": "upcoming fixtures feed"})
+    return out
