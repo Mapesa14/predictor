@@ -137,7 +137,11 @@ def match_score(a: str, b: str) -> bool:
 
 def _jsonable(v):
     if isinstance(v, dict):
-        return {k: _jsonable(x) for k, x in v.items()}
+        out = {}
+        for k, x in v.items():
+            key = k if not isinstance(k, tuple) else "/".join(str(t) for t in k)
+            out[key] = _jsonable(x)
+        return out
     if isinstance(v, (list, tuple, np.ndarray)):
         return [_jsonable(x) for x in v]
     if isinstance(v, (np.floating,)):

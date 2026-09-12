@@ -240,6 +240,7 @@ class Predictor:
         f1 = self._half(ms.get("1H"), h, a, neutral, scale)
         f2 = self._half(ms.get("2H"), h, a, neutral, scale)
         s = markets.summary(ft, f1, f2)
+        s["score_grid"] = markets.score_grid(ft)
 
         # what the model said on its own, before the price was folded in
         pure = markets.summary(model.score_matrix_from_rates(lam, mu, fm.rho))
@@ -255,6 +256,7 @@ class Predictor:
             s["market_result"] = mm["result"]
 
         s["home"], s["away"], s["div"] = h, a, d
+        s["pick"] = max(("1", "X", "2"), key=lambda k: s["result"].get(k, 0.0))
         s["home_new"], s["away_new"] = hnew, anew
         s["home_source"] = fm.rating_source(h)
         s["away_source"] = fm.rating_source(a)

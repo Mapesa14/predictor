@@ -184,6 +184,18 @@ def combined(m) -> dict:
     return out
 
 
+def score_grid(ft: np.ndarray, max_goals: int = 5) -> list[list[float]]:
+    """The 0..max_goals x 0..max_goals slice of one matrix, renormalised.
+
+    Same shape as the card's signature graphic: rows are home goals, columns
+    away goals, cell value the (rounded) probability of that exact scoreline.
+    """
+    g = ft[: max_goals + 1, : max_goals + 1]
+    g = np.asarray(g, dtype=float)
+    g /= max(float(g.sum()), 1e-12)
+    return [[round(float(v), 6) for v in row] for row in g]
+
+
 def summary(ft: np.ndarray, first=None, second=None) -> dict:
     """Every market derived from one fixture, in a single dictionary."""
     h, a = _grid(ft)
