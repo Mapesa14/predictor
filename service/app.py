@@ -229,6 +229,15 @@ def slate(days: int = 2, league: str | None = None):
             pick = max(r, key=r.get)
             ko, label = _local_kickoff(f)
             started = bool(ko and ko <= datetime.now(EAT))
+            mk = None
+            if odds is not None:
+                try:
+                    avg = [float(f["AvgH"]), float(f["AvgD"]), float(f["AvgA"])]
+                    inv = [1.0 / x for x in avg]
+                    tot = sum(inv)
+                    mk = {"1": inv[0] / tot, "X": inv[1] / tot, "2": inv[2] / tot}
+                except Exception:
+                    mk = None
             matches.append({
                 "div": d,
                 "league": leagues.name(d),
@@ -237,6 +246,7 @@ def slate(days: int = 2, league: str | None = None):
                 "home": s["home"], "away": s["away"],
                 "pick": {"H": "1", "D": "X", "A": "2"}[pick],
                 "p": {"1": r["H"], "X": r["D"], "2": r["A"]},
+                "market": mk,
                 "o25": s["totals"][2.5]["over"],
                 "btts": s["btts"]["yes"],
                 "score": "%d-%d" % (i, j),

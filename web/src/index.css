@@ -116,6 +116,22 @@ section { margin-top: 26px; }
 .shead .n { font: 600 12px var(--font-mono); color: var(--ink3); }
 .shead .rule { flex: 1; border-top: 4px solid var(--ink); transform: translateY(3px); }
 
+/* ---------------------------------------------------------- top nav */
+.tabs { display: flex; gap: 0; border-bottom: 1px solid var(--line2); margin-top: 14px; }
+.tabs a {
+  font: 700 11px var(--font-body); text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--ink2); text-decoration: none; padding: 8px 14px 6px;
+  border-bottom: 3px solid transparent;
+}
+.tabs a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--spot); }
+.tabs a.soon { color: var(--ink3); pointer-events: none; }
+
+.gap { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 700; }
+.gap.pos { color: var(--pitch); }
+.gap.neg { color: var(--ink3); }
+.sumline { margin: 10px 2px 0; color: var(--ink2); font-size: 13px; }
+.sumline b { color: var(--ink); }
+
 /* ---------------------------------------------------------- the slate */
 table { width: 100%; border-collapse: collapse; }
 thead th {

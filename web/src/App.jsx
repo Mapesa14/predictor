@@ -153,6 +153,7 @@ function Slate() {
         </div>
         <div className="tools"><Theme /></div>
       </header>
+      <TopNav hash={window.location.hash} />
 
       <div className="tools" style={{ marginTop: 10 }}>
         {[1, 2, 3].map((n) => (
@@ -549,7 +550,121 @@ function CardBody({ s, ko, lg, neutral, setNeutral }) {
   );
 }
 
+function TopNav({ hash }) {
+  const cur = hash.split("?")[0];
+  const items = [
+    ["#/", "Today"],
+    ["#/market", "Model vs market"],
+    ["#/club", "Club", "soon"],
+    ["#/record", "Record", "soon"],
+    ["#/fixtures", "My fixtures", "soon"],
+  ];
+  return (
+    <nav className="tabs">
+      {items.map(([href, label, soon]) => (
+        <a key={href} href={href} className={soon || ""}
+          aria-current={cur === href ? "page" : undefined}
+          title={soon ? "Coming next" : undefined}>
+          {label}
+        </a>
+      ))}
+    </nav>
+  );
+}
+
+function MarketScreen() {
+  const live = useLive();
+  const { loading, data, error } = useFetch("/api/slate?days=3");
+  if (loading) return <p className="note">Loading the slate…</p>;
+  if (error) return <p className="note">Can't reach the service: {error}</p>;
+
+  const rows = [];
+  for (const g of data.groups)
+    for (const m of g.matches)
+      if (m.market) {
+        const gap = m.p[m.pick] - m.market[m.pick];
+        rows.push({ ...m, gap });
+      }
+  rows.sort((a, b) => b.gap - a.gap);
+
+  const ahead = rows.filter((r) => r.gap >= 0.05).length;
+  const priced = rows.filter((r) => r.market).length;
+
+  const implyPick = (mk) => (mk["1"] > mk.X && mk["1"] > mk["2"] ? "1" : mk.X > mk["2"] ? "X" : "2");
+
+  return (
+    <div>
+      <header className="masthead">
+        <div>
+          <h1>Model vs <b>market</b></h1>
+          <p className="sub">Where the model agrees with the closing price — and where it doesn't</p>
+        </div>
+        <div className="tools"><Theme /></div>
+      </header>
+      <TopNav hash={window.location.hash} />
+
+      <p className="sumline">
+        <b>{priced}</b> fixtures with a closing price · the model sits at or above the price's own pick on <b>{ahead}</b> of them.
+      </p>
+      <p className="note" style={{ marginTop: 8 }}>
+        Implied probabilities carry the bookmaker's margin (the over-round). A model number above the implied one is a fairness signal, not a licence — averaged across thousands of bets the model still trails the price. See <a href="#/record">Record</a> when it exists for the track record.
+      </p>
+
+      {rows.length > 0 && (
+        <section>
+          <div className="shead">
+            <h2>Gap on the model's pick</h2>
+            <div className="rule" />
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Match</th>
+                <th className="num">Model&nbsp;1/X/2</th>
+                <th className="num">Price&nbsp;1/X/2</th>
+                <th className="num">Model&nbsp;pick</th>
+                <th className="num">Gap&nbsp;pp</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((m, i) => (
+                <tr key={i}>
+                  <td>
+                    <a className="match" href={"#/card?home=" + encodeURIComponent(m.home) + "&away=" + encodeURIComponent(m.away) + "&div=" + m.div + "&ko=" + encodeURIComponent(m.kickoff_label) + "&lg=" + encodeURIComponent(m.league)}>
+                      <span className="hm">{m.home}</span><span className="vs">v</span><span className="aw">{m.away}</span>
+                      {m.new && <em className="new">new</em>}
+                      <LiveChip m={m} live={live} />
+                    </a>
+                  </td>
+                  <td className="num hda-mini">
+                    <span>{pct(m.p["1"])}</span><span>{pct(m.p.X)}</span><span>{pct(m.p["2"])}</span>
+                  </td>
+                  <td className="num hda-mini">
+                    <span>{pct(m.market["1"])}</span><span>{pct(m.market.X)}</span><span>{pct(m.market["2"])}</span>
+                  </td>
+                  <td className={"num" + (m.market[implyPick(m.market)] === m.market[m.pick] ? " win" : "")}>{m.pick}</td>
+                  <td className="num">
+                    <span className={"gap " + (m.gap >= 0.05 ? "pos" : "neg")}>
+                      {m.gap >= 0 ? "+" : ""}{(m.gap * 100).toFixed(0)}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
+
+      <p className="note" style={{ marginTop: 36, color: "var(--ink3)" }}>
+        18+ only · Gambling can be addictive. Play responsibly. No edge is claimed over the bookmaker here.
+      </p>
+    </div>
+  );
+}
+
 export default function App() {
   const hash = useHash();
-  return hash.startsWith("#/card") ? <Card /> : <Slate />;
+  if (hash.startsWith("#/market")) return <MarketScreen />;
+  if (hash.startsWith("#/card")) return <Card />;
+  return <Slate />;
 }
