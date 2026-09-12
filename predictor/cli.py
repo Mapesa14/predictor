@@ -745,6 +745,22 @@ def cmd_form(a):
           % (math.exp(mm.attack[t]), math.exp(mm.defence[t])))
 
 
+def cmd_refresh_results(a):
+    """Refresh the current season's results from football-data, in place."""
+    from . import refresh
+    divs = a.divs or refresh.DIVS
+    rows = refresh.refresh_footballdata(a.data, divs, since=a.since)
+    print("%-5s %-10s %8s %8s  %s"
+          % ("Div", "Wrote to", "Added", "Total", "Note"))
+    print("-" * 74)
+    for r in rows:
+        print("%-5s %-10s %8d %8d  %s" % (r["div"], r["file"], r["added"],
+                                           r["total"], r["note"]))
+    ok = [r for r in rows if r["note"] == ""]
+    print("\n%d divisions up to date; add the rest with --divs. "
+          "Fixtures: run refresh-fixtures." % len(ok))
+
+
 def cmd_leagues(a):
     df = loader.load(a.data)
     g = df.groupby("Div").agg(matches=("Date", "size"), first=("Date", "min"),
@@ -859,6 +875,17 @@ def build_parser():
 
     s = sub.add_parser("refresh-fixtures", help="download the upcoming fixtures feed")
     s.set_defaults(func=cmd_refresh)
+
+    s = sub.add_parser("refresh-results",
+                       help="pull the current season's results into the data "
+                            "folder, merging with what is already there")
+    s.add_argument("--divs", nargs="*",
+                   help="division codes to refresh (default: all on "
+                        "football-data)")
+    s.add_argument("--since", type=int, default=None,
+                   help="also re-pull every season back to this start year, "
+                        "e.g. 2023 rebuilds three seasons of history")
+    s.set_defaults(func=cmd_refresh_results)
 
     s = sub.add_parser("table", help="team attack and defence ratings")
     common(s)

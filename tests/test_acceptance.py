@@ -224,24 +224,30 @@ def test_known_at_fixtures_are_knowable_from_read_time(tmp_path):
 @skip_slow
 @pytest.mark.slow
 def test_walk_forward_acceptance_constants():
-    """§8: 1X2 log-loss ~= 0.974 alone / ~= 0.957 blended / ~= 0.956 price."""
+    """§8: 1X2 log-loss model-alone vs blended vs price.
+
+    Re-pinned on the Sep-2026 data refresh: four full seasons (2023/24-26/27)
+    replaced the original three-season snapshot, so the pool grew from ~5,948
+    to 8,239 matches and every number below moved. Values measured by
+    scratch/rebase_acceptance.py.
+    """
     df = loader.load(DATA)
     assert (df["known_at"] == df["Date"]).all()   # results: knowable from date on
     rows = prior_scan(df)
-    assert 5900 <= len(rows) <= 6400              # just over ~5,900 matches
+    assert 8000 <= len(rows) <= 8600              # ~8,200 matches
     s = score_blends(rows)
     at = s.set_index("w")
-    assert at.loc[0.0, "ll1x2"] == pytest.approx(0.9739, abs=0.004)
-    assert at.loc[0.0, "rps"] == pytest.approx(0.1963, abs=0.003)
-    assert at.loc[0.0, "acc"] == pytest.approx(0.527, abs=0.01)
-    assert at.loc[0.0, "o25"] == pytest.approx(0.6776, abs=0.005)
-    assert at.loc[0.0, "btts"] == pytest.approx(0.6895, abs=0.005)
-    assert at.loc[0.9, "ll1x2"] == pytest.approx(0.9568, abs=0.004)
-    assert at.loc[0.9, "rps"] == pytest.approx(0.1912, abs=0.003)
-    assert at.loc[0.9, "acc"] == pytest.approx(0.543, abs=0.01)
-    assert at.loc[0.9, "o25"] == pytest.approx(0.6729, abs=0.005)
-    assert at.loc[1.0, "ll1x2"] == pytest.approx(0.9563, abs=0.004)
-    assert at.loc[1.0, "rps"] == pytest.approx(0.1910, abs=0.003)
+    assert at.loc[0.0, "ll1x2"] == pytest.approx(0.9802, abs=0.004)
+    assert at.loc[0.0, "rps"] == pytest.approx(0.1979, abs=0.003)
+    assert at.loc[0.0, "acc"] == pytest.approx(0.524, abs=0.01)
+    assert at.loc[0.0, "o25"] == pytest.approx(0.6778, abs=0.005)
+    assert at.loc[0.0, "btts"] == pytest.approx(0.6877, abs=0.005)
+    assert at.loc[0.9, "ll1x2"] == pytest.approx(0.9616, abs=0.004)
+    assert at.loc[0.9, "rps"] == pytest.approx(0.1924, abs=0.003)
+    assert at.loc[0.9, "acc"] == pytest.approx(0.541, abs=0.01)
+    assert at.loc[0.9, "o25"] == pytest.approx(0.6702, abs=0.005)
+    assert at.loc[1.0, "ll1x2"] == pytest.approx(0.9610, abs=0.004)
+    assert at.loc[1.0, "rps"] == pytest.approx(0.1923, abs=0.003)
     # The uncomfortable result, stated plainly: model adds nothing to the price.
     assert at.loc[1.0, "ll1x2"] <= at.loc[0.0, "ll1x2"]
 
@@ -262,7 +268,12 @@ def test_walk_forward_acceptance_constants():
 @skip_slow
 @pytest.mark.slow
 def test_uefa_bridge_acceptance():
-    """§8: held-out UEFA ties 1.0162 -> 0.9375, accuracy 52.5% -> 58.1%."""
+    """§8: held-out UEFA ties ~1.010 -> ~0.933, accuracy ~50.8% -> ~58.7%.
+
+    Re-pinned Sep-2026 after data refresh: 609 cross-league ties (was 439);
+    2023-24/24-25 seasons landed entirely in train (cut = 2025-08-01) so the
+    held-out test set stayed at 179. Measured by scratch/rebase_acceptance.py.
+    """
     from predictor import euro
     from predictor.engine import Predictor
 
@@ -273,7 +284,7 @@ def test_uefa_bridge_acceptance():
     good = euro.resolve(cr, p)
     good = good[good.home_ok & good.away_ok]
     ds = euro.build_dataset(good, p, min_train=120)
-    assert len(ds) == 439
+    assert len(ds) == 609
     cut = pd.Timestamp("2025-08-01")
     tr, te = ds[ds.Date < cut], ds[ds.Date >= cut]
     assert len(te) == 179
@@ -299,10 +310,10 @@ def test_uefa_bridge_acceptance():
 
     base, base_acc = score(te, None)
     done, done_acc = score(te, fit)
-    assert base == pytest.approx(1.0162, abs=0.005)
-    assert done == pytest.approx(0.9375, abs=0.005)
-    assert base_acc == pytest.approx(0.525, abs=0.02)
-    assert done_acc == pytest.approx(0.581, abs=0.02)
+    assert base == pytest.approx(1.0103, abs=0.005)
+    assert done == pytest.approx(0.9328, abs=0.005)
+    assert base_acc == pytest.approx(0.508, abs=0.02)
+    assert done_acc == pytest.approx(0.587, abs=0.02)
 
 
 @skip_slow

@@ -1,0 +1,18 @@
+{
+  "name": "Football Predictor",
+  "short_name": "Predictor",
+  "description": "Football score and betting-market predictions, Tanzania first",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
