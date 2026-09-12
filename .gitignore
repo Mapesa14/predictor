@@ -5,3 +5,5 @@ scratch/*.csv
 scratch/*.log
 .pytest_cache/
 fixtures.csv
+
+web/node_modules/
