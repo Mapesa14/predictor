@@ -1,0 +1,525 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+NOR1,10/04/2023,Rosenborg BK,Viking FK,1,0,0.0,0.0,H
+NOR1,10/04/2023,Aalesunds FK,Vålerenga IF,0,1,0.0,0.0,A
+NOR1,10/04/2023,Hamarkameratene,Sandefjord Fotball,2,0,2.0,0.0,H
+NOR1,10/04/2023,Sarpsborg 08,FK Bodø/Glimt,0,2,0.0,2.0,A
+NOR1,10/04/2023,Stabæk IF,Odds BK,0,0,,,D
+NOR1,10/04/2023,Tromsø IL,Molde FK,1,0,0.0,0.0,H
+NOR1,10/04/2023,SK Brann,FK Haugesund,3,0,2.0,0.0,H
+NOR1,15/04/2023,Viking FK,Lillestrøm SK,2,0,0.0,0.0,H
+NOR1,16/04/2023,FK Bodø/Glimt,Stabæk IF,4,0,3.0,0.0,H
+NOR1,16/04/2023,FK Haugesund,Hamarkameratene,3,2,1.0,0.0,H
+NOR1,16/04/2023,Molde FK,Rosenborg BK,1,1,1.0,1.0,D
+NOR1,16/04/2023,Odds BK,SK Brann,2,0,1.0,0.0,H
+NOR1,16/04/2023,Sandefjord Fotball,Tromsø IL,0,0,,,D
+NOR1,16/04/2023,Strømsgodset IF,Aalesunds FK,1,0,1.0,0.0,H
+NOR1,16/04/2023,Vålerenga IF,Sarpsborg 08,0,2,0.0,0.0,A
+NOR1,19/04/2023,Lillestrøm SK,Strømsgodset IF,4,3,2.0,2.0,H
+NOR1,22/04/2023,SK Brann,Vålerenga IF,3,1,1.0,1.0,H
+NOR1,23/04/2023,Aalesunds FK,FK Bodø/Glimt,0,3,0.0,2.0,A
+NOR1,23/04/2023,Hamarkameratene,Strømsgodset IF,2,0,0.0,0.0,H
+NOR1,23/04/2023,Rosenborg BK,Sandefjord Fotball,1,1,0.0,1.0,D
+NOR1,23/04/2023,Sarpsborg 08,Odds BK,0,0,,,D
+NOR1,23/04/2023,Stabæk IF,FK Haugesund,3,0,1.0,0.0,H
+NOR1,23/04/2023,Tromsø IL,Viking FK,1,1,1.0,0.0,D
+NOR1,23/04/2023,Lillestrøm SK,Molde FK,2,1,2.0,1.0,H
+NOR1,29/04/2023,FK Bodø/Glimt,SK Brann,2,2,0.0,2.0,D
+NOR1,30/04/2023,Odds BK,Rosenborg BK,0,0,,,D
+NOR1,30/04/2023,Viking FK,Hamarkameratene,7,3,0.0,1.0,H
+NOR1,30/04/2023,Strømsgodset IF,Tromsø IL,0,1,0.0,0.0,A
+NOR1,30/04/2023,FK Haugesund,Sarpsborg 08,0,0,,,D
+NOR1,30/04/2023,Molde FK,Stabæk IF,2,3,1.0,2.0,A
+NOR1,30/04/2023,Sandefjord Fotball,Aalesunds FK,4,0,2.0,0.0,H
+NOR1,01/05/2023,Vålerenga IF,Lillestrøm SK,3,4,3.0,1.0,A
+NOR1,03/05/2023,Rosenborg BK,SK Brann,0,2,0.0,1.0,A
+NOR1,03/05/2023,Molde FK,Aalesunds FK,3,0,0.0,0.0,H
+NOR1,03/05/2023,FK Bodø/Glimt,Odds BK,2,0,0.0,0.0,H
+NOR1,06/05/2023,Rosenborg BK,Vålerenga IF,1,3,0.0,1.0,A
+NOR1,07/05/2023,Stabæk IF,Sarpsborg 08,1,1,0.0,0.0,D
+NOR1,07/05/2023,Tromsø IL,Odds BK,0,1,0.0,0.0,A
+NOR1,07/05/2023,Viking FK,Strømsgodset IF,1,1,0.0,0.0,D
+NOR1,07/05/2023,Lillestrøm SK,FK Bodø/Glimt,1,2,0.0,0.0,A
+NOR1,07/05/2023,Aalesunds FK,FK Haugesund,0,0,,,D
+NOR1,07/05/2023,Hamarkameratene,Molde FK,0,4,0.0,1.0,A
+NOR1,08/05/2023,SK Brann,Sandefjord Fotball,0,0,,,D
+NOR1,12/05/2023,Odds BK,Lillestrøm SK,0,1,0.0,0.0,A
+NOR1,13/05/2023,FK Haugesund,Vålerenga IF,1,1,0.0,0.0,D
+NOR1,13/05/2023,Stabæk IF,Aalesunds FK,1,0,0.0,0.0,H
+NOR1,13/05/2023,Molde FK,Strømsgodset IF,3,2,1.0,0.0,H
+NOR1,13/05/2023,Sandefjord Fotball,Viking FK,1,2,1.0,1.0,A
+NOR1,13/05/2023,Hamarkameratene,Tromsø IL,1,2,0.0,1.0,A
+NOR1,13/05/2023,FK Bodø/Glimt,Rosenborg BK,3,2,2.0,1.0,H
+NOR1,13/05/2023,Sarpsborg 08,SK Brann,2,1,2.0,0.0,H
+NOR1,16/05/2023,Viking FK,Odds BK,3,2,0.0,2.0,H
+NOR1,16/05/2023,Vålerenga IF,Hamarkameratene,3,0,3.0,0.0,H
+NOR1,16/05/2023,Rosenborg BK,FK Haugesund,1,0,0.0,0.0,H
+NOR1,16/05/2023,Strømsgodset IF,Sandefjord Fotball,1,0,1.0,0.0,H
+NOR1,16/05/2023,Lillestrøm SK,Sarpsborg 08,1,2,0.0,0.0,A
+NOR1,16/05/2023,SK Brann,Stabæk IF,4,1,2.0,1.0,H
+NOR1,16/05/2023,Aalesunds FK,Molde FK,3,1,1.0,0.0,H
+NOR1,16/05/2023,Tromsø IL,FK Bodø/Glimt,2,3,1.0,2.0,A
+NOR1,29/05/2023,SK Brann,Rosenborg BK,3,1,1.0,0.0,H
+NOR1,29/05/2023,FK Bodø/Glimt,Viking FK,5,1,2.0,0.0,H
+NOR1,29/05/2023,FK Haugesund,Tromsø IL,1,2,1.0,1.0,A
+NOR1,29/05/2023,Molde FK,Sandefjord Fotball,5,0,2.0,0.0,H
+NOR1,29/05/2023,Odds BK,Strømsgodset IF,1,1,0.0,0.0,D
+NOR1,29/05/2023,Sarpsborg 08,Aalesunds FK,3,1,2.0,1.0,H
+NOR1,29/05/2023,Stabæk IF,Vålerenga IF,2,1,2.0,0.0,H
+NOR1,29/05/2023,Hamarkameratene,Lillestrøm SK,0,0,,,D
+NOR1,04/06/2023,Viking FK,Molde FK,3,4,1.0,2.0,A
+NOR1,04/06/2023,Vålerenga IF,FK Bodø/Glimt,1,3,0.0,1.0,A
+NOR1,04/06/2023,Aalesunds FK,SK Brann,1,3,1.0,0.0,A
+NOR1,04/06/2023,Strømsgodset IF,FK Haugesund,1,2,0.0,1.0,A
+NOR1,04/06/2023,Sandefjord Fotball,Odds BK,4,1,1.0,0.0,H
+NOR1,04/06/2023,Tromsø IL,Sarpsborg 08,2,1,0.0,1.0,H
+NOR1,04/06/2023,Rosenborg BK,Hamarkameratene,4,0,1.0,0.0,H
+NOR1,04/06/2023,Lillestrøm SK,Stabæk IF,3,1,1.0,1.0,H
+NOR1,11/06/2023,Aalesunds FK,Tromsø IL,2,3,1.0,1.0,A
+NOR1,11/06/2023,FK Bodø/Glimt,Hamarkameratene,3,0,0.0,0.0,H
+NOR1,11/06/2023,FK Haugesund,Sandefjord Fotball,3,2,3.0,0.0,H
+NOR1,11/06/2023,Odds BK,Molde FK,1,0,0.0,0.0,H
+NOR1,11/06/2023,Sarpsborg 08,Viking FK,1,3,0.0,1.0,A
+NOR1,11/06/2023,Stabæk IF,Rosenborg BK,2,2,2.0,1.0,D
+NOR1,11/06/2023,Vålerenga IF,Strømsgodset IF,0,1,0.0,0.0,A
+NOR1,11/06/2023,SK Brann,Lillestrøm SK,2,2,0.0,1.0,D
+NOR1,24/06/2023,Viking FK,SK Brann,3,1,1.0,1.0,H
+NOR1,25/06/2023,Strømsgodset IF,FK Bodø/Glimt,2,0,1.0,0.0,H
+NOR1,25/06/2023,Molde FK,FK Haugesund,1,0,1.0,0.0,H
+NOR1,25/06/2023,Rosenborg BK,Sarpsborg 08,0,3,0.0,3.0,A
+NOR1,25/06/2023,Tromsø IL,Stabæk IF,2,1,2.0,1.0,H
+NOR1,25/06/2023,Hamarkameratene,Odds BK,0,1,0.0,0.0,A
+NOR1,01/07/2023,Vålerenga IF,Viking FK,1,2,0.0,1.0,A
+NOR1,02/07/2023,Aalesunds FK,Rosenborg BK,1,0,0.0,0.0,H
+NOR1,02/07/2023,SK Brann,Hamarkameratene,2,1,1.0,0.0,H
+NOR1,02/07/2023,FK Haugesund,Odds BK,2,1,1.0,1.0,H
+NOR1,02/07/2023,Lillestrøm SK,Tromsø IL,0,1,0.0,0.0,A
+NOR1,02/07/2023,Sarpsborg 08,Sandefjord Fotball,6,1,3.0,1.0,H
+NOR1,02/07/2023,FK Bodø/Glimt,Molde FK,2,2,0.0,2.0,D
+NOR1,03/07/2023,Stabæk IF,Strømsgodset IF,0,1,0.0,1.0,A
+NOR1,07/07/2023,Hamarkameratene,Aalesunds FK,2,1,0.0,0.0,H
+NOR1,08/07/2023,Viking FK,FK Haugesund,2,0,0.0,0.0,H
+NOR1,09/07/2023,Molde FK,SK Brann,2,0,1.0,0.0,H
+NOR1,09/07/2023,Tromsø IL,Vålerenga IF,0,0,,,D
+NOR1,09/07/2023,Rosenborg BK,Lillestrøm SK,1,2,1.0,0.0,A
+NOR1,09/07/2023,Sandefjord Fotball,Stabæk IF,0,0,,,D
+NOR1,09/07/2023,Odds BK,FK Bodø/Glimt,0,2,0.0,1.0,A
+NOR1,09/07/2023,Strømsgodset IF,Sarpsborg 08,5,2,3.0,2.0,H
+NOR1,15/07/2023,Vålerenga IF,Molde FK,0,4,0.0,3.0,A
+NOR1,16/07/2023,SK Brann,Strømsgodset IF,1,0,1.0,0.0,H
+NOR1,16/07/2023,Stabæk IF,Viking FK,0,1,0.0,0.0,A
+NOR1,16/07/2023,Sarpsborg 08,Hamarkameratene,2,3,2.0,3.0,A
+NOR1,16/07/2023,Lillestrøm SK,Sandefjord Fotball,4,2,3.0,1.0,H
+NOR1,16/07/2023,FK Bodø/Glimt,FK Haugesund,2,1,0.0,1.0,H
+NOR1,16/07/2023,Aalesunds FK,Odds BK,0,3,0.0,0.0,A
+NOR1,16/07/2023,Rosenborg BK,Tromsø IL,2,1,1.0,0.0,H
+NOR1,19/07/2023,Lillestrøm SK,Aalesunds FK,5,1,2.0,1.0,H
+NOR1,22/07/2023,Molde FK,Sarpsborg 08,5,1,2.0,1.0,H
+NOR1,23/07/2023,Hamarkameratene,Stabæk IF,3,2,1.0,0.0,H
+NOR1,23/07/2023,Odds BK,Vålerenga IF,2,1,1.0,0.0,H
+NOR1,23/07/2023,Sandefjord Fotball,FK Bodø/Glimt,2,5,2.0,3.0,A
+NOR1,23/07/2023,Tromsø IL,SK Brann,3,1,1.0,0.0,H
+NOR1,23/07/2023,Strømsgodset IF,Rosenborg BK,0,1,0.0,1.0,A
+NOR1,23/07/2023,FK Haugesund,Lillestrøm SK,1,0,0.0,0.0,H
+NOR1,24/07/2023,Viking FK,Aalesunds FK,3,1,1.0,1.0,H
+NOR1,29/07/2023,Vålerenga IF,Sandefjord Fotball,2,3,0.0,0.0,A
+NOR1,29/07/2023,Stabæk IF,Molde FK,0,1,0.0,0.0,A
+NOR1,30/07/2023,Aalesunds FK,Strømsgodset IF,1,0,0.0,0.0,H
+NOR1,30/07/2023,SK Brann,Viking FK,0,2,0.0,1.0,A
+NOR1,30/07/2023,Lillestrøm SK,Hamarkameratene,3,1,2.0,1.0,H
+NOR1,30/07/2023,Rosenborg BK,Odds BK,3,2,0.0,2.0,H
+NOR1,30/07/2023,Sarpsborg 08,FK Haugesund,2,1,0.0,1.0,H
+NOR1,30/07/2023,FK Bodø/Glimt,Tromsø IL,0,2,0.0,1.0,A
+NOR1,05/08/2023,Strømsgodset IF,Vålerenga IF,1,3,1.0,1.0,A
+NOR1,06/08/2023,Hamarkameratene,SK Brann,0,2,0.0,2.0,A
+NOR1,06/08/2023,Odds BK,Stabæk IF,4,0,2.0,0.0,H
+NOR1,06/08/2023,Sandefjord Fotball,Sarpsborg 08,5,1,2.0,1.0,H
+NOR1,06/08/2023,Tromsø IL,Lillestrøm SK,3,1,0.0,1.0,H
+NOR1,06/08/2023,Viking FK,FK Bodø/Glimt,3,2,2.0,2.0,H
+NOR1,06/08/2023,FK Haugesund,Rosenborg BK,1,2,1.0,0.0,A
+NOR1,12/08/2023,Sandefjord Fotball,Molde FK,2,2,1.0,0.0,D
+NOR1,12/08/2023,Sarpsborg 08,Strømsgodset IF,1,2,1.0,0.0,A
+NOR1,13/08/2023,Aalesunds FK,Hamarkameratene,0,2,0.0,1.0,A
+NOR1,13/08/2023,Lillestrøm SK,Viking FK,1,3,0.0,0.0,A
+NOR1,13/08/2023,Vålerenga IF,FK Haugesund,1,1,0.0,1.0,D
+NOR1,19/08/2023,Molde FK,Vålerenga IF,0,0,,,D
+NOR1,19/08/2023,Odds BK,Sarpsborg 08,0,3,0.0,1.0,A
+NOR1,20/08/2023,SK Brann,Aalesunds FK,5,1,3.0,0.0,H
+NOR1,20/08/2023,FK Haugesund,FK Bodø/Glimt,1,3,0.0,0.0,A
+NOR1,20/08/2023,Hamarkameratene,Rosenborg BK,3,0,2.0,0.0,H
+NOR1,20/08/2023,Tromsø IL,Sandefjord Fotball,1,0,0.0,0.0,H
+NOR1,20/08/2023,Viking FK,Stabæk IF,1,0,0.0,0.0,H
+NOR1,20/08/2023,Strømsgodset IF,Lillestrøm SK,1,2,0.0,1.0,A
+NOR1,26/08/2023,Sarpsborg 08,Tromsø IL,4,0,1.0,0.0,H
+NOR1,27/08/2023,Rosenborg BK,Aalesunds FK,4,0,2.0,0.0,H
+NOR1,27/08/2023,Vålerenga IF,Odds BK,2,2,2.0,1.0,D
+NOR1,27/08/2023,Sandefjord Fotball,FK Haugesund,0,0,,,D
+NOR1,02/09/2023,Viking FK,Vålerenga IF,1,1,0.0,0.0,D
+NOR1,03/09/2023,Aalesunds FK,Lillestrøm SK,1,1,0.0,1.0,D
+NOR1,03/09/2023,Strømsgodset IF,Stabæk IF,2,1,1.0,1.0,H
+NOR1,03/09/2023,Odds BK,Sandefjord Fotball,3,2,2.0,2.0,H
+NOR1,03/09/2023,SK Brann,Sarpsborg 08,1,0,0.0,0.0,H
+NOR1,03/09/2023,Tromsø IL,Rosenborg BK,3,1,1.0,0.0,H
+NOR1,03/09/2023,Hamarkameratene,FK Bodø/Glimt,4,4,2.0,0.0,D
+NOR1,03/09/2023,FK Haugesund,Molde FK,1,2,0.0,1.0,A
+NOR1,16/09/2023,Sandefjord Fotball,Strømsgodset IF,2,0,0.0,0.0,H
+NOR1,16/09/2023,FK Haugesund,Viking FK,0,2,0.0,1.0,A
+NOR1,16/09/2023,Molde FK,Odds BK,4,1,2.0,1.0,H
+NOR1,17/09/2023,Vålerenga IF,Aalesunds FK,3,1,1.0,1.0,H
+NOR1,17/09/2023,Tromsø IL,Hamarkameratene,2,1,2.0,0.0,H
+NOR1,17/09/2023,Stabæk IF,SK Brann,0,1,0.0,1.0,A
+NOR1,17/09/2023,Sarpsborg 08,Lillestrøm SK,3,1,2.0,0.0,H
+NOR1,17/09/2023,Rosenborg BK,FK Bodø/Glimt,1,1,1.0,1.0,D
+NOR1,23/09/2023,Aalesunds FK,Stabæk IF,1,1,1.0,1.0,D
+NOR1,24/09/2023,Lillestrøm SK,Rosenborg BK,3,0,1.0,0.0,H
+NOR1,24/09/2023,Odds BK,FK Haugesund,1,1,0.0,0.0,D
+NOR1,24/09/2023,Strømsgodset IF,Molde FK,1,1,1.0,1.0,D
+NOR1,24/09/2023,Viking FK,Sandefjord Fotball,4,3,2.0,2.0,H
+NOR1,24/09/2023,SK Brann,Tromsø IL,2,1,2.0,0.0,H
+NOR1,24/09/2023,FK Bodø/Glimt,Vålerenga IF,4,2,2.0,1.0,H
+NOR1,24/09/2023,Hamarkameratene,Sarpsborg 08,1,1,0.0,1.0,D
+NOR1,30/09/2023,Stabæk IF,Tromsø IL,0,1,0.0,0.0,A
+NOR1,01/10/2023,FK Bodø/Glimt,Strømsgodset IF,2,0,1.0,0.0,H
+NOR1,01/10/2023,Sandefjord Fotball,Vålerenga IF,1,2,0.0,1.0,A
+NOR1,01/10/2023,Lillestrøm SK,SK Brann,0,2,0.0,1.0,A
+NOR1,01/10/2023,Molde FK,Viking FK,4,0,2.0,0.0,H
+NOR1,04/10/2023,Stabæk IF,Hamarkameratene,5,2,2.0,1.0,H
+NOR1,07/10/2023,Odds BK,Viking FK,1,1,1.0,1.0,D
+NOR1,08/10/2023,Vålerenga IF,SK Brann,1,2,1.0,1.0,A
+NOR1,08/10/2023,Tromsø IL,Aalesunds FK,1,2,0.0,1.0,A
+NOR1,08/10/2023,Stabæk IF,Lillestrøm SK,1,0,0.0,0.0,H
+NOR1,08/10/2023,Sarpsborg 08,Rosenborg BK,5,2,1.0,0.0,H
+NOR1,08/10/2023,Molde FK,FK Bodø/Glimt,1,3,1.0,2.0,A
+NOR1,08/10/2023,FK Haugesund,Strømsgodset IF,1,0,0.0,0.0,H
+NOR1,08/10/2023,Sandefjord Fotball,Hamarkameratene,0,1,0.0,0.0,A
+NOR1,21/10/2023,FK Bodø/Glimt,Sandefjord Fotball,4,3,4.0,2.0,H
+NOR1,21/10/2023,SK Brann,Molde FK,3,2,0.0,1.0,H
+NOR1,22/10/2023,Strømsgodset IF,Odds BK,3,1,0.0,1.0,H
+NOR1,22/10/2023,Viking FK,Tromsø IL,3,4,0.0,0.0,A
+NOR1,22/10/2023,Rosenborg BK,Stabæk IF,1,1,1.0,1.0,D
+NOR1,22/10/2023,Lillestrøm SK,Vålerenga IF,2,0,1.0,0.0,H
+NOR1,22/10/2023,Aalesunds FK,Sarpsborg 08,3,2,2.0,2.0,H
+NOR1,22/10/2023,Hamarkameratene,FK Haugesund,0,3,0.0,1.0,A
+NOR1,28/10/2023,FK Haugesund,Aalesunds FK,6,1,3.0,0.0,H
+NOR1,29/10/2023,Odds BK,Hamarkameratene,2,0,1.0,0.0,H
+NOR1,29/10/2023,Sandefjord Fotball,SK Brann,1,1,0.0,0.0,D
+NOR1,29/10/2023,Sarpsborg 08,Stabæk IF,2,2,1.0,0.0,D
+NOR1,29/10/2023,Strømsgodset IF,Viking FK,1,0,1.0,0.0,H
+NOR1,29/10/2023,Vålerenga IF,Rosenborg BK,1,3,1.0,2.0,A
+NOR1,30/10/2023,FK Bodø/Glimt,Lillestrøm SK,3,1,1.0,0.0,H
+NOR1,30/10/2023,Molde FK,Tromsø IL,1,4,0.0,1.0,A
+NOR1,04/11/2023,Hamarkameratene,Viking FK,3,0,0.0,0.0,H
+NOR1,05/11/2023,Tromsø IL,Strømsgodset IF,0,1,0.0,0.0,A
+NOR1,05/11/2023,Rosenborg BK,Molde FK,3,1,1.0,1.0,H
+NOR1,05/11/2023,Stabæk IF,FK Bodø/Glimt,0,4,0.0,3.0,A
+NOR1,05/11/2023,SK Brann,Odds BK,2,1,0.0,0.0,H
+NOR1,05/11/2023,Lillestrøm SK,FK Haugesund,1,0,0.0,0.0,H
+NOR1,05/11/2023,Sarpsborg 08,Vålerenga IF,3,2,3.0,1.0,H
+NOR1,06/11/2023,Aalesunds FK,Sandefjord Fotball,0,3,0.0,0.0,A
+NOR1,11/11/2023,FK Haugesund,SK Brann,0,2,0.0,2.0,A
+NOR1,12/11/2023,FK Bodø/Glimt,Aalesunds FK,1,0,1.0,0.0,H
+NOR1,12/11/2023,Odds BK,Tromsø IL,1,2,0.0,1.0,A
+NOR1,12/11/2023,Sandefjord Fotball,Rosenborg BK,3,2,3.0,0.0,H
+NOR1,12/11/2023,Strømsgodset IF,Hamarkameratene,0,1,0.0,0.0,A
+NOR1,12/11/2023,Vålerenga IF,Stabæk IF,0,0,,,D
+NOR1,12/11/2023,Viking FK,Sarpsborg 08,2,1,0.0,1.0,H
+NOR1,12/11/2023,Molde FK,Lillestrøm SK,4,0,3.0,0.0,H
+NOR1,26/11/2023,Sarpsborg 08,Molde FK,1,3,0.0,2.0,A
+NOR1,26/11/2023,Tromsø IL,FK Haugesund,2,1,1.0,0.0,H
+NOR1,26/11/2023,Stabæk IF,Sandefjord Fotball,2,1,1.0,0.0,H
+NOR1,26/11/2023,Rosenborg BK,Strømsgodset IF,1,3,1.0,2.0,A
+NOR1,26/11/2023,Hamarkameratene,Vålerenga IF,0,2,0.0,0.0,A
+NOR1,26/11/2023,SK Brann,FK Bodø/Glimt,4,2,3.0,0.0,H
+NOR1,26/11/2023,Aalesunds FK,Viking FK,0,4,0.0,2.0,A
+NOR1,26/11/2023,Lillestrøm SK,Odds BK,4,4,1.0,3.0,D
+NOR1,03/12/2023,FK Bodø/Glimt,Sarpsborg 08,2,0,1.0,0.0,H
+NOR1,03/12/2023,FK Haugesund,Stabæk IF,3,0,0.0,0.0,H
+NOR1,03/12/2023,Molde FK,Hamarkameratene,1,1,0.0,1.0,D
+NOR1,03/12/2023,Odds BK,Aalesunds FK,4,1,2.0,1.0,H
+NOR1,03/12/2023,Sandefjord Fotball,Lillestrøm SK,1,0,1.0,0.0,H
+NOR1,03/12/2023,Strømsgodset IF,SK Brann,3,0,1.0,0.0,H
+NOR1,03/12/2023,Vålerenga IF,Tromsø IL,1,1,0.0,0.0,D
+NOR1,03/12/2023,Viking FK,Rosenborg BK,1,5,0.0,1.0,A
+NOR1,31/03/2024,Odds BK,FK Haugesund,1,2,0.0,1.0,A
+NOR1,01/04/2024,Viking FK,Sarpsborg 08,1,0,1.0,0.0,H
+NOR1,01/04/2024,Tromsø IL,SK Brann,2,4,0.0,2.0,A
+NOR1,01/04/2024,Rosenborg BK,Sandefjord Fotball,2,0,0.0,0.0,H
+NOR1,01/04/2024,Molde FK,Strømsgodset IF,4,0,1.0,0.0,H
+NOR1,01/04/2024,Fredrikstad FK,FK Bodø/Glimt,0,2,0.0,0.0,A
+NOR1,01/04/2024,Lillestrøm SK,Kristiansund BK,2,3,0.0,1.0,A
+NOR1,02/04/2024,KFUM Oslo,Hamarkameratene,1,1,0.0,1.0,D
+NOR1,06/04/2024,FK Bodø/Glimt,Viking FK,1,0,0.0,0.0,H
+NOR1,07/04/2024,Kristiansund BK,KFUM Oslo,1,1,1.0,1.0,D
+NOR1,07/04/2024,FK Haugesund,Lillestrøm SK,0,2,0.0,2.0,A
+NOR1,07/04/2024,Hamarkameratene,Molde FK,0,1,0.0,1.0,A
+NOR1,07/04/2024,Sarpsborg 08,Odds BK,0,1,0.0,1.0,A
+NOR1,07/04/2024,Strømsgodset IF,Rosenborg BK,1,0,0.0,0.0,H
+NOR1,07/04/2024,SK Brann,Fredrikstad FK,0,2,0.0,1.0,A
+NOR1,13/04/2024,Fredrikstad FK,Sarpsborg 08,2,2,0.0,1.0,D
+NOR1,14/04/2024,Rosenborg BK,Hamarkameratene,1,0,1.0,0.0,H
+NOR1,14/04/2024,Lillestrøm SK,FK Bodø/Glimt,0,5,0.0,1.0,A
+NOR1,14/04/2024,Odds BK,Sandefjord Fotball,2,2,1.0,1.0,D
+NOR1,14/04/2024,Tromsø IL,FK Haugesund,0,1,0.0,1.0,A
+NOR1,14/04/2024,Viking FK,SK Brann,1,1,1.0,0.0,D
+NOR1,14/04/2024,Molde FK,Kristiansund BK,2,0,1.0,0.0,H
+NOR1,16/04/2024,KFUM Oslo,Strømsgodset IF,1,3,0.0,2.0,A
+NOR1,17/04/2024,SK Brann,Hamarkameratene,1,0,0.0,0.0,H
+NOR1,17/04/2024,Molde FK,Odds BK,1,2,1.0,1.0,A
+NOR1,21/04/2024,Hamarkameratene,Strømsgodset IF,0,1,0.0,1.0,A
+NOR1,21/04/2024,SK Brann,Odds BK,2,0,1.0,0.0,H
+NOR1,21/04/2024,FK Haugesund,Rosenborg BK,1,3,0.0,2.0,A
+NOR1,21/04/2024,Kristiansund BK,Tromsø IL,1,0,1.0,0.0,H
+NOR1,21/04/2024,Sandefjord Fotball,Lillestrøm SK,0,1,0.0,0.0,A
+NOR1,21/04/2024,Sarpsborg 08,KFUM Oslo,0,2,0.0,2.0,A
+NOR1,21/04/2024,Viking FK,Fredrikstad FK,1,1,1.0,1.0,D
+NOR1,21/04/2024,FK Bodø/Glimt,Molde FK,1,1,1.0,0.0,D
+NOR1,27/04/2024,Rosenborg BK,FK Bodø/Glimt,1,3,0.0,2.0,A
+NOR1,28/04/2024,Tromsø IL,Sarpsborg 08,0,3,0.0,2.0,A
+NOR1,28/04/2024,Strømsgodset IF,Kristiansund BK,2,2,0.0,2.0,D
+NOR1,28/04/2024,Odds BK,Viking FK,3,3,2.0,1.0,D
+NOR1,28/04/2024,Lillestrøm SK,Hamarkameratene,1,1,1.0,0.0,D
+NOR1,28/04/2024,KFUM Oslo,SK Brann,0,0,,,D
+NOR1,28/04/2024,Molde FK,FK Haugesund,2,1,2.0,0.0,H
+NOR1,28/04/2024,Fredrikstad FK,Sandefjord Fotball,1,0,1.0,0.0,H
+NOR1,04/05/2024,SK Brann,Rosenborg BK,3,0,1.0,0.0,H
+NOR1,05/05/2024,Viking FK,Tromsø IL,2,1,0.0,0.0,H
+NOR1,05/05/2024,Sarpsborg 08,Lillestrøm SK,1,0,0.0,0.0,H
+NOR1,05/05/2024,Sandefjord Fotball,Molde FK,3,1,0.0,1.0,H
+NOR1,05/05/2024,FK Bodø/Glimt,Strømsgodset IF,1,0,0.0,0.0,H
+NOR1,05/05/2024,Kristiansund BK,Hamarkameratene,1,1,1.0,1.0,D
+NOR1,05/05/2024,FK Haugesund,KFUM Oslo,0,1,0.0,1.0,A
+NOR1,05/05/2024,Odds BK,Fredrikstad FK,0,2,0.0,0.0,A
+NOR1,11/05/2024,Molde FK,Rosenborg BK,2,2,1.0,0.0,D
+NOR1,12/05/2024,Kristiansund BK,FK Bodø/Glimt,2,4,1.0,1.0,A
+NOR1,12/05/2024,Hamarkameratene,FK Haugesund,2,2,1.0,0.0,D
+NOR1,12/05/2024,KFUM Oslo,Fredrikstad FK,1,4,0.0,4.0,A
+NOR1,12/05/2024,Sandefjord Fotball,Sarpsborg 08,4,1,1.0,0.0,H
+NOR1,12/05/2024,Strømsgodset IF,Viking FK,0,1,0.0,0.0,A
+NOR1,12/05/2024,Tromsø IL,Odds BK,4,0,0.0,0.0,H
+NOR1,12/05/2024,Lillestrøm SK,SK Brann,0,2,0.0,0.0,A
+NOR1,16/05/2024,Rosenborg BK,KFUM Oslo,1,3,1.0,1.0,A
+NOR1,16/05/2024,Viking FK,Lillestrøm SK,1,4,0.0,3.0,A
+NOR1,16/05/2024,Sarpsborg 08,Hamarkameratene,1,7,0.0,5.0,A
+NOR1,16/05/2024,Odds BK,Molde FK,0,4,0.0,2.0,A
+NOR1,16/05/2024,FK Haugesund,Kristiansund BK,1,0,0.0,0.0,H
+NOR1,16/05/2024,FK Bodø/Glimt,Tromsø IL,4,0,2.0,0.0,H
+NOR1,16/05/2024,SK Brann,Sandefjord Fotball,2,1,0.0,0.0,H
+NOR1,16/05/2024,Fredrikstad FK,Strømsgodset IF,4,1,3.0,1.0,H
+NOR1,20/05/2024,Hamarkameratene,FK Bodø/Glimt,1,0,1.0,0.0,H
+NOR1,20/05/2024,KFUM Oslo,Odds BK,0,0,,,D
+NOR1,20/05/2024,Kristiansund BK,SK Brann,2,2,1.0,1.0,D
+NOR1,20/05/2024,Lillestrøm SK,Fredrikstad FK,0,3,0.0,1.0,A
+NOR1,20/05/2024,Molde FK,Sarpsborg 08,2,4,1.0,2.0,A
+NOR1,20/05/2024,Sandefjord Fotball,Viking FK,0,3,0.0,1.0,A
+NOR1,20/05/2024,Strømsgodset IF,FK Haugesund,2,0,1.0,0.0,H
+NOR1,20/05/2024,Tromsø IL,Rosenborg BK,3,2,0.0,2.0,H
+NOR1,24/05/2024,FK Bodø/Glimt,KFUM Oslo,2,2,1.0,1.0,D
+NOR1,25/05/2024,Fredrikstad FK,Tromsø IL,0,0,,,D
+NOR1,26/05/2024,FK Haugesund,Sandefjord Fotball,2,1,0.0,0.0,H
+NOR1,26/05/2024,Odds BK,Lillestrøm SK,2,1,0.0,0.0,H
+NOR1,26/05/2024,Rosenborg BK,Kristiansund BK,2,1,0.0,1.0,H
+NOR1,26/05/2024,Sarpsborg 08,Strømsgodset IF,1,3,0.0,1.0,A
+NOR1,26/05/2024,Viking FK,Hamarkameratene,3,0,2.0,0.0,H
+NOR1,26/05/2024,SK Brann,Molde FK,1,3,1.0,0.0,A
+NOR1,29/05/2024,Tromsø IL,Fredrikstad FK,3,0,2.0,0.0,H
+NOR1,29/05/2024,SK Brann,Kristiansund BK,2,1,1.0,0.0,H
+NOR1,29/05/2024,FK Bodø/Glimt,Sandefjord Fotball,1,1,1.0,1.0,D
+NOR1,01/06/2024,Hamarkameratene,SK Brann,1,2,0.0,1.0,A
+NOR1,02/06/2024,Strømsgodset IF,Odds BK,1,1,1.0,0.0,D
+NOR1,02/06/2024,Tromsø IL,Lillestrøm SK,1,2,0.0,1.0,A
+NOR1,02/06/2024,Rosenborg BK,Fredrikstad FK,1,1,0.0,0.0,D
+NOR1,02/06/2024,KFUM Oslo,Sandefjord Fotball,3,3,0.0,0.0,D
+NOR1,02/06/2024,FK Haugesund,FK Bodø/Glimt,0,1,0.0,0.0,A
+NOR1,02/06/2024,Molde FK,Viking FK,2,2,1.0,1.0,D
+NOR1,02/06/2024,Kristiansund BK,Sarpsborg 08,3,1,0.0,0.0,H
+NOR1,27/06/2024,Sandefjord Fotball,Hamarkameratene,1,2,1.0,1.0,A
+NOR1,27/06/2024,Lillestrøm SK,KFUM Oslo,2,1,1.0,0.0,H
+NOR1,28/06/2024,SK Brann,Strømsgodset IF,0,0,,,D
+NOR1,28/06/2024,Odds BK,Kristiansund BK,1,1,0.0,1.0,D
+NOR1,28/06/2024,Sarpsborg 08,FK Bodø/Glimt,1,2,1.0,0.0,A
+NOR1,28/06/2024,Tromsø IL,Molde FK,0,2,0.0,1.0,A
+NOR1,30/06/2024,Viking FK,Rosenborg BK,4,2,1.0,0.0,H
+NOR1,03/07/2024,Sandefjord Fotball,Tromsø IL,1,2,0.0,2.0,A
+NOR1,07/07/2024,Rosenborg BK,Odds BK,2,1,2.0,0.0,H
+NOR1,07/07/2024,FK Bodø/Glimt,SK Brann,5,1,2.0,0.0,H
+NOR1,07/07/2024,Molde FK,Lillestrøm SK,3,0,2.0,0.0,H
+NOR1,07/07/2024,KFUM Oslo,Viking FK,1,2,1.0,0.0,A
+NOR1,07/07/2024,Hamarkameratene,Tromsø IL,0,0,,,D
+NOR1,07/07/2024,FK Haugesund,Sarpsborg 08,1,2,0.0,0.0,A
+NOR1,08/07/2024,Kristiansund BK,Fredrikstad FK,3,1,2.0,1.0,H
+NOR1,08/07/2024,Strømsgodset IF,Sandefjord Fotball,1,1,1.0,1.0,D
+NOR1,12/07/2024,Sarpsborg 08,Rosenborg BK,4,1,3.0,0.0,H
+NOR1,13/07/2024,Odds BK,Hamarkameratene,1,2,1.0,1.0,A
+NOR1,13/07/2024,Sandefjord Fotball,FK Bodø/Glimt,2,1,1.0,0.0,H
+NOR1,13/07/2024,Viking FK,Kristiansund BK,2,0,0.0,0.0,H
+NOR1,13/07/2024,Fredrikstad FK,Molde FK,0,0,,,D
+NOR1,13/07/2024,Tromsø IL,KFUM Oslo,1,2,0.0,0.0,A
+NOR1,13/07/2024,Lillestrøm SK,Strømsgodset IF,3,1,2.0,1.0,H
+NOR1,13/07/2024,SK Brann,FK Haugesund,1,1,0.0,0.0,D
+NOR1,19/07/2024,FK Bodø/Glimt,Odds BK,3,1,1.0,1.0,H
+NOR1,20/07/2024,Sarpsborg 08,SK Brann,1,1,0.0,0.0,D
+NOR1,20/07/2024,Molde FK,KFUM Oslo,2,3,1.0,2.0,A
+NOR1,21/07/2024,FK Haugesund,Viking FK,1,0,0.0,0.0,H
+NOR1,21/07/2024,Strømsgodset IF,Tromsø IL,0,1,0.0,0.0,A
+NOR1,21/07/2024,Hamarkameratene,Fredrikstad FK,0,1,0.0,0.0,A
+NOR1,27/07/2024,KFUM Oslo,FK Bodø/Glimt,1,1,1.0,0.0,D
+NOR1,27/07/2024,Fredrikstad FK,Rosenborg BK,2,2,2.0,1.0,D
+NOR1,28/07/2024,Lillestrøm SK,Sarpsborg 08,2,2,0.0,2.0,D
+NOR1,28/07/2024,Odds BK,Strømsgodset IF,2,0,2.0,0.0,H
+NOR1,28/07/2024,Sandefjord Fotball,FK Haugesund,4,3,3.0,1.0,H
+NOR1,28/07/2024,Tromsø IL,Kristiansund BK,0,0,,,D
+NOR1,28/07/2024,Viking FK,Molde FK,1,0,0.0,0.0,H
+NOR1,03/08/2024,FK Bodø/Glimt,FK Haugesund,4,2,1.0,1.0,H
+NOR1,04/08/2024,Rosenborg BK,Tromsø IL,1,0,0.0,0.0,H
+NOR1,04/08/2024,Sarpsborg 08,Sandefjord Fotball,2,1,1.0,0.0,H
+NOR1,04/08/2024,Strømsgodset IF,SK Brann,2,3,1.0,2.0,A
+NOR1,04/08/2024,Fredrikstad FK,KFUM Oslo,0,0,,,D
+NOR1,04/08/2024,Kristiansund BK,Lillestrøm SK,2,1,1.0,1.0,H
+NOR1,04/08/2024,Hamarkameratene,Viking FK,3,3,0.0,1.0,D
+NOR1,09/08/2024,Sandefjord Fotball,Strømsgodset IF,2,2,0.0,2.0,D
+NOR1,10/08/2024,FK Haugesund,Hamarkameratene,0,1,0.0,0.0,A
+NOR1,10/08/2024,Viking FK,FK Bodø/Glimt,1,1,0.0,0.0,D
+NOR1,11/08/2024,KFUM Oslo,Rosenborg BK,1,0,0.0,0.0,H
+NOR1,11/08/2024,Odds BK,Sarpsborg 08,1,1,1.0,0.0,D
+NOR1,11/08/2024,Lillestrøm SK,Molde FK,1,2,1.0,1.0,A
+NOR1,14/08/2024,Fredrikstad FK,FK Haugesund,1,0,0.0,0.0,H
+NOR1,17/08/2024,Strømsgodset IF,Lillestrøm SK,3,2,1.0,2.0,H
+NOR1,18/08/2024,Sarpsborg 08,FK Haugesund,2,2,1.0,1.0,D
+NOR1,18/08/2024,KFUM Oslo,Tromsø IL,0,1,0.0,0.0,A
+NOR1,18/08/2024,Hamarkameratene,Odds BK,1,0,0.0,0.0,H
+NOR1,18/08/2024,Rosenborg BK,Viking FK,2,1,2.0,0.0,H
+NOR1,18/08/2024,Fredrikstad FK,SK Brann,0,4,0.0,1.0,A
+NOR1,21/08/2024,Rosenborg BK,Lillestrøm SK,4,0,2.0,0.0,H
+NOR1,24/08/2024,FK Bodø/Glimt,Sarpsborg 08,6,0,2.0,0.0,H
+NOR1,25/08/2024,Odds BK,Rosenborg BK,1,3,0.0,1.0,A
+NOR1,25/08/2024,Sandefjord Fotball,Kristiansund BK,1,0,0.0,0.0,H
+NOR1,25/08/2024,Molde FK,Hamarkameratene,3,0,1.0,0.0,H
+NOR1,25/08/2024,Viking FK,Strømsgodset IF,5,2,2.0,1.0,H
+NOR1,25/08/2024,Lillestrøm SK,Tromsø IL,0,1,0.0,1.0,A
+NOR1,25/08/2024,FK Haugesund,Fredrikstad FK,1,0,0.0,0.0,H
+NOR1,30/08/2024,KFUM Oslo,Lillestrøm SK,2,0,0.0,0.0,H
+NOR1,31/08/2024,Fredrikstad FK,Odds BK,2,0,0.0,0.0,H
+NOR1,01/09/2024,Tromsø IL,Viking FK,2,2,2.0,0.0,D
+NOR1,01/09/2024,Hamarkameratene,Sandefjord Fotball,1,1,0.0,0.0,D
+NOR1,01/09/2024,Kristiansund BK,FK Haugesund,2,2,1.0,1.0,D
+NOR1,01/09/2024,Rosenborg BK,Molde FK,2,1,0.0,1.0,H
+NOR1,01/09/2024,Strømsgodset IF,FK Bodø/Glimt,0,1,0.0,0.0,A
+NOR1,01/09/2024,SK Brann,Sarpsborg 08,1,3,0.0,1.0,A
+NOR1,13/09/2024,FK Bodø/Glimt,Hamarkameratene,3,0,0.0,0.0,H
+NOR1,14/09/2024,Viking FK,KFUM Oslo,1,0,1.0,0.0,H
+NOR1,14/09/2024,Molde FK,Fredrikstad FK,6,1,3.0,1.0,H
+NOR1,15/09/2024,Odds BK,Tromsø IL,1,0,0.0,0.0,H
+NOR1,15/09/2024,Lillestrøm SK,Rosenborg BK,1,1,1.0,1.0,D
+NOR1,15/09/2024,Sarpsborg 08,Kristiansund BK,0,2,0.0,0.0,A
+NOR1,15/09/2024,Sandefjord Fotball,SK Brann,2,2,1.0,1.0,D
+NOR1,15/09/2024,FK Haugesund,Strømsgodset IF,0,0,,,D
+NOR1,18/09/2024,Kristiansund BK,Molde FK,0,4,0.0,2.0,A
+NOR1,18/09/2024,SK Brann,KFUM Oslo,2,0,0.0,0.0,H
+NOR1,21/09/2024,Strømsgodset IF,Sarpsborg 08,2,1,2.0,1.0,H
+NOR1,21/09/2024,Hamarkameratene,Lillestrøm SK,5,0,4.0,0.0,H
+NOR1,22/09/2024,Tromsø IL,Sandefjord Fotball,3,0,3.0,0.0,H
+NOR1,22/09/2024,Rosenborg BK,FK Haugesund,4,0,2.0,0.0,H
+NOR1,22/09/2024,Fredrikstad FK,Viking FK,3,2,2.0,0.0,H
+NOR1,22/09/2024,SK Brann,FK Bodø/Glimt,4,1,3.0,0.0,H
+NOR1,22/09/2024,Kristiansund BK,Odds BK,0,0,,,D
+NOR1,23/09/2024,KFUM Oslo,Molde FK,1,1,0.0,0.0,D
+NOR1,28/09/2024,Molde FK,Tromsø IL,5,3,2.0,0.0,H
+NOR1,28/09/2024,FK Haugesund,SK Brann,0,1,0.0,1.0,A
+NOR1,28/09/2024,Sarpsborg 08,Fredrikstad FK,0,1,0.0,0.0,A
+NOR1,29/09/2024,Sandefjord Fotball,Rosenborg BK,0,1,0.0,0.0,A
+NOR1,29/09/2024,Lillestrøm SK,Viking FK,1,4,0.0,1.0,A
+NOR1,29/09/2024,Strømsgodset IF,Hamarkameratene,1,1,1.0,0.0,D
+NOR1,29/09/2024,FK Bodø/Glimt,Kristiansund BK,4,0,3.0,0.0,H
+NOR1,29/09/2024,Odds BK,KFUM Oslo,1,3,1.0,2.0,A
+NOR1,05/10/2024,Kristiansund BK,Sandefjord Fotball,2,1,1.0,0.0,H
+NOR1,19/10/2024,Molde FK,Sandefjord Fotball,0,1,0.0,0.0,A
+NOR1,19/10/2024,Tromsø IL,FK Bodø/Glimt,0,0,,,D
+NOR1,20/10/2024,Rosenborg BK,SK Brann,1,2,0.0,1.0,A
+NOR1,20/10/2024,Hamarkameratene,Sarpsborg 08,0,2,0.0,2.0,A
+NOR1,20/10/2024,KFUM Oslo,FK Haugesund,0,0,,,D
+NOR1,20/10/2024,Kristiansund BK,Strømsgodset IF,0,0,,,D
+NOR1,20/10/2024,Viking FK,Odds BK,3,3,1.0,2.0,D
+NOR1,20/10/2024,Fredrikstad FK,Lillestrøm SK,2,1,0.0,0.0,H
+NOR1,26/10/2024,Strømsgodset IF,Fredrikstad FK,2,0,1.0,0.0,H
+NOR1,27/10/2024,Hamarkameratene,Kristiansund BK,1,0,0.0,0.0,H
+NOR1,27/10/2024,FK Haugesund,Molde FK,0,3,0.0,1.0,A
+NOR1,27/10/2024,Lillestrøm SK,Odds BK,3,0,2.0,0.0,H
+NOR1,27/10/2024,Sandefjord Fotball,KFUM Oslo,2,1,0.0,1.0,H
+NOR1,27/10/2024,Sarpsborg 08,Viking FK,1,2,1.0,1.0,A
+NOR1,27/10/2024,SK Brann,Tromsø IL,4,0,2.0,0.0,H
+NOR1,28/10/2024,FK Bodø/Glimt,Rosenborg BK,2,3,1.0,1.0,A
+NOR1,02/11/2024,Viking FK,Sandefjord Fotball,3,2,2.0,2.0,H
+NOR1,03/11/2024,Rosenborg BK,Strømsgodset IF,1,0,0.0,0.0,H
+NOR1,03/11/2024,Tromsø IL,Hamarkameratene,3,3,1.0,2.0,D
+NOR1,03/11/2024,Molde FK,FK Bodø/Glimt,3,3,2.0,1.0,D
+NOR1,03/11/2024,Odds BK,SK Brann,0,3,0.0,2.0,A
+NOR1,03/11/2024,Fredrikstad FK,Kristiansund BK,1,1,1.0,0.0,D
+NOR1,03/11/2024,Lillestrøm SK,FK Haugesund,0,1,0.0,0.0,A
+NOR1,03/11/2024,KFUM Oslo,Sarpsborg 08,1,2,1.0,0.0,A
+NOR1,09/11/2024,SK Brann,Lillestrøm SK,2,1,1.0,0.0,H
+NOR1,10/11/2024,FK Haugesund,Tromsø IL,2,0,1.0,0.0,H
+NOR1,10/11/2024,Hamarkameratene,Rosenborg BK,0,2,0.0,2.0,A
+NOR1,10/11/2024,Kristiansund BK,Viking FK,0,1,0.0,1.0,A
+NOR1,10/11/2024,Sandefjord Fotball,Odds BK,1,0,0.0,0.0,H
+NOR1,10/11/2024,Sarpsborg 08,Molde FK,2,2,2.0,2.0,D
+NOR1,10/11/2024,Strømsgodset IF,KFUM Oslo,1,0,0.0,0.0,H
+NOR1,10/11/2024,FK Bodø/Glimt,Fredrikstad FK,2,2,0.0,1.0,D
+NOR1,23/11/2024,Rosenborg BK,Sarpsborg 08,1,1,0.0,0.0,D
+NOR1,23/11/2024,Viking FK,FK Haugesund,5,1,1.0,1.0,H
+NOR1,23/11/2024,Tromsø IL,Strømsgodset IF,2,0,1.0,0.0,H
+NOR1,23/11/2024,Odds BK,FK Bodø/Glimt,0,2,0.0,1.0,A
+NOR1,23/11/2024,Lillestrøm SK,Sandefjord Fotball,0,3,0.0,1.0,A
+NOR1,23/11/2024,KFUM Oslo,Kristiansund BK,1,2,0.0,1.0,A
+NOR1,23/11/2024,Fredrikstad FK,Hamarkameratene,1,0,0.0,0.0,H
+NOR1,23/11/2024,Molde FK,SK Brann,2,1,2.0,0.0,H
+NOR1,01/12/2024,Sarpsborg 08,Tromsø IL,2,1,1.0,0.0,H
+NOR1,01/12/2024,Sandefjord Fotball,Fredrikstad FK,0,1,0.0,0.0,A
+NOR1,01/12/2024,Kristiansund BK,Rosenborg BK,0,4,0.0,1.0,A
+NOR1,01/12/2024,Strømsgodset IF,Molde FK,1,0,0.0,0.0,H
+NOR1,01/12/2024,FK Haugesund,Odds BK,2,1,0.0,1.0,H
+NOR1,01/12/2024,FK Bodø/Glimt,Lillestrøm SK,5,2,2.0,1.0,H
+NOR1,01/12/2024,SK Brann,Viking FK,1,1,0.0,0.0,D
+NOR1,01/12/2024,Hamarkameratene,KFUM Oslo,0,2,0.0,1.0,A
+NOR1,29/03/2025,Strømsgodset IF,Rosenborg BK,1,2,0.0,1.0,A
+NOR1,29/03/2025,Fredrikstad FK,SK Brann,3,0,2.0,0.0,H
+NOR1,30/03/2025,Vålerenga IF,Viking FK,3,1,1.0,0.0,H
+NOR1,30/03/2025,Hamarkameratene,Kristiansund BK,2,1,1.0,1.0,H
+NOR1,30/03/2025,KFUM Oslo,Sandefjord Fotball,3,1,1.0,1.0,H
+NOR1,30/03/2025,Molde FK,Sarpsborg 08,0,2,0.0,1.0,A
+NOR1,30/03/2025,Tromsø IL,FK Haugesund,1,0,1.0,0.0,H
+NOR1,30/03/2025,Bryne FK,FK Bodø/Glimt,0,1,0.0,1.0,A
+NOR1,05/04/2025,FK Bodø/Glimt,Hamarkameratene,3,0,1.0,0.0,H
+NOR1,05/04/2025,Rosenborg BK,Fredrikstad FK,1,0,1.0,0.0,H
+NOR1,06/04/2025,Sarpsborg 08,Vålerenga IF,1,1,0.0,1.0,D
+NOR1,06/04/2025,Sandefjord Fotball,Molde FK,3,0,2.0,0.0,H
+NOR1,06/04/2025,Viking FK,KFUM Oslo,3,1,1.0,1.0,H
+NOR1,06/04/2025,FK Haugesund,Strømsgodset IF,0,5,0.0,2.0,A
+NOR1,06/04/2025,SK Brann,Tromsø IL,3,1,0.0,1.0,H
+NOR1,06/04/2025,Kristiansund BK,Bryne FK,2,1,1.0,1.0,H
+NOR1,09/04/2025,Fredrikstad FK,Vålerenga IF,2,0,1.0,0.0,H
+NOR1,10/04/2025,SK Brann,Strømsgodset IF,2,1,1.0,0.0,H
+NOR1,10/04/2025,Viking FK,Kristiansund BK,3,1,0.0,1.0,H
+NOR1,20/04/2025,Tromsø IL,Kristiansund BK,2,3,1.0,0.0,A
+NOR1,21/04/2025,Vålerenga IF,Rosenborg BK,0,2,0.0,1.0,A
+NOR1,21/04/2025,Bryne FK,FK Haugesund,3,1,2.0,0.0,H
+NOR1,21/04/2025,Fredrikstad FK,Sandefjord Fotball,3,1,3.0,1.0,H
+NOR1,21/04/2025,Hamarkameratene,Viking FK,2,5,0.0,4.0,A
+NOR1,21/04/2025,KFUM Oslo,Sarpsborg 08,1,3,0.0,2.0,A
+NOR1,21/04/2025,Strømsgodset IF,SK Brann,1,2,1.0,0.0,A
+NOR1,21/04/2025,Molde FK,FK Bodø/Glimt,2,2,0.0,2.0,D
+NOR1,27/04/2025,Viking FK,Tromsø IL,4,4,0.0,1.0,D
+NOR1,27/04/2025,Sarpsborg 08,Strømsgodset IF,2,3,0.0,1.0,A
+NOR1,27/04/2025,Kristiansund BK,Vålerenga IF,0,2,0.0,0.0,A
+NOR1,27/04/2025,FK Haugesund,Fredrikstad FK,0,0,,,D
+NOR1,27/04/2025,SK Brann,Bryne FK,3,2,0.0,2.0,H
+NOR1,27/04/2025,FK Bodø/Glimt,KFUM Oslo,3,0,0.0,0.0,H
+NOR1,27/04/2025,Rosenborg BK,Molde FK,0,0,,,D
+NOR1,27/04/2025,Sandefjord Fotball,Hamarkameratene,2,0,1.0,0.0,H
+NOR1,30/04/2025,Viking FK,FK Haugesund,5,1,2.0,1.0,H
+NOR1,01/05/2025,Rosenborg BK,Kristiansund BK,1,1,0.0,0.0,D
+NOR1,02/05/2025,Hamarkameratene,KFUM Oslo,0,0,,,D
+NOR1,03/05/2025,Vålerenga IF,SK Brann,2,4,0.0,2.0,A
+NOR1,04/05/2025,Molde FK,FK Haugesund,2,1,1.0,0.0,H
+NOR1,04/05/2025,Strømsgodset IF,Kristiansund BK,1,2,1.0,0.0,A
+NOR1,04/05/2025,Tromsø IL,Sandefjord Fotball,0,1,0.0,0.0,A
+NOR1,04/05/2025,Viking FK,Sarpsborg 08,0,0,,,D
+NOR1,04/05/2025,Rosenborg BK,Bryne FK,3,0,1.0,0.0,H

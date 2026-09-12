@@ -1,0 +1,554 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+CZE1,22/07/2023,FK Pardubice,Bohemians Praha 1905,0,1,0.0,1.0,A
+CZE1,22/07/2023,FK Teplice,Viktoria Plzeň,1,0,1.0,0.0,H
+CZE1,22/07/2023,MFK Karviná,FC Zlín,4,1,3.0,0.0,H
+CZE1,22/07/2023,Slavia Praha,FC Hradec Králové,2,0,1.0,0.0,H
+CZE1,23/07/2023,1. FC Slovácko,Dynamo České Budějovice,4,1,2.0,0.0,H
+CZE1,23/07/2023,FK Mladá Boleslav,FK Jablonec,3,1,1.0,0.0,H
+CZE1,23/07/2023,Slovan Liberec,Baník Ostrava,3,1,2.0,0.0,H
+CZE1,23/07/2023,AC Sparta Praha,Sigma Olomouc,2,0,1.0,0.0,H
+CZE1,29/07/2023,Baník Ostrava,1. FC Slovácko,0,0,,,D
+CZE1,29/07/2023,Sigma Olomouc,MFK Karviná,3,1,2.0,1.0,H
+CZE1,29/07/2023,FC Zlín,AC Sparta Praha,0,1,0.0,0.0,A
+CZE1,29/07/2023,FK Pardubice,FK Jablonec,0,0,,,D
+CZE1,30/07/2023,Viktoria Plzeň,FC Hradec Králové,1,1,0.0,0.0,D
+CZE1,30/07/2023,Bohemians Praha 1905,FK Teplice,1,2,0.0,1.0,A
+CZE1,30/07/2023,Dynamo České Budějovice,Slavia Praha,1,3,0.0,1.0,A
+CZE1,30/07/2023,FK Mladá Boleslav,Slovan Liberec,2,2,0.0,2.0,D
+CZE1,05/08/2023,FC Hradec Králové,Dynamo České Budějovice,5,1,3.0,0.0,H
+CZE1,05/08/2023,AC Sparta Praha,FK Pardubice,5,2,3.0,0.0,H
+CZE1,05/08/2023,1. FC Slovácko,Sigma Olomouc,0,2,0.0,1.0,A
+CZE1,05/08/2023,MFK Karviná,FK Mladá Boleslav,1,2,0.0,2.0,A
+CZE1,06/08/2023,FK Teplice,FK Jablonec,0,0,,,D
+CZE1,06/08/2023,Slovan Liberec,Bohemians Praha 1905,0,1,0.0,0.0,A
+CZE1,06/08/2023,Viktoria Plzeň,Baník Ostrava,3,1,2.0,1.0,H
+CZE1,06/08/2023,Slavia Praha,FC Zlín,2,1,0.0,0.0,H
+CZE1,12/08/2023,Baník Ostrava,FC Hradec Králové,2,0,0.0,0.0,H
+CZE1,12/08/2023,FC Zlín,Slovan Liberec,1,1,1.0,1.0,D
+CZE1,12/08/2023,FK Jablonec,AC Sparta Praha,1,5,0.0,5.0,A
+CZE1,13/08/2023,Bohemians Praha 1905,1. FC Slovácko,0,1,0.0,1.0,A
+CZE1,13/08/2023,FK Mladá Boleslav,Slavia Praha,0,1,0.0,0.0,A
+CZE1,13/08/2023,FK Pardubice,MFK Karviná,2,1,1.0,0.0,H
+CZE1,13/08/2023,Sigma Olomouc,FK Teplice,2,1,0.0,0.0,H
+CZE1,13/08/2023,Dynamo České Budějovice,Viktoria Plzeň,2,5,1.0,2.0,A
+CZE1,19/08/2023,Slovan Liberec,FK Pardubice,1,0,1.0,0.0,H
+CZE1,19/08/2023,FK Teplice,AC Sparta Praha,1,1,0.0,1.0,D
+CZE1,19/08/2023,1. FC Slovácko,FK Mladá Boleslav,2,2,1.0,1.0,D
+CZE1,19/08/2023,MFK Karviná,FK Jablonec,1,1,0.0,0.0,D
+CZE1,20/08/2023,Slavia Praha,Baník Ostrava,1,0,0.0,0.0,H
+CZE1,20/08/2023,Viktoria Plzeň,Sigma Olomouc,2,1,2.0,1.0,H
+CZE1,20/08/2023,FC Hradec Králové,FC Zlín,2,0,1.0,0.0,H
+CZE1,20/08/2023,Dynamo České Budějovice,Bohemians Praha 1905,3,0,1.0,0.0,H
+CZE1,26/08/2023,FC Zlín,FK Teplice,2,1,0.0,0.0,H
+CZE1,26/08/2023,FK Pardubice,1. FC Slovácko,0,1,0.0,1.0,A
+CZE1,26/08/2023,Baník Ostrava,Dynamo České Budějovice,2,0,0.0,0.0,H
+CZE1,27/08/2023,Bohemians Praha 1905,FC Hradec Králové,2,1,1.0,0.0,H
+CZE1,27/08/2023,FK Jablonec,Slavia Praha,1,1,1.0,0.0,D
+CZE1,27/08/2023,Sigma Olomouc,Slovan Liberec,2,0,0.0,0.0,H
+CZE1,27/08/2023,AC Sparta Praha,MFK Karviná,3,1,2.0,0.0,H
+CZE1,02/09/2023,1. FC Slovácko,FC Zlín,1,0,0.0,0.0,H
+CZE1,02/09/2023,Dynamo České Budějovice,FK Jablonec,2,1,1.0,1.0,H
+CZE1,02/09/2023,FK Teplice,FK Pardubice,0,1,0.0,0.0,A
+CZE1,02/09/2023,Baník Ostrava,FK Mladá Boleslav,2,0,0.0,0.0,H
+CZE1,03/09/2023,Slavia Praha,MFK Karviná,5,1,3.0,1.0,H
+CZE1,03/09/2023,Viktoria Plzeň,Bohemians Praha 1905,2,0,2.0,0.0,H
+CZE1,03/09/2023,FC Hradec Králové,Sigma Olomouc,1,3,1.0,1.0,A
+CZE1,03/09/2023,Slovan Liberec,AC Sparta Praha,0,2,0.0,0.0,A
+CZE1,16/09/2023,MFK Karviná,FK Teplice,0,1,0.0,0.0,A
+CZE1,16/09/2023,Sigma Olomouc,Dynamo České Budějovice,2,1,2.0,1.0,H
+CZE1,16/09/2023,FK Pardubice,Slavia Praha,0,1,0.0,1.0,A
+CZE1,16/09/2023,FK Mladá Boleslav,FC Hradec Králové,5,1,3.0,0.0,H
+CZE1,16/09/2023,Bohemians Praha 1905,Baník Ostrava,1,1,0.0,0.0,D
+CZE1,17/09/2023,FC Zlín,Viktoria Plzeň,1,7,1.0,4.0,A
+CZE1,17/09/2023,FK Jablonec,Slovan Liberec,1,1,0.0,1.0,D
+CZE1,17/09/2023,AC Sparta Praha,1. FC Slovácko,5,0,3.0,0.0,H
+CZE1,23/09/2023,1. FC Slovácko,MFK Karviná,2,0,2.0,0.0,H
+CZE1,23/09/2023,Baník Ostrava,FC Zlín,5,1,1.0,1.0,H
+CZE1,23/09/2023,Dynamo České Budějovice,FK Mladá Boleslav,1,2,0.0,1.0,A
+CZE1,23/09/2023,Slovan Liberec,FK Teplice,3,3,3.0,2.0,D
+CZE1,23/09/2023,Bohemians Praha 1905,Sigma Olomouc,3,2,1.0,2.0,H
+CZE1,24/09/2023,Slavia Praha,AC Sparta Praha,1,1,0.0,0.0,D
+CZE1,24/09/2023,FC Hradec Králové,FK Jablonec,1,0,1.0,0.0,H
+CZE1,24/09/2023,Viktoria Plzeň,FK Pardubice,6,2,3.0,1.0,H
+CZE1,30/09/2023,Sigma Olomouc,Baník Ostrava,0,3,0.0,2.0,A
+CZE1,30/09/2023,MFK Karviná,Slovan Liberec,5,2,3.0,1.0,H
+CZE1,30/09/2023,AC Sparta Praha,Viktoria Plzeň,2,1,2.0,1.0,H
+CZE1,30/09/2023,FC Zlín,Dynamo České Budějovice,1,1,0.0,1.0,D
+CZE1,30/09/2023,FK Jablonec,1. FC Slovácko,2,0,2.0,0.0,H
+CZE1,01/10/2023,FK Pardubice,FC Hradec Králové,1,1,1.0,0.0,D
+CZE1,01/10/2023,FK Teplice,Slavia Praha,0,0,,,D
+CZE1,01/10/2023,FK Mladá Boleslav,Bohemians Praha 1905,2,1,1.0,0.0,H
+CZE1,07/10/2023,1. FC Slovácko,FK Teplice,2,0,0.0,0.0,H
+CZE1,07/10/2023,Bohemians Praha 1905,FC Zlín,0,0,,,D
+CZE1,07/10/2023,Dynamo České Budějovice,MFK Karviná,1,0,0.0,0.0,H
+CZE1,07/10/2023,Sigma Olomouc,FK Mladá Boleslav,4,0,1.0,0.0,H
+CZE1,07/10/2023,Baník Ostrava,FK Pardubice,1,1,0.0,1.0,D
+CZE1,08/10/2023,Viktoria Plzeň,FK Jablonec,3,2,2.0,2.0,H
+CZE1,08/10/2023,FC Hradec Králové,AC Sparta Praha,1,3,0.0,2.0,A
+CZE1,08/10/2023,Slovan Liberec,Slavia Praha,2,3,2.0,1.0,A
+CZE1,21/10/2023,Slovan Liberec,Viktoria Plzeň,3,0,1.0,0.0,H
+CZE1,21/10/2023,MFK Karviná,FC Hradec Králové,1,0,0.0,0.0,H
+CZE1,21/10/2023,Slavia Praha,1. FC Slovácko,2,0,0.0,0.0,H
+CZE1,21/10/2023,FC Zlín,FK Mladá Boleslav,5,9,2.0,1.0,A
+CZE1,21/10/2023,FK Pardubice,Sigma Olomouc,1,1,1.0,0.0,D
+CZE1,22/10/2023,FK Jablonec,Bohemians Praha 1905,0,1,0.0,1.0,A
+CZE1,22/10/2023,FK Teplice,Baník Ostrava,0,1,0.0,0.0,A
+CZE1,22/10/2023,AC Sparta Praha,Dynamo České Budějovice,4,0,2.0,0.0,H
+CZE1,28/10/2023,Baník Ostrava,FK Jablonec,0,1,0.0,0.0,A
+CZE1,28/10/2023,Sigma Olomouc,FC Zlín,0,0,,,D
+CZE1,28/10/2023,FC Hradec Králové,FK Teplice,1,0,1.0,0.0,H
+CZE1,28/10/2023,1. FC Slovácko,Slovan Liberec,1,1,1.0,1.0,D
+CZE1,28/10/2023,Dynamo České Budějovice,FK Pardubice,0,1,0.0,1.0,A
+CZE1,29/10/2023,FK Mladá Boleslav,AC Sparta Praha,3,1,2.0,1.0,H
+CZE1,29/10/2023,Viktoria Plzeň,MFK Karviná,0,1,0.0,0.0,A
+CZE1,29/10/2023,Bohemians Praha 1905,Slavia Praha,0,2,0.0,1.0,A
+CZE1,04/11/2023,AC Sparta Praha,Bohemians Praha 1905,2,0,0.0,0.0,H
+CZE1,04/11/2023,FK Teplice,FK Mladá Boleslav,1,0,0.0,0.0,H
+CZE1,04/11/2023,FK Pardubice,FC Zlín,0,1,0.0,1.0,A
+CZE1,04/11/2023,1. FC Slovácko,FC Hradec Králové,0,0,,,D
+CZE1,04/11/2023,FK Jablonec,Sigma Olomouc,1,1,1.0,1.0,D
+CZE1,05/11/2023,MFK Karviná,Baník Ostrava,1,3,1.0,0.0,A
+CZE1,05/11/2023,Slovan Liberec,Dynamo České Budějovice,1,0,0.0,0.0,H
+CZE1,05/11/2023,Slavia Praha,Viktoria Plzeň,1,2,1.0,0.0,A
+CZE1,11/11/2023,Bohemians Praha 1905,MFK Karviná,1,0,0.0,0.0,H
+CZE1,11/11/2023,Dynamo České Budějovice,FK Teplice,0,1,0.0,1.0,A
+CZE1,11/11/2023,FC Hradec Králové,Slovan Liberec,1,1,1.0,1.0,D
+CZE1,11/11/2023,FC Zlín,FK Jablonec,1,1,1.0,0.0,D
+CZE1,11/11/2023,FK Mladá Boleslav,FK Pardubice,1,0,0.0,0.0,H
+CZE1,12/11/2023,Sigma Olomouc,Slavia Praha,1,3,1.0,2.0,A
+CZE1,12/11/2023,Viktoria Plzeň,1. FC Slovácko,1,4,1.0,1.0,A
+CZE1,12/11/2023,Baník Ostrava,AC Sparta Praha,0,1,0.0,0.0,A
+CZE1,25/11/2023,FC Hradec Králové,Viktoria Plzeň,1,1,1.0,0.0,D
+CZE1,25/11/2023,FK Teplice,Bohemians Praha 1905,1,1,1.0,0.0,D
+CZE1,25/11/2023,MFK Karviná,Sigma Olomouc,0,2,0.0,1.0,A
+CZE1,25/11/2023,Slovan Liberec,FK Mladá Boleslav,2,1,1.0,1.0,H
+CZE1,25/11/2023,Slavia Praha,Dynamo České Budějovice,2,1,1.0,1.0,H
+CZE1,26/11/2023,1. FC Slovácko,Baník Ostrava,2,0,1.0,0.0,H
+CZE1,26/11/2023,FK Jablonec,FK Pardubice,2,1,1.0,1.0,H
+CZE1,26/11/2023,AC Sparta Praha,FC Zlín,2,0,2.0,0.0,H
+CZE1,02/12/2023,Sigma Olomouc,1. FC Slovácko,1,1,1.0,0.0,D
+CZE1,03/12/2023,FK Pardubice,AC Sparta Praha,1,2,1.0,1.0,A
+CZE1,06/12/2023,FK Jablonec,FK Teplice,3,2,2.0,1.0,H
+CZE1,06/12/2023,FK Mladá Boleslav,Viktoria Plzeň,1,3,1.0,1.0,A
+CZE1,09/12/2023,FC Hradec Králové,Baník Ostrava,2,3,2.0,1.0,A
+CZE1,09/12/2023,AC Sparta Praha,FK Jablonec,3,0,3.0,0.0,H
+CZE1,09/12/2023,Slovan Liberec,FC Zlín,5,3,2.0,1.0,H
+CZE1,09/12/2023,1. FC Slovácko,Bohemians Praha 1905,5,2,2.0,2.0,H
+CZE1,10/12/2023,Viktoria Plzeň,Dynamo České Budějovice,5,0,2.0,0.0,H
+CZE1,10/12/2023,Slavia Praha,FK Mladá Boleslav,2,0,0.0,0.0,H
+CZE1,13/12/2023,Dynamo České Budějovice,FC Hradec Králové,0,2,0.0,2.0,A
+CZE1,13/12/2023,Bohemians Praha 1905,Slovan Liberec,0,0,,,D
+CZE1,13/12/2023,FK Mladá Boleslav,MFK Karviná,2,2,1.0,2.0,D
+CZE1,16/12/2023,Bohemians Praha 1905,Dynamo České Budějovice,0,0,,,D
+CZE1,16/12/2023,FC Zlín,FC Hradec Králové,4,0,4.0,0.0,H
+CZE1,16/12/2023,FK Jablonec,MFK Karviná,0,0,,,D
+CZE1,16/12/2023,FK Mladá Boleslav,1. FC Slovácko,0,1,0.0,0.0,A
+CZE1,16/12/2023,FK Pardubice,Slovan Liberec,2,0,1.0,0.0,H
+CZE1,17/12/2023,AC Sparta Praha,FK Teplice,2,1,0.0,1.0,H
+CZE1,17/12/2023,Sigma Olomouc,Viktoria Plzeň,1,3,1.0,2.0,A
+CZE1,17/12/2023,Baník Ostrava,Slavia Praha,2,3,2.0,2.0,A
+CZE1,10/02/2024,Dynamo České Budějovice,Baník Ostrava,3,0,0.0,0.0,H
+CZE1,10/02/2024,1. FC Slovácko,FK Pardubice,1,2,0.0,1.0,A
+CZE1,10/02/2024,Viktoria Plzeň,FK Mladá Boleslav,1,1,0.0,0.0,D
+CZE1,10/02/2024,MFK Karviná,AC Sparta Praha,0,3,0.0,1.0,A
+CZE1,10/02/2024,Slovan Liberec,Sigma Olomouc,2,0,0.0,0.0,H
+CZE1,11/02/2024,FC Hradec Králové,Bohemians Praha 1905,2,2,1.0,0.0,D
+CZE1,11/02/2024,FK Teplice,FC Zlín,2,1,1.0,0.0,H
+CZE1,11/02/2024,Slavia Praha,FK Jablonec,4,3,3.0,2.0,H
+CZE1,13/02/2024,Baník Ostrava,Viktoria Plzeň,0,1,0.0,0.0,A
+CZE1,14/02/2024,MFK Karviná,FK Pardubice,0,3,0.0,1.0,A
+CZE1,14/02/2024,FC Zlín,Slavia Praha,1,1,0.0,1.0,D
+CZE1,17/02/2024,FK Jablonec,Dynamo České Budějovice,5,2,1.0,1.0,H
+CZE1,17/02/2024,FK Mladá Boleslav,Baník Ostrava,1,3,1.0,3.0,A
+CZE1,17/02/2024,FK Pardubice,FK Teplice,1,1,1.0,0.0,D
+CZE1,17/02/2024,Sigma Olomouc,FC Hradec Králové,0,0,,,D
+CZE1,17/02/2024,Bohemians Praha 1905,Viktoria Plzeň,0,2,0.0,2.0,A
+CZE1,18/02/2024,AC Sparta Praha,Slovan Liberec,2,1,0.0,0.0,H
+CZE1,18/02/2024,FC Zlín,1. FC Slovácko,2,1,0.0,1.0,H
+CZE1,18/02/2024,MFK Karviná,Slavia Praha,0,3,0.0,2.0,A
+CZE1,21/02/2024,FK Teplice,Sigma Olomouc,2,0,1.0,0.0,H
+CZE1,24/02/2024,Baník Ostrava,Bohemians Praha 1905,1,1,1.0,0.0,D
+CZE1,24/02/2024,Viktoria Plzeň,FC Zlín,3,0,1.0,0.0,H
+CZE1,24/02/2024,Slovan Liberec,FK Jablonec,3,3,0.0,1.0,D
+CZE1,24/02/2024,FC Hradec Králové,FK Mladá Boleslav,0,0,,,D
+CZE1,24/02/2024,FK Teplice,MFK Karviná,2,2,0.0,1.0,D
+CZE1,25/02/2024,Dynamo České Budějovice,Sigma Olomouc,2,1,0.0,0.0,H
+CZE1,25/02/2024,Slavia Praha,FK Pardubice,3,0,0.0,0.0,H
+CZE1,25/02/2024,1. FC Slovácko,AC Sparta Praha,1,3,1.0,1.0,A
+CZE1,02/03/2024,FK Mladá Boleslav,Dynamo České Budějovice,3,1,2.0,1.0,H
+CZE1,02/03/2024,MFK Karviná,1. FC Slovácko,1,3,1.0,1.0,A
+CZE1,02/03/2024,Sigma Olomouc,Bohemians Praha 1905,2,2,2.0,2.0,D
+CZE1,02/03/2024,FK Pardubice,Viktoria Plzeň,2,3,0.0,1.0,A
+CZE1,02/03/2024,FK Jablonec,FC Hradec Králové,1,1,1.0,1.0,D
+CZE1,03/03/2024,FK Teplice,Slovan Liberec,2,0,2.0,0.0,H
+CZE1,03/03/2024,FC Zlín,Baník Ostrava,0,1,0.0,1.0,A
+CZE1,03/03/2024,AC Sparta Praha,Slavia Praha,0,0,,,D
+CZE1,09/03/2024,Slovan Liberec,MFK Karviná,1,0,0.0,0.0,H
+CZE1,09/03/2024,Baník Ostrava,Sigma Olomouc,1,2,0.0,2.0,A
+CZE1,09/03/2024,Bohemians Praha 1905,FK Mladá Boleslav,0,0,,,D
+CZE1,09/03/2024,1. FC Slovácko,FK Jablonec,0,1,0.0,0.0,A
+CZE1,09/03/2024,FC Hradec Králové,FK Pardubice,2,0,0.0,0.0,H
+CZE1,10/03/2024,Dynamo České Budějovice,FC Zlín,2,2,1.0,1.0,D
+CZE1,10/03/2024,Slavia Praha,FK Teplice,4,0,2.0,0.0,H
+CZE1,10/03/2024,Viktoria Plzeň,AC Sparta Praha,4,0,1.0,0.0,H
+CZE1,16/03/2024,FC Zlín,Bohemians Praha 1905,2,2,0.0,1.0,D
+CZE1,16/03/2024,FK Mladá Boleslav,Sigma Olomouc,2,1,1.0,0.0,H
+CZE1,16/03/2024,MFK Karviná,Dynamo České Budějovice,2,1,1.0,1.0,H
+CZE1,16/03/2024,FK Teplice,1. FC Slovácko,1,1,1.0,1.0,D
+CZE1,17/03/2024,FK Jablonec,Viktoria Plzeň,1,2,0.0,1.0,A
+CZE1,17/03/2024,FK Pardubice,Baník Ostrava,0,1,0.0,0.0,A
+CZE1,17/03/2024,Slavia Praha,Slovan Liberec,3,0,1.0,0.0,H
+CZE1,17/03/2024,AC Sparta Praha,FC Hradec Králové,2,1,1.0,0.0,H
+CZE1,30/03/2024,1. FC Slovácko,Slavia Praha,1,3,1.0,2.0,A
+CZE1,30/03/2024,Viktoria Plzeň,Slovan Liberec,1,3,0.0,0.0,A
+CZE1,30/03/2024,Bohemians Praha 1905,FK Jablonec,2,0,2.0,0.0,H
+CZE1,30/03/2024,Sigma Olomouc,FK Pardubice,0,2,0.0,1.0,A
+CZE1,31/03/2024,Baník Ostrava,FK Teplice,4,1,2.0,0.0,H
+CZE1,31/03/2024,FC Hradec Králové,MFK Karviná,2,1,1.0,1.0,H
+CZE1,31/03/2024,FK Mladá Boleslav,FC Zlín,3,2,2.0,1.0,H
+CZE1,31/03/2024,Dynamo České Budějovice,AC Sparta Praha,0,1,0.0,1.0,A
+CZE1,06/04/2024,FC Zlín,Sigma Olomouc,3,2,1.0,0.0,H
+CZE1,06/04/2024,MFK Karviná,Viktoria Plzeň,0,0,,,D
+CZE1,06/04/2024,Slovan Liberec,1. FC Slovácko,4,1,2.0,0.0,H
+CZE1,06/04/2024,Slavia Praha,Bohemians Praha 1905,2,1,0.0,0.0,H
+CZE1,07/04/2024,AC Sparta Praha,FK Mladá Boleslav,1,1,1.0,1.0,D
+CZE1,07/04/2024,FK Teplice,FC Hradec Králové,0,1,0.0,1.0,A
+CZE1,07/04/2024,FK Jablonec,Baník Ostrava,2,3,1.0,2.0,A
+CZE1,07/04/2024,FK Pardubice,Dynamo České Budějovice,1,1,1.0,0.0,D
+CZE1,13/04/2024,Bohemians Praha 1905,AC Sparta Praha,1,3,1.0,1.0,A
+CZE1,13/04/2024,Dynamo České Budějovice,Slovan Liberec,3,2,1.0,1.0,H
+CZE1,13/04/2024,FK Mladá Boleslav,FK Teplice,1,2,0.0,0.0,A
+CZE1,13/04/2024,FC Hradec Králové,1. FC Slovácko,1,0,0.0,0.0,H
+CZE1,14/04/2024,Baník Ostrava,MFK Karviná,2,2,1.0,0.0,D
+CZE1,14/04/2024,FC Zlín,FK Pardubice,1,1,1.0,0.0,D
+CZE1,14/04/2024,Sigma Olomouc,FK Jablonec,1,0,0.0,0.0,H
+CZE1,14/04/2024,Viktoria Plzeň,Slavia Praha,1,0,0.0,0.0,H
+CZE1,20/04/2024,AC Sparta Praha,Baník Ostrava,4,3,1.0,0.0,H
+CZE1,20/04/2024,FK Teplice,Dynamo České Budějovice,2,2,2.0,1.0,D
+CZE1,20/04/2024,FK Jablonec,FC Zlín,0,0,,,D
+CZE1,20/04/2024,MFK Karviná,Bohemians Praha 1905,1,1,0.0,0.0,D
+CZE1,21/04/2024,FK Pardubice,FK Mladá Boleslav,1,2,0.0,2.0,A
+CZE1,21/04/2024,Slavia Praha,Sigma Olomouc,2,2,0.0,0.0,D
+CZE1,21/04/2024,1. FC Slovácko,Viktoria Plzeň,1,1,0.0,1.0,D
+CZE1,21/04/2024,Slovan Liberec,FC Hradec Králové,0,0,,,D
+CZE1,28/04/2024,Viktoria Plzeň,FK Teplice,3,0,0.0,0.0,H
+CZE1,28/04/2024,Baník Ostrava,Slovan Liberec,2,2,1.0,0.0,D
+CZE1,28/04/2024,Bohemians Praha 1905,FK Pardubice,2,1,1.0,0.0,H
+CZE1,28/04/2024,Dynamo České Budějovice,1. FC Slovácko,2,2,1.0,1.0,D
+CZE1,28/04/2024,FC Hradec Králové,Slavia Praha,1,2,0.0,2.0,A
+CZE1,28/04/2024,FC Zlín,MFK Karviná,0,1,0.0,1.0,A
+CZE1,28/04/2024,FK Jablonec,FK Mladá Boleslav,1,1,1.0,0.0,D
+CZE1,28/04/2024,Sigma Olomouc,AC Sparta Praha,1,4,0.0,2.0,A
+CZE1,04/05/2024,FK Pardubice,FC Zlín,2,0,0.0,0.0,H
+CZE1,04/05/2024,FK Jablonec,MFK Karviná,3,2,1.0,1.0,H
+CZE1,04/05/2024,Slavia Praha,Baník Ostrava,5,0,1.0,0.0,H
+CZE1,04/05/2024,Dynamo České Budějovice,Bohemians Praha 1905,2,1,1.0,1.0,H
+CZE1,05/05/2024,1. FC Slovácko,AC Sparta Praha,2,4,1.0,2.0,A
+CZE1,05/05/2024,Viktoria Plzeň,FK Mladá Boleslav,3,0,2.0,0.0,H
+CZE1,05/05/2024,FC Hradec Králové,Sigma Olomouc,3,1,3.0,1.0,H
+CZE1,05/05/2024,FK Teplice,Slovan Liberec,2,0,0.0,0.0,H
+CZE1,11/05/2024,AC Sparta Praha,Slavia Praha,0,0,,,D
+CZE1,11/05/2024,Viktoria Plzeň,1. FC Slovácko,4,2,2.0,1.0,H
+CZE1,11/05/2024,Baník Ostrava,FK Mladá Boleslav,0,1,0.0,1.0,A
+CZE1,12/05/2024,FK Pardubice,Dynamo České Budějovice,3,2,1.0,1.0,H
+CZE1,12/05/2024,Sigma Olomouc,FC Hradec Králové,1,3,0.0,2.0,A
+CZE1,12/05/2024,Slovan Liberec,FK Teplice,1,2,0.0,0.0,A
+CZE1,12/05/2024,MFK Karviná,FC Zlín,2,2,2.0,0.0,D
+CZE1,12/05/2024,Bohemians Praha 1905,FK Jablonec,1,1,0.0,1.0,D
+CZE1,14/05/2024,AC Sparta Praha,Baník Ostrava,2,1,1.0,0.0,H
+CZE1,14/05/2024,FK Mladá Boleslav,1. FC Slovácko,0,1,0.0,1.0,A
+CZE1,15/05/2024,Slavia Praha,Viktoria Plzeň,3,0,2.0,0.0,H
+CZE1,16/05/2024,FC Zlín,Dynamo České Budějovice,1,1,0.0,0.0,D
+CZE1,16/05/2024,Bohemians Praha 1905,MFK Karviná,1,3,1.0,0.0,A
+CZE1,16/05/2024,FK Jablonec,FK Pardubice,3,0,0.0,0.0,H
+CZE1,18/05/2024,FK Mladá Boleslav,AC Sparta Praha,0,5,0.0,3.0,A
+CZE1,18/05/2024,1. FC Slovácko,Slavia Praha,1,2,0.0,0.0,A
+CZE1,18/05/2024,Viktoria Plzeň,Baník Ostrava,1,1,0.0,0.0,D
+CZE1,19/05/2024,FK Teplice,FC Hradec Králové,0,1,0.0,0.0,A
+CZE1,19/05/2024,FC Zlín,Bohemians Praha 1905,1,2,1.0,1.0,A
+CZE1,19/05/2024,Dynamo České Budějovice,FK Jablonec,2,2,2.0,2.0,D
+CZE1,19/05/2024,FK Pardubice,MFK Karviná,4,0,2.0,0.0,H
+CZE1,25/05/2024,FC Hradec Králové,FK Teplice,2,0,0.0,0.0,H
+CZE1,25/05/2024,MFK Karviná,Dynamo České Budějovice,1,0,1.0,0.0,H
+CZE1,25/05/2024,FK Jablonec,FC Zlín,1,0,1.0,0.0,H
+CZE1,25/05/2024,Bohemians Praha 1905,FK Pardubice,0,1,0.0,0.0,A
+CZE1,26/05/2024,Baník Ostrava,1. FC Slovácko,6,0,3.0,0.0,H
+CZE1,26/05/2024,AC Sparta Praha,Viktoria Plzeň,1,1,1.0,0.0,D
+CZE1,26/05/2024,Slavia Praha,FK Mladá Boleslav,4,0,2.0,0.0,H
+CZE1,31/05/2024,FK Mladá Boleslav,FC Hradec Králové,3,1,2.0,0.0,H
+CZE1,19/07/2024,AC Sparta Praha,FK Pardubice,2,1,1.0,1.0,H
+CZE1,20/07/2024,FK Jablonec,FK Mladá Boleslav,2,0,1.0,0.0,H
+CZE1,20/07/2024,Dynamo České Budějovice,Sigma Olomouc,0,2,0.0,0.0,A
+CZE1,20/07/2024,Bohemians Praha 1905,Baník Ostrava,2,1,0.0,0.0,H
+CZE1,20/07/2024,FK Dukla Praha,Viktoria Plzeň,1,3,0.0,2.0,A
+CZE1,21/07/2024,FC Hradec Králové,FK Teplice,1,0,0.0,0.0,H
+CZE1,21/07/2024,1. FC Slovácko,Slavia Praha,0,0,,,D
+CZE1,21/07/2024,MFK Karviná,Slovan Liberec,1,3,1.0,2.0,A
+CZE1,27/07/2024,FK Dukla Praha,Bohemians Praha 1905,1,0,0.0,0.0,H
+CZE1,27/07/2024,FK Teplice,AC Sparta Praha,1,4,0.0,0.0,A
+CZE1,27/07/2024,FK Pardubice,MFK Karviná,0,1,0.0,1.0,A
+CZE1,27/07/2024,Slavia Praha,Dynamo České Budějovice,4,0,2.0,0.0,H
+CZE1,28/07/2024,Slovan Liberec,Sigma Olomouc,1,1,1.0,0.0,D
+CZE1,28/07/2024,FK Mladá Boleslav,1. FC Slovácko,3,0,2.0,0.0,H
+CZE1,28/07/2024,Baník Ostrava,FK Jablonec,1,0,0.0,0.0,H
+CZE1,28/07/2024,Viktoria Plzeň,FC Hradec Králové,1,0,0.0,0.0,H
+CZE1,02/08/2024,Slovan Liberec,Slavia Praha,0,1,0.0,1.0,A
+CZE1,02/08/2024,AC Sparta Praha,FK Dukla Praha,2,0,1.0,0.0,H
+CZE1,03/08/2024,1. FC Slovácko,Bohemians Praha 1905,0,0,,,D
+CZE1,03/08/2024,FK Jablonec,Viktoria Plzeň,0,0,,,D
+CZE1,03/08/2024,Sigma Olomouc,FK Teplice,2,1,1.0,1.0,H
+CZE1,04/08/2024,FC Hradec Králové,FK Mladá Boleslav,2,1,1.0,1.0,H
+CZE1,04/08/2024,Dynamo České Budějovice,FK Pardubice,1,3,0.0,3.0,A
+CZE1,10/08/2024,FK Dukla Praha,FK Jablonec,0,2,0.0,1.0,A
+CZE1,10/08/2024,FK Teplice,Slovan Liberec,2,1,1.0,0.0,H
+CZE1,10/08/2024,Bohemians Praha 1905,AC Sparta Praha,1,2,1.0,1.0,A
+CZE1,10/08/2024,Slavia Praha,Sigma Olomouc,2,0,1.0,0.0,H
+CZE1,11/08/2024,FK Pardubice,1. FC Slovácko,0,1,0.0,0.0,A
+CZE1,11/08/2024,FK Mladá Boleslav,Dynamo České Budějovice,4,0,1.0,0.0,H
+CZE1,11/08/2024,Baník Ostrava,FC Hradec Králové,1,0,0.0,0.0,H
+CZE1,11/08/2024,Viktoria Plzeň,MFK Karviná,5,0,2.0,0.0,H
+CZE1,17/08/2024,MFK Karviná,Bohemians Praha 1905,1,2,1.0,2.0,A
+CZE1,17/08/2024,FC Hradec Králové,FK Dukla Praha,1,0,1.0,0.0,H
+CZE1,17/08/2024,Slavia Praha,FK Teplice,2,1,0.0,0.0,H
+CZE1,17/08/2024,FK Jablonec,AC Sparta Praha,1,2,0.0,1.0,A
+CZE1,18/08/2024,1. FC Slovácko,Baník Ostrava,1,0,1.0,0.0,H
+CZE1,18/08/2024,Dynamo České Budějovice,Viktoria Plzeň,0,3,0.0,1.0,A
+CZE1,18/08/2024,Sigma Olomouc,FK Mladá Boleslav,3,2,2.0,1.0,H
+CZE1,18/08/2024,Slovan Liberec,FK Pardubice,3,0,2.0,0.0,H
+CZE1,24/08/2024,Bohemians Praha 1905,FK Jablonec,1,2,1.0,1.0,A
+CZE1,24/08/2024,FK Teplice,MFK Karviná,1,3,0.0,1.0,A
+CZE1,24/08/2024,AC Sparta Praha,1. FC Slovácko,2,2,1.0,2.0,D
+CZE1,24/08/2024,FK Pardubice,FC Hradec Králové,2,1,0.0,0.0,H
+CZE1,25/08/2024,Baník Ostrava,Slovan Liberec,2,0,0.0,0.0,H
+CZE1,25/08/2024,FK Dukla Praha,Dynamo České Budějovice,3,0,0.0,0.0,H
+CZE1,28/08/2024,MFK Karviná,Baník Ostrava,0,0,,,D
+CZE1,31/08/2024,1. FC Slovácko,FK Jablonec,0,0,,,D
+CZE1,31/08/2024,Dynamo České Budějovice,Bohemians Praha 1905,0,0,,,D
+CZE1,31/08/2024,FC Hradec Králové,AC Sparta Praha,0,2,0.0,2.0,A
+CZE1,01/09/2024,Slovan Liberec,Viktoria Plzeň,1,1,0.0,0.0,D
+CZE1,01/09/2024,Slavia Praha,FK Pardubice,2,0,1.0,0.0,H
+CZE1,01/09/2024,MFK Karviná,FK Dukla Praha,0,0,,,D
+CZE1,01/09/2024,FK Teplice,FK Mladá Boleslav,1,2,1.0,1.0,A
+CZE1,01/09/2024,Sigma Olomouc,Baník Ostrava,2,2,1.0,1.0,D
+CZE1,17/09/2024,FK Mladá Boleslav,Slavia Praha,0,2,0.0,2.0,A
+CZE1,17/09/2024,Viktoria Plzeň,Sigma Olomouc,2,1,1.0,0.0,H
+CZE1,21/09/2024,Slavia Praha,Viktoria Plzeň,3,0,3.0,0.0,H
+CZE1,21/09/2024,MFK Karviná,FK Jablonec,1,0,1.0,0.0,H
+CZE1,21/09/2024,FC Hradec Králové,1. FC Slovácko,3,0,1.0,0.0,H
+CZE1,21/09/2024,FK Teplice,Baník Ostrava,2,3,1.0,1.0,A
+CZE1,22/09/2024,Sigma Olomouc,FK Dukla Praha,2,1,1.0,0.0,H
+CZE1,22/09/2024,Slovan Liberec,Bohemians Praha 1905,2,2,2.0,1.0,D
+CZE1,22/09/2024,Dynamo České Budějovice,AC Sparta Praha,0,2,0.0,1.0,A
+CZE1,22/09/2024,FK Mladá Boleslav,FK Pardubice,2,2,1.0,1.0,D
+CZE1,27/09/2024,AC Sparta Praha,Sigma Olomouc,2,3,1.0,0.0,A
+CZE1,28/09/2024,FK Jablonec,FC Hradec Králové,2,0,0.0,0.0,H
+CZE1,28/09/2024,1. FC Slovácko,MFK Karviná,2,1,1.0,0.0,H
+CZE1,28/09/2024,FK Pardubice,FK Teplice,0,1,0.0,0.0,A
+CZE1,28/09/2024,FK Dukla Praha,Slovan Liberec,1,4,1.0,0.0,A
+CZE1,29/09/2024,Viktoria Plzeň,FK Mladá Boleslav,1,1,1.0,1.0,D
+CZE1,29/09/2024,Baník Ostrava,Dynamo České Budějovice,2,1,1.0,0.0,H
+CZE1,29/09/2024,Bohemians Praha 1905,Slavia Praha,0,4,0.0,3.0,A
+CZE1,05/10/2024,MFK Karviná,FC Hradec Králové,0,0,,,D
+CZE1,05/10/2024,FK Teplice,FK Dukla Praha,1,1,1.0,0.0,D
+CZE1,05/10/2024,Slovan Liberec,FK Jablonec,0,5,0.0,1.0,A
+CZE1,05/10/2024,Dynamo České Budějovice,1. FC Slovácko,0,2,0.0,1.0,A
+CZE1,06/10/2024,Slavia Praha,AC Sparta Praha,2,1,2.0,0.0,H
+CZE1,06/10/2024,FK Mladá Boleslav,Baník Ostrava,0,0,,,D
+CZE1,06/10/2024,Sigma Olomouc,Bohemians Praha 1905,1,3,0.0,2.0,A
+CZE1,06/10/2024,Viktoria Plzeň,FK Pardubice,2,0,0.0,0.0,H
+CZE1,19/10/2024,AC Sparta Praha,Slovan Liberec,2,1,1.0,0.0,H
+CZE1,19/10/2024,FC Hradec Králové,Sigma Olomouc,1,1,0.0,1.0,D
+CZE1,19/10/2024,Baník Ostrava,Viktoria Plzeň,1,3,0.0,2.0,A
+CZE1,19/10/2024,FK Dukla Praha,FK Pardubice,2,1,0.0,1.0,H
+CZE1,20/10/2024,1. FC Slovácko,FK Teplice,0,2,0.0,1.0,A
+CZE1,20/10/2024,FK Jablonec,Slavia Praha,1,2,0.0,1.0,A
+CZE1,20/10/2024,MFK Karviná,Dynamo České Budějovice,4,1,2.0,0.0,H
+CZE1,20/10/2024,Bohemians Praha 1905,FK Mladá Boleslav,2,2,0.0,1.0,D
+CZE1,26/10/2024,Sigma Olomouc,FK Jablonec,0,0,,,D
+CZE1,26/10/2024,Dynamo České Budějovice,FC Hradec Králové,0,2,0.0,1.0,A
+CZE1,26/10/2024,Slovan Liberec,1. FC Slovácko,4,0,3.0,0.0,H
+CZE1,26/10/2024,FK Pardubice,Baník Ostrava,2,3,1.0,0.0,A
+CZE1,27/10/2024,FK Teplice,Bohemians Praha 1905,1,2,0.0,2.0,A
+CZE1,27/10/2024,Slavia Praha,FK Dukla Praha,3,0,1.0,0.0,H
+CZE1,27/10/2024,FK Mladá Boleslav,MFK Karviná,1,1,1.0,0.0,D
+CZE1,27/10/2024,Viktoria Plzeň,AC Sparta Praha,1,0,1.0,0.0,H
+CZE1,02/11/2024,FK Jablonec,FK Teplice,3,0,2.0,0.0,H
+CZE1,02/11/2024,AC Sparta Praha,Baník Ostrava,1,3,1.0,2.0,A
+CZE1,02/11/2024,FK Dukla Praha,FK Mladá Boleslav,0,1,0.0,0.0,A
+CZE1,02/11/2024,MFK Karviná,Sigma Olomouc,2,1,0.0,1.0,H
+CZE1,03/11/2024,Dynamo České Budějovice,Slovan Liberec,0,0,,,D
+CZE1,03/11/2024,Bohemians Praha 1905,FK Pardubice,0,0,,,D
+CZE1,03/11/2024,1. FC Slovácko,Viktoria Plzeň,1,0,0.0,0.0,H
+CZE1,03/11/2024,FC Hradec Králové,Slavia Praha,1,1,0.0,0.0,D
+CZE1,09/11/2024,Baník Ostrava,FK Dukla Praha,6,0,3.0,0.0,H
+CZE1,09/11/2024,Slovan Liberec,FC Hradec Králové,0,0,,,D
+CZE1,09/11/2024,FK Pardubice,FK Jablonec,2,0,0.0,0.0,H
+CZE1,10/11/2024,FK Mladá Boleslav,AC Sparta Praha,2,2,1.0,1.0,D
+CZE1,10/11/2024,Slavia Praha,MFK Karviná,5,1,1.0,0.0,H
+CZE1,10/11/2024,Viktoria Plzeň,Bohemians Praha 1905,2,0,2.0,0.0,H
+CZE1,10/11/2024,FK Teplice,Dynamo České Budějovice,5,2,2.0,1.0,H
+CZE1,23/11/2024,FC Hradec Králové,Viktoria Plzeň,0,1,0.0,0.0,A
+CZE1,23/11/2024,AC Sparta Praha,FK Teplice,1,1,0.0,0.0,D
+CZE1,23/11/2024,1. FC Slovácko,FK Mladá Boleslav,1,1,1.0,1.0,D
+CZE1,23/11/2024,FK Jablonec,Baník Ostrava,3,1,1.0,1.0,H
+CZE1,24/11/2024,Bohemians Praha 1905,FK Dukla Praha,3,1,0.0,0.0,H
+CZE1,24/11/2024,Dynamo České Budějovice,Slavia Praha,0,4,0.0,2.0,A
+CZE1,24/11/2024,MFK Karviná,FK Pardubice,1,0,1.0,0.0,H
+CZE1,24/11/2024,Sigma Olomouc,Slovan Liberec,1,4,0.0,2.0,A
+CZE1,27/11/2024,Sigma Olomouc,1. FC Slovácko,2,1,0.0,1.0,H
+CZE1,30/11/2024,Bohemians Praha 1905,1. FC Slovácko,3,3,2.0,1.0,D
+CZE1,30/11/2024,FK Teplice,Sigma Olomouc,1,0,0.0,0.0,H
+CZE1,30/11/2024,Baník Ostrava,MFK Karviná,2,1,0.0,1.0,H
+CZE1,30/11/2024,FK Dukla Praha,AC Sparta Praha,1,1,0.0,1.0,D
+CZE1,01/12/2024,Slavia Praha,Slovan Liberec,1,0,1.0,0.0,H
+CZE1,01/12/2024,FK Mladá Boleslav,FC Hradec Králové,3,0,1.0,0.0,H
+CZE1,01/12/2024,Viktoria Plzeň,FK Jablonec,3,2,0.0,2.0,H
+CZE1,01/12/2024,FK Pardubice,Dynamo České Budějovice,0,0,,,D
+CZE1,03/12/2024,AC Sparta Praha,MFK Karviná,4,1,3.0,1.0,H
+CZE1,04/12/2024,Bohemians Praha 1905,FC Hradec Králové,0,3,0.0,2.0,A
+CZE1,04/12/2024,FK Jablonec,Dynamo České Budějovice,5,0,4.0,0.0,H
+CZE1,04/12/2024,FK Dukla Praha,1. FC Slovácko,1,2,1.0,0.0,A
+CZE1,04/12/2024,FK Pardubice,Sigma Olomouc,2,2,0.0,1.0,D
+CZE1,05/12/2024,Baník Ostrava,Slavia Praha,0,1,0.0,1.0,A
+CZE1,05/12/2024,Viktoria Plzeň,FK Teplice,1,1,0.0,0.0,D
+CZE1,05/12/2024,FK Mladá Boleslav,Slovan Liberec,1,0,0.0,0.0,H
+CZE1,07/12/2024,1. FC Slovácko,FK Pardubice,1,1,1.0,1.0,D
+CZE1,07/12/2024,FK Jablonec,FK Dukla Praha,2,1,2.0,1.0,H
+CZE1,07/12/2024,AC Sparta Praha,Bohemians Praha 1905,1,0,0.0,0.0,H
+CZE1,08/12/2024,Dynamo České Budějovice,FK Mladá Boleslav,0,4,0.0,0.0,A
+CZE1,08/12/2024,MFK Karviná,Viktoria Plzeň,1,2,1.0,0.0,A
+CZE1,08/12/2024,Sigma Olomouc,Slavia Praha,1,2,1.0,0.0,A
+CZE1,08/12/2024,Slovan Liberec,FK Teplice,3,0,1.0,0.0,H
+CZE1,08/12/2024,FC Hradec Králové,Baník Ostrava,0,1,0.0,0.0,A
+CZE1,14/12/2024,FK Dukla Praha,FC Hradec Králové,1,2,0.0,2.0,A
+CZE1,14/12/2024,FK Pardubice,Slovan Liberec,1,1,0.0,0.0,D
+CZE1,14/12/2024,Bohemians Praha 1905,MFK Karviná,3,3,1.0,3.0,D
+CZE1,14/12/2024,Baník Ostrava,1. FC Slovácko,3,1,2.0,0.0,H
+CZE1,15/12/2024,FK Mladá Boleslav,Sigma Olomouc,1,3,0.0,2.0,A
+CZE1,15/12/2024,Viktoria Plzeň,Dynamo České Budějovice,7,2,4.0,1.0,H
+CZE1,15/12/2024,AC Sparta Praha,FK Jablonec,2,1,0.0,1.0,H
+CZE1,15/12/2024,FK Teplice,Slavia Praha,1,0,0.0,0.0,H
+CZE1,01/02/2025,MFK Karviná,FK Teplice,1,1,1.0,1.0,D
+CZE1,01/02/2025,Slovan Liberec,Baník Ostrava,0,1,0.0,1.0,A
+CZE1,01/02/2025,Dynamo České Budějovice,FK Dukla Praha,0,0,,,D
+CZE1,01/02/2025,FC Hradec Králové,FK Pardubice,3,0,2.0,0.0,H
+CZE1,02/02/2025,1. FC Slovácko,AC Sparta Praha,0,2,0.0,2.0,A
+CZE1,02/02/2025,FK Jablonec,Bohemians Praha 1905,0,1,0.0,0.0,A
+CZE1,02/02/2025,Slavia Praha,FK Mladá Boleslav,1,0,0.0,0.0,H
+CZE1,03/02/2025,Sigma Olomouc,Viktoria Plzeň,2,1,2.0,1.0,H
+CZE1,08/02/2025,FK Pardubice,Slavia Praha,0,2,0.0,0.0,A
+CZE1,08/02/2025,FK Mladá Boleslav,FK Teplice,2,1,1.0,0.0,H
+CZE1,08/02/2025,Viktoria Plzeň,Slovan Liberec,3,2,2.0,1.0,H
+CZE1,09/02/2025,Baník Ostrava,Sigma Olomouc,1,0,1.0,0.0,H
+CZE1,09/02/2025,Bohemians Praha 1905,Dynamo České Budějovice,1,0,1.0,0.0,H
+CZE1,09/02/2025,AC Sparta Praha,FC Hradec Králové,3,0,1.0,0.0,H
+CZE1,09/02/2025,FK Jablonec,1. FC Slovácko,4,2,1.0,0.0,H
+CZE1,15/02/2025,Sigma Olomouc,FK Pardubice,4,0,1.0,0.0,H
+CZE1,15/02/2025,1. FC Slovácko,FK Dukla Praha,0,0,,,D
+CZE1,15/02/2025,Dynamo České Budějovice,FK Jablonec,2,3,0.0,1.0,A
+CZE1,15/02/2025,MFK Karviná,AC Sparta Praha,2,3,2.0,2.0,A
+CZE1,16/02/2025,FC Hradec Králové,Bohemians Praha 1905,2,2,2.0,2.0,D
+CZE1,16/02/2025,Slovan Liberec,FK Mladá Boleslav,3,1,2.0,0.0,H
+CZE1,16/02/2025,FK Teplice,Viktoria Plzeň,0,2,0.0,2.0,A
+CZE1,16/02/2025,Slavia Praha,Baník Ostrava,1,0,1.0,0.0,H
+CZE1,22/02/2025,AC Sparta Praha,Dynamo České Budějovice,2,1,0.0,0.0,H
+CZE1,22/02/2025,FK Dukla Praha,Sigma Olomouc,1,3,0.0,1.0,A
+CZE1,22/02/2025,Baník Ostrava,FK Teplice,2,0,0.0,0.0,H
+CZE1,22/02/2025,FK Pardubice,FK Mladá Boleslav,0,3,0.0,2.0,A
+CZE1,23/02/2025,Viktoria Plzeň,Slavia Praha,1,3,1.0,2.0,A
+CZE1,23/02/2025,FK Jablonec,MFK Karviná,5,0,2.0,0.0,H
+CZE1,23/02/2025,Bohemians Praha 1905,Slovan Liberec,0,0,,,D
+CZE1,01/03/2025,Dynamo České Budějovice,Baník Ostrava,0,4,0.0,2.0,A
+CZE1,01/03/2025,Sigma Olomouc,AC Sparta Praha,1,2,1.0,1.0,A
+CZE1,01/03/2025,FC Hradec Králové,FK Jablonec,1,1,0.0,1.0,D
+CZE1,01/03/2025,FK Teplice,FK Pardubice,2,0,1.0,0.0,H
+CZE1,02/03/2025,Slovan Liberec,FK Dukla Praha,1,1,1.0,0.0,D
+CZE1,02/03/2025,FK Mladá Boleslav,Viktoria Plzeň,0,2,0.0,1.0,A
+CZE1,02/03/2025,MFK Karviná,1. FC Slovácko,2,0,0.0,0.0,H
+CZE1,02/03/2025,Slavia Praha,Bohemians Praha 1905,2,0,0.0,0.0,H
+CZE1,08/03/2025,AC Sparta Praha,Slavia Praha,2,0,0.0,0.0,H
+CZE1,08/03/2025,FK Dukla Praha,FK Teplice,1,1,1.0,0.0,D
+CZE1,08/03/2025,1. FC Slovácko,Dynamo České Budějovice,2,1,1.0,1.0,H
+CZE1,08/03/2025,FK Jablonec,Slovan Liberec,0,0,,,D
+CZE1,09/03/2025,Baník Ostrava,FK Mladá Boleslav,2,1,2.0,1.0,H
+CZE1,09/03/2025,FK Pardubice,Viktoria Plzeň,0,0,,,D
+CZE1,09/03/2025,FC Hradec Králové,MFK Karviná,1,1,1.0,1.0,D
+CZE1,09/03/2025,Bohemians Praha 1905,Sigma Olomouc,0,1,0.0,1.0,A
+CZE1,12/03/2025,FK Dukla Praha,MFK Karviná,0,0,,,D
+CZE1,15/03/2025,FK Teplice,1. FC Slovácko,1,0,0.0,0.0,H
+CZE1,15/03/2025,Slovan Liberec,AC Sparta Praha,1,0,0.0,0.0,H
+CZE1,15/03/2025,FK Pardubice,FK Dukla Praha,0,1,0.0,0.0,A
+CZE1,15/03/2025,FK Mladá Boleslav,Bohemians Praha 1905,1,2,0.0,2.0,A
+CZE1,16/03/2025,Sigma Olomouc,FC Hradec Králové,1,2,0.0,2.0,A
+CZE1,16/03/2025,Viktoria Plzeň,Baník Ostrava,0,1,0.0,1.0,A
+CZE1,16/03/2025,Dynamo České Budějovice,MFK Karviná,2,3,2.0,1.0,A
+CZE1,16/03/2025,Slavia Praha,FK Jablonec,3,0,3.0,0.0,H
+CZE1,29/03/2025,FK Jablonec,Sigma Olomouc,0,0,,,D
+CZE1,29/03/2025,Bohemians Praha 1905,FK Teplice,1,1,0.0,1.0,D
+CZE1,29/03/2025,Baník Ostrava,FK Pardubice,5,2,2.0,1.0,H
+CZE1,29/03/2025,FK Dukla Praha,Slavia Praha,0,0,,,D
+CZE1,30/03/2025,1. FC Slovácko,Slovan Liberec,0,4,0.0,4.0,A
+CZE1,30/03/2025,MFK Karviná,FK Mladá Boleslav,3,1,1.0,1.0,H
+CZE1,30/03/2025,FC Hradec Králové,Dynamo České Budějovice,1,0,1.0,0.0,H
+CZE1,30/03/2025,AC Sparta Praha,Viktoria Plzeň,2,4,1.0,2.0,A
+CZE1,05/04/2025,Slavia Praha,FC Hradec Králové,2,1,1.0,1.0,H
+CZE1,05/04/2025,Slovan Liberec,Dynamo České Budějovice,2,0,1.0,0.0,H
+CZE1,05/04/2025,Baník Ostrava,AC Sparta Praha,1,1,1.0,0.0,D
+CZE1,05/04/2025,FK Pardubice,Bohemians Praha 1905,2,0,1.0,0.0,H
+CZE1,05/04/2025,Sigma Olomouc,MFK Karviná,1,2,1.0,1.0,A
+CZE1,06/04/2025,Viktoria Plzeň,1. FC Slovácko,2,0,2.0,0.0,H
+CZE1,06/04/2025,FK Teplice,FK Jablonec,0,1,0.0,1.0,A
+CZE1,06/04/2025,FK Mladá Boleslav,FK Dukla Praha,0,1,0.0,0.0,A
+CZE1,09/04/2025,1. FC Slovácko,FC Hradec Králové,1,5,0.0,3.0,A
+CZE1,12/04/2025,MFK Karviná,Slavia Praha,0,4,0.0,2.0,A
+CZE1,12/04/2025,FK Dukla Praha,Baník Ostrava,1,2,1.0,1.0,A
+CZE1,13/04/2025,FK Jablonec,FK Pardubice,1,0,0.0,0.0,H
+CZE1,13/04/2025,Dynamo České Budějovice,FK Teplice,1,1,1.0,0.0,D
+CZE1,13/04/2025,AC Sparta Praha,FK Mladá Boleslav,2,0,1.0,0.0,H
+CZE1,13/04/2025,1. FC Slovácko,Sigma Olomouc,2,2,1.0,1.0,D
+CZE1,13/04/2025,Bohemians Praha 1905,Viktoria Plzeň,1,2,0.0,1.0,A
+CZE1,13/04/2025,FC Hradec Králové,Slovan Liberec,0,2,0.0,1.0,A
+CZE1,19/04/2025,Viktoria Plzeň,FK Dukla Praha,4,2,2.0,1.0,H
+CZE1,19/04/2025,FK Mladá Boleslav,FK Jablonec,0,1,0.0,1.0,A
+CZE1,19/04/2025,FK Teplice,FC Hradec Králové,1,0,0.0,0.0,H
+CZE1,19/04/2025,FK Pardubice,AC Sparta Praha,1,2,0.0,1.0,A
+CZE1,19/04/2025,Sigma Olomouc,Dynamo České Budějovice,3,0,1.0,0.0,H
+CZE1,19/04/2025,Baník Ostrava,Bohemians Praha 1905,1,0,1.0,0.0,H
+CZE1,19/04/2025,Slovan Liberec,MFK Karviná,2,3,1.0,1.0,A
+CZE1,19/04/2025,Slavia Praha,1. FC Slovácko,2,0,1.0,0.0,H
+CZE1,26/04/2025,Sigma Olomouc,Slavia Praha,0,5,0.0,1.0,A
+CZE1,26/04/2025,1. FC Slovácko,FK Pardubice,1,0,0.0,0.0,H
+CZE1,26/04/2025,Dynamo České Budějovice,FK Mladá Boleslav,1,2,0.0,0.0,A
+CZE1,27/04/2025,Baník Ostrava,FK Jablonec,1,2,0.0,2.0,A
+CZE1,27/04/2025,Viktoria Plzeň,AC Sparta Praha,2,0,1.0,0.0,H
+CZE1,27/04/2025,FK Teplice,FK Dukla Praha,2,2,1.0,2.0,D
+CZE1,03/05/2025,FK Dukla Praha,FK Pardubice,2,0,0.0,0.0,H
+CZE1,03/05/2025,FC Hradec Králové,MFK Karviná,1,0,0.0,0.0,H
+CZE1,03/05/2025,Slavia Praha,Viktoria Plzeň,4,3,1.0,2.0,H
+CZE1,03/05/2025,Baník Ostrava,Sigma Olomouc,0,0,,,D
+CZE1,04/05/2025,AC Sparta Praha,FK Jablonec,1,3,0.0,2.0,A
+CZE1,04/05/2025,FK Mladá Boleslav,FK Teplice,1,0,0.0,0.0,H
+CZE1,04/05/2025,1. FC Slovácko,Dynamo České Budějovice,0,0,,,D
+CZE1,04/05/2025,Bohemians Praha 1905,Slovan Liberec,4,1,3.0,0.0,H
+CZE1,10/05/2025,FK Pardubice,Dynamo České Budějovice,1,0,0.0,0.0,H
+CZE1,10/05/2025,FK Jablonec,Sigma Olomouc,4,0,2.0,0.0,H
+CZE1,10/05/2025,MFK Karviná,FC Hradec Králové,0,4,0.0,3.0,A
+CZE1,10/05/2025,Slavia Praha,AC Sparta Praha,2,1,1.0,0.0,H
+CZE1,11/05/2025,FK Mladá Boleslav,FK Dukla Praha,2,3,1.0,1.0,A
+CZE1,11/05/2025,FK Teplice,1. FC Slovácko,1,0,0.0,0.0,H
+CZE1,11/05/2025,Viktoria Plzeň,Baník Ostrava,1,2,0.0,0.0,A
+CZE1,11/05/2025,Slovan Liberec,Bohemians Praha 1905,1,0,0.0,0.0,H
+CZE1,17/05/2025,FK Pardubice,FK Mladá Boleslav,2,1,1.0,1.0,H
+CZE1,17/05/2025,Dynamo České Budějovice,FK Teplice,0,3,0.0,1.0,A
+CZE1,17/05/2025,1. FC Slovácko,FK Dukla Praha,3,2,0.0,1.0,H
+CZE1,18/05/2025,Bohemians Praha 1905,FC Hradec Králové,1,0,1.0,0.0,H
+CZE1,18/05/2025,Baník Ostrava,AC Sparta Praha,3,2,3.0,0.0,H
+CZE1,18/05/2025,Sigma Olomouc,Viktoria Plzeň,1,2,1.0,0.0,A
+CZE1,18/05/2025,FK Jablonec,Slavia Praha,3,2,0.0,1.0,H
+CZE1,24/05/2025,AC Sparta Praha,Sigma Olomouc,1,1,0.0,0.0,D
+CZE1,24/05/2025,Viktoria Plzeň,FK Jablonec,4,1,3.0,0.0,H
+CZE1,24/05/2025,Slavia Praha,Baník Ostrava,3,0,2.0,0.0,H
+CZE1,25/05/2025,FK Teplice,FK Pardubice,3,0,1.0,0.0,H
+CZE1,25/05/2025,FK Mladá Boleslav,1. FC Slovácko,2,2,0.0,0.0,D
+CZE1,25/05/2025,FC Hradec Králové,Bohemians Praha 1905,2,0,1.0,0.0,H
+CZE1,25/05/2025,FK Dukla Praha,Dynamo České Budějovice,2,1,2.0,1.0,H

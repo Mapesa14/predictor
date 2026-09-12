@@ -1,0 +1,436 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+EG1,01/07/2023,Al Masry Club,El Gouna,2,1,1.0,1.0,H
+EG1,02/07/2023,Smouha Sporting Club,Pyramids FC,2,3,1.0,1.0,A
+EG1,02/07/2023,ENPPI,Al Mokawloon,2,2,1.0,1.0,D
+EG1,03/07/2023,Future FC,Baladeyet Al Mahalla,1,0,0.0,0.0,H
+EG1,03/07/2023,Pharco FC,Zamalek,1,1,1.0,1.0,D
+EG1,03/07/2023,Ceramica Cleopatra,Ismaily,1,0,0.0,0.0,H
+EG1,04/07/2023,El Daklyeh,Al Ahly SC,1,4,0.0,2.0,A
+EG1,06/07/2023,ZED FC,National Bank SC,0,1,0.0,0.0,A
+EG1,06/07/2023,Smouha Sporting Club,ENPPI,2,0,0.0,0.0,H
+EG1,07/07/2023,Baladeyet Al Mahalla,Al Masry Club,0,1,0.0,1.0,A
+EG1,07/07/2023,Zamalek,Ismaily,2,1,0.0,0.0,H
+EG1,07/07/2023,El Gouna,Ceramica Cleopatra,0,0,,,D
+EG1,08/07/2023,Pharco FC,El Daklyeh,2,0,0.0,0.0,H
+EG1,08/07/2023,Ittihad El Iskandary,Pyramids FC,0,4,0.0,1.0,A
+EG1,11/07/2023,Al Mokawloon,Future FC,1,2,0.0,2.0,A
+EG1,12/07/2023,Al Ahly SC,Pyramids FC,3,2,1.0,1.0,H
+EG1,13/07/2023,National Bank SC,Smouha Sporting Club,1,2,1.0,1.0,A
+EG1,15/07/2023,Zamalek,Baladeyet Al Mahalla,0,0,,,D
+EG1,16/07/2023,Future FC,Al Ahly SC,1,2,1.0,1.0,A
+EG1,20/07/2023,Ceramica Cleopatra,Baladeyet Al Mahalla,4,0,3.0,0.0,H
+EG1,20/07/2023,National Bank SC,Ittihad El Iskandary,0,0,,,D
+EG1,21/07/2023,El Daklyeh,Zamalek,1,2,0.0,1.0,A
+EG1,21/07/2023,ENPPI,ZED FC,1,4,0.0,3.0,A
+EG1,21/07/2023,Al Masry Club,Al Mokawloon,1,1,1.0,1.0,D
+EG1,22/07/2023,Future FC,Smouha Sporting Club,3,0,2.0,0.0,H
+EG1,22/07/2023,Pyramids FC,Al Ahly SC,0,1,0.0,1.0,A
+EG1,22/07/2023,Ismaily,El Gouna,1,1,1.0,0.0,D
+EG1,26/07/2023,Zamalek,Pyramids FC,1,1,1.0,0.0,D
+EG1,26/07/2023,Al Masry Club,Al Ahly SC,0,1,0.0,0.0,A
+EG1,29/07/2023,Al Ahly SC,Ceramica Cleopatra,4,1,1.0,0.0,H
+EG1,29/07/2023,Al Mokawloon,Zamalek,2,1,1.0,0.0,H
+EG1,30/07/2023,Pharco FC,Pyramids FC,2,2,2.0,2.0,D
+EG1,30/07/2023,Baladeyet Al Mahalla,Ismaily,4,2,1.0,1.0,H
+EG1,31/07/2023,Ittihad El Iskandary,ENPPI,0,0,,,D
+EG1,31/07/2023,ZED FC,Future FC,3,2,1.0,0.0,H
+EG1,01/08/2023,Al Ahly SC,National Bank SC,1,0,1.0,0.0,H
+EG1,01/08/2023,Al Mokawloon,Ceramica Cleopatra,1,1,0.0,1.0,D
+EG1,01/08/2023,Smouha Sporting Club,Al Masry Club,1,0,0.0,0.0,H
+EG1,02/08/2023,Zamalek,El Gouna,1,0,1.0,0.0,H
+EG1,04/08/2023,Pyramids FC,ZED FC,2,1,1.0,0.0,H
+EG1,04/08/2023,Al Ahly SC,Al Mokawloon,4,0,2.0,0.0,H
+EG1,05/08/2023,Zamalek,ENPPI,4,2,2.0,0.0,H
+EG1,08/08/2023,Smouha Sporting Club,Al Ahly SC,0,1,0.0,0.0,A
+EG1,08/08/2023,ZED FC,Zamalek,0,1,0.0,0.0,A
+EG1,11/08/2023,Al Ahly SC,ZED FC,2,1,1.0,0.0,H
+EG1,12/08/2023,Ceramica Cleopatra,Smouha Sporting Club,0,1,0.0,0.0,A
+EG1,12/08/2023,Future FC,Ittihad El Iskandary,1,1,1.0,0.0,D
+EG1,13/08/2023,El Gouna,Baladeyet Al Mahalla,2,1,1.0,0.0,H
+EG1,13/08/2023,Ismaily,Al Mokawloon,1,1,0.0,0.0,D
+EG1,13/08/2023,National Bank SC,Pharco FC,0,0,,,D
+EG1,14/08/2023,Pyramids FC,El Daklyeh,1,0,0.0,0.0,H
+EG1,14/08/2023,Al Masry Club,ZED FC,0,1,0.0,0.0,A
+EG1,14/08/2023,ENPPI,Al Ahly SC,1,1,1.0,1.0,D
+EG1,16/08/2023,Smouha Sporting Club,Ismaily,2,0,0.0,0.0,H
+EG1,17/08/2023,Baladeyet Al Mahalla,Zamalek,2,2,0.0,0.0,D
+EG1,17/08/2023,Al Ahly SC,Future FC,1,2,0.0,0.0,A
+EG1,17/08/2023,Pharco FC,ENPPI,0,0,,,D
+EG1,18/08/2023,ZED FC,Ceramica Cleopatra,2,2,2.0,1.0,D
+EG1,18/08/2023,Al Mokawloon,El Gouna,0,1,0.0,0.0,A
+EG1,18/08/2023,El Daklyeh,National Bank SC,0,0,,,D
+EG1,18/08/2023,Ittihad El Iskandary,Al Masry Club,0,2,0.0,2.0,A
+EG1,19/09/2023,ZED FC,Ismaily,1,0,1.0,0.0,H
+EG1,19/09/2023,Al Ahly SC,Al Masry Club,4,0,1.0,0.0,H
+EG1,20/09/2023,Smouha Sporting Club,El Gouna,1,1,1.0,0.0,D
+EG1,20/09/2023,Al Mokawloon,Baladeyet Al Mahalla,0,2,0.0,1.0,A
+EG1,20/09/2023,El Daklyeh,ENPPI,1,0,1.0,0.0,H
+EG1,21/09/2023,Pyramids FC,Zamalek,2,2,1.0,0.0,D
+EG1,21/09/2023,Ittihad El Iskandary,Ceramica Cleopatra,1,0,1.0,0.0,H
+EG1,21/09/2023,Pharco FC,Future FC,0,2,0.0,1.0,A
+EG1,25/09/2023,Zamalek,Al Mokawloon,1,1,0.0,0.0,D
+EG1,25/09/2023,National Bank SC,Pyramids FC,0,1,0.0,0.0,A
+EG1,26/09/2023,Baladeyet Al Mahalla,Smouha Sporting Club,0,2,0.0,1.0,A
+EG1,26/09/2023,Future FC,El Daklyeh,2,1,0.0,1.0,H
+EG1,27/09/2023,El Gouna,ZED FC,0,1,0.0,0.0,A
+EG1,28/09/2023,Ismaily,Ittihad El Iskandary,3,1,2.0,1.0,H
+EG1,28/09/2023,Al Masry Club,Pharco FC,1,0,0.0,0.0,H
+EG1,05/10/2023,ZED FC,Baladeyet Al Mahalla,3,3,3.0,2.0,D
+EG1,05/10/2023,Smouha Sporting Club,Al Mokawloon,2,1,2.0,1.0,H
+EG1,06/10/2023,Pharco FC,Ceramica Cleopatra,2,2,2.0,2.0,D
+EG1,06/10/2023,Ittihad El Iskandary,El Gouna,2,2,0.0,1.0,D
+EG1,07/10/2023,National Bank SC,Zamalek,1,2,1.0,0.0,A
+EG1,07/10/2023,El Daklyeh,Al Masry Club,1,3,0.0,1.0,A
+EG1,08/10/2023,Al Ahly SC,Ismaily,3,1,2.0,0.0,H
+EG1,08/10/2023,Pyramids FC,ENPPI,1,0,1.0,0.0,H
+EG1,20/10/2023,Ceramica Cleopatra,El Daklyeh,4,0,4.0,0.0,H
+EG1,21/10/2023,Baladeyet Al Mahalla,Ittihad El Iskandary,2,2,2.0,1.0,D
+EG1,21/10/2023,ENPPI,National Bank SC,3,1,1.0,0.0,H
+EG1,21/10/2023,Zamalek,Smouha Sporting Club,5,1,3.0,0.0,H
+EG1,22/10/2023,Al Mokawloon,ZED FC,3,3,2.0,1.0,D
+EG1,22/10/2023,Future FC,Pyramids FC,0,1,0.0,0.0,A
+EG1,22/10/2023,Ismaily,Pharco FC,0,1,0.0,0.0,A
+EG1,27/10/2023,Al Masry Club,Pyramids FC,2,3,0.0,1.0,A
+EG1,27/10/2023,ENPPI,Zamalek,2,1,1.0,1.0,H
+EG1,28/10/2023,Pharco FC,El Gouna,0,1,0.0,1.0,A
+EG1,28/10/2023,Ittihad El Iskandary,Al Mokawloon,3,2,2.0,2.0,H
+EG1,28/10/2023,ZED FC,Smouha Sporting Club,1,1,0.0,0.0,D
+EG1,30/10/2023,El Daklyeh,Ismaily,0,0,,,D
+EG1,30/10/2023,National Bank SC,Future FC,1,2,1.0,1.0,A
+EG1,03/11/2023,Zamalek,ZED FC,1,2,1.0,1.0,A
+EG1,03/11/2023,Ceramica Cleopatra,Pyramids FC,2,0,1.0,0.0,H
+EG1,03/11/2023,Smouha Sporting Club,Ittihad El Iskandary,0,1,0.0,0.0,A
+EG1,04/11/2023,El Gouna,El Daklyeh,2,0,2.0,0.0,H
+EG1,04/11/2023,Al Mokawloon,Al Ahly SC,1,2,0.0,1.0,A
+EG1,04/11/2023,Baladeyet Al Mahalla,Pharco FC,3,2,3.0,0.0,H
+EG1,05/11/2023,Future FC,ENPPI,0,1,0.0,1.0,A
+EG1,05/11/2023,Al Masry Club,National Bank SC,0,4,0.0,2.0,A
+EG1,08/11/2023,Ceramica Cleopatra,Al Ahly SC,1,2,0.0,1.0,A
+EG1,11/11/2023,El Gouna,Al Ahly SC,1,1,1.0,1.0,D
+EG1,28/11/2023,Pyramids FC,Ismaily,2,1,0.0,1.0,H
+EG1,28/11/2023,Al Ahly SC,Smouha Sporting Club,0,0,,,D
+EG1,29/11/2023,Future FC,Zamalek,0,2,0.0,2.0,A
+EG1,30/11/2023,Pharco FC,Al Mokawloon,1,1,1.0,0.0,D
+EG1,30/11/2023,Ittihad El Iskandary,ZED FC,0,0,,,D
+EG1,01/12/2023,ENPPI,Al Masry Club,1,2,0.0,1.0,A
+EG1,01/12/2023,National Bank SC,Ceramica Cleopatra,0,1,0.0,0.0,A
+EG1,01/12/2023,El Daklyeh,Baladeyet Al Mahalla,0,0,,,D
+EG1,04/12/2023,Smouha Sporting Club,Pharco FC,2,1,0.0,1.0,H
+EG1,05/12/2023,Ceramica Cleopatra,ENPPI,4,2,1.0,0.0,H
+EG1,05/12/2023,Ismaily,National Bank SC,2,1,1.0,0.0,H
+EG1,06/12/2023,Al Mokawloon,El Daklyeh,0,0,,,D
+EG1,14/12/2023,National Bank SC,El Gouna,2,3,0.0,0.0,A
+EG1,14/12/2023,Future FC,Ceramica Cleopatra,1,1,1.0,0.0,D
+EG1,14/12/2023,Pyramids FC,Baladeyet Al Mahalla,2,2,1.0,1.0,D
+EG1,14/12/2023,Al Masry Club,Zamalek,1,0,1.0,0.0,H
+EG1,15/12/2023,El Daklyeh,Smouha Sporting Club,0,0,,,D
+EG1,15/12/2023,Pharco FC,ZED FC,1,2,1.0,0.0,A
+EG1,16/12/2023,ENPPI,Ismaily,1,0,1.0,0.0,H
+EG1,25/12/2023,Baladeyet Al Mahalla,National Bank SC,0,2,0.0,0.0,A
+EG1,25/12/2023,El Gouna,ENPPI,1,2,0.0,1.0,A
+EG1,26/12/2023,Ittihad El Iskandary,Pharco FC,3,1,2.0,0.0,H
+EG1,27/12/2023,ZED FC,El Daklyeh,3,1,1.0,0.0,H
+EG1,30/12/2023,National Bank SC,Al Mokawloon,3,1,0.0,1.0,H
+EG1,30/12/2023,ENPPI,Baladeyet Al Mahalla,3,0,3.0,0.0,H
+EG1,01/01/2024,El Daklyeh,Ittihad El Iskandary,0,1,0.0,1.0,A
+EG1,01/01/2024,Al Masry Club,Ismaily,1,1,0.0,0.0,D
+EG1,13/02/2024,Smouha Sporting Club,National Bank SC,1,1,0.0,1.0,D
+EG1,13/02/2024,El Gouna,Al Masry Club,2,2,1.0,0.0,D
+EG1,14/02/2024,Al Mokawloon,ENPPI,0,1,0.0,0.0,A
+EG1,14/02/2024,ZED FC,Pyramids FC,0,0,,,D
+EG1,15/02/2024,Baladeyet Al Mahalla,Future FC,1,0,1.0,0.0,H
+EG1,15/02/2024,Ismaily,Ceramica Cleopatra,2,1,2.0,0.0,H
+EG1,18/02/2024,National Bank SC,ZED FC,1,1,0.0,1.0,D
+EG1,18/02/2024,ENPPI,Smouha Sporting Club,0,0,,,D
+EG1,18/02/2024,Pyramids FC,Ittihad El Iskandary,1,0,0.0,0.0,H
+EG1,19/02/2024,Future FC,Al Mokawloon,2,2,2.0,2.0,D
+EG1,19/02/2024,Ismaily,Zamalek,0,0,,,D
+EG1,20/02/2024,Al Masry Club,Baladeyet Al Mahalla,3,0,2.0,0.0,H
+EG1,20/02/2024,El Daklyeh,Pharco FC,1,1,0.0,1.0,D
+EG1,20/02/2024,Ceramica Cleopatra,El Gouna,1,1,0.0,0.0,D
+EG1,23/02/2024,Baladeyet Al Mahalla,Ceramica Cleopatra,3,5,1.0,2.0,A
+EG1,25/02/2024,Ittihad El Iskandary,National Bank SC,0,0,,,D
+EG1,26/02/2024,Al Mokawloon,Al Masry Club,0,1,0.0,0.0,A
+EG1,26/02/2024,El Gouna,Ismaily,0,0,,,D
+EG1,26/02/2024,ZED FC,ENPPI,0,1,0.0,0.0,A
+EG1,27/02/2024,Al Ahly SC,Baladeyet Al Mahalla,5,1,3.0,0.0,H
+EG1,29/02/2024,Zamalek,El Daklyeh,1,0,0.0,0.0,H
+EG1,29/02/2024,Smouha Sporting Club,Future FC,1,1,1.0,1.0,D
+EG1,01/03/2024,Pharco FC,National Bank SC,2,1,0.0,0.0,H
+EG1,01/03/2024,Ceramica Cleopatra,Al Mokawloon,2,0,1.0,0.0,H
+EG1,02/03/2024,Ismaily,Baladeyet Al Mahalla,0,1,0.0,0.0,A
+EG1,03/03/2024,ENPPI,Ittihad El Iskandary,1,2,1.0,1.0,A
+EG1,05/03/2024,Al Masry Club,Smouha Sporting Club,2,0,1.0,0.0,H
+EG1,06/03/2024,Pyramids FC,Pharco FC,1,1,0.0,1.0,D
+EG1,07/03/2024,Future FC,ZED FC,0,0,,,D
+EG1,08/03/2024,Baladeyet Al Mahalla,El Gouna,1,2,1.0,1.0,A
+EG1,09/03/2024,Al Mokawloon,Ismaily,1,1,0.0,0.0,D
+EG1,10/03/2024,El Daklyeh,Pyramids FC,0,2,0.0,1.0,A
+EG1,10/03/2024,Smouha Sporting Club,Ceramica Cleopatra,1,0,1.0,0.0,H
+EG1,11/03/2024,Ittihad El Iskandary,Future FC,0,0,,,D
+EG1,12/03/2024,ZED FC,Al Masry Club,2,2,1.0,0.0,D
+EG1,12/03/2024,National Bank SC,Al Ahly SC,4,3,1.0,2.0,H
+EG1,12/03/2024,El Gouna,Zamalek,3,2,1.0,0.0,H
+EG1,03/04/2024,Ceramica Cleopatra,ZED FC,1,1,1.0,0.0,D
+EG1,03/04/2024,El Gouna,Al Mokawloon,1,2,1.0,1.0,A
+EG1,03/04/2024,Ismaily,Smouha Sporting Club,2,1,0.0,1.0,H
+EG1,04/04/2024,Al Masry Club,Ittihad El Iskandary,2,3,0.0,1.0,A
+EG1,04/04/2024,National Bank SC,El Daklyeh,1,0,1.0,0.0,H
+EG1,04/04/2024,ENPPI,Pharco FC,1,1,0.0,0.0,D
+EG1,08/04/2024,Al Ahly SC,ENPPI,2,2,1.0,0.0,D
+EG1,09/04/2024,El Gouna,Pyramids FC,0,4,0.0,1.0,A
+EG1,11/04/2024,ZED FC,Al Ahly SC,0,1,0.0,0.0,A
+EG1,11/04/2024,Zamalek,Ittihad El Iskandary,3,0,2.0,0.0,H
+EG1,11/04/2024,Al Masry Club,Future FC,1,2,0.0,1.0,A
+EG1,14/04/2024,Ceramica Cleopatra,Al Masry Club,1,1,0.0,0.0,D
+EG1,14/04/2024,Ismaily,Future FC,1,1,0.0,1.0,D
+EG1,15/04/2024,Al Mokawloon,Pyramids FC,0,2,0.0,1.0,A
+EG1,15/04/2024,Zamalek,Al Ahly SC,2,1,1.0,0.0,H
+EG1,17/04/2024,El Gouna,Smouha Sporting Club,1,0,1.0,0.0,H
+EG1,17/04/2024,ENPPI,El Daklyeh,0,0,,,D
+EG1,18/04/2024,Ceramica Cleopatra,Ittihad El Iskandary,1,1,1.0,1.0,D
+EG1,18/04/2024,Ismaily,ZED FC,1,2,0.0,2.0,A
+EG1,18/04/2024,Future FC,Pharco FC,2,0,2.0,0.0,H
+EG1,19/04/2024,Baladeyet Al Mahalla,Al Mokawloon,2,0,0.0,0.0,H
+EG1,22/04/2024,El Daklyeh,Future FC,1,1,1.0,0.0,D
+EG1,22/04/2024,ZED FC,El Gouna,3,0,3.0,0.0,H
+EG1,22/04/2024,Ittihad El Iskandary,Ismaily,1,1,1.0,1.0,D
+EG1,23/04/2024,Smouha Sporting Club,Baladeyet Al Mahalla,4,0,2.0,0.0,H
+EG1,23/04/2024,Pharco FC,Al Masry Club,1,2,0.0,1.0,A
+EG1,24/04/2024,Pyramids FC,National Bank SC,3,2,1.0,0.0,H
+EG1,27/04/2024,Baladeyet Al Mahalla,ZED FC,0,3,0.0,1.0,A
+EG1,27/04/2024,El Gouna,Ittihad El Iskandary,2,1,0.0,0.0,H
+EG1,28/04/2024,Al Masry Club,El Daklyeh,1,0,0.0,0.0,H
+EG1,28/04/2024,Al Mokawloon,Smouha Sporting Club,0,1,0.0,1.0,A
+EG1,29/04/2024,Ceramica Cleopatra,Pharco FC,1,1,1.0,0.0,D
+EG1,01/05/2024,Ismaily,Al Ahly SC,1,2,0.0,1.0,A
+EG1,01/05/2024,ENPPI,Pyramids FC,0,1,0.0,0.0,A
+EG1,02/05/2024,Zamalek,National Bank SC,1,0,1.0,0.0,H
+EG1,03/05/2024,Ittihad El Iskandary,Baladeyet Al Mahalla,2,1,1.0,0.0,H
+EG1,03/05/2024,ZED FC,Al Mokawloon,0,1,0.0,1.0,A
+EG1,04/05/2024,Al Ahly SC,El Gouna,3,0,1.0,0.0,H
+EG1,04/05/2024,El Daklyeh,Ceramica Cleopatra,1,3,0.0,1.0,A
+EG1,04/05/2024,Pharco FC,Ismaily,0,2,0.0,1.0,A
+EG1,05/05/2024,National Bank SC,ENPPI,1,5,1.0,1.0,A
+EG1,05/05/2024,Smouha Sporting Club,Zamalek,1,0,0.0,0.0,H
+EG1,06/05/2024,Pyramids FC,Future FC,2,1,0.0,1.0,H
+EG1,07/05/2024,Al Ahly SC,Ittihad El Iskandary,4,1,3.0,0.0,H
+EG1,09/05/2024,Smouha Sporting Club,ZED FC,1,2,0.0,1.0,A
+EG1,09/05/2024,Ismaily,El Daklyeh,1,0,0.0,0.0,H
+EG1,10/05/2024,Future FC,National Bank SC,1,1,1.0,1.0,D
+EG1,10/05/2024,El Gouna,Pharco FC,1,2,1.0,2.0,A
+EG1,11/05/2024,Al Mokawloon,Ittihad El Iskandary,0,1,0.0,0.0,A
+EG1,11/05/2024,Baladeyet Al Mahalla,Al Ahly SC,1,2,0.0,0.0,A
+EG1,11/05/2024,Al Masry Club,Pyramids FC,0,1,0.0,0.0,A
+EG1,14/05/2024,Ittihad El Iskandary,Smouha Sporting Club,0,2,0.0,1.0,A
+EG1,15/05/2024,Pharco FC,Baladeyet Al Mahalla,1,0,0.0,0.0,H
+EG1,15/05/2024,Pyramids FC,Ceramica Cleopatra,2,1,2.0,1.0,H
+EG1,15/05/2024,El Daklyeh,El Gouna,0,0,,,D
+EG1,16/05/2024,National Bank SC,Al Masry Club,5,2,2.0,0.0,H
+EG1,16/05/2024,ENPPI,Future FC,0,1,0.0,0.0,A
+EG1,19/05/2024,Ismaily,Pyramids FC,0,2,0.0,0.0,A
+EG1,20/05/2024,Al Masry Club,ENPPI,0,0,,,D
+EG1,20/05/2024,ZED FC,Ittihad El Iskandary,0,0,,,D
+EG1,20/05/2024,Al Mokawloon,Pharco FC,1,1,1.0,0.0,D
+EG1,21/05/2024,Baladeyet Al Mahalla,El Daklyeh,1,0,1.0,0.0,H
+EG1,21/05/2024,Ceramica Cleopatra,National Bank SC,1,0,0.0,0.0,H
+EG1,23/05/2024,Zamalek,Future FC,1,1,1.0,1.0,D
+EG1,24/05/2024,Pharco FC,Smouha Sporting Club,1,1,1.0,1.0,D
+EG1,24/05/2024,ENPPI,Ceramica Cleopatra,3,2,0.0,2.0,H
+EG1,25/05/2024,El Daklyeh,Al Mokawloon,3,0,1.0,0.0,H
+EG1,26/05/2024,National Bank SC,Ismaily,2,2,1.0,0.0,D
+EG1,26/05/2024,Future FC,Al Masry Club,0,0,,,D
+EG1,27/05/2024,Pyramids FC,El Gouna,1,0,1.0,0.0,H
+EG1,27/05/2024,Ittihad El Iskandary,Zamalek,0,2,0.0,1.0,A
+EG1,13/06/2024,Pyramids FC,Smouha Sporting Club,3,0,2.0,0.0,H
+EG1,13/06/2024,Future FC,El Gouna,3,1,1.0,1.0,H
+EG1,14/06/2024,Pharco FC,Al Ahly SC,1,2,1.0,2.0,A
+EG1,14/06/2024,Ceramica Cleopatra,Zamalek,1,2,1.0,0.0,A
+EG1,17/06/2024,El Gouna,National Bank SC,1,1,1.0,0.0,D
+EG1,17/06/2024,Ismaily,ENPPI,2,2,1.0,1.0,D
+EG1,17/06/2024,Zamalek,Al Masry Club,1,2,0.0,1.0,A
+EG1,18/06/2024,Smouha Sporting Club,El Daklyeh,3,2,1.0,1.0,H
+EG1,18/06/2024,Ittihad El Iskandary,Al Ahly SC,0,1,0.0,0.0,A
+EG1,18/06/2024,ZED FC,Pharco FC,2,2,1.0,0.0,D
+EG1,19/06/2024,Baladeyet Al Mahalla,Pyramids FC,0,2,0.0,1.0,A
+EG1,19/06/2024,Ceramica Cleopatra,Future FC,0,1,0.0,1.0,A
+EG1,21/06/2024,Zamalek,Pharco FC,2,0,1.0,0.0,H
+EG1,21/06/2024,Al Ahly SC,El Daklyeh,2,1,1.0,1.0,H
+EG1,22/06/2024,ENPPI,El Gouna,1,0,0.0,0.0,H
+EG1,23/06/2024,Future FC,Ismaily,0,1,0.0,1.0,A
+EG1,23/06/2024,Pyramids FC,Al Mokawloon,3,1,0.0,1.0,H
+EG1,23/06/2024,Al Masry Club,Ceramica Cleopatra,0,2,0.0,1.0,A
+EG1,24/06/2024,Pharco FC,Ittihad El Iskandary,1,0,1.0,0.0,H
+EG1,24/06/2024,National Bank SC,Baladeyet Al Mahalla,5,0,1.0,0.0,H
+EG1,24/06/2024,El Daklyeh,ZED FC,1,0,0.0,0.0,H
+EG1,25/06/2024,Al Ahly SC,Zamalek,2,0,,,H
+EG1,27/06/2024,Ismaily,Al Masry Club,0,1,0.0,1.0,A
+EG1,27/06/2024,El Gouna,Future FC,0,2,0.0,2.0,A
+EG1,28/06/2024,Al Ahly SC,Pharco FC,2,1,1.0,0.0,H
+EG1,28/06/2024,Al Mokawloon,National Bank SC,1,4,0.0,2.0,A
+EG1,29/06/2024,Ittihad El Iskandary,El Daklyeh,1,1,0.0,0.0,D
+EG1,29/06/2024,Zamalek,Ceramica Cleopatra,4,2,2.0,1.0,H
+EG1,29/06/2024,Baladeyet Al Mahalla,ENPPI,0,0,,,D
+EG1,30/10/2024,Haras El Hodood,Smouha Sporting Club,1,3,1.0,2.0,A
+EG1,31/10/2024,El Gouna,ZED FC,0,0,,,D
+EG1,31/10/2024,Future FC,ENPPI,0,0,,,D
+EG1,01/11/2024,Pharco FC,Ittihad El Iskandary,0,1,0.0,0.0,A
+EG1,01/11/2024,Pyramids FC,PetroJet FC,1,1,1.0,1.0,D
+EG1,01/11/2024,Zamalek,National Bank SC,3,2,1.0,0.0,H
+EG1,02/11/2024,Al Ahly SC,Ceramica Cleopatra,5,2,2.0,1.0,H
+EG1,02/11/2024,Ismaily,Ghazl Al Mehalla,0,0,,,D
+EG1,07/11/2024,Ittihad El Iskandary,Haras El Hodood,1,0,0.0,0.0,H
+EG1,07/11/2024,ZED FC,Al Ahly SC,0,1,0.0,1.0,A
+EG1,08/11/2024,Smouha Sporting Club,Zamalek,0,2,0.0,1.0,A
+EG1,08/11/2024,PetroJet FC,Future FC,1,1,0.0,0.0,D
+EG1,08/11/2024,ENPPI,Pyramids FC,1,2,1.0,2.0,A
+EG1,09/11/2024,Ceramica Cleopatra,Ismaily,1,0,1.0,0.0,H
+EG1,09/11/2024,National Bank SC,Pharco FC,0,0,,,D
+EG1,09/11/2024,Al Masry Club,El Gouna,0,0,,,D
+EG1,22/11/2024,Al Ahly SC,Ittihad El Iskandary,1,1,0.0,0.0,D
+EG1,22/11/2024,Pharco FC,ENPPI,4,3,2.0,1.0,H
+EG1,22/11/2024,Pyramids FC,National Bank SC,3,1,0.0,1.0,H
+EG1,23/11/2024,El Gouna,Ghazl Al Mehalla,0,1,0.0,1.0,A
+EG1,23/11/2024,Zamalek,Al Masry Club,0,1,0.0,1.0,A
+EG1,24/11/2024,Ismaily,PetroJet FC,1,0,0.0,0.0,H
+EG1,24/11/2024,Haras El Hodood,Ceramica Cleopatra,0,0,,,D
+EG1,24/11/2024,Future FC,ZED FC,0,0,,,D
+EG1,30/11/2024,ZED FC,Haras El Hodood,2,0,2.0,0.0,H
+EG1,30/11/2024,Ceramica Cleopatra,Future FC,4,1,1.0,0.0,H
+EG1,01/12/2024,National Bank SC,Al Ahly SC,0,0,,,D
+EG1,01/12/2024,Smouha Sporting Club,El Gouna,0,0,,,D
+EG1,01/12/2024,ENPPI,Ismaily,1,0,0.0,0.0,H
+EG1,02/12/2024,Al Masry Club,Pyramids FC,1,0,0.0,0.0,H
+EG1,02/12/2024,PetroJet FC,Pharco FC,1,2,0.0,2.0,A
+EG1,02/12/2024,Ghazl Al Mehalla,Zamalek,0,4,0.0,2.0,A
+EG1,19/12/2024,Zamalek,Ceramica Cleopatra,1,1,1.0,1.0,D
+EG1,19/12/2024,Haras El Hodood,Al Masry Club,0,0,,,D
+EG1,20/12/2024,El Gouna,ENPPI,1,0,0.0,0.0,H
+EG1,20/12/2024,Pharco FC,ZED FC,1,2,1.0,1.0,A
+EG1,20/12/2024,Future FC,National Bank SC,0,1,0.0,1.0,A
+EG1,21/12/2024,Ismaily,Pyramids FC,1,1,1.0,1.0,D
+EG1,21/12/2024,Ghazl Al Mehalla,Ittihad El Iskandary,0,0,,,D
+EG1,24/12/2024,ZED FC,ENPPI,0,0,,,D
+EG1,25/12/2024,Ittihad El Iskandary,Future FC,0,0,,,D
+EG1,25/12/2024,Ismaily,Haras El Hodood,2,2,0.0,1.0,D
+EG1,25/12/2024,Pyramids FC,Pharco FC,3,0,1.0,0.0,H
+EG1,26/12/2024,PetroJet FC,El Gouna,1,0,0.0,0.0,H
+EG1,26/12/2024,Smouha Sporting Club,Ghazl Al Mehalla,2,4,1.0,1.0,A
+EG1,26/12/2024,Al Masry Club,Al Ahly SC,0,2,0.0,1.0,A
+EG1,26/12/2024,National Bank SC,Ceramica Cleopatra,1,2,1.0,0.0,A
+EG1,29/12/2024,Zamalek,Ittihad El Iskandary,2,0,0.0,0.0,H
+EG1,30/12/2024,ENPPI,Al Ahly SC,0,0,,,D
+EG1,30/12/2024,El Gouna,Pyramids FC,0,1,0.0,0.0,A
+EG1,30/12/2024,Pharco FC,Smouha Sporting Club,2,1,0.0,1.0,H
+EG1,30/12/2024,ZED FC,PetroJet FC,1,1,0.0,0.0,D
+EG1,31/12/2024,Ceramica Cleopatra,Al Masry Club,1,1,0.0,0.0,D
+EG1,01/01/2025,Future FC,Ismaily,0,0,,,D
+EG1,01/01/2025,Ghazl Al Mehalla,National Bank SC,0,1,0.0,1.0,A
+EG1,07/01/2025,Al Ahly SC,Smouha Sporting Club,2,0,1.0,0.0,H
+EG1,10/01/2025,PetroJet FC,ENPPI,0,0,,,D
+EG1,11/01/2025,Ittihad El Iskandary,ZED FC,0,1,0.0,1.0,A
+EG1,11/01/2025,National Bank SC,Ismaily,1,0,0.0,0.0,H
+EG1,12/01/2025,Smouha Sporting Club,Future FC,1,0,1.0,0.0,H
+EG1,15/01/2025,Pyramids FC,Ghazl Al Mehalla,3,0,1.0,0.0,H
+EG1,15/01/2025,Al Ahly SC,El Gouna,2,0,0.0,0.0,H
+EG1,16/01/2025,Zamalek,Haras El Hodood,3,2,3.0,1.0,H
+EG1,16/01/2025,Al Masry Club,Pharco FC,1,0,1.0,0.0,H
+EG1,21/01/2025,El Gouna,National Bank SC,1,2,1.0,1.0,A
+EG1,21/01/2025,Ghazl Al Mehalla,Haras El Hodood,0,1,0.0,0.0,A
+EG1,21/01/2025,Ismaily,Smouha Sporting Club,1,0,0.0,0.0,H
+EG1,22/01/2025,ZED FC,Pyramids FC,0,1,0.0,0.0,A
+EG1,22/01/2025,Ceramica Cleopatra,Ittihad El Iskandary,1,1,0.0,0.0,D
+EG1,22/01/2025,Pharco FC,Al Ahly SC,1,1,1.0,1.0,D
+EG1,23/01/2025,PetroJet FC,Al Masry Club,2,1,2.0,0.0,H
+EG1,23/01/2025,Future FC,Zamalek,1,0,0.0,0.0,H
+EG1,26/01/2025,Ittihad El Iskandary,Ismaily,1,0,1.0,0.0,H
+EG1,26/01/2025,Ghazl Al Mehalla,Ceramica Cleopatra,0,1,0.0,0.0,A
+EG1,26/01/2025,Al Ahly SC,Pyramids FC,2,2,0.0,1.0,D
+EG1,27/01/2025,Zamalek,El Gouna,4,1,1.0,1.0,H
+EG1,27/01/2025,Haras El Hodood,Future FC,1,0,0.0,0.0,H
+EG1,27/01/2025,Al Masry Club,ENPPI,2,1,1.0,1.0,H
+EG1,28/01/2025,Smouha Sporting Club,ZED FC,2,1,1.0,1.0,H
+EG1,28/01/2025,National Bank SC,PetroJet FC,0,2,0.0,1.0,A
+EG1,31/01/2025,El Gouna,Haras El Hodood,0,1,0.0,1.0,A
+EG1,31/01/2025,Pyramids FC,Zamalek,3,0,0.0,0.0,H
+EG1,01/02/2025,ENPPI,National Bank SC,0,1,0.0,0.0,A
+EG1,01/02/2025,ZED FC,Al Masry Club,1,1,0.0,1.0,D
+EG1,01/02/2025,Pharco FC,Ghazl Al Mehalla,3,2,1.0,1.0,H
+EG1,01/02/2025,PetroJet FC,Ittihad El Iskandary,0,0,,,D
+EG1,02/02/2025,Ceramica Cleopatra,Smouha Sporting Club,0,1,0.0,0.0,A
+EG1,02/02/2025,Future FC,Al Ahly SC,1,3,0.0,3.0,A
+EG1,06/02/2025,Ceramica Cleopatra,Pharco FC,1,2,1.0,1.0,A
+EG1,06/02/2025,Al Ahly SC,PetroJet FC,2,1,1.0,0.0,H
+EG1,06/02/2025,Ghazl Al Mehalla,Future FC,2,1,1.0,1.0,H
+EG1,07/02/2025,Smouha Sporting Club,Pyramids FC,0,1,0.0,0.0,A
+EG1,07/02/2025,Haras El Hodood,ENPPI,1,0,0.0,0.0,H
+EG1,07/02/2025,Zamalek,Ismaily,2,0,1.0,0.0,H
+EG1,08/02/2025,Ittihad El Iskandary,Al Masry Club,1,2,0.0,1.0,A
+EG1,08/02/2025,National Bank SC,ZED FC,1,1,0.0,0.0,D
+EG1,11/02/2025,Pharco FC,Zamalek,0,1,0.0,1.0,A
+EG1,11/02/2025,PetroJet FC,Smouha Sporting Club,0,1,0.0,1.0,A
+EG1,11/02/2025,Al Ahly SC,Ghazl Al Mehalla,1,0,0.0,0.0,H
+EG1,12/02/2025,Pyramids FC,Haras El Hodood,3,0,1.0,0.0,H
+EG1,12/02/2025,Al Masry Club,National Bank SC,0,0,,,D
+EG1,12/02/2025,El Gouna,Ismaily,2,0,0.0,0.0,H
+EG1,12/02/2025,ZED FC,Ceramica Cleopatra,1,1,0.0,0.0,D
+EG1,13/02/2025,ENPPI,Ittihad El Iskandary,1,1,0.0,0.0,D
+EG1,16/02/2025,Zamalek,PetroJet FC,1,1,0.0,0.0,D
+EG1,16/02/2025,Smouha Sporting Club,National Bank SC,1,4,0.0,1.0,A
+EG1,16/02/2025,Haras El Hodood,Pharco FC,2,0,1.0,0.0,H
+EG1,16/02/2025,Ismaily,Al Ahly SC,0,4,0.0,1.0,A
+EG1,17/02/2025,Ceramica Cleopatra,ENPPI,2,2,2.0,1.0,D
+EG1,17/02/2025,Ittihad El Iskandary,El Gouna,1,0,0.0,0.0,H
+EG1,17/02/2025,Future FC,Pyramids FC,0,1,0.0,1.0,A
+EG1,18/02/2025,Ghazl Al Mehalla,Al Masry Club,1,0,0.0,0.0,H
+EG1,21/02/2025,ENPPI,Smouha Sporting Club,1,0,0.0,0.0,H
+EG1,21/02/2025,Pharco FC,Future FC,0,0,,,D
+EG1,21/02/2025,PetroJet FC,Haras El Hodood,2,2,1.0,1.0,D
+EG1,21/02/2025,National Bank SC,Ittihad El Iskandary,3,2,2.0,1.0,H
+EG1,22/02/2025,Al Masry Club,Ismaily,0,0,,,D
+EG1,22/02/2025,El Gouna,Ceramica Cleopatra,2,0,1.0,0.0,H
+EG1,22/02/2025,Al Ahly SC,Zamalek,1,1,0.0,0.0,D
+EG1,23/02/2025,ZED FC,Ghazl Al Mehalla,2,0,1.0,0.0,H
+EG1,26/02/2025,Ismaily,Pharco FC,0,2,0.0,0.0,A
+EG1,26/02/2025,Haras El Hodood,Al Ahly SC,0,1,0.0,0.0,A
+EG1,26/02/2025,Future FC,El Gouna,2,3,0.0,2.0,A
+EG1,27/02/2025,Smouha Sporting Club,Al Masry Club,0,3,0.0,2.0,A
+EG1,27/02/2025,Zamalek,ZED FC,1,1,1.0,1.0,D
+EG1,28/02/2025,Ghazl Al Mehalla,ENPPI,3,0,2.0,0.0,H
+EG1,28/02/2025,Ceramica Cleopatra,PetroJet FC,4,1,3.0,1.0,H
+EG1,28/02/2025,Ittihad El Iskandary,Pyramids FC,1,3,0.0,1.0,A
+EG1,03/03/2025,National Bank SC,Haras El Hodood,2,1,0.0,0.0,H
+EG1,03/03/2025,Pharco FC,El Gouna,0,0,,,D
+EG1,03/03/2025,Al Masry Club,Future FC,4,2,2.0,1.0,H
+EG1,04/03/2025,ENPPI,Zamalek,0,3,0.0,0.0,A
+EG1,04/03/2025,ZED FC,Ismaily,2,2,1.0,2.0,D
+EG1,04/03/2025,Ittihad El Iskandary,Smouha Sporting Club,0,1,0.0,0.0,A
+EG1,05/03/2025,Pyramids FC,Ceramica Cleopatra,2,1,1.0,0.0,H
+EG1,05/03/2025,PetroJet FC,Ghazl Al Mehalla,2,1,0.0,0.0,H
+EG1,11/03/2025,El Gouna,Ittihad El Iskandary,2,0,0.0,0.0,H
+EG1,11/03/2025,Haras El Hodood,PetroJet FC,1,2,0.0,2.0,A
+EG1,11/03/2025,Zamalek,Al Ahly SC,3,0,,,H
+EG1,11/03/2025,Future FC,Smouha Sporting Club,2,0,0.0,0.0,H
+EG1,12/03/2025,Pharco FC,National Bank SC,2,1,0.0,0.0,H
+EG1,12/03/2025,Pyramids FC,Al Masry Club,0,0,,,D
+EG1,12/03/2025,Ghazl Al Mehalla,ZED FC,0,3,0.0,2.0,A
+EG1,10/04/2025,Ismaily,Ittihad El Iskandary,0,0,,,D
+EG1,10/04/2025,ENPPI,Future FC,2,1,0.0,1.0,H
+EG1,11/04/2025,Ghazl Al Mehalla,Smouha Sporting Club,1,0,1.0,0.0,H
+EG1,11/04/2025,ZED FC,El Gouna,1,2,0.0,1.0,A
+EG1,12/04/2025,Pharco FC,Ceramica Cleopatra,0,2,0.0,0.0,A
+EG1,12/04/2025,Pyramids FC,Al Ahly SC,1,1,0.0,0.0,D
+EG1,13/04/2025,Al Masry Club,PetroJet FC,4,0,1.0,0.0,H
+EG1,13/04/2025,Haras El Hodood,Zamalek,0,2,0.0,1.0,A
+EG1,28/04/2025,El Gouna,Smouha Sporting Club,1,1,1.0,0.0,D
+EG1,28/04/2025,Ismaily,ZED FC,0,2,0.0,0.0,A
+EG1,29/04/2025,ENPPI,Ghazl Al Mehalla,1,0,0.0,0.0,H
+EG1,30/04/2025,PetroJet FC,Al Ahly SC,2,3,2.0,2.0,A
+EG1,30/04/2025,Haras El Hodood,Pyramids FC,1,2,0.0,1.0,A
+EG1,01/05/2025,Al Masry Club,Zamalek,0,0,,,D
+EG1,01/05/2025,Ceramica Cleopatra,National Bank SC,2,4,1.0,0.0,A
+EG1,02/05/2025,Smouha Sporting Club,Ismaily,1,1,1.0,0.0,D
+EG1,03/05/2025,ENPPI,El Gouna,0,1,0.0,1.0,A
+EG1,03/05/2025,Future FC,Ghazl Al Mehalla,2,1,2.0,0.0,H
+EG1,04/05/2025,Pharco FC,Pyramids FC,3,2,0.0,0.0,H
+EG1,04/05/2025,Al Ahly SC,Haras El Hodood,5,0,2.0,0.0,H

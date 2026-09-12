@@ -1,0 +1,401 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+DZ1,15/09/2023,USM Khenchela,ES Sétif,1,0,0.0,0.0,H
+DZ1,15/09/2023,MC El Bayadh,CS Constantine,1,0,1.0,0.0,H
+DZ1,15/09/2023,ASO Chlef,MC Oran,2,0,0.0,0.0,H
+DZ1,16/09/2023,NC Magra,JS Kabylie,0,1,0.0,1.0,A
+DZ1,16/09/2023,MC Alger,ES Ben Aknoun,4,0,2.0,0.0,H
+DZ1,17/09/2023,JS Saoura,US Biskra,1,0,1.0,0.0,H
+DZ1,22/09/2023,ES Ben Aknoun,ASO Chlef,2,2,1.0,1.0,D
+DZ1,22/09/2023,CS Constantine,MC Alger,2,1,1.0,1.0,H
+DZ1,22/09/2023,JS Kabylie,Paradou AC,0,0,,,D
+DZ1,23/09/2023,CR Bélouizdad,NC Magra,1,0,0.0,0.0,H
+DZ1,23/09/2023,US Biskra,US Souf,3,1,3.0,1.0,H
+DZ1,23/09/2023,MC Oran,JS Saoura,1,1,1.0,1.0,D
+DZ1,23/09/2023,ES Sétif,MC El Bayadh,2,1,0.0,0.0,H
+DZ1,27/09/2023,Paradou AC,USM Alger,1,0,0.0,0.0,H
+DZ1,29/09/2023,US Souf,MC Oran,0,0,,,D
+DZ1,29/09/2023,USM Khenchela,JS Kabylie,2,1,0.0,0.0,H
+DZ1,29/09/2023,NC Magra,US Biskra,2,1,0.0,1.0,H
+DZ1,30/09/2023,MC Alger,MC El Bayadh,2,0,1.0,0.0,H
+DZ1,30/09/2023,JS Saoura,ES Ben Aknoun,1,0,0.0,0.0,H
+DZ1,30/09/2023,ASO Chlef,CS Constantine,1,0,1.0,0.0,H
+DZ1,06/10/2023,MC Oran,NC Magra,0,0,,,D
+DZ1,06/10/2023,MC Alger,ES Sétif,5,3,2.0,2.0,H
+DZ1,06/10/2023,CS Constantine,JS Saoura,3,0,2.0,0.0,H
+DZ1,06/10/2023,US Biskra,Paradou AC,0,5,0.0,3.0,A
+DZ1,07/10/2023,JS Kabylie,USM Alger,1,0,0.0,0.0,H
+DZ1,07/10/2023,MC El Bayadh,ASO Chlef,1,0,1.0,0.0,H
+DZ1,07/10/2023,ES Ben Aknoun,US Souf,0,1,0.0,1.0,A
+DZ1,07/10/2023,CR Bélouizdad,USM Khenchela,2,3,2.0,2.0,A
+DZ1,13/10/2023,US Souf,CR Bélouizdad,0,3,0.0,3.0,A
+DZ1,14/10/2023,USM Alger,USM Khenchela,3,0,0.0,0.0,H
+DZ1,10/11/2023,Paradou AC,MC Oran,1,0,1.0,0.0,H
+DZ1,10/11/2023,US Souf,CS Constantine,3,4,1.0,1.0,A
+DZ1,10/11/2023,ES Sétif,JS Kabylie,1,0,0.0,0.0,H
+DZ1,10/11/2023,USM Alger,CR Bélouizdad,2,1,0.0,0.0,H
+DZ1,11/11/2023,ASO Chlef,MC Alger,0,1,0.0,1.0,A
+DZ1,11/11/2023,JS Saoura,MC El Bayadh,0,0,,,D
+DZ1,11/11/2023,USM Khenchela,US Biskra,0,1,0.0,0.0,A
+DZ1,11/11/2023,NC Magra,ES Ben Aknoun,3,1,1.0,1.0,H
+DZ1,14/11/2023,Paradou AC,CR Bélouizdad,0,1,0.0,1.0,A
+DZ1,14/11/2023,ES Sétif,USM Alger,2,1,1.0,1.0,H
+DZ1,17/11/2023,MC Alger,JS Saoura,4,0,1.0,0.0,H
+DZ1,17/11/2023,CS Constantine,NC Magra,0,1,0.0,0.0,A
+DZ1,17/11/2023,MC El Bayadh,US Souf,4,0,1.0,0.0,H
+DZ1,17/11/2023,MC Oran,USM Khenchela,1,0,1.0,0.0,H
+DZ1,18/11/2023,US Biskra,USM Alger,1,0,1.0,0.0,H
+DZ1,18/11/2023,ES Ben Aknoun,Paradou AC,0,1,0.0,0.0,A
+DZ1,18/11/2023,ASO Chlef,ES Sétif,2,1,1.0,1.0,H
+DZ1,19/11/2023,CR Bélouizdad,JS Kabylie,1,0,0.0,0.0,H
+DZ1,24/11/2023,Paradou AC,CS Constantine,0,0,,,D
+DZ1,24/11/2023,NC Magra,MC El Bayadh,1,1,0.0,0.0,D
+DZ1,25/11/2023,USM Khenchela,ES Ben Aknoun,0,0,,,D
+DZ1,25/11/2023,US Souf,MC Alger,3,4,1.0,3.0,A
+DZ1,25/11/2023,JS Kabylie,US Biskra,1,1,1.0,1.0,D
+DZ1,25/11/2023,JS Saoura,ASO Chlef,3,2,1.0,2.0,H
+DZ1,01/12/2023,MC El Bayadh,Paradou AC,1,0,0.0,0.0,H
+DZ1,01/12/2023,MC Alger,NC Magra,4,0,3.0,0.0,H
+DZ1,01/12/2023,CS Constantine,USM Khenchela,2,0,1.0,0.0,H
+DZ1,02/12/2023,JS Saoura,ES Sétif,0,0,,,D
+DZ1,02/12/2023,MC Oran,JS Kabylie,1,3,0.0,0.0,A
+DZ1,02/12/2023,ASO Chlef,US Souf,2,0,1.0,0.0,H
+DZ1,07/12/2023,Paradou AC,MC Alger,0,1,0.0,0.0,A
+DZ1,08/12/2023,JS Kabylie,ES Ben Aknoun,1,0,1.0,0.0,H
+DZ1,08/12/2023,USM Khenchela,MC El Bayadh,2,0,1.0,0.0,H
+DZ1,09/12/2023,ES Sétif,US Biskra,2,2,0.0,2.0,D
+DZ1,09/12/2023,US Souf,JS Saoura,0,1,0.0,0.0,A
+DZ1,09/12/2023,NC Magra,ASO Chlef,1,1,1.0,0.0,D
+DZ1,15/12/2023,MC El Bayadh,USM Alger,1,1,0.0,0.0,D
+DZ1,15/12/2023,ASO Chlef,Paradou AC,1,1,0.0,0.0,D
+DZ1,15/12/2023,ES Ben Aknoun,CR Bélouizdad,1,1,0.0,1.0,D
+DZ1,15/12/2023,CS Constantine,JS Kabylie,2,0,1.0,0.0,H
+DZ1,16/12/2023,JS Saoura,NC Magra,2,1,1.0,0.0,H
+DZ1,16/12/2023,MC Alger,USM Khenchela,3,0,1.0,0.0,H
+DZ1,16/12/2023,MC Oran,US Biskra,0,1,0.0,1.0,A
+DZ1,16/12/2023,US Souf,ES Sétif,1,3,1.0,1.0,A
+DZ1,28/12/2023,CR Bélouizdad,CS Constantine,2,1,1.0,0.0,H
+DZ1,29/12/2023,ES Sétif,MC Oran,1,0,0.0,0.0,H
+DZ1,29/12/2023,NC Magra,US Souf,1,0,0.0,0.0,H
+DZ1,29/12/2023,USM Alger,MC Alger,0,0,,,D
+DZ1,29/12/2023,US Biskra,ES Ben Aknoun,1,1,1.0,1.0,D
+DZ1,29/12/2023,Paradou AC,JS Saoura,0,0,,,D
+DZ1,29/12/2023,USM Khenchela,ASO Chlef,2,1,0.0,0.0,H
+DZ1,05/01/2024,ES Ben Aknoun,MC Oran,2,1,1.0,1.0,H
+DZ1,05/01/2024,US Souf,Paradou AC,1,4,0.0,2.0,A
+DZ1,05/01/2024,CS Constantine,US Biskra,1,1,1.0,1.0,D
+DZ1,05/01/2024,ASO Chlef,USM Alger,0,1,0.0,1.0,A
+DZ1,05/01/2024,NC Magra,ES Sétif,0,1,0.0,0.0,A
+DZ1,06/01/2024,JS Saoura,USM Khenchela,0,1,0.0,0.0,A
+DZ1,06/01/2024,MC Alger,JS Kabylie,1,1,1.0,0.0,D
+DZ1,09/01/2024,ES Sétif,CR Bélouizdad,1,3,0.0,2.0,A
+DZ1,11/01/2024,MC Oran,CS Constantine,1,4,0.0,1.0,A
+DZ1,11/01/2024,USM Alger,JS Saoura,2,1,0.0,1.0,H
+DZ1,12/01/2024,Paradou AC,NC Magra,0,0,,,D
+DZ1,13/01/2024,USM Khenchela,US Souf,2,0,0.0,0.0,H
+DZ1,13/01/2024,US Biskra,MC El Bayadh,0,0,,,D
+DZ1,13/01/2024,JS Kabylie,ASO Chlef,2,1,1.0,0.0,H
+DZ1,13/01/2024,ES Sétif,ES Ben Aknoun,1,1,0.0,1.0,D
+DZ1,14/01/2024,CR Bélouizdad,MC Alger,0,0,,,D
+DZ1,15/01/2024,USM Alger,MC Oran,2,0,0.0,0.0,H
+DZ1,19/01/2024,MC El Bayadh,MC Oran,0,1,0.0,0.0,A
+DZ1,19/01/2024,MC Alger,US Biskra,1,0,0.0,0.0,H
+DZ1,19/01/2024,CS Constantine,ES Ben Aknoun,1,1,0.0,0.0,D
+DZ1,19/01/2024,JS Saoura,JS Kabylie,3,2,0.0,0.0,H
+DZ1,19/01/2024,ASO Chlef,CR Bélouizdad,0,0,,,D
+DZ1,19/01/2024,US Souf,USM Alger,1,3,1.0,1.0,A
+DZ1,19/01/2024,Paradou AC,ES Sétif,1,0,0.0,0.0,H
+DZ1,19/01/2024,NC Magra,USM Khenchela,1,1,0.0,0.0,D
+DZ1,23/01/2024,JS Kabylie,MC El Bayadh,0,0,,,D
+DZ1,23/01/2024,ES Ben Aknoun,USM Alger,1,2,0.0,0.0,A
+DZ1,23/01/2024,US Biskra,CR Bélouizdad,0,0,,,D
+DZ1,26/01/2024,USM Khenchela,Paradou AC,1,2,1.0,0.0,A
+DZ1,26/01/2024,ES Sétif,CS Constantine,2,1,2.0,1.0,H
+DZ1,26/01/2024,MC Oran,MC Alger,0,2,0.0,0.0,A
+DZ1,27/01/2024,CR Bélouizdad,JS Saoura,3,1,1.0,1.0,H
+DZ1,27/01/2024,ES Ben Aknoun,MC El Bayadh,1,1,1.0,0.0,D
+DZ1,27/01/2024,JS Kabylie,US Souf,3,2,3.0,1.0,H
+DZ1,27/01/2024,US Biskra,ASO Chlef,2,0,1.0,0.0,H
+DZ1,28/01/2024,USM Alger,NC Magra,3,1,1.0,0.0,H
+DZ1,30/01/2024,CR Bélouizdad,MC Oran,2,0,1.0,0.0,H
+DZ1,31/01/2024,USM Alger,CS Constantine,1,2,0.0,0.0,A
+DZ1,04/02/2024,MC El Bayadh,CR Bélouizdad,2,1,2.0,0.0,H
+DZ1,09/02/2024,MC Oran,ASO Chlef,1,1,1.0,0.0,D
+DZ1,09/02/2024,ES Sétif,USM Khenchela,2,1,1.0,0.0,H
+DZ1,10/02/2024,CR Bélouizdad,US Souf,2,0,1.0,0.0,H
+DZ1,10/02/2024,US Biskra,JS Saoura,2,1,0.0,1.0,H
+DZ1,10/02/2024,CS Constantine,MC El Bayadh,2,1,0.0,1.0,H
+DZ1,10/02/2024,JS Kabylie,NC Magra,1,0,0.0,0.0,H
+DZ1,11/02/2024,USM Alger,Paradou AC,1,5,0.0,2.0,A
+DZ1,15/02/2024,MC El Bayadh,ES Sétif,3,0,2.0,0.0,H
+DZ1,16/02/2024,Paradou AC,JS Kabylie,0,0,,,D
+DZ1,16/02/2024,USM Khenchela,USM Alger,1,0,1.0,0.0,H
+DZ1,16/02/2024,ASO Chlef,ES Ben Aknoun,2,1,1.0,1.0,H
+DZ1,17/02/2024,JS Saoura,MC Oran,1,1,0.0,0.0,D
+DZ1,17/02/2024,US Souf,US Biskra,2,0,1.0,0.0,H
+DZ1,17/02/2024,MC Alger,CS Constantine,2,0,1.0,0.0,H
+DZ1,23/02/2024,ES Ben Aknoun,JS Saoura,2,0,1.0,0.0,H
+DZ1,23/02/2024,US Biskra,NC Magra,0,1,0.0,1.0,A
+DZ1,24/02/2024,JS Kabylie,USM Khenchela,0,0,,,D
+DZ1,24/02/2024,MC El Bayadh,MC Alger,0,0,,,D
+DZ1,24/02/2024,MC Oran,US Souf,2,1,0.0,1.0,H
+DZ1,24/02/2024,CS Constantine,ASO Chlef,3,1,1.0,1.0,H
+DZ1,01/03/2024,NC Magra,MC Oran,1,1,1.0,0.0,D
+DZ1,02/03/2024,ASO Chlef,MC El Bayadh,2,1,1.0,0.0,H
+DZ1,02/03/2024,Paradou AC,US Biskra,0,0,,,D
+DZ1,02/03/2024,ES Sétif,MC Alger,1,0,1.0,0.0,H
+DZ1,02/03/2024,JS Saoura,CS Constantine,2,2,1.0,1.0,D
+DZ1,02/03/2024,US Souf,ES Ben Aknoun,0,3,0.0,0.0,A
+DZ1,14/03/2024,MC Alger,ASO Chlef,6,3,1.0,3.0,H
+DZ1,15/03/2024,CR Bélouizdad,USM Alger,0,1,0.0,1.0,A
+DZ1,15/03/2024,CS Constantine,US Souf,3,0,2.0,0.0,H
+DZ1,15/03/2024,MC Oran,Paradou AC,2,0,1.0,0.0,H
+DZ1,15/03/2024,JS Kabylie,ES Sétif,0,1,0.0,1.0,A
+DZ1,15/03/2024,ES Ben Aknoun,NC Magra,3,1,1.0,1.0,H
+DZ1,16/03/2024,US Biskra,USM Khenchela,2,1,1.0,1.0,H
+DZ1,16/03/2024,MC El Bayadh,JS Saoura,0,1,0.0,0.0,A
+DZ1,19/03/2024,USM Alger,ES Sétif,2,0,1.0,0.0,H
+DZ1,19/03/2024,NC Magra,CR Bélouizdad,0,0,,,D
+DZ1,20/03/2024,ES Ben Aknoun,MC Alger,2,3,0.0,1.0,A
+DZ1,23/03/2024,US Souf,MC El Bayadh,4,5,0.0,5.0,A
+DZ1,23/03/2024,USM Khenchela,MC Oran,0,0,,,D
+DZ1,24/03/2024,NC Magra,CS Constantine,2,3,1.0,3.0,A
+DZ1,24/03/2024,ES Sétif,ASO Chlef,0,0,,,D
+DZ1,24/03/2024,USM Alger,US Biskra,1,0,0.0,0.0,H
+DZ1,24/03/2024,JS Kabylie,CR Bélouizdad,0,1,0.0,0.0,A
+DZ1,25/03/2024,JS Saoura,MC Alger,0,1,0.0,1.0,A
+DZ1,25/03/2024,Paradou AC,ES Ben Aknoun,0,0,,,D
+DZ1,04/04/2024,CR Bélouizdad,ES Sétif,2,1,0.0,0.0,H
+DZ1,05/04/2024,MC Alger,US Souf,3,0,1.0,0.0,H
+DZ1,05/04/2024,ASO Chlef,JS Saoura,1,2,0.0,2.0,A
+DZ1,05/04/2024,MC El Bayadh,NC Magra,0,2,0.0,0.0,A
+DZ1,05/04/2024,US Biskra,JS Kabylie,1,0,0.0,0.0,H
+DZ1,06/04/2024,ES Ben Aknoun,USM Khenchela,3,2,1.0,1.0,H
+DZ1,06/04/2024,CS Constantine,Paradou AC,2,1,2.0,1.0,H
+DZ1,16/04/2024,CR Bélouizdad,Paradou AC,1,1,0.0,0.0,D
+DZ1,16/04/2024,JS Kabylie,MC Oran,3,1,2.0,0.0,H
+DZ1,19/04/2024,USM Khenchela,CS Constantine,1,2,1.0,1.0,A
+DZ1,19/04/2024,NC Magra,MC Alger,0,0,,,D
+DZ1,19/04/2024,US Souf,ASO Chlef,0,2,0.0,1.0,A
+DZ1,19/04/2024,ES Sétif,JS Saoura,2,1,1.0,1.0,H
+DZ1,19/04/2024,CR Bélouizdad,US Biskra,4,0,1.0,0.0,H
+DZ1,20/04/2024,Paradou AC,MC El Bayadh,1,0,1.0,0.0,H
+DZ1,26/04/2024,MC El Bayadh,USM Khenchela,1,0,1.0,0.0,H
+DZ1,26/04/2024,US Biskra,ES Sétif,2,2,1.0,2.0,D
+DZ1,26/04/2024,JS Saoura,US Souf,6,0,3.0,0.0,H
+DZ1,27/04/2024,MC Alger,Paradou AC,1,0,0.0,0.0,H
+DZ1,27/04/2024,ES Ben Aknoun,JS Kabylie,2,3,1.0,1.0,A
+DZ1,27/04/2024,ASO Chlef,NC Magra,2,2,2.0,1.0,D
+DZ1,28/04/2024,MC Oran,CR Bélouizdad,1,0,0.0,0.0,H
+DZ1,04/05/2024,USM Khenchela,CR Bélouizdad,2,1,0.0,0.0,H
+DZ1,06/05/2024,USM Alger,JS Kabylie,2,2,2.0,1.0,D
+DZ1,10/05/2024,ES Sétif,US Souf,3,0,3.0,0.0,H
+DZ1,10/05/2024,USM Alger,MC El Bayadh,2,1,2.0,1.0,H
+DZ1,11/05/2024,Paradou AC,ASO Chlef,2,3,0.0,3.0,A
+DZ1,11/05/2024,US Biskra,MC Oran,0,0,,,D
+DZ1,11/05/2024,USM Khenchela,MC Alger,1,1,1.0,1.0,D
+DZ1,11/05/2024,CR Bélouizdad,ES Ben Aknoun,1,0,0.0,0.0,H
+DZ1,11/05/2024,NC Magra,JS Saoura,1,0,0.0,0.0,H
+DZ1,11/05/2024,JS Kabylie,CS Constantine,0,0,,,D
+DZ1,17/05/2024,CS Constantine,CR Bélouizdad,1,1,1.0,0.0,D
+DZ1,17/05/2024,ASO Chlef,USM Khenchela,4,1,2.0,1.0,H
+DZ1,17/05/2024,JS Saoura,Paradou AC,2,1,1.0,0.0,H
+DZ1,17/05/2024,US Souf,NC Magra,0,2,0.0,0.0,A
+DZ1,17/05/2024,MC Oran,ES Sétif,4,1,1.0,1.0,H
+DZ1,17/05/2024,MC El Bayadh,JS Kabylie,1,1,0.0,0.0,D
+DZ1,17/05/2024,ES Ben Aknoun,US Biskra,2,1,2.0,0.0,H
+DZ1,17/05/2024,MC Alger,USM Alger,1,0,1.0,0.0,H
+DZ1,21/05/2024,MC Oran,USM Alger,1,0,1.0,0.0,H
+DZ1,25/05/2024,USM Alger,ASO Chlef,2,1,0.0,1.0,H
+DZ1,26/05/2024,JS Kabylie,MC Alger,1,1,1.0,0.0,D
+DZ1,26/05/2024,MC Oran,ES Ben Aknoun,1,0,1.0,0.0,H
+DZ1,26/05/2024,Paradou AC,US Souf,6,0,3.0,0.0,H
+DZ1,26/05/2024,ES Sétif,NC Magra,0,0,,,D
+DZ1,26/05/2024,CR Bélouizdad,MC El Bayadh,1,0,0.0,0.0,H
+DZ1,26/05/2024,USM Khenchela,JS Saoura,1,0,0.0,0.0,H
+DZ1,26/05/2024,US Biskra,CS Constantine,0,1,0.0,1.0,A
+DZ1,30/05/2024,USM Alger,ES Ben Aknoun,0,2,0.0,1.0,A
+DZ1,03/06/2024,CS Constantine,USM Alger,1,1,0.0,0.0,D
+DZ1,07/06/2024,US Souf,USM Khenchela,2,5,0.0,3.0,A
+DZ1,07/06/2024,NC Magra,Paradou AC,2,0,2.0,0.0,H
+DZ1,07/06/2024,ES Ben Aknoun,ES Sétif,1,0,0.0,0.0,H
+DZ1,07/06/2024,JS Saoura,USM Alger,2,1,1.0,1.0,H
+DZ1,07/06/2024,ASO Chlef,JS Kabylie,1,1,1.0,0.0,D
+DZ1,07/06/2024,MC Alger,CR Bélouizdad,0,0,,,D
+DZ1,07/06/2024,MC El Bayadh,US Biskra,2,1,1.0,0.0,H
+DZ1,07/06/2024,CS Constantine,MC Oran,1,1,1.0,1.0,D
+DZ1,11/06/2024,ES Ben Aknoun,CS Constantine,0,1,0.0,0.0,A
+DZ1,11/06/2024,MC Oran,MC El Bayadh,2,0,1.0,0.0,H
+DZ1,11/06/2024,US Biskra,MC Alger,1,0,1.0,0.0,H
+DZ1,11/06/2024,CR Bélouizdad,ASO Chlef,0,1,0.0,0.0,A
+DZ1,11/06/2024,USM Khenchela,NC Magra,2,2,1.0,0.0,D
+DZ1,11/06/2024,USM Alger,US Souf,3,0,2.0,0.0,H
+DZ1,11/06/2024,ES Sétif,Paradou AC,2,1,0.0,1.0,H
+DZ1,11/06/2024,JS Kabylie,JS Saoura,1,1,1.0,0.0,D
+DZ1,14/06/2024,Paradou AC,USM Khenchela,2,0,2.0,0.0,H
+DZ1,14/06/2024,NC Magra,USM Alger,2,3,1.0,0.0,A
+DZ1,14/06/2024,US Souf,JS Kabylie,0,4,0.0,1.0,A
+DZ1,14/06/2024,JS Saoura,CR Bélouizdad,1,2,1.0,1.0,A
+DZ1,14/06/2024,ASO Chlef,US Biskra,2,1,1.0,0.0,H
+DZ1,14/06/2024,MC El Bayadh,ES Ben Aknoun,1,0,1.0,0.0,H
+DZ1,14/06/2024,CS Constantine,ES Sétif,1,2,0.0,0.0,A
+DZ1,14/06/2024,MC Alger,MC Oran,3,2,1.0,1.0,H
+DZ1,19/09/2024,ES Sétif,MC El Bayadh,1,0,1.0,0.0,H
+DZ1,20/09/2024,Olympique Akbou,NC Magra,1,0,1.0,0.0,H
+DZ1,21/09/2024,Paradou AC,ASO Chlef,2,0,1.0,0.0,H
+DZ1,24/09/2024,MC Oran,JS Saoura,2,0,1.0,0.0,H
+DZ1,27/09/2024,MC El Bayadh,US Biskra,0,1,0.0,0.0,A
+DZ1,27/09/2024,CR Bélouizdad,ES Sétif,0,0,,,D
+DZ1,27/09/2024,MC Alger,Paradou AC,1,1,0.0,0.0,D
+DZ1,27/09/2024,JS Kabylie,Olympique Akbou,2,1,1.0,1.0,H
+DZ1,27/09/2024,ASO Chlef,CS Constantine,0,0,,,D
+DZ1,28/09/2024,JS Saoura,USM Khenchela,1,1,0.0,1.0,D
+DZ1,28/09/2024,ES Mostaganem,MC Oran,2,1,0.0,1.0,H
+DZ1,28/09/2024,NC Magra,USM Alger,0,0,,,D
+DZ1,01/10/2024,JS Kabylie,MC Alger,1,2,1.0,1.0,A
+DZ1,02/10/2024,USM Khenchela,CR Bélouizdad,0,0,,,D
+DZ1,02/10/2024,CS Constantine,ES Mostaganem,0,0,,,D
+DZ1,02/10/2024,USM Alger,US Biskra,2,1,0.0,0.0,H
+DZ1,04/10/2024,Olympique Akbou,JS Saoura,2,1,0.0,1.0,H
+DZ1,04/10/2024,ES Sétif,NC Magra,0,0,,,D
+DZ1,04/10/2024,MC Oran,ASO Chlef,0,0,,,D
+DZ1,06/10/2024,USM Alger,MC El Bayadh,1,0,1.0,0.0,H
+DZ1,06/10/2024,USM Khenchela,ES Mostaganem,2,0,1.0,0.0,H
+DZ1,06/10/2024,US Biskra,CR Bélouizdad,0,0,,,D
+DZ1,06/10/2024,Paradou AC,JS Kabylie,0,3,0.0,1.0,A
+DZ1,06/10/2024,CS Constantine,MC Alger,1,1,0.0,0.0,D
+DZ1,11/10/2024,Paradou AC,Olympique Akbou,1,3,1.0,2.0,A
+DZ1,11/10/2024,JS Saoura,ES Sétif,3,2,2.0,1.0,H
+DZ1,11/10/2024,MC Alger,MC Oran,1,0,0.0,0.0,H
+DZ1,12/10/2024,NC Magra,US Biskra,2,2,2.0,1.0,D
+DZ1,12/10/2024,JS Kabylie,CS Constantine,2,3,1.0,1.0,A
+DZ1,12/10/2024,CR Bélouizdad,MC El Bayadh,2,3,2.0,2.0,A
+DZ1,18/10/2024,ES Sétif,ES Mostaganem,1,0,0.0,0.0,H
+DZ1,18/10/2024,USM Khenchela,MC Alger,0,1,0.0,1.0,A
+DZ1,18/10/2024,USM Alger,CR Bélouizdad,0,0,,,D
+DZ1,18/10/2024,Olympique Akbou,ASO Chlef,0,0,,,D
+DZ1,19/10/2024,MC El Bayadh,NC Magra,4,0,1.0,0.0,H
+DZ1,19/10/2024,CS Constantine,Paradou AC,2,1,2.0,1.0,H
+DZ1,19/10/2024,US Biskra,JS Saoura,2,1,1.0,1.0,H
+DZ1,19/10/2024,MC Oran,JS Kabylie,2,0,1.0,0.0,H
+DZ1,22/10/2024,ES Mostaganem,USM Alger,0,1,0.0,1.0,A
+DZ1,22/10/2024,ASO Chlef,USM Khenchela,1,1,1.0,0.0,D
+DZ1,24/10/2024,MC Alger,Olympique Akbou,0,0,,,D
+DZ1,25/10/2024,JS Saoura,MC El Bayadh,1,0,0.0,0.0,H
+DZ1,25/10/2024,Paradou AC,MC Oran,2,2,1.0,0.0,D
+DZ1,25/10/2024,NC Magra,CR Bélouizdad,1,0,0.0,0.0,H
+DZ1,25/10/2024,CS Constantine,ES Sétif,2,1,2.0,1.0,H
+DZ1,26/10/2024,ASO Chlef,USM Alger,0,0,,,D
+DZ1,26/10/2024,JS Kabylie,USM Khenchela,1,0,1.0,0.0,H
+DZ1,26/10/2024,ES Mostaganem,US Biskra,1,0,1.0,0.0,H
+DZ1,02/11/2024,MC El Bayadh,Paradou AC,1,1,1.0,1.0,D
+DZ1,02/11/2024,USM Khenchela,NC Magra,1,0,1.0,0.0,H
+DZ1,02/11/2024,MC Oran,CS Constantine,1,0,1.0,0.0,H
+DZ1,02/11/2024,ES Sétif,ASO Chlef,1,0,1.0,0.0,H
+DZ1,03/11/2024,US Biskra,JS Kabylie,0,1,0.0,0.0,A
+DZ1,03/11/2024,Olympique Akbou,ES Mostaganem,1,2,0.0,0.0,A
+DZ1,07/11/2024,MC Oran,ES Sétif,1,0,0.0,0.0,H
+DZ1,08/11/2024,CS Constantine,Olympique Akbou,2,1,0.0,0.0,H
+DZ1,08/11/2024,Paradou AC,USM Khenchela,4,0,2.0,0.0,H
+DZ1,08/11/2024,ASO Chlef,MC El Bayadh,2,0,0.0,0.0,H
+DZ1,09/11/2024,JS Saoura,NC Magra,1,0,0.0,0.0,H
+DZ1,09/11/2024,JS Kabylie,USM Alger,0,0,,,D
+DZ1,09/11/2024,MC Alger,US Biskra,0,0,,,D
+DZ1,09/11/2024,ES Mostaganem,CR Bélouizdad,0,2,0.0,0.0,A
+DZ1,15/11/2024,MC El Bayadh,MC Alger,0,1,0.0,0.0,A
+DZ1,15/11/2024,Olympique Akbou,MC Oran,3,1,0.0,0.0,H
+DZ1,15/11/2024,USM Khenchela,CS Constantine,1,0,0.0,0.0,H
+DZ1,16/11/2024,USM Alger,JS Saoura,2,0,1.0,0.0,H
+DZ1,16/11/2024,NC Magra,ES Mostaganem,1,0,1.0,0.0,H
+DZ1,16/11/2024,US Biskra,ASO Chlef,1,2,1.0,0.0,A
+DZ1,20/11/2024,MC Alger,CR Bélouizdad,1,3,1.0,1.0,A
+DZ1,21/11/2024,CS Constantine,USM Alger,1,0,1.0,0.0,H
+DZ1,22/11/2024,MC Oran,USM Khenchela,0,0,,,D
+DZ1,23/11/2024,Olympique Akbou,ES Sétif,0,1,0.0,0.0,A
+DZ1,23/11/2024,ASO Chlef,NC Magra,2,2,1.0,1.0,D
+DZ1,23/11/2024,ES Mostaganem,JS Saoura,1,1,0.0,1.0,D
+DZ1,30/11/2024,USM Khenchela,Olympique Akbou,1,0,0.0,0.0,H
+DZ1,30/11/2024,NC Magra,MC Oran,2,1,0.0,1.0,H
+DZ1,30/11/2024,MC El Bayadh,ES Mostaganem,1,1,0.0,0.0,D
+DZ1,01/12/2024,CR Bélouizdad,ASO Chlef,2,0,1.0,0.0,H
+DZ1,01/12/2024,ES Sétif,MC Alger,0,0,,,D
+DZ1,02/12/2024,JS Saoura,JS Kabylie,1,1,1.0,1.0,D
+DZ1,02/12/2024,US Biskra,CS Constantine,1,1,1.0,0.0,D
+DZ1,07/12/2024,ASO Chlef,ES Mostaganem,2,0,1.0,0.0,H
+DZ1,07/12/2024,USM Khenchela,ES Sétif,2,3,1.0,0.0,A
+DZ1,08/12/2024,JS Kabylie,NC Magra,2,1,1.0,1.0,H
+DZ1,08/12/2024,MC Oran,US Biskra,1,0,0.0,0.0,H
+DZ1,13/12/2024,NC Magra,Paradou AC,1,1,1.0,0.0,D
+DZ1,13/12/2024,ES Sétif,JS Kabylie,2,2,1.0,0.0,D
+DZ1,13/12/2024,MC El Bayadh,MC Oran,1,0,1.0,0.0,H
+DZ1,13/12/2024,JS Saoura,ASO Chlef,1,1,1.0,0.0,D
+DZ1,14/12/2024,US Biskra,Olympique Akbou,0,1,0.0,0.0,A
+DZ1,17/12/2024,CR Bélouizdad,JS Saoura,3,0,0.0,0.0,H
+DZ1,17/12/2024,ES Sétif,Paradou AC,1,2,0.0,1.0,A
+DZ1,17/12/2024,JS Kabylie,MC El Bayadh,3,0,1.0,0.0,H
+DZ1,20/12/2024,MC Alger,ASO Chlef,0,0,,,D
+DZ1,20/12/2024,USM Khenchela,US Biskra,0,0,,,D
+DZ1,21/12/2024,Paradou AC,JS Saoura,2,0,0.0,0.0,H
+DZ1,21/12/2024,JS Kabylie,ES Mostaganem,2,1,1.0,0.0,H
+DZ1,21/12/2024,ES Sétif,USM Alger,1,1,0.0,1.0,D
+DZ1,21/12/2024,Olympique Akbou,MC El Bayadh,0,1,0.0,0.0,A
+DZ1,21/12/2024,CS Constantine,NC Magra,0,0,,,D
+DZ1,26/12/2024,USM Alger,MC Oran,3,0,0.0,0.0,H
+DZ1,26/12/2024,NC Magra,MC Alger,1,2,0.0,0.0,A
+DZ1,26/12/2024,ES Mostaganem,Paradou AC,0,2,0.0,1.0,A
+DZ1,27/12/2024,JS Saoura,CS Constantine,2,0,1.0,0.0,H
+DZ1,27/12/2024,CR Bélouizdad,Olympique Akbou,1,0,0.0,0.0,H
+DZ1,27/12/2024,US Biskra,ES Sétif,0,0,,,D
+DZ1,28/12/2024,ASO Chlef,JS Kabylie,1,0,0.0,0.0,H
+DZ1,28/12/2024,MC El Bayadh,USM Khenchela,1,2,0.0,1.0,A
+DZ1,01/01/2025,Paradou AC,US Biskra,2,1,0.0,1.0,H
+DZ1,21/01/2025,CR Bélouizdad,JS Kabylie,1,1,0.0,0.0,D
+DZ1,24/01/2025,USM Alger,MC Alger,0,3,0.0,0.0,A
+DZ1,25/01/2025,Paradou AC,CR Bélouizdad,1,2,0.0,1.0,A
+DZ1,25/01/2025,CS Constantine,MC El Bayadh,0,1,0.0,1.0,A
+DZ1,28/01/2025,USM Alger,Paradou AC,1,1,0.0,1.0,D
+DZ1,29/01/2025,MC Alger,JS Saoura,1,0,1.0,0.0,H
+DZ1,30/01/2025,CR Bélouizdad,CS Constantine,0,2,0.0,0.0,A
+DZ1,01/02/2025,Olympique Akbou,USM Alger,0,0,,,D
+DZ1,02/02/2025,ES Mostaganem,MC Alger,1,1,0.0,1.0,D
+DZ1,03/02/2025,MC Oran,CR Bélouizdad,1,2,0.0,1.0,A
+DZ1,05/02/2025,USM Alger,USM Khenchela,3,0,1.0,0.0,H
+DZ1,11/02/2025,ASO Chlef,Paradou AC,2,0,2.0,0.0,H
+DZ1,11/02/2025,MC El Bayadh,ES Sétif,1,0,0.0,0.0,H
+DZ1,12/02/2025,JS Saoura,MC Oran,2,0,0.0,0.0,H
+DZ1,12/02/2025,CR Bélouizdad,USM Khenchela,3,0,1.0,0.0,H
+DZ1,13/02/2025,ES Mostaganem,CS Constantine,0,0,,,D
+DZ1,13/02/2025,MC Alger,JS Kabylie,3,2,1.0,0.0,H
+DZ1,14/02/2025,NC Magra,Olympique Akbou,1,1,1.0,0.0,D
+DZ1,14/02/2025,US Biskra,USM Alger,0,0,,,D
+DZ1,18/02/2025,USM Alger,NC Magra,2,0,1.0,0.0,H
+DZ1,18/02/2025,CS Constantine,ASO Chlef,2,2,2.0,1.0,D
+DZ1,18/02/2025,USM Khenchela,JS Saoura,1,3,1.0,1.0,A
+DZ1,19/02/2025,Olympique Akbou,JS Kabylie,0,0,,,D
+DZ1,19/02/2025,US Biskra,MC El Bayadh,0,0,,,D
+DZ1,19/02/2025,MC Oran,ES Mostaganem,1,0,1.0,0.0,H
+DZ1,20/02/2025,ES Sétif,CR Bélouizdad,1,0,1.0,0.0,H
+DZ1,23/02/2025,Paradou AC,MC Alger,1,3,1.0,2.0,A
+DZ1,25/02/2025,ASO Chlef,MC Oran,1,0,0.0,0.0,H
+DZ1,25/02/2025,ES Mostaganem,USM Khenchela,2,0,2.0,0.0,H
+DZ1,26/02/2025,NC Magra,ES Sétif,0,0,,,D
+DZ1,26/02/2025,CR Bélouizdad,US Biskra,2,0,0.0,0.0,H
+DZ1,27/02/2025,MC El Bayadh,USM Alger,2,1,1.0,0.0,H
+DZ1,27/02/2025,JS Saoura,Olympique Akbou,2,1,0.0,1.0,H
+DZ1,28/02/2025,MC Alger,CS Constantine,2,1,1.0,1.0,H
+DZ1,28/02/2025,JS Kabylie,Paradou AC,2,1,1.0,0.0,H
+DZ1,06/03/2025,MC Oran,MC Alger,0,2,0.0,1.0,A
+DZ1,06/03/2025,USM Alger,ES Mostaganem,1,0,1.0,0.0,H
+DZ1,06/03/2025,MC El Bayadh,CR Bélouizdad,0,0,,,D
+DZ1,06/03/2025,Olympique Akbou,Paradou AC,1,2,0.0,0.0,A
+DZ1,07/03/2025,USM Khenchela,ASO Chlef,3,2,1.0,1.0,H
+DZ1,07/03/2025,US Biskra,NC Magra,1,0,1.0,0.0,H
+DZ1,07/03/2025,ES Sétif,JS Saoura,1,0,0.0,0.0,H
+DZ1,08/03/2025,CS Constantine,JS Kabylie,1,1,0.0,1.0,D
+DZ1,14/03/2025,JS Saoura,US Biskra,2,0,1.0,0.0,H
+DZ1,14/03/2025,Paradou AC,CS Constantine,2,0,1.0,0.0,H
+DZ1,14/03/2025,JS Kabylie,MC Oran,2,1,1.0,0.0,H
+DZ1,14/03/2025,ES Mostaganem,ES Sétif,1,0,0.0,0.0,H
+DZ1,15/03/2025,ASO Chlef,Olympique Akbou,0,0,,,D
+DZ1,15/03/2025,MC Alger,USM Khenchela,2,2,0.0,0.0,D
+DZ1,16/03/2025,NC Magra,MC El Bayadh,0,0,,,D
+DZ1,16/03/2025,CR Bélouizdad,USM Alger,1,1,0.0,0.0,D

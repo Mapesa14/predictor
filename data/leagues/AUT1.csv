@@ -1,0 +1,585 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+AUT1,28/07/2023,LASK,Rapid Wien,1,1,0.0,1.0,D
+AUT1,29/07/2023,TSV Hartberg,Austria Lustenau,2,2,1.0,0.0,D
+AUT1,29/07/2023,WSG Tirol,SK Austria Klagenfurt,1,3,0.0,1.0,A
+AUT1,29/07/2023,SCR Altach,RB Salzburg,0,2,0.0,1.0,A
+AUT1,29/07/2023,Wolfsberger AC,FC Blau Weiß Linz,2,1,1.0,0.0,H
+AUT1,30/07/2023,Austria Wien,Sturm Graz,0,3,0.0,2.0,A
+AUT1,05/08/2023,Rapid Wien,SCR Altach,4,0,2.0,0.0,H
+AUT1,05/08/2023,Sturm Graz,LASK,2,0,1.0,0.0,H
+AUT1,06/08/2023,Austria Lustenau,Austria Wien,0,2,0.0,1.0,A
+AUT1,06/08/2023,FC Blau Weiß Linz,TSV Hartberg,3,3,1.0,2.0,D
+AUT1,06/08/2023,RB Salzburg,WSG Tirol,3,0,0.0,0.0,H
+AUT1,09/08/2023,SK Austria Klagenfurt,Wolfsberger AC,2,2,1.0,0.0,D
+AUT1,12/08/2023,Sturm Graz,SK Austria Klagenfurt,0,0,,,D
+AUT1,12/08/2023,Wolfsberger AC,Austria Lustenau,1,1,0.0,0.0,D
+AUT1,12/08/2023,LASK,FC Blau Weiß Linz,2,0,1.0,0.0,H
+AUT1,13/08/2023,Rapid Wien,TSV Hartberg,0,1,0.0,0.0,A
+AUT1,13/08/2023,SCR Altach,WSG Tirol,1,0,0.0,0.0,H
+AUT1,13/08/2023,RB Salzburg,Austria Wien,2,0,0.0,0.0,H
+AUT1,19/08/2023,SK Austria Klagenfurt,SCR Altach,1,1,0.0,0.0,D
+AUT1,19/08/2023,Austria Lustenau,Sturm Graz,0,1,0.0,1.0,A
+AUT1,19/08/2023,WSG Tirol,LASK,1,1,1.0,0.0,D
+AUT1,20/08/2023,FC Blau Weiß Linz,Rapid Wien,0,5,0.0,2.0,A
+AUT1,20/08/2023,TSV Hartberg,RB Salzburg,1,5,1.0,1.0,A
+AUT1,20/08/2023,Austria Wien,Wolfsberger AC,0,0,,,D
+AUT1,26/08/2023,Sturm Graz,FC Blau Weiß Linz,4,1,2.0,0.0,H
+AUT1,26/08/2023,Wolfsberger AC,RB Salzburg,1,2,1.0,0.0,A
+AUT1,26/08/2023,Austria Lustenau,SCR Altach,0,3,0.0,2.0,A
+AUT1,27/08/2023,TSV Hartberg,SK Austria Klagenfurt,0,3,0.0,1.0,A
+AUT1,27/08/2023,LASK,Austria Wien,2,0,1.0,0.0,H
+AUT1,27/08/2023,Rapid Wien,WSG Tirol,1,1,0.0,1.0,D
+AUT1,02/09/2023,Wolfsberger AC,TSV Hartberg,0,3,0.0,1.0,A
+AUT1,02/09/2023,WSG Tirol,FC Blau Weiß Linz,2,4,1.0,2.0,A
+AUT1,02/09/2023,SCR Altach,Sturm Graz,1,2,0.0,0.0,A
+AUT1,03/09/2023,LASK,Austria Lustenau,2,0,0.0,0.0,H
+AUT1,03/09/2023,Austria Wien,SK Austria Klagenfurt,2,2,1.0,1.0,D
+AUT1,03/09/2023,RB Salzburg,Rapid Wien,2,0,2.0,0.0,H
+AUT1,16/09/2023,Sturm Graz,RB Salzburg,2,2,0.0,1.0,D
+AUT1,16/09/2023,SK Austria Klagenfurt,LASK,1,3,0.0,3.0,A
+AUT1,16/09/2023,FC Blau Weiß Linz,SCR Altach,1,1,1.0,1.0,D
+AUT1,17/09/2023,Austria Lustenau,WSG Tirol,2,3,0.0,2.0,A
+AUT1,17/09/2023,TSV Hartberg,Austria Wien,2,1,1.0,1.0,H
+AUT1,17/09/2023,Rapid Wien,Wolfsberger AC,3,3,2.0,0.0,D
+AUT1,23/09/2023,RB Salzburg,FC Blau Weiß Linz,0,1,0.0,0.0,A
+AUT1,23/09/2023,SK Austria Klagenfurt,Austria Lustenau,1,0,1.0,0.0,H
+AUT1,23/09/2023,WSG Tirol,Wolfsberger AC,2,3,0.0,1.0,A
+AUT1,24/09/2023,SCR Altach,Austria Wien,2,1,2.0,1.0,H
+AUT1,24/09/2023,Rapid Wien,Sturm Graz,1,1,1.0,1.0,D
+AUT1,24/09/2023,LASK,TSV Hartberg,0,0,,,D
+AUT1,30/09/2023,Austria Lustenau,RB Salzburg,0,4,0.0,3.0,A
+AUT1,30/09/2023,FC Blau Weiß Linz,SK Austria Klagenfurt,0,0,,,D
+AUT1,30/09/2023,Wolfsberger AC,LASK,2,1,2.0,0.0,H
+AUT1,01/10/2023,TSV Hartberg,SCR Altach,0,0,,,D
+AUT1,01/10/2023,Austria Wien,Rapid Wien,0,0,,,D
+AUT1,01/10/2023,Sturm Graz,WSG Tirol,1,0,1.0,0.0,H
+AUT1,07/10/2023,Austria Wien,FC Blau Weiß Linz,4,0,2.0,0.0,H
+AUT1,07/10/2023,Austria Lustenau,Rapid Wien,0,5,0.0,3.0,A
+AUT1,07/10/2023,TSV Hartberg,WSG Tirol,3,0,0.0,0.0,H
+AUT1,08/10/2023,LASK,SCR Altach,1,0,0.0,0.0,H
+AUT1,08/10/2023,SK Austria Klagenfurt,RB Salzburg,2,2,1.0,2.0,D
+AUT1,08/10/2023,Wolfsberger AC,Sturm Graz,1,2,1.0,0.0,A
+AUT1,21/10/2023,RB Salzburg,LASK,0,1,0.0,1.0,A
+AUT1,21/10/2023,Sturm Graz,TSV Hartberg,2,1,2.0,1.0,H
+AUT1,21/10/2023,FC Blau Weiß Linz,Austria Lustenau,0,0,,,D
+AUT1,22/10/2023,WSG Tirol,Austria Wien,0,2,0.0,1.0,A
+AUT1,22/10/2023,Rapid Wien,SK Austria Klagenfurt,2,3,1.0,0.0,A
+AUT1,22/10/2023,SCR Altach,Wolfsberger AC,0,0,,,D
+AUT1,28/10/2023,RB Salzburg,SCR Altach,3,0,1.0,0.0,H
+AUT1,28/10/2023,SK Austria Klagenfurt,WSG Tirol,1,0,1.0,0.0,H
+AUT1,28/10/2023,FC Blau Weiß Linz,Wolfsberger AC,2,0,1.0,0.0,H
+AUT1,29/10/2023,Sturm Graz,Austria Wien,0,1,0.0,1.0,A
+AUT1,29/10/2023,Rapid Wien,LASK,3,3,1.0,1.0,D
+AUT1,29/10/2023,Austria Lustenau,TSV Hartberg,0,4,0.0,1.0,A
+AUT1,04/11/2023,Wolfsberger AC,SK Austria Klagenfurt,4,0,2.0,0.0,H
+AUT1,04/11/2023,Austria Wien,Austria Lustenau,1,0,0.0,0.0,H
+AUT1,04/11/2023,WSG Tirol,RB Salzburg,0,2,0.0,1.0,A
+AUT1,05/11/2023,LASK,Sturm Graz,3,1,2.0,0.0,H
+AUT1,05/11/2023,SCR Altach,Rapid Wien,0,2,0.0,0.0,A
+AUT1,05/11/2023,TSV Hartberg,FC Blau Weiß Linz,3,2,1.0,2.0,H
+AUT1,11/11/2023,WSG Tirol,SCR Altach,5,1,3.0,0.0,H
+AUT1,11/11/2023,TSV Hartberg,Rapid Wien,1,0,1.0,0.0,H
+AUT1,11/11/2023,Austria Lustenau,Wolfsberger AC,2,3,0.0,1.0,A
+AUT1,12/11/2023,FC Blau Weiß Linz,LASK,2,0,1.0,0.0,H
+AUT1,12/11/2023,Austria Wien,RB Salzburg,0,0,,,D
+AUT1,12/11/2023,SK Austria Klagenfurt,Sturm Graz,0,3,0.0,2.0,A
+AUT1,25/11/2023,LASK,WSG Tirol,1,0,1.0,0.0,H
+AUT1,25/11/2023,Sturm Graz,Austria Lustenau,2,0,0.0,0.0,H
+AUT1,25/11/2023,RB Salzburg,TSV Hartberg,3,2,1.0,1.0,H
+AUT1,26/11/2023,SCR Altach,SK Austria Klagenfurt,0,1,0.0,1.0,A
+AUT1,26/11/2023,Rapid Wien,FC Blau Weiß Linz,1,0,0.0,0.0,H
+AUT1,26/11/2023,Wolfsberger AC,Austria Wien,1,0,1.0,0.0,H
+AUT1,03/12/2023,FC Blau Weiß Linz,Sturm Graz,1,1,1.0,0.0,D
+AUT1,03/12/2023,RB Salzburg,Wolfsberger AC,1,0,1.0,0.0,H
+AUT1,03/12/2023,Austria Wien,LASK,0,0,,,D
+AUT1,04/12/2023,SK Austria Klagenfurt,TSV Hartberg,1,1,0.0,0.0,D
+AUT1,05/12/2023,WSG Tirol,Rapid Wien,1,2,0.0,0.0,A
+AUT1,05/12/2023,SCR Altach,Austria Lustenau,3,0,1.0,0.0,H
+AUT1,09/12/2023,Austria Lustenau,LASK,1,3,1.0,0.0,A
+AUT1,09/12/2023,SK Austria Klagenfurt,Austria Wien,2,2,0.0,0.0,D
+AUT1,09/12/2023,Rapid Wien,RB Salzburg,0,1,0.0,1.0,A
+AUT1,10/12/2023,FC Blau Weiß Linz,WSG Tirol,1,2,1.0,1.0,A
+AUT1,10/12/2023,Sturm Graz,SCR Altach,1,0,1.0,0.0,H
+AUT1,10/12/2023,TSV Hartberg,Wolfsberger AC,2,0,1.0,0.0,H
+AUT1,09/02/2024,RB Salzburg,Sturm Graz,1,1,1.0,0.0,D
+AUT1,10/02/2024,Austria Wien,TSV Hartberg,3,1,1.0,1.0,H
+AUT1,10/02/2024,SCR Altach,FC Blau Weiß Linz,1,1,0.0,1.0,D
+AUT1,11/02/2024,LASK,SK Austria Klagenfurt,2,2,1.0,1.0,D
+AUT1,11/02/2024,WSG Tirol,Austria Lustenau,0,2,0.0,0.0,A
+AUT1,11/02/2024,Wolfsberger AC,Rapid Wien,0,2,0.0,1.0,A
+AUT1,17/02/2024,Austria Wien,SCR Altach,2,1,2.0,0.0,H
+AUT1,17/02/2024,Wolfsberger AC,WSG Tirol,4,1,2.0,0.0,H
+AUT1,17/02/2024,FC Blau Weiß Linz,RB Salzburg,1,1,1.0,1.0,D
+AUT1,18/02/2024,Austria Lustenau,SK Austria Klagenfurt,0,1,0.0,1.0,A
+AUT1,18/02/2024,Sturm Graz,Rapid Wien,1,1,1.0,1.0,D
+AUT1,18/02/2024,TSV Hartberg,LASK,0,0,,,D
+AUT1,24/02/2024,RB Salzburg,Austria Lustenau,7,0,4.0,0.0,H
+AUT1,24/02/2024,SCR Altach,TSV Hartberg,1,2,1.0,0.0,A
+AUT1,24/02/2024,LASK,Wolfsberger AC,0,1,0.0,1.0,A
+AUT1,25/02/2024,Rapid Wien,Austria Wien,3,0,3.0,0.0,H
+AUT1,25/02/2024,WSG Tirol,Sturm Graz,0,2,0.0,2.0,A
+AUT1,25/02/2024,SK Austria Klagenfurt,FC Blau Weiß Linz,2,0,1.0,0.0,H
+AUT1,03/03/2024,SCR Altach,LASK,0,0,,,D
+AUT1,03/03/2024,Sturm Graz,Wolfsberger AC,4,0,0.0,0.0,H
+AUT1,03/03/2024,FC Blau Weiß Linz,Austria Wien,1,2,1.0,2.0,A
+AUT1,03/03/2024,RB Salzburg,SK Austria Klagenfurt,1,0,0.0,0.0,H
+AUT1,03/03/2024,Rapid Wien,Austria Lustenau,1,1,0.0,0.0,D
+AUT1,03/03/2024,WSG Tirol,TSV Hartberg,1,0,1.0,0.0,H
+AUT1,09/03/2024,LASK,RB Salzburg,0,1,0.0,1.0,A
+AUT1,10/03/2024,SK Austria Klagenfurt,Rapid Wien,1,1,0.0,1.0,D
+AUT1,10/03/2024,Austria Lustenau,FC Blau Weiß Linz,2,0,0.0,0.0,H
+AUT1,10/03/2024,Wolfsberger AC,SCR Altach,1,1,1.0,1.0,D
+AUT1,10/03/2024,Austria Wien,WSG Tirol,2,0,1.0,0.0,H
+AUT1,10/03/2024,TSV Hartberg,Sturm Graz,1,1,0.0,1.0,D
+AUT1,15/03/2024,Rapid Wien,LASK,0,0,,,D
+AUT1,16/03/2024,SCR Altach,Austria Wien,1,1,0.0,1.0,D
+AUT1,16/03/2024,FC Blau Weiß Linz,Austria Lustenau,0,0,,,D
+AUT1,16/03/2024,WSG Tirol,Wolfsberger AC,1,1,0.0,0.0,D
+AUT1,17/03/2024,RB Salzburg,TSV Hartberg,5,1,2.0,0.0,H
+AUT1,17/03/2024,SK Austria Klagenfurt,Sturm Graz,0,4,0.0,4.0,A
+AUT1,29/03/2024,Austria Wien,FC Blau Weiß Linz,0,0,,,D
+AUT1,30/03/2024,Wolfsberger AC,SCR Altach,0,0,,,D
+AUT1,30/03/2024,Austria Lustenau,WSG Tirol,1,2,0.0,1.0,A
+AUT1,31/03/2024,Sturm Graz,RB Salzburg,0,1,0.0,0.0,A
+AUT1,31/03/2024,TSV Hartberg,Rapid Wien,0,3,0.0,2.0,A
+AUT1,31/03/2024,LASK,SK Austria Klagenfurt,1,0,0.0,0.0,H
+AUT1,05/04/2024,SCR Altach,WSG Tirol,0,0,,,D
+AUT1,06/04/2024,Austria Wien,Austria Lustenau,1,1,0.0,0.0,D
+AUT1,06/04/2024,FC Blau Weiß Linz,Wolfsberger AC,0,0,,,D
+AUT1,07/04/2024,Sturm Graz,LASK,1,0,1.0,0.0,H
+AUT1,07/04/2024,RB Salzburg,Rapid Wien,1,1,0.0,0.0,D
+AUT1,07/04/2024,SK Austria Klagenfurt,TSV Hartberg,2,2,1.0,2.0,D
+AUT1,12/04/2024,LASK,RB Salzburg,3,1,2.0,0.0,H
+AUT1,13/04/2024,Wolfsberger AC,Austria Wien,0,1,0.0,1.0,A
+AUT1,13/04/2024,Austria Lustenau,SCR Altach,0,1,0.0,0.0,A
+AUT1,13/04/2024,WSG Tirol,FC Blau Weiß Linz,2,1,1.0,0.0,H
+AUT1,14/04/2024,Rapid Wien,SK Austria Klagenfurt,1,1,1.0,0.0,D
+AUT1,14/04/2024,TSV Hartberg,Sturm Graz,1,3,0.0,1.0,A
+AUT1,19/04/2024,Sturm Graz,Rapid Wien,1,0,0.0,0.0,H
+AUT1,20/04/2024,Wolfsberger AC,Austria Lustenau,1,1,1.0,1.0,D
+AUT1,20/04/2024,SCR Altach,FC Blau Weiß Linz,2,2,1.0,1.0,D
+AUT1,20/04/2024,Austria Wien,WSG Tirol,3,0,2.0,0.0,H
+AUT1,21/04/2024,LASK,TSV Hartberg,1,3,0.0,2.0,A
+AUT1,21/04/2024,RB Salzburg,SK Austria Klagenfurt,4,2,4.0,1.0,H
+AUT1,23/04/2024,FC Blau Weiß Linz,SCR Altach,2,1,0.0,1.0,H
+AUT1,23/04/2024,Austria Lustenau,Wolfsberger AC,1,2,0.0,0.0,A
+AUT1,23/04/2024,WSG Tirol,Austria Wien,1,0,0.0,0.0,H
+AUT1,24/04/2024,SK Austria Klagenfurt,RB Salzburg,4,3,0.0,2.0,H
+AUT1,24/04/2024,Rapid Wien,Sturm Graz,1,3,1.0,3.0,A
+AUT1,24/04/2024,TSV Hartberg,LASK,1,2,1.0,1.0,A
+AUT1,26/04/2024,Austria Wien,SCR Altach,2,2,1.0,1.0,D
+AUT1,27/04/2024,WSG Tirol,Austria Lustenau,0,0,,,D
+AUT1,27/04/2024,Wolfsberger AC,FC Blau Weiß Linz,0,2,0.0,1.0,A
+AUT1,28/04/2024,TSV Hartberg,SK Austria Klagenfurt,3,2,3.0,0.0,H
+AUT1,28/04/2024,LASK,Rapid Wien,5,0,3.0,0.0,H
+AUT1,28/04/2024,RB Salzburg,Sturm Graz,2,2,0.0,2.0,D
+AUT1,03/05/2024,Austria Lustenau,Austria Wien,2,0,2.0,0.0,H
+AUT1,04/05/2024,SCR Altach,Wolfsberger AC,0,1,0.0,1.0,A
+AUT1,04/05/2024,FC Blau Weiß Linz,WSG Tirol,3,2,2.0,1.0,H
+AUT1,05/05/2024,Sturm Graz,TSV Hartberg,1,1,0.0,1.0,D
+AUT1,05/05/2024,SK Austria Klagenfurt,LASK,0,2,0.0,1.0,A
+AUT1,05/05/2024,Rapid Wien,RB Salzburg,2,0,0.0,0.0,H
+AUT1,11/05/2024,WSG Tirol,SCR Altach,0,1,0.0,1.0,A
+AUT1,11/05/2024,Austria Lustenau,FC Blau Weiß Linz,1,0,1.0,0.0,H
+AUT1,11/05/2024,Austria Wien,Wolfsberger AC,0,4,0.0,1.0,A
+AUT1,12/05/2024,SK Austria Klagenfurt,Rapid Wien,0,1,0.0,0.0,A
+AUT1,12/05/2024,LASK,Sturm Graz,2,2,1.0,1.0,D
+AUT1,12/05/2024,TSV Hartberg,RB Salzburg,1,5,1.0,3.0,A
+AUT1,18/05/2024,FC Blau Weiß Linz,Austria Wien,1,2,0.0,1.0,A
+AUT1,18/05/2024,Wolfsberger AC,WSG Tirol,3,1,0.0,1.0,H
+AUT1,18/05/2024,SCR Altach,Austria Lustenau,2,2,1.0,1.0,D
+AUT1,19/05/2024,Sturm Graz,SK Austria Klagenfurt,2,0,0.0,0.0,H
+AUT1,19/05/2024,Rapid Wien,TSV Hartberg,0,3,0.0,1.0,A
+AUT1,19/05/2024,RB Salzburg,LASK,7,1,3.0,1.0,H
+AUT1,21/05/2024,Wolfsberger AC,Austria Wien,1,2,0.0,1.0,A
+AUT1,24/05/2024,Austria Wien,TSV Hartberg,2,1,0.0,0.0,H
+AUT1,28/05/2024,TSV Hartberg,Austria Wien,0,1,0.0,1.0,A
+AUT1,02/08/2024,Grazer AK,RB Salzburg,2,3,2.0,3.0,A
+AUT1,03/08/2024,SCR Altach,WSG Tirol,1,2,0.0,1.0,A
+AUT1,03/08/2024,TSV Hartberg,LASK,1,2,0.0,1.0,A
+AUT1,03/08/2024,Wolfsberger AC,SK Austria Klagenfurt,4,1,3.0,0.0,H
+AUT1,04/08/2024,Rapid Wien,Sturm Graz,1,0,1.0,0.0,H
+AUT1,04/08/2024,FC Blau Weiß Linz,Austria Wien,1,0,0.0,0.0,H
+AUT1,10/08/2024,LASK,SCR Altach,1,2,1.0,1.0,A
+AUT1,10/08/2024,WSG Tirol,Grazer AK,0,0,,,D
+AUT1,10/08/2024,RB Salzburg,FC Blau Weiß Linz,5,1,2.0,1.0,H
+AUT1,11/08/2024,Austria Wien,Wolfsberger AC,3,1,0.0,1.0,H
+AUT1,11/08/2024,Sturm Graz,TSV Hartberg,2,0,1.0,0.0,H
+AUT1,11/08/2024,SK Austria Klagenfurt,Rapid Wien,1,1,1.0,1.0,D
+AUT1,17/08/2024,LASK,RB Salzburg,0,1,0.0,0.0,A
+AUT1,17/08/2024,SK Austria Klagenfurt,Sturm Graz,0,2,0.0,0.0,A
+AUT1,17/08/2024,Grazer AK,FC Blau Weiß Linz,2,2,0.0,2.0,D
+AUT1,18/08/2024,Rapid Wien,WSG Tirol,2,0,1.0,0.0,H
+AUT1,18/08/2024,SCR Altach,Wolfsberger AC,2,0,1.0,0.0,H
+AUT1,18/08/2024,TSV Hartberg,Austria Wien,1,1,1.0,1.0,D
+AUT1,24/08/2024,WSG Tirol,SK Austria Klagenfurt,0,1,0.0,0.0,A
+AUT1,24/08/2024,Sturm Graz,SCR Altach,2,1,0.0,0.0,H
+AUT1,25/08/2024,Wolfsberger AC,Grazer AK,4,2,0.0,0.0,H
+AUT1,25/08/2024,Austria Wien,LASK,2,1,1.0,1.0,H
+AUT1,25/08/2024,FC Blau Weiß Linz,Rapid Wien,3,0,2.0,0.0,H
+AUT1,31/08/2024,SK Austria Klagenfurt,FC Blau Weiß Linz,3,1,1.0,1.0,H
+AUT1,31/08/2024,TSV Hartberg,Grazer AK,1,1,0.0,1.0,D
+AUT1,31/08/2024,Sturm Graz,WSG Tirol,4,2,1.0,2.0,H
+AUT1,01/09/2024,LASK,Wolfsberger AC,1,5,0.0,2.0,A
+AUT1,01/09/2024,Rapid Wien,RB Salzburg,3,2,2.0,2.0,H
+AUT1,01/09/2024,SCR Altach,Austria Wien,1,1,1.0,1.0,D
+AUT1,14/09/2024,FC Blau Weiß Linz,LASK,1,0,1.0,0.0,H
+AUT1,14/09/2024,Wolfsberger AC,Rapid Wien,1,1,0.0,1.0,D
+AUT1,15/09/2024,Grazer AK,SCR Altach,1,1,1.0,1.0,D
+AUT1,21/09/2024,LASK,Grazer AK,4,2,2.0,1.0,H
+AUT1,21/09/2024,SK Austria Klagenfurt,TSV Hartberg,2,2,0.0,1.0,D
+AUT1,21/09/2024,SCR Altach,FC Blau Weiß Linz,0,1,0.0,0.0,A
+AUT1,22/09/2024,Sturm Graz,Wolfsberger AC,0,3,0.0,1.0,A
+AUT1,22/09/2024,WSG Tirol,RB Salzburg,0,0,,,D
+AUT1,22/09/2024,Rapid Wien,Austria Wien,2,1,1.0,1.0,H
+AUT1,25/09/2024,Austria Wien,Sturm Graz,2,2,0.0,2.0,D
+AUT1,26/09/2024,TSV Hartberg,WSG Tirol,1,0,0.0,0.0,H
+AUT1,28/09/2024,FC Blau Weiß Linz,Sturm Graz,1,2,1.0,1.0,A
+AUT1,28/09/2024,RB Salzburg,Austria Wien,2,0,1.0,0.0,H
+AUT1,28/09/2024,Rapid Wien,LASK,1,1,1.0,0.0,D
+AUT1,29/09/2024,Grazer AK,SK Austria Klagenfurt,0,1,0.0,1.0,A
+AUT1,29/09/2024,Wolfsberger AC,WSG Tirol,1,3,0.0,0.0,A
+AUT1,29/09/2024,TSV Hartberg,SCR Altach,2,0,0.0,0.0,H
+AUT1,05/10/2024,Wolfsberger AC,TSV Hartberg,2,3,0.0,1.0,A
+AUT1,05/10/2024,Austria Wien,Grazer AK,2,1,1.0,0.0,H
+AUT1,05/10/2024,WSG Tirol,FC Blau Weiß Linz,1,1,0.0,1.0,D
+AUT1,06/10/2024,LASK,SK Austria Klagenfurt,4,0,1.0,0.0,H
+AUT1,06/10/2024,SCR Altach,Rapid Wien,0,1,0.0,1.0,A
+AUT1,06/10/2024,Sturm Graz,RB Salzburg,5,0,2.0,0.0,H
+AUT1,19/10/2024,RB Salzburg,SCR Altach,2,1,0.0,0.0,H
+AUT1,19/10/2024,Sturm Graz,Grazer AK,5,2,2.0,0.0,H
+AUT1,19/10/2024,FC Blau Weiß Linz,Wolfsberger AC,0,1,0.0,1.0,A
+AUT1,20/10/2024,Rapid Wien,TSV Hartberg,2,1,1.0,1.0,H
+AUT1,20/10/2024,SK Austria Klagenfurt,Austria Wien,0,1,0.0,0.0,A
+AUT1,20/10/2024,WSG Tirol,LASK,1,2,1.0,1.0,A
+AUT1,26/10/2024,Austria Wien,WSG Tirol,3,0,0.0,0.0,H
+AUT1,26/10/2024,SCR Altach,SK Austria Klagenfurt,2,2,1.0,1.0,D
+AUT1,26/10/2024,TSV Hartberg,FC Blau Weiß Linz,2,1,1.0,0.0,H
+AUT1,27/10/2024,LASK,Sturm Graz,1,2,0.0,1.0,A
+AUT1,27/10/2024,Grazer AK,Rapid Wien,1,1,0.0,0.0,D
+AUT1,27/10/2024,Wolfsberger AC,RB Salzburg,0,0,,,D
+AUT1,02/11/2024,RB Salzburg,Grazer AK,0,0,,,D
+AUT1,02/11/2024,LASK,TSV Hartberg,1,1,0.0,1.0,D
+AUT1,02/11/2024,Sturm Graz,Rapid Wien,1,1,0.0,0.0,D
+AUT1,03/11/2024,WSG Tirol,SCR Altach,1,0,1.0,0.0,H
+AUT1,03/11/2024,SK Austria Klagenfurt,Wolfsberger AC,2,1,2.0,0.0,H
+AUT1,03/11/2024,Austria Wien,FC Blau Weiß Linz,2,1,0.0,1.0,H
+AUT1,09/11/2024,Grazer AK,WSG Tirol,2,1,1.0,0.0,H
+AUT1,09/11/2024,Wolfsberger AC,Austria Wien,0,1,0.0,0.0,A
+AUT1,09/11/2024,TSV Hartberg,Sturm Graz,1,2,0.0,1.0,A
+AUT1,10/11/2024,FC Blau Weiß Linz,RB Salzburg,2,0,0.0,0.0,H
+AUT1,10/11/2024,SCR Altach,LASK,1,2,0.0,0.0,A
+AUT1,10/11/2024,Rapid Wien,SK Austria Klagenfurt,2,0,2.0,0.0,H
+AUT1,23/11/2024,WSG Tirol,Rapid Wien,0,0,,,D
+AUT1,23/11/2024,RB Salzburg,LASK,1,2,0.0,0.0,A
+AUT1,23/11/2024,Sturm Graz,SK Austria Klagenfurt,7,0,4.0,0.0,H
+AUT1,24/11/2024,FC Blau Weiß Linz,Grazer AK,1,2,1.0,1.0,A
+AUT1,24/11/2024,Wolfsberger AC,SCR Altach,2,0,0.0,0.0,H
+AUT1,24/11/2024,Austria Wien,TSV Hartberg,1,0,0.0,0.0,H
+AUT1,30/11/2024,TSV Hartberg,RB Salzburg,1,1,0.0,1.0,D
+AUT1,30/11/2024,SCR Altach,Sturm Graz,1,1,0.0,1.0,D
+AUT1,30/11/2024,Grazer AK,Wolfsberger AC,3,4,3.0,0.0,A
+AUT1,01/12/2024,Rapid Wien,FC Blau Weiß Linz,0,1,0.0,0.0,A
+AUT1,01/12/2024,SK Austria Klagenfurt,WSG Tirol,0,3,0.0,1.0,A
+AUT1,01/12/2024,LASK,Austria Wien,1,3,0.0,1.0,A
+AUT1,04/12/2024,RB Salzburg,TSV Hartberg,4,0,2.0,0.0,H
+AUT1,07/12/2024,WSG Tirol,Sturm Graz,0,3,0.0,1.0,A
+AUT1,07/12/2024,Wolfsberger AC,LASK,2,1,0.0,1.0,H
+AUT1,07/12/2024,RB Salzburg,Rapid Wien,2,2,1.0,0.0,D
+AUT1,08/12/2024,FC Blau Weiß Linz,SK Austria Klagenfurt,2,1,1.0,1.0,H
+AUT1,08/12/2024,Grazer AK,TSV Hartberg,0,3,0.0,1.0,A
+AUT1,08/12/2024,Austria Wien,SCR Altach,3,0,1.0,0.0,H
+AUT1,14/12/2024,RB Salzburg,SK Austria Klagenfurt,3,0,2.0,0.0,H
+AUT1,07/02/2025,Sturm Graz,Austria Wien,2,2,1.0,1.0,D
+AUT1,08/02/2025,Rapid Wien,Wolfsberger AC,1,3,1.0,0.0,A
+AUT1,08/02/2025,SCR Altach,Grazer AK,1,2,0.0,0.0,A
+AUT1,09/02/2025,SK Austria Klagenfurt,RB Salzburg,0,0,,,D
+AUT1,09/02/2025,WSG Tirol,TSV Hartberg,0,0,,,D
+AUT1,09/02/2025,LASK,FC Blau Weiß Linz,0,0,,,D
+AUT1,15/02/2025,Wolfsberger AC,Sturm Graz,3,0,2.0,0.0,H
+AUT1,15/02/2025,FC Blau Weiß Linz,SCR Altach,1,3,0.0,0.0,A
+AUT1,15/02/2025,RB Salzburg,WSG Tirol,1,1,0.0,1.0,D
+AUT1,16/02/2025,TSV Hartberg,SK Austria Klagenfurt,1,1,0.0,0.0,D
+AUT1,16/02/2025,Austria Wien,Rapid Wien,2,1,1.0,1.0,H
+AUT1,16/02/2025,Grazer AK,LASK,0,0,,,D
+AUT1,22/02/2025,Austria Wien,RB Salzburg,0,1,0.0,1.0,A
+AUT1,22/02/2025,WSG Tirol,Wolfsberger AC,3,3,1.0,1.0,D
+AUT1,22/02/2025,SK Austria Klagenfurt,Grazer AK,4,2,1.0,0.0,H
+AUT1,23/02/2025,Sturm Graz,FC Blau Weiß Linz,2,1,2.0,0.0,H
+AUT1,23/02/2025,SCR Altach,TSV Hartberg,0,0,,,D
+AUT1,23/02/2025,LASK,Rapid Wien,2,1,1.0,0.0,H
+AUT1,01/03/2025,Rapid Wien,SCR Altach,5,0,1.0,0.0,H
+AUT1,01/03/2025,TSV Hartberg,Wolfsberger AC,0,3,0.0,1.0,A
+AUT1,01/03/2025,Grazer AK,Austria Wien,1,2,0.0,0.0,A
+AUT1,02/03/2025,RB Salzburg,Sturm Graz,3,1,0.0,1.0,H
+AUT1,02/03/2025,FC Blau Weiß Linz,WSG Tirol,2,1,1.0,1.0,H
+AUT1,02/03/2025,SK Austria Klagenfurt,LASK,1,2,1.0,1.0,A
+AUT1,09/03/2025,SCR Altach,RB Salzburg,1,1,0.0,1.0,D
+AUT1,09/03/2025,Grazer AK,Sturm Graz,1,2,0.0,0.0,A
+AUT1,09/03/2025,Austria Wien,SK Austria Klagenfurt,2,0,2.0,0.0,H
+AUT1,09/03/2025,TSV Hartberg,Rapid Wien,2,1,0.0,0.0,H
+AUT1,09/03/2025,Wolfsberger AC,FC Blau Weiß Linz,1,2,0.0,1.0,A
+AUT1,09/03/2025,LASK,WSG Tirol,2,1,1.0,1.0,H
+AUT1,16/03/2025,WSG Tirol,Austria Wien,0,2,0.0,0.0,A
+AUT1,16/03/2025,FC Blau Weiß Linz,TSV Hartberg,4,1,1.0,1.0,H
+AUT1,16/03/2025,Rapid Wien,Grazer AK,3,0,3.0,0.0,H
+AUT1,16/03/2025,Sturm Graz,LASK,4,2,1.0,0.0,H
+AUT1,16/03/2025,RB Salzburg,Wolfsberger AC,1,0,1.0,0.0,H
+AUT1,16/03/2025,SK Austria Klagenfurt,SCR Altach,2,2,1.0,2.0,D
+AUT1,28/03/2025,SCR Altach,LASK,0,2,0.0,1.0,A
+AUT1,29/03/2025,Grazer AK,WSG Tirol,0,0,,,D
+AUT1,29/03/2025,TSV Hartberg,SK Austria Klagenfurt,2,3,1.0,1.0,A
+AUT1,30/03/2025,Wolfsberger AC,Sturm Graz,1,1,1.0,0.0,D
+AUT1,30/03/2025,FC Blau Weiß Linz,Austria Wien,0,2,0.0,2.0,A
+AUT1,30/03/2025,Rapid Wien,RB Salzburg,0,2,0.0,1.0,A
+AUT1,04/04/2025,Sturm Graz,Rapid Wien,2,0,1.0,0.0,H
+AUT1,05/04/2025,SK Austria Klagenfurt,SCR Altach,2,3,2.0,2.0,A
+AUT1,05/04/2025,LASK,Grazer AK,1,0,0.0,0.0,H
+AUT1,05/04/2025,WSG Tirol,TSV Hartberg,1,3,0.0,1.0,A
+AUT1,06/04/2025,RB Salzburg,FC Blau Weiß Linz,2,1,0.0,0.0,H
+AUT1,06/04/2025,Austria Wien,Wolfsberger AC,0,0,,,D
+AUT1,11/04/2025,FC Blau Weiß Linz,Wolfsberger AC,1,2,0.0,1.0,A
+AUT1,12/04/2025,WSG Tirol,SK Austria Klagenfurt,5,3,2.0,0.0,H
+AUT1,12/04/2025,TSV Hartberg,LASK,0,1,0.0,1.0,A
+AUT1,12/04/2025,Grazer AK,SCR Altach,1,0,1.0,0.0,H
+AUT1,13/04/2025,Rapid Wien,Austria Wien,2,0,1.0,0.0,H
+AUT1,13/04/2025,RB Salzburg,Sturm Graz,1,2,1.0,0.0,A
+AUT1,18/04/2025,LASK,WSG Tirol,2,0,0.0,0.0,H
+AUT1,19/04/2025,SK Austria Klagenfurt,Grazer AK,0,0,,,D
+AUT1,19/04/2025,SCR Altach,TSV Hartberg,1,1,0.0,0.0,D
+AUT1,20/04/2025,Wolfsberger AC,Rapid Wien,5,1,1.0,1.0,H
+AUT1,20/04/2025,Sturm Graz,FC Blau Weiß Linz,2,0,1.0,0.0,H
+AUT1,20/04/2025,Austria Wien,RB Salzburg,1,3,1.0,2.0,A
+AUT1,22/04/2025,WSG Tirol,SCR Altach,1,0,1.0,0.0,H
+AUT1,22/04/2025,Grazer AK,TSV Hartberg,0,3,0.0,0.0,A
+AUT1,22/04/2025,SK Austria Klagenfurt,LASK,1,4,1.0,2.0,A
+AUT1,23/04/2025,FC Blau Weiß Linz,Rapid Wien,2,1,1.0,0.0,H
+AUT1,23/04/2025,Austria Wien,Sturm Graz,2,1,1.0,1.0,H
+AUT1,23/04/2025,RB Salzburg,Wolfsberger AC,1,1,0.0,1.0,D
+AUT1,25/04/2025,TSV Hartberg,Grazer AK,1,1,1.0,1.0,D
+AUT1,26/04/2025,LASK,SK Austria Klagenfurt,6,0,2.0,0.0,H
+AUT1,26/04/2025,SCR Altach,WSG Tirol,3,0,1.0,0.0,H
+AUT1,27/04/2025,Rapid Wien,FC Blau Weiß Linz,0,0,,,D
+AUT1,27/04/2025,Sturm Graz,Austria Wien,0,1,0.0,0.0,A
+AUT1,27/04/2025,Wolfsberger AC,RB Salzburg,2,1,1.0,0.0,H
+AUT1,02/05/2025,Grazer AK,SK Austria Klagenfurt,1,1,1.0,1.0,D
+AUT1,03/05/2025,WSG Tirol,LASK,1,3,0.0,0.0,A
+AUT1,04/05/2025,FC Blau Weiß Linz,Sturm Graz,0,1,0.0,0.0,A
+AUT1,04/05/2025,TSV Hartberg,SCR Altach,2,0,0.0,0.0,H
+AUT1,04/05/2025,Rapid Wien,Wolfsberger AC,0,1,0.0,0.0,A
+AUT1,04/05/2025,RB Salzburg,Austria Wien,2,0,0.0,0.0,H
+AUT1,09/05/2025,Sturm Graz,RB Salzburg,4,2,2.0,1.0,H
+AUT1,10/05/2025,SCR Altach,Grazer AK,2,2,1.0,1.0,D
+AUT1,10/05/2025,SK Austria Klagenfurt,WSG Tirol,1,4,1.0,1.0,A
+AUT1,10/05/2025,LASK,TSV Hartberg,0,0,,,D
+AUT1,11/05/2025,Wolfsberger AC,FC Blau Weiß Linz,2,0,1.0,0.0,H
+AUT1,11/05/2025,Austria Wien,Rapid Wien,1,2,0.0,1.0,A
+AUT1,17/05/2025,Grazer AK,LASK,1,0,0.0,0.0,H
+AUT1,17/05/2025,SCR Altach,SK Austria Klagenfurt,0,0,,,D
+AUT1,17/05/2025,TSV Hartberg,WSG Tirol,3,2,0.0,1.0,H
+AUT1,18/05/2025,Rapid Wien,Sturm Graz,3,1,2.0,0.0,H
+AUT1,18/05/2025,Wolfsberger AC,Austria Wien,1,2,0.0,0.0,A
+AUT1,18/05/2025,FC Blau Weiß Linz,RB Salzburg,1,2,1.0,0.0,A
+AUT1,23/05/2025,WSG Tirol,Grazer AK,1,1,1.0,1.0,D
+AUT1,23/05/2025,SK Austria Klagenfurt,TSV Hartberg,0,1,0.0,1.0,A
+AUT1,23/05/2025,LASK,SCR Altach,0,0,,,D
+AUT1,24/05/2025,RB Salzburg,Rapid Wien,4,2,3.0,1.0,H
+AUT1,24/05/2025,Austria Wien,FC Blau Weiß Linz,2,2,1.0,0.0,D
+AUT1,24/05/2025,Sturm Graz,Wolfsberger AC,1,1,1.0,0.0,D
+AUT1,26/05/2025,LASK,TSV Hartberg,2,0,1.0,0.0,H
+AUT1,29/05/2025,LASK,Rapid Wien,3,1,1.0,1.0,H
+AUT1,01/08/2025,LASK,Sturm Graz,0,2,0.0,2.0,A
+AUT1,02/08/2025,WSG Tirol,TSV Hartberg,4,2,2.0,2.0,H
+AUT1,02/08/2025,Wolfsberger AC,SCR Altach,0,2,0.0,0.0,A
+AUT1,02/08/2025,SV Ried,RB Salzburg,2,2,1.0,1.0,D
+AUT1,03/08/2025,Grazer AK,Austria Wien,2,2,1.0,1.0,D
+AUT1,03/08/2025,Rapid Wien,FC Blau Weiß Linz,1,0,1.0,0.0,H
+AUT1,09/08/2025,RB Salzburg,Grazer AK,5,0,1.0,0.0,H
+AUT1,09/08/2025,FC Blau Weiß Linz,TSV Hartberg,0,1,0.0,1.0,A
+AUT1,09/08/2025,SCR Altach,SV Ried,1,0,0.0,0.0,H
+AUT1,10/08/2025,Austria Wien,Wolfsberger AC,0,2,0.0,2.0,A
+AUT1,10/08/2025,WSG Tirol,LASK,3,1,2.0,0.0,H
+AUT1,10/08/2025,Sturm Graz,Rapid Wien,1,2,0.0,0.0,A
+AUT1,16/08/2025,Grazer AK,WSG Tirol,1,1,0.0,1.0,D
+AUT1,16/08/2025,TSV Hartberg,RB Salzburg,1,2,0.0,1.0,A
+AUT1,16/08/2025,SV Ried,Sturm Graz,1,3,1.0,3.0,A
+AUT1,17/08/2025,LASK,Austria Wien,2,1,1.0,1.0,H
+AUT1,17/08/2025,Wolfsberger AC,FC Blau Weiß Linz,3,0,2.0,0.0,H
+AUT1,17/08/2025,Rapid Wien,SCR Altach,0,0,0.0,0.0,D
+AUT1,23/08/2025,FC Blau Weiß Linz,SV Ried,0,2,0.0,0.0,A
+AUT1,23/08/2025,RB Salzburg,LASK,3,0,2.0,0.0,H
+AUT1,24/08/2025,Austria Wien,TSV Hartberg,1,3,0.0,1.0,A
+AUT1,24/08/2025,Wolfsberger AC,Rapid Wien,1,2,0.0,2.0,A
+AUT1,24/08/2025,SCR Altach,Grazer AK,1,1,1.0,1.0,D
+AUT1,30/08/2025,RB Salzburg,FC Blau Weiß Linz,2,2,1.0,1.0,D
+AUT1,30/08/2025,LASK,SV Ried,1,3,0.0,2.0,A
+AUT1,30/08/2025,Grazer AK,Sturm Graz,0,3,0.0,1.0,A
+AUT1,31/08/2025,Austria Wien,SCR Altach,1,0,0.0,0.0,H
+AUT1,31/08/2025,TSV Hartberg,Rapid Wien,0,1,0.0,0.0,A
+AUT1,31/08/2025,WSG Tirol,Wolfsberger AC,1,1,1.0,1.0,D
+AUT1,13/09/2025,SCR Altach,LASK,1,0,1.0,0.0,H
+AUT1,13/09/2025,Wolfsberger AC,RB Salzburg,3,1,2.0,0.0,H
+AUT1,13/09/2025,FC Blau Weiß Linz,Grazer AK,3,0,2.0,0.0,H
+AUT1,14/09/2025,SV Ried,TSV Hartberg,0,2,0.0,1.0,A
+AUT1,14/09/2025,Sturm Graz,Austria Wien,0,1,0.0,1.0,A
+AUT1,14/09/2025,Rapid Wien,WSG Tirol,4,1,2.0,0.0,H
+AUT1,20/09/2025,TSV Hartberg,Wolfsberger AC,2,2,1.0,2.0,D
+AUT1,20/09/2025,RB Salzburg,Sturm Graz,0,2,0.0,1.0,A
+AUT1,20/09/2025,Austria Wien,SV Ried,3,2,0.0,2.0,H
+AUT1,21/09/2025,LASK,FC Blau Weiß Linz,2,0,0.0,0.0,H
+AUT1,21/09/2025,SCR Altach,WSG Tirol,1,1,0.0,1.0,D
+AUT1,21/09/2025,Grazer AK,Rapid Wien,1,1,0.0,1.0,D
+AUT1,27/09/2025,SV Ried,Grazer AK,0,0,0.0,0.0,D
+AUT1,27/09/2025,Wolfsberger AC,LASK,1,0,0.0,0.0,H
+AUT1,27/09/2025,FC Blau Weiß Linz,SCR Altach,1,0,1.0,0.0,H
+AUT1,28/09/2025,Rapid Wien,Austria Wien,1,3,0.0,1.0,A
+AUT1,28/09/2025,WSG Tirol,RB Salzburg,1,2,0.0,1.0,A
+AUT1,28/09/2025,Sturm Graz,TSV Hartberg,1,0,0.0,0.0,H
+AUT1,04/10/2025,Austria Wien,FC Blau Weiß Linz,0,1,0.0,0.0,A
+AUT1,04/10/2025,SV Ried,WSG Tirol,2,0,1.0,0.0,H
+AUT1,04/10/2025,Grazer AK,Wolfsberger AC,1,3,1.0,1.0,A
+AUT1,05/10/2025,LASK,TSV Hartberg,3,3,0.0,1.0,D
+AUT1,05/10/2025,SCR Altach,Sturm Graz,0,2,0.0,0.0,A
+AUT1,05/10/2025,RB Salzburg,Rapid Wien,2,1,1.0,1.0,H
+AUT1,18/10/2025,Grazer AK,TSV Hartberg,0,0,0.0,0.0,D
+AUT1,18/10/2025,Wolfsberger AC,SV Ried,1,2,1.0,0.0,A
+AUT1,18/10/2025,WSG Tirol,Austria Wien,2,3,1.0,2.0,A
+AUT1,19/10/2025,Rapid Wien,LASK,0,2,0.0,2.0,A
+AUT1,19/10/2025,FC Blau Weiß Linz,Sturm Graz,3,4,1.0,1.0,A
+AUT1,19/10/2025,RB Salzburg,SCR Altach,2,2,1.0,1.0,D
+AUT1,25/10/2025,LASK,Grazer AK,1,0,0.0,0.0,H
+AUT1,25/10/2025,WSG Tirol,FC Blau Weiß Linz,2,0,1.0,0.0,H
+AUT1,25/10/2025,SCR Altach,TSV Hartberg,2,2,0.0,0.0,D
+AUT1,26/10/2025,Sturm Graz,Wolfsberger AC,1,3,0.0,3.0,A
+AUT1,26/10/2025,SV Ried,Rapid Wien,0,2,0.0,2.0,A
+AUT1,26/10/2025,Austria Wien,RB Salzburg,0,3,0.0,2.0,A
+AUT1,01/11/2025,Grazer AK,SCR Altach,3,1,1.0,1.0,H
+AUT1,01/11/2025,FC Blau Weiß Linz,LASK,0,1,0.0,0.0,A
+AUT1,01/11/2025,TSV Hartberg,Austria Wien,2,1,2.0,0.0,H
+AUT1,02/11/2025,Wolfsberger AC,WSG Tirol,0,0,0.0,0.0,D
+AUT1,02/11/2025,RB Salzburg,SV Ried,4,1,2.0,1.0,H
+AUT1,02/11/2025,Rapid Wien,Sturm Graz,2,1,0.0,1.0,H
+AUT1,08/11/2025,SV Ried,FC Blau Weiß Linz,2,1,0.0,0.0,H
+AUT1,08/11/2025,Wolfsberger AC,TSV Hartberg,1,2,0.0,1.0,A
+AUT1,08/11/2025,Austria Wien,Grazer AK,2,1,1.0,0.0,H
+AUT1,09/11/2025,Sturm Graz,RB Salzburg,1,1,0.0,0.0,D
+AUT1,09/11/2025,LASK,SCR Altach,1,0,1.0,0.0,H
+AUT1,09/11/2025,WSG Tirol,Rapid Wien,1,1,1.0,0.0,D
+AUT1,22/11/2025,SCR Altach,Wolfsberger AC,3,1,1.0,0.0,H
+AUT1,22/11/2025,TSV Hartberg,SV Ried,2,0,1.0,0.0,H
+AUT1,22/11/2025,FC Blau Weiß Linz,Austria Wien,2,3,1.0,2.0,A
+AUT1,23/11/2025,Sturm Graz,LASK,1,3,1.0,2.0,A
+AUT1,23/11/2025,RB Salzburg,WSG Tirol,2,3,2.0,0.0,A
+AUT1,23/11/2025,Rapid Wien,Grazer AK,1,2,0.0,0.0,A
+AUT1,29/11/2025,SV Ried,Wolfsberger AC,1,0,0.0,0.0,H
+AUT1,29/11/2025,Austria Wien,WSG Tirol,0,0,0.0,0.0,D
+AUT1,29/11/2025,Grazer AK,FC Blau Weiß Linz,3,1,1.0,0.0,H
+AUT1,30/11/2025,SCR Altach,RB Salzburg,1,1,1.0,1.0,D
+AUT1,30/11/2025,TSV Hartberg,Sturm Graz,0,1,0.0,0.0,A
+AUT1,30/11/2025,LASK,Rapid Wien,3,0,1.0,0.0,H
+AUT1,03/12/2025,Sturm Graz,WSG Tirol,1,3,1.0,0.0,A
+AUT1,06/12/2025,Rapid Wien,SV Ried,1,2,1.0,1.0,A
+AUT1,06/12/2025,TSV Hartberg,LASK,2,2,2.0,1.0,D
+AUT1,06/12/2025,FC Blau Weiß Linz,RB Salzburg,0,2,0.0,1.0,A
+AUT1,07/12/2025,Sturm Graz,Grazer AK,2,1,1.0,0.0,H
+AUT1,07/12/2025,WSG Tirol,SCR Altach,0,3,0.0,2.0,A
+AUT1,07/12/2025,Wolfsberger AC,Austria Wien,2,1,2.0,0.0,H
+AUT1,13/12/2025,TSV Hartberg,WSG Tirol,2,1,0.0,0.0,H
+AUT1,13/12/2025,SV Ried,SCR Altach,3,0,1.0,0.0,H
+AUT1,13/12/2025,Grazer AK,LASK,1,2,1.0,2.0,A
+AUT1,14/12/2025,RB Salzburg,Wolfsberger AC,2,1,1.0,1.0,H
+AUT1,14/12/2025,FC Blau Weiß Linz,Rapid Wien,1,1,1.0,1.0,D
+AUT1,14/12/2025,Austria Wien,Sturm Graz,3,1,2.0,1.0,H
+AUT1,06/02/2026,RB Salzburg,Austria Wien,0,2,0.0,2.0,A
+AUT1,07/02/2026,LASK,WSG Tirol,1,0,1.0,0.0,H
+AUT1,07/02/2026,Rapid Wien,TSV Hartberg,1,1,0.0,1.0,D
+AUT1,08/02/2026,Wolfsberger AC,Grazer AK,2,2,1.0,1.0,D
+AUT1,08/02/2026,SCR Altach,FC Blau Weiß Linz,1,0,1.0,0.0,H
+AUT1,08/02/2026,Sturm Graz,SV Ried,1,0,0.0,0.0,H
+AUT1,14/02/2026,WSG Tirol,Sturm Graz,1,0,0.0,0.0,H
+AUT1,14/02/2026,SV Ried,LASK,1,1,1.0,0.0,D
+AUT1,14/02/2026,TSV Hartberg,SCR Altach,0,0,0.0,0.0,D
+AUT1,15/02/2026,FC Blau Weiß Linz,Wolfsberger AC,2,1,1.0,0.0,H
+AUT1,15/02/2026,Grazer AK,RB Salzburg,1,1,1.0,1.0,D
+AUT1,15/02/2026,Austria Wien,Rapid Wien,2,0,2.0,0.0,H
+AUT1,21/02/2026,TSV Hartberg,Grazer AK,1,0,0.0,0.0,H
+AUT1,21/02/2026,SCR Altach,Austria Wien,2,1,2.0,1.0,H
+AUT1,21/02/2026,Rapid Wien,Wolfsberger AC,2,0,0.0,0.0,H
+AUT1,22/02/2026,WSG Tirol,SV Ried,1,1,0.0,1.0,D
+AUT1,22/02/2026,Sturm Graz,FC Blau Weiß Linz,1,0,1.0,0.0,H
+AUT1,22/02/2026,LASK,RB Salzburg,1,5,1.0,3.0,A
+AUT1,01/03/2026,SCR Altach,Rapid Wien,1,1,0.0,0.0,D
+AUT1,01/03/2026,RB Salzburg,TSV Hartberg,0,0,0.0,0.0,D
+AUT1,01/03/2026,Wolfsberger AC,Sturm Graz,2,2,1.0,0.0,D
+AUT1,01/03/2026,Austria Wien,LASK,2,2,0.0,1.0,D
+AUT1,01/03/2026,Grazer AK,SV Ried,2,1,2.0,0.0,H
+AUT1,01/03/2026,FC Blau Weiß Linz,WSG Tirol,2,3,1.0,3.0,A
+AUT1,08/03/2026,Rapid Wien,RB Salzburg,1,0,1.0,0.0,H
+AUT1,08/03/2026,TSV Hartberg,FC Blau Weiß Linz,1,1,1.0,1.0,D
+AUT1,08/03/2026,LASK,Wolfsberger AC,3,1,1.0,1.0,H
+AUT1,08/03/2026,SV Ried,Austria Wien,0,2,0.0,0.0,A
+AUT1,08/03/2026,Sturm Graz,SCR Altach,2,0,0.0,0.0,H
+AUT1,08/03/2026,WSG Tirol,Grazer AK,2,0,2.0,0.0,H
+AUT1,13/03/2026,LASK,TSV Hartberg,0,0,0.0,0.0,D
+AUT1,14/03/2026,SCR Altach,FC Blau Weiß Linz,3,1,1.0,0.0,H
+AUT1,14/03/2026,SV Ried,WSG Tirol,2,1,1.0,0.0,H
+AUT1,14/03/2026,Grazer AK,Wolfsberger AC,2,0,1.0,0.0,H
+AUT1,15/03/2026,RB Salzburg,Rapid Wien,0,1,0.0,0.0,A
+AUT1,15/03/2026,Austria Wien,Sturm Graz,2,5,1.0,2.0,A
+AUT1,20/03/2026,Sturm Graz,RB Salzburg,1,1,1.0,1.0,D
+AUT1,21/03/2026,WSG Tirol,Grazer AK,1,5,1.0,2.0,A
+AUT1,21/03/2026,Wolfsberger AC,SCR Altach,1,1,1.0,1.0,D
+AUT1,21/03/2026,FC Blau Weiß Linz,SV Ried,3,2,0.0,2.0,H
+AUT1,22/03/2026,TSV Hartberg,Austria Wien,0,1,0.0,1.0,A
+AUT1,22/03/2026,Rapid Wien,LASK,4,2,2.0,1.0,H
+AUT1,03/04/2026,SV Ried,SCR Altach,3,2,0.0,1.0,H
+AUT1,04/04/2026,WSG Tirol,Wolfsberger AC,3,1,0.0,1.0,H
+AUT1,04/04/2026,Grazer AK,FC Blau Weiß Linz,2,1,1.0,0.0,H
+AUT1,05/04/2026,TSV Hartberg,RB Salzburg,1,2,1.0,0.0,A
+AUT1,05/04/2026,LASK,Austria Wien,4,1,4.0,1.0,H
+AUT1,05/04/2026,Rapid Wien,Sturm Graz,0,2,0.0,1.0,A
+AUT1,10/04/2026,RB Salzburg,LASK,2,3,1.0,1.0,A
+AUT1,11/04/2026,Wolfsberger AC,SV Ried,0,0,0.0,0.0,D
+AUT1,11/04/2026,SCR Altach,Grazer AK,1,0,0.0,0.0,H
+AUT1,11/04/2026,FC Blau Weiß Linz,WSG Tirol,5,0,2.0,0.0,H
+AUT1,12/04/2026,Sturm Graz,TSV Hartberg,0,0,0.0,0.0,D
+AUT1,12/04/2026,Austria Wien,Rapid Wien,1,1,1.0,0.0,D
+AUT1,17/04/2026,Grazer AK,SV Ried,1,1,0.0,0.0,D
+AUT1,18/04/2026,Wolfsberger AC,FC Blau Weiß Linz,0,0,0.0,0.0,D
+AUT1,18/04/2026,WSG Tirol,SCR Altach,2,2,1.0,2.0,D
+AUT1,19/04/2026,LASK,Sturm Graz,1,1,0.0,1.0,D
+AUT1,19/04/2026,TSV Hartberg,Rapid Wien,2,2,1.0,0.0,D
+AUT1,19/04/2026,Austria Wien,RB Salzburg,1,3,0.0,2.0,A
+AUT1,21/04/2026,SCR Altach,WSG Tirol,0,0,0.0,0.0,D
+AUT1,21/04/2026,FC Blau Weiß Linz,Wolfsberger AC,3,0,1.0,0.0,H
+AUT1,21/04/2026,SV Ried,Grazer AK,2,1,2.0,0.0,H
+AUT1,22/04/2026,Rapid Wien,TSV Hartberg,0,2,0.0,1.0,A
+AUT1,22/04/2026,RB Salzburg,Austria Wien,3,1,2.0,1.0,H
+AUT1,22/04/2026,Sturm Graz,LASK,1,1,0.0,0.0,D
+AUT1,24/04/2026,FC Blau Weiß Linz,SCR Altach,3,0,0.0,0.0,H
+AUT1,25/04/2026,Wolfsberger AC,Grazer AK,1,0,0.0,0.0,H
+AUT1,25/04/2026,WSG Tirol,SV Ried,1,0,0.0,0.0,H
+AUT1,26/04/2026,TSV Hartberg,LASK,1,5,0.0,2.0,A
+AUT1,26/04/2026,Rapid Wien,RB Salzburg,1,0,0.0,0.0,H
+AUT1,26/04/2026,Sturm Graz,Austria Wien,1,1,0.0,0.0,D
+AUT1,02/05/2026,SV Ried,FC Blau Weiß Linz,2,0,1.0,0.0,H
+AUT1,02/05/2026,Grazer AK,WSG Tirol,4,0,2.0,0.0,H
+AUT1,03/05/2026,RB Salzburg,Sturm Graz,1,1,1.0,0.0,D
+AUT1,03/05/2026,Austria Wien,TSV Hartberg,1,0,0.0,0.0,H
+AUT1,04/05/2026,SCR Altach,Wolfsberger AC,1,4,1.0,2.0,A
+AUT1,04/05/2026,LASK,Rapid Wien,3,1,0.0,1.0,H
+AUT1,09/05/2026,SV Ried,Wolfsberger AC,0,1,0.0,1.0,A
+AUT1,09/05/2026,Grazer AK,SCR Altach,2,2,0.0,1.0,D
+AUT1,09/05/2026,WSG Tirol,FC Blau Weiß Linz,1,1,1.0,0.0,D
+AUT1,10/05/2026,LASK,RB Salzburg,2,1,2.0,0.0,H
+AUT1,10/05/2026,Rapid Wien,Austria Wien,0,2,0.0,1.0,A
+AUT1,10/05/2026,TSV Hartberg,Sturm Graz,2,4,1.0,3.0,A
+AUT1,16/05/2026,Wolfsberger AC,WSG Tirol,2,0,1.0,0.0,H
+AUT1,16/05/2026,SCR Altach,SV Ried,2,0,1.0,0.0,H
+AUT1,16/05/2026,FC Blau Weiß Linz,Grazer AK,0,3,0.0,1.0,A
+AUT1,17/05/2026,Austria Wien,LASK,0,3,0.0,1.0,A
+AUT1,17/05/2026,RB Salzburg,TSV Hartberg,1,3,0.0,2.0,A
+AUT1,17/05/2026,Sturm Graz,Rapid Wien,2,0,0.0,0.0,H
+AUT1,19/05/2026,SV Ried,Wolfsberger AC,2,1,0.0,0.0,H
+AUT1,22/05/2026,SV Ried,Rapid Wien,2,1,1.0,0.0,H
+AUT1,25/05/2026,Rapid Wien,SV Ried,3,0,1.0,0.0,H

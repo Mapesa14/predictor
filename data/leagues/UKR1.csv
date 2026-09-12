@@ -1,0 +1,481 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+UKR1,28/07/2023,FK Obolon,Kolos Kovalivka,0,0,,,D
+UKR1,28/07/2023,NK Veres,Polissya Zhytomyr,0,2,0.0,2.0,A
+UKR1,29/07/2023,Rukh Lviv,Zorya Lugansk,2,1,0.0,1.0,H
+UKR1,29/07/2023,Metalist 1925 Kharkiv,Shakhtar Donetsk,1,2,0.0,1.0,A
+UKR1,30/07/2023,FC LNZ Cherkasy,Chernomorets Odessa,0,2,0.0,1.0,A
+UKR1,30/07/2023,Dinamo Kiev,FC Mynai,4,1,2.0,1.0,H
+UKR1,30/07/2023,FK Oleksandriya,Kryvbas Kryvyi Rih,1,0,1.0,0.0,H
+UKR1,02/08/2023,NK Veres,Shakhtar Donetsk,1,1,0.0,1.0,D
+UKR1,04/08/2023,FK Obolon,Dinamo Kiev,2,4,1.0,3.0,A
+UKR1,05/08/2023,FC Mynai,FC LNZ Cherkasy,0,3,0.0,1.0,A
+UKR1,05/08/2023,FK Oleksandriya,Metalist 1925 Kharkiv,1,0,1.0,0.0,H
+UKR1,06/08/2023,SK Dnipro-1,Polissya Zhytomyr,2,1,0.0,0.0,H
+UKR1,06/08/2023,Kolos Kovalivka,Chernomorets Odessa,2,0,0.0,0.0,H
+UKR1,06/08/2023,Zorya Lugansk,Kryvbas Kryvyi Rih,1,3,1.0,1.0,A
+UKR1,06/08/2023,Rukh Lviv,Vorskla Poltava,4,1,1.0,1.0,H
+UKR1,12/08/2023,Chernomorets Odessa,FK Obolon,2,0,1.0,0.0,H
+UKR1,12/08/2023,Kolos Kovalivka,NK Veres,2,0,1.0,0.0,H
+UKR1,12/08/2023,Polissya Zhytomyr,Rukh Lviv,0,1,0.0,0.0,A
+UKR1,13/08/2023,Kryvbas Kryvyi Rih,FC LNZ Cherkasy,2,0,1.0,0.0,H
+UKR1,13/08/2023,FC Mynai,SK Dnipro-1,1,1,0.0,0.0,D
+UKR1,13/08/2023,Vorskla Poltava,Zorya Lugansk,1,2,0.0,1.0,A
+UKR1,14/08/2023,Shakhtar Donetsk,FK Oleksandriya,2,1,2.0,0.0,H
+UKR1,18/08/2023,Zorya Lugansk,FK Oleksandriya,0,0,,,D
+UKR1,18/08/2023,FC LNZ Cherkasy,Polissya Zhytomyr,1,2,0.0,0.0,A
+UKR1,19/08/2023,NK Veres,Vorskla Poltava,1,2,1.0,2.0,A
+UKR1,19/08/2023,Metalist 1925 Kharkiv,FC Mynai,1,0,0.0,0.0,H
+UKR1,19/08/2023,Rukh Lviv,Kolos Kovalivka,1,1,0.0,1.0,D
+UKR1,20/08/2023,SK Dnipro-1,FK Obolon,1,2,1.0,0.0,A
+UKR1,20/08/2023,Chernomorets Odessa,Dinamo Kiev,3,2,1.0,0.0,H
+UKR1,20/08/2023,Kryvbas Kryvyi Rih,Shakhtar Donetsk,3,3,2.0,3.0,D
+UKR1,26/08/2023,FK Oleksandriya,Polissya Zhytomyr,0,3,0.0,0.0,A
+UKR1,26/08/2023,FC LNZ Cherkasy,Metalist 1925 Kharkiv,0,1,0.0,1.0,A
+UKR1,27/08/2023,Kolos Kovalivka,Shakhtar Donetsk,0,2,0.0,2.0,A
+UKR1,27/08/2023,FC Mynai,Zorya Lugansk,1,1,1.0,1.0,D
+UKR1,27/08/2023,Vorskla Poltava,Chernomorets Odessa,2,1,2.0,0.0,H
+UKR1,28/08/2023,FK Obolon,Kryvbas Kryvyi Rih,0,0,,,D
+UKR1,01/09/2023,NK Veres,Chernomorets Odessa,3,1,2.0,1.0,H
+UKR1,02/09/2023,Vorskla Poltava,FK Oleksandriya,1,0,1.0,0.0,H
+UKR1,02/09/2023,FC Mynai,Shakhtar Donetsk,1,4,0.0,1.0,A
+UKR1,02/09/2023,Polissya Zhytomyr,FK Obolon,2,0,0.0,0.0,H
+UKR1,03/09/2023,Rukh Lviv,Metalist 1925 Kharkiv,1,1,1.0,1.0,D
+UKR1,03/09/2023,Kolos Kovalivka,Kryvbas Kryvyi Rih,0,3,0.0,1.0,A
+UKR1,03/09/2023,SK Dnipro-1,FC LNZ Cherkasy,0,0,,,D
+UKR1,15/09/2023,Metalist 1925 Kharkiv,Zorya Lugansk,2,1,2.0,1.0,H
+UKR1,16/09/2023,Shakhtar Donetsk,FK Obolon,1,0,0.0,0.0,H
+UKR1,16/09/2023,FK Oleksandriya,FC Mynai,1,1,0.0,0.0,D
+UKR1,16/09/2023,Chernomorets Odessa,Polissya Zhytomyr,1,0,1.0,0.0,H
+UKR1,17/09/2023,FC LNZ Cherkasy,Rukh Lviv,2,1,1.0,0.0,H
+UKR1,17/09/2023,SK Dnipro-1,Kolos Kovalivka,1,1,0.0,0.0,D
+UKR1,17/09/2023,Kryvbas Kryvyi Rih,NK Veres,2,1,1.0,1.0,H
+UKR1,18/09/2023,Dinamo Kiev,Vorskla Poltava,2,0,1.0,0.0,H
+UKR1,22/09/2023,FK Obolon,NK Veres,0,0,,,D
+UKR1,22/09/2023,FK Oleksandriya,Chernomorets Odessa,1,5,0.0,4.0,A
+UKR1,23/09/2023,Vorskla Poltava,Kryvbas Kryvyi Rih,1,4,1.0,2.0,A
+UKR1,23/09/2023,Rukh Lviv,Shakhtar Donetsk,1,1,0.0,1.0,D
+UKR1,23/09/2023,Polissya Zhytomyr,FC Mynai,2,1,0.0,1.0,H
+UKR1,24/09/2023,Metalist 1925 Kharkiv,Kolos Kovalivka,0,0,,,D
+UKR1,24/09/2023,FC LNZ Cherkasy,Dinamo Kiev,2,4,0.0,1.0,A
+UKR1,24/09/2023,Zorya Lugansk,SK Dnipro-1,0,1,0.0,1.0,A
+UKR1,30/09/2023,Chernomorets Odessa,Zorya Lugansk,0,0,,,D
+UKR1,30/09/2023,NK Veres,FC LNZ Cherkasy,0,0,,,D
+UKR1,30/09/2023,Shakhtar Donetsk,Vorskla Poltava,1,2,0.0,1.0,A
+UKR1,01/10/2023,Dinamo Kiev,FK Oleksandriya,4,2,2.0,1.0,H
+UKR1,01/10/2023,Kryvbas Kryvyi Rih,Rukh Lviv,1,3,1.0,0.0,A
+UKR1,01/10/2023,Kolos Kovalivka,Polissya Zhytomyr,0,0,,,D
+UKR1,01/10/2023,FC Mynai,FK Obolon,0,1,0.0,0.0,A
+UKR1,02/10/2023,SK Dnipro-1,Metalist 1925 Kharkiv,1,0,0.0,0.0,H
+UKR1,06/10/2023,Polissya Zhytomyr,Dinamo Kiev,3,2,1.0,1.0,H
+UKR1,07/10/2023,FC LNZ Cherkasy,FK Oleksandriya,0,0,,,D
+UKR1,07/10/2023,Kolos Kovalivka,Vorskla Poltava,0,0,,,D
+UKR1,07/10/2023,SK Dnipro-1,NK Veres,2,0,2.0,0.0,H
+UKR1,08/10/2023,FK Obolon,Metalist 1925 Kharkiv,1,0,1.0,0.0,H
+UKR1,08/10/2023,Kryvbas Kryvyi Rih,Chernomorets Odessa,1,0,0.0,0.0,H
+UKR1,08/10/2023,Rukh Lviv,FC Mynai,0,0,,,D
+UKR1,20/10/2023,FK Obolon,Zorya Lugansk,2,4,2.0,2.0,A
+UKR1,20/10/2023,Metalist 1925 Kharkiv,Kryvbas Kryvyi Rih,1,3,1.0,2.0,A
+UKR1,21/10/2023,Chernomorets Odessa,FC Mynai,3,0,1.0,0.0,H
+UKR1,21/10/2023,Shakhtar Donetsk,FC LNZ Cherkasy,3,0,1.0,0.0,H
+UKR1,21/10/2023,FK Oleksandriya,Kolos Kovalivka,0,1,0.0,1.0,A
+UKR1,22/10/2023,Dinamo Kiev,SK Dnipro-1,0,1,0.0,1.0,A
+UKR1,22/10/2023,Vorskla Poltava,Polissya Zhytomyr,0,3,0.0,1.0,A
+UKR1,22/10/2023,NK Veres,Rukh Lviv,2,5,0.0,2.0,A
+UKR1,25/10/2023,Vorskla Poltava,SK Dnipro-1,2,3,1.0,2.0,A
+UKR1,28/10/2023,Rukh Lviv,FK Oleksandriya,0,0,,,D
+UKR1,28/10/2023,Kolos Kovalivka,Dinamo Kiev,1,1,0.0,1.0,D
+UKR1,28/10/2023,Kryvbas Kryvyi Rih,SK Dnipro-1,3,0,2.0,0.0,H
+UKR1,28/10/2023,Zorya Lugansk,Polissya Zhytomyr,0,1,0.0,1.0,A
+UKR1,29/10/2023,FC Mynai,NK Veres,0,0,,,D
+UKR1,29/10/2023,FC LNZ Cherkasy,FK Obolon,3,0,1.0,0.0,H
+UKR1,29/10/2023,Vorskla Poltava,Metalist 1925 Kharkiv,2,2,0.0,1.0,D
+UKR1,01/11/2023,Rukh Lviv,SK Dnipro-1,0,2,0.0,2.0,A
+UKR1,03/11/2023,Dinamo Kiev,Shakhtar Donetsk,0,1,0.0,0.0,A
+UKR1,04/11/2023,FC LNZ Cherkasy,Kolos Kovalivka,1,1,1.0,0.0,D
+UKR1,05/11/2023,NK Veres,Zorya Lugansk,2,2,1.0,1.0,D
+UKR1,05/11/2023,Metalist 1925 Kharkiv,Chernomorets Odessa,2,1,0.0,1.0,H
+UKR1,05/11/2023,FC Mynai,Vorskla Poltava,0,0,,,D
+UKR1,06/11/2023,SK Dnipro-1,FK Oleksandriya,1,0,1.0,0.0,H
+UKR1,06/11/2023,Polissya Zhytomyr,Kryvbas Kryvyi Rih,1,1,0.0,1.0,D
+UKR1,06/11/2023,Rukh Lviv,FK Obolon,2,2,1.0,1.0,D
+UKR1,10/11/2023,Kolos Kovalivka,FC Mynai,2,0,2.0,0.0,H
+UKR1,11/11/2023,FK Oleksandriya,NK Veres,1,0,0.0,0.0,H
+UKR1,11/11/2023,Polissya Zhytomyr,Metalist 1925 Kharkiv,2,1,0.0,1.0,H
+UKR1,11/11/2023,FK Obolon,Vorskla Poltava,0,1,0.0,0.0,A
+UKR1,12/11/2023,Kryvbas Kryvyi Rih,Dinamo Kiev,0,2,0.0,2.0,A
+UKR1,12/11/2023,Zorya Lugansk,FC LNZ Cherkasy,1,2,0.0,1.0,A
+UKR1,12/11/2023,Shakhtar Donetsk,SK Dnipro-1,1,3,1.0,1.0,A
+UKR1,12/11/2023,Chernomorets Odessa,Rukh Lviv,2,3,1.0,1.0,A
+UKR1,24/11/2023,Shakhtar Donetsk,Polissya Zhytomyr,0,0,,,D
+UKR1,25/11/2023,NK Veres,Metalist 1925 Kharkiv,4,3,2.0,1.0,H
+UKR1,25/11/2023,FC Mynai,Kryvbas Kryvyi Rih,0,1,0.0,0.0,A
+UKR1,25/11/2023,Vorskla Poltava,FC LNZ Cherkasy,0,0,,,D
+UKR1,26/11/2023,Dinamo Kiev,Rukh Lviv,2,0,2.0,0.0,H
+UKR1,27/11/2023,SK Dnipro-1,Chernomorets Odessa,5,2,1.0,1.0,H
+UKR1,01/12/2023,Polissya Zhytomyr,NK Veres,1,1,0.0,0.0,D
+UKR1,02/12/2023,SK Dnipro-1,Vorskla Poltava,1,2,1.0,2.0,A
+UKR1,02/12/2023,Kolos Kovalivka,FK Obolon,0,0,,,D
+UKR1,02/12/2023,Kryvbas Kryvyi Rih,FK Oleksandriya,2,1,0.0,1.0,H
+UKR1,03/12/2023,Chernomorets Odessa,FC LNZ Cherkasy,1,3,0.0,0.0,A
+UKR1,03/12/2023,Shakhtar Donetsk,Metalist 1925 Kharkiv,2,0,0.0,0.0,H
+UKR1,04/12/2023,Zorya Lugansk,Rukh Lviv,0,0,,,D
+UKR1,07/12/2023,Dinamo Kiev,Metalist 1925 Kharkiv,4,2,3.0,1.0,H
+UKR1,08/12/2023,Shakhtar Donetsk,NK Veres,2,0,1.0,0.0,H
+UKR1,08/12/2023,Polissya Zhytomyr,SK Dnipro-1,1,1,0.0,0.0,D
+UKR1,09/12/2023,Kryvbas Kryvyi Rih,Zorya Lugansk,2,2,2.0,1.0,D
+UKR1,10/12/2023,Vorskla Poltava,Rukh Lviv,1,1,0.0,1.0,D
+UKR1,10/12/2023,Chernomorets Odessa,Kolos Kovalivka,1,0,0.0,0.0,H
+UKR1,11/12/2023,Metalist 1925 Kharkiv,FK Oleksandriya,0,3,0.0,0.0,A
+UKR1,11/12/2023,Dinamo Kiev,FK Obolon,2,0,0.0,0.0,H
+UKR1,23/02/2024,FC LNZ Cherkasy,Kryvbas Kryvyi Rih,0,3,0.0,1.0,A
+UKR1,25/02/2024,NK Veres,Kolos Kovalivka,0,2,0.0,0.0,A
+UKR1,25/02/2024,SK Dnipro-1,FC Mynai,1,1,0.0,1.0,D
+UKR1,25/02/2024,Rukh Lviv,Polissya Zhytomyr,1,1,1.0,1.0,D
+UKR1,25/02/2024,Metalist 1925 Kharkiv,Dinamo Kiev,2,4,1.0,1.0,A
+UKR1,26/02/2024,FK Obolon,Chernomorets Odessa,1,1,0.0,0.0,D
+UKR1,26/02/2024,FK Oleksandriya,Shakhtar Donetsk,0,3,,,A
+UKR1,26/02/2024,Zorya Lugansk,Vorskla Poltava,1,0,1.0,0.0,H
+UKR1,01/03/2024,Polissya Zhytomyr,FC LNZ Cherkasy,0,1,0.0,0.0,A
+UKR1,02/03/2024,Dinamo Kiev,Chernomorets Odessa,1,0,1.0,0.0,H
+UKR1,02/03/2024,Vorskla Poltava,NK Veres,2,1,0.0,1.0,H
+UKR1,02/03/2024,Kolos Kovalivka,Rukh Lviv,0,1,0.0,1.0,A
+UKR1,02/03/2024,FC Mynai,Metalist 1925 Kharkiv,2,0,1.0,0.0,H
+UKR1,03/03/2024,FK Obolon,SK Dnipro-1,0,1,0.0,1.0,A
+UKR1,03/03/2024,Shakhtar Donetsk,Kryvbas Kryvyi Rih,5,2,2.0,1.0,H
+UKR1,03/03/2024,FK Oleksandriya,Zorya Lugansk,0,0,,,D
+UKR1,07/03/2024,Zorya Lugansk,FC Mynai,2,0,1.0,0.0,H
+UKR1,07/03/2024,NK Veres,Dinamo Kiev,1,1,0.0,1.0,D
+UKR1,08/03/2024,Metalist 1925 Kharkiv,FC LNZ Cherkasy,1,1,0.0,0.0,D
+UKR1,08/03/2024,SK Dnipro-1,Rukh Lviv,0,1,0.0,1.0,A
+UKR1,08/03/2024,Shakhtar Donetsk,Kolos Kovalivka,3,2,0.0,1.0,H
+UKR1,09/03/2024,Kryvbas Kryvyi Rih,FK Obolon,1,0,0.0,0.0,H
+UKR1,09/03/2024,Polissya Zhytomyr,FK Oleksandriya,1,2,0.0,1.0,A
+UKR1,09/03/2024,Chernomorets Odessa,Vorskla Poltava,0,1,0.0,0.0,A
+UKR1,12/03/2024,Shakhtar Donetsk,FC Mynai,2,0,2.0,0.0,H
+UKR1,12/03/2024,Dinamo Kiev,Zorya Lugansk,2,0,1.0,0.0,H
+UKR1,12/03/2024,FC LNZ Cherkasy,SK Dnipro-1,1,1,0.0,0.0,D
+UKR1,15/03/2024,FK Oleksandriya,Vorskla Poltava,1,0,0.0,0.0,H
+UKR1,16/03/2024,Metalist 1925 Kharkiv,Rukh Lviv,1,4,0.0,4.0,A
+UKR1,16/03/2024,Kryvbas Kryvyi Rih,Kolos Kovalivka,1,0,0.0,0.0,H
+UKR1,16/03/2024,FK Obolon,Polissya Zhytomyr,1,0,1.0,0.0,H
+UKR1,17/03/2024,Chernomorets Odessa,NK Veres,0,1,0.0,1.0,A
+UKR1,23/03/2024,FC LNZ Cherkasy,FC Mynai,1,2,0.0,1.0,A
+UKR1,30/03/2024,NK Veres,Kryvbas Kryvyi Rih,0,2,0.0,0.0,A
+UKR1,30/03/2024,Polissya Zhytomyr,Chernomorets Odessa,1,4,0.0,0.0,A
+UKR1,30/03/2024,FK Obolon,Shakhtar Donetsk,0,3,0.0,2.0,A
+UKR1,31/03/2024,Vorskla Poltava,Dinamo Kiev,1,5,0.0,2.0,A
+UKR1,31/03/2024,Zorya Lugansk,Metalist 1925 Kharkiv,2,1,1.0,0.0,H
+UKR1,31/03/2024,FC Mynai,FK Oleksandriya,2,2,0.0,0.0,D
+UKR1,31/03/2024,Kolos Kovalivka,SK Dnipro-1,0,2,0.0,1.0,A
+UKR1,01/04/2024,Rukh Lviv,FC LNZ Cherkasy,1,0,0.0,0.0,H
+UKR1,04/04/2024,Zorya Lugansk,Dinamo Kiev,0,3,0.0,2.0,A
+UKR1,06/04/2024,NK Veres,FK Obolon,3,0,2.0,0.0,H
+UKR1,07/04/2024,Chernomorets Odessa,FK Oleksandriya,3,2,3.0,1.0,H
+UKR1,07/04/2024,Kolos Kovalivka,Metalist 1925 Kharkiv,1,1,1.0,0.0,D
+UKR1,07/04/2024,Shakhtar Donetsk,Rukh Lviv,3,1,2.0,1.0,H
+UKR1,08/04/2024,Kryvbas Kryvyi Rih,Vorskla Poltava,1,1,1.0,1.0,D
+UKR1,08/04/2024,Dinamo Kiev,FC LNZ Cherkasy,1,1,1.0,1.0,D
+UKR1,08/04/2024,FC Mynai,Polissya Zhytomyr,2,3,0.0,2.0,A
+UKR1,09/04/2024,SK Dnipro-1,Zorya Lugansk,2,2,0.0,0.0,D
+UKR1,13/04/2024,FK Oleksandriya,Dinamo Kiev,0,1,0.0,0.0,A
+UKR1,13/04/2024,FK Obolon,FC Mynai,1,1,0.0,0.0,D
+UKR1,13/04/2024,Rukh Lviv,Kryvbas Kryvyi Rih,1,1,0.0,1.0,D
+UKR1,14/04/2024,Vorskla Poltava,Shakhtar Donetsk,0,1,0.0,1.0,A
+UKR1,14/04/2024,Polissya Zhytomyr,Kolos Kovalivka,1,0,0.0,0.0,H
+UKR1,14/04/2024,Zorya Lugansk,Chernomorets Odessa,1,0,1.0,0.0,H
+UKR1,15/04/2024,Metalist 1925 Kharkiv,SK Dnipro-1,1,1,0.0,1.0,D
+UKR1,15/04/2024,FC LNZ Cherkasy,NK Veres,1,0,0.0,0.0,H
+UKR1,17/04/2024,FK Oleksandriya,FK Obolon,2,2,0.0,0.0,D
+UKR1,17/04/2024,FC Mynai,Dinamo Kiev,1,3,0.0,2.0,A
+UKR1,18/04/2024,Zorya Lugansk,Shakhtar Donetsk,1,3,0.0,1.0,A
+UKR1,20/04/2024,Chernomorets Odessa,Kryvbas Kryvyi Rih,1,2,1.0,0.0,A
+UKR1,20/04/2024,Vorskla Poltava,Kolos Kovalivka,0,2,0.0,0.0,A
+UKR1,21/04/2024,NK Veres,SK Dnipro-1,1,1,1.0,1.0,D
+UKR1,21/04/2024,FK Oleksandriya,FC LNZ Cherkasy,1,2,1.0,1.0,A
+UKR1,21/04/2024,Dinamo Kiev,Polissya Zhytomyr,3,0,1.0,0.0,H
+UKR1,22/04/2024,Shakhtar Donetsk,Zorya Lugansk,2,1,0.0,0.0,H
+UKR1,22/04/2024,FC Mynai,Rukh Lviv,1,1,0.0,0.0,D
+UKR1,22/04/2024,Metalist 1925 Kharkiv,FK Obolon,1,1,0.0,1.0,D
+UKR1,27/04/2024,Rukh Lviv,NK Veres,3,1,0.0,1.0,H
+UKR1,27/04/2024,FC LNZ Cherkasy,Shakhtar Donetsk,0,3,0.0,1.0,A
+UKR1,27/04/2024,FC Mynai,Chernomorets Odessa,2,0,1.0,0.0,H
+UKR1,27/04/2024,SK Dnipro-1,Dinamo Kiev,1,2,1.0,0.0,A
+UKR1,28/04/2024,Zorya Lugansk,FK Obolon,0,0,,,D
+UKR1,28/04/2024,Kolos Kovalivka,FK Oleksandriya,0,0,,,D
+UKR1,28/04/2024,Kryvbas Kryvyi Rih,Metalist 1925 Kharkiv,3,0,3.0,0.0,H
+UKR1,29/04/2024,Polissya Zhytomyr,Vorskla Poltava,1,0,0.0,0.0,H
+UKR1,01/05/2024,Dinamo Kiev,NK Veres,3,0,1.0,0.0,H
+UKR1,01/05/2024,Chernomorets Odessa,Shakhtar Donetsk,1,4,1.0,3.0,A
+UKR1,04/05/2024,FK Oleksandriya,Rukh Lviv,2,2,1.0,1.0,D
+UKR1,04/05/2024,FK Obolon,FC LNZ Cherkasy,1,0,1.0,0.0,H
+UKR1,04/05/2024,Metalist 1925 Kharkiv,Vorskla Poltava,3,2,2.0,1.0,H
+UKR1,05/05/2024,Polissya Zhytomyr,Zorya Lugansk,1,1,1.0,0.0,D
+UKR1,05/05/2024,Dinamo Kiev,Kolos Kovalivka,5,0,0.0,0.0,H
+UKR1,05/05/2024,Shakhtar Donetsk,Chernomorets Odessa,3,0,2.0,0.0,H
+UKR1,06/05/2024,NK Veres,FC Mynai,3,1,1.0,1.0,H
+UKR1,06/05/2024,SK Dnipro-1,Kryvbas Kryvyi Rih,1,0,0.0,0.0,H
+UKR1,09/05/2024,Kolos Kovalivka,Zorya Lugansk,0,1,0.0,1.0,A
+UKR1,11/05/2024,Vorskla Poltava,FC Mynai,2,3,1.0,0.0,A
+UKR1,11/05/2024,FK Obolon,Rukh Lviv,0,0,,,D
+UKR1,11/05/2024,Shakhtar Donetsk,Dinamo Kiev,1,0,1.0,0.0,H
+UKR1,12/05/2024,FK Oleksandriya,SK Dnipro-1,1,0,1.0,0.0,H
+UKR1,12/05/2024,Chernomorets Odessa,Metalist 1925 Kharkiv,3,0,1.0,0.0,H
+UKR1,13/05/2024,Kryvbas Kryvyi Rih,Polissya Zhytomyr,0,1,0.0,1.0,A
+UKR1,13/05/2024,Kolos Kovalivka,FC LNZ Cherkasy,1,3,1.0,1.0,A
+UKR1,13/05/2024,Zorya Lugansk,NK Veres,1,1,1.0,0.0,D
+UKR1,18/05/2024,Dinamo Kiev,Kryvbas Kryvyi Rih,3,1,2.0,1.0,H
+UKR1,19/05/2024,Vorskla Poltava,FK Obolon,3,1,2.0,0.0,H
+UKR1,19/05/2024,SK Dnipro-1,Shakhtar Donetsk,1,1,1.0,1.0,D
+UKR1,19/05/2024,Rukh Lviv,Chernomorets Odessa,2,0,1.0,0.0,H
+UKR1,19/05/2024,FC LNZ Cherkasy,Zorya Lugansk,2,1,0.0,1.0,H
+UKR1,19/05/2024,Metalist 1925 Kharkiv,Polissya Zhytomyr,3,3,1.0,3.0,D
+UKR1,19/05/2024,FC Mynai,Kolos Kovalivka,3,2,1.0,1.0,H
+UKR1,19/05/2024,NK Veres,FK Oleksandriya,2,2,2.0,1.0,D
+UKR1,24/05/2024,FC LNZ Cherkasy,Vorskla Poltava,1,0,1.0,0.0,H
+UKR1,25/05/2024,Zorya Lugansk,Kolos Kovalivka,0,1,0.0,0.0,A
+UKR1,25/05/2024,Chernomorets Odessa,SK Dnipro-1,0,2,0.0,1.0,A
+UKR1,25/05/2024,Rukh Lviv,Dinamo Kiev,1,2,0.0,0.0,A
+UKR1,25/05/2024,Polissya Zhytomyr,Shakhtar Donetsk,2,0,2.0,0.0,H
+UKR1,25/05/2024,Metalist 1925 Kharkiv,NK Veres,1,2,0.0,1.0,A
+UKR1,25/05/2024,Kryvbas Kryvyi Rih,FC Mynai,3,0,2.0,0.0,H
+UKR1,25/05/2024,FK Obolon,FK Oleksandriya,0,3,0.0,1.0,A
+UKR1,03/08/2024,NK Veres,Karpaty Lviv,0,0,,,D
+UKR1,03/08/2024,Kryvbas Kryvyi Rih,Chernomorets Odessa,1,0,1.0,0.0,H
+UKR1,04/08/2024,FC LNZ Cherkasy,Livyi Bereh,1,0,0.0,0.0,H
+UKR1,04/08/2024,Vorskla Poltava,Shakhtar Donetsk,0,5,0.0,2.0,A
+UKR1,04/08/2024,FK Obolon,Kolos Kovalivka,2,2,0.0,0.0,D
+UKR1,04/08/2024,Zorya Lugansk,Inhulets Petrove,2,1,1.0,1.0,H
+UKR1,09/08/2024,Livyi Bereh,Vorskla Poltava,0,3,0.0,0.0,A
+UKR1,09/08/2024,NK Veres,Dinamo Kiev,1,2,0.0,2.0,A
+UKR1,10/08/2024,Chernomorets Odessa,Zorya Lugansk,0,1,0.0,0.0,A
+UKR1,10/08/2024,Kolos Kovalivka,Inhulets Petrove,0,0,,,D
+UKR1,11/08/2024,FK Obolon,Rukh Lviv,0,4,0.0,1.0,A
+UKR1,11/08/2024,Karpaty Lviv,Kryvbas Kryvyi Rih,3,0,2.0,0.0,H
+UKR1,11/08/2024,Shakhtar Donetsk,Polissya Zhytomyr,0,1,0.0,1.0,A
+UKR1,12/08/2024,FC LNZ Cherkasy,FK Oleksandriya,0,2,0.0,0.0,A
+UKR1,16/08/2024,Chernomorets Odessa,Kolos Kovalivka,1,0,1.0,0.0,H
+UKR1,16/08/2024,Vorskla Poltava,FK Obolon,2,0,1.0,0.0,H
+UKR1,17/08/2024,Karpaty Lviv,Dinamo Kiev,1,3,1.0,1.0,A
+UKR1,17/08/2024,Zorya Lugansk,FK Oleksandriya,1,2,0.0,2.0,A
+UKR1,17/08/2024,Polissya Zhytomyr,Inhulets Petrove,1,1,1.0,1.0,D
+UKR1,18/08/2024,Livyi Bereh,Shakhtar Donetsk,0,1,0.0,0.0,A
+UKR1,18/08/2024,NK Veres,Kryvbas Kryvyi Rih,0,2,0.0,1.0,A
+UKR1,18/08/2024,FC LNZ Cherkasy,Rukh Lviv,3,1,0.0,0.0,H
+UKR1,24/08/2024,FK Oleksandriya,Shakhtar Donetsk,4,3,2.0,2.0,H
+UKR1,25/08/2024,Polissya Zhytomyr,FK Obolon,4,0,3.0,0.0,H
+UKR1,25/08/2024,Rukh Lviv,Zorya Lugansk,3,0,1.0,0.0,H
+UKR1,25/08/2024,Kryvbas Kryvyi Rih,Inhulets Petrove,1,1,1.0,1.0,D
+UKR1,26/08/2024,Livyi Bereh,Chernomorets Odessa,1,0,1.0,0.0,H
+UKR1,26/08/2024,Kolos Kovalivka,NK Veres,0,1,0.0,0.0,A
+UKR1,26/08/2024,FC LNZ Cherkasy,Karpaty Lviv,2,1,0.0,1.0,H
+UKR1,30/08/2024,FK Obolon,Zorya Lugansk,0,2,0.0,1.0,A
+UKR1,30/08/2024,Rukh Lviv,Inhulets Petrove,5,0,1.0,0.0,H
+UKR1,31/08/2024,FK Oleksandriya,Kolos Kovalivka,2,1,1.0,0.0,H
+UKR1,31/08/2024,Chernomorets Odessa,Polissya Zhytomyr,1,4,1.0,3.0,A
+UKR1,31/08/2024,Karpaty Lviv,Vorskla Poltava,1,1,1.0,0.0,D
+UKR1,01/09/2024,Dinamo Kiev,FC LNZ Cherkasy,1,0,1.0,0.0,H
+UKR1,01/09/2024,NK Veres,Livyi Bereh,1,3,1.0,0.0,A
+UKR1,13/09/2024,FK Obolon,FK Oleksandriya,0,0,,,D
+UKR1,14/09/2024,Chernomorets Odessa,Inhulets Petrove,1,0,0.0,0.0,H
+UKR1,14/09/2024,Zorya Lugansk,Dinamo Kiev,0,2,0.0,0.0,A
+UKR1,14/09/2024,Shakhtar Donetsk,Karpaty Lviv,5,2,4.0,1.0,H
+UKR1,15/09/2024,Vorskla Poltava,Rukh Lviv,0,0,,,D
+UKR1,15/09/2024,Livyi Bereh,Kryvbas Kryvyi Rih,0,1,0.0,0.0,A
+UKR1,15/09/2024,Polissya Zhytomyr,NK Veres,2,1,0.0,1.0,H
+UKR1,16/09/2024,Kolos Kovalivka,FC LNZ Cherkasy,1,1,1.0,0.0,D
+UKR1,18/09/2024,Dinamo Kiev,Vorskla Poltava,3,1,2.0,0.0,H
+UKR1,21/09/2024,FK Oleksandriya,Livyi Bereh,2,0,0.0,0.0,H
+UKR1,21/09/2024,Dinamo Kiev,Rukh Lviv,0,0,,,D
+UKR1,21/09/2024,Chernomorets Odessa,Karpaty Lviv,0,1,0.0,0.0,A
+UKR1,22/09/2024,NK Veres,Inhulets Petrove,2,2,0.0,2.0,D
+UKR1,22/09/2024,Polissya Zhytomyr,FC LNZ Cherkasy,1,1,0.0,1.0,D
+UKR1,22/09/2024,Kryvbas Kryvyi Rih,Vorskla Poltava,1,1,1.0,1.0,D
+UKR1,23/09/2024,Kolos Kovalivka,Zorya Lugansk,1,0,0.0,0.0,H
+UKR1,23/09/2024,Shakhtar Donetsk,FK Obolon,4,0,1.0,0.0,H
+UKR1,27/09/2024,NK Veres,Shakhtar Donetsk,1,1,0.0,0.0,D
+UKR1,28/09/2024,Kryvbas Kryvyi Rih,FK Oleksandriya,0,1,0.0,1.0,A
+UKR1,28/09/2024,FC LNZ Cherkasy,Chernomorets Odessa,1,1,1.0,0.0,D
+UKR1,28/09/2024,Karpaty Lviv,Polissya Zhytomyr,1,3,1.0,2.0,A
+UKR1,29/09/2024,FK Obolon,Inhulets Petrove,2,1,0.0,0.0,H
+UKR1,29/09/2024,Rukh Lviv,Kolos Kovalivka,0,0,,,D
+UKR1,29/09/2024,Livyi Bereh,Dinamo Kiev,0,3,0.0,1.0,A
+UKR1,30/09/2024,Zorya Lugansk,Vorskla Poltava,2,0,1.0,0.0,H
+UKR1,04/10/2024,Chernomorets Odessa,FK Obolon,1,0,0.0,0.0,H
+UKR1,04/10/2024,Karpaty Lviv,Inhulets Petrove,0,0,,,D
+UKR1,05/10/2024,Kolos Kovalivka,Livyi Bereh,0,0,,,D
+UKR1,05/10/2024,FK Oleksandriya,Rukh Lviv,1,1,0.0,0.0,D
+UKR1,05/10/2024,NK Veres,Zorya Lugansk,2,1,1.0,1.0,H
+UKR1,06/10/2024,Polissya Zhytomyr,Vorskla Poltava,2,1,1.0,1.0,H
+UKR1,06/10/2024,Shakhtar Donetsk,FC LNZ Cherkasy,5,1,2.0,0.0,H
+UKR1,06/10/2024,Dinamo Kiev,Kryvbas Kryvyi Rih,2,1,2.0,1.0,H
+UKR1,18/10/2024,Kolos Kovalivka,Shakhtar Donetsk,0,1,0.0,0.0,A
+UKR1,19/10/2024,FK Oleksandriya,Vorskla Poltava,1,0,0.0,0.0,H
+UKR1,19/10/2024,FK Obolon,Dinamo Kiev,1,5,0.0,3.0,A
+UKR1,19/10/2024,Polissya Zhytomyr,Livyi Bereh,0,0,,,D
+UKR1,20/10/2024,Chernomorets Odessa,NK Veres,1,1,1.0,0.0,D
+UKR1,20/10/2024,Zorya Lugansk,Kryvbas Kryvyi Rih,0,1,0.0,0.0,A
+UKR1,20/10/2024,FC LNZ Cherkasy,Inhulets Petrove,2,0,1.0,0.0,H
+UKR1,21/10/2024,Rukh Lviv,Karpaty Lviv,0,1,0.0,1.0,A
+UKR1,25/10/2024,Polissya Zhytomyr,Kolos Kovalivka,1,1,0.0,1.0,D
+UKR1,25/10/2024,Rukh Lviv,Chernomorets Odessa,1,1,0.0,0.0,D
+UKR1,26/10/2024,Karpaty Lviv,FK Obolon,1,0,1.0,0.0,H
+UKR1,26/10/2024,FK Oleksandriya,Inhulets Petrove,2,1,2.0,1.0,H
+UKR1,26/10/2024,Kryvbas Kryvyi Rih,FC LNZ Cherkasy,3,1,1.0,0.0,H
+UKR1,27/10/2024,Livyi Bereh,Zorya Lugansk,0,2,0.0,1.0,A
+UKR1,27/10/2024,NK Veres,Vorskla Poltava,2,2,1.0,0.0,D
+UKR1,27/10/2024,Dinamo Kiev,Shakhtar Donetsk,1,1,0.0,0.0,D
+UKR1,02/11/2024,Karpaty Lviv,Livyi Bereh,3,0,0.0,0.0,H
+UKR1,02/11/2024,Shakhtar Donetsk,Chernomorets Odessa,2,1,2.0,1.0,H
+UKR1,03/11/2024,Dinamo Kiev,Inhulets Petrove,5,2,4.0,1.0,H
+UKR1,03/11/2024,Vorskla Poltava,Kolos Kovalivka,0,1,0.0,0.0,A
+UKR1,03/11/2024,FK Oleksandriya,Polissya Zhytomyr,1,0,0.0,0.0,H
+UKR1,04/11/2024,Zorya Lugansk,FC LNZ Cherkasy,1,2,1.0,0.0,A
+UKR1,04/11/2024,Kryvbas Kryvyi Rih,Rukh Lviv,1,1,0.0,1.0,D
+UKR1,04/11/2024,FK Obolon,NK Veres,0,0,,,D
+UKR1,08/11/2024,Chernomorets Odessa,Vorskla Poltava,0,1,0.0,0.0,A
+UKR1,08/11/2024,Livyi Bereh,Inhulets Petrove,0,0,,,D
+UKR1,09/11/2024,FC LNZ Cherkasy,FK Obolon,0,1,0.0,0.0,A
+UKR1,09/11/2024,FK Oleksandriya,Karpaty Lviv,3,0,1.0,0.0,H
+UKR1,09/11/2024,Kolos Kovalivka,Kryvbas Kryvyi Rih,1,1,0.0,0.0,D
+UKR1,10/11/2024,Dinamo Kiev,Polissya Zhytomyr,2,1,2.0,0.0,H
+UKR1,10/11/2024,NK Veres,Rukh Lviv,2,0,2.0,0.0,H
+UKR1,10/11/2024,Shakhtar Donetsk,Zorya Lugansk,3,1,0.0,1.0,H
+UKR1,22/11/2024,Karpaty Lviv,Kolos Kovalivka,1,0,1.0,0.0,H
+UKR1,23/11/2024,Shakhtar Donetsk,Inhulets Petrove,6,0,1.0,0.0,H
+UKR1,23/11/2024,Vorskla Poltava,FC LNZ Cherkasy,2,0,1.0,0.0,H
+UKR1,23/11/2024,Dinamo Kiev,Chernomorets Odessa,3,1,1.0,0.0,H
+UKR1,24/11/2024,NK Veres,FK Oleksandriya,1,1,1.0,0.0,D
+UKR1,24/11/2024,Rukh Lviv,Livyi Bereh,1,0,1.0,0.0,H
+UKR1,24/11/2024,FK Obolon,Kryvbas Kryvyi Rih,0,1,0.0,1.0,A
+UKR1,25/11/2024,Polissya Zhytomyr,Zorya Lugansk,1,1,0.0,0.0,D
+UKR1,29/11/2024,Vorskla Poltava,Inhulets Petrove,0,3,0.0,2.0,A
+UKR1,30/11/2024,Kryvbas Kryvyi Rih,Polissya Zhytomyr,3,1,1.0,0.0,H
+UKR1,30/11/2024,FC LNZ Cherkasy,NK Veres,1,2,1.0,1.0,A
+UKR1,30/11/2024,Livyi Bereh,FK Obolon,1,1,0.0,1.0,D
+UKR1,01/12/2024,Kolos Kovalivka,Dinamo Kiev,1,1,1.0,1.0,D
+UKR1,01/12/2024,FK Oleksandriya,Chernomorets Odessa,3,0,1.0,0.0,H
+UKR1,01/12/2024,Shakhtar Donetsk,Rukh Lviv,1,1,1.0,0.0,D
+UKR1,02/12/2024,Zorya Lugansk,Karpaty Lviv,2,1,0.0,1.0,H
+UKR1,04/12/2024,Rukh Lviv,Polissya Zhytomyr,1,1,0.0,0.0,D
+UKR1,04/12/2024,FK Oleksandriya,Dinamo Kiev,0,0,,,D
+UKR1,05/12/2024,Shakhtar Donetsk,Vorskla Poltava,3,1,3.0,0.0,H
+UKR1,07/12/2024,Livyi Bereh,FC LNZ Cherkasy,3,1,1.0,1.0,H
+UKR1,07/12/2024,Chernomorets Odessa,Kryvbas Kryvyi Rih,1,3,1.0,2.0,A
+UKR1,07/12/2024,Karpaty Lviv,NK Veres,5,0,2.0,0.0,H
+UKR1,08/12/2024,Kolos Kovalivka,FK Obolon,0,0,,,D
+UKR1,08/12/2024,Dinamo Kiev,FK Oleksandriya,3,0,2.0,0.0,H
+UKR1,09/12/2024,Polissya Zhytomyr,Rukh Lviv,0,1,0.0,1.0,A
+UKR1,13/12/2024,Vorskla Poltava,Livyi Bereh,0,1,0.0,0.0,A
+UKR1,14/12/2024,Zorya Lugansk,Chernomorets Odessa,2,1,1.0,0.0,H
+UKR1,14/12/2024,Kryvbas Kryvyi Rih,Karpaty Lviv,2,0,1.0,0.0,H
+UKR1,14/12/2024,FK Oleksandriya,FC LNZ Cherkasy,1,1,1.0,0.0,D
+UKR1,15/12/2024,Inhulets Petrove,Kolos Kovalivka,0,2,0.0,1.0,A
+UKR1,15/12/2024,Rukh Lviv,FK Obolon,1,3,0.0,1.0,A
+UKR1,15/12/2024,Polissya Zhytomyr,Shakhtar Donetsk,1,0,0.0,0.0,H
+UKR1,16/12/2024,Dinamo Kiev,NK Veres,1,0,1.0,0.0,H
+UKR1,21/02/2025,Kolos Kovalivka,Chernomorets Odessa,1,2,1.0,1.0,A
+UKR1,22/02/2025,Kryvbas Kryvyi Rih,NK Veres,0,3,0.0,2.0,A
+UKR1,22/02/2025,Inhulets Petrove,Polissya Zhytomyr,0,1,0.0,0.0,A
+UKR1,22/02/2025,Rukh Lviv,FC LNZ Cherkasy,0,1,0.0,1.0,A
+UKR1,23/02/2025,FK Obolon,Vorskla Poltava,1,0,0.0,0.0,H
+UKR1,23/02/2025,FK Oleksandriya,Zorya Lugansk,2,1,1.0,1.0,H
+UKR1,23/02/2025,Dinamo Kiev,Karpaty Lviv,2,0,0.0,0.0,H
+UKR1,24/02/2025,Shakhtar Donetsk,Livyi Bereh,1,0,0.0,0.0,H
+UKR1,28/02/2025,FK Obolon,Polissya Zhytomyr,0,0,,,D
+UKR1,28/02/2025,Karpaty Lviv,FC LNZ Cherkasy,1,0,0.0,0.0,H
+UKR1,28/02/2025,Vorskla Poltava,Dinamo Kiev,1,1,0.0,1.0,D
+UKR1,01/03/2025,Chernomorets Odessa,Livyi Bereh,0,1,0.0,1.0,A
+UKR1,01/03/2025,Shakhtar Donetsk,FK Oleksandriya,3,0,0.0,0.0,H
+UKR1,02/03/2025,Inhulets Petrove,Kryvbas Kryvyi Rih,2,0,2.0,0.0,H
+UKR1,02/03/2025,Zorya Lugansk,Rukh Lviv,2,0,1.0,0.0,H
+UKR1,02/03/2025,NK Veres,Kolos Kovalivka,2,1,1.0,1.0,H
+UKR1,06/03/2025,Polissya Zhytomyr,Chernomorets Odessa,3,1,2.0,0.0,H
+UKR1,06/03/2025,Vorskla Poltava,Karpaty Lviv,0,0,,,D
+UKR1,06/03/2025,FC LNZ Cherkasy,Dinamo Kiev,1,2,0.0,1.0,A
+UKR1,06/03/2025,Shakhtar Donetsk,Kryvbas Kryvyi Rih,1,1,0.0,0.0,D
+UKR1,07/03/2025,Kolos Kovalivka,FK Oleksandriya,0,1,0.0,1.0,A
+UKR1,07/03/2025,Zorya Lugansk,FK Obolon,2,1,1.0,0.0,H
+UKR1,07/03/2025,Livyi Bereh,NK Veres,2,0,1.0,0.0,H
+UKR1,08/03/2025,Inhulets Petrove,Rukh Lviv,0,1,0.0,0.0,A
+UKR1,11/03/2025,FK Oleksandriya,FK Obolon,4,0,3.0,0.0,H
+UKR1,11/03/2025,Dinamo Kiev,Zorya Lugansk,2,2,1.0,2.0,D
+UKR1,11/03/2025,NK Veres,Polissya Zhytomyr,5,1,2.0,1.0,H
+UKR1,11/03/2025,Karpaty Lviv,Shakhtar Donetsk,0,0,,,D
+UKR1,15/03/2025,Rukh Lviv,Vorskla Poltava,0,1,0.0,0.0,A
+UKR1,16/03/2025,Inhulets Petrove,Chernomorets Odessa,1,0,1.0,0.0,H
+UKR1,16/03/2025,FC LNZ Cherkasy,Kolos Kovalivka,2,0,1.0,0.0,H
+UKR1,28/03/2025,Inhulets Petrove,NK Veres,0,0,,,D
+UKR1,28/03/2025,FC LNZ Cherkasy,Polissya Zhytomyr,0,1,0.0,0.0,A
+UKR1,29/03/2025,Rukh Lviv,Dinamo Kiev,0,2,0.0,2.0,A
+UKR1,29/03/2025,FK Obolon,Shakhtar Donetsk,0,2,0.0,1.0,A
+UKR1,29/03/2025,Livyi Bereh,FK Oleksandriya,0,1,0.0,1.0,A
+UKR1,30/03/2025,Vorskla Poltava,Kryvbas Kryvyi Rih,0,1,0.0,1.0,A
+UKR1,30/03/2025,Zorya Lugansk,Kolos Kovalivka,0,3,0.0,1.0,A
+UKR1,30/03/2025,Karpaty Lviv,Chernomorets Odessa,4,0,2.0,0.0,H
+UKR1,04/04/2025,Inhulets Petrove,FK Obolon,0,1,0.0,1.0,A
+UKR1,05/04/2025,Chernomorets Odessa,FC LNZ Cherkasy,1,0,1.0,0.0,H
+UKR1,05/04/2025,Vorskla Poltava,Zorya Lugansk,1,2,0.0,0.0,A
+UKR1,06/04/2025,FK Oleksandriya,Kryvbas Kryvyi Rih,1,0,0.0,0.0,H
+UKR1,06/04/2025,Dinamo Kiev,Livyi Bereh,2,0,1.0,0.0,H
+UKR1,06/04/2025,Shakhtar Donetsk,NK Veres,3,0,0.0,0.0,H
+UKR1,07/04/2025,Kolos Kovalivka,Rukh Lviv,0,1,0.0,1.0,A
+UKR1,07/04/2025,Polissya Zhytomyr,Karpaty Lviv,1,1,0.0,0.0,D
+UKR1,11/04/2025,FC LNZ Cherkasy,Shakhtar Donetsk,1,4,0.0,3.0,A
+UKR1,12/04/2025,FK Obolon,Chernomorets Odessa,1,0,1.0,0.0,H
+UKR1,12/04/2025,Kryvbas Kryvyi Rih,Dinamo Kiev,0,2,0.0,1.0,A
+UKR1,12/04/2025,Rukh Lviv,FK Oleksandriya,1,1,0.0,1.0,D
+UKR1,13/04/2025,Zorya Lugansk,NK Veres,1,2,0.0,2.0,A
+UKR1,13/04/2025,Vorskla Poltava,Polissya Zhytomyr,0,2,0.0,1.0,A
+UKR1,13/04/2025,Livyi Bereh,Kolos Kovalivka,0,2,0.0,2.0,A
+UKR1,14/04/2025,Inhulets Petrove,Karpaty Lviv,1,2,0.0,1.0,A
+UKR1,16/04/2025,Kryvbas Kryvyi Rih,Shakhtar Donetsk,1,2,0.0,1.0,A
+UKR1,18/04/2025,Vorskla Poltava,FK Oleksandriya,1,3,0.0,3.0,A
+UKR1,18/04/2025,Dinamo Kiev,FK Obolon,3,0,1.0,0.0,H
+UKR1,19/04/2025,Karpaty Lviv,Rukh Lviv,3,1,2.0,0.0,H
+UKR1,19/04/2025,Livyi Bereh,Polissya Zhytomyr,1,1,1.0,0.0,D
+UKR1,19/04/2025,Shakhtar Donetsk,Kolos Kovalivka,2,4,1.0,2.0,A
+UKR1,20/04/2025,Kryvbas Kryvyi Rih,Zorya Lugansk,3,0,1.0,0.0,H
+UKR1,20/04/2025,Inhulets Petrove,FC LNZ Cherkasy,0,0,,,D
+UKR1,20/04/2025,NK Veres,Chernomorets Odessa,2,1,0.0,1.0,H
+UKR1,25/04/2025,Zorya Lugansk,Livyi Bereh,2,1,1.0,0.0,H
+UKR1,25/04/2025,Inhulets Petrove,FK Oleksandriya,0,1,0.0,1.0,A
+UKR1,26/04/2025,FK Obolon,Karpaty Lviv,2,2,1.0,1.0,D
+UKR1,26/04/2025,FC LNZ Cherkasy,Kryvbas Kryvyi Rih,0,0,,,D
+UKR1,26/04/2025,Chernomorets Odessa,Rukh Lviv,1,2,0.0,1.0,A
+UKR1,27/04/2025,Shakhtar Donetsk,Dinamo Kiev,2,2,2.0,0.0,D
+UKR1,27/04/2025,Kolos Kovalivka,Polissya Zhytomyr,1,1,0.0,0.0,D
+UKR1,27/04/2025,Vorskla Poltava,NK Veres,3,0,1.0,0.0,H
+UKR1,30/04/2025,Inhulets Petrove,Zorya Lugansk,1,0,1.0,0.0,H
+UKR1,02/05/2025,Livyi Bereh,Karpaty Lviv,2,3,1.0,1.0,A
+UKR1,02/05/2025,Rukh Lviv,Kryvbas Kryvyi Rih,0,0,,,D
+UKR1,03/05/2025,Chernomorets Odessa,Shakhtar Donetsk,0,3,0.0,0.0,A
+UKR1,03/05/2025,Inhulets Petrove,Dinamo Kiev,0,4,0.0,2.0,A
+UKR1,03/05/2025,NK Veres,FK Obolon,0,2,0.0,2.0,A
+UKR1,04/05/2025,FC LNZ Cherkasy,Zorya Lugansk,1,1,0.0,0.0,D
+UKR1,04/05/2025,Kolos Kovalivka,Vorskla Poltava,0,0,,,D
+UKR1,04/05/2025,Polissya Zhytomyr,FK Oleksandriya,1,2,1.0,1.0,A
+UKR1,07/05/2025,Kryvbas Kryvyi Rih,Livyi Bereh,4,0,1.0,0.0,H
+UKR1,09/05/2025,Zorya Lugansk,Shakhtar Donetsk,0,0,,,D
+UKR1,09/05/2025,Polissya Zhytomyr,Dinamo Kiev,0,0,,,D
+UKR1,10/05/2025,Vorskla Poltava,Chernomorets Odessa,1,2,1.0,0.0,A
+UKR1,10/05/2025,FK Obolon,FC LNZ Cherkasy,0,0,,,D
+UKR1,10/05/2025,Rukh Lviv,NK Veres,2,0,1.0,0.0,H
+UKR1,11/05/2025,Kryvbas Kryvyi Rih,Kolos Kovalivka,0,1,0.0,1.0,A
+UKR1,11/05/2025,Karpaty Lviv,FK Oleksandriya,2,1,0.0,1.0,H
+UKR1,12/05/2025,Inhulets Petrove,Livyi Bereh,2,1,1.0,0.0,H
+UKR1,17/05/2025,Zorya Lugansk,Polissya Zhytomyr,0,1,0.0,1.0,A
+UKR1,17/05/2025,Kryvbas Kryvyi Rih,FK Obolon,1,0,0.0,0.0,H
+UKR1,17/05/2025,Kolos Kovalivka,Karpaty Lviv,2,1,0.0,1.0,H
+UKR1,18/05/2025,FK Oleksandriya,NK Veres,3,1,3.0,0.0,H
+UKR1,18/05/2025,Inhulets Petrove,Shakhtar Donetsk,1,4,1.0,1.0,A
+UKR1,18/05/2025,Livyi Bereh,Rukh Lviv,1,0,1.0,0.0,H
+UKR1,18/05/2025,Chernomorets Odessa,Dinamo Kiev,1,1,0.0,0.0,D
+UKR1,18/05/2025,FC LNZ Cherkasy,Vorskla Poltava,0,0,,,D
+UKR1,23/05/2025,Inhulets Petrove,Vorskla Poltava,1,1,0.0,1.0,D
+UKR1,23/05/2025,FK Obolon,Livyi Bereh,1,0,0.0,0.0,H
+UKR1,24/05/2025,Chernomorets Odessa,FK Oleksandriya,0,0,,,D
+UKR1,24/05/2025,Rukh Lviv,Shakhtar Donetsk,1,1,0.0,0.0,D
+UKR1,24/05/2025,Dinamo Kiev,Kolos Kovalivka,1,1,1.0,0.0,D
+UKR1,25/05/2025,NK Veres,FC LNZ Cherkasy,1,1,0.0,0.0,D
+UKR1,25/05/2025,Polissya Zhytomyr,Kryvbas Kryvyi Rih,1,1,0.0,1.0,D
+UKR1,25/05/2025,Karpaty Lviv,Zorya Lugansk,1,3,1.0,1.0,A

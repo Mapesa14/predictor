@@ -1,0 +1,817 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+KE1,26/08/2023,Bandari FC,Tusker FC,0,1,,,A
+KE1,26/08/2023,Nzoia Sugar FC,Ulinzi Stars FC,2,1,,,H
+KE1,26/08/2023,Gor Mahia FC,Sofapaka FC,1,1,,,D
+KE1,26/08/2023,Kariobangi Sharks FC,Kenya Police FC,0,0,,,D
+KE1,27/08/2023,Posta Rangers FC,Bidco United FC,0,0,,,D
+KE1,27/08/2023,AFC Leopards,FC Talanta,0,0,,,D
+KE1,27/08/2023,Nairobi City Stars FC,Muhoroni Youth FC,0,0,,,D
+KE1,01/09/2023,Muhoroni Youth FC,Nzoia Sugar FC,1,1,,,D
+KE1,01/09/2023,KCB FC,AFC Leopards,1,0,,,H
+KE1,01/09/2023,FC Talanta,Shabana FC,1,1,,,D
+KE1,01/09/2023,Kenya Police FC,Posta Rangers FC,0,3,,,A
+KE1,01/09/2023,Sofapaka FC,Bandari FC,0,1,,,A
+KE1,02/09/2023,Tusker FC,Kariobangi Sharks FC,1,1,,,D
+KE1,02/09/2023,Ulinzi Stars FC,Gor Mahia FC,0,1,,,A
+KE1,03/09/2023,Bidco United FC,Nairobi City Stars FC,1,1,,,D
+KE1,16/09/2023,Nzoia Sugar FC,Bidco United FC,1,1,,,D
+KE1,16/09/2023,AFC Leopards,Muhoroni Youth FC,0,0,,,D
+KE1,16/09/2023,Bandari FC,Ulinzi Stars FC,1,0,,,H
+KE1,16/09/2023,Shabana FC,Kenya Police FC,1,1,,,D
+KE1,16/09/2023,Kakamega Homeboyz FC,Tusker FC,2,1,,,H
+KE1,17/09/2023,Kariobangi Sharks FC,KCB FC,2,1,,,H
+KE1,17/09/2023,Posta Rangers FC,Sofapaka FC,3,1,,,H
+KE1,17/09/2023,Gor Mahia FC,Nairobi City Stars FC,4,1,,,H
+KE1,23/09/2023,Kenya Police FC,AFC Leopards,2,2,,,D
+KE1,23/09/2023,Tusker FC,Muhoroni Youth FC,1,0,,,H
+KE1,23/09/2023,Bidco United FC,FC Talanta,3,1,,,H
+KE1,23/09/2023,Shabana FC,Kariobangi Sharks FC,0,1,,,A
+KE1,24/09/2023,Nairobi City Stars FC,Nzoia Sugar FC,2,1,,,H
+KE1,24/09/2023,KCB FC,Bandari FC,0,0,,,D
+KE1,24/09/2023,Ulinzi Stars FC,Sofapaka FC,1,0,,,H
+KE1,24/09/2023,Kakamega Homeboyz FC,Gor Mahia FC,1,1,,,D
+KE1,27/09/2023,Kakamega Homeboyz FC,KCB FC,0,2,,,A
+KE1,29/09/2023,Muhoroni Youth FC,Ulinzi Stars FC,1,0,,,H
+KE1,30/09/2023,Kariobangi Sharks FC,Posta Rangers FC,0,1,,,A
+KE1,30/09/2023,Sofapaka FC,Nairobi City Stars FC,1,2,,,A
+KE1,30/09/2023,Kenya Police FC,Bidco United FC,2,0,,,H
+KE1,01/10/2023,FC Talanta,Tusker FC,0,0,,,D
+KE1,01/10/2023,Gor Mahia FC,KCB FC,1,1,,,D
+KE1,01/10/2023,AFC Leopards,Shabana FC,1,1,,,D
+KE1,01/10/2023,Bandari FC,Kakamega Homeboyz FC,0,1,,,A
+KE1,06/10/2023,Posta Rangers FC,Nzoia Sugar FC,2,0,,,H
+KE1,06/10/2023,Tusker FC,Shabana FC,0,1,,,A
+KE1,06/10/2023,Kakamega Homeboyz FC,FC Talanta,3,3,,,D
+KE1,07/10/2023,Nairobi City Stars FC,Kenya Police FC,0,1,,,A
+KE1,07/10/2023,Ulinzi Stars FC,Kariobangi Sharks FC,1,0,,,H
+KE1,07/10/2023,AFC Leopards,Gor Mahia FC,0,2,,,A
+KE1,09/10/2023,Bidco United FC,Bandari FC,2,0,,,H
+KE1,09/10/2023,Muhoroni Youth FC,KCB FC,0,2,,,A
+KE1,21/10/2023,KCB FC,Ulinzi Stars FC,1,1,,,D
+KE1,21/10/2023,FC Talanta,Posta Rangers FC,3,1,,,H
+KE1,21/10/2023,Sofapaka FC,Kenya Police FC,1,0,,,H
+KE1,22/10/2023,Kariobangi Sharks FC,Muhoroni Youth FC,1,1,,,D
+KE1,22/10/2023,Bandari FC,AFC Leopards,1,0,,,H
+KE1,22/10/2023,Shabana FC,Nairobi City Stars FC,2,2,,,D
+KE1,22/10/2023,Nzoia Sugar FC,Kakamega Homeboyz FC,0,1,,,A
+KE1,22/10/2023,Tusker FC,Gor Mahia FC,0,1,,,A
+KE1,28/10/2023,Kenya Police FC,FC Talanta,1,1,,,D
+KE1,28/10/2023,Gor Mahia FC,Bidco United FC,0,0,,,D
+KE1,28/10/2023,Sofapaka FC,Tusker FC,0,1,,,A
+KE1,28/10/2023,Posta Rangers FC,Bandari FC,2,0,,,H
+KE1,29/10/2023,Nzoia Sugar FC,AFC Leopards,0,1,,,A
+KE1,29/10/2023,Kariobangi Sharks FC,Kakamega Homeboyz FC,1,0,,,H
+KE1,29/10/2023,Ulinzi Stars FC,Shabana FC,4,0,,,H
+KE1,29/10/2023,Nairobi City Stars FC,KCB FC,1,4,,,A
+KE1,01/11/2023,Bidco United FC,Muhoroni Youth FC,3,0,,,H
+KE1,01/11/2023,FC Talanta,Nzoia Sugar FC,0,0,,,D
+KE1,01/11/2023,AFC Leopards,Kariobangi Sharks FC,0,0,,,D
+KE1,01/11/2023,Bandari FC,Kenya Police FC,3,2,,,H
+KE1,01/11/2023,Tusker FC,Ulinzi Stars FC,0,1,,,A
+KE1,01/11/2023,KCB FC,Sofapaka FC,0,3,,,A
+KE1,01/11/2023,Shabana FC,Gor Mahia FC,0,1,,,A
+KE1,02/11/2023,Kakamega Homeboyz FC,Posta Rangers FC,1,1,,,D
+KE1,04/11/2023,Sofapaka FC,FC Talanta,0,3,,,A
+KE1,04/11/2023,Nairobi City Stars FC,AFC Leopards,3,2,,,H
+KE1,04/11/2023,Nzoia Sugar FC,Kariobangi Sharks FC,1,0,,,H
+KE1,05/11/2023,Posta Rangers FC,KCB FC,0,0,,,D
+KE1,05/11/2023,Ulinzi Stars FC,Bidco United FC,0,1,,,A
+KE1,05/11/2023,Bandari FC,Shabana FC,2,1,,,H
+KE1,05/11/2023,Muhoroni Youth FC,Kakamega Homeboyz FC,0,2,,,A
+KE1,05/11/2023,Gor Mahia FC,Kenya Police FC,0,0,,,D
+KE1,10/11/2023,Kakamega Homeboyz FC,Sofapaka FC,5,0,,,H
+KE1,10/11/2023,FC Talanta,Muhoroni Youth FC,2,0,,,H
+KE1,10/11/2023,Kenya Police FC,Ulinzi Stars FC,2,0,,,H
+KE1,11/11/2023,Shabana FC,Nzoia Sugar FC,2,1,,,H
+KE1,11/11/2023,Kariobangi Sharks FC,Bandari FC,0,2,,,A
+KE1,11/11/2023,KCB FC,Bidco United FC,3,0,,,H
+KE1,11/11/2023,AFC Leopards,Posta Rangers FC,1,1,,,D
+KE1,11/11/2023,Tusker FC,Nairobi City Stars FC,3,1,,,H
+KE1,25/11/2023,Posta Rangers FC,Shabana FC,3,1,,,H
+KE1,25/11/2023,Bandari FC,FC Talanta,1,1,,,D
+KE1,25/11/2023,Nairobi City Stars FC,Kariobangi Sharks FC,3,1,,,H
+KE1,25/11/2023,Sofapaka FC,AFC Leopards,1,1,,,D
+KE1,26/11/2023,Ulinzi Stars FC,Kakamega Homeboyz FC,0,1,,,A
+KE1,26/11/2023,Muhoroni Youth FC,Gor Mahia FC,0,2,,,A
+KE1,26/11/2023,Nzoia Sugar FC,Kenya Police FC,1,3,,,A
+KE1,02/12/2023,FC Talanta,Ulinzi Stars FC,0,3,,,A
+KE1,02/12/2023,Posta Rangers FC,Nairobi City Stars FC,0,1,,,A
+KE1,02/12/2023,Shabana FC,KCB FC,1,1,,,D
+KE1,03/12/2023,Kariobangi Sharks FC,Gor Mahia FC,1,2,,,A
+KE1,03/12/2023,Nzoia Sugar FC,Sofapaka FC,1,3,,,A
+KE1,03/12/2023,Bandari FC,Muhoroni Youth FC,1,0,,,H
+KE1,03/12/2023,Kakamega Homeboyz FC,Bidco United FC,1,0,,,H
+KE1,04/12/2023,AFC Leopards,Tusker FC,0,0,,,D
+KE1,09/12/2023,KCB FC,FC Talanta,0,0,,,D
+KE1,09/12/2023,Gor Mahia FC,Nzoia Sugar FC,2,2,,,D
+KE1,09/12/2023,Nairobi City Stars FC,Bandari FC,1,0,,,H
+KE1,10/12/2023,Sofapaka FC,Kariobangi Sharks FC,2,1,,,H
+KE1,10/12/2023,Kakamega Homeboyz FC,Shabana FC,2,0,,,H
+KE1,10/12/2023,Bidco United FC,AFC Leopards,2,1,,,H
+KE1,10/12/2023,Tusker FC,Posta Rangers FC,0,0,,,D
+KE1,11/12/2023,Muhoroni Youth FC,Kenya Police FC,1,1,,,D
+KE1,13/12/2023,Bidco United FC,Tusker FC,2,3,,,A
+KE1,16/12/2023,Shabana FC,Sofapaka FC,4,1,,,H
+KE1,16/12/2023,Kenya Police FC,KCB FC,1,2,,,A
+KE1,17/12/2023,Kariobangi Sharks FC,Bidco United FC,0,0,,,D
+KE1,17/12/2023,FC Talanta,Gor Mahia FC,0,2,,,A
+KE1,17/12/2023,Posta Rangers FC,Muhoroni Youth FC,0,1,,,A
+KE1,17/12/2023,Ulinzi Stars FC,Nairobi City Stars FC,1,2,,,A
+KE1,17/12/2023,Nzoia Sugar FC,Tusker FC,0,2,,,A
+KE1,17/12/2023,AFC Leopards,Kakamega Homeboyz FC,2,0,,,H
+KE1,20/12/2023,Tusker FC,Kenya Police FC,1,0,,,H
+KE1,20/12/2023,Muhoroni Youth FC,Sofapaka FC,1,0,,,H
+KE1,21/12/2023,Ulinzi Stars FC,Posta Rangers FC,0,2,,,A
+KE1,21/12/2023,FC Talanta,Kariobangi Sharks FC,0,3,,,A
+KE1,21/12/2023,KCB FC,Nzoia Sugar FC,0,1,,,A
+KE1,21/12/2023,Bidco United FC,Shabana FC,1,0,,,H
+KE1,22/12/2023,Kakamega Homeboyz FC,Nairobi City Stars FC,0,1,,,A
+KE1,22/12/2023,Gor Mahia FC,Bandari FC,1,0,,,H
+KE1,06/01/2024,Bandari FC,Nzoia Sugar FC,1,0,,,H
+KE1,06/01/2024,Nairobi City Stars FC,FC Talanta,3,0,,,H
+KE1,06/01/2024,Shabana FC,Muhoroni Youth FC,0,1,,,A
+KE1,06/01/2024,Kenya Police FC,Kakamega Homeboyz FC,3,0,,,H
+KE1,06/01/2024,Posta Rangers FC,Gor Mahia FC,0,1,,,A
+KE1,07/01/2024,Sofapaka FC,Bidco United FC,3,0,,,H
+KE1,07/01/2024,AFC Leopards,Ulinzi Stars FC,1,0,,,H
+KE1,07/01/2024,KCB FC,Tusker FC,0,5,,,A
+KE1,13/01/2024,Kakamega Homeboyz FC,Bandari FC,0,0,,,D
+KE1,13/01/2024,Gor Mahia FC,Kariobangi Sharks FC,1,0,,,H
+KE1,14/01/2024,Bidco United FC,Kenya Police FC,0,1,,,A
+KE1,14/01/2024,Muhoroni Youth FC,AFC Leopards,0,1,,,A
+KE1,14/01/2024,Nairobi City Stars FC,Posta Rangers FC,1,0,,,H
+KE1,14/01/2024,Nzoia Sugar FC,Shabana FC,2,5,,,A
+KE1,14/01/2024,Tusker FC,Sofapaka FC,3,1,,,H
+KE1,14/01/2024,Ulinzi Stars FC,KCB FC,0,0,,,D
+KE1,19/01/2024,Sofapaka FC,Kakamega Homeboyz FC,1,0,,,H
+KE1,20/01/2024,Bandari FC,Kariobangi Sharks FC,2,2,,,D
+KE1,20/01/2024,Shabana FC,Ulinzi Stars FC,0,1,,,A
+KE1,20/01/2024,KCB FC,Muhoroni Youth FC,0,0,,,D
+KE1,20/01/2024,Gor Mahia FC,Tusker FC,1,0,,,H
+KE1,21/01/2024,Kenya Police FC,Nzoia Sugar FC,2,0,,,H
+KE1,21/01/2024,AFC Leopards,Nairobi City Stars FC,2,0,,,H
+KE1,21/01/2024,FC Talanta,Bidco United FC,3,5,,,A
+KE1,03/02/2024,Tusker FC,Bidco United FC,0,1,,,A
+KE1,03/02/2024,Kakamega Homeboyz FC,Muhoroni Youth FC,0,0,,,D
+KE1,03/02/2024,Nzoia Sugar FC,Posta Rangers FC,0,1,,,A
+KE1,03/02/2024,Kenya Police FC,Gor Mahia FC,3,1,,,H
+KE1,03/02/2024,Sofapaka FC,KCB FC,2,1,,,H
+KE1,04/02/2024,Nairobi City Stars FC,Shabana FC,0,0,,,D
+KE1,04/02/2024,Ulinzi Stars FC,FC Talanta,1,0,,,H
+KE1,04/02/2024,Kariobangi Sharks FC,AFC Leopards,0,2,,,A
+KE1,10/02/2024,Bandari FC,Nairobi City Stars FC,0,1,,,A
+KE1,10/02/2024,Posta Rangers FC,Kenya Police FC,0,0,,,D
+KE1,10/02/2024,Gor Mahia FC,Ulinzi Stars FC,0,0,,,D
+KE1,11/02/2024,KCB FC,Kakamega Homeboyz FC,1,2,,,A
+KE1,11/02/2024,Bidco United FC,Nzoia Sugar FC,1,2,,,A
+KE1,11/02/2024,Muhoroni Youth FC,Kariobangi Sharks FC,1,2,,,A
+KE1,11/02/2024,FC Talanta,Sofapaka FC,1,1,,,D
+KE1,11/02/2024,Shabana FC,Tusker FC,0,4,,,A
+KE1,17/02/2024,Nairobi City Stars FC,Gor Mahia FC,0,1,,,A
+KE1,17/02/2024,Posta Rangers FC,Ulinzi Stars FC,1,0,,,H
+KE1,17/02/2024,Nzoia Sugar FC,Bandari FC,1,2,,,A
+KE1,17/02/2024,Kenya Police FC,Shabana FC,1,0,,,H
+KE1,18/02/2024,Kakamega Homeboyz FC,AFC Leopards,0,0,,,D
+KE1,18/02/2024,Tusker FC,KCB FC,2,0,,,H
+KE1,18/02/2024,Sofapaka FC,Muhoroni Youth FC,2,2,,,D
+KE1,18/02/2024,Kariobangi Sharks FC,FC Talanta,1,1,,,D
+KE1,02/03/2024,Bidco United FC,Sofapaka FC,1,1,,,D
+KE1,02/03/2024,Gor Mahia FC,Posta Rangers FC,4,0,,,H
+KE1,02/03/2024,FC Talanta,Kakamega Homeboyz FC,1,1,,,D
+KE1,02/03/2024,Muhoroni Youth FC,Tusker FC,1,2,,,A
+KE1,02/03/2024,Kariobangi Sharks FC,Nairobi City Stars FC,0,0,,,D
+KE1,03/03/2024,Shabana FC,Bandari FC,0,2,,,A
+KE1,03/03/2024,AFC Leopards,Nzoia Sugar FC,2,0,,,H
+KE1,04/03/2024,Ulinzi Stars FC,Kenya Police FC,0,0,,,D
+KE1,08/03/2024,KCB FC,Shabana FC,3,2,,,H
+KE1,09/03/2024,Nairobi City Stars FC,Bidco United FC,1,1,,,D
+KE1,09/03/2024,Bandari FC,Gor Mahia FC,1,0,,,H
+KE1,10/03/2024,Kenya Police FC,Muhoroni Youth FC,1,1,,,D
+KE1,10/03/2024,Tusker FC,AFC Leopards,1,0,,,H
+KE1,10/03/2024,Nzoia Sugar FC,FC Talanta,1,1,,,D
+KE1,10/03/2024,Posta Rangers FC,Kariobangi Sharks FC,1,5,,,A
+KE1,10/03/2024,Kakamega Homeboyz FC,Ulinzi Stars FC,2,0,,,H
+KE1,06/04/2024,Kariobangi Sharks FC,Tusker FC,3,2,,,H
+KE1,06/04/2024,Ulinzi Stars FC,Bandari FC,1,0,,,H
+KE1,06/04/2024,Shabana FC,Posta Rangers FC,3,0,,,H
+KE1,06/04/2024,Muhoroni Youth FC,Nairobi City Stars FC,2,0,,,H
+KE1,06/04/2024,Gor Mahia FC,Kakamega Homeboyz FC,0,0,,,D
+KE1,07/04/2024,AFC Leopards,Sofapaka FC,1,1,,,D
+KE1,07/04/2024,Bidco United FC,KCB FC,0,0,,,D
+KE1,07/04/2024,FC Talanta,Kenya Police FC,1,2,,,A
+KE1,13/04/2024,KCB FC,Kenya Police FC,0,1,,,A
+KE1,13/04/2024,Sofapaka FC,Ulinzi Stars FC,1,1,,,D
+KE1,13/04/2024,Bandari FC,Bidco United FC,1,1,,,D
+KE1,13/04/2024,Nzoia Sugar FC,Gor Mahia FC,1,3,,,A
+KE1,13/04/2024,Kakamega Homeboyz FC,Kariobangi Sharks FC,1,1,,,D
+KE1,14/04/2024,Tusker FC,FC Talanta,1,3,,,A
+KE1,14/04/2024,Posta Rangers FC,AFC Leopards,0,1,,,A
+KE1,15/04/2024,Muhoroni Youth FC,Shabana FC,1,2,,,A
+KE1,20/04/2024,Kariobangi Sharks FC,Nzoia Sugar FC,3,0,,,H
+KE1,20/04/2024,Bidco United FC,Posta Rangers FC,1,0,,,H
+KE1,20/04/2024,Shabana FC,Kakamega Homeboyz FC,0,0,,,D
+KE1,20/04/2024,Bandari FC,KCB FC,0,0,,,D
+KE1,20/04/2024,FC Talanta,Nairobi City Stars FC,0,3,,,A
+KE1,20/04/2024,Kenya Police FC,Sofapaka FC,2,1,,,H
+KE1,21/04/2024,Ulinzi Stars FC,Tusker FC,0,1,,,A
+KE1,21/04/2024,Gor Mahia FC,AFC Leopards,1,0,,,H
+KE1,04/05/2024,Muhoroni Youth FC,Bidco United FC,1,3,,,A
+KE1,04/05/2024,KCB FC,Kariobangi Sharks FC,0,3,,,A
+KE1,04/05/2024,Sofapaka FC,Shabana FC,0,1,,,A
+KE1,05/05/2024,AFC Leopards,Bandari FC,1,0,,,H
+KE1,05/05/2024,Kakamega Homeboyz FC,Kenya Police FC,1,2,,,A
+KE1,06/05/2024,Tusker FC,Nzoia Sugar FC,1,0,,,H
+KE1,07/05/2024,Nairobi City Stars FC,Ulinzi Stars FC,1,1,,,D
+KE1,07/05/2024,Posta Rangers FC,FC Talanta,1,0,,,H
+KE1,11/05/2024,Nzoia Sugar FC,KCB FC,1,1,,,D
+KE1,11/05/2024,Bidco United FC,Kakamega Homeboyz FC,2,2,,,D
+KE1,11/05/2024,Kariobangi Sharks FC,Sofapaka FC,5,2,,,H
+KE1,11/05/2024,Ulinzi Stars FC,Muhoroni Youth FC,0,0,,,D
+KE1,11/05/2024,Gor Mahia FC,Shabana FC,1,0,,,H
+KE1,11/05/2024,Bandari FC,Posta Rangers FC,0,0,,,D
+KE1,12/05/2024,Kenya Police FC,Nairobi City Stars FC,2,1,,,H
+KE1,12/05/2024,FC Talanta,AFC Leopards,0,3,,,A
+KE1,15/05/2024,AFC Leopards,Kenya Police FC,1,0,,,H
+KE1,15/05/2024,Muhoroni Youth FC,Bandari FC,0,0,,,D
+KE1,15/05/2024,Nairobi City Stars FC,Tusker FC,2,2,,,D
+KE1,15/05/2024,Kakamega Homeboyz FC,Nzoia Sugar FC,1,0,,,H
+KE1,15/05/2024,Bidco United FC,Ulinzi Stars FC,0,1,,,A
+KE1,15/05/2024,Shabana FC,FC Talanta,1,1,,,D
+KE1,15/05/2024,Sofapaka FC,Posta Rangers FC,2,1,,,H
+KE1,16/05/2024,KCB FC,Gor Mahia FC,0,0,,,D
+KE1,18/05/2024,Posta Rangers FC,Kakamega Homeboyz FC,2,1,,,H
+KE1,18/05/2024,Kariobangi Sharks FC,Shabana FC,2,1,,,H
+KE1,18/05/2024,Kenya Police FC,Tusker FC,0,1,,,A
+KE1,19/05/2024,Nzoia Sugar FC,Nairobi City Stars FC,0,0,,,D
+KE1,19/05/2024,Bandari FC,Sofapaka FC,2,2,,,D
+KE1,19/05/2024,Gor Mahia FC,Muhoroni Youth FC,3,0,,,H
+KE1,19/05/2024,AFC Leopards,Bidco United FC,0,1,,,A
+KE1,20/05/2024,FC Talanta,KCB FC,0,2,,,A
+KE1,14/06/2024,Ulinzi Stars FC,Nzoia Sugar FC,1,3,,,A
+KE1,15/06/2024,KCB FC,Posta Rangers FC,0,0,,,D
+KE1,15/06/2024,Tusker FC,Bandari FC,2,1,,,H
+KE1,15/06/2024,Muhoroni Youth FC,FC Talanta,0,1,,,A
+KE1,15/06/2024,Nairobi City Stars FC,Kakamega Homeboyz FC,1,1,,,D
+KE1,15/06/2024,Bidco United FC,Kariobangi Sharks FC,0,1,,,A
+KE1,15/06/2024,Shabana FC,AFC Leopards,4,3,,,H
+KE1,16/06/2024,Sofapaka FC,Gor Mahia FC,0,1,,,A
+KE1,19/06/2024,Shabana FC,Bidco United FC,3,0,,,H
+KE1,19/06/2024,Kenya Police FC,Bandari FC,0,0,,,D
+KE1,19/06/2024,AFC Leopards,KCB FC,0,0,,,D
+KE1,19/06/2024,Posta Rangers FC,Tusker FC,1,2,,,A
+KE1,19/06/2024,Nairobi City Stars FC,Sofapaka FC,1,1,,,D
+KE1,19/06/2024,Nzoia Sugar FC,Muhoroni Youth FC,0,6,,,A
+KE1,19/06/2024,Kariobangi Sharks FC,Ulinzi Stars FC,1,2,,,A
+KE1,19/06/2024,Gor Mahia FC,FC Talanta,2,4,,,A
+KE1,23/06/2024,Bidco United FC,Gor Mahia FC,3,4,,,A
+KE1,23/06/2024,KCB FC,Nairobi City Stars FC,3,2,,,H
+KE1,23/06/2024,Kenya Police FC,Kariobangi Sharks FC,2,2,,,D
+KE1,23/06/2024,Muhoroni Youth FC,Posta Rangers FC,1,1,,,D
+KE1,23/06/2024,Sofapaka FC,Nzoia Sugar FC,3,1,,,H
+KE1,23/06/2024,FC Talanta,Bandari FC,1,2,,,A
+KE1,23/06/2024,Tusker FC,Kakamega Homeboyz FC,1,0,,,H
+KE1,23/06/2024,Ulinzi Stars FC,AFC Leopards,0,1,,,A
+KE1,24/08/2024,KCB FC,Kariobangi Sharks FC,0,0,,,D
+KE1,24/08/2024,Tusker FC,Sofapaka FC,1,0,,,H
+KE1,24/08/2024,Posta Rangers FC,Bandari FC,1,1,,,D
+KE1,24/08/2024,Bidco United FC,Shabana FC,1,1,,,D
+KE1,25/08/2024,Mara Sugar FC,Kakamega Homeboyz FC,3,0,,,H
+KE1,25/08/2024,Mathare United FC,AFC Leopards,0,4,,,A
+KE1,14/09/2024,Nairobi City Stars FC,Bidco United FC,1,1,,,D
+KE1,14/09/2024,Sofapaka FC,FC Talanta,0,1,,,A
+KE1,14/09/2024,Kariobangi Sharks FC,Tusker FC,3,2,,,H
+KE1,15/09/2024,Kakamega Homeboyz FC,Mathare United FC,0,0,,,D
+KE1,15/09/2024,Bandari FC,Mara Sugar FC,1,0,,,H
+KE1,15/09/2024,AFC Leopards,Posta Rangers FC,0,1,,,A
+KE1,21/09/2024,Bidco United FC,AFC Leopards,0,1,,,A
+KE1,21/09/2024,Mara Sugar FC,Nairobi City Stars FC,1,0,,,H
+KE1,21/09/2024,Posta Rangers FC,KCB FC,0,3,,,A
+KE1,21/09/2024,Mathare United FC,Sofapaka FC,1,1,,,D
+KE1,22/09/2024,Tusker FC,Kakamega Homeboyz FC,2,2,,,D
+KE1,22/09/2024,Ulinzi Stars FC,Shabana FC,2,2,,,D
+KE1,28/09/2024,Sofapaka FC,Bandari FC,0,1,,,A
+KE1,28/09/2024,Bidco United FC,FC Talanta,1,1,,,D
+KE1,28/09/2024,Gor Mahia FC,Mathare United FC,4,0,,,H
+KE1,29/09/2024,Kenya Police FC,Tusker FC,1,1,,,D
+KE1,29/09/2024,KCB FC,Ulinzi Stars FC,1,0,,,H
+KE1,29/09/2024,AFC Leopards,Nairobi City Stars FC,2,1,,,H
+KE1,30/09/2024,Kakamega Homeboyz FC,Kariobangi Sharks FC,0,1,,,A
+KE1,18/10/2024,Mathare United FC,Bidco United FC,1,0,,,H
+KE1,19/10/2024,Nairobi City Stars FC,Sofapaka FC,1,1,,,D
+KE1,19/10/2024,KCB FC,Kakamega Homeboyz FC,4,1,,,H
+KE1,19/10/2024,Mara Sugar FC,Shabana FC,1,0,,,H
+KE1,19/10/2024,Posta Rangers FC,Gor Mahia FC,0,3,,,A
+KE1,20/10/2024,Tusker FC,FC Talanta,3,1,,,H
+KE1,20/10/2024,Kariobangi Sharks FC,AFC Leopards,1,1,,,D
+KE1,20/10/2024,Ulinzi Stars FC,Kenya Police FC,0,0,,,D
+KE1,23/10/2024,Mara Sugar FC,Posta Rangers FC,1,1,,,D
+KE1,23/10/2024,FC Talanta,Bandari FC,0,0,,,D
+KE1,23/10/2024,Kenya Police FC,Mathare United FC,2,0,,,H
+KE1,23/10/2024,Gor Mahia FC,KCB FC,0,0,,,D
+KE1,23/10/2024,Bidco United FC,Kariobangi Sharks FC,1,0,,,H
+KE1,23/10/2024,Tusker FC,Ulinzi Stars FC,1,1,,,D
+KE1,23/10/2024,Kakamega Homeboyz FC,Nairobi City Stars FC,2,0,,,H
+KE1,23/10/2024,Shabana FC,Sofapaka FC,0,1,,,A
+KE1,26/10/2024,Mathare United FC,FC Talanta,2,0,,,H
+KE1,26/10/2024,KCB FC,Tusker FC,3,2,,,H
+KE1,26/10/2024,Kariobangi Sharks FC,Shabana FC,1,1,,,D
+KE1,27/10/2024,Posta Rangers FC,Ulinzi Stars FC,1,2,,,A
+KE1,28/10/2024,Nairobi City Stars FC,Gor Mahia FC,2,1,,,H
+KE1,02/11/2024,Sofapaka FC,Kakamega Homeboyz FC,2,0,,,H
+KE1,02/11/2024,FC Talanta,Kariobangi Sharks FC,1,1,,,D
+KE1,03/11/2024,Bidco United FC,Mara Sugar FC,0,2,,,A
+KE1,03/11/2024,Mathare United FC,KCB FC,1,0,,,H
+KE1,03/11/2024,Shabana FC,Nairobi City Stars FC,0,1,,,A
+KE1,03/11/2024,Ulinzi Stars FC,AFC Leopards,2,0,,,H
+KE1,06/11/2024,Bandari FC,Gor Mahia FC,2,0,,,H
+KE1,06/11/2024,Sofapaka FC,Kenya Police FC,1,1,,,D
+KE1,10/11/2024,AFC Leopards,Mara Sugar FC,1,1,,,D
+KE1,10/11/2024,Shabana FC,Kenya Police FC,1,0,,,H
+KE1,10/11/2024,Bandari FC,Bidco United FC,0,2,,,A
+KE1,22/11/2024,KCB FC,FC Talanta,2,1,,,H
+KE1,22/11/2024,Kariobangi Sharks FC,Kenya Police FC,0,0,,,D
+KE1,23/11/2024,Posta Rangers FC,Mathare United FC,0,2,,,A
+KE1,23/11/2024,Nairobi City Stars FC,Tusker FC,0,1,,,A
+KE1,23/11/2024,Kakamega Homeboyz FC,Bandari FC,0,0,,,D
+KE1,24/11/2024,Ulinzi Stars FC,Bidco United FC,0,0,,,D
+KE1,24/11/2024,Mara Sugar FC,Sofapaka FC,1,1,,,D
+KE1,26/11/2024,Kenya Police FC,KCB FC,1,1,,,D
+KE1,27/11/2024,Bandari FC,Kariobangi Sharks FC,2,0,,,H
+KE1,27/11/2024,Bidco United FC,Posta Rangers FC,1,3,,,A
+KE1,27/11/2024,Shabana FC,AFC Leopards,2,1,,,H
+KE1,27/11/2024,Mathare United FC,Nairobi City Stars FC,0,1,,,A
+KE1,27/11/2024,FC Talanta,Ulinzi Stars FC,1,0,,,H
+KE1,27/11/2024,Tusker FC,Mara Sugar FC,2,1,,,H
+KE1,27/11/2024,Gor Mahia FC,Kakamega Homeboyz FC,2,0,,,H
+KE1,30/11/2024,FC Talanta,Posta Rangers FC,0,0,,,D
+KE1,30/11/2024,KCB FC,Bidco United FC,0,0,,,D
+KE1,30/11/2024,Nairobi City Stars FC,Bandari FC,0,1,,,A
+KE1,30/11/2024,Mara Sugar FC,Gor Mahia FC,0,2,,,A
+KE1,01/12/2024,Kariobangi Sharks FC,Sofapaka FC,1,2,,,A
+KE1,01/12/2024,Kakamega Homeboyz FC,Shabana FC,2,0,,,H
+KE1,01/12/2024,Ulinzi Stars FC,Mathare United FC,0,0,,,D
+KE1,01/12/2024,AFC Leopards,Kenya Police FC,1,0,,,H
+KE1,04/12/2024,Shabana FC,Posta Rangers FC,1,1,,,D
+KE1,04/12/2024,FC Talanta,Gor Mahia FC,2,3,,,A
+KE1,04/12/2024,Kenya Police FC,Nairobi City Stars FC,3,1,,,H
+KE1,07/12/2024,Sofapaka FC,Ulinzi Stars FC,4,1,,,H
+KE1,07/12/2024,Kenya Police FC,Mara Sugar FC,1,0,,,H
+KE1,07/12/2024,Kakamega Homeboyz FC,AFC Leopards,1,1,,,D
+KE1,07/12/2024,Tusker FC,Mathare United FC,2,0,,,H
+KE1,08/12/2024,Gor Mahia FC,Bidco United FC,0,1,,,A
+KE1,08/12/2024,Posta Rangers FC,Kariobangi Sharks FC,0,1,,,A
+KE1,08/12/2024,Shabana FC,FC Talanta,2,1,,,H
+KE1,08/12/2024,Bandari FC,KCB FC,1,1,,,D
+KE1,11/12/2024,Posta Rangers FC,Kakamega Homeboyz FC,1,1,,,D
+KE1,11/12/2024,Bidco United FC,Kenya Police FC,0,3,,,A
+KE1,11/12/2024,FC Talanta,Mara Sugar FC,2,0,,,H
+KE1,11/12/2024,Kariobangi Sharks FC,Nairobi City Stars FC,2,2,,,D
+KE1,11/12/2024,Ulinzi Stars FC,Bandari FC,1,1,,,D
+KE1,11/12/2024,Gor Mahia FC,Shabana FC,1,1,,,D
+KE1,11/12/2024,AFC Leopards,Tusker FC,4,1,,,H
+KE1,12/12/2024,KCB FC,Sofapaka FC,0,0,,,D
+KE1,14/12/2024,Mara Sugar FC,Kariobangi Sharks FC,1,0,,,H
+KE1,14/12/2024,Kakamega Homeboyz FC,Ulinzi Stars FC,1,1,,,D
+KE1,14/12/2024,Kenya Police FC,Gor Mahia FC,1,0,,,H
+KE1,14/12/2024,Nairobi City Stars FC,FC Talanta,1,1,,,D
+KE1,15/12/2024,Sofapaka FC,AFC Leopards,1,1,,,D
+KE1,15/12/2024,Bandari FC,Mathare United FC,2,2,,,D
+KE1,15/12/2024,Shabana FC,KCB FC,2,0,,,H
+KE1,15/12/2024,Tusker FC,Bidco United FC,2,1,,,H
+KE1,18/12/2024,Gor Mahia FC,Ulinzi Stars FC,3,0,,,H
+KE1,18/12/2024,FC Talanta,Kenya Police FC,0,1,,,A
+KE1,21/12/2024,Posta Rangers FC,Tusker FC,1,3,,,A
+KE1,21/12/2024,Bidco United FC,Sofapaka FC,0,2,,,A
+KE1,21/12/2024,KCB FC,Mara Sugar FC,4,3,,,H
+KE1,21/12/2024,Kenya Police FC,Kakamega Homeboyz FC,1,1,,,D
+KE1,21/12/2024,Mathare United FC,Shabana FC,1,0,,,H
+KE1,22/12/2024,AFC Leopards,Bandari FC,2,0,,,H
+KE1,22/12/2024,Ulinzi Stars FC,Nairobi City Stars FC,2,1,,,H
+KE1,22/12/2024,Gor Mahia FC,Kariobangi Sharks FC,1,0,,,H
+KE1,11/01/2025,Posta Rangers FC,Nairobi City Stars FC,2,1,,,H
+KE1,11/01/2025,Shabana FC,Tusker FC,2,1,,,H
+KE1,11/01/2025,FC Talanta,Kakamega Homeboyz FC,0,1,,,A
+KE1,12/01/2025,Mathare United FC,Kariobangi Sharks FC,0,0,,,D
+KE1,12/01/2025,Ulinzi Stars FC,Mara Sugar FC,1,0,,,H
+KE1,15/01/2025,Kenya Police FC,Posta Rangers FC,3,2,,,H
+KE1,15/01/2025,Tusker FC,Bandari FC,1,0,,,H
+KE1,18/01/2025,Kakamega Homeboyz FC,Bidco United FC,1,0,,,H
+KE1,18/01/2025,Mara Sugar FC,Mathare United FC,3,0,,,H
+KE1,18/01/2025,AFC Leopards,FC Talanta,2,4,,,A
+KE1,18/01/2025,Kariobangi Sharks FC,Ulinzi Stars FC,0,1,,,A
+KE1,19/01/2025,Bandari FC,Shabana FC,1,1,,,D
+KE1,19/01/2025,Nairobi City Stars FC,KCB FC,1,1,,,D
+KE1,19/01/2025,Sofapaka FC,Posta Rangers FC,2,1,,,H
+KE1,19/01/2025,Tusker FC,Gor Mahia FC,2,1,,,H
+KE1,22/01/2025,KCB FC,AFC Leopards,2,4,,,A
+KE1,22/01/2025,Gor Mahia FC,Sofapaka FC,2,0,,,H
+KE1,22/01/2025,Kenya Police FC,Bandari FC,3,0,,,H
+KE1,25/01/2025,Ulinzi Stars FC,Tusker FC,0,1,,,A
+KE1,25/01/2025,Posta Rangers FC,FC Talanta,2,1,,,H
+KE1,26/01/2025,Kariobangi Sharks FC,Bidco United FC,1,1,,,D
+KE1,26/01/2025,Mara Sugar FC,Kenya Police FC,0,1,,,A
+KE1,26/01/2025,Kakamega Homeboyz FC,Gor Mahia FC,0,0,,,D
+KE1,26/01/2025,Bandari FC,Nairobi City Stars FC,1,0,,,H
+KE1,26/01/2025,Sofapaka FC,Shabana FC,0,1,,,A
+KE1,31/01/2025,Bidco United FC,Ulinzi Stars FC,1,1,,,D
+KE1,01/02/2025,Gor Mahia FC,Posta Rangers FC,2,1,,,H
+KE1,01/02/2025,Kakamega Homeboyz FC,Mara Sugar FC,2,0,,,H
+KE1,01/02/2025,FC Talanta,Mathare United FC,1,1,,,D
+KE1,02/02/2025,Tusker FC,KCB FC,0,0,,,D
+KE1,02/02/2025,Nairobi City Stars FC,AFC Leopards,0,1,,,A
+KE1,02/02/2025,Kenya Police FC,Sofapaka FC,1,1,,,D
+KE1,02/02/2025,Shabana FC,Kariobangi Sharks FC,0,0,,,D
+KE1,08/02/2025,Tusker FC,Kenya Police FC,0,0,,,D
+KE1,08/02/2025,Mathare United FC,Gor Mahia FC,1,2,,,A
+KE1,08/02/2025,Bandari FC,Sofapaka FC,1,0,,,H
+KE1,08/02/2025,Bidco United FC,Nairobi City Stars FC,1,1,,,D
+KE1,09/02/2025,Ulinzi Stars FC,Kakamega Homeboyz FC,0,0,,,D
+KE1,09/02/2025,Mara Sugar FC,FC Talanta,4,1,,,H
+KE1,09/02/2025,Posta Rangers FC,Shabana FC,2,1,,,H
+KE1,09/02/2025,AFC Leopards,Kariobangi Sharks FC,0,0,,,D
+KE1,14/02/2025,Nairobi City Stars FC,Kakamega Homeboyz FC,0,5,,,A
+KE1,14/02/2025,Kariobangi Sharks FC,Posta Rangers FC,2,2,,,D
+KE1,15/02/2025,Bandari FC,FC Talanta,2,3,,,A
+KE1,15/02/2025,Sofapaka FC,KCB FC,2,0,,,H
+KE1,15/02/2025,Kenya Police FC,Bidco United FC,2,0,,,H
+KE1,15/02/2025,Mara Sugar FC,AFC Leopards,1,2,,,A
+KE1,16/02/2025,Shabana FC,Mathare United FC,0,0,,,D
+KE1,16/02/2025,Gor Mahia FC,Tusker FC,0,0,,,D
+KE1,19/02/2025,Ulinzi Stars FC,Kariobangi Sharks FC,0,0,,,D
+KE1,19/02/2025,Posta Rangers FC,Mara Sugar FC,1,1,,,D
+KE1,19/02/2025,KCB FC,Bandari FC,1,0,,,H
+KE1,19/02/2025,AFC Leopards,Sofapaka FC,0,0,,,D
+KE1,20/02/2025,Bidco United FC,Gor Mahia FC,0,0,,,D
+KE1,20/02/2025,Mathare United FC,Kenya Police FC,1,0,,,H
+KE1,21/02/2025,FC Talanta,Nairobi City Stars FC,1,1,,,D
+KE1,26/02/2025,KCB FC,Mathare United FC,1,1,,,D
+KE1,26/02/2025,Tusker FC,Shabana FC,1,1,,,D
+KE1,01/03/2025,Nairobi City Stars FC,Ulinzi Stars FC,1,0,,,H
+KE1,01/03/2025,Sofapaka FC,Mara Sugar FC,1,1,,,D
+KE1,01/03/2025,KCB FC,Posta Rangers FC,1,2,,,A
+KE1,01/03/2025,FC Talanta,Bidco United FC,0,1,,,A
+KE1,02/03/2025,Bandari FC,Tusker FC,0,0,,,D
+KE1,02/03/2025,Shabana FC,Kakamega Homeboyz FC,4,1,,,H
+KE1,04/03/2025,Kenya Police FC,AFC Leopards,0,0,,,D
+KE1,05/03/2025,Kariobangi Sharks FC,Gor Mahia FC,1,3,,,A
+KE1,14/03/2025,Tusker FC,Posta Rangers FC,2,1,,,H
+KE1,14/03/2025,Sofapaka FC,Nairobi City Stars FC,2,0,,,H
+KE1,15/03/2025,Kakamega Homeboyz FC,FC Talanta,0,0,,,D
+KE1,15/03/2025,Ulinzi Stars FC,KCB FC,1,2,,,A
+KE1,15/03/2025,Kariobangi Sharks FC,Mathare United FC,3,1,,,H
+KE1,15/03/2025,Gor Mahia FC,Bandari FC,2,0,,,H
+KE1,16/03/2025,Mara Sugar FC,Bidco United FC,0,0,,,D
+KE1,16/03/2025,AFC Leopards,Shabana FC,1,1,,,D
+KE1,28/03/2025,FC Talanta,Sofapaka FC,2,0,,,H
+KE1,28/03/2025,Mathare United FC,Mara Sugar FC,2,1,,,H
+KE1,29/03/2025,Nairobi City Stars FC,Kariobangi Sharks FC,0,0,,,D
+KE1,29/03/2025,Bandari FC,Ulinzi Stars FC,2,1,,,H
+KE1,29/03/2025,Bidco United FC,Tusker FC,0,1,,,A
+KE1,30/03/2025,Posta Rangers FC,Kenya Police FC,0,1,,,A
+KE1,30/03/2025,AFC Leopards,Gor Mahia FC,0,0,,,D
+KE1,30/03/2025,Kakamega Homeboyz FC,KCB FC,2,2,,,D
+KE1,04/04/2025,Ulinzi Stars FC,Sofapaka FC,0,1,,,A
+KE1,05/04/2025,Mathare United FC,Posta Rangers FC,3,2,,,H
+KE1,05/04/2025,AFC Leopards,Kakamega Homeboyz FC,1,2,,,A
+KE1,06/04/2025,Kariobangi Sharks FC,FC Talanta,2,1,,,H
+KE1,06/04/2025,Nairobi City Stars FC,Kenya Police FC,0,0,,,D
+KE1,06/04/2025,Shabana FC,Bandari FC,3,1,,,H
+KE1,06/04/2025,Mara Sugar FC,Tusker FC,1,1,,,D
+KE1,07/04/2025,KCB FC,Gor Mahia FC,0,1,,,A
+KE1,18/04/2025,Kenya Police FC,Ulinzi Stars FC,0,1,,,A
+KE1,18/04/2025,Posta Rangers FC,AFC Leopards,1,0,,,H
+KE1,19/04/2025,Mara Sugar FC,KCB FC,1,1,,,D
+KE1,19/04/2025,Sofapaka FC,Gor Mahia FC,1,1,,,D
+KE1,19/04/2025,Bandari FC,Kakamega Homeboyz FC,0,1,,,A
+KE1,20/04/2025,Bidco United FC,Mathare United FC,2,0,,,H
+KE1,20/04/2025,FC Talanta,Shabana FC,2,4,,,A
+KE1,20/04/2025,Tusker FC,Nairobi City Stars FC,1,0,,,H
+KE1,23/04/2025,AFC Leopards,Ulinzi Stars FC,0,0,,,D
+KE1,24/04/2025,Gor Mahia FC,FC Talanta,0,1,,,A
+KE1,26/04/2025,KCB FC,Kenya Police FC,1,2,,,A
+KE1,26/04/2025,AFC Leopards,Bidco United FC,3,1,,,H
+KE1,26/04/2025,Nairobi City Stars FC,Shabana FC,0,2,,,A
+KE1,26/04/2025,Kariobangi Sharks FC,Bandari FC,1,2,,,A
+KE1,27/04/2025,Mathare United FC,Tusker FC,2,1,,,H
+KE1,27/04/2025,Kakamega Homeboyz FC,Sofapaka FC,0,0,,,D
+KE1,27/04/2025,Ulinzi Stars FC,FC Talanta,4,0,,,H
+KE1,27/04/2025,Gor Mahia FC,Mara Sugar FC,4,0,,,H
+KE1,02/05/2025,Sofapaka FC,Mathare United FC,1,1,,,D
+KE1,02/05/2025,FC Talanta,KCB FC,1,0,,,H
+KE1,03/05/2025,Bidco United FC,Bandari FC,0,0,,,D
+KE1,03/05/2025,Tusker FC,AFC Leopards,0,0,,,D
+KE1,04/05/2025,Shabana FC,Gor Mahia FC,0,1,,,A
+KE1,04/05/2025,Kenya Police FC,Kariobangi Sharks FC,1,0,,,H
+KE1,04/05/2025,Mara Sugar FC,Ulinzi Stars FC,1,1,,,D
+KE1,05/05/2025,Kakamega Homeboyz FC,Posta Rangers FC,2,0,,,H
+KE1,09/05/2025,Nairobi City Stars FC,Mara Sugar FC,3,2,,,H
+KE1,09/05/2025,KCB FC,Shabana FC,0,1,,,A
+KE1,09/05/2025,Bandari FC,Kenya Police FC,0,1,,,A
+KE1,10/05/2025,Mathare United FC,Kakamega Homeboyz FC,0,1,,,A
+KE1,10/05/2025,Posta Rangers FC,Bidco United FC,0,0,,,D
+KE1,10/05/2025,Sofapaka FC,Kariobangi Sharks FC,0,0,,,D
+KE1,14/05/2025,AFC Leopards,Mathare United FC,3,1,,,H
+KE1,14/05/2025,Shabana FC,Bidco United FC,2,1,,,H
+KE1,14/05/2025,Kakamega Homeboyz FC,Kenya Police FC,2,1,,,H
+KE1,14/05/2025,Mara Sugar FC,Bandari FC,0,0,,,D
+KE1,14/05/2025,Ulinzi Stars FC,Posta Rangers FC,1,1,,,D
+KE1,14/05/2025,FC Talanta,Tusker FC,2,0,,,H
+KE1,15/05/2025,Kariobangi Sharks FC,KCB FC,1,0,,,H
+KE1,15/05/2025,Gor Mahia FC,Nairobi City Stars FC,1,2,,,A
+KE1,17/05/2025,Mathare United FC,Ulinzi Stars FC,1,0,,,H
+KE1,18/05/2025,Sofapaka FC,Tusker FC,7,1,,,H
+KE1,18/05/2025,Kenya Police FC,FC Talanta,1,0,,,H
+KE1,18/05/2025,Bandari FC,AFC Leopards,0,0,,,D
+KE1,18/05/2025,Shabana FC,Mara Sugar FC,0,1,,,A
+KE1,18/05/2025,Kariobangi Sharks FC,Kakamega Homeboyz FC,0,2,,,A
+KE1,18/05/2025,Nairobi City Stars FC,Posta Rangers FC,1,1,,,D
+KE1,19/05/2025,Bidco United FC,KCB FC,1,0,,,H
+KE1,02/06/2025,Gor Mahia FC,AFC Leopards,1,1,,,D
+KE1,15/06/2025,Kenya Police FC,Shabana FC,1,0,,,H
+KE1,15/06/2025,Ulinzi Stars FC,Gor Mahia FC,2,3,,,A
+KE1,15/06/2025,Tusker FC,Kariobangi Sharks FC,0,0,,,D
+KE1,15/06/2025,FC Talanta,AFC Leopards,1,3,,,A
+KE1,15/06/2025,Posta Rangers FC,Sofapaka FC,1,2,,,A
+KE1,15/06/2025,Mathare United FC,Bandari FC,0,0,,,D
+KE1,15/06/2025,Bidco United FC,Kakamega Homeboyz FC,0,1,,,A
+KE1,15/06/2025,KCB FC,Nairobi City Stars FC,1,2,,,A
+KE1,22/06/2025,Kariobangi Sharks FC,Mara Sugar FC,4,1,,,H
+KE1,22/06/2025,Bandari FC,Posta Rangers FC,1,1,,,D
+KE1,22/06/2025,Nairobi City Stars FC,Mathare United FC,0,0,,,D
+KE1,22/06/2025,Sofapaka FC,Bidco United FC,1,2,,,A
+KE1,22/06/2025,Kakamega Homeboyz FC,Tusker FC,0,0,,,D
+KE1,22/06/2025,AFC Leopards,KCB FC,0,0,,,D
+KE1,22/06/2025,Gor Mahia FC,Kenya Police FC,1,1,,,D
+KE1,22/06/2025,Shabana FC,Ulinzi Stars FC,1,1,,,D
+KE1,19/09/2025,Tusker FC,KCB FC,0,2,,,A
+KE1,20/09/2025,AFC Leopards,Sofapaka FC,1,1,,,D
+KE1,20/09/2025,Kariobangi Sharks FC,Bandari FC,0,0,,,D
+KE1,21/09/2025,Shabana FC,APS Bomet FC,4,2,,,H
+KE1,21/09/2025,Gor Mahia FC,Bidco United FC,0,1,,,A
+KE1,22/09/2025,Mathare United FC,Posta Rangers FC,1,2,,,A
+KE1,24/09/2025,Ulinzi Stars FC,Kariobangi Sharks FC,0,0,,,D
+KE1,26/09/2025,KCB FC,Mathare United FC,0,1,,,A
+KE1,27/09/2025,Sofapaka FC,Gor Mahia FC,0,2,,,A
+KE1,27/09/2025,Posta Rangers FC,Tusker FC,2,1,,,H
+KE1,27/09/2025,Mara Sugar FC,Kakamega Homeboyz FC,0,0,,,D
+KE1,28/09/2025,Bandari FC,Shabana FC,0,1,,,A
+KE1,30/09/2025,Kariobangi Sharks FC,KCB FC,0,1,,,A
+KE1,01/10/2025,Kenya Police FC,Ulinzi Stars FC,0,0,,,D
+KE1,01/10/2025,Tusker FC,Mathare United FC,0,0,,,D
+KE1,01/10/2025,Mara Sugar FC,Nairobi United FC,0,1,,,A
+KE1,03/10/2025,Sofapaka FC,Kakamega Homeboyz FC,0,1,,,A
+KE1,03/10/2025,Posta Rangers FC,AFC Leopards,2,2,,,D
+KE1,05/10/2025,Ulinzi Stars FC,Mara Sugar FC,1,2,,,A
+KE1,05/10/2025,Tusker FC,Shabana FC,1,1,,,D
+KE1,05/10/2025,Mathare United FC,Kariobangi Sharks FC,1,2,,,A
+KE1,05/10/2025,KCB FC,Gor Mahia FC,0,1,,,A
+KE1,05/10/2025,APS Bomet FC,Kenya Police FC,0,1,,,A
+KE1,06/10/2025,Bidco United FC,Nairobi United FC,1,0,,,H
+KE1,11/10/2025,Kakamega Homeboyz FC,Nairobi United FC,0,2,,,A
+KE1,15/10/2025,AFC Leopards,Bandari FC,0,0,,,D
+KE1,15/10/2025,Kakamega Homeboyz FC,Bidco United FC,3,1,,,H
+KE1,15/10/2025,Shabana FC,Posta Rangers FC,1,2,,,A
+KE1,24/10/2025,Mara Sugar FC,Bidco United FC,0,0,,,D
+KE1,25/10/2025,AFC Leopards,KCB FC,2,1,,,H
+KE1,25/10/2025,Kakamega Homeboyz FC,Ulinzi Stars FC,3,1,,,H
+KE1,25/10/2025,Kariobangi Sharks FC,APS Bomet FC,1,2,,,A
+KE1,26/10/2025,Shabana FC,Mathare United FC,0,1,,,A
+KE1,26/10/2025,Gor Mahia FC,Posta Rangers FC,3,0,,,H
+KE1,28/10/2025,Sofapaka FC,Mara Sugar FC,2,2,,,D
+KE1,29/10/2025,Tusker FC,Kariobangi Sharks FC,2,1,,,H
+KE1,29/10/2025,APS Bomet FC,Kakamega Homeboyz FC,1,2,,,A
+KE1,29/10/2025,Shabana FC,AFC Leopards,1,2,,,A
+KE1,29/10/2025,Ulinzi Stars FC,Bidco United FC,1,2,,,A
+KE1,30/10/2025,Mathare United FC,Gor Mahia FC,0,2,,,A
+KE1,01/11/2025,Mara Sugar FC,Bandari FC,0,0,,,D
+KE1,01/11/2025,Nairobi United FC,Sofapaka FC,0,3,,,A
+KE1,01/11/2025,Kariobangi Sharks FC,Shabana FC,0,0,,,D
+KE1,02/11/2025,AFC Leopards,Mathare United FC,2,0,,,H
+KE1,02/11/2025,Bidco United FC,APS Bomet FC,0,0,,,D
+KE1,02/11/2025,Kenya Police FC,Posta Rangers FC,0,0,,,D
+KE1,02/11/2025,Gor Mahia FC,Ulinzi Stars FC,1,1,,,D
+KE1,02/11/2025,Kakamega Homeboyz FC,Tusker FC,1,1,,,D
+KE1,04/11/2025,Nairobi United FC,Bandari FC,3,1,,,H
+KE1,05/11/2025,Kenya Police FC,Sofapaka FC,1,0,,,H
+KE1,07/11/2025,Bidco United FC,Tusker FC,0,1,,,A
+KE1,08/11/2025,Nairobi United FC,Kariobangi Sharks FC,4,2,,,H
+KE1,08/11/2025,Mara Sugar FC,AFC Leopards,2,0,,,H
+KE1,09/11/2025,Ulinzi Stars FC,Shabana FC,0,1,,,A
+KE1,09/11/2025,Kenya Police FC,Gor Mahia FC,0,2,,,A
+KE1,09/11/2025,Bandari FC,KCB FC,1,1,,,D
+KE1,09/11/2025,APS Bomet FC,Mathare United FC,1,1,,,D
+KE1,10/11/2025,Sofapaka FC,Posta Rangers FC,2,0,,,H
+KE1,14/11/2025,KCB FC,Bidco United FC,0,0,,,D
+KE1,15/11/2025,Posta Rangers FC,Mara Sugar FC,1,1,,,D
+KE1,15/11/2025,Mathare United FC,Kakamega Homeboyz FC,2,0,,,H
+KE1,15/11/2025,Bandari FC,Sofapaka FC,2,0,,,H
+KE1,16/11/2025,Tusker FC,Kenya Police FC,1,2,,,A
+KE1,19/11/2025,APS Bomet FC,Ulinzi Stars FC,0,1,,,A
+KE1,22/11/2025,Bidco United FC,Bandari FC,0,0,,,D
+KE1,22/11/2025,Mara Sugar FC,KCB FC,0,1,,,A
+KE1,22/11/2025,Kenya Police FC,Mathare United FC,1,0,,,H
+KE1,22/11/2025,Gor Mahia FC,Tusker FC,1,0,,,H
+KE1,23/11/2025,Kariobangi Sharks FC,AFC Leopards,1,1,,,D
+KE1,23/11/2025,Kakamega Homeboyz FC,Posta Rangers FC,2,0,,,H
+KE1,24/11/2025,Sofapaka FC,Ulinzi Stars FC,1,3,,,A
+KE1,25/11/2025,Gor Mahia FC,APS Bomet FC,1,4,,,A
+KE1,26/11/2025,Bidco United FC,Kenya Police FC,2,3,,,A
+KE1,29/11/2025,Sofapaka FC,APS Bomet FC,0,0,,,D
+KE1,29/11/2025,Mara Sugar FC,Tusker FC,0,1,,,A
+KE1,30/11/2025,Kenya Police FC,Shabana FC,0,1,,,A
+KE1,30/11/2025,Kakamega Homeboyz FC,KCB FC,1,1,,,D
+KE1,30/11/2025,Ulinzi Stars FC,Bandari FC,1,1,,,D
+KE1,01/12/2025,Bidco United FC,Posta Rangers FC,0,1,,,A
+KE1,04/12/2025,Nairobi United FC,Mathare United FC,0,1,,,A
+KE1,05/12/2025,Tusker FC,Ulinzi Stars FC,1,0,,,H
+KE1,06/12/2025,Shabana FC,Bidco United FC,1,0,,,H
+KE1,06/12/2025,Kariobangi Sharks FC,Kenya Police FC,0,1,,,A
+KE1,07/12/2025,APS Bomet FC,Bandari FC,1,0,,,H
+KE1,07/12/2025,Gor Mahia FC,AFC Leopards,0,1,,,A
+KE1,07/12/2025,KCB FC,Sofapaka FC,1,0,,,H
+KE1,08/12/2025,Posta Rangers FC,Nairobi United FC,2,0,,,H
+KE1,08/12/2025,Mathare United FC,Mara Sugar FC,0,1,,,A
+KE1,11/12/2025,Ulinzi Stars FC,KCB FC,1,2,,,A
+KE1,12/12/2025,APS Bomet FC,Posta Rangers FC,0,0,,,D
+KE1,12/12/2025,Bandari FC,Gor Mahia FC,1,1,,,D
+KE1,12/12/2025,Bidco United FC,Mathare United FC,0,0,,,D
+KE1,12/12/2025,Kakamega Homeboyz FC,Shabana FC,2,2,,,D
+KE1,13/12/2025,Mara Sugar FC,Kariobangi Sharks FC,2,0,,,H
+KE1,13/12/2025,Kenya Police FC,AFC Leopards,0,0,,,D
+KE1,14/12/2025,Sofapaka FC,Tusker FC,0,2,,,A
+KE1,16/12/2025,KCB FC,APS Bomet FC,4,2,,,H
+KE1,16/12/2025,Posta Rangers FC,Bandari FC,0,0,,,D
+KE1,17/12/2025,Tusker FC,Nairobi United FC,0,1,,,A
+KE1,17/12/2025,Shabana FC,Mara Sugar FC,0,0,,,D
+KE1,17/12/2025,Mathare United FC,Sofapaka FC,1,0,,,H
+KE1,17/12/2025,Gor Mahia FC,Kakamega Homeboyz FC,1,0,,,H
+KE1,18/12/2025,Kariobangi Sharks FC,Bidco United FC,1,0,,,H
+KE1,18/12/2025,AFC Leopards,Ulinzi Stars FC,2,1,,,H
+KE1,20/12/2025,KCB FC,Shabana FC,1,3,,,A
+KE1,21/12/2025,Bandari FC,Mathare United FC,1,0,,,H
+KE1,21/12/2025,APS Bomet FC,Tusker FC,0,1,,,A
+KE1,21/12/2025,Nairobi United FC,Gor Mahia FC,1,1,,,D
+KE1,22/12/2025,Sofapaka FC,Kariobangi Sharks FC,0,0,,,D
+KE1,22/12/2025,Kakamega Homeboyz FC,Kenya Police FC,2,2,,,D
+KE1,22/12/2025,Ulinzi Stars FC,Posta Rangers FC,3,0,,,H
+KE1,23/12/2025,Bidco United FC,AFC Leopards,0,1,,,A
+KE1,04/01/2026,Shabana FC,Nairobi United FC,1,3,,,A
+KE1,04/01/2026,AFC Leopards,Kakamega Homeboyz FC,0,1,,,A
+KE1,06/01/2026,Kariobangi Sharks FC,Gor Mahia FC,1,4,,,A
+KE1,07/01/2026,Nairobi United FC,AFC Leopards,0,2,,,A
+KE1,09/01/2026,Sofapaka FC,Bidco United FC,1,1,,,D
+KE1,09/01/2026,KCB FC,Kenya Police FC,0,0,,,D
+KE1,10/01/2026,APS Bomet FC,Mara Sugar FC,1,1,,,D
+KE1,10/01/2026,Bandari FC,Kakamega Homeboyz FC,2,1,,,H
+KE1,11/01/2026,Tusker FC,AFC Leopards,0,4,,,A
+KE1,11/01/2026,Ulinzi Stars FC,Nairobi United FC,1,1,,,D
+KE1,11/01/2026,Shabana FC,Gor Mahia FC,0,0,,,D
+KE1,11/01/2026,Posta Rangers FC,Kariobangi Sharks FC,1,1,,,D
+KE1,14/01/2026,Kenya Police FC,Mara Sugar FC,1,1,,,D
+KE1,15/01/2026,KCB FC,Nairobi United FC,0,2,,,A
+KE1,16/01/2026,Mathare United FC,Ulinzi Stars FC,1,0,,,H
+KE1,17/01/2026,Shabana FC,Sofapaka FC,1,0,,,H
+KE1,17/01/2026,Tusker FC,Bandari FC,1,2,,,A
+KE1,17/01/2026,AFC Leopards,APS Bomet FC,2,1,,,H
+KE1,18/01/2026,Kakamega Homeboyz FC,Kariobangi Sharks FC,2,0,,,H
+KE1,18/01/2026,Gor Mahia FC,Mara Sugar FC,3,0,,,H
+KE1,19/01/2026,Kenya Police FC,Nairobi United FC,1,1,,,D
+KE1,20/01/2026,Posta Rangers FC,KCB FC,0,1,,,A
+KE1,24/01/2026,Bidco United FC,Gor Mahia FC,1,2,,,A
+KE1,24/01/2026,Posta Rangers FC,Mathare United FC,1,1,,,D
+KE1,24/01/2026,Bandari FC,Kariobangi Sharks FC,0,0,,,D
+KE1,24/01/2026,Mara Sugar FC,Kenya Police FC,0,1,,,A
+KE1,24/01/2026,APS Bomet FC,Shabana FC,3,3,,,D
+KE1,25/01/2026,Sofapaka FC,AFC Leopards,0,1,,,A
+KE1,25/01/2026,KCB FC,Tusker FC,1,2,,,A
+KE1,28/01/2026,Bandari FC,Kenya Police FC,1,0,,,H
+KE1,31/01/2026,Tusker FC,Posta Rangers FC,1,1,,,D
+KE1,31/01/2026,Kakamega Homeboyz FC,Mara Sugar FC,3,3,,,D
+KE1,31/01/2026,Mathare United FC,KCB FC,1,2,,,A
+KE1,31/01/2026,Gor Mahia FC,Sofapaka FC,3,0,,,H
+KE1,01/02/2026,Shabana FC,Bandari FC,1,0,,,H
+KE1,01/02/2026,Kariobangi Sharks FC,Ulinzi Stars FC,1,0,,,H
+KE1,02/02/2026,Kenya Police FC,Bidco United FC,1,1,,,D
+KE1,04/02/2026,Nairobi United FC,APS Bomet FC,1,2,,,A
+KE1,13/02/2026,Bidco United FC,Kakamega Homeboyz FC,1,4,,,A
+KE1,14/02/2026,Bandari FC,AFC Leopards,0,0,,,D
+KE1,14/02/2026,Mathare United FC,Tusker FC,3,1,,,H
+KE1,14/02/2026,Posta Rangers FC,Shabana FC,0,2,,,A
+KE1,15/02/2026,APS Bomet FC,Gor Mahia FC,1,2,,,A
+KE1,15/02/2026,KCB FC,Kariobangi Sharks FC,1,1,,,D
+KE1,15/02/2026,Ulinzi Stars FC,Kenya Police FC,1,1,,,D
+KE1,20/02/2026,Kakamega Homeboyz FC,Sofapaka FC,2,0,,,H
+KE1,21/02/2026,AFC Leopards,Posta Rangers FC,2,1,,,H
+KE1,21/02/2026,Kariobangi Sharks FC,Mathare United FC,1,1,,,D
+KE1,21/02/2026,Shabana FC,Tusker FC,1,0,,,H
+KE1,21/02/2026,Nairobi United FC,Bidco United FC,3,0,,,H
+KE1,22/02/2026,Gor Mahia FC,KCB FC,3,0,,,H
+KE1,22/02/2026,Kenya Police FC,APS Bomet FC,0,0,,,D
+KE1,22/02/2026,Mara Sugar FC,Ulinzi Stars FC,2,1,,,H
+KE1,25/02/2026,Bandari FC,Nairobi United FC,1,1,,,D
+KE1,25/02/2026,Mathare United FC,Shabana FC,0,1,,,A
+KE1,26/02/2026,KCB FC,AFC Leopards,1,0,,,H
+KE1,26/02/2026,Bidco United FC,Mara Sugar FC,2,2,,,D
+KE1,26/02/2026,Ulinzi Stars FC,Kakamega Homeboyz FC,1,1,,,D
+KE1,26/02/2026,Sofapaka FC,Kenya Police FC,0,2,,,A
+KE1,26/02/2026,APS Bomet FC,Kariobangi Sharks FC,0,1,,,A
+KE1,28/02/2026,Gor Mahia FC,Mathare United FC,2,1,,,H
+KE1,01/03/2026,Kenya Police FC,Bandari FC,2,0,,,H
+KE1,01/03/2026,AFC Leopards,Shabana FC,5,1,,,H
+KE1,02/03/2026,Kariobangi Sharks FC,Tusker FC,1,2,,,A
+KE1,02/03/2026,Kakamega Homeboyz FC,APS Bomet FC,2,1,,,H
+KE1,02/03/2026,Mara Sugar FC,Sofapaka FC,3,1,,,H
+KE1,02/03/2026,Bidco United FC,Ulinzi Stars FC,1,0,,,H
+KE1,04/03/2026,Nairobi United FC,KCB FC,1,1,,,D
+KE1,05/03/2026,Posta Rangers FC,Gor Mahia FC,1,1,,,D
+KE1,13/03/2026,Posta Rangers FC,Kenya Police FC,2,0,,,H
+KE1,14/03/2026,Bandari FC,Mara Sugar FC,0,0,,,D
+KE1,14/03/2026,Sofapaka FC,Nairobi United FC,0,1,,,A
+KE1,14/03/2026,Mathare United FC,AFC Leopards,4,1,,,H
+KE1,14/03/2026,APS Bomet FC,Bidco United FC,1,1,,,D
+KE1,15/03/2026,Shabana FC,Kariobangi Sharks FC,1,2,,,A
+KE1,15/03/2026,Tusker FC,Kakamega Homeboyz FC,2,0,,,H
+KE1,15/03/2026,Ulinzi Stars FC,Gor Mahia FC,1,3,,,A
+KE1,18/03/2026,AFC Leopards,Nairobi United FC,1,0,,,H
+KE1,21/03/2026,Bidco United FC,Sofapaka FC,0,0,,,D
+KE1,21/03/2026,Mara Sugar FC,APS Bomet FC,0,0,,,D
+KE1,21/03/2026,Kenya Police FC,KCB FC,2,1,,,H
+KE1,21/03/2026,Gor Mahia FC,Shabana FC,2,1,,,H
+KE1,22/03/2026,Kariobangi Sharks FC,Posta Rangers FC,1,2,,,A
+KE1,22/03/2026,Kakamega Homeboyz FC,Bandari FC,1,1,,,D
+KE1,22/03/2026,Nairobi United FC,Ulinzi Stars FC,1,2,,,A
+KE1,22/03/2026,AFC Leopards,Tusker FC,1,0,,,H
+KE1,28/03/2026,Bandari FC,Bidco United FC,1,0,,,H
+KE1,28/03/2026,KCB FC,Mara Sugar FC,1,0,,,H
+KE1,28/03/2026,Posta Rangers FC,Kakamega Homeboyz FC,0,2,,,A
+KE1,29/03/2026,Ulinzi Stars FC,Sofapaka FC,2,0,,,H
+KE1,29/03/2026,AFC Leopards,Kariobangi Sharks FC,1,0,,,H
+KE1,29/03/2026,APS Bomet FC,Nairobi United FC,0,0,,,D
+KE1,01/04/2026,Nairobi United FC,Mara Sugar FC,1,1,,,D
+KE1,03/04/2026,Sofapaka FC,Bandari FC,0,0,,,D
+KE1,03/04/2026,Kenya Police FC,Tusker FC,1,0,,,H
+KE1,04/04/2026,Ulinzi Stars FC,APS Bomet FC,0,1,,,A
+KE1,04/04/2026,Kakamega Homeboyz FC,Mathare United FC,3,0,,,H
+KE1,04/04/2026,Gor Mahia FC,Kariobangi Sharks FC,0,0,,,D
+KE1,05/04/2026,Bidco United FC,KCB FC,0,1,,,A
+KE1,05/04/2026,Nairobi United FC,Shabana FC,3,0,,,H
+KE1,06/04/2026,Mara Sugar FC,Posta Rangers FC,1,0,,,H
+KE1,08/04/2026,Nairobi United FC,Kakamega Homeboyz FC,2,2,,,D
+KE1,14/04/2026,Mathare United FC,Kenya Police FC,0,0,,,D
+KE1,14/04/2026,Tusker FC,Gor Mahia FC,1,0,,,H
+KE1,18/04/2026,Tusker FC,Sofapaka FC,0,0,,,D
+KE1,18/04/2026,KCB FC,Ulinzi Stars FC,2,3,,,A
+KE1,18/04/2026,AFC Leopards,Kenya Police FC,0,3,,,A
+KE1,18/04/2026,Mathare United FC,Bidco United FC,3,0,,,H
+KE1,18/04/2026,Kariobangi Sharks FC,Mara Sugar FC,0,1,,,A
+KE1,18/04/2026,Shabana FC,Kakamega Homeboyz FC,1,0,,,H
+KE1,19/04/2026,Posta Rangers FC,APS Bomet FC,0,3,,,A
+KE1,19/04/2026,Gor Mahia FC,Bandari FC,0,0,,,D
+KE1,24/04/2026,Tusker FC,Mara Sugar FC,0,1,,,A
+KE1,24/04/2026,Posta Rangers FC,Bidco United FC,1,1,,,D
+KE1,25/04/2026,Bandari FC,Ulinzi Stars FC,1,2,,,A
+KE1,25/04/2026,Shabana FC,Kenya Police FC,0,0,,,D
+KE1,25/04/2026,Mathare United FC,Nairobi United FC,1,2,,,A
+KE1,26/04/2026,AFC Leopards,Gor Mahia FC,0,1,,,A
+KE1,26/04/2026,APS Bomet FC,Sofapaka FC,1,0,,,H
+KE1,26/04/2026,KCB FC,Kakamega Homeboyz FC,1,1,,,D
+KE1,02/05/2026,Sofapaka FC,Mathare United FC,2,2,,,D
+KE1,03/05/2026,Bidco United FC,Kariobangi Sharks FC,0,0,,,D
+KE1,03/05/2026,Kakamega Homeboyz FC,Gor Mahia FC,0,1,,,A
+KE1,06/05/2026,Bandari FC,Posta Rangers FC,1,1,,,D
+KE1,06/05/2026,APS Bomet FC,KCB FC,1,0,,,H
+KE1,06/05/2026,Nairobi United FC,Tusker FC,1,0,,,H
+KE1,09/05/2026,AFC Leopards,Mara Sugar FC,2,1,,,H
+KE1,09/05/2026,Shabana FC,Ulinzi Stars FC,0,0,,,D
+KE1,10/05/2026,Gor Mahia FC,Kenya Police FC,1,1,,,D
+KE1,10/05/2026,Tusker FC,Bidco United FC,2,0,,,H
+KE1,10/05/2026,Kariobangi Sharks FC,Nairobi United FC,2,0,,,H
+KE1,10/05/2026,KCB FC,Bandari FC,2,2,,,D
+KE1,10/05/2026,Mathare United FC,APS Bomet FC,0,2,,,A
+KE1,11/05/2026,Posta Rangers FC,Sofapaka FC,3,0,,,H
+KE1,13/05/2026,Ulinzi Stars FC,AFC Leopards,0,2,,,A
+KE1,13/05/2026,Mara Sugar FC,Shabana FC,1,0,,,H
+KE1,16/05/2026,Mara Sugar FC,Mathare United FC,0,1,,,A
+KE1,16/05/2026,Nairobi United FC,Posta Rangers FC,2,2,,,D
+KE1,16/05/2026,Kakamega Homeboyz FC,AFC Leopards,1,2,,,A
+KE1,17/05/2026,Bidco United FC,Shabana FC,0,1,,,A
+KE1,20/05/2026,Bandari FC,APS Bomet FC,0,2,,,A
+KE1,23/05/2026,Ulinzi Stars FC,Mathare United FC,2,1,,,H
+KE1,23/05/2026,Kariobangi Sharks FC,Kakamega Homeboyz FC,2,2,,,D
+KE1,23/05/2026,KCB FC,Posta Rangers FC,0,1,,,A
+KE1,24/05/2026,Sofapaka FC,Shabana FC,1,1,,,D
+KE1,24/05/2026,APS Bomet FC,AFC Leopards,2,1,,,H
+KE1,24/05/2026,Bandari FC,Tusker FC,1,0,,,H
+KE1,24/05/2026,Nairobi United FC,Kenya Police FC,0,0,,,D
+KE1,27/05/2026,Kenya Police FC,Kariobangi Sharks FC,1,1,,,D
+KE1,27/05/2026,Sofapaka FC,KCB FC,1,2,,,A
+KE1,27/05/2026,Mara Sugar FC,Gor Mahia FC,0,0,,,D
+KE1,27/05/2026,Ulinzi Stars FC,Tusker FC,2,0,,,H
+KE1,31/05/2026,Shabana FC,KCB FC,1,2,,,A
+KE1,31/05/2026,AFC Leopards,Bidco United FC,1,2,,,A
+KE1,31/05/2026,Gor Mahia FC,Nairobi United FC,0,1,,,A
+KE1,31/05/2026,Kariobangi Sharks FC,Sofapaka FC,6,0,,,H
+KE1,31/05/2026,Kenya Police FC,Kakamega Homeboyz FC,1,1,,,D
+KE1,31/05/2026,Mathare United FC,Bandari FC,1,0,,,H
+KE1,31/05/2026,Posta Rangers FC,Ulinzi Stars FC,0,1,,,A
+KE1,31/05/2026,Tusker FC,APS Bomet FC,1,1,,,D

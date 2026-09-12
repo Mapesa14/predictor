@@ -1,0 +1,381 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+NG1,22/08/2025,Remo Stars FC,Rivers United FC,1,1,,,D
+NG1,24/08/2025,El-Kanemi Warriors FC,Bendel FC,2,0,,,H
+NG1,24/08/2025,Shooting Stars SC,Bayelsa United FC,0,1,,,A
+NG1,24/08/2025,Abia Warriors FC,Kano Pillars FC,1,0,,,H
+NG1,24/08/2025,Wikki Tourists FC,Plateau United FC,1,0,,,H
+NG1,24/08/2025,Kwara United FC,Ikorodu City FC,0,0,,,D
+NG1,24/08/2025,Rangers International FC,Kun Khalifat FC,0,0,,,D
+NG1,24/08/2025,Katsina United FC,Warri Wolves FC,0,1,,,A
+NG1,24/08/2025,Barau FC,Enyimba FC,0,0,,,D
+NG1,27/08/2025,Niger Tornadoes FC,Nasarawa United FC,1,0,,,H
+NG1,30/08/2025,Bendel FC,Shooting Stars SC,1,1,,,D
+NG1,31/08/2025,Ikorodu City FC,El-Kanemi Warriors FC,0,0,,,D
+NG1,31/08/2025,Warri Wolves FC,Rangers International FC,2,0,,,H
+NG1,31/08/2025,Nasarawa United FC,Abia Warriors FC,1,0,,,H
+NG1,31/08/2025,Enyimba FC,Niger Tornadoes FC,1,0,,,H
+NG1,31/08/2025,Kano Pillars FC,Wikki Tourists FC,1,1,,,D
+NG1,31/08/2025,Rivers United FC,Kwara United FC,1,0,,,H
+NG1,31/08/2025,Plateau United FC,Katsina United FC,1,2,,,A
+NG1,31/08/2025,Bayelsa United FC,Barau FC,2,0,,,H
+NG1,01/09/2025,Kun Khalifat FC,Remo Stars FC,1,2,,,A
+NG1,07/09/2025,El-Kanemi Warriors FC,Rivers United FC,0,0,,,D
+NG1,07/09/2025,Barau FC,Bendel FC,1,1,,,D
+NG1,07/09/2025,Enyimba FC,Nasarawa United FC,0,0,,,D
+NG1,07/09/2025,Kwara United FC,Kun Khalifat FC,2,0,,,H
+NG1,07/09/2025,Niger Tornadoes FC,Bayelsa United FC,1,0,,,H
+NG1,07/09/2025,Rangers International FC,Plateau United FC,2,0,,,H
+NG1,07/09/2025,Shooting Stars SC,Ikorodu City FC,1,1,,,D
+NG1,07/09/2025,Remo Stars FC,Warri Wolves FC,1,0,,,H
+NG1,07/09/2025,Katsina United FC,Kano Pillars FC,1,0,,,H
+NG1,07/09/2025,Wikki Tourists FC,Abia Warriors FC,1,0,,,H
+NG1,13/09/2025,Bendel FC,Niger Tornadoes FC,1,0,,,H
+NG1,14/09/2025,Nasarawa United FC,Wikki Tourists FC,1,0,,,H
+NG1,14/09/2025,Abia Warriors FC,Katsina United FC,1,0,,,H
+NG1,14/09/2025,Bayelsa United FC,Enyimba FC,0,2,,,A
+NG1,14/09/2025,Ikorodu City FC,Barau FC,2,0,,,H
+NG1,14/09/2025,Kun Khalifat FC,El-Kanemi Warriors FC,3,1,,,H
+NG1,14/09/2025,Warri Wolves FC,Kwara United FC,0,0,,,D
+NG1,14/09/2025,Plateau United FC,Remo Stars FC,2,0,,,H
+NG1,14/09/2025,Kano Pillars FC,Rangers International FC,1,0,,,H
+NG1,14/09/2025,Rivers United FC,Shooting Stars SC,1,0,,,H
+NG1,21/09/2025,Bayelsa United FC,Nasarawa United FC,1,2,,,A
+NG1,21/09/2025,El-Kanemi Warriors FC,Warri Wolves FC,1,0,,,H
+NG1,21/09/2025,Enyimba FC,Bendel FC,3,2,,,H
+NG1,21/09/2025,Niger Tornadoes FC,Ikorodu City FC,4,2,,,H
+NG1,21/09/2025,Shooting Stars SC,Kun Khalifat FC,2,1,,,H
+NG1,22/09/2025,Katsina United FC,Wikki Tourists FC,1,0,,,H
+NG1,27/09/2025,Bendel FC,Bayelsa United FC,1,1,,,D
+NG1,27/09/2025,Plateau United FC,El-Kanemi Warriors FC,1,0,,,H
+NG1,28/09/2025,Ikorodu City FC,Enyimba FC,1,1,,,D
+NG1,28/09/2025,Nasarawa United FC,Katsina United FC,2,0,,,H
+NG1,28/09/2025,Kun Khalifat FC,Barau FC,1,3,,,A
+NG1,28/09/2025,Warri Wolves FC,Shooting Stars SC,1,2,,,A
+NG1,28/09/2025,Wikki Tourists FC,Rangers International FC,2,2,,,D
+NG1,01/10/2025,Rivers United FC,Niger Tornadoes FC,1,0,,,H
+NG1,02/10/2025,Abia Warriors FC,Remo Stars FC,2,0,,,H
+NG1,02/10/2025,Kwara United FC,Plateau United FC,2,1,,,H
+NG1,04/10/2025,El-Kanemi Warriors FC,Kano Pillars FC,2,1,,,H
+NG1,04/10/2025,Bendel FC,Nasarawa United FC,0,1,,,A
+NG1,05/10/2025,Barau FC,Warri Wolves FC,0,1,,,A
+NG1,05/10/2025,Niger Tornadoes FC,Kun Khalifat FC,1,1,,,D
+NG1,05/10/2025,Enyimba FC,Rivers United FC,0,0,,,D
+NG1,05/10/2025,Bayelsa United FC,Ikorodu City FC,1,1,,,D
+NG1,05/10/2025,Kwara United FC,Abia Warriors FC,0,1,,,A
+NG1,05/10/2025,Shooting Stars SC,Plateau United FC,1,0,,,H
+NG1,06/10/2025,Remo Stars FC,Wikki Tourists FC,2,0,,,H
+NG1,06/10/2025,Rangers International FC,Katsina United FC,1,0,,,H
+NG1,08/10/2025,Rangers International FC,Abia Warriors FC,2,0,,,H
+NG1,08/10/2025,Kano Pillars FC,Kwara United FC,1,0,,,H
+NG1,12/10/2025,Katsina United FC,Remo Stars FC,3,1,,,H
+NG1,12/10/2025,Wikki Tourists FC,Kwara United FC,1,1,,,D
+NG1,12/10/2025,Ikorodu City FC,Bendel FC,1,0,,,H
+NG1,12/10/2025,Nasarawa United FC,Rangers International FC,2,1,,,H
+NG1,12/10/2025,Plateau United FC,Barau FC,2,0,,,H
+NG1,12/10/2025,Kun Khalifat FC,Enyimba FC,1,0,,,H
+NG1,12/10/2025,Abia Warriors FC,El-Kanemi Warriors FC,2,0,,,H
+NG1,12/10/2025,Warri Wolves FC,Niger Tornadoes FC,1,1,,,D
+NG1,12/10/2025,Kano Pillars FC,Shooting Stars SC,1,1,,,D
+NG1,13/10/2025,Rivers United FC,Bayelsa United FC,1,2,,,A
+NG1,19/10/2025,Ikorodu City FC,Nasarawa United FC,2,0,,,H
+NG1,19/10/2025,El-Kanemi Warriors FC,Wikki Tourists FC,2,1,,,H
+NG1,19/10/2025,Niger Tornadoes FC,Plateau United FC,4,0,,,H
+NG1,19/10/2025,Enyimba FC,Warri Wolves FC,1,2,,,A
+NG1,19/10/2025,Barau FC,Kano Pillars FC,2,1,,,H
+NG1,19/10/2025,Bayelsa United FC,Kun Khalifat FC,1,2,,,A
+NG1,19/10/2025,Kwara United FC,Katsina United FC,1,0,,,H
+NG1,19/10/2025,Shooting Stars SC,Abia Warriors FC,2,0,,,H
+NG1,24/10/2025,Katsina United FC,El-Kanemi Warriors FC,1,0,,,H
+NG1,25/10/2025,Kano Pillars FC,Niger Tornadoes FC,0,2,,,A
+NG1,26/10/2025,Wikki Tourists FC,Shooting Stars SC,2,0,,,H
+NG1,26/10/2025,Warri Wolves FC,Bayelsa United FC,2,0,,,H
+NG1,26/10/2025,Abia Warriors FC,Barau FC,2,0,,,H
+NG1,26/10/2025,Plateau United FC,Enyimba FC,2,1,,,H
+NG1,26/10/2025,Rangers International FC,Kwara United FC,0,0,,,D
+NG1,26/10/2025,Kun Khalifat FC,Bendel FC,1,1,,,D
+NG1,29/10/2025,Rivers United FC,Ikorodu City FC,0,0,,,D
+NG1,01/11/2025,Bendel FC,Warri Wolves FC,1,1,,,D
+NG1,01/11/2025,Kwara United FC,Remo Stars FC,3,1,,,H
+NG1,02/11/2025,Niger Tornadoes FC,Abia Warriors FC,1,2,,,A
+NG1,02/11/2025,Ikorodu City FC,Kun Khalifat FC,2,0,,,H
+NG1,02/11/2025,Barau FC,Wikki Tourists FC,0,0,,,D
+NG1,02/11/2025,Rivers United FC,Nasarawa United FC,1,0,,,H
+NG1,02/11/2025,Shooting Stars SC,Katsina United FC,1,1,,,D
+NG1,02/11/2025,El-Kanemi Warriors FC,Rangers International FC,0,0,,,D
+NG1,02/11/2025,Enyimba FC,Kano Pillars FC,2,0,,,H
+NG1,02/11/2025,Bayelsa United FC,Plateau United FC,2,1,,,H
+NG1,06/11/2025,Nasarawa United FC,Remo Stars FC,2,1,,,H
+NG1,06/11/2025,Bendel FC,Rivers United FC,0,0,,,D
+NG1,08/11/2025,Katsina United FC,Barau FC,1,1,,,D
+NG1,09/11/2025,Warri Wolves FC,Ikorodu City FC,0,2,,,A
+NG1,09/11/2025,Abia Warriors FC,Enyimba FC,0,0,,,D
+NG1,09/11/2025,Kano Pillars FC,Bayelsa United FC,0,0,,,D
+NG1,09/11/2025,Nasarawa United FC,Kwara United FC,1,1,,,D
+NG1,09/11/2025,Rangers International FC,Shooting Stars SC,1,0,,,H
+NG1,09/11/2025,Wikki Tourists FC,Niger Tornadoes FC,1,0,,,H
+NG1,10/11/2025,Plateau United FC,Bendel FC,1,0,,,H
+NG1,10/11/2025,Remo Stars FC,El-Kanemi Warriors FC,2,1,,,H
+NG1,10/11/2025,Kun Khalifat FC,Rivers United FC,0,1,,,A
+NG1,13/11/2025,Remo Stars FC,Rangers International FC,0,1,,,A
+NG1,15/11/2025,Bendel FC,Kano Pillars FC,3,2,,,H
+NG1,16/11/2025,Bayelsa United FC,Abia Warriors FC,2,1,,,H
+NG1,16/11/2025,Ikorodu City FC,Plateau United FC,2,1,,,H
+NG1,16/11/2025,Enyimba FC,Wikki Tourists FC,0,1,,,A
+NG1,16/11/2025,Niger Tornadoes FC,Katsina United FC,2,0,,,H
+NG1,16/11/2025,Rivers United FC,Warri Wolves FC,2,1,,,H
+NG1,16/11/2025,El-Kanemi Warriors FC,Kwara United FC,2,0,,,H
+NG1,16/11/2025,Kun Khalifat FC,Nasarawa United FC,1,1,,,D
+NG1,17/11/2025,Barau FC,Rangers International FC,2,0,,,H
+NG1,19/11/2025,Remo Stars FC,Kano Pillars FC,1,0,,,H
+NG1,23/11/2025,Remo Stars FC,Barau FC,2,0,,,H
+NG1,23/11/2025,Kwara United FC,Shooting Stars SC,0,0,,,D
+NG1,23/11/2025,Nasarawa United FC,El-Kanemi Warriors FC,3,0,,,H
+NG1,23/11/2025,Rangers International FC,Niger Tornadoes FC,1,0,,,H
+NG1,23/11/2025,Wikki Tourists FC,Bayelsa United FC,1,1,,,D
+NG1,23/11/2025,Warri Wolves FC,Kun Khalifat FC,1,1,,,D
+NG1,23/11/2025,Abia Warriors FC,Bendel FC,0,0,,,D
+NG1,24/11/2025,Kano Pillars FC,Ikorodu City FC,2,1,,,H
+NG1,24/11/2025,Katsina United FC,Enyimba FC,3,2,,,H
+NG1,29/11/2025,Bendel FC,Wikki Tourists FC,3,0,,,H
+NG1,29/11/2025,Niger Tornadoes FC,Remo Stars FC,1,0,,,H
+NG1,30/11/2025,Bayelsa United FC,Katsina United FC,1,1,,,D
+NG1,30/11/2025,Kun Khalifat FC,Plateau United FC,2,0,,,H
+NG1,30/11/2025,Enyimba FC,Rangers International FC,2,1,,,H
+NG1,30/11/2025,Barau FC,Kwara United FC,3,2,,,H
+NG1,30/11/2025,Warri Wolves FC,Nasarawa United FC,1,0,,,H
+NG1,30/11/2025,Shooting Stars SC,El-Kanemi Warriors FC,1,0,,,H
+NG1,30/11/2025,Ikorodu City FC,Abia Warriors FC,1,0,,,H
+NG1,03/12/2025,Shooting Stars SC,Remo Stars FC,1,0,,,H
+NG1,03/12/2025,Rivers United FC,Kano Pillars FC,1,0,,,H
+NG1,07/12/2025,Kwara United FC,Niger Tornadoes FC,2,0,,,H
+NG1,07/12/2025,Wikki Tourists FC,Ikorodu City FC,0,0,,,D
+NG1,07/12/2025,Rangers International FC,Bayelsa United FC,4,1,,,H
+NG1,07/12/2025,Plateau United FC,Warri Wolves FC,1,0,,,H
+NG1,07/12/2025,Remo Stars FC,Enyimba FC,2,1,,,H
+NG1,07/12/2025,El-Kanemi Warriors FC,Barau FC,0,0,,,D
+NG1,07/12/2025,Abia Warriors FC,Rivers United FC,1,1,,,D
+NG1,07/12/2025,Kano Pillars FC,Kun Khalifat FC,2,1,,,H
+NG1,08/12/2025,Nasarawa United FC,Shooting Stars SC,1,0,,,H
+NG1,08/12/2025,Katsina United FC,Bendel FC,0,1,,,A
+NG1,11/12/2025,Plateau United FC,Rivers United FC,1,2,,,A
+NG1,13/12/2025,Bendel FC,Rangers International FC,1,1,,,D
+NG1,14/12/2025,Barau FC,Shooting Stars SC,0,1,,,A
+NG1,14/12/2025,Kun Khalifat FC,Abia Warriors FC,0,1,,,A
+NG1,14/12/2025,Bayelsa United FC,Remo Stars FC,2,1,,,H
+NG1,14/12/2025,Enyimba FC,Kwara United FC,3,1,,,H
+NG1,14/12/2025,Warri Wolves FC,Kano Pillars FC,0,0,,,D
+NG1,14/12/2025,Niger Tornadoes FC,El-Kanemi Warriors FC,3,0,,,H
+NG1,14/12/2025,Plateau United FC,Nasarawa United FC,0,0,,,D
+NG1,15/12/2025,Rivers United FC,Wikki Tourists FC,1,0,,,H
+NG1,15/12/2025,Ikorodu City FC,Katsina United FC,0,0,,,D
+NG1,19/12/2025,Barau FC,Rivers United FC,4,1,,,H
+NG1,21/12/2025,Remo Stars FC,Bendel FC,2,3,,,A
+NG1,21/12/2025,Abia Warriors FC,Warri Wolves FC,1,0,,,H
+NG1,21/12/2025,Shooting Stars SC,Niger Tornadoes FC,2,1,,,H
+NG1,21/12/2025,Wikki Tourists FC,Kun Khalifat FC,0,0,,,D
+NG1,21/12/2025,Kano Pillars FC,Plateau United FC,2,1,,,H
+NG1,21/12/2025,Kwara United FC,Bayelsa United FC,2,0,,,H
+NG1,21/12/2025,El-Kanemi Warriors FC,Enyimba FC,3,2,,,H
+NG1,21/12/2025,Rangers International FC,Ikorodu City FC,2,1,,,H
+NG1,22/12/2025,Katsina United FC,Rivers United FC,1,1,,,D
+NG1,23/12/2025,Nasarawa United FC,Barau FC,0,0,,,D
+NG1,27/12/2025,Bendel FC,Kwara United FC,2,0,,,H
+NG1,28/12/2025,Bayelsa United FC,El-Kanemi Warriors FC,0,1,,,A
+NG1,28/12/2025,Rivers United FC,Rangers International FC,1,0,,,H
+NG1,28/12/2025,Plateau United FC,Abia Warriors FC,0,1,,,A
+NG1,28/12/2025,Warri Wolves FC,Wikki Tourists FC,2,2,,,D
+NG1,28/12/2025,Ikorodu City FC,Remo Stars FC,1,0,,,H
+NG1,28/12/2025,Niger Tornadoes FC,Barau FC,2,0,,,H
+NG1,28/12/2025,Kun Khalifat FC,Katsina United FC,0,1,,,A
+NG1,28/12/2025,Kano Pillars FC,Nasarawa United FC,3,0,,,H
+NG1,28/12/2025,Enyimba FC,Shooting Stars SC,3,0,,,H
+NG1,14/01/2026,Nasarawa United FC,Kano Pillars FC,0,1,,,A
+NG1,14/01/2026,Shooting Stars SC,Enyimba FC,3,0,,,H
+NG1,14/01/2026,Wikki Tourists FC,Warri Wolves FC,0,1,,,A
+NG1,14/01/2026,Rangers International FC,Rivers United FC,0,0,,,D
+NG1,14/01/2026,Remo Stars FC,Ikorodu City FC,1,0,,,H
+NG1,14/01/2026,Abia Warriors FC,Plateau United FC,1,1,,,D
+NG1,14/01/2026,Barau FC,Niger Tornadoes FC,2,1,,,H
+NG1,14/01/2026,El-Kanemi Warriors FC,Bayelsa United FC,1,0,,,H
+NG1,14/01/2026,Kwara United FC,Bendel FC,0,1,,,A
+NG1,15/01/2026,Katsina United FC,Kun Khalifat FC,2,0,,,H
+NG1,18/01/2026,Bendel FC,El-Kanemi Warriors FC,3,2,,,H
+NG1,18/01/2026,Kano Pillars FC,Abia Warriors FC,0,1,,,A
+NG1,18/01/2026,Ikorodu City FC,Kwara United FC,1,0,,,H
+NG1,18/01/2026,Nasarawa United FC,Niger Tornadoes FC,2,1,,,H
+NG1,18/01/2026,Bayelsa United FC,Shooting Stars SC,2,0,,,H
+NG1,18/01/2026,Plateau United FC,Wikki Tourists FC,1,0,,,H
+NG1,18/01/2026,Rivers United FC,Remo Stars FC,1,0,,,H
+NG1,18/01/2026,Enyimba FC,Barau FC,0,0,,,D
+NG1,19/01/2026,Kun Khalifat FC,Rangers International FC,1,2,,,A
+NG1,19/01/2026,Warri Wolves FC,Katsina United FC,2,0,,,H
+NG1,24/01/2026,Katsina United FC,Plateau United FC,0,0,,,D
+NG1,25/01/2026,El-Kanemi Warriors FC,Ikorodu City FC,1,0,,,H
+NG1,25/01/2026,Barau FC,Bayelsa United FC,1,1,,,D
+NG1,25/01/2026,Abia Warriors FC,Nasarawa United FC,1,2,,,A
+NG1,25/01/2026,Shooting Stars SC,Bendel FC,1,0,,,H
+NG1,25/01/2026,Niger Tornadoes FC,Enyimba FC,2,0,,,H
+NG1,25/01/2026,Wikki Tourists FC,Kano Pillars FC,2,0,,,H
+NG1,25/01/2026,Rangers International FC,Warri Wolves FC,4,2,,,H
+NG1,26/01/2026,Remo Stars FC,Kun Khalifat FC,1,1,,,D
+NG1,28/01/2026,Plateau United FC,Rangers International FC,2,1,,,H
+NG1,28/01/2026,Abia Warriors FC,Wikki Tourists FC,1,1,,,D
+NG1,28/01/2026,Kano Pillars FC,Katsina United FC,1,0,,,H
+NG1,28/01/2026,Nasarawa United FC,Enyimba FC,1,1,,,D
+NG1,29/01/2026,Bayelsa United FC,Niger Tornadoes FC,0,0,,,D
+NG1,29/01/2026,Ikorodu City FC,Shooting Stars SC,1,0,,,H
+NG1,29/01/2026,Warri Wolves FC,Remo Stars FC,1,0,,,H
+NG1,29/01/2026,Kun Khalifat FC,Kwara United FC,1,0,,,H
+NG1,29/01/2026,Bendel FC,Barau FC,0,0,,,D
+NG1,01/02/2026,Rangers International FC,Kano Pillars FC,2,0,,,H
+NG1,01/02/2026,Wikki Tourists FC,Nasarawa United FC,1,1,,,D
+NG1,01/02/2026,Enyimba FC,Bayelsa United FC,1,0,,,H
+NG1,01/02/2026,Niger Tornadoes FC,Bendel FC,2,2,,,D
+NG1,01/02/2026,Katsina United FC,Abia Warriors FC,2,0,,,H
+NG1,02/02/2026,Barau FC,Ikorodu City FC,1,0,,,H
+NG1,02/02/2026,Kwara United FC,Warri Wolves FC,2,1,,,H
+NG1,02/02/2026,Remo Stars FC,Plateau United FC,1,2,,,A
+NG1,02/02/2026,El-Kanemi Warriors FC,Kun Khalifat FC,3,0,,,H
+NG1,07/02/2026,Bendel FC,Enyimba FC,2,0,,,H
+NG1,08/02/2026,Nasarawa United FC,Bayelsa United FC,1,1,,,D
+NG1,08/02/2026,Abia Warriors FC,Rangers International FC,0,0,,,D
+NG1,08/02/2026,Kano Pillars FC,Remo Stars FC,1,0,,,H
+NG1,08/02/2026,Ikorodu City FC,Niger Tornadoes FC,2,0,,,H
+NG1,08/02/2026,Plateau United FC,Kwara United FC,1,0,,,H
+NG1,08/02/2026,Warri Wolves FC,El-Kanemi Warriors FC,0,0,,,D
+NG1,08/02/2026,Kun Khalifat FC,Shooting Stars SC,2,0,,,H
+NG1,09/02/2026,Wikki Tourists FC,Katsina United FC,4,4,,,D
+NG1,14/02/2026,Barau FC,Kun Khalifat FC,1,0,,,H
+NG1,15/02/2026,Remo Stars FC,Abia Warriors FC,1,1,,,D
+NG1,15/02/2026,Katsina United FC,Nasarawa United FC,1,0,,,H
+NG1,15/02/2026,Enyimba FC,Ikorodu City FC,0,1,,,A
+NG1,15/02/2026,Bayelsa United FC,Bendel FC,0,0,,,D
+NG1,15/02/2026,Rangers International FC,Wikki Tourists FC,2,0,,,H
+NG1,15/02/2026,Kwara United FC,Kano Pillars FC,1,1,,,D
+NG1,15/02/2026,El-Kanemi Warriors FC,Plateau United FC,1,0,,,H
+NG1,15/02/2026,Shooting Stars SC,Warri Wolves FC,4,2,,,H
+NG1,18/02/2026,Kwara United FC,Rivers United FC,1,1,,,D
+NG1,21/02/2026,Wikki Tourists FC,Remo Stars FC,2,1,,,H
+NG1,21/02/2026,Warri Wolves FC,Barau FC,0,0,,,D
+NG1,22/02/2026,Rivers United FC,Enyimba FC,1,1,,,D
+NG1,22/02/2026,Ikorodu City FC,Bayelsa United FC,1,1,,,D
+NG1,22/02/2026,Kano Pillars FC,El-Kanemi Warriors FC,3,0,,,H
+NG1,22/02/2026,Nasarawa United FC,Bendel FC,1,0,,,H
+NG1,22/02/2026,Plateau United FC,Shooting Stars SC,4,1,,,H
+NG1,22/02/2026,Abia Warriors FC,Kwara United FC,1,0,,,H
+NG1,22/02/2026,Katsina United FC,Rangers International FC,0,0,,,D
+NG1,22/02/2026,Kun Khalifat FC,Niger Tornadoes FC,2,0,,,H
+NG1,25/02/2026,Rivers United FC,Barau FC,1,0,,,H
+NG1,28/02/2026,El-Kanemi Warriors FC,Abia Warriors FC,2,0,,,H
+NG1,28/02/2026,Kwara United FC,Wikki Tourists FC,1,0,,,H
+NG1,01/03/2026,Remo Stars FC,Katsina United FC,2,0,,,H
+NG1,01/03/2026,Bendel FC,Ikorodu City FC,4,0,,,H
+NG1,01/03/2026,Niger Tornadoes FC,Warri Wolves FC,0,0,,,D
+NG1,01/03/2026,Shooting Stars SC,Kano Pillars FC,2,1,,,H
+NG1,01/03/2026,Rangers International FC,Nasarawa United FC,2,0,,,H
+NG1,01/03/2026,Bayelsa United FC,Rivers United FC,1,0,,,H
+NG1,01/03/2026,Enyimba FC,Kun Khalifat FC,1,1,,,D
+NG1,02/03/2026,Barau FC,Plateau United FC,2,1,,,H
+NG1,04/03/2026,Rivers United FC,El-Kanemi Warriors FC,3,0,,,H
+NG1,07/03/2026,Wikki Tourists FC,El-Kanemi Warriors FC,2,1,,,H
+NG1,08/03/2026,Warri Wolves FC,Enyimba FC,2,1,,,H
+NG1,08/03/2026,Kun Khalifat FC,Bayelsa United FC,1,0,,,H
+NG1,08/03/2026,Rangers International FC,Remo Stars FC,4,1,,,H
+NG1,08/03/2026,Plateau United FC,Niger Tornadoes FC,3,0,,,H
+NG1,08/03/2026,Katsina United FC,Kwara United FC,1,2,,,A
+NG1,08/03/2026,Nasarawa United FC,Ikorodu City FC,1,0,,,H
+NG1,08/03/2026,Abia Warriors FC,Shooting Stars SC,2,0,,,H
+NG1,08/03/2026,Rivers United FC,Bendel FC,3,1,,,H
+NG1,08/03/2026,Kano Pillars FC,Barau FC,1,0,,,H
+NG1,12/03/2026,Shooting Stars SC,Rivers United FC,2,1,,,H
+NG1,14/03/2026,Bendel FC,Kun Khalifat FC,2,1,,,H
+NG1,15/03/2026,Remo Stars FC,Nasarawa United FC,2,1,,,H
+NG1,15/03/2026,Kwara United FC,Rangers International FC,0,0,,,D
+NG1,15/03/2026,Barau FC,Abia Warriors FC,2,0,,,H
+NG1,15/03/2026,Niger Tornadoes FC,Kano Pillars FC,0,0,,,D
+NG1,15/03/2026,Bayelsa United FC,Warri Wolves FC,2,1,,,H
+NG1,15/03/2026,Enyimba FC,Plateau United FC,2,0,,,H
+NG1,15/03/2026,El-Kanemi Warriors FC,Katsina United FC,1,1,,,D
+NG1,15/03/2026,Shooting Stars SC,Wikki Tourists FC,3,2,,,H
+NG1,16/03/2026,Ikorodu City FC,Rivers United FC,1,0,,,H
+NG1,19/03/2026,Niger Tornadoes FC,Rivers United FC,1,0,,,H
+NG1,21/03/2026,Wikki Tourists FC,Barau FC,0,0,,,D
+NG1,22/03/2026,Warri Wolves FC,Bendel FC,0,0,,,D
+NG1,22/03/2026,Katsina United FC,Shooting Stars SC,1,0,,,H
+NG1,22/03/2026,Remo Stars FC,Kwara United FC,3,1,,,H
+NG1,22/03/2026,Kun Khalifat FC,Ikorodu City FC,2,2,,,D
+NG1,22/03/2026,Rangers International FC,El-Kanemi Warriors FC,2,0,,,H
+NG1,22/03/2026,Plateau United FC,Bayelsa United FC,1,0,,,H
+NG1,22/03/2026,Kano Pillars FC,Enyimba FC,2,0,,,H
+NG1,23/03/2026,Nasarawa United FC,Rivers United FC,4,1,,,H
+NG1,23/03/2026,Abia Warriors FC,Niger Tornadoes FC,2,1,,,H
+NG1,28/03/2026,Bendel FC,Plateau United FC,2,2,,,D
+NG1,28/03/2026,Kwara United FC,Nasarawa United FC,1,0,,,H
+NG1,29/03/2026,Shooting Stars SC,Rangers International FC,3,1,,,H
+NG1,29/03/2026,Rivers United FC,Kun Khalifat FC,4,2,,,H
+NG1,29/03/2026,Bayelsa United FC,Kano Pillars FC,4,1,,,H
+NG1,29/03/2026,Niger Tornadoes FC,Wikki Tourists FC,2,0,,,H
+NG1,29/03/2026,Enyimba FC,Abia Warriors FC,2,1,,,H
+NG1,29/03/2026,Ikorodu City FC,Warri Wolves FC,4,3,,,H
+NG1,29/03/2026,El-Kanemi Warriors FC,Remo Stars FC,1,1,,,D
+NG1,29/03/2026,Barau FC,Katsina United FC,0,0,,,D
+NG1,04/04/2026,Wikki Tourists FC,Enyimba FC,2,2,,,D
+NG1,05/04/2026,Remo Stars FC,Shooting Stars SC,1,0,,,H
+NG1,05/04/2026,Rangers International FC,Barau FC,0,0,,,D
+NG1,05/04/2026,Warri Wolves FC,Rivers United FC,2,0,,,H
+NG1,05/04/2026,Kano Pillars FC,Bendel FC,4,0,,,H
+NG1,05/04/2026,Nasarawa United FC,Kun Khalifat FC,0,1,,,A
+NG1,05/04/2026,Kwara United FC,El-Kanemi Warriors FC,3,0,,,H
+NG1,05/04/2026,Katsina United FC,Niger Tornadoes FC,1,0,,,H
+NG1,06/04/2026,Abia Warriors FC,Bayelsa United FC,1,0,,,H
+NG1,06/04/2026,Plateau United FC,Ikorodu City FC,4,1,,,H
+NG1,11/04/2026,Bendel FC,Abia Warriors FC,1,0,,,H
+NG1,12/04/2026,Ikorodu City FC,Kano Pillars FC,3,0,,,H
+NG1,12/04/2026,Kun Khalifat FC,Warri Wolves FC,3,0,,,H
+NG1,12/04/2026,Rivers United FC,Plateau United FC,1,0,,,H
+NG1,12/04/2026,Bayelsa United FC,Wikki Tourists FC,0,1,,,A
+NG1,12/04/2026,Shooting Stars SC,Kwara United FC,0,0,,,D
+NG1,12/04/2026,Niger Tornadoes FC,Rangers International FC,0,0,,,D
+NG1,12/04/2026,Enyimba FC,Katsina United FC,3,0,,,H
+NG1,12/04/2026,Barau FC,Remo Stars FC,2,1,,,H
+NG1,14/04/2026,El-Kanemi Warriors FC,Nasarawa United FC,1,0,,,H
+NG1,19/04/2026,Kano Pillars FC,Rivers United FC,2,1,,,H
+NG1,19/04/2026,Katsina United FC,Bayelsa United FC,3,2,,,H
+NG1,19/04/2026,Abia Warriors FC,Ikorodu City FC,2,1,,,H
+NG1,19/04/2026,El-Kanemi Warriors FC,Shooting Stars SC,1,2,,,A
+NG1,19/04/2026,Nasarawa United FC,Warri Wolves FC,3,0,,,H
+NG1,19/04/2026,Kwara United FC,Barau FC,2,1,,,H
+NG1,19/04/2026,Rangers International FC,Enyimba FC,2,1,,,H
+NG1,19/04/2026,Remo Stars FC,Niger Tornadoes FC,3,0,,,H
+NG1,19/04/2026,Plateau United FC,Kun Khalifat FC,1,1,,,D
+NG1,19/04/2026,Wikki Tourists FC,Bendel FC,1,2,,,A
+NG1,03/05/2026,Rivers United FC,Abia Warriors FC,3,0,,,H
+NG1,03/05/2026,Kun Khalifat FC,Kano Pillars FC,2,1,,,H
+NG1,03/05/2026,Bayelsa United FC,Rangers International FC,0,2,,,A
+NG1,03/05/2026,Warri Wolves FC,Plateau United FC,1,0,,,H
+NG1,03/05/2026,Niger Tornadoes FC,Kwara United FC,2,2,,,D
+NG1,03/05/2026,Shooting Stars SC,Nasarawa United FC,3,2,,,H
+NG1,03/05/2026,Enyimba FC,Remo Stars FC,2,1,,,H
+NG1,03/05/2026,Barau FC,El-Kanemi Warriors FC,3,0,,,H
+NG1,04/05/2026,Bendel FC,Katsina United FC,1,0,,,H
+NG1,05/05/2026,Ikorodu City FC,Wikki Tourists FC,3,1,,,H
+NG1,10/05/2026,Rangers International FC,Bendel FC,2,1,,,H
+NG1,10/05/2026,Remo Stars FC,Bayelsa United FC,2,1,,,H
+NG1,10/05/2026,Kano Pillars FC,Warri Wolves FC,1,0,,,H
+NG1,10/05/2026,Katsina United FC,Ikorodu City FC,4,1,,,H
+NG1,10/05/2026,Kwara United FC,Enyimba FC,2,0,,,H
+NG1,10/05/2026,Nasarawa United FC,Plateau United FC,1,0,,,H
+NG1,10/05/2026,Shooting Stars SC,Barau FC,1,0,,,H
+NG1,10/05/2026,Abia Warriors FC,Kun Khalifat FC,0,2,,,A
+NG1,10/05/2026,Wikki Tourists FC,Rivers United FC,2,3,,,A
+NG1,10/05/2026,El-Kanemi Warriors FC,Niger Tornadoes FC,0,0,,,D
+NG1,24/05/2026,Rivers United FC,Katsina United FC,3,0,,,H
+NG1,24/05/2026,Ikorodu City FC,Rangers International FC,1,2,,,A
+NG1,24/05/2026,Enyimba FC,El-Kanemi Warriors FC,3,0,,,H
+NG1,24/05/2026,Plateau United FC,Kano Pillars FC,1,0,,,H
+NG1,24/05/2026,Niger Tornadoes FC,Shooting Stars SC,1,0,,,H
+NG1,24/05/2026,Bayelsa United FC,Kwara United FC,4,0,,,H
+NG1,24/05/2026,Bendel FC,Remo Stars FC,1,1,,,D
+NG1,24/05/2026,Warri Wolves FC,Abia Warriors FC,2,1,,,H
+NG1,24/05/2026,Barau FC,Nasarawa United FC,3,0,,,H
+NG1,24/05/2026,Kun Khalifat FC,Wikki Tourists FC,3,1,,,H

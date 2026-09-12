@@ -1,0 +1,706 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+UG1,15/09/2023,Bright Stars FC,BUL FC,0,1,,,A
+UG1,15/09/2023,SC Villa,Kitara FC,1,2,,,A
+UG1,15/09/2023,Mbarara City FC,NEC FC,0,1,,,A
+UG1,16/09/2023,UPDF FC,URA FC,0,0,,,D
+UG1,16/09/2023,Wakiso Giants FC,Maroons FC,0,3,,,A
+UG1,16/09/2023,Gaddafi Modern FC,Vipers SC,1,2,,,A
+UG1,16/09/2023,Arua Hill SC,Busoga United FC,0,1,,,A
+UG1,21/09/2023,Vipers SC,Arua Hill SC,2,0,,,H
+UG1,22/09/2023,URA FC,Gaddafi Modern FC,2,0,,,H
+UG1,22/09/2023,NEC FC,Busoga United FC,5,0,,,H
+UG1,22/09/2023,Kitara FC,UPDF FC,1,0,,,H
+UG1,23/09/2023,BUL FC,KCCA FC,1,0,,,H
+UG1,23/09/2023,Express FC,Mbarara City FC,0,0,,,D
+UG1,23/09/2023,Wakiso Giants FC,Bright Stars FC,1,1,,,D
+UG1,24/09/2023,Maroons FC,SC Villa,1,1,,,D
+UG1,28/09/2023,Bright Stars FC,URA FC,1,1,,,D
+UG1,28/09/2023,Busoga United FC,Express FC,0,2,,,A
+UG1,29/09/2023,SC Villa,NEC FC,3,0,,,H
+UG1,29/09/2023,UPDF FC,Wakiso Giants FC,0,2,,,A
+UG1,29/09/2023,Gaddafi Modern FC,Kitara FC,1,2,,,A
+UG1,01/10/2023,Arua Hill SC,BUL FC,1,2,,,A
+UG1,03/10/2023,Mbarara City FC,Vipers SC,0,0,,,D
+UG1,03/10/2023,KCCA FC,Maroons FC,1,2,,,A
+UG1,08/10/2023,KCCA FC,Express FC,1,2,,,A
+UG1,19/10/2023,Busoga United FC,Mbarara City FC,0,0,,,D
+UG1,20/10/2023,BUL FC,Maroons FC,3,0,,,H
+UG1,20/10/2023,NEC FC,UPDF FC,2,0,,,H
+UG1,20/10/2023,Vipers SC,SC Villa,1,1,,,D
+UG1,20/10/2023,Arua Hill SC,Gaddafi Modern FC,0,1,,,A
+UG1,20/10/2023,Kitara FC,KCCA FC,3,1,,,H
+UG1,21/10/2023,URA FC,Wakiso Giants FC,1,0,,,H
+UG1,21/10/2023,Express FC,Bright Stars FC,1,0,,,H
+UG1,24/10/2023,Gaddafi Modern FC,Busoga United FC,0,1,,,A
+UG1,24/10/2023,SC Villa,BUL FC,1,2,,,A
+UG1,25/10/2023,Mbarara City FC,Arua Hill SC,1,0,,,H
+UG1,25/10/2023,Wakiso Giants FC,Kitara FC,1,3,,,A
+UG1,26/10/2023,KCCA FC,NEC FC,0,2,,,A
+UG1,27/10/2023,UPDF FC,Express FC,1,1,,,D
+UG1,27/10/2023,Maroons FC,URA FC,1,1,,,D
+UG1,27/10/2023,Bright Stars FC,Vipers SC,0,2,,,A
+UG1,31/10/2023,Arua Hill SC,KCCA FC,1,1,,,D
+UG1,31/10/2023,Vipers SC,Wakiso Giants FC,3,0,,,H
+UG1,31/10/2023,Mbarara City FC,Bright Stars FC,1,1,,,D
+UG1,31/10/2023,BUL FC,URA FC,1,0,,,H
+UG1,01/11/2023,NEC FC,Gaddafi Modern FC,0,3,,,A
+UG1,01/11/2023,Busoga United FC,UPDF FC,0,2,,,A
+UG1,01/11/2023,Kitara FC,Maroons FC,0,1,,,A
+UG1,09/11/2023,SC Villa,Arua Hill SC,3,1,,,H
+UG1,09/11/2023,UPDF FC,BUL FC,2,0,,,H
+UG1,10/11/2023,Bright Stars FC,Busoga United FC,3,2,,,H
+UG1,10/11/2023,KCCA FC,Vipers SC,3,1,,,H
+UG1,10/11/2023,URA FC,Kitara FC,2,2,,,D
+UG1,11/11/2023,Gaddafi Modern FC,Mbarara City FC,2,1,,,H
+UG1,11/11/2023,Maroons FC,NEC FC,0,1,,,A
+UG1,17/11/2023,Wakiso Giants FC,Express FC,0,0,,,D
+UG1,23/11/2023,Gaddafi Modern FC,Bright Stars FC,2,2,,,D
+UG1,23/11/2023,Vipers SC,URA FC,2,0,,,H
+UG1,24/11/2023,Arua Hill SC,UPDF FC,2,0,,,H
+UG1,24/11/2023,Express FC,Maroons FC,0,1,,,A
+UG1,24/11/2023,Busoga United FC,KCCA FC,2,1,,,H
+UG1,25/11/2023,NEC FC,Wakiso Giants FC,1,1,,,D
+UG1,25/11/2023,Mbarara City FC,SC Villa,0,0,,,D
+UG1,26/11/2023,BUL FC,Kitara FC,2,1,,,H
+UG1,30/11/2023,Bright Stars FC,Arua Hill SC,3,1,,,H
+UG1,30/11/2023,SC Villa,Busoga United FC,2,0,,,H
+UG1,01/12/2023,URA FC,Express FC,2,1,,,H
+UG1,01/12/2023,Wakiso Giants FC,BUL FC,0,3,,,A
+UG1,01/12/2023,KCCA FC,Gaddafi Modern FC,6,1,,,H
+UG1,02/12/2023,Kitara FC,NEC FC,1,0,,,H
+UG1,02/12/2023,Maroons FC,Mbarara City FC,1,0,,,H
+UG1,03/12/2023,UPDF FC,Vipers SC,0,1,,,A
+UG1,05/12/2023,Express FC,BUL FC,1,1,,,D
+UG1,05/12/2023,Bright Stars FC,SC Villa,1,1,,,D
+UG1,05/12/2023,Arua Hill SC,Wakiso Giants FC,2,2,,,D
+UG1,06/12/2023,NEC FC,URA FC,2,0,,,H
+UG1,06/12/2023,Busoga United FC,Maroons FC,1,1,,,D
+UG1,06/12/2023,Mbarara City FC,KCCA FC,2,1,,,H
+UG1,07/12/2023,Gaddafi Modern FC,UPDF FC,2,1,,,H
+UG1,07/12/2023,Vipers SC,Kitara FC,2,1,,,H
+UG1,08/12/2023,Express FC,SC Villa,1,2,,,A
+UG1,10/12/2023,Wakiso Giants FC,Busoga United FC,3,0,,,H
+UG1,10/12/2023,URA FC,Arua Hill SC,4,1,,,H
+UG1,10/12/2023,BUL FC,NEC FC,1,1,,,D
+UG1,11/12/2023,UPDF FC,Mbarara City FC,1,1,,,D
+UG1,12/12/2023,KCCA FC,Bright Stars FC,3,0,,,H
+UG1,12/12/2023,Kitara FC,Express FC,1,0,,,H
+UG1,13/12/2023,Maroons FC,Vipers SC,1,1,,,D
+UG1,13/12/2023,SC Villa,Gaddafi Modern FC,1,0,,,H
+UG1,20/12/2023,Mbarara City FC,Kitara FC,0,0,,,D
+UG1,20/12/2023,Arua Hill SC,Maroons FC,1,3,,,A
+UG1,21/12/2023,Busoga United FC,URA FC,2,2,,,D
+UG1,21/12/2023,NEC FC,Express FC,2,5,,,A
+UG1,22/12/2023,SC Villa,KCCA FC,1,2,,,A
+UG1,22/12/2023,Bright Stars FC,UPDF FC,2,1,,,H
+UG1,22/12/2023,Vipers SC,BUL FC,2,3,,,A
+UG1,23/12/2023,Gaddafi Modern FC,Wakiso Giants FC,0,1,,,A
+UG1,28/12/2023,UPDF FC,KCCA FC,1,2,,,A
+UG1,28/12/2023,Kitara FC,Arua Hill SC,7,1,,,H
+UG1,28/12/2023,BUL FC,Busoga United FC,1,0,,,H
+UG1,29/12/2023,URA FC,Mbarara City FC,3,0,,,H
+UG1,29/12/2023,NEC FC,Bright Stars FC,0,0,,,D
+UG1,30/12/2023,Wakiso Giants FC,SC Villa,0,1,,,A
+UG1,30/12/2023,Express FC,Vipers SC,2,0,,,H
+UG1,30/12/2023,Maroons FC,Gaddafi Modern FC,5,0,,,H
+UG1,02/01/2024,SC Villa,UPDF FC,3,0,,,H
+UG1,02/01/2024,Bright Stars FC,Maroons FC,1,0,,,H
+UG1,02/01/2024,KCCA FC,URA FC,3,2,,,H
+UG1,02/01/2024,Busoga United FC,Kitara FC,2,1,,,H
+UG1,02/01/2024,Mbarara City FC,Wakiso Giants FC,2,1,,,H
+UG1,03/01/2024,Arua Hill SC,Express FC,0,1,,,A
+UG1,03/01/2024,Gaddafi Modern FC,BUL FC,2,1,,,H
+UG1,03/01/2024,Vipers SC,NEC FC,4,1,,,H
+UG1,05/01/2024,Kitara FC,Bright Stars FC,3,1,,,H
+UG1,05/01/2024,Maroons FC,UPDF FC,4,2,,,H
+UG1,06/01/2024,Express FC,Gaddafi Modern FC,3,0,,,H
+UG1,06/01/2024,NEC FC,Arua Hill SC,2,1,,,H
+UG1,06/01/2024,Wakiso Giants FC,KCCA FC,2,1,,,H
+UG1,06/01/2024,BUL FC,Mbarara City FC,1,1,,,D
+UG1,07/01/2024,URA FC,SC Villa,0,0,,,D
+UG1,07/01/2024,Vipers SC,Busoga United FC,3,0,,,H
+UG1,01/02/2024,SC Villa,Maroons FC,2,1,,,H
+UG1,02/02/2024,Mbarara City FC,Express FC,3,1,,,H
+UG1,02/02/2024,Gaddafi Modern FC,URA FC,0,1,,,A
+UG1,02/02/2024,KCCA FC,BUL FC,0,0,,,D
+UG1,03/02/2024,UPDF FC,Kitara FC,0,3,,,A
+UG1,04/02/2024,Busoga United FC,NEC FC,2,3,,,A
+UG1,04/02/2024,Bright Stars FC,Wakiso Giants FC,1,0,,,H
+UG1,06/02/2024,URA FC,UPDF FC,1,0,,,H
+UG1,07/02/2024,BUL FC,Bright Stars FC,2,1,,,H
+UG1,08/02/2024,Vipers SC,Gaddafi Modern FC,0,0,,,D
+UG1,08/02/2024,Maroons FC,Wakiso Giants FC,0,0,,,D
+UG1,09/02/2024,Kitara FC,SC Villa,1,1,,,D
+UG1,09/02/2024,NEC FC,Mbarara City FC,2,0,,,H
+UG1,10/02/2024,Express FC,KCCA FC,3,4,,,A
+UG1,13/02/2024,UPDF FC,NEC FC,2,2,,,D
+UG1,13/02/2024,Wakiso Giants FC,URA FC,1,0,,,H
+UG1,22/02/2024,Bright Stars FC,Express FC,1,1,,,D
+UG1,22/02/2024,Mbarara City FC,Busoga United FC,1,0,,,H
+UG1,23/02/2024,KCCA FC,Kitara FC,0,1,,,A
+UG1,23/02/2024,Maroons FC,BUL FC,0,0,,,D
+UG1,27/02/2024,Express FC,UPDF FC,3,1,,,H
+UG1,27/02/2024,Kitara FC,Wakiso Giants FC,1,0,,,H
+UG1,28/02/2024,NEC FC,KCCA FC,0,3,,,A
+UG1,29/02/2024,Busoga United FC,Gaddafi Modern FC,1,1,,,D
+UG1,29/02/2024,URA FC,Maroons FC,2,0,,,H
+UG1,29/02/2024,Vipers SC,Bright Stars FC,1,1,,,D
+UG1,08/03/2024,URA FC,BUL FC,1,1,,,D
+UG1,08/03/2024,Maroons FC,Kitara FC,0,0,,,D
+UG1,08/03/2024,Bright Stars FC,Mbarara City FC,1,1,,,D
+UG1,09/03/2024,Gaddafi Modern FC,NEC FC,0,1,,,A
+UG1,09/03/2024,SC Villa,Express FC,1,0,,,H
+UG1,09/03/2024,UPDF FC,Busoga United FC,2,0,,,H
+UG1,10/03/2024,Wakiso Giants FC,Vipers SC,0,4,,,A
+UG1,12/03/2024,BUL FC,UPDF FC,0,1,,,A
+UG1,13/03/2024,Express FC,Wakiso Giants FC,2,3,,,A
+UG1,13/03/2024,Mbarara City FC,Gaddafi Modern FC,5,0,,,H
+UG1,13/03/2024,NEC FC,Maroons FC,2,1,,,H
+UG1,14/03/2024,Busoga United FC,Bright Stars FC,2,2,,,D
+UG1,14/03/2024,Kitara FC,URA FC,3,0,,,H
+UG1,15/03/2024,BUL FC,SC Villa,0,1,,,A
+UG1,15/03/2024,Vipers SC,KCCA FC,0,1,,,A
+UG1,28/03/2024,Maroons FC,Express FC,2,0,,,H
+UG1,28/03/2024,KCCA FC,Busoga United FC,4,1,,,H
+UG1,29/03/2024,Kitara FC,BUL FC,0,0,,,D
+UG1,29/03/2024,Wakiso Giants FC,NEC FC,1,0,,,H
+UG1,30/03/2024,SC Villa,Mbarara City FC,2,1,,,H
+UG1,30/03/2024,URA FC,Vipers SC,0,2,,,A
+UG1,31/03/2024,Bright Stars FC,Gaddafi Modern FC,4,0,,,H
+UG1,04/04/2024,Busoga United FC,SC Villa,1,1,,,D
+UG1,04/04/2024,NEC FC,Kitara FC,1,0,,,H
+UG1,05/04/2024,Mbarara City FC,Maroons FC,0,0,,,D
+UG1,05/04/2024,Gaddafi Modern FC,KCCA FC,1,2,,,A
+UG1,05/04/2024,Vipers SC,UPDF FC,2,1,,,H
+UG1,06/04/2024,BUL FC,Wakiso Giants FC,3,0,,,H
+UG1,06/04/2024,Express FC,URA FC,1,0,,,H
+UG1,09/04/2024,SC Villa,Vipers SC,0,0,,,D
+UG1,16/04/2024,URA FC,NEC FC,2,0,,,H
+UG1,16/04/2024,UPDF FC,Gaddafi Modern FC,1,1,,,D
+UG1,18/04/2024,Maroons FC,Busoga United FC,3,0,,,H
+UG1,18/04/2024,KCCA FC,Mbarara City FC,4,0,,,H
+UG1,19/04/2024,Kitara FC,Vipers SC,0,2,,,A
+UG1,20/04/2024,BUL FC,Express FC,2,0,,,H
+UG1,21/04/2024,SC Villa,Bright Stars FC,1,1,,,D
+UG1,23/04/2024,Vipers SC,Maroons FC,1,1,,,D
+UG1,24/04/2024,NEC FC,BUL FC,1,0,,,H
+UG1,24/04/2024,Express FC,Kitara FC,1,2,,,A
+UG1,25/04/2024,Gaddafi Modern FC,SC Villa,0,1,,,A
+UG1,25/04/2024,Bright Stars FC,KCCA FC,2,2,,,D
+UG1,26/04/2024,Mbarara City FC,UPDF FC,0,0,,,D
+UG1,26/04/2024,Busoga United FC,Wakiso Giants FC,2,1,,,H
+UG1,30/04/2024,Kitara FC,Mbarara City FC,1,1,,,D
+UG1,30/04/2024,URA FC,Busoga United FC,0,0,,,D
+UG1,01/05/2024,BUL FC,Vipers SC,1,0,,,H
+UG1,01/05/2024,KCCA FC,SC Villa,2,0,,,H
+UG1,02/05/2024,UPDF FC,Bright Stars FC,1,0,,,H
+UG1,02/05/2024,Wakiso Giants FC,Gaddafi Modern FC,3,0,,,H
+UG1,05/05/2024,Express FC,Busoga United FC,1,2,,,A
+UG1,07/05/2024,Gaddafi Modern FC,Maroons FC,3,1,,,H
+UG1,07/05/2024,Mbarara City FC,URA FC,0,0,,,D
+UG1,07/05/2024,KCCA FC,UPDF FC,1,0,,,H
+UG1,08/05/2024,SC Villa,Wakiso Giants FC,3,2,,,H
+UG1,08/05/2024,Bright Stars FC,NEC FC,1,1,,,D
+UG1,08/05/2024,Vipers SC,Express FC,1,0,,,H
+UG1,11/05/2024,UPDF FC,SC Villa,0,2,,,A
+UG1,11/05/2024,Wakiso Giants FC,Mbarara City FC,2,0,,,H
+UG1,11/05/2024,NEC FC,Vipers SC,0,0,,,D
+UG1,11/05/2024,BUL FC,Gaddafi Modern FC,1,0,,,H
+UG1,11/05/2024,Kitara FC,Busoga United FC,3,2,,,H
+UG1,11/05/2024,URA FC,KCCA FC,1,0,,,H
+UG1,11/05/2024,Maroons FC,Bright Stars FC,0,0,,,D
+UG1,13/05/2024,Express FC,NEC FC,1,2,,,A
+UG1,14/05/2024,SC Villa,URA FC,2,1,,,H
+UG1,14/05/2024,Mbarara City FC,BUL FC,0,0,,,D
+UG1,14/05/2024,UPDF FC,Maroons FC,2,1,,,H
+UG1,14/05/2024,Busoga United FC,Vipers SC,1,2,,,A
+UG1,14/05/2024,Bright Stars FC,Kitara FC,1,0,,,H
+UG1,14/05/2024,KCCA FC,Wakiso Giants FC,4,0,,,H
+UG1,15/05/2024,Gaddafi Modern FC,Express FC,3,2,,,H
+UG1,18/05/2024,Busoga United FC,BUL FC,0,3,,,A
+UG1,18/05/2024,Kitara FC,Gaddafi Modern FC,3,0,,,H
+UG1,18/05/2024,Maroons FC,KCCA FC,1,1,,,D
+UG1,18/05/2024,NEC FC,SC Villa,0,2,,,A
+UG1,18/05/2024,URA FC,Bright Stars FC,1,1,,,D
+UG1,18/05/2024,Vipers SC,Mbarara City FC,4,1,,,H
+UG1,18/05/2024,Wakiso Giants FC,UPDF FC,0,1,,,A
+UG1,13/09/2024,KCCA FC,URA FC,1,0,,,H
+UG1,14/09/2024,Lugazi FC,Kitara FC,0,3,,,A
+UG1,15/09/2024,Maroons FC,UPDF FC,1,1,,,D
+UG1,15/09/2024,NEC FC,Vipers SC,3,1,,,H
+UG1,15/09/2024,Wakiso Giants FC,Bright Stars FC,1,1,,,D
+UG1,16/09/2024,Police FC,BUL FC,0,0,,,D
+UG1,16/09/2024,SC Villa,Mbarara City FC,4,2,,,H
+UG1,16/09/2024,Express FC,Mbale Heroes FC,2,1,,,H
+UG1,19/09/2024,Kitara FC,NEC FC,1,2,,,A
+UG1,19/09/2024,UPDF FC,Lugazi FC,1,0,,,H
+UG1,19/09/2024,Vipers SC,Express FC,3,0,,,H
+UG1,20/09/2024,Maroons FC,Wakiso Giants FC,2,3,,,A
+UG1,20/09/2024,Bright Stars FC,URA FC,0,1,,,A
+UG1,20/09/2024,Mbarara City FC,Police FC,0,0,,,D
+UG1,20/09/2024,BUL FC,KCCA FC,1,1,,,D
+UG1,22/09/2024,Mbale Heroes FC,SC Villa,1,0,,,H
+UG1,24/09/2024,Police FC,Bright Stars FC,1,1,,,D
+UG1,24/09/2024,NEC FC,UPDF FC,1,0,,,H
+UG1,26/09/2024,Lugazi FC,Vipers SC,0,0,,,D
+UG1,26/09/2024,SC Villa,BUL FC,2,1,,,H
+UG1,27/09/2024,KCCA FC,Kitara FC,2,0,,,H
+UG1,27/09/2024,Wakiso Giants FC,Mbale Heroes FC,1,0,,,H
+UG1,28/09/2024,URA FC,Mbarara City FC,1,1,,,D
+UG1,28/09/2024,Express FC,Maroons FC,0,0,,,D
+UG1,01/10/2024,UPDF FC,Wakiso Giants FC,1,0,,,H
+UG1,01/10/2024,Bright Stars FC,KCCA FC,0,1,,,A
+UG1,02/10/2024,BUL FC,Mbarara City FC,0,2,,,A
+UG1,03/10/2024,Kitara FC,Police FC,0,1,,,A
+UG1,03/10/2024,Express FC,NEC FC,2,1,,,H
+UG1,05/10/2024,Mbale Heroes FC,URA FC,0,4,,,A
+UG1,05/10/2024,Vipers SC,SC Villa,2,1,,,H
+UG1,06/10/2024,Maroons FC,Lugazi FC,1,0,,,H
+UG1,16/10/2024,Lugazi FC,Mbale Heroes FC,1,1,,,D
+UG1,16/10/2024,Police FC,Express FC,2,2,,,D
+UG1,17/10/2024,Wakiso Giants FC,Vipers SC,0,2,,,A
+UG1,18/10/2024,URA FC,BUL FC,0,1,,,A
+UG1,18/10/2024,NEC FC,Maroons FC,2,1,,,H
+UG1,18/10/2024,SC Villa,Bright Stars FC,2,2,,,D
+UG1,18/10/2024,Mbarara City FC,Kitara FC,1,1,,,D
+UG1,19/10/2024,KCCA FC,UPDF FC,0,0,,,D
+UG1,22/10/2024,Express FC,Lugazi FC,0,1,,,A
+UG1,23/10/2024,Bright Stars FC,Mbarara City FC,0,1,,,A
+UG1,24/10/2024,UPDF FC,URA FC,0,0,,,D
+UG1,24/10/2024,Maroons FC,SC Villa,1,1,,,D
+UG1,25/10/2024,Kitara FC,BUL FC,1,3,,,A
+UG1,25/10/2024,Vipers SC,Police FC,2,1,,,H
+UG1,26/10/2024,Mbale Heroes FC,KCCA FC,0,1,,,A
+UG1,26/10/2024,NEC FC,Wakiso Giants FC,2,0,,,H
+UG1,29/10/2024,Mbarara City FC,Vipers SC,1,3,,,A
+UG1,30/10/2024,Lugazi FC,NEC FC,1,0,,,H
+UG1,30/10/2024,Police FC,Mbale Heroes FC,2,1,,,H
+UG1,31/10/2024,BUL FC,Bright Stars FC,1,0,,,H
+UG1,31/10/2024,Wakiso Giants FC,Express FC,0,0,,,D
+UG1,31/10/2024,KCCA FC,Maroons FC,5,0,,,H
+UG1,01/11/2024,SC Villa,UPDF FC,5,0,,,H
+UG1,01/11/2024,URA FC,Kitara FC,2,0,,,H
+UG1,05/11/2024,NEC FC,Police FC,0,0,,,D
+UG1,06/11/2024,Wakiso Giants FC,Lugazi FC,0,0,,,D
+UG1,06/11/2024,UPDF FC,Mbarara City FC,2,1,,,H
+UG1,08/11/2024,Express FC,SC Villa,1,0,,,H
+UG1,08/11/2024,Bright Stars FC,Kitara FC,1,0,,,H
+UG1,09/11/2024,Maroons FC,URA FC,2,1,,,H
+UG1,09/11/2024,Vipers SC,KCCA FC,1,1,,,D
+UG1,10/11/2024,Mbale Heroes FC,BUL FC,0,0,,,D
+UG1,20/11/2024,Police FC,Lugazi FC,0,0,,,D
+UG1,21/11/2024,BUL FC,Express FC,1,1,,,D
+UG1,21/11/2024,Bright Stars FC,Maroons FC,0,1,,,A
+UG1,21/11/2024,KCCA FC,NEC FC,0,1,,,A
+UG1,22/11/2024,Kitara FC,UPDF FC,4,0,,,H
+UG1,22/11/2024,URA FC,Vipers SC,0,2,,,A
+UG1,23/11/2024,SC Villa,Wakiso Giants FC,6,1,,,H
+UG1,23/11/2024,Mbarara City FC,Mbale Heroes FC,1,0,,,H
+UG1,27/11/2024,UPDF FC,Police FC,2,2,,,D
+UG1,27/11/2024,Wakiso Giants FC,URA FC,0,3,,,A
+UG1,28/11/2024,Mbale Heroes FC,Bright Stars FC,1,0,,,H
+UG1,28/11/2024,Express FC,Mbarara City FC,3,1,,,H
+UG1,29/11/2024,Maroons FC,BUL FC,0,0,,,D
+UG1,29/11/2024,NEC FC,SC Villa,2,1,,,H
+UG1,30/11/2024,Lugazi FC,KCCA FC,1,1,,,D
+UG1,30/11/2024,Vipers SC,Kitara FC,0,0,,,D
+UG1,04/12/2024,BUL FC,UPDF FC,0,2,,,A
+UG1,04/12/2024,Police FC,Wakiso Giants FC,2,1,,,H
+UG1,05/12/2024,Mbarara City FC,Maroons FC,0,3,,,A
+UG1,05/12/2024,URA FC,NEC FC,1,1,,,D
+UG1,06/12/2024,Kitara FC,Mbale Heroes FC,6,0,,,H
+UG1,06/12/2024,SC Villa,Lugazi FC,1,1,,,D
+UG1,07/12/2024,Bright Stars FC,Vipers SC,1,2,,,A
+UG1,07/12/2024,KCCA FC,Express FC,0,1,,,A
+UG1,11/12/2024,UPDF FC,Mbale Heroes FC,1,1,,,D
+UG1,11/12/2024,NEC FC,Bright Stars FC,1,0,,,H
+UG1,12/12/2024,Lugazi FC,Mbarara City FC,1,1,,,D
+UG1,12/12/2024,Maroons FC,Kitara FC,0,4,,,A
+UG1,13/12/2024,SC Villa,Police FC,1,1,,,D
+UG1,13/12/2024,Express FC,URA FC,1,2,,,A
+UG1,14/12/2024,Vipers SC,BUL FC,1,1,,,D
+UG1,15/12/2024,Wakiso Giants FC,KCCA FC,1,2,,,A
+UG1,18/12/2024,Bright Stars FC,UPDF FC,2,1,,,H
+UG1,18/12/2024,BUL FC,NEC FC,1,1,,,D
+UG1,19/12/2024,URA FC,Lugazi FC,1,0,,,H
+UG1,19/12/2024,Police FC,Maroons FC,1,2,,,A
+UG1,20/12/2024,Mbale Heroes FC,Vipers SC,0,4,,,A
+UG1,20/12/2024,KCCA FC,SC Villa,1,1,,,D
+UG1,21/12/2024,Kitara FC,Express FC,7,0,,,H
+UG1,30/12/2024,Mbarara City FC,Wakiso Giants FC,0,0,,,D
+UG1,02/01/2025,Maroons FC,Mbale Heroes FC,1,0,,,H
+UG1,02/01/2025,Police FC,KCCA FC,0,0,,,D
+UG1,02/01/2025,Express FC,Bright Stars FC,2,1,,,H
+UG1,03/01/2025,UPDF FC,Vipers SC,0,1,,,A
+UG1,03/01/2025,Lugazi FC,BUL FC,1,2,,,A
+UG1,04/01/2025,SC Villa,URA FC,1,0,,,H
+UG1,04/01/2025,NEC FC,Mbarara City FC,1,0,,,H
+UG1,05/01/2025,Wakiso Giants FC,Kitara FC,0,0,,,D
+UG1,06/01/2025,Vipers SC,Maroons FC,1,0,,,H
+UG1,06/01/2025,UPDF FC,Express FC,0,2,,,A
+UG1,06/01/2025,Bright Stars FC,Lugazi FC,1,1,,,D
+UG1,07/01/2025,Mbarara City FC,KCCA FC,3,0,,,H
+UG1,07/01/2025,BUL FC,Wakiso Giants FC,1,1,,,D
+UG1,07/01/2025,Kitara FC,SC Villa,1,0,,,H
+UG1,07/01/2025,Mbale Heroes FC,NEC FC,0,1,,,A
+UG1,07/01/2025,URA FC,Police FC,1,0,,,H
+UG1,11/02/2025,Vipers SC,URA FC,2,0,,,H
+UG1,11/02/2025,Wakiso Giants FC,SC Villa,1,1,,,D
+UG1,12/02/2025,Maroons FC,Bright Stars FC,1,1,,,D
+UG1,12/02/2025,Express FC,BUL FC,0,2,,,A
+UG1,12/02/2025,Lugazi FC,Police FC,1,0,,,H
+UG1,13/02/2025,UPDF FC,Kitara FC,0,0,,,D
+UG1,13/02/2025,NEC FC,KCCA FC,1,0,,,H
+UG1,13/02/2025,Mbale Heroes FC,Mbarara City FC,0,1,,,A
+UG1,15/02/2025,SC Villa,Express FC,1,0,,,H
+UG1,15/02/2025,URA FC,Maroons FC,1,0,,,H
+UG1,16/02/2025,Police FC,NEC FC,1,1,,,D
+UG1,16/02/2025,Lugazi FC,Wakiso Giants FC,1,0,,,H
+UG1,16/02/2025,BUL FC,Mbale Heroes FC,3,0,,,H
+UG1,16/02/2025,KCCA FC,Vipers SC,0,2,,,A
+UG1,17/02/2025,Kitara FC,Bright Stars FC,2,0,,,H
+UG1,17/02/2025,Mbarara City FC,UPDF FC,0,1,,,A
+UG1,01/03/2025,NEC FC,Lugazi FC,2,0,,,H
+UG1,01/03/2025,Bright Stars FC,BUL FC,0,2,,,A
+UG1,01/03/2025,Mbale Heroes FC,Police FC,1,1,,,D
+UG1,01/03/2025,Kitara FC,URA FC,1,0,,,H
+UG1,02/03/2025,UPDF FC,SC Villa,2,0,,,H
+UG1,02/03/2025,Maroons FC,KCCA FC,0,0,,,D
+UG1,02/03/2025,Vipers SC,Mbarara City FC,1,0,,,H
+UG1,03/03/2025,Express FC,Wakiso Giants FC,4,1,,,H
+UG1,06/03/2025,Police FC,Vipers SC,0,1,,,A
+UG1,06/03/2025,Lugazi FC,Express FC,1,0,,,H
+UG1,06/03/2025,BUL FC,Kitara FC,1,0,,,H
+UG1,07/03/2025,URA FC,UPDF FC,2,1,,,H
+UG1,07/03/2025,Wakiso Giants FC,NEC FC,0,0,,,D
+UG1,08/03/2025,Mbarara City FC,Bright Stars FC,0,0,,,D
+UG1,08/03/2025,KCCA FC,Mbale Heroes FC,5,0,,,H
+UG1,09/03/2025,SC Villa,Maroons FC,0,2,,,A
+UG1,13/03/2025,UPDF FC,KCCA FC,1,2,,,A
+UG1,13/03/2025,Mbale Heroes FC,Lugazi FC,1,3,,,A
+UG1,13/03/2025,Express FC,Police FC,1,2,,,A
+UG1,14/03/2025,Vipers SC,Wakiso Giants FC,1,0,,,H
+UG1,14/03/2025,BUL FC,URA FC,2,1,,,H
+UG1,14/03/2025,Bright Stars FC,SC Villa,1,3,,,A
+UG1,14/03/2025,Kitara FC,Mbarara City FC,1,1,,,D
+UG1,14/03/2025,Maroons FC,NEC FC,1,3,,,A
+UG1,27/03/2025,Police FC,Kitara FC,0,1,,,A
+UG1,27/03/2025,NEC FC,Express FC,3,1,,,H
+UG1,28/03/2025,Lugazi FC,Maroons FC,0,1,,,A
+UG1,28/03/2025,Wakiso Giants FC,UPDF FC,0,1,,,A
+UG1,28/03/2025,KCCA FC,Bright Stars FC,5,0,,,H
+UG1,29/03/2025,SC Villa,Vipers SC,1,0,,,H
+UG1,29/03/2025,Mbarara City FC,BUL FC,0,0,,,D
+UG1,29/03/2025,URA FC,Mbale Heroes FC,3,2,,,H
+UG1,03/04/2025,Vipers SC,Lugazi FC,1,0,,,H
+UG1,03/04/2025,Bright Stars FC,Police FC,3,1,,,H
+UG1,04/04/2025,UPDF FC,NEC FC,0,0,,,D
+UG1,04/04/2025,Mbarara City FC,URA FC,0,2,,,A
+UG1,04/04/2025,BUL FC,SC Villa,1,0,,,H
+UG1,05/04/2025,Mbale Heroes FC,Wakiso Giants FC,0,1,,,A
+UG1,05/04/2025,Maroons FC,Express FC,1,0,,,H
+UG1,05/04/2025,Kitara FC,KCCA FC,4,0,,,H
+UG1,09/04/2025,Wakiso Giants FC,Maroons FC,3,3,,,D
+UG1,09/04/2025,URA FC,Bright Stars FC,4,0,,,H
+UG1,10/04/2025,NEC FC,Kitara FC,2,1,,,H
+UG1,10/04/2025,Police FC,Mbarara City FC,2,0,,,H
+UG1,10/04/2025,SC Villa,Mbale Heroes FC,3,1,,,H
+UG1,11/04/2025,Lugazi FC,UPDF FC,2,2,,,D
+UG1,11/04/2025,Express FC,Vipers SC,2,2,,,D
+UG1,12/04/2025,KCCA FC,BUL FC,1,2,,,A
+UG1,15/04/2025,Kitara FC,Lugazi FC,0,0,,,D
+UG1,15/04/2025,Bright Stars FC,Wakiso Giants FC,0,0,,,D
+UG1,16/04/2025,URA FC,KCCA FC,1,0,,,H
+UG1,16/04/2025,UPDF FC,Maroons FC,2,1,,,H
+UG1,16/04/2025,BUL FC,Police FC,0,0,,,D
+UG1,16/04/2025,Mbale Heroes FC,Express FC,0,1,,,A
+UG1,16/04/2025,Mbarara City FC,SC Villa,0,2,,,A
+UG1,17/04/2025,Vipers SC,NEC FC,3,1,,,H
+UG1,24/04/2025,Maroons FC,Vipers SC,0,1,,,A
+UG1,24/04/2025,Express FC,UPDF FC,2,2,,,D
+UG1,25/04/2025,Lugazi FC,Bright Stars FC,3,1,,,H
+UG1,25/04/2025,Police FC,URA FC,2,0,,,H
+UG1,25/04/2025,NEC FC,Mbale Heroes FC,2,0,,,H
+UG1,26/04/2025,KCCA FC,Mbarara City FC,1,0,,,H
+UG1,26/04/2025,Wakiso Giants FC,BUL FC,1,2,,,A
+UG1,26/04/2025,SC Villa,Kitara FC,0,0,,,D
+UG1,29/04/2025,BUL FC,Lugazi FC,4,0,,,H
+UG1,29/04/2025,KCCA FC,Police FC,2,1,,,H
+UG1,29/04/2025,Vipers SC,UPDF FC,1,0,,,H
+UG1,30/04/2025,Mbarara City FC,NEC FC,1,2,,,A
+UG1,30/04/2025,Kitara FC,Wakiso Giants FC,0,0,,,D
+UG1,30/04/2025,Bright Stars FC,Express FC,0,1,,,A
+UG1,30/04/2025,Mbale Heroes FC,Maroons FC,0,1,,,A
+UG1,30/04/2025,URA FC,SC Villa,1,1,,,D
+UG1,06/05/2025,Express FC,Kitara FC,1,0,,,H
+UG1,06/05/2025,UPDF FC,Bright Stars FC,1,0,,,H
+UG1,06/05/2025,Maroons FC,Police FC,1,0,,,H
+UG1,06/05/2025,Wakiso Giants FC,Mbarara City FC,0,1,,,A
+UG1,06/05/2025,Lugazi FC,URA FC,0,1,,,A
+UG1,07/05/2025,SC Villa,KCCA FC,2,2,,,D
+UG1,07/05/2025,Vipers SC,Mbale Heroes FC,6,0,,,H
+UG1,07/05/2025,NEC FC,BUL FC,1,1,,,D
+UG1,10/05/2025,URA FC,Express FC,5,0,,,H
+UG1,10/05/2025,Bright Stars FC,NEC FC,1,5,,,A
+UG1,10/05/2025,Mbarara City FC,Lugazi FC,1,0,,,H
+UG1,10/05/2025,Mbale Heroes FC,UPDF FC,0,3,,,A
+UG1,10/05/2025,Kitara FC,Maroons FC,1,0,,,H
+UG1,10/05/2025,BUL FC,Vipers SC,1,0,,,H
+UG1,10/05/2025,KCCA FC,Wakiso Giants FC,5,0,,,H
+UG1,11/05/2025,Police FC,SC Villa,1,3,,,A
+UG1,14/05/2025,Kitara FC,Vipers SC,0,2,,,A
+UG1,14/05/2025,SC Villa,NEC FC,0,1,,,A
+UG1,14/05/2025,BUL FC,Maroons FC,1,0,,,H
+UG1,14/05/2025,KCCA FC,Lugazi FC,5,0,,,H
+UG1,15/05/2025,Police FC,UPDF FC,1,0,,,H
+UG1,16/05/2025,URA FC,Wakiso Giants FC,4,1,,,H
+UG1,16/05/2025,Mbarara City FC,Express FC,2,0,,,H
+UG1,16/05/2025,Bright Stars FC,Mbale Heroes FC,5,1,,,H
+UG1,24/05/2025,Vipers SC,Bright Stars FC,1,1,,,D
+UG1,24/05/2025,Lugazi FC,SC Villa,0,1,,,A
+UG1,24/05/2025,Mbale Heroes FC,Kitara FC,1,6,,,A
+UG1,24/05/2025,NEC FC,URA FC,1,0,,,H
+UG1,24/05/2025,UPDF FC,BUL FC,2,3,,,A
+UG1,24/05/2025,Wakiso Giants FC,Police FC,0,2,,,A
+UG1,24/05/2025,Maroons FC,Mbarara City FC,2,0,,,H
+UG1,24/05/2025,Express FC,KCCA FC,0,3,,,A
+UG1,26/09/2025,Police FC,Mbarara City FC,1,1,,,D
+UG1,26/09/2025,BUL FC,URA FC,0,0,,,D
+UG1,26/09/2025,Entebbe UPPC FC,Buhimba United Saints,0,1,,,A
+UG1,26/09/2025,Kitara FC,KCCA FC,1,1,,,D
+UG1,26/09/2025,Lugazi FC,Calvary FC,3,1,,,H
+UG1,26/09/2025,Express FC,UPDF FC,1,0,,,H
+UG1,01/10/2025,Entebbe UPPC FC,Lugazi FC,2,1,,,H
+UG1,01/10/2025,BUL FC,Maroons FC,1,0,,,H
+UG1,02/10/2025,Police FC,Express FC,2,1,,,H
+UG1,02/10/2025,URA FC,NEC FC,1,1,,,D
+UG1,03/10/2025,Mbarara City FC,UPDF FC,0,1,,,A
+UG1,04/10/2025,Buhimba United Saints,Calvary FC,2,0,,,H
+UG1,04/10/2025,KCCA FC,SC Villa,2,1,,,H
+UG1,04/10/2025,Kitara FC,Vipers SC,3,0,,,H
+UG1,15/10/2025,UPDF FC,Maroons FC,1,2,,,A
+UG1,15/10/2025,SC Villa,Entebbe UPPC FC,1,1,,,D
+UG1,16/10/2025,Buhimba United Saints,Kitara FC,1,0,,,H
+UG1,16/10/2025,KCCA FC,Lugazi FC,0,0,,,D
+UG1,17/10/2025,Mbarara City FC,BUL FC,1,1,,,D
+UG1,17/10/2025,URA FC,Express FC,1,1,,,D
+UG1,18/10/2025,NEC FC,Police FC,2,2,,,D
+UG1,22/10/2025,Maroons FC,Calvary FC,0,0,,,D
+UG1,22/10/2025,Lugazi FC,URA FC,0,0,,,D
+UG1,23/10/2025,Express FC,KCCA FC,0,1,,,A
+UG1,23/10/2025,BUL FC,Buhimba United Saints,3,0,,,H
+UG1,24/10/2025,SC Villa,Police FC,2,1,,,H
+UG1,24/10/2025,Kitara FC,Mbarara City FC,3,2,,,H
+UG1,25/10/2025,Entebbe UPPC FC,NEC FC,1,0,,,H
+UG1,29/10/2025,Police FC,Maroons FC,2,1,,,H
+UG1,29/10/2025,URA FC,UPDF FC,3,2,,,H
+UG1,30/10/2025,Kitara FC,Lugazi FC,4,0,,,H
+UG1,30/10/2025,BUL FC,Express FC,0,0,,,D
+UG1,31/10/2025,Buhimba United Saints,SC Villa,0,3,,,A
+UG1,31/10/2025,KCCA FC,Calvary FC,4,2,,,H
+UG1,01/11/2025,Mbarara City FC,NEC FC,0,1,,,A
+UG1,01/11/2025,Entebbe UPPC FC,Vipers SC,0,1,,,A
+UG1,05/11/2025,Maroons FC,URA FC,0,0,,,D
+UG1,05/11/2025,Express FC,Mbarara City FC,4,1,,,H
+UG1,06/11/2025,SC Villa,Kitara FC,1,0,,,H
+UG1,06/11/2025,UPDF FC,Police FC,1,2,,,A
+UG1,07/11/2025,Vipers SC,KCCA FC,1,0,,,H
+UG1,07/11/2025,Calvary FC,Entebbe UPPC FC,2,4,,,A
+UG1,08/11/2025,Lugazi FC,Buhimba United Saints,5,2,,,H
+UG1,08/11/2025,NEC FC,BUL FC,1,1,,,D
+UG1,19/11/2025,Calvary FC,UPDF FC,0,1,,,A
+UG1,19/11/2025,Entebbe UPPC FC,Police FC,0,2,,,A
+UG1,20/11/2025,Kitara FC,BUL FC,1,0,,,H
+UG1,20/11/2025,Lugazi FC,Express FC,0,0,,,D
+UG1,20/11/2025,SC Villa,NEC FC,2,1,,,H
+UG1,21/11/2025,KCCA FC,URA FC,2,1,,,H
+UG1,21/11/2025,Buhimba United Saints,Mbarara City FC,1,2,,,A
+UG1,22/11/2025,Vipers SC,Maroons FC,2,1,,,H
+UG1,25/11/2025,Maroons FC,Lugazi FC,3,0,,,H
+UG1,25/11/2025,NEC FC,Calvary FC,1,0,,,H
+UG1,25/11/2025,UPDF FC,SC Villa,0,1,,,A
+UG1,26/11/2025,URA FC,Buhimba United Saints,7,3,,,H
+UG1,26/11/2025,Express FC,Vipers SC,0,3,,,A
+UG1,27/11/2025,BUL FC,Entebbe UPPC FC,0,2,,,A
+UG1,27/11/2025,Police FC,Kitara FC,1,2,,,A
+UG1,28/11/2025,Mbarara City FC,KCCA FC,1,2,,,A
+UG1,29/11/2025,Vipers SC,SC Villa,1,1,,,D
+UG1,29/11/2025,Maroons FC,NEC FC,1,1,,,D
+UG1,02/12/2025,Vipers SC,UPDF FC,5,1,,,H
+UG1,03/12/2025,Police FC,Buhimba United Saints,4,0,,,H
+UG1,03/12/2025,Mbarara City FC,Entebbe UPPC FC,1,1,,,D
+UG1,04/12/2025,Express FC,Calvary FC,4,0,,,H
+UG1,04/12/2025,URA FC,Kitara FC,0,1,,,A
+UG1,05/12/2025,NEC FC,Vipers SC,1,1,,,D
+UG1,05/12/2025,UPDF FC,Lugazi FC,2,0,,,H
+UG1,06/12/2025,Maroons FC,SC Villa,1,0,,,H
+UG1,07/12/2025,BUL FC,KCCA FC,1,2,,,A
+UG1,09/12/2025,Calvary FC,Vipers SC,0,0,,,D
+UG1,10/12/2025,Lugazi FC,Police FC,1,1,,,D
+UG1,10/12/2025,Buhimba United Saints,UPDF FC,2,2,,,D
+UG1,11/12/2025,Entebbe UPPC FC,Express FC,2,0,,,H
+UG1,11/12/2025,SC Villa,URA FC,3,0,,,H
+UG1,12/12/2025,Kitara FC,Maroons FC,2,0,,,H
+UG1,12/12/2025,KCCA FC,NEC FC,2,1,,,H
+UG1,13/12/2025,Vipers SC,BUL FC,3,1,,,H
+UG1,13/12/2025,Calvary FC,Mbarara City FC,1,1,,,D
+UG1,16/12/2025,KCCA FC,Buhimba United Saints,1,0,,,H
+UG1,16/12/2025,UPDF FC,NEC FC,0,0,,,D
+UG1,16/12/2025,BUL FC,Police FC,1,3,,,A
+UG1,17/12/2025,Lugazi FC,Vipers SC,1,2,,,A
+UG1,17/12/2025,Maroons FC,Express FC,4,0,,,H
+UG1,17/12/2025,Mbarara City FC,URA FC,1,0,,,H
+UG1,17/12/2025,SC Villa,Calvary FC,1,0,,,H
+UG1,18/12/2025,Entebbe UPPC FC,Kitara FC,1,0,,,H
+UG1,06/01/2026,Vipers SC,Mbarara City FC,2,0,,,H
+UG1,06/01/2026,Buhimba United Saints,Maroons FC,1,0,,,H
+UG1,06/01/2026,Police FC,KCCA FC,2,0,,,H
+UG1,07/01/2026,NEC FC,Lugazi FC,1,0,,,H
+UG1,07/01/2026,Kitara FC,UPDF FC,2,1,,,H
+UG1,07/01/2026,Calvary FC,BUL FC,0,1,,,A
+UG1,08/01/2026,Express FC,SC Villa,0,1,,,A
+UG1,13/01/2026,URA FC,Entebbe UPPC FC,0,1,,,A
+UG1,21/01/2026,Police FC,Calvary FC,2,0,,,H
+UG1,21/01/2026,Maroons FC,KCCA FC,0,0,,,D
+UG1,21/01/2026,UPDF FC,Entebbe UPPC FC,0,1,,,A
+UG1,23/01/2026,BUL FC,SC Villa,2,1,,,H
+UG1,24/01/2026,URA FC,Vipers SC,0,3,,,A
+UG1,24/01/2026,Express FC,Buhimba United Saints,3,1,,,H
+UG1,24/01/2026,NEC FC,Kitara FC,3,3,,,D
+UG1,24/01/2026,Mbarara City FC,Lugazi FC,0,0,,,D
+UG1,27/01/2026,Buhimba United Saints,NEC FC,0,1,,,A
+UG1,27/01/2026,Lugazi FC,BUL FC,2,1,,,H
+UG1,27/01/2026,KCCA FC,UPDF FC,4,0,,,H
+UG1,27/01/2026,Entebbe UPPC FC,Maroons FC,0,0,,,D
+UG1,27/01/2026,Calvary FC,URA FC,0,0,,,D
+UG1,27/01/2026,Vipers SC,Police FC,4,1,,,H
+UG1,28/01/2026,Kitara FC,Express FC,1,0,,,H
+UG1,28/01/2026,SC Villa,Mbarara City FC,6,1,,,H
+UG1,30/01/2026,KCCA FC,Entebbe UPPC FC,0,1,,,A
+UG1,30/01/2026,Vipers SC,Buhimba United Saints,4,0,,,H
+UG1,30/01/2026,UPDF FC,BUL FC,0,1,,,A
+UG1,31/01/2026,NEC FC,Express FC,0,0,,,D
+UG1,31/01/2026,Maroons FC,Mbarara City FC,1,1,,,D
+UG1,31/01/2026,URA FC,Police FC,0,0,,,D
+UG1,31/01/2026,Calvary FC,Kitara FC,0,1,,,A
+UG1,31/01/2026,SC Villa,Lugazi FC,0,0,,,D
+UG1,12/02/2026,Mbarara City FC,Calvary FC,1,0,,,H
+UG1,12/02/2026,Police FC,Lugazi FC,2,1,,,H
+UG1,12/02/2026,Maroons FC,Kitara FC,0,1,,,A
+UG1,13/02/2026,NEC FC,KCCA FC,3,1,,,H
+UG1,13/02/2026,BUL FC,Vipers SC,1,1,,,D
+UG1,13/02/2026,UPDF FC,Buhimba United Saints,0,0,,,D
+UG1,14/02/2026,Express FC,Entebbe UPPC FC,0,0,,,D
+UG1,14/02/2026,URA FC,SC Villa,0,0,,,D
+UG1,17/02/2026,Entebbe UPPC FC,Mbarara City FC,1,0,,,H
+UG1,17/02/2026,Buhimba United Saints,Police FC,1,1,,,D
+UG1,17/02/2026,Vipers SC,NEC FC,1,1,,,D
+UG1,18/02/2026,KCCA FC,BUL FC,2,1,,,H
+UG1,18/02/2026,Calvary FC,Express FC,0,0,,,D
+UG1,18/02/2026,Lugazi FC,UPDF FC,1,0,,,H
+UG1,19/02/2026,Kitara FC,URA FC,1,1,,,D
+UG1,19/02/2026,SC Villa,Maroons FC,2,0,,,H
+UG1,02/03/2026,Kitara FC,Entebbe UPPC FC,2,0,,,H
+UG1,02/03/2026,Police FC,BUL FC,0,2,,,A
+UG1,02/03/2026,NEC FC,UPDF FC,1,0,,,H
+UG1,02/03/2026,Buhimba United Saints,KCCA FC,0,2,,,A
+UG1,02/03/2026,Calvary FC,SC Villa,0,3,,,A
+UG1,02/03/2026,Vipers SC,Lugazi FC,3,0,,,H
+UG1,04/03/2026,Express FC,Maroons FC,1,1,,,D
+UG1,04/03/2026,URA FC,Mbarara City FC,2,0,,,H
+UG1,06/03/2026,KCCA FC,Police FC,2,1,,,H
+UG1,06/03/2026,Lugazi FC,NEC FC,0,2,,,A
+UG1,06/03/2026,UPDF FC,Kitara FC,1,1,,,D
+UG1,06/03/2026,BUL FC,Calvary FC,5,1,,,H
+UG1,07/03/2026,Entebbe UPPC FC,URA FC,0,0,,,D
+UG1,07/03/2026,Maroons FC,Buhimba United Saints,1,0,,,H
+UG1,07/03/2026,Mbarara City FC,Vipers SC,1,2,,,A
+UG1,07/03/2026,SC Villa,Express FC,0,0,,,D
+UG1,10/03/2026,NEC FC,Entebbe UPPC FC,0,0,,,D
+UG1,10/03/2026,Mbarara City FC,Kitara FC,0,1,,,A
+UG1,10/03/2026,Police FC,SC Villa,1,0,,,H
+UG1,10/03/2026,Buhimba United Saints,BUL FC,0,1,,,A
+UG1,10/03/2026,Calvary FC,Maroons FC,0,1,,,A
+UG1,11/03/2026,UPDF FC,Vipers SC,1,2,,,A
+UG1,11/03/2026,URA FC,Lugazi FC,1,0,,,H
+UG1,11/03/2026,KCCA FC,Express FC,3,0,,,H
+UG1,13/03/2026,BUL FC,Mbarara City FC,0,0,,,D
+UG1,13/03/2026,Kitara FC,Buhimba United Saints,4,0,,,H
+UG1,13/03/2026,Police FC,NEC FC,0,1,,,A
+UG1,14/03/2026,Express FC,URA FC,3,1,,,H
+UG1,14/03/2026,Vipers SC,Calvary FC,1,0,,,H
+UG1,14/03/2026,Entebbe UPPC FC,SC Villa,0,2,,,A
+UG1,14/03/2026,Lugazi FC,KCCA FC,0,3,,,A
+UG1,14/03/2026,Maroons FC,UPDF FC,0,0,,,D
+UG1,08/04/2026,Maroons FC,BUL FC,1,0,,,H
+UG1,08/04/2026,Express FC,Police FC,3,1,,,H
+UG1,09/04/2026,UPDF FC,Mbarara City FC,3,1,,,H
+UG1,09/04/2026,NEC FC,URA FC,1,0,,,H
+UG1,10/04/2026,Lugazi FC,Entebbe UPPC FC,1,1,,,D
+UG1,10/04/2026,Vipers SC,Kitara FC,0,0,,,D
+UG1,11/04/2026,SC Villa,KCCA FC,1,0,,,H
+UG1,11/04/2026,Calvary FC,Buhimba United Saints,2,0,,,H
+UG1,15/04/2026,Calvary FC,Lugazi FC,0,0,,,D
+UG1,15/04/2026,UPDF FC,Express FC,0,1,,,A
+UG1,15/04/2026,SC Villa,Vipers SC,1,1,,,D
+UG1,16/04/2026,Mbarara City FC,Police FC,1,2,,,A
+UG1,16/04/2026,Buhimba United Saints,Entebbe UPPC FC,1,2,,,A
+UG1,16/04/2026,URA FC,BUL FC,1,1,,,D
+UG1,17/04/2026,KCCA FC,Kitara FC,1,0,,,H
+UG1,18/04/2026,NEC FC,Maroons FC,1,0,,,H
+UG1,21/04/2026,Express FC,NEC FC,0,0,,,D
+UG1,21/04/2026,Buhimba United Saints,Vipers SC,0,2,,,A
+UG1,21/04/2026,Entebbe UPPC FC,KCCA FC,0,1,,,A
+UG1,21/04/2026,Mbarara City FC,Maroons FC,2,2,,,D
+UG1,21/04/2026,BUL FC,UPDF FC,2,5,,,A
+UG1,21/04/2026,Police FC,URA FC,2,1,,,H
+UG1,22/04/2026,Kitara FC,Calvary FC,0,0,,,D
+UG1,22/04/2026,Lugazi FC,SC Villa,0,1,,,A
+UG1,24/04/2026,UPDF FC,URA FC,0,0,,,D
+UG1,24/04/2026,Express FC,BUL FC,0,2,,,A
+UG1,24/04/2026,NEC FC,Mbarara City FC,1,0,,,H
+UG1,25/04/2026,SC Villa,Buhimba United Saints,4,0,,,H
+UG1,25/04/2026,Maroons FC,Police FC,3,1,,,H
+UG1,25/04/2026,Calvary FC,KCCA FC,1,0,,,H
+UG1,25/04/2026,Lugazi FC,Kitara FC,1,2,,,A
+UG1,26/04/2026,Vipers SC,Entebbe UPPC FC,3,0,,,H
+UG1,28/04/2026,BUL FC,NEC FC,0,1,,,A
+UG1,28/04/2026,Mbarara City FC,Express FC,2,1,,,H
+UG1,28/04/2026,URA FC,Maroons FC,2,2,,,D
+UG1,29/04/2026,Buhimba United Saints,Lugazi FC,0,2,,,A
+UG1,29/04/2026,Entebbe UPPC FC,Calvary FC,2,0,,,H
+UG1,29/04/2026,Police FC,UPDF FC,2,0,,,H
+UG1,29/04/2026,KCCA FC,Vipers SC,1,1,,,D
+UG1,30/04/2026,Kitara FC,SC Villa,2,0,,,H
+UG1,06/05/2026,Lugazi FC,Mbarara City FC,0,1,,,A
+UG1,06/05/2026,Calvary FC,Police FC,1,0,,,H
+UG1,07/05/2026,Entebbe UPPC FC,UPDF FC,2,0,,,H
+UG1,07/05/2026,KCCA FC,Maroons FC,3,0,,,H
+UG1,08/05/2026,Buhimba United Saints,Express FC,0,2,,,A
+UG1,08/05/2026,SC Villa,BUL FC,0,0,,,D
+UG1,08/05/2026,Vipers SC,URA FC,1,1,,,D
+UG1,09/05/2026,Kitara FC,NEC FC,0,1,,,A
+UG1,12/05/2026,URA FC,Calvary FC,1,1,,,D
+UG1,12/05/2026,Police FC,Vipers SC,0,0,,,D
+UG1,12/05/2026,Express FC,Kitara FC,3,2,,,H
+UG1,12/05/2026,BUL FC,Lugazi FC,0,0,,,D
+UG1,12/05/2026,Maroons FC,Entebbe UPPC FC,0,0,,,D
+UG1,13/05/2026,Mbarara City FC,SC Villa,1,3,,,A
+UG1,13/05/2026,UPDF FC,KCCA FC,1,2,,,A
+UG1,13/05/2026,NEC FC,Buhimba United Saints,3,0,,,H
+UG1,19/05/2026,Mbarara City FC,Buhimba United Saints,2,0,,,H
+UG1,19/05/2026,BUL FC,Kitara FC,1,1,,,D
+UG1,19/05/2026,Maroons FC,Vipers SC,0,3,,,A
+UG1,19/05/2026,UPDF FC,Calvary FC,0,0,,,D
+UG1,19/05/2026,URA FC,KCCA FC,0,0,,,D
+UG1,19/05/2026,Police FC,Entebbe UPPC FC,1,1,,,D
+UG1,19/05/2026,Express FC,Lugazi FC,0,0,,,D
+UG1,20/05/2026,NEC FC,SC Villa,1,4,,,A
+UG1,22/05/2026,Buhimba United Saints,URA FC,0,3,,,A
+UG1,23/05/2026,Lugazi FC,Maroons FC,0,1,,,A
+UG1,23/05/2026,Kitara FC,Police FC,2,2,,,D
+UG1,23/05/2026,SC Villa,UPDF FC,2,1,,,H
+UG1,23/05/2026,Entebbe UPPC FC,BUL FC,4,0,,,H
+UG1,23/05/2026,Calvary FC,NEC FC,2,0,,,H
+UG1,23/05/2026,KCCA FC,Mbarara City FC,4,1,,,H
+UG1,23/05/2026,Vipers SC,Express FC,2,0,,,H

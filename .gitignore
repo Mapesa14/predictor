@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+scratch/*.csv
+scratch/*.log
+.pytest_cache/
+fixtures.csv

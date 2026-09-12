@@ -1,0 +1,613 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+GH1,15/09/2023,Real Tamale United,Accra Hearts of Oak SC,1,0,,,H
+GH1,16/09/2023,Great Olympics FC,Bofoakwa Tano FC,0,0,,,D
+GH1,17/09/2023,Legon Cities FC,Karela United FC,2,1,,,H
+GH1,17/09/2023,Nsoatreman FC,Bechem United FC,2,0,,,H
+GH1,17/09/2023,FC Samartex 1996,Aduana FC,1,0,,,H
+GH1,17/09/2023,Berekum Chelsea FC,Bibiani Gold Stars FC,2,0,,,H
+GH1,17/09/2023,Asante Kotoko FC,Heart of Lions FC,0,0,,,D
+GH1,20/09/2023,Medeama SC,Accra Lions FC,2,2,,,D
+GH1,20/09/2023,Dreams FC,Nations FC,1,0,,,H
+GH1,22/09/2023,Bofoakwa Tano FC,Real Tamale United,2,1,,,H
+GH1,23/09/2023,Bibiani Gold Stars FC,Asante Kotoko FC,2,1,,,H
+GH1,24/09/2023,Nations FC,FC Samartex 1996,2,0,,,H
+GH1,24/09/2023,Karela United FC,Berekum Chelsea FC,3,1,,,H
+GH1,24/09/2023,Aduana FC,Medeama SC,2,0,,,H
+GH1,24/09/2023,Bechem United FC,Dreams FC,1,0,,,H
+GH1,24/09/2023,Accra Hearts of Oak SC,Nsoatreman FC,1,0,,,H
+GH1,24/09/2023,Heart of Lions FC,Great Olympics FC,0,0,,,D
+GH1,25/09/2023,Accra Lions FC,Legon Cities FC,1,0,,,H
+GH1,29/09/2023,Berekum Chelsea FC,Accra Lions FC,1,1,,,D
+GH1,30/09/2023,Bofoakwa Tano FC,Accra Hearts of Oak SC,1,0,,,H
+GH1,01/10/2023,Legon Cities FC,Aduana FC,2,1,,,H
+GH1,01/10/2023,Real Tamale United,Heart of Lions FC,2,2,,,D
+GH1,01/10/2023,Great Olympics FC,Bibiani Gold Stars FC,1,0,,,H
+GH1,01/10/2023,FC Samartex 1996,Bechem United FC,4,1,,,H
+GH1,01/10/2023,Asante Kotoko FC,Karela United FC,1,1,,,D
+GH1,06/10/2023,Aduana FC,Berekum Chelsea FC,1,0,,,H
+GH1,07/10/2023,Bechem United FC,Medeama SC,1,2,,,A
+GH1,08/10/2023,Bibiani Gold Stars FC,Real Tamale United,3,0,,,H
+GH1,08/10/2023,Karela United FC,Great Olympics FC,0,0,,,D
+GH1,08/10/2023,Nations FC,Legon Cities FC,1,1,,,D
+GH1,08/10/2023,Accra Hearts of Oak SC,Dreams FC,0,0,,,D
+GH1,08/10/2023,Heart of Lions FC,Bofoakwa Tano FC,0,0,,,D
+GH1,08/10/2023,Nsoatreman FC,FC Samartex 1996,1,0,,,H
+GH1,09/10/2023,Accra Lions FC,Asante Kotoko FC,0,1,,,A
+GH1,11/10/2023,Dreams FC,Nsoatreman FC,1,1,,,D
+GH1,13/10/2023,Asante Kotoko FC,Aduana FC,1,0,,,H
+GH1,14/10/2023,Bofoakwa Tano FC,Bibiani Gold Stars FC,0,0,,,D
+GH1,15/10/2023,Real Tamale United,Karela United FC,3,2,,,H
+GH1,15/10/2023,FC Samartex 1996,Dreams FC,2,0,,,H
+GH1,15/10/2023,Berekum Chelsea FC,Nations FC,1,0,,,H
+GH1,15/10/2023,Legon Cities FC,Bechem United FC,1,1,,,D
+GH1,16/10/2023,Great Olympics FC,Accra Lions FC,3,0,,,H
+GH1,20/10/2023,Accra Lions FC,Real Tamale United,1,3,,,A
+GH1,21/10/2023,Accra Hearts of Oak SC,FC Samartex 1996,0,0,,,D
+GH1,22/10/2023,Karela United FC,Bofoakwa Tano FC,0,0,,,D
+GH1,22/10/2023,Dreams FC,Medeama SC,2,1,,,H
+GH1,22/10/2023,Nations FC,Asante Kotoko FC,2,2,,,D
+GH1,22/10/2023,Nsoatreman FC,Legon Cities FC,2,0,,,H
+GH1,22/10/2023,Aduana FC,Great Olympics FC,3,1,,,H
+GH1,22/10/2023,Bechem United FC,Berekum Chelsea FC,2,0,,,H
+GH1,23/10/2023,Bibiani Gold Stars FC,Heart of Lions FC,2,2,,,D
+GH1,25/10/2023,Medeama SC,Nations FC,1,0,,,H
+GH1,27/10/2023,Bofoakwa Tano FC,Accra Lions FC,1,1,,,D
+GH1,28/10/2023,Bibiani Gold Stars FC,Accra Hearts of Oak SC,1,1,,,D
+GH1,28/10/2023,Great Olympics FC,Nations FC,1,0,,,H
+GH1,29/10/2023,Asante Kotoko FC,Bechem United FC,1,1,,,D
+GH1,29/10/2023,Heart of Lions FC,Karela United FC,0,0,,,D
+GH1,29/10/2023,Berekum Chelsea FC,Nsoatreman FC,0,1,,,A
+GH1,29/10/2023,Legon Cities FC,Dreams FC,1,0,,,H
+GH1,29/10/2023,Medeama SC,FC Samartex 1996,1,0,,,H
+GH1,29/10/2023,Real Tamale United,Aduana FC,1,3,,,A
+GH1,01/11/2023,Aduana FC,Bofoakwa Tano FC,4,2,,,H
+GH1,01/11/2023,FC Samartex 1996,Legon Cities FC,3,0,,,H
+GH1,01/11/2023,Bechem United FC,Great Olympics FC,2,1,,,H
+GH1,01/11/2023,Nations FC,Real Tamale United,4,0,,,H
+GH1,01/11/2023,Dreams FC,Berekum Chelsea FC,0,2,,,A
+GH1,01/11/2023,Accra Hearts of Oak SC,Medeama SC,3,1,,,H
+GH1,01/11/2023,Karela United FC,Bibiani Gold Stars FC,1,1,,,D
+GH1,02/11/2023,Accra Lions FC,Heart of Lions FC,2,1,,,H
+GH1,02/11/2023,Nsoatreman FC,Asante Kotoko FC,1,0,,,H
+GH1,04/11/2023,Karela United FC,Accra Hearts of Oak SC,1,1,,,D
+GH1,05/11/2023,Asante Kotoko FC,Dreams FC,0,1,,,A
+GH1,05/11/2023,Heart of Lions FC,Aduana FC,1,2,,,A
+GH1,05/11/2023,Berekum Chelsea FC,FC Samartex 1996,1,0,,,H
+GH1,05/11/2023,Legon Cities FC,Medeama SC,0,2,,,A
+GH1,05/11/2023,Real Tamale United,Bechem United FC,0,0,,,D
+GH1,05/11/2023,Bofoakwa Tano FC,Nations FC,1,0,,,H
+GH1,05/11/2023,Bibiani Gold Stars FC,Accra Lions FC,1,1,,,D
+GH1,06/11/2023,Great Olympics FC,Nsoatreman FC,2,1,,,H
+GH1,08/11/2023,Heart of Lions FC,Accra Hearts of Oak SC,0,0,,,D
+GH1,09/11/2023,Medeama SC,Nsoatreman FC,1,0,,,H
+GH1,10/11/2023,Accra Lions FC,Karela United FC,2,1,,,H
+GH1,11/11/2023,FC Samartex 1996,Asante Kotoko FC,1,0,,,H
+GH1,12/11/2023,Nations FC,Heart of Lions FC,1,0,,,H
+GH1,12/11/2023,Nsoatreman FC,Real Tamale United,2,0,,,H
+GH1,12/11/2023,Dreams FC,Great Olympics FC,2,0,,,H
+GH1,12/11/2023,Bechem United FC,Bofoakwa Tano FC,1,1,,,D
+GH1,12/11/2023,Accra Hearts of Oak SC,Legon Cities FC,0,0,,,D
+GH1,12/11/2023,Medeama SC,Berekum Chelsea FC,0,1,,,A
+GH1,13/11/2023,Aduana FC,Bibiani Gold Stars FC,3,0,,,H
+GH1,18/11/2023,Heart of Lions FC,Bechem United FC,1,2,,,A
+GH1,18/11/2023,Karela United FC,Aduana FC,2,1,,,H
+GH1,19/11/2023,Real Tamale United,Dreams FC,3,1,,,H
+GH1,19/11/2023,Bibiani Gold Stars FC,Nations FC,0,1,,,A
+GH1,19/11/2023,Berekum Chelsea FC,Legon Cities FC,1,0,,,H
+GH1,19/11/2023,Bofoakwa Tano FC,Nsoatreman FC,0,0,,,D
+GH1,19/11/2023,Asante Kotoko FC,Medeama SC,1,0,,,H
+GH1,20/11/2023,Great Olympics FC,FC Samartex 1996,0,0,,,D
+GH1,21/11/2023,Accra Lions FC,Accra Hearts of Oak SC,1,2,,,A
+GH1,25/11/2023,Legon Cities FC,Asante Kotoko FC,1,3,,,A
+GH1,25/11/2023,Nations FC,Karela United FC,1,0,,,H
+GH1,26/11/2023,Nsoatreman FC,Heart of Lions FC,0,0,,,D
+GH1,26/11/2023,FC Samartex 1996,Real Tamale United,2,1,,,H
+GH1,26/11/2023,Aduana FC,Accra Lions FC,0,1,,,A
+GH1,26/11/2023,Accra Hearts of Oak SC,Berekum Chelsea FC,1,1,,,D
+GH1,27/11/2023,Bechem United FC,Bibiani Gold Stars FC,0,0,,,D
+GH1,03/12/2023,Karela United FC,Bechem United FC,0,4,,,A
+GH1,03/12/2023,Aduana FC,Accra Hearts of Oak SC,1,0,,,H
+GH1,03/12/2023,Accra Lions FC,Nations FC,0,1,,,A
+GH1,03/12/2023,Bofoakwa Tano FC,FC Samartex 1996,0,2,,,A
+GH1,03/12/2023,Bibiani Gold Stars FC,Nsoatreman FC,1,2,,,A
+GH1,04/12/2023,Great Olympics FC,Legon Cities FC,0,2,,,A
+GH1,04/12/2023,Asante Kotoko FC,Berekum Chelsea FC,1,0,,,H
+GH1,09/12/2023,Nations FC,Aduana FC,2,1,,,H
+GH1,10/12/2023,Accra Hearts of Oak SC,Asante Kotoko FC,2,3,,,A
+GH1,10/12/2023,Bechem United FC,Accra Lions FC,4,0,,,H
+GH1,10/12/2023,Legon Cities FC,Real Tamale United,3,1,,,H
+GH1,10/12/2023,Berekum Chelsea FC,Great Olympics FC,1,0,,,H
+GH1,10/12/2023,FC Samartex 1996,Heart of Lions FC,2,0,,,H
+GH1,10/12/2023,Nsoatreman FC,Karela United FC,0,1,,,A
+GH1,15/12/2023,Aduana FC,Bechem United FC,1,0,,,H
+GH1,16/12/2023,Nations FC,Accra Hearts of Oak SC,1,1,,,D
+GH1,17/12/2023,Bibiani Gold Stars FC,FC Samartex 1996,3,0,,,H
+GH1,17/12/2023,Great Olympics FC,Asante Kotoko FC,0,0,,,D
+GH1,17/12/2023,Real Tamale United,Berekum Chelsea FC,0,1,,,A
+GH1,17/12/2023,Bofoakwa Tano FC,Legon Cities FC,0,1,,,A
+GH1,18/12/2023,Accra Lions FC,Nsoatreman FC,2,1,,,H
+GH1,22/12/2023,Great Olympics FC,Accra Hearts of Oak SC,0,0,,,D
+GH1,23/12/2023,Berekum Chelsea FC,Bofoakwa Tano FC,0,0,,,D
+GH1,24/12/2023,Bechem United FC,Nations FC,3,0,,,H
+GH1,24/12/2023,FC Samartex 1996,Karela United FC,3,0,,,H
+GH1,24/12/2023,Asante Kotoko FC,Real Tamale United,1,0,,,H
+GH1,24/12/2023,Dreams FC,Accra Lions FC,1,1,,,D
+GH1,24/12/2023,Nsoatreman FC,Aduana FC,1,0,,,H
+GH1,25/12/2023,Legon Cities FC,Heart of Lions FC,1,0,,,H
+GH1,26/12/2023,Medeama SC,Bibiani Gold Stars FC,1,0,,,H
+GH1,29/12/2023,Accra Lions FC,FC Samartex 1996,1,3,,,A
+GH1,30/12/2023,Bibiani Gold Stars FC,Legon Cities FC,4,2,,,H
+GH1,30/12/2023,Karela United FC,Medeama SC,0,0,,,D
+GH1,30/12/2023,Bofoakwa Tano FC,Asante Kotoko FC,0,2,,,A
+GH1,31/12/2023,Accra Hearts of Oak SC,Bechem United FC,1,0,,,H
+GH1,31/12/2023,Heart of Lions FC,Berekum Chelsea FC,2,0,,,H
+GH1,31/12/2023,Real Tamale United,Great Olympics FC,0,1,,,A
+GH1,31/12/2023,Aduana FC,Dreams FC,4,1,,,H
+GH1,31/12/2023,Nations FC,Nsoatreman FC,4,1,,,H
+GH1,03/01/2024,Real Tamale United,Medeama SC,1,0,,,H
+GH1,04/01/2024,Heart of Lions FC,Dreams FC,1,0,,,H
+GH1,10/01/2024,Medeama SC,Great Olympics FC,1,0,,,H
+GH1,10/01/2024,Dreams FC,Bofoakwa Tano FC,3,1,,,H
+GH1,13/01/2024,Medeama SC,Bofoakwa Tano FC,0,0,,,D
+GH1,13/01/2024,Dreams FC,Bibiani Gold Stars FC,3,0,,,H
+GH1,17/01/2024,Karela United FC,Dreams FC,0,0,,,D
+GH1,17/01/2024,Heart of Lions FC,Medeama SC,2,2,,,D
+GH1,24/02/2024,Heart of Lions FC,Asante Kotoko FC,1,0,,,H
+GH1,25/02/2024,Karela United FC,Legon Cities FC,2,0,,,H
+GH1,25/02/2024,Bofoakwa Tano FC,Great Olympics FC,0,1,,,A
+GH1,25/02/2024,Bechem United FC,Nsoatreman FC,0,1,,,A
+GH1,25/02/2024,Bibiani Gold Stars FC,Berekum Chelsea FC,3,1,,,H
+GH1,25/02/2024,Accra Hearts of Oak SC,Real Tamale United,3,0,,,H
+GH1,26/02/2024,Aduana FC,FC Samartex 1996,1,2,,,A
+GH1,01/03/2024,Asante Kotoko FC,Bibiani Gold Stars FC,1,0,,,H
+GH1,02/03/2024,Great Olympics FC,Heart of Lions FC,2,0,,,H
+GH1,03/03/2024,Berekum Chelsea FC,Karela United FC,3,0,,,H
+GH1,03/03/2024,Nsoatreman FC,Accra Hearts of Oak SC,1,2,,,A
+GH1,03/03/2024,Legon Cities FC,Accra Lions FC,0,0,,,D
+GH1,04/03/2024,FC Samartex 1996,Nations FC,0,1,,,A
+GH1,04/03/2024,Real Tamale United,Bofoakwa Tano FC,1,1,,,D
+GH1,09/03/2024,Karela United FC,Asante Kotoko FC,1,0,,,H
+GH1,09/03/2024,Accra Lions FC,Berekum Chelsea FC,5,0,,,H
+GH1,10/03/2024,Aduana FC,Legon Cities FC,1,0,,,H
+GH1,10/03/2024,Heart of Lions FC,Real Tamale United,2,0,,,H
+GH1,10/03/2024,Nations FC,Medeama SC,1,1,,,D
+GH1,10/03/2024,Bechem United FC,FC Samartex 1996,1,0,,,H
+GH1,10/03/2024,Bibiani Gold Stars FC,Great Olympics FC,3,0,,,H
+GH1,10/03/2024,Nsoatreman FC,Dreams FC,0,2,,,A
+GH1,11/03/2024,Accra Hearts of Oak SC,Bofoakwa Tano FC,1,1,,,D
+GH1,13/03/2024,FC Samartex 1996,Nsoatreman FC,2,0,,,H
+GH1,13/03/2024,Asante Kotoko FC,Accra Lions FC,2,3,,,A
+GH1,13/03/2024,Berekum Chelsea FC,Aduana FC,1,0,,,H
+GH1,13/03/2024,Great Olympics FC,Karela United FC,0,0,,,D
+GH1,14/03/2024,Bofoakwa Tano FC,Heart of Lions FC,1,0,,,H
+GH1,14/03/2024,Medeama SC,Bechem United FC,1,0,,,H
+GH1,14/03/2024,Real Tamale United,Bibiani Gold Stars FC,2,2,,,D
+GH1,14/03/2024,Legon Cities FC,Nations FC,1,0,,,H
+GH1,14/03/2024,Dreams FC,Accra Hearts of Oak SC,2,2,,,D
+GH1,17/03/2024,Dreams FC,FC Samartex 1996,2,2,,,D
+GH1,17/03/2024,Aduana FC,Asante Kotoko FC,2,1,,,H
+GH1,17/03/2024,Bechem United FC,Legon Cities FC,1,0,,,H
+GH1,17/03/2024,Bibiani Gold Stars FC,Bofoakwa Tano FC,2,1,,,H
+GH1,17/03/2024,Karela United FC,Real Tamale United,3,2,,,H
+GH1,17/03/2024,Nations FC,Berekum Chelsea FC,3,0,,,H
+GH1,17/03/2024,Nsoatreman FC,Medeama SC,1,0,,,H
+GH1,18/03/2024,Accra Hearts of Oak SC,Heart of Lions FC,2,1,,,H
+GH1,19/03/2024,Accra Lions FC,Great Olympics FC,1,0,,,H
+GH1,20/03/2024,Medeama SC,Aduana FC,2,0,,,H
+GH1,20/03/2024,Nations FC,Dreams FC,1,0,,,H
+GH1,23/03/2024,FC Samartex 1996,Accra Hearts of Oak SC,2,1,,,H
+GH1,24/03/2024,Legon Cities FC,Nsoatreman FC,1,0,,,H
+GH1,24/03/2024,Great Olympics FC,Aduana FC,4,2,,,H
+GH1,24/03/2024,Medeama SC,Dreams FC,0,0,,,D
+GH1,24/03/2024,Bofoakwa Tano FC,Karela United FC,2,1,,,H
+GH1,24/03/2024,Berekum Chelsea FC,Bechem United FC,1,1,,,D
+GH1,24/03/2024,Asante Kotoko FC,Nations FC,0,1,,,A
+GH1,25/03/2024,Heart of Lions FC,Bibiani Gold Stars FC,2,2,,,D
+GH1,25/03/2024,Real Tamale United,Accra Lions FC,1,0,,,H
+GH1,02/04/2024,Accra Lions FC,Medeama SC,1,0,,,H
+GH1,05/04/2024,Nations FC,Great Olympics FC,1,0,,,H
+GH1,06/04/2024,Accra Lions FC,Bofoakwa Tano FC,1,0,,,H
+GH1,06/04/2024,Bechem United FC,Asante Kotoko FC,0,0,,,D
+GH1,07/04/2024,Aduana FC,Real Tamale United,3,1,,,H
+GH1,07/04/2024,FC Samartex 1996,Medeama SC,1,0,,,H
+GH1,07/04/2024,Nsoatreman FC,Berekum Chelsea FC,0,0,,,D
+GH1,07/04/2024,Karela United FC,Heart of Lions FC,1,0,,,H
+GH1,07/04/2024,Accra Hearts of Oak SC,Bibiani Gold Stars FC,0,1,,,A
+GH1,10/04/2024,Great Olympics FC,Bechem United FC,1,1,,,D
+GH1,10/04/2024,Legon Cities FC,FC Samartex 1996,1,1,,,D
+GH1,10/04/2024,Berekum Chelsea FC,Dreams FC,3,2,,,H
+GH1,10/04/2024,Heart of Lions FC,Accra Lions FC,2,0,,,H
+GH1,10/04/2024,Bibiani Gold Stars FC,Karela United FC,3,2,,,H
+GH1,10/04/2024,Medeama SC,Accra Hearts of Oak SC,2,0,,,H
+GH1,10/04/2024,Real Tamale United,Nations FC,1,0,,,H
+GH1,10/04/2024,Bofoakwa Tano FC,Aduana FC,1,0,,,H
+GH1,11/04/2024,Asante Kotoko FC,Nsoatreman FC,1,2,,,A
+GH1,13/04/2024,Accra Hearts of Oak SC,Karela United FC,3,1,,,H
+GH1,14/04/2024,Bechem United FC,Real Tamale United,3,2,,,H
+GH1,14/04/2024,Dreams FC,Asante Kotoko FC,2,0,,,H
+GH1,14/04/2024,Nations FC,Bofoakwa Tano FC,2,2,,,D
+GH1,14/04/2024,FC Samartex 1996,Berekum Chelsea FC,3,2,,,H
+GH1,14/04/2024,Nsoatreman FC,Great Olympics FC,1,1,,,D
+GH1,14/04/2024,Medeama SC,Legon Cities FC,1,0,,,H
+GH1,14/04/2024,Aduana FC,Heart of Lions FC,1,0,,,H
+GH1,15/04/2024,Accra Lions FC,Bibiani Gold Stars FC,2,0,,,H
+GH1,20/04/2024,Legon Cities FC,Accra Hearts of Oak SC,2,0,,,H
+GH1,20/04/2024,Karela United FC,Accra Lions FC,1,1,,,D
+GH1,21/04/2024,Bibiani Gold Stars FC,Aduana FC,1,0,,,H
+GH1,21/04/2024,Bofoakwa Tano FC,Bechem United FC,1,1,,,D
+GH1,21/04/2024,Asante Kotoko FC,FC Samartex 1996,1,0,,,H
+GH1,21/04/2024,Heart of Lions FC,Nations FC,3,0,,,H
+GH1,21/04/2024,Real Tamale United,Nsoatreman FC,1,2,,,A
+GH1,22/04/2024,Berekum Chelsea FC,Medeama SC,2,0,,,H
+GH1,26/04/2024,Legon Cities FC,Berekum Chelsea FC,3,2,,,H
+GH1,27/04/2024,Bechem United FC,Heart of Lions FC,1,1,,,D
+GH1,27/04/2024,Medeama SC,Asante Kotoko FC,1,1,,,D
+GH1,27/04/2024,FC Samartex 1996,Great Olympics FC,1,0,,,H
+GH1,27/04/2024,Nations FC,Bibiani Gold Stars FC,0,0,,,D
+GH1,27/04/2024,Aduana FC,Karela United FC,1,2,,,A
+GH1,29/04/2024,Nsoatreman FC,Bofoakwa Tano FC,0,0,,,D
+GH1,01/05/2024,Accra Hearts of Oak SC,Accra Lions FC,0,1,,,A
+GH1,04/05/2024,Karela United FC,Nations FC,1,0,,,H
+GH1,05/05/2024,Asante Kotoko FC,Legon Cities FC,2,0,,,H
+GH1,05/05/2024,Great Olympics FC,Medeama SC,0,1,,,A
+GH1,05/05/2024,Bofoakwa Tano FC,Dreams FC,1,1,,,D
+GH1,05/05/2024,Bibiani Gold Stars FC,Bechem United FC,1,1,,,D
+GH1,05/05/2024,Real Tamale United,FC Samartex 1996,1,0,,,H
+GH1,05/05/2024,Heart of Lions FC,Nsoatreman FC,1,0,,,H
+GH1,06/05/2024,Accra Lions FC,Aduana FC,0,0,,,D
+GH1,08/05/2024,Berekum Chelsea FC,Accra Hearts of Oak SC,0,3,,,A
+GH1,15/05/2024,Dreams FC,Bechem United FC,2,1,,,H
+GH1,17/05/2024,Nations FC,Accra Lions FC,1,0,,,H
+GH1,18/05/2024,Berekum Chelsea FC,Asante Kotoko FC,2,1,,,H
+GH1,18/05/2024,Legon Cities FC,Great Olympics FC,2,1,,,H
+GH1,19/05/2024,Dreams FC,Heart of Lions FC,1,2,,,A
+GH1,19/05/2024,Bechem United FC,Karela United FC,3,1,,,H
+GH1,19/05/2024,Medeama SC,Real Tamale United,1,0,,,H
+GH1,19/05/2024,FC Samartex 1996,Bofoakwa Tano FC,3,0,,,H
+GH1,19/05/2024,Nsoatreman FC,Bibiani Gold Stars FC,4,0,,,H
+GH1,19/05/2024,Accra Hearts of Oak SC,Aduana FC,0,1,,,A
+GH1,22/05/2024,Dreams FC,Legon Cities FC,2,0,,,H
+GH1,25/05/2024,Aduana FC,Nations FC,1,0,,,H
+GH1,25/05/2024,Karela United FC,Nsoatreman FC,2,1,,,H
+GH1,25/05/2024,Accra Lions FC,Bechem United FC,3,0,,,H
+GH1,26/05/2024,Bofoakwa Tano FC,Medeama SC,0,2,,,A
+GH1,26/05/2024,Asante Kotoko FC,Accra Hearts of Oak SC,2,0,,,H
+GH1,26/05/2024,Great Olympics FC,Berekum Chelsea FC,3,2,,,H
+GH1,26/05/2024,Real Tamale United,Legon Cities FC,1,0,,,H
+GH1,26/05/2024,Heart of Lions FC,FC Samartex 1996,2,0,,,H
+GH1,26/05/2024,Bibiani Gold Stars FC,Dreams FC,2,1,,,H
+GH1,31/05/2024,Accra Hearts of Oak SC,Nations FC,2,0,,,H
+GH1,01/06/2024,Bechem United FC,Aduana FC,1,0,,,H
+GH1,01/06/2024,Legon Cities FC,Bofoakwa Tano FC,1,0,,,H
+GH1,02/06/2024,Berekum Chelsea FC,Real Tamale United,2,0,,,H
+GH1,02/06/2024,FC Samartex 1996,Bibiani Gold Stars FC,1,0,,,H
+GH1,02/06/2024,Dreams FC,Karela United FC,1,0,,,H
+GH1,02/06/2024,Asante Kotoko FC,Great Olympics FC,0,1,,,A
+GH1,02/06/2024,Nsoatreman FC,Accra Lions FC,1,1,,,D
+GH1,02/06/2024,Medeama SC,Heart of Lions FC,0,1,,,A
+GH1,05/06/2024,Great Olympics FC,Dreams FC,0,0,,,D
+GH1,08/06/2024,Real Tamale United,Asante Kotoko FC,0,2,,,A
+GH1,08/06/2024,Accra Lions FC,Dreams FC,1,0,,,H
+GH1,09/06/2024,Nations FC,Bechem United FC,1,1,,,D
+GH1,09/06/2024,Bofoakwa Tano FC,Berekum Chelsea FC,0,1,,,A
+GH1,09/06/2024,Bibiani Gold Stars FC,Medeama SC,2,0,,,H
+GH1,09/06/2024,Karela United FC,FC Samartex 1996,4,2,,,H
+GH1,09/06/2024,Heart of Lions FC,Legon Cities FC,2,0,,,H
+GH1,09/06/2024,Aduana FC,Nsoatreman FC,2,2,,,D
+GH1,09/06/2024,Accra Hearts of Oak SC,Great Olympics FC,0,0,,,D
+GH1,12/06/2024,Dreams FC,Real Tamale United,8,1,,,H
+GH1,16/06/2024,Nsoatreman FC,Nations FC,1,0,,,H
+GH1,16/06/2024,Dreams FC,Aduana FC,2,1,,,H
+GH1,16/06/2024,Great Olympics FC,Real Tamale United,3,0,,,H
+GH1,16/06/2024,Berekum Chelsea FC,Heart of Lions FC,2,2,,,D
+GH1,16/06/2024,Asante Kotoko FC,Bofoakwa Tano FC,3,1,,,H
+GH1,16/06/2024,Medeama SC,Karela United FC,0,1,,,A
+GH1,16/06/2024,Legon Cities FC,Bibiani Gold Stars FC,1,1,,,D
+GH1,16/06/2024,FC Samartex 1996,Accra Lions FC,2,0,,,H
+GH1,16/06/2024,Bechem United FC,Accra Hearts of Oak SC,2,3,,,A
+GH1,07/09/2024,Dreams FC,FC Samartex 1996,0,0,,,D
+GH1,07/09/2024,Vision FC,Berekum Chelsea FC,0,0,,,D
+GH1,08/09/2024,Accra Hearts of Oak SC,Basake Holy Stars FC,0,1,,,A
+GH1,08/09/2024,Aduana FC,Heart of Lions FC,1,1,,,D
+GH1,08/09/2024,Karela United FC,Asante Kotoko FC,0,1,,,A
+GH1,08/09/2024,Bibiani Gold Stars FC,Legon Cities FC,2,1,,,H
+GH1,08/09/2024,Nsoatreman FC,Wenchi Young Apostles FC,2,0,,,H
+GH1,08/09/2024,Nations FC,Bechem United FC,0,0,,,D
+GH1,08/09/2024,Medeama SC,Accra Lions FC,1,0,,,H
+GH1,14/09/2024,Legon Cities FC,Medeama SC,0,1,,,A
+GH1,15/09/2024,Heart of Lions FC,Accra Hearts of Oak SC,2,0,,,H
+GH1,15/09/2024,Bechem United FC,Aduana FC,0,0,,,D
+GH1,15/09/2024,Berekum Chelsea FC,Karela United FC,1,0,,,H
+GH1,15/09/2024,Wenchi Young Apostles FC,Nations FC,0,0,,,D
+GH1,15/09/2024,Basake Holy Stars FC,Dreams FC,0,0,,,D
+GH1,16/09/2024,Accra Lions FC,Vision FC,0,2,,,A
+GH1,21/09/2024,Vision FC,Legon Cities FC,1,1,,,D
+GH1,22/09/2024,Bibiani Gold Stars FC,Basake Holy Stars FC,1,0,,,H
+GH1,22/09/2024,Asante Kotoko FC,Wenchi Young Apostles FC,1,1,,,D
+GH1,22/09/2024,Karela United FC,Accra Lions FC,1,1,,,D
+GH1,22/09/2024,Aduana FC,Nations FC,1,2,,,A
+GH1,22/09/2024,Accra Hearts of Oak SC,Bechem United FC,2,0,,,H
+GH1,23/09/2024,Dreams FC,Heart of Lions FC,2,2,,,D
+GH1,28/09/2024,Accra Lions FC,Nsoatreman FC,3,1,,,H
+GH1,29/09/2024,Bechem United FC,Dreams FC,1,0,,,H
+GH1,29/09/2024,Berekum Chelsea FC,Asante Kotoko FC,1,1,,,D
+GH1,29/09/2024,FC Samartex 1996,Vision FC,2,1,,,H
+GH1,29/09/2024,Heart of Lions FC,Bibiani Gold Stars FC,0,0,,,D
+GH1,29/09/2024,Wenchi Young Apostles FC,Aduana FC,3,2,,,H
+GH1,29/09/2024,Basake Holy Stars FC,Medeama SC,1,2,,,A
+GH1,29/09/2024,Nations FC,Accra Hearts of Oak SC,0,0,,,D
+GH1,29/09/2024,Legon Cities FC,Karela United FC,0,2,,,A
+GH1,02/10/2024,Asante Kotoko FC,Nsoatreman FC,1,0,,,H
+GH1,02/10/2024,FC Samartex 1996,Bibiani Gold Stars FC,1,1,,,D
+GH1,04/10/2024,Accra Hearts of Oak SC,Aduana FC,0,0,,,D
+GH1,05/10/2024,Medeama SC,Heart of Lions FC,0,0,,,D
+GH1,06/10/2024,Dreams FC,Nations FC,0,1,,,A
+GH1,06/10/2024,Nsoatreman FC,Legon Cities FC,3,1,,,H
+GH1,06/10/2024,Bibiani Gold Stars FC,Bechem United FC,1,0,,,H
+GH1,06/10/2024,Vision FC,Basake Holy Stars FC,1,0,,,H
+GH1,06/10/2024,Karela United FC,FC Samartex 1996,1,1,,,D
+GH1,06/10/2024,Asante Kotoko FC,Accra Lions FC,1,0,,,H
+GH1,06/10/2024,Berekum Chelsea FC,Wenchi Young Apostles FC,1,0,,,H
+GH1,09/10/2024,Nsoatreman FC,Berekum Chelsea FC,0,0,,,D
+GH1,09/10/2024,Medeama SC,FC Samartex 1996,0,0,,,D
+GH1,12/10/2024,Accra Lions FC,Berekum Chelsea FC,1,1,,,D
+GH1,12/10/2024,Heart of Lions FC,Vision FC,0,0,,,D
+GH1,13/10/2024,Wenchi Young Apostles FC,Accra Hearts of Oak SC,1,2,,,A
+GH1,13/10/2024,Basake Holy Stars FC,Karela United FC,1,0,,,H
+GH1,13/10/2024,Aduana FC,Dreams FC,2,0,,,H
+GH1,13/10/2024,Bechem United FC,Medeama SC,2,0,,,H
+GH1,13/10/2024,Nations FC,Bibiani Gold Stars FC,1,1,,,D
+GH1,14/10/2024,FC Samartex 1996,Nsoatreman FC,2,0,,,H
+GH1,19/10/2024,Accra Lions FC,Wenchi Young Apostles FC,0,0,,,D
+GH1,20/10/2024,Medeama SC,Nations FC,1,0,,,H
+GH1,20/10/2024,Bibiani Gold Stars FC,Aduana FC,2,0,,,H
+GH1,20/10/2024,Dreams FC,Accra Hearts of Oak SC,0,0,,,D
+GH1,20/10/2024,Vision FC,Bechem United FC,1,1,,,D
+GH1,20/10/2024,Berekum Chelsea FC,Legon Cities FC,3,1,,,H
+GH1,20/10/2024,Karela United FC,Heart of Lions FC,1,0,,,H
+GH1,20/10/2024,Asante Kotoko FC,FC Samartex 1996,1,0,,,H
+GH1,20/10/2024,Nsoatreman FC,Basake Holy Stars FC,2,0,,,H
+GH1,25/10/2024,Legon Cities FC,Accra Lions FC,0,0,,,D
+GH1,27/10/2024,Nations FC,Vision FC,3,0,,,H
+GH1,27/10/2024,Bechem United FC,Karela United FC,0,0,,,D
+GH1,27/10/2024,FC Samartex 1996,Berekum Chelsea FC,1,0,,,H
+GH1,27/10/2024,Accra Hearts of Oak SC,Bibiani Gold Stars FC,0,1,,,A
+GH1,27/10/2024,Heart of Lions FC,Nsoatreman FC,1,0,,,H
+GH1,27/10/2024,Wenchi Young Apostles FC,Dreams FC,1,0,,,H
+GH1,27/10/2024,Basake Holy Stars FC,Asante Kotoko FC,1,1,,,D
+GH1,28/10/2024,Aduana FC,Medeama SC,2,2,,,D
+GH1,30/10/2024,Legon Cities FC,Asante Kotoko FC,2,1,,,H
+GH1,01/11/2024,Medeama SC,Accra Hearts of Oak SC,0,2,,,A
+GH1,01/11/2024,Accra Lions FC,FC Samartex 1996,1,1,,,D
+GH1,03/11/2024,Berekum Chelsea FC,Basake Holy Stars FC,2,2,,,D
+GH1,03/11/2024,Asante Kotoko FC,Heart of Lions FC,0,1,,,A
+GH1,03/11/2024,Karela United FC,Nations FC,0,1,,,A
+GH1,03/11/2024,Vision FC,Aduana FC,0,0,,,D
+GH1,03/11/2024,Bibiani Gold Stars FC,Dreams FC,0,0,,,D
+GH1,03/11/2024,Nsoatreman FC,Bechem United FC,2,2,,,D
+GH1,04/11/2024,Legon Cities FC,Wenchi Young Apostles FC,2,0,,,H
+GH1,08/11/2024,Accra Hearts of Oak SC,Vision FC,1,0,,,H
+GH1,09/11/2024,Dreams FC,Medeama SC,1,0,,,H
+GH1,10/11/2024,Wenchi Young Apostles FC,Bibiani Gold Stars FC,0,0,,,D
+GH1,10/11/2024,Heart of Lions FC,Berekum Chelsea FC,1,0,,,H
+GH1,10/11/2024,Aduana FC,Karela United FC,1,0,,,H
+GH1,10/11/2024,Bechem United FC,Asante Kotoko FC,1,0,,,H
+GH1,10/11/2024,Basake Holy Stars FC,Accra Lions FC,2,1,,,H
+GH1,10/11/2024,FC Samartex 1996,Legon Cities FC,1,0,,,H
+GH1,10/11/2024,Nations FC,Nsoatreman FC,3,0,,,H
+GH1,16/11/2024,Accra Lions FC,Heart of Lions FC,0,0,,,D
+GH1,16/11/2024,Nsoatreman FC,Aduana FC,1,1,,,D
+GH1,17/11/2024,Medeama SC,Bibiani Gold Stars FC,2,0,,,H
+GH1,17/11/2024,Legon Cities FC,Basake Holy Stars FC,2,1,,,H
+GH1,17/11/2024,Asante Kotoko FC,Nations FC,0,2,,,A
+GH1,17/11/2024,FC Samartex 1996,Wenchi Young Apostles FC,0,1,,,A
+GH1,17/11/2024,Vision FC,Dreams FC,0,1,,,A
+GH1,17/11/2024,Berekum Chelsea FC,Bechem United FC,1,2,,,A
+GH1,17/11/2024,Karela United FC,Accra Hearts of Oak SC,0,1,,,A
+GH1,23/11/2024,Accra Hearts of Oak SC,Nsoatreman FC,1,1,,,D
+GH1,24/11/2024,Dreams FC,Karela United FC,0,1,,,A
+GH1,24/11/2024,Wenchi Young Apostles FC,Medeama SC,0,2,,,A
+GH1,24/11/2024,Nations FC,Berekum Chelsea FC,0,1,,,A
+GH1,24/11/2024,Aduana FC,Asante Kotoko FC,0,2,,,A
+GH1,24/11/2024,Bechem United FC,Accra Lions FC,1,0,,,H
+GH1,24/11/2024,Basake Holy Stars FC,FC Samartex 1996,1,0,,,H
+GH1,24/11/2024,Bibiani Gold Stars FC,Vision FC,2,0,,,H
+GH1,24/11/2024,Heart of Lions FC,Legon Cities FC,3,0,,,H
+GH1,14/12/2024,Legon Cities FC,Bechem United FC,0,2,,,A
+GH1,14/12/2024,Nsoatreman FC,Dreams FC,1,1,,,D
+GH1,14/12/2024,Karela United FC,Bibiani Gold Stars FC,1,1,,,D
+GH1,14/12/2024,FC Samartex 1996,Heart of Lions FC,0,1,,,A
+GH1,14/12/2024,Accra Lions FC,Nations FC,1,0,,,H
+GH1,14/12/2024,Basake Holy Stars FC,Wenchi Young Apostles FC,3,0,,,H
+GH1,14/12/2024,Berekum Chelsea FC,Aduana FC,0,0,,,D
+GH1,14/12/2024,Vision FC,Medeama SC,3,2,,,H
+GH1,15/12/2024,Asante Kotoko FC,Accra Hearts of Oak SC,1,0,,,H
+GH1,20/12/2024,Accra Hearts of Oak SC,Berekum Chelsea FC,3,1,,,H
+GH1,21/12/2024,Bechem United FC,FC Samartex 1996,1,0,,,H
+GH1,21/12/2024,Heart of Lions FC,Basake Holy Stars FC,3,1,,,H
+GH1,21/12/2024,Dreams FC,Asante Kotoko FC,1,2,,,A
+GH1,21/12/2024,Bibiani Gold Stars FC,Nsoatreman FC,2,1,,,H
+GH1,21/12/2024,Wenchi Young Apostles FC,Vision FC,1,1,,,D
+GH1,21/12/2024,Nations FC,Legon Cities FC,3,0,,,H
+GH1,23/12/2024,Aduana FC,Accra Lions FC,0,0,,,D
+GH1,26/12/2024,Legon Cities FC,Aduana FC,0,1,,,A
+GH1,26/12/2024,Basake Holy Stars FC,Bechem United FC,3,0,,,H
+GH1,26/12/2024,Heart of Lions FC,Wenchi Young Apostles FC,1,0,,,H
+GH1,27/12/2024,Asante Kotoko FC,Bibiani Gold Stars FC,2,0,,,H
+GH1,29/12/2024,FC Samartex 1996,Nations FC,1,1,,,D
+GH1,29/12/2024,Accra Lions FC,Accra Hearts of Oak SC,2,3,,,A
+GH1,29/12/2024,Karela United FC,Vision FC,1,1,,,D
+GH1,29/12/2024,Berekum Chelsea FC,Dreams FC,0,0,,,D
+GH1,01/01/2025,Medeama SC,Karela United FC,1,0,,,H
+GH1,03/01/2025,Accra Hearts of Oak SC,Legon Cities FC,1,0,,,H
+GH1,04/01/2025,Bibiani Gold Stars FC,Berekum Chelsea FC,2,0,,,H
+GH1,05/01/2025,Dreams FC,Accra Lions FC,1,0,,,H
+GH1,05/01/2025,Bechem United FC,Heart of Lions FC,3,0,,,H
+GH1,05/01/2025,Vision FC,Nsoatreman FC,1,0,,,H
+GH1,05/01/2025,Nations FC,Basake Holy Stars FC,3,1,,,H
+GH1,05/01/2025,Medeama SC,Asante Kotoko FC,1,1,,,D
+GH1,05/01/2025,Wenchi Young Apostles FC,Karela United FC,2,0,,,H
+GH1,05/01/2025,Aduana FC,FC Samartex 1996,0,1,,,A
+GH1,08/01/2025,Nsoatreman FC,Medeama SC,1,1,,,D
+GH1,19/01/2025,Heart of Lions FC,Nations FC,0,1,,,A
+GH1,19/01/2025,FC Samartex 1996,Accra Hearts of Oak SC,0,0,,,D
+GH1,19/01/2025,Asante Kotoko FC,Vision FC,4,1,,,H
+GH1,19/01/2025,Wenchi Young Apostles FC,Bechem United FC,0,0,,,D
+GH1,19/01/2025,Basake Holy Stars FC,Aduana FC,1,1,,,D
+GH1,19/01/2025,Legon Cities FC,Dreams FC,3,0,,,H
+GH1,19/01/2025,Accra Lions FC,Bibiani Gold Stars FC,0,3,,,A
+GH1,19/01/2025,Nsoatreman FC,Karela United FC,1,0,,,H
+GH1,19/01/2025,Berekum Chelsea FC,Medeama SC,2,1,,,H
+GH1,25/01/2025,Accra Lions FC,Medeama SC,1,0,,,H
+GH1,26/01/2025,Bechem United FC,Nations FC,2,0,,,H
+GH1,26/01/2025,Berekum Chelsea FC,Vision FC,1,0,,,H
+GH1,26/01/2025,Heart of Lions FC,Aduana FC,2,1,,,H
+GH1,26/01/2025,Legon Cities FC,Bibiani Gold Stars FC,1,0,,,H
+GH1,26/01/2025,Wenchi Young Apostles FC,Nsoatreman FC,1,0,,,H
+GH1,26/01/2025,Basake Holy Stars FC,Accra Hearts of Oak SC,0,0,,,D
+GH1,26/01/2025,Asante Kotoko FC,Karela United FC,1,0,,,H
+GH1,26/01/2025,FC Samartex 1996,Dreams FC,1,1,,,D
+GH1,31/01/2025,Accra Hearts of Oak SC,Heart of Lions FC,1,0,,,H
+GH1,02/02/2025,Nsoatreman FC,Asante Kotoko FC,1,0,,,H
+GH1,02/02/2025,Dreams FC,Basake Holy Stars FC,2,1,,,H
+GH1,02/02/2025,Vision FC,Accra Lions FC,2,1,,,H
+GH1,02/02/2025,Karela United FC,Berekum Chelsea FC,2,1,,,H
+GH1,02/02/2025,Bibiani Gold Stars FC,FC Samartex 1996,0,0,,,D
+GH1,02/02/2025,Aduana FC,Bechem United FC,1,0,,,H
+GH1,02/02/2025,Nations FC,Wenchi Young Apostles FC,1,2,,,A
+GH1,02/02/2025,Medeama SC,Legon Cities FC,1,0,,,H
+GH1,08/03/2025,Accra Hearts of Oak SC,Wenchi Young Apostles FC,2,0,,,H
+GH1,09/03/2025,Asante Kotoko FC,Legon Cities FC,2,0,,,H
+GH1,09/03/2025,Berekum Chelsea FC,Accra Lions FC,3,1,,,H
+GH1,09/03/2025,Dreams FC,Aduana FC,0,0,,,D
+GH1,09/03/2025,Karela United FC,Basake Holy Stars FC,1,1,,,D
+GH1,09/03/2025,Vision FC,Heart of Lions FC,1,1,,,D
+GH1,09/03/2025,Bibiani Gold Stars FC,Nations FC,1,0,,,H
+GH1,09/03/2025,Medeama SC,Bechem United FC,3,1,,,H
+GH1,10/03/2025,Nsoatreman FC,FC Samartex 1996,0,1,,,A
+GH1,15/03/2025,Accra Hearts of Oak SC,Dreams FC,0,1,,,A
+GH1,15/03/2025,Wenchi Young Apostles FC,Accra Lions FC,1,0,,,H
+GH1,15/03/2025,FC Samartex 1996,Asante Kotoko FC,1,1,,,D
+GH1,16/03/2025,Basake Holy Stars FC,Nsoatreman FC,3,0,,,H
+GH1,16/03/2025,Nations FC,Medeama SC,2,1,,,H
+GH1,16/03/2025,Aduana FC,Bibiani Gold Stars FC,2,0,,,H
+GH1,16/03/2025,Legon Cities FC,Berekum Chelsea FC,2,1,,,H
+GH1,16/03/2025,Heart of Lions FC,Karela United FC,1,0,,,H
+GH1,16/03/2025,Bechem United FC,Vision FC,2,0,,,H
+GH1,19/03/2025,FC Samartex 1996,Medeama SC,2,1,,,H
+GH1,19/03/2025,Bechem United FC,Accra Hearts of Oak SC,1,0,,,H
+GH1,19/03/2025,Wenchi Young Apostles FC,Asante Kotoko FC,0,0,,,D
+GH1,19/03/2025,Berekum Chelsea FC,Nsoatreman FC,3,0,,,H
+GH1,19/03/2025,Legon Cities FC,Vision FC,1,1,,,D
+GH1,19/03/2025,Nations FC,Aduana FC,0,1,,,A
+GH1,19/03/2025,Heart of Lions FC,Dreams FC,1,2,,,A
+GH1,19/03/2025,Basake Holy Stars FC,Bibiani Gold Stars FC,0,1,,,A
+GH1,20/03/2025,Accra Lions FC,Karela United FC,0,0,,,D
+GH1,23/03/2025,Accra Lions FC,Legon Cities FC,2,1,,,H
+GH1,23/03/2025,Asante Kotoko FC,Basake Holy Stars FC,1,0,,,H
+GH1,23/03/2025,Berekum Chelsea FC,FC Samartex 1996,0,0,,,D
+GH1,23/03/2025,Bibiani Gold Stars FC,Accra Hearts of Oak SC,1,1,,,D
+GH1,23/03/2025,Dreams FC,Wenchi Young Apostles FC,1,0,,,H
+GH1,23/03/2025,Medeama SC,Aduana FC,2,0,,,H
+GH1,23/03/2025,Karela United FC,Bechem United FC,2,1,,,H
+GH1,23/03/2025,Vision FC,Nations FC,0,0,,,D
+GH1,24/03/2025,Nsoatreman FC,Heart of Lions FC,0,3,,,A
+GH1,01/04/2025,Bibiani Gold Stars FC,Heart of Lions FC,2,1,,,H
+GH1,01/04/2025,Medeama SC,Basake Holy Stars FC,2,1,,,H
+GH1,02/04/2025,Nsoatreman FC,Accra Lions FC,0,3,,,A
+GH1,02/04/2025,Karela United FC,Legon Cities FC,2,0,,,H
+GH1,02/04/2025,Aduana FC,Wenchi Young Apostles FC,2,2,,,D
+GH1,02/04/2025,Asante Kotoko FC,Berekum Chelsea FC,1,0,,,H
+GH1,02/04/2025,Dreams FC,Bechem United FC,1,0,,,H
+GH1,02/04/2025,Vision FC,FC Samartex 1996,3,2,,,H
+GH1,03/04/2025,Accra Hearts of Oak SC,Nations FC,0,1,,,A
+GH1,06/04/2025,Basake Holy Stars FC,Berekum Chelsea FC,2,1,,,H
+GH1,06/04/2025,Bechem United FC,Nsoatreman FC,3,0,,,H
+GH1,06/04/2025,Aduana FC,Vision FC,1,0,,,H
+GH1,06/04/2025,Wenchi Young Apostles FC,Legon Cities FC,0,0,,,D
+GH1,06/04/2025,FC Samartex 1996,Accra Lions FC,2,0,,,H
+GH1,06/04/2025,Accra Hearts of Oak SC,Medeama SC,1,0,,,H
+GH1,06/04/2025,Dreams FC,Bibiani Gold Stars FC,2,0,,,H
+GH1,06/04/2025,Heart of Lions FC,Asante Kotoko FC,1,1,,,D
+GH1,07/04/2025,Nations FC,Karela United FC,1,0,,,H
+GH1,11/04/2025,Medeama SC,Dreams FC,4,0,,,H
+GH1,12/04/2025,Accra Lions FC,Basake Holy Stars FC,2,1,,,H
+GH1,13/04/2025,Berekum Chelsea FC,Heart of Lions FC,1,0,,,H
+GH1,13/04/2025,Bibiani Gold Stars FC,Wenchi Young Apostles FC,1,0,,,H
+GH1,13/04/2025,Legon Cities FC,FC Samartex 1996,0,2,,,A
+GH1,13/04/2025,Nsoatreman FC,Nations FC,0,3,,,A
+GH1,13/04/2025,Asante Kotoko FC,Bechem United FC,1,1,,,D
+GH1,13/04/2025,Karela United FC,Aduana FC,2,0,,,H
+GH1,13/04/2025,Vision FC,Accra Hearts of Oak SC,1,1,,,D
+GH1,16/04/2025,Legon Cities FC,Nsoatreman FC,3,0,,,H
+GH1,16/04/2025,Bechem United FC,Bibiani Gold Stars FC,0,2,,,A
+GH1,16/04/2025,Aduana FC,Accra Hearts of Oak SC,2,0,,,H
+GH1,16/04/2025,Heart of Lions FC,Medeama SC,1,0,,,H
+GH1,16/04/2025,Wenchi Young Apostles FC,Berekum Chelsea FC,2,1,,,H
+GH1,16/04/2025,Accra Lions FC,Asante Kotoko FC,3,0,,,H
+GH1,16/04/2025,Nations FC,Dreams FC,1,0,,,H
+GH1,16/04/2025,FC Samartex 1996,Karela United FC,2,0,,,H
+GH1,16/04/2025,Basake Holy Stars FC,Vision FC,1,0,,,H
+GH1,20/04/2025,Bechem United FC,Berekum Chelsea FC,1,2,,,A
+GH1,20/04/2025,Wenchi Young Apostles FC,FC Samartex 1996,1,1,,,D
+GH1,20/04/2025,Heart of Lions FC,Accra Lions FC,3,1,,,H
+GH1,20/04/2025,Bibiani Gold Stars FC,Medeama SC,1,0,,,H
+GH1,20/04/2025,Dreams FC,Vision FC,1,1,,,D
+GH1,20/04/2025,Basake Holy Stars FC,Legon Cities FC,1,0,,,H
+GH1,20/04/2025,Nations FC,Asante Kotoko FC,2,0,,,H
+GH1,20/04/2025,Aduana FC,Nsoatreman FC,3,0,,,H
+GH1,20/04/2025,Accra Hearts of Oak SC,Karela United FC,0,0,,,D
+GH1,26/04/2025,Accra Lions FC,Bechem United FC,2,0,,,H
+GH1,26/04/2025,Medeama SC,Wenchi Young Apostles FC,3,0,,,H
+GH1,27/04/2025,Berekum Chelsea FC,Nations FC,1,0,,,H
+GH1,27/04/2025,Legon Cities FC,Heart of Lions FC,0,1,,,A
+GH1,27/04/2025,Nsoatreman FC,Accra Hearts of Oak SC,0,3,,,A
+GH1,27/04/2025,Asante Kotoko FC,Aduana FC,1,0,,,H
+GH1,27/04/2025,FC Samartex 1996,Basake Holy Stars FC,3,0,,,H
+GH1,27/04/2025,Karela United FC,Dreams FC,1,2,,,A
+GH1,27/04/2025,Vision FC,Bibiani Gold Stars FC,2,0,,,H
+GH1,02/05/2025,Medeama SC,Vision FC,3,1,,,H
+GH1,04/05/2025,Nations FC,Accra Lions FC,1,0,,,H
+GH1,04/05/2025,Wenchi Young Apostles FC,Basake Holy Stars FC,2,0,,,H
+GH1,04/05/2025,Bibiani Gold Stars FC,Karela United FC,0,1,,,A
+GH1,04/05/2025,Aduana FC,Berekum Chelsea FC,3,2,,,H
+GH1,04/05/2025,Bechem United FC,Legon Cities FC,1,0,,,H
+GH1,04/05/2025,Accra Hearts of Oak SC,Asante Kotoko FC,0,0,,,D
+GH1,04/05/2025,Dreams FC,Nsoatreman FC,3,0,,,H
+GH1,04/05/2025,Heart of Lions FC,FC Samartex 1996,2,1,,,H
+GH1,17/05/2025,Accra Lions FC,Aduana FC,5,3,,,H
+GH1,18/05/2025,Vision FC,Wenchi Young Apostles FC,2,0,,,H
+GH1,18/05/2025,Asante Kotoko FC,Dreams FC,4,1,,,H
+GH1,18/05/2025,Berekum Chelsea FC,Accra Hearts of Oak SC,0,1,,,A
+GH1,18/05/2025,Basake Holy Stars FC,Heart of Lions FC,0,0,,,D
+GH1,18/05/2025,Karela United FC,Medeama SC,3,1,,,H
+GH1,18/05/2025,Nsoatreman FC,Bibiani Gold Stars FC,0,3,,,A
+GH1,18/05/2025,FC Samartex 1996,Bechem United FC,2,1,,,H
+GH1,19/05/2025,Legon Cities FC,Nations FC,1,4,,,A
+GH1,23/05/2025,Accra Hearts of Oak SC,Accra Lions FC,3,1,,,H
+GH1,25/05/2025,Medeama SC,Nsoatreman FC,3,0,,,H
+GH1,25/05/2025,Vision FC,Karela United FC,1,0,,,H
+GH1,25/05/2025,Nations FC,FC Samartex 1996,3,0,,,H
+GH1,25/05/2025,Dreams FC,Berekum Chelsea FC,1,0,,,H
+GH1,25/05/2025,Bechem United FC,Basake Holy Stars FC,0,0,,,D
+GH1,25/05/2025,Aduana FC,Legon Cities FC,4,0,,,H
+GH1,25/05/2025,Wenchi Young Apostles FC,Heart of Lions FC,3,1,,,H
+GH1,25/05/2025,Bibiani Gold Stars FC,Asante Kotoko FC,0,0,,,D
+GH1,01/06/2025,FC Samartex 1996,Aduana FC,2,1,,,H
+GH1,01/06/2025,Nsoatreman FC,Vision FC,0,3,,,A
+GH1,01/06/2025,Karela United FC,Wenchi Young Apostles FC,3,0,,,H
+GH1,01/06/2025,Basake Holy Stars FC,Nations FC,3,0,,,H
+GH1,01/06/2025,Legon Cities FC,Accra Hearts of Oak SC,0,2,,,A
+GH1,01/06/2025,Berekum Chelsea FC,Bibiani Gold Stars FC,2,3,,,A
+GH1,01/06/2025,Asante Kotoko FC,Medeama SC,3,2,,,H
+GH1,01/06/2025,Accra Lions FC,Dreams FC,0,2,,,A
+GH1,01/06/2025,Heart of Lions FC,Bechem United FC,2,1,,,H
+GH1,08/06/2025,Nations FC,Heart of Lions FC,0,2,,,A
+GH1,08/06/2025,Accra Hearts of Oak SC,FC Samartex 1996,1,0,,,H
+GH1,08/06/2025,Aduana FC,Basake Holy Stars FC,3,1,,,H
+GH1,08/06/2025,Bechem United FC,Wenchi Young Apostles FC,1,0,,,H
+GH1,08/06/2025,Bibiani Gold Stars FC,Accra Lions FC,4,0,,,H
+GH1,08/06/2025,Dreams FC,Legon Cities FC,4,1,,,H
+GH1,08/06/2025,Karela United FC,Nsoatreman FC,3,0,,,H
+GH1,08/06/2025,Medeama SC,Berekum Chelsea FC,1,2,,,A
+GH1,08/06/2025,Vision FC,Asante Kotoko FC,3,1,,,H

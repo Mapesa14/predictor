@@ -1,0 +1,894 @@
+"""Command line for the football score predictor."""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from datetime import datetime
+
+import pandas as pd
+
+from . import backtest, fixtures, leagues, loader, model, report
+from .engine import (DEFAULT_EDGE_SCALE, DEFAULT_GOAL_SHRINK,
+                     DEFAULT_MARKET_WEIGHT, DEFAULT_WEIGHTS,
+                     DEFAULT_XI, Predictor)
+
+DEFAULT_DATA = os.environ.get("SOCCER_DATA", r"D:\Downloads July 2026\SoccerData")
+
+
+def _jsonable(s):
+    out = {}
+    for k, v in s.items():
+        if k == "correct_scores":
+            out[k] = [{"score": "%d-%d" % (i, j), "p": p} for i, j, p in v]
+        elif k == "ht_ft":
+            out[k] = {"%s/%s" % kk: vv for kk, vv in v.items()}
+        elif isinstance(v, dict):
+            out[k] = {str(kk): vv for kk, vv in v.items()}
+        else:
+            out[k] = v
+    return out
+
+
+def _split_match(args):
+    """Accept two team arguments, or one string with a vs/v/- separator."""
+    parts = list(args)
+    joined = " ".join(parts)
+    low = joined.lower()
+    for sep in (" vs ", " v ", " - ", " x "):
+        if sep in low:
+            i = low.index(sep)
+            return joined[:i].strip(), joined[i + len(sep):].strip()
+    if len(parts) == 2:
+        return parts[0], parts[1]
+    raise SystemExit('Give two teams, e.g. predict "Arsenal" "Chelsea"')
+
+
+# ------------------------------------------------------------------ commands
+def cmd_predict(a):
+    home, away = _split_match(a.match)
+    p = Predictor(a.data, xi=a.xi, as_of=_asof(a),
+                  goal_shrink=a.goal_shrink, edge_scale=a.edge_scale,
+                  use_ladder=not a.no_ladder, weights=_weights(a),
+                  market_weight=a.market_weight)
+    # A name unknown to an explicitly named league is taken as a promoted club;
+    # without -l we have no league to promote it into, so it stays an error.
+    s = p.predict(home, away, a.league, neutral=a.neutral,
+                  allow_new=bool(a.league))
+    when = _parse_when(a.date)
+    if a.json:
+        print(json.dumps(_jsonable(s), indent=2, default=str))
+        return
+    print(report.card(s["home"], s["away"], s["div"], s, when,
+                      top_scores=a.scores, wide=a.full))
+    # Any inexact name match is shown, so a wrong guess can never pass unseen.
+    for typed, got in ((home, s["home"]), (away, s["away"])):
+        if typed.strip().casefold() != got.casefold():
+            print("\nRead %r as %r." % (typed.strip(), got))
+    if a.best:
+        print("\nBEST BETS")
+        for name, prob in report.best_bets(s):
+            print("  %-24s%s" % (name, report.pct(prob).rjust(6)))
+    for team, isnew, src in ((s["home"], s["home_new"], s["home_source"]),
+                             (s["away"], s["away_new"], s["away_source"])):
+        if not isnew:
+            continue
+        if src == "prior":
+            print("\nNote: %s has no history in %s, and none in a division we can\n"
+                  "      carry a rating from. Rated with the promoted-team prior:\n"
+                  "      scores 0.79x and concedes 1.16x the league average."
+                  % (team, leagues.name(s["div"])))
+        else:
+            print("\nNote: %s has no history in %s. Rated from its %s form,\n"
+                  "      shifted by the measured gap between the two divisions."
+                  % (team, leagues.name(s["div"]), leagues.name(src)))
+    if not (s["home_new"] or s["away_new"]) and \
+            min(s["home_played"], s["away_played"]) < 12:
+        print("\nNote: thin sample, %s %d matches and %s %d matches in this league."
+              % (s["home"], s["home_played"], s["away"], s["away_played"]))
+
+
+def cmd_slate(a):
+    """Predict every fixture on the upcoming schedule."""
+    p = Predictor(a.data, xi=a.xi, as_of=_asof(a),
+                  goal_shrink=a.goal_shrink, edge_scale=a.edge_scale,
+                  use_ladder=not a.no_ladder, weights=_weights(a),
+                  market_weight=a.market_weight)
+    divs = [a.league] if a.league else (leagues.TOP_10 if a.top10 else p.divs)
+    rows, skipped, promoted = [], [], []
+    for d in divs:
+        if d not in p.divs:
+            continue
+        sched = p.schedule(d, a.days, a.fixtures)
+        if not len(sched):
+            continue
+        for _, f in sched.head(a.limit).iterrows():
+            try:
+                s = p.predict(f["HomeTeam"], f["AwayTeam"], d, allow_new=True)
+            except SystemExit as e:
+                skipped.append("%s: %s v %s (%s)"
+                               % (leagues.name(d), f["HomeTeam"], f["AwayTeam"], e))
+                continue
+            i, j, _ = s["correct_scores"][0]
+            r = s["result"]
+            pick = max(r, key=r.get)
+            # A promoted side has no history in this division. Where it played a
+            # division we also load, its real rating carries up; otherwise it
+            # falls back to the measured promoted-team prior.
+            newcomers = ([(s["home"], s["home_source"])] if s["home_new"] else []) + \
+                        ([(s["away"], s["away_source"])] if s["away_new"] else [])
+            for t, src in newcomers:
+                promoted.append("%s (%s) - %s" % (
+                    t, leagues.name(d),
+                    "promoted-team prior" if src == "prior"
+                    else "carried up from " + leagues.name(src)))
+            rows.append({
+                "League": leagues.name(d),
+                "Date": f["Date"].strftime("%d %b") if pd.notna(f.get("Date")) else "TBD",
+                "Match": "%s v %s%s" % (s["home"], s["away"], " *" if newcomers else ""),
+                "Pick": {"H": "1", "D": "X", "A": "2"}[pick],
+                "1": report.pct(r["H"]), "X": report.pct(r["D"]), "2": report.pct(r["A"]),
+                "O2.5": report.pct(s["totals"][2.5]["over"]),
+                "BTTS": report.pct(s["btts"]["yes"]),
+                "Score": "%d-%d" % (i, j),
+                "xG": "%.2f-%.2f" % (s["exp_home"], s["exp_away"]),
+                "_conf": r[pick],
+            })
+    if not rows:
+        print("No upcoming fixtures found. Point --fixtures at a fixtures CSV, "
+              "or run: predict.py refresh-fixtures")
+        return
+    t = pd.DataFrame(rows).sort_values("_conf", ascending=False).drop(columns="_conf")
+    if a.json:
+        print(t.to_json(orient="records", indent=2))
+    else:
+        print(t.to_string(index=False))
+        print("\n%d fixtures. Pick is the most likely 1X2 outcome, "
+              "sorted by confidence." % len(t))
+        if promoted:
+            print("\n* No history in this division, so the rating comes from "
+                  "elsewhere:")
+            for t in sorted(set(promoted)):
+                print("    %s" % t)
+        if skipped:
+            print("\n%d fixtures could not be predicted:" % len(skipped))
+            for line in skipped:
+                print("    %s" % line)
+
+
+def cmd_brief(a):
+    """Predict a date window and write it out as a PDF."""
+    from . import brief, brief_md, market
+    p = Predictor(a.data, xi=a.xi, as_of=_asof(a),
+                  goal_shrink=a.goal_shrink, edge_scale=a.edge_scale,
+                  use_ladder=not a.no_ladder, weights=_weights(a),
+                  market_weight=a.market_weight)
+    # Named pairings bypass the schedule entirely: the engine can price any two
+    # clubs without a fixture list, which is the only option when the feed is
+    # down or the competition has no published schedule yet.
+    if a.pair or a.top_pairs:
+        return _brief_pairs(a, p)
+
+    cache = os.path.join(a.data, "fixtures.csv")
+    fx = fixtures.load_any(a.fixtures, cache)
+    if not len(fx):
+        raise SystemExit("No fixtures file. Run: predict.py refresh-fixtures")
+
+    start = _parse_when(a.start) if a.start else datetime.now()
+    end = _parse_when(a.end) if a.end else (start + pd.Timedelta(days=2))
+    end = end.replace(hour=23, minute=59)
+    fx = fx[(fx["Date"] >= pd.Timestamp(start).normalize()) &
+            (fx["Date"] <= pd.Timestamp(end))]
+    if a.after:                       # keep only kick-offs at or past this time
+        hh = fx["Time"].fillna("00:00").astype(str)
+        same_day = fx["Date"].dt.normalize() == pd.Timestamp(start).normalize()
+        fx = fx[~same_day | (hh >= a.after)]
+    if a.league:
+        fx = fx[fx["Div"] == a.league]
+    elif a.top10:
+        fx = fx[fx["Div"].isin(leagues.TOP_10)]
+    fx = fx.sort_values(["Date", "Time", "Div"])
+    if not len(fx) and not str(a.out or "").lower().endswith(".md"):
+        raise SystemExit("No fixtures in that window.")
+
+    rows, dissent, skipped, promoted, unloaded = [], [], [], [], set()
+    cross, caf_rows = [], []
+    for _, f in fx.iterrows():
+        d = f["Div"]
+        if d == "CAFCL":
+            # CAF ties go through the African bridge; a club from a federation
+            # with no loaded league is rated at federation level.
+            try:
+                s = p.predict_caf(f["HomeTeam"], f["AwayTeam"])
+            except SystemExit as e:
+                skipped.append("%s v %s (%s)" % (f["HomeTeam"], f["AwayTeam"], e))
+                continue
+            caf_rows.append(_caf_row(s, f, a.tz))
+            continue
+        if d not in p.divs and _is_domestic_code(d):
+            # A domestic league we simply do not load, such as Serie B. Its
+            # clubs are not a cross-league tie just because some of them were
+            # relegated from a league we do load - leave the whole division out.
+            unloaded.add(d)
+            continue
+        if d not in p.divs:
+            # A competition we do not model, such as a continental cup. With a
+            # measured country bridge these can be priced properly; without one
+            # the clubs' domestic ratings are reported and left unpriced.
+            if p.can_bridge(f["HomeTeam"], f["AwayTeam"]):
+                try:
+                    s = p.predict_cross(f["HomeTeam"], f["AwayTeam"], comp=d)
+                except SystemExit as e:
+                    skipped.append("%s v %s (%s)"
+                                   % (f["HomeTeam"], f["AwayTeam"], e))
+                    continue
+                rows.append(_row(s, "%s (bridged)" % d, f, a.tz))
+                continue
+            tie = _cross_tie(p, f)
+            if tie and tie.get("missing"):
+                skipped.append(
+                    "%s v %s (%s): no rating for %s - that league is not loaded"
+                    % (f["HomeTeam"], f["AwayTeam"], d,
+                       " and ".join(tie["missing"])))
+            elif tie:
+                cross.append(tie)
+            else:
+                unloaded.add(d)
+            continue
+        try:
+            s = p.predict(f["HomeTeam"], f["AwayTeam"], d, allow_new=True, odds=f)
+        except SystemExit as e:
+            skipped.append("%s v %s (%s)" % (f["HomeTeam"], f["AwayTeam"], e))
+            continue
+        r = s["result"]
+        pick = max(r, key=r.get)
+        i, j, _ = s["correct_scores"][0]
+        for team, isnew, src in ((s["home"], s["home_new"], s["home_source"]),
+                                 (s["away"], s["away_new"], s["away_source"])):
+            if isnew:
+                promoted.append("%s (%s, %s)" % (
+                    team, leagues.name(d),
+                    "no lower-division record, promoted-team prior used"
+                    if src == "prior" else "rated from " + leagues.name(src)))
+        conf = r[pick]
+        when, time_ = _local_kickoff(f, a.tz)
+        rows.append({
+            "league": leagues.label(d),
+            "time": time_,
+            "date": when,
+            "match": "%s v %s" % (s["home"], s["away"]),
+            "pH": r["H"], "pD": r["D"], "pA": r["A"],
+            "pick": {"H": "Home", "D": "Draw", "A": "Away"}[pick],
+            "over25": s["totals"][2.5]["over"], "btts": s["btts"]["yes"],
+            "score": "%d-%d" % (i, j),
+            "xgh": s["exp_home"], "xga": s["exp_away"],
+            "confidence": _confidence(conf),
+        })
+        # the model's own dissent from the price, before blending
+        if s.get("market_used"):
+            mp, kp = s["model_result"], s["market_result"]
+            for sel, key, ocol in (("Home", "H", "AvgH"), ("Draw", "D", "AvgD"),
+                                   ("Away", "A", "AvgA")):
+                diff = mp[key] - kp[key]
+                price = f.get(ocol)
+                if diff > 0.06 and pd.notna(price):
+                    dissent.append({
+                        "match": "%s v %s" % (s["home"], s["away"]),
+                        "league": leagues.name(d), "sel": sel,
+                        "model_p": mp[key], "market_p": kp[key],
+                        "diff": diff, "price": float(price)})
+
+    out = a.out or "predictions.pdf"
+    as_md = out.lower().endswith(".md")
+    if not rows and not cross and not caf_rows and not as_md:
+        raise SystemExit("Nothing could be predicted in that window.")
+    dissent.sort(key=lambda x: -x["diff"])
+    if unloaded:
+        counts = fx[fx["Div"].isin(unloaded)].groupby("Div").size()
+        skipped.append("divisions not loaded, so not predicted: " + ", ".join(
+            "%s (%d)" % (_UNLOADED_NAMES.get(d, d), int(counts.get(d, 0)))
+            for d in sorted(unloaded)))
+
+    same_day = pd.Timestamp(start).normalize() == pd.Timestamp(end).normalize()
+    label = (pd.Timestamp(start).strftime("%A %d %B %Y") if same_day else
+             "%s to %s" % (pd.Timestamp(start).strftime("%a %d %b %Y"),
+                           pd.Timestamp(end).strftime("%a %d %b %Y")))
+    if a.after and same_day:
+        label += ", kick-offs from %s" % a.after
+    meta = {"n_matches": format(len(p.df), ","),
+            "market_weight": a.market_weight,
+            "tz_label": _tz_label(a.tz),
+            "notes": list(a.note or [])}
+    if as_md:
+        brief_md.build(rows, out, label, datetime.now(), meta,
+                       dissent=dissent[:a.dissent], skipped=skipped,
+                       promoted=promoted, empty_note=_empty_note(p, start, end),
+                       ratings=None if rows else _ratings(p, a), cross=cross)
+    else:
+        brief.build(rows, out, label, datetime.now(), meta,
+                    dissent=dissent[:a.dissent], skipped=skipped,
+                    promoted=promoted, cross=cross, caf=caf_rows)
+    print("Wrote %s" % out)
+    if caf_rows:
+        print("  %d CAF tie(s) priced through the African bridge" % len(caf_rows))
+    if cross:
+        print("  %d cross-league tie(s) listed with ratings but not priced"
+              % len(cross))
+    if not rows:
+        print("  no fixtures in that window - see the file for why")
+        return
+    print("  %d fixtures across %d competitions"
+          % (len(rows), len({r["league"] for r in rows})))
+    print("  %d model/price disagreements listed" % len(dissent[:a.dissent]))
+    if skipped:
+        print("  %d note(s) on what was left out" % len(skipped))
+
+
+def _empty_note(p, start, end):
+    """Explain an empty window from the calendar in the data, not from a guess."""
+    d = p.df[p.df["Div"].isin(leagues.TOP_10)]
+    lo = pd.Timestamp(start).dayofyear - 1
+    hi = pd.Timestamp(end).dayofyear + 1
+    same = d[(d["Date"].dt.dayofyear >= lo) & (d["Date"].dt.dayofyear <= hi)]
+    years = sorted(set(d["Date"].dt.year))
+    counts = same.groupby(same["Date"].dt.year).size().to_dict()
+    lines = ["The fixtures feed on disk covers **%s** and holds nothing for "
+             "this window. The live feed at football-data.co.uk is returning "
+             "HTTP 503 right now, so it could not be refreshed." % _fx_span(p)]
+    if years:
+        lines.append("")
+        lines.append("That is very likely correct rather than a gap in the "
+                     "data. Across the same three days of previous seasons, "
+                     "these ten leagues played:")
+        lines.append("")
+        lines.append("| Season | Matches on these dates |")
+        lines.append("|---|---:|")
+        for y in years:
+            lines.append("| %d | %d |" % (y, counts.get(y, 0)))
+        lines.append("")
+        if max(counts.values(), default=0) < 10:
+            lines.append("Early September is the FIFA international window and "
+                         "Europe's domestic leagues pause through it. This "
+                         "engine rates club sides only — it has no "
+                         "international-team model — so there is nothing today "
+                         "it can honestly forecast.")
+            lines.append("")
+            lines.append("Club football in these leagues resumes the following "
+                         "weekend. Re-run this once the feed is back:")
+            lines.append("")
+            lines.append("```bash")
+            lines.append("python predict.py refresh-fixtures && \\")
+            lines.append("  python predict.py brief --top10 -o slate.md")
+            lines.append("```")
+    return "\n".join(lines)
+
+
+def _parse_pair(text):
+    """'N1:Ajax v PSV Eindhoven' -> ('N1', 'Ajax', 'PSV Eindhoven')."""
+    if ":" not in text:
+        raise SystemExit("Pair needs a division, e.g. --pair \"N1:Ajax v PSV\"")
+    div, rest = text.split(":", 1)
+    low = rest.lower()
+    for sep in (" v ", " vs ", " - "):
+        if sep in low:
+            i = low.index(sep)
+            return div.strip(), rest[:i].strip(), rest[i + len(sep):].strip()
+    raise SystemExit("Could not read a fixture from %r" % text)
+
+
+def _brief_pairs(a, p):
+    """Price named pairings and render them, with no schedule involved."""
+    from . import brief, brief_md
+    wanted = list(a.pair or [])
+    if a.top_pairs:
+        # every ordered pairing among a league's strongest clubs, which is the
+        # closest thing to a schedule when no schedule is published
+        for d in _divs_of(a, p):
+            table = model.strength_table(p.models(d)["FT"])[:a.top_pairs]
+            names = [t for t, *_ in table]
+            wanted += ["%s:%s v %s" % (d, h, x)
+                       for h in names for x in names if h != x]
+    rows, promoted, skipped = [], [], []
+    for text in wanted:
+        div, home, away = _parse_pair(text)
+        if div not in p.divs:
+            skipped.append("%s: no data loaded for division %s" % (text, div))
+            continue
+        try:
+            s = p.predict(home, away, div, allow_new=True)
+        except SystemExit as e:
+            skipped.append("%s (%s)" % (text, e))
+            continue
+        r = s["result"]
+        pick = max(r, key=r.get)
+        i, j, _ = s["correct_scores"][0]
+        for team, isnew, src in ((s["home"], s["home_new"], s["home_source"]),
+                                 (s["away"], s["away_new"], s["away_source"])):
+            if isnew:
+                promoted.append("%s (%s, %s)" % (
+                    team, leagues.name(div),
+                    "no lower-division record, promoted-team prior used"
+                    if src == "prior" else "rated from " + leagues.name(src)))
+        rows.append({
+            "league": leagues.label(div), "time": "-",
+            "date": pd.Timestamp(datetime.now().date()),
+            "match": "%s v %s" % (s["home"], s["away"]),
+            "pH": r["H"], "pD": r["D"], "pA": r["A"],
+            "pick": {"H": "Home", "D": "Draw", "A": "Away"}[pick],
+            "over25": s["totals"][2.5]["over"], "btts": s["btts"]["yes"],
+            "score": "%d-%d" % (i, j),
+            "xgh": s["exp_home"], "xga": s["exp_away"],
+            "confidence": _confidence(r[pick]),
+        })
+    if not rows:
+        raise SystemExit("None of those pairings could be priced.\n  "
+                         + "\n  ".join(skipped))
+
+    out = a.out or "pairings.pdf"
+    meta = {"n_matches": format(len(p.df), ","),
+            "market_weight": 0.0,          # no prices exist for a non-fixture
+            "unscheduled": True}
+    label = ("Head-to-head pairings, priced %s - these are ratings of the "
+             "matchup, not scheduled fixtures"
+             % datetime.now().strftime("%d %b %Y"))
+    if out.lower().endswith(".md"):
+        brief_md.build(rows, out, label, datetime.now(), meta,
+                       skipped=skipped, promoted=promoted)
+    else:
+        brief.build(rows, out, label, datetime.now(), meta,
+                    skipped=skipped, promoted=promoted)
+    print("Wrote %s" % out)
+    print("  %d pairings across %d competitions"
+          % (len(rows), len({r["league"] for r in rows})))
+    for line in skipped:
+        print("  left out: %s" % line)
+
+
+def _divs_of(a, p):
+    """Divisions selected by -l (comma separated), --top10, or everything."""
+    if a.league:
+        return [d.strip() for d in a.league.split(",") if d.strip() in p.divs]
+    return [d for d in (leagues.TOP_10 if getattr(a, "top10", False) else p.divs)
+            if d in p.divs]
+
+
+def _cross_tie(p, f):
+    """Ratings for a tie between clubs from two different leagues.
+
+    Each league is fitted with its own zero-sum constraint, so an English
+    attack rating and an Italian one are not on the same scale. Until a bridge
+    between leagues is measured, these are reported side by side and left
+    unpriced rather than guessed at.
+    """
+    import math
+    out = {"comp": str(f.get("Div", "")), "sides": [], "missing": []}
+    for side in ("HomeTeam", "AwayTeam"):
+        name = str(f[side]).strip()
+        try:
+            team, div = p.resolve(name, None, fuzzy=False)
+        except SystemExit:
+            out["missing"].append(name)
+            continue
+        m = p.models(div)["FT"]
+        atk, dfc = m._team(team)
+        out["sides"].append({
+            "team": team, "div": div, "league": leagues.name(div),
+            "attack": math.exp(atk),
+            "defence": math.exp(dfc),
+            "rating": math.exp(atk - dfc)})
+    if out["missing"]:
+        return out                        # caller reports which club is unrated
+    if out["sides"][0]["div"] == out["sides"][1]["div"]:
+        return None                       # same league: it can be priced normally
+    out["date"] = f.get("Date")
+    out["time"] = str(f["Time"])[:5] if pd.notna(f.get("Time")) else "TBD"
+    return out
+
+
+def _ratings(p, a, top=6):
+    """Current strength table per league, for a brief with nothing to forecast."""
+    divs = _divs_of(a, p)
+    out = []
+    for d in divs:
+        try:
+            m = p.models(d)["FT"]
+        except SystemExit:
+            continue
+        out.append((leagues.label(d),
+                    [(t, atk, dfc, rat)
+                     for t, atk, dfc, rat, _ in model.strength_table(m)[:top]]))
+    return out
+
+
+def _fx_span(p):
+    cache = os.path.join(p.root, "fixtures.csv")
+    try:
+        fx = fixtures.from_csv(cache)
+        return "%s to %s" % (fx["Date"].min().date(), fx["Date"].max().date())
+    except Exception:
+        return "an unknown range"
+
+
+# football-data.co.uk division codes for domestic leagues this build does not
+# load, named so the note reads as leagues rather than codes.
+_UNLOADED_NAMES = {
+    "I2": "Serie B", "SP2": "Segunda Division", "D2": "2. Bundesliga",
+    "F2": "Ligue 2", "SC1": "Scottish Championship", "SC2": "Scottish League One",
+    "SC3": "Scottish League Two",
+}
+
+
+def _is_domestic_code(div: str) -> bool:
+    """A football-data league code (E0, SC2, I2...), as opposed to a cup."""
+    import re
+    return bool(re.fullmatch(r"(E[0-3C]|SC[0-3]|[A-Z]{1,3}\d)", str(div)))
+
+
+_TZ_LABELS = {"Africa/Dar_es_Salaam": "EAT", "Europe/London": "UK",
+              "Africa/Nairobi": "EAT", "UTC": "UTC"}
+
+
+def _tz_label(tz):
+    return _TZ_LABELS.get(tz, tz)
+
+
+def _local_kickoff(f, tz):
+    """(date, 'HH:MM') in the reader's time zone, from a UK-time fixture row.
+
+    The feed publishes UK kick-off times. Converting the full timestamp rather
+    than adding hours means a late UK kick-off correctly lands on the next
+    calendar day in East Africa.
+    """
+    note = f.get("WhenNote")
+    if isinstance(note, str) and note.strip():
+        return note.strip(), "TBC"
+    d = pd.Timestamp(f["Date"])
+    t = f.get("Time")
+    if not isinstance(t, str) or ":" not in t:
+        return d, "TBC"
+    hh, mm = t.strip()[:5].split(":")
+    ts = d.replace(hour=int(hh), minute=int(mm))
+    try:
+        ts = ts.tz_localize("Europe/London").tz_convert(tz).tz_localize(None)
+    except Exception:
+        pass
+    return ts, ts.strftime("%H:%M")
+
+
+def _caf_row(s, f, tz):
+    """A CAF tie: the match itself, what fed each rating, and the tie odds."""
+    from .engine import tie_outcome
+    r = s["result"]
+    pick = max(r, key=r.get)
+    i, j, _ = s["correct_scores"][0]
+    when, time_ = _local_kickoff(f, tz)
+
+    def basis(fed, source, ties):
+        if not fed:
+            return source
+        return "%s (%s CAF ties)" % (source.replace("federation ", "") + " fed.",
+                                     ties if ties else "no")
+
+    row = {
+        "date": when, "time": time_,
+        "match": "%s v %s" % (s["home"], s["away"]),
+        "pH": r["H"], "pD": r["D"], "pA": r["A"],
+        "pick": {"H": "Home", "D": "Draw", "A": "Away"}[pick],
+        "over25": s["totals"][2.5]["over"], "btts": s["btts"]["yes"],
+        "score": "%d-%d" % (i, j),
+        "xgh": s["exp_home"], "xga": s["exp_away"],
+        "confidence": _confidence(r[pick]),
+        "home_basis": basis(s["home_fed"], s["home_source"], s["home_fed_ties"]),
+        "away_basis": basis(s["away_fed"], s["away_source"], s["away_fed_ties"]),
+        "thin": (s["home_fed"] and not s["home_fed_ties"]) or
+                (s["away_fed"] and not s["away_fed_ties"]),
+        "leg1": None, "tie": None,
+    }
+    lh, la = f.get("Leg1H"), f.get("Leg1A")
+    if pd.notna(lh) and pd.notna(la):
+        row["leg1"] = (int(lh), int(la))
+        row["tie"] = tie_outcome(s["matrix"], int(lh), int(la))
+    return row
+
+
+def _row(s, league_label, f, tz="Africa/Dar_es_Salaam"):
+    """One slate row from a prediction summary."""
+    r = s["result"]
+    pick = max(r, key=r.get)
+    i, j, _ = s["correct_scores"][0]
+    when, time_ = _local_kickoff(f, tz)
+    return {
+        "league": league_label,
+        "time": time_,
+        "date": when,
+        "match": "%s v %s" % (s["home"], s["away"]),
+        "pH": r["H"], "pD": r["D"], "pA": r["A"],
+        "pick": {"H": "Home", "D": "Draw", "A": "Away"}[pick],
+        "over25": s["totals"][2.5]["over"], "btts": s["btts"]["yes"],
+        "score": "%d-%d" % (i, j),
+        "xgh": s["exp_home"], "xga": s["exp_away"],
+        "confidence": _confidence(r[pick]),
+    }
+
+
+def _confidence(p):
+    """Plain words for how strong a call is, so nobody reads 38% as a tip."""
+    if p >= 0.65:
+        return "Strong"
+    if p >= 0.50:
+        return "Clear"
+    if p >= 0.42:
+        return "Slight lean"
+    return "Close to a coin toss"
+
+
+def cmd_table(a):
+    p = Predictor(a.data, xi=a.xi, as_of=_asof(a),
+                  goal_shrink=a.goal_shrink, edge_scale=a.edge_scale,
+                  use_ladder=not a.no_ladder, weights=_weights(a),
+                  market_weight=a.market_weight)
+    divs = [a.league] if a.league else (leagues.TOP_10 if a.top10 else p.divs)
+    for d in divs:
+        if d not in p.divs:
+            continue
+        m = p.models(d)["FT"]
+        print("\n%s  -  %d matches, home advantage %+.3f, rho %+.3f"
+              % (leagues.label(d), m.n_matches, m.home_adv, m.rho))
+        print("%-24s%8s%8s%9s%7s" % ("Team", "Attack", "Defence", "Rating", "Pld"))
+        print("-" * 56)
+        for t, atk, dfc, rating, pld in model.strength_table(m):
+            print("%-24s%8.2f%8.2f%9.2f%7d" % (t, atk, dfc, rating, pld))
+
+
+def cmd_fixtures(a):
+    p = Predictor(a.data, xi=a.xi, as_of=_asof(a),
+                  goal_shrink=a.goal_shrink, edge_scale=a.edge_scale,
+                  use_ladder=not a.no_ladder, weights=_weights(a),
+                  market_weight=a.market_weight)
+    divs = [a.league] if a.league else (leagues.TOP_10 if a.top10 else p.divs)
+    for d in divs:
+        if d not in p.divs:
+            continue
+        s = p.schedule(d, a.days, a.fixtures)
+        print("\n%s: %d fixtures" % (leagues.label(d), len(s)))
+        if not len(s):
+            print("  Every pairing has already been played, so the remaining "
+                  "schedule cannot be derived offline.")
+            if d in fixtures.SPLIT_LEAGUES:
+                print("  This league has a split second phase. Use --fixtures "
+                      "or refresh-fixtures.")
+            continue
+        for _, f in s.head(a.limit).iterrows():
+            when = f["Date"].strftime("%a %d %b") if pd.notna(f.get("Date")) else "TBD"
+            print("  %-12s%s v %s" % (when, f["HomeTeam"], f["AwayTeam"]))
+        if len(s) > a.limit:
+            print("  ... and %d more" % (len(s) - a.limit))
+
+
+def cmd_refresh(a):
+    dest = os.path.join(a.data, "fixtures.csv")
+    print("Downloading %s -> %s" % (fixtures.FEED_URL, dest))
+    fixtures.refresh(dest)
+    fx = fixtures.from_csv(dest)
+    print("Saved %d fixtures, %s to %s"
+          % (len(fx), fx["Date"].min().date(), fx["Date"].max().date()))
+
+
+def cmd_backtest(a):
+    df = loader.load(a.data)
+    divs = [a.league] if a.league else leagues.TOP_10
+    parts = []
+    for d in divs:
+        if d not in set(df["Div"]):
+            continue
+        bt = backtest.walk_forward(df, d, xi=a.xi, min_train=a.min_train,
+                                   refit_days=a.refit_days,
+                                   goal_shrink=a.goal_shrink,
+                                   edge_scale=a.edge_scale,
+                                   weights=_weights(a),
+                                   market_weight=a.market_weight)
+        if not len(bt):
+            continue
+        s = backtest.score(bt)
+        print("%-26s n=%-5d logloss %.4f  rps %.4f  acc %.3f  O2.5 %.4f  BTTS %.4f"
+              % (leagues.name(d), s["n"], s["logloss_1x2"], s["rps"], s["acc"],
+                 s["logloss_ou25"], s["logloss_btts"]))
+        parts.append(bt)
+    if not parts:
+        raise SystemExit("Nothing to backtest.")
+    allbt = pd.concat(parts, ignore_index=True)
+    s = backtest.score(allbt)
+    print("-" * 100)
+    print("%-26s n=%-5d logloss %.4f  rps %.4f  acc %.3f  O2.5 %.4f  BTTS %.4f"
+          % ("ALL", s["n"], s["logloss_1x2"], s["rps"], s["acc"],
+             s["logloss_ou25"], s["logloss_btts"]))
+    if "logloss_market" in s:
+        print("%-26s n=%-5d logloss %.4f  rps %.4f   (bookmaker consensus)"
+              % ("MARKET BASELINE", s["n_with_odds"], s["logloss_market"],
+                 s["rps_market"]))
+
+    print("\nCALIBRATION - Over 2.5 goals")
+    print(backtest.calibration(allbt, "pOver25", "over25").to_string(index=False))
+    print("\nCALIBRATION - home win")
+    hw = allbt.assign(_hw=(allbt["FTR"] == "H").astype(int))
+    print(backtest.calibration(hw, "pH", "_hw").to_string(index=False))
+
+    v = backtest.value_bets(allbt, edge=a.edge)
+    if len(v):
+        n, wins = len(v), int(v["won"].sum())
+        print("\nVALUE BETS at >= %.0f%% edge vs closing consensus" % (100 * a.edge))
+        print("  selections %d, won %d (%.1f%%)" % (n, wins, 100 * wins / n))
+        print("  flat stake ROI  %+.2f%%" % (100 * v["flat_pnl"].mean()))
+        print("  Kelly ROI       %+.2f%% of staked"
+              % (100 * v["kelly_pnl"].sum() / max(v["kelly_stake"].sum(), 1e-9)))
+    if a.out:
+        allbt.to_csv(a.out, index=False)
+        print("\nWrote %s" % a.out)
+
+
+def cmd_form(a):
+    import math
+    p = Predictor(a.data, xi=a.xi, as_of=_asof(a),
+                  goal_shrink=a.goal_shrink, edge_scale=a.edge_scale,
+                  use_ladder=not a.no_ladder, weights=_weights(a),
+                  market_weight=a.market_weight)
+    t, d = p.resolve(" ".join(a.team), a.league)
+    m = p.form(t, d, a.n)
+    print("%s - %s, last %d" % (t, leagues.label(d), len(m)))
+    for _, r in m.iterrows():
+        mark = "H" if r["HomeTeam"] == t else "A"
+        print("  %s  %-3s %-18s %d-%d  %-18s"
+              % (r["Date"].strftime("%d %b %y"), mark, r["HomeTeam"],
+                 r["FTHG"], r["FTAG"], r["AwayTeam"]))
+    mm = p.models(d)["FT"]
+    print("\nRatings: attack %.2f  defence %.2f"
+          % (math.exp(mm.attack[t]), math.exp(mm.defence[t])))
+
+
+def cmd_leagues(a):
+    df = loader.load(a.data)
+    g = df.groupby("Div").agg(matches=("Date", "size"), first=("Date", "min"),
+                              last=("Date", "max"))
+    print("%-6s%-24s%-14s%9s  %s" % ("Code", "League", "Country", "Matches", "Covered"))
+    print("-" * 78)
+    for d, r in g.iterrows():
+        star = " *" if d in leagues.TOP_10 else ""
+        print("%-6s%-24s%-14s%9d  %s to %s%s"
+              % (d, leagues.name(d), leagues.country(d), r["matches"],
+                 r["first"].date(), r["last"].date(), star))
+    print("\n* one of the top 10 European leagues")
+
+
+# -------------------------------------------------------------------- parser
+def _parse_when(v):
+    if not v:
+        return datetime.now()
+    for f in ("%Y-%m-%d", "%d/%m/%Y", "%d %b %Y"):
+        try:
+            return datetime.strptime(v, f)
+        except ValueError:
+            continue
+    raise SystemExit("Could not read date %r, use YYYY-MM-DD" % v)
+
+
+def _weights(a):
+    return {"goals": 1.0, "sot": max(0.0, a.sot_weight)}
+
+
+def _asof(a):
+    return _parse_when(a.as_of) if getattr(a, "as_of", None) else None
+
+
+def build_parser():
+    p = argparse.ArgumentParser(
+        prog="predict.py",
+        description="Football score and betting-market predictor built on "
+                    "European league results.")
+    p.add_argument("--data", default=DEFAULT_DATA, help="folder of football-data CSVs")
+    p.add_argument("--xi", type=float, default=DEFAULT_XI,
+                   help="time decay per day, 0 disables it")
+    p.add_argument("--goal-shrink", type=float, default=DEFAULT_GOAL_SHRINK,
+                   help="pull total goals toward the league mean, 1 disables it")
+    p.add_argument("--edge-scale", type=float, default=DEFAULT_EDGE_SCALE,
+                   help="pull the home/away split toward even, 1 disables it")
+    p.add_argument("--sot-weight", type=float, default=DEFAULT_WEIGHTS["sot"],
+                   help="weight on the shots-on-target model, 0 disables it")
+    p.add_argument("--no-ladder", action="store_true",
+                   help="do not carry promoted clubs' ratings up a division")
+    p.add_argument("--market-weight", type=float, default=DEFAULT_MARKET_WEIGHT,
+                   help="share of the forecast taken from the closing price "
+                        "when one is available, 0 disables it")
+    p.add_argument("--as-of", help="pretend today is this date, YYYY-MM-DD")
+    sub = p.add_subparsers(dest="cmd", required=True)
+
+    def common(sp, top10=True):
+        sp.add_argument("-l", "--league", help="division code, e.g. E0, SP1, I1")
+        if top10:
+            sp.add_argument("--top10", action="store_true",
+                            help="restrict to the top 10 European leagues")
+
+    s = sub.add_parser("predict", help="one match card")
+    s.add_argument("match", nargs="+", help="two team names, or 'A vs B'")
+    common(s, top10=False)
+    s.add_argument("-d", "--date", help="match date shown on the card")
+    s.add_argument("-f", "--full", action="store_true",
+                   help="every market, not just the main card")
+    s.add_argument("-b", "--best", action="store_true",
+                   help="append the strongest selections")
+    s.add_argument("-n", "--scores", type=int, default=5, help="correct scores to list")
+    s.add_argument("--neutral", action="store_true", help="drop home advantage")
+    s.add_argument("--json", action="store_true")
+    s.set_defaults(func=cmd_predict)
+
+    s = sub.add_parser("slate", help="predict every upcoming fixture")
+    common(s)
+    s.add_argument("--days", type=int, default=14)
+    s.add_argument("--limit", type=int, default=12, help="fixtures per league")
+    s.add_argument("--fixtures", help="fixtures CSV to use")
+    s.add_argument("--json", action="store_true")
+    s.set_defaults(func=cmd_slate)
+
+    s = sub.add_parser("brief", help="write a date window of fixtures to PDF")
+    common(s)
+    s.add_argument("-o", "--out", help="output PDF path (default predictions.pdf)")
+    s.add_argument("--start", help="first date, YYYY-MM-DD (default today)")
+    s.add_argument("--end", help="last date, YYYY-MM-DD (default start + 2 days)")
+    s.add_argument("--after", help="on the start date, only kick-offs at or "
+                                   "after this time, e.g. 17:00")
+    s.add_argument("--fixtures", help="fixtures CSV to use")
+    s.add_argument("--tz", default="Africa/Dar_es_Salaam",
+                   help="time zone for kick-off times (feed times are UK)")
+    s.add_argument("--note", action="append",
+                   help="a line for the coverage notes; repeatable")
+    s.add_argument("--top-pairs", type=int, metavar="N",
+                   help="price every pairing among each league's top N clubs, "
+                        "for when no schedule is published")
+    s.add_argument("--pair", action="append",
+                   help="price a matchup with no schedule, e.g. "
+                        "\"N1:Ajax v PSV Eindhoven\"; repeatable")
+    s.add_argument("--dissent", type=int, default=25,
+                   help="how many model/price disagreements to list")
+    s.set_defaults(func=cmd_brief)
+
+    s = sub.add_parser("fixtures", help="show the upcoming schedule")
+    common(s)
+    s.add_argument("--days", type=int, default=14)
+    s.add_argument("--limit", type=int, default=20)
+    s.add_argument("--fixtures", help="fixtures CSV to use")
+    s.set_defaults(func=cmd_fixtures)
+
+    s = sub.add_parser("refresh-fixtures", help="download the upcoming fixtures feed")
+    s.set_defaults(func=cmd_refresh)
+
+    s = sub.add_parser("table", help="team attack and defence ratings")
+    common(s)
+    s.set_defaults(func=cmd_table)
+
+    s = sub.add_parser("form", help="a team's recent results and ratings")
+    s.add_argument("team", nargs="+")
+    common(s, top10=False)
+    s.add_argument("-n", type=int, default=6)
+    s.set_defaults(func=cmd_form)
+
+    s = sub.add_parser("backtest", help="walk-forward accuracy and calibration")
+    common(s, top10=False)
+    s.add_argument("--min-train", type=int, default=180)
+    s.add_argument("--refit-days", type=int, default=7)
+    s.add_argument("--edge", type=float, default=0.05)
+    s.add_argument("--out", help="write per-match predictions to CSV")
+    s.set_defaults(func=cmd_backtest)
+
+    s = sub.add_parser("leagues", help="what data is loaded")
+    s.set_defaults(func=cmd_leagues)
+    return p
+
+
+def main(argv=None):
+    a = build_parser().parse_args(argv)
+    if not os.path.isdir(a.data):
+        raise SystemExit("Data folder not found: %s" % a.data)
+    a.func(a)
+
+
+if __name__ == "__main__":
+    main()

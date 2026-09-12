@@ -1,0 +1,416 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+MA1,25/08/2023,Maghrib de Fès,Moghreb de Tétouan,2,1,1.0,1.0,H
+MA1,26/08/2023,Olympique de Safi,Hassania US Agadir,1,1,0.0,0.0,D
+MA1,26/08/2023,Union de Touarga,CR Khemis Zemamra,2,1,2.0,0.0,H
+MA1,27/08/2023,Ittihad Tanger,JS Soualem,0,2,0.0,2.0,A
+MA1,27/08/2023,Youssoufia Berrechid,Raja Casablanca,1,3,1.0,1.0,A
+MA1,27/08/2023,RS Berkane,Mouloudia Oujda,2,0,1.0,0.0,H
+MA1,30/08/2023,FAR de Rabat,Chabab Mohammédia,2,0,0.0,0.0,H
+MA1,31/08/2023,Wydad AC,FUS de Rabat,0,2,0.0,1.0,A
+MA1,01/09/2023,JS Soualem,Hassania US Agadir,1,0,0.0,0.0,H
+MA1,02/09/2023,CR Khemis Zemamra,Youssoufia Berrechid,1,0,0.0,0.0,H
+MA1,02/09/2023,Mouloudia Oujda,Union de Touarga,1,3,0.0,1.0,A
+MA1,02/09/2023,Moghreb de Tétouan,Olympique de Safi,0,0,,,D
+MA1,03/09/2023,Chabab Mohammédia,Wydad AC,2,3,2.0,2.0,A
+MA1,03/09/2023,FUS de Rabat,Maghrib de Fès,0,0,,,D
+MA1,03/09/2023,RS Berkane,Ittihad Tanger,2,1,1.0,1.0,H
+MA1,03/09/2023,Raja Casablanca,FAR de Rabat,2,2,2.0,1.0,D
+MA1,16/09/2023,Hassania US Agadir,Moghreb de Tétouan,0,2,0.0,1.0,A
+MA1,16/09/2023,Olympique de Safi,FUS de Rabat,0,0,,,D
+MA1,16/09/2023,Youssoufia Berrechid,Chabab Mohammédia,0,1,0.0,1.0,A
+MA1,17/09/2023,Maghrib de Fès,Raja Casablanca,1,1,0.0,0.0,D
+MA1,17/09/2023,Ittihad Tanger,Mouloudia Oujda,1,1,0.0,0.0,D
+MA1,20/09/2023,Union de Touarga,RS Berkane,1,3,0.0,2.0,A
+MA1,20/09/2023,FAR de Rabat,CR Khemis Zemamra,3,1,1.0,0.0,H
+MA1,21/09/2023,Wydad AC,JS Soualem,1,0,0.0,0.0,H
+MA1,23/09/2023,Ittihad Tanger,Youssoufia Berrechid,2,1,0.0,1.0,H
+MA1,23/09/2023,Chabab Mohammédia,Moghreb de Tétouan,0,1,0.0,0.0,A
+MA1,24/09/2023,RS Berkane,Wydad AC,0,0,,,D
+MA1,24/09/2023,Raja Casablanca,Union de Touarga,1,0,0.0,0.0,H
+MA1,25/09/2023,JS Soualem,Olympique de Safi,0,1,0.0,0.0,A
+MA1,25/09/2023,Mouloudia Oujda,FAR de Rabat,0,3,0.0,2.0,A
+MA1,25/09/2023,CR Khemis Zemamra,Maghrib de Fès,1,1,1.0,0.0,D
+MA1,27/09/2023,FUS de Rabat,Hassania US Agadir,2,0,1.0,0.0,H
+MA1,30/09/2023,Olympique de Safi,Chabab Mohammédia,0,0,,,D
+MA1,01/10/2023,Hassania US Agadir,Raja Casablanca,1,1,1.0,0.0,D
+MA1,01/10/2023,Youssoufia Berrechid,Mouloudia Oujda,0,0,,,D
+MA1,01/10/2023,Maghrib de Fès,JS Soualem,3,0,0.0,0.0,H
+MA1,01/10/2023,Union de Touarga,Ittihad Tanger,2,2,0.0,2.0,D
+MA1,04/10/2023,Wydad AC,CR Khemis Zemamra,3,1,1.0,1.0,H
+MA1,04/10/2023,FAR de Rabat,RS Berkane,0,0,,,D
+MA1,05/10/2023,Moghreb de Tétouan,FUS de Rabat,2,1,2.0,0.0,H
+MA1,06/10/2023,Chabab Mohammédia,Hassania US Agadir,3,1,1.0,1.0,H
+MA1,07/10/2023,Union de Touarga,FAR de Rabat,2,1,0.0,1.0,H
+MA1,07/10/2023,Mouloudia Oujda,Maghrib de Fès,1,3,0.0,2.0,A
+MA1,07/10/2023,Ittihad Tanger,Wydad AC,0,3,0.0,1.0,A
+MA1,08/10/2023,JS Soualem,FUS de Rabat,1,3,0.0,2.0,A
+MA1,08/10/2023,RS Berkane,Youssoufia Berrechid,3,1,1.0,0.0,H
+MA1,08/10/2023,CR Khemis Zemamra,Olympique de Safi,3,2,2.0,2.0,H
+MA1,08/10/2023,Raja Casablanca,Moghreb de Tétouan,1,0,0.0,0.0,H
+MA1,27/10/2023,FUS de Rabat,Chabab Mohammédia,1,0,1.0,0.0,H
+MA1,28/10/2023,Hassania US Agadir,CR Khemis Zemamra,2,2,0.0,2.0,D
+MA1,28/10/2023,Olympique de Safi,Raja Casablanca,2,2,0.0,0.0,D
+MA1,28/10/2023,Youssoufia Berrechid,Union de Touarga,2,1,1.0,0.0,H
+MA1,29/10/2023,Maghrib de Fès,RS Berkane,0,0,,,D
+MA1,29/10/2023,FAR de Rabat,Ittihad Tanger,1,0,0.0,0.0,H
+MA1,29/10/2023,Moghreb de Tétouan,JS Soualem,4,0,2.0,0.0,H
+MA1,03/11/2023,JS Soualem,Chabab Mohammédia,2,2,1.0,0.0,D
+MA1,04/11/2023,CR Khemis Zemamra,Moghreb de Tétouan,1,1,0.0,0.0,D
+MA1,04/11/2023,RS Berkane,Hassania US Agadir,0,0,,,D
+MA1,04/11/2023,FAR de Rabat,Youssoufia Berrechid,4,1,2.0,0.0,H
+MA1,05/11/2023,Ittihad Tanger,Maghrib de Fès,2,2,1.0,1.0,D
+MA1,05/11/2023,Mouloudia Oujda,Olympique de Safi,1,1,1.0,0.0,D
+MA1,06/11/2023,Raja Casablanca,FUS de Rabat,2,0,1.0,0.0,H
+MA1,10/11/2023,Maghrib de Fès,Union de Touarga,0,1,0.0,0.0,A
+MA1,10/11/2023,Moghreb de Tétouan,Mouloudia Oujda,1,1,0.0,1.0,D
+MA1,11/11/2023,FUS de Rabat,RS Berkane,1,1,1.0,0.0,D
+MA1,11/11/2023,JS Soualem,Raja Casablanca,0,0,,,D
+MA1,11/11/2023,Olympique de Safi,FAR de Rabat,1,0,0.0,0.0,H
+MA1,12/11/2023,Chabab Mohammédia,CR Khemis Zemamra,0,2,0.0,0.0,A
+MA1,12/11/2023,Hassania US Agadir,Ittihad Tanger,1,1,1.0,0.0,D
+MA1,24/11/2023,Union de Touarga,FUS de Rabat,0,0,,,D
+MA1,25/11/2023,Youssoufia Berrechid,Maghrib de Fès,1,0,0.0,0.0,H
+MA1,25/11/2023,Mouloudia Oujda,Hassania US Agadir,1,0,1.0,0.0,H
+MA1,26/11/2023,Ittihad Tanger,Moghreb de Tétouan,1,1,1.0,1.0,D
+MA1,26/11/2023,Raja Casablanca,Chabab Mohammédia,1,0,0.0,0.0,H
+MA1,26/11/2023,CR Khemis Zemamra,JS Soualem,1,0,1.0,0.0,H
+MA1,28/11/2023,FAR de Rabat,Wydad AC,3,1,0.0,1.0,H
+MA1,06/12/2023,Wydad AC,Mouloudia Oujda,3,1,0.0,0.0,H
+MA1,07/12/2023,RS Berkane,Olympique de Safi,3,0,0.0,0.0,H
+MA1,08/12/2023,Maghrib de Fès,FAR de Rabat,1,3,0.0,0.0,A
+MA1,08/12/2023,FUS de Rabat,Ittihad Tanger,0,0,,,D
+MA1,09/12/2023,Raja Casablanca,CR Khemis Zemamra,2,1,2.0,1.0,H
+MA1,09/12/2023,JS Soualem,Union de Touarga,1,0,0.0,0.0,H
+MA1,10/12/2023,Chabab Mohammédia,Mouloudia Oujda,1,0,1.0,0.0,H
+MA1,10/12/2023,Olympique de Safi,Youssoufia Berrechid,3,1,2.0,0.0,H
+MA1,12/12/2023,Union de Touarga,Wydad AC,0,1,0.0,0.0,A
+MA1,13/12/2023,Moghreb de Tétouan,RS Berkane,0,0,,,D
+MA1,16/12/2023,Ittihad Tanger,Olympique de Safi,0,0,,,D
+MA1,16/12/2023,Mouloudia Oujda,JS Soualem,3,2,2.0,1.0,H
+MA1,16/12/2023,Union de Touarga,Chabab Mohammédia,1,2,0.0,1.0,A
+MA1,17/12/2023,Youssoufia Berrechid,Moghreb de Tétouan,0,0,,,D
+MA1,17/12/2023,FAR de Rabat,Hassania US Agadir,2,1,0.0,0.0,H
+MA1,17/12/2023,CR Khemis Zemamra,FUS de Rabat,1,2,1.0,1.0,A
+MA1,23/12/2023,Wydad AC,Youssoufia Berrechid,1,0,1.0,0.0,H
+MA1,24/12/2023,RS Berkane,Raja Casablanca,1,1,0.0,1.0,D
+MA1,26/12/2023,Hassania US Agadir,Wydad AC,0,0,,,D
+MA1,28/12/2023,FUS de Rabat,Youssoufia Berrechid,1,1,1.0,1.0,D
+MA1,28/12/2023,Raja Casablanca,Ittihad Tanger,6,1,3.0,0.0,H
+MA1,28/12/2023,Chabab Mohammédia,RS Berkane,1,1,0.0,1.0,D
+MA1,28/12/2023,Moghreb de Tétouan,Union de Touarga,1,1,0.0,1.0,D
+MA1,29/12/2023,Olympique de Safi,Wydad AC,2,1,1.0,0.0,H
+MA1,29/12/2023,Hassania US Agadir,Maghrib de Fès,2,1,2.0,0.0,H
+MA1,29/12/2023,JS Soualem,FAR de Rabat,2,2,1.0,1.0,D
+MA1,29/12/2023,CR Khemis Zemamra,Mouloudia Oujda,0,1,0.0,0.0,A
+MA1,03/01/2024,Maghrib de Fès,Chabab Mohammédia,2,1,2.0,1.0,H
+MA1,03/01/2024,Mouloudia Oujda,FUS de Rabat,2,1,0.0,1.0,H
+MA1,03/01/2024,Ittihad Tanger,CR Khemis Zemamra,1,1,0.0,1.0,D
+MA1,03/01/2024,Wydad AC,Raja Casablanca,0,2,0.0,0.0,A
+MA1,04/01/2024,Union de Touarga,Olympique de Safi,1,0,1.0,0.0,H
+MA1,04/01/2024,Youssoufia Berrechid,Hassania US Agadir,1,2,1.0,1.0,A
+MA1,04/01/2024,RS Berkane,JS Soualem,3,1,3.0,1.0,H
+MA1,04/01/2024,FAR de Rabat,Moghreb de Tétouan,3,0,1.0,0.0,H
+MA1,06/01/2024,Raja Casablanca,Mouloudia Oujda,2,0,0.0,0.0,H
+MA1,06/01/2024,Chabab Mohammédia,Ittihad Tanger,1,0,1.0,0.0,H
+MA1,07/01/2024,Hassania US Agadir,Union de Touarga,3,2,1.0,1.0,H
+MA1,07/01/2024,CR Khemis Zemamra,RS Berkane,2,1,2.0,0.0,H
+MA1,07/01/2024,Moghreb de Tétouan,Wydad AC,0,0,,,D
+MA1,07/01/2024,Olympique de Safi,Maghrib de Fès,1,1,1.0,0.0,D
+MA1,08/01/2024,JS Soualem,Youssoufia Berrechid,3,1,1.0,0.0,H
+MA1,08/01/2024,FUS de Rabat,FAR de Rabat,1,4,0.0,2.0,A
+MA1,11/01/2024,Wydad AC,Maghrib de Fès,1,1,1.0,1.0,D
+MA1,07/02/2024,Hassania US Agadir,Olympique de Safi,1,1,1.0,1.0,D
+MA1,07/02/2024,Moghreb de Tétouan,Maghrib de Fès,0,2,0.0,0.0,A
+MA1,07/02/2024,FUS de Rabat,Wydad AC,2,1,0.0,1.0,H
+MA1,07/02/2024,CR Khemis Zemamra,Union de Touarga,1,2,0.0,0.0,A
+MA1,07/02/2024,JS Soualem,Ittihad Tanger,1,3,1.0,1.0,A
+MA1,08/02/2024,Raja Casablanca,Youssoufia Berrechid,2,0,1.0,0.0,H
+MA1,08/02/2024,Mouloudia Oujda,RS Berkane,1,0,1.0,0.0,H
+MA1,08/02/2024,Chabab Mohammédia,FAR de Rabat,0,3,0.0,1.0,A
+MA1,10/02/2024,Hassania US Agadir,JS Soualem,2,1,1.0,0.0,H
+MA1,10/02/2024,Olympique de Safi,Moghreb de Tétouan,2,1,1.0,0.0,H
+MA1,10/02/2024,Maghrib de Fès,FUS de Rabat,1,2,1.0,1.0,A
+MA1,11/02/2024,Wydad AC,Chabab Mohammédia,5,2,2.0,0.0,H
+MA1,11/02/2024,Youssoufia Berrechid,CR Khemis Zemamra,1,0,0.0,0.0,H
+MA1,11/02/2024,FAR de Rabat,Raja Casablanca,1,1,0.0,0.0,D
+MA1,11/02/2024,Ittihad Tanger,RS Berkane,0,1,0.0,0.0,A
+MA1,11/02/2024,Union de Touarga,Mouloudia Oujda,2,0,1.0,0.0,H
+MA1,13/02/2024,FUS de Rabat,Olympique de Safi,0,0,,,D
+MA1,13/02/2024,Moghreb de Tétouan,Hassania US Agadir,1,1,1.0,0.0,D
+MA1,14/02/2024,JS Soualem,Wydad AC,3,1,1.0,1.0,H
+MA1,14/02/2024,Raja Casablanca,Maghrib de Fès,1,0,1.0,0.0,H
+MA1,14/02/2024,RS Berkane,Union de Touarga,0,0,,,D
+MA1,14/02/2024,CR Khemis Zemamra,FAR de Rabat,0,1,0.0,0.0,A
+MA1,15/02/2024,Mouloudia Oujda,Ittihad Tanger,1,1,1.0,1.0,D
+MA1,15/02/2024,Chabab Mohammédia,Youssoufia Berrechid,2,2,1.0,1.0,D
+MA1,16/02/2024,Hassania US Agadir,FUS de Rabat,1,3,0.0,1.0,A
+MA1,17/02/2024,Olympique de Safi,JS Soualem,1,0,0.0,0.0,H
+MA1,17/02/2024,Wydad AC,RS Berkane,1,0,0.0,0.0,H
+MA1,17/02/2024,Maghrib de Fès,CR Khemis Zemamra,2,3,1.0,2.0,A
+MA1,17/02/2024,Union de Touarga,Raja Casablanca,0,0,,,D
+MA1,18/02/2024,Youssoufia Berrechid,Ittihad Tanger,0,1,0.0,1.0,A
+MA1,18/02/2024,FAR de Rabat,Mouloudia Oujda,5,0,2.0,0.0,H
+MA1,18/02/2024,Moghreb de Tétouan,Chabab Mohammédia,1,0,0.0,0.0,H
+MA1,20/02/2024,JS Soualem,Maghrib de Fès,1,1,0.0,0.0,D
+MA1,20/02/2024,Raja Casablanca,Hassania US Agadir,2,0,1.0,0.0,H
+MA1,21/02/2024,FUS de Rabat,Moghreb de Tétouan,1,1,1.0,0.0,D
+MA1,21/02/2024,Chabab Mohammédia,Olympique de Safi,1,0,1.0,0.0,H
+MA1,22/02/2024,Ittihad Tanger,Union de Touarga,2,1,0.0,1.0,H
+MA1,22/02/2024,Mouloudia Oujda,Youssoufia Berrechid,1,1,0.0,0.0,D
+MA1,24/02/2024,FUS de Rabat,JS Soualem,1,0,0.0,0.0,H
+MA1,24/02/2024,Moghreb de Tétouan,Raja Casablanca,1,1,0.0,1.0,D
+MA1,24/02/2024,Olympique de Safi,CR Khemis Zemamra,2,0,2.0,0.0,H
+MA1,25/02/2024,FAR de Rabat,Union de Touarga,3,0,0.0,0.0,H
+MA1,25/02/2024,Maghrib de Fès,Mouloudia Oujda,1,0,1.0,0.0,H
+MA1,25/02/2024,Hassania US Agadir,Chabab Mohammédia,2,0,0.0,0.0,H
+MA1,01/03/2024,Union de Touarga,Youssoufia Berrechid,3,2,2.0,2.0,H
+MA1,01/03/2024,Chabab Mohammédia,FUS de Rabat,0,1,0.0,0.0,A
+MA1,02/03/2024,CR Khemis Zemamra,Hassania US Agadir,3,0,1.0,0.0,H
+MA1,02/03/2024,Ittihad Tanger,FAR de Rabat,1,2,0.0,0.0,A
+MA1,03/03/2024,Raja Casablanca,Olympique de Safi,1,0,0.0,0.0,H
+MA1,03/03/2024,JS Soualem,Moghreb de Tétouan,1,2,0.0,0.0,A
+MA1,05/03/2024,CR Khemis Zemamra,Wydad AC,0,0,,,D
+MA1,06/03/2024,RS Berkane,FAR de Rabat,1,2,1.0,2.0,A
+MA1,08/03/2024,Chabab Mohammédia,JS Soualem,0,1,0.0,1.0,A
+MA1,09/03/2024,Wydad AC,Union de Touarga,0,0,,,D
+MA1,09/03/2024,Olympique de Safi,Mouloudia Oujda,3,1,2.0,1.0,H
+MA1,09/03/2024,Maghrib de Fès,Ittihad Tanger,2,1,2.0,1.0,H
+MA1,10/03/2024,Moghreb de Tétouan,CR Khemis Zemamra,0,1,0.0,0.0,A
+MA1,10/03/2024,Youssoufia Berrechid,FAR de Rabat,0,2,0.0,1.0,A
+MA1,10/03/2024,FUS de Rabat,Raja Casablanca,0,1,0.0,1.0,A
+MA1,10/03/2024,Hassania US Agadir,RS Berkane,0,2,0.0,0.0,A
+MA1,12/03/2024,Wydad AC,Ittihad Tanger,0,2,0.0,2.0,A
+MA1,13/03/2024,Youssoufia Berrechid,RS Berkane,0,0,,,D
+MA1,15/03/2024,Union de Touarga,Maghrib de Fès,1,0,0.0,0.0,H
+MA1,16/03/2024,Mouloudia Oujda,Moghreb de Tétouan,0,1,0.0,0.0,A
+MA1,16/03/2024,Raja Casablanca,JS Soualem,3,1,1.0,0.0,H
+MA1,16/03/2024,FAR de Rabat,Olympique de Safi,1,0,0.0,0.0,H
+MA1,16/03/2024,CR Khemis Zemamra,Chabab Mohammédia,0,0,,,D
+MA1,17/03/2024,RS Berkane,FUS de Rabat,2,0,0.0,0.0,H
+MA1,17/03/2024,Ittihad Tanger,Hassania US Agadir,0,1,0.0,0.0,A
+MA1,17/03/2024,Youssoufia Berrechid,Wydad AC,0,0,,,D
+MA1,20/03/2024,RS Berkane,Maghrib de Fès,2,1,1.0,0.0,H
+MA1,21/03/2024,Mouloudia Oujda,Wydad AC,0,2,0.0,0.0,A
+MA1,13/04/2024,Maghrib de Fès,Youssoufia Berrechid,0,1,0.0,0.0,A
+MA1,13/04/2024,FUS de Rabat,Union de Touarga,1,1,1.0,1.0,D
+MA1,13/04/2024,Wydad AC,FAR de Rabat,0,1,0.0,1.0,A
+MA1,13/04/2024,Hassania US Agadir,Mouloudia Oujda,2,2,1.0,1.0,D
+MA1,14/04/2024,Olympique de Safi,RS Berkane,1,2,0.0,0.0,A
+MA1,14/04/2024,Moghreb de Tétouan,Ittihad Tanger,1,1,0.0,0.0,D
+MA1,14/04/2024,Chabab Mohammédia,Raja Casablanca,0,2,0.0,1.0,A
+MA1,15/04/2024,JS Soualem,CR Khemis Zemamra,1,1,0.0,0.0,D
+MA1,19/04/2024,Youssoufia Berrechid,Olympique de Safi,0,1,0.0,1.0,A
+MA1,20/04/2024,Ittihad Tanger,FUS de Rabat,2,1,1.0,1.0,H
+MA1,20/04/2024,Mouloudia Oujda,Chabab Mohammédia,0,0,,,D
+MA1,20/04/2024,Wydad AC,Hassania US Agadir,1,0,1.0,0.0,H
+MA1,21/04/2024,Union de Touarga,JS Soualem,0,1,0.0,1.0,A
+MA1,21/04/2024,FAR de Rabat,Maghrib de Fès,3,1,1.0,1.0,H
+MA1,21/04/2024,CR Khemis Zemamra,Raja Casablanca,1,2,0.0,1.0,A
+MA1,26/04/2024,JS Soualem,Mouloudia Oujda,0,0,,,D
+MA1,27/04/2024,Olympique de Safi,Ittihad Tanger,1,1,0.0,0.0,D
+MA1,27/04/2024,Chabab Mohammédia,Union de Touarga,0,2,0.0,1.0,A
+MA1,27/04/2024,Hassania US Agadir,FAR de Rabat,2,1,1.0,1.0,H
+MA1,28/04/2024,FUS de Rabat,CR Khemis Zemamra,0,2,0.0,0.0,A
+MA1,28/04/2024,Moghreb de Tétouan,Youssoufia Berrechid,0,0,,,D
+MA1,28/04/2024,Maghrib de Fès,Wydad AC,1,1,0.0,1.0,D
+MA1,07/05/2024,RS Berkane,Moghreb de Tétouan,3,2,1.0,1.0,H
+MA1,24/05/2024,Raja Casablanca,RS Berkane,3,0,1.0,0.0,H
+MA1,27/05/2024,Maghrib de Fès,Hassania US Agadir,2,2,1.0,1.0,D
+MA1,27/05/2024,Union de Touarga,Moghreb de Tétouan,1,0,0.0,0.0,H
+MA1,28/05/2024,Youssoufia Berrechid,FUS de Rabat,0,5,0.0,1.0,A
+MA1,28/05/2024,Ittihad Tanger,Raja Casablanca,1,2,0.0,0.0,A
+MA1,28/05/2024,RS Berkane,Chabab Mohammédia,2,0,0.0,0.0,H
+MA1,28/05/2024,Mouloudia Oujda,CR Khemis Zemamra,1,2,1.0,2.0,A
+MA1,28/05/2024,Wydad AC,Olympique de Safi,0,1,0.0,0.0,A
+MA1,28/05/2024,FAR de Rabat,JS Soualem,3,1,3.0,1.0,H
+MA1,01/06/2024,JS Soualem,RS Berkane,1,2,1.0,0.0,A
+MA1,01/06/2024,Hassania US Agadir,Youssoufia Berrechid,4,1,2.0,1.0,H
+MA1,01/06/2024,Olympique de Safi,Union de Touarga,1,3,1.0,0.0,A
+MA1,01/06/2024,CR Khemis Zemamra,Ittihad Tanger,0,1,0.0,1.0,A
+MA1,01/06/2024,FUS de Rabat,Mouloudia Oujda,0,0,,,D
+MA1,01/06/2024,Chabab Mohammédia,Maghrib de Fès,0,2,0.0,1.0,A
+MA1,02/06/2024,Raja Casablanca,Wydad AC,1,0,0.0,0.0,H
+MA1,02/06/2024,Moghreb de Tétouan,FAR de Rabat,2,2,2.0,1.0,D
+MA1,13/06/2024,RS Berkane,CR Khemis Zemamra,1,2,0.0,0.0,A
+MA1,14/06/2024,Youssoufia Berrechid,JS Soualem,2,3,0.0,1.0,A
+MA1,14/06/2024,FAR de Rabat,FUS de Rabat,2,0,0.0,0.0,H
+MA1,14/06/2024,Wydad AC,Moghreb de Tétouan,1,0,0.0,0.0,H
+MA1,14/06/2024,Maghrib de Fès,Olympique de Safi,0,1,0.0,1.0,A
+MA1,14/06/2024,Ittihad Tanger,Chabab Mohammédia,0,0,,,D
+MA1,14/06/2024,Mouloudia Oujda,Raja Casablanca,0,3,0.0,2.0,A
+MA1,14/06/2024,Union de Touarga,Hassania US Agadir,3,3,1.0,1.0,D
+MA1,30/08/2024,Chabab Mohammédia,FAR de Rabat,0,5,0.0,1.0,A
+MA1,30/08/2024,Maghrib de Fès,Wydad AC,1,0,0.0,0.0,H
+MA1,30/08/2024,Union de Touarga,FUS de Rabat,2,2,1.0,1.0,D
+MA1,31/08/2024,Raja Casablanca,RS Berkane,0,1,0.0,0.0,A
+MA1,31/08/2024,Moghreb de Tétouan,Olympique de Safi,0,0,,,D
+MA1,31/08/2024,COD Meknés,CR Khemis Zemamra,1,1,0.0,1.0,D
+MA1,31/08/2024,Hassania US Agadir,Ittihad Tanger,0,1,0.0,1.0,A
+MA1,14/09/2024,Wydad AC,Moghreb de Tétouan,1,0,0.0,0.0,H
+MA1,14/09/2024,Maghrib de Fès,Union de Touarga,1,2,1.0,1.0,A
+MA1,15/09/2024,JS Soualem,Hassania US Agadir,0,1,0.0,1.0,A
+MA1,15/09/2024,FUS de Rabat,Chabab Mohammédia,4,0,3.0,0.0,H
+MA1,20/09/2024,Union de Touarga,Wydad AC,1,1,1.0,1.0,D
+MA1,20/09/2024,Moghreb de Tétouan,Maghrib de Fès,1,1,0.0,0.0,D
+MA1,21/09/2024,Hassania US Agadir,CR Khemis Zemamra,0,1,0.0,0.0,A
+MA1,22/09/2024,COD Meknés,JS Soualem,0,2,0.0,0.0,A
+MA1,22/09/2024,Chabab Mohammédia,Olympique de Safi,1,2,0.0,0.0,A
+MA1,25/09/2024,Olympique de Safi,RS Berkane,0,2,0.0,1.0,A
+MA1,25/09/2024,Ittihad Tanger,Raja Casablanca,3,1,3.0,0.0,H
+MA1,25/09/2024,FAR de Rabat,COD Meknés,4,0,3.0,0.0,H
+MA1,27/09/2024,Maghrib de Fès,Hassania US Agadir,1,0,1.0,0.0,H
+MA1,28/09/2024,CR Khemis Zemamra,Chabab Mohammédia,3,0,1.0,0.0,H
+MA1,28/09/2024,JS Soualem,Union de Touarga,0,0,,,D
+MA1,29/09/2024,Olympique de Safi,Raja Casablanca,2,3,2.0,1.0,A
+MA1,29/09/2024,Moghreb de Tétouan,COD Meknés,1,1,1.0,0.0,D
+MA1,29/09/2024,FUS de Rabat,Ittihad Tanger,0,0,,,D
+MA1,29/09/2024,FAR de Rabat,RS Berkane,1,1,1.0,0.0,D
+MA1,02/10/2024,Raja Casablanca,FUS de Rabat,1,0,0.0,0.0,H
+MA1,02/10/2024,RS Berkane,Ittihad Tanger,0,0,,,D
+MA1,04/10/2024,Union de Touarga,Moghreb de Tétouan,1,0,0.0,0.0,H
+MA1,04/10/2024,Chabab Mohammédia,JS Soualem,0,0,,,D
+MA1,05/10/2024,COD Meknés,Maghrib de Fès,2,0,1.0,0.0,H
+MA1,05/10/2024,Hassania US Agadir,Wydad AC,1,1,0.0,0.0,D
+MA1,06/10/2024,RS Berkane,FUS de Rabat,0,1,0.0,0.0,A
+MA1,06/10/2024,Raja Casablanca,CR Khemis Zemamra,2,0,0.0,0.0,H
+MA1,06/10/2024,Ittihad Tanger,FAR de Rabat,1,1,1.0,0.0,D
+MA1,18/10/2024,FAR de Rabat,FUS de Rabat,1,0,0.0,0.0,H
+MA1,18/10/2024,JS Soualem,Raja Casablanca,2,1,0.0,0.0,H
+MA1,18/10/2024,CR Khemis Zemamra,RS Berkane,1,3,0.0,2.0,A
+MA1,19/10/2024,Union de Touarga,COD Meknés,0,0,,,D
+MA1,19/10/2024,Moghreb de Tétouan,Hassania US Agadir,0,2,0.0,1.0,A
+MA1,19/10/2024,Wydad AC,Chabab Mohammédia,3,2,1.0,0.0,H
+MA1,20/10/2024,Olympique de Safi,Ittihad Tanger,2,3,0.0,1.0,A
+MA1,22/10/2024,Hassania US Agadir,Union de Touarga,2,1,0.0,1.0,H
+MA1,22/10/2024,Chabab Mohammédia,Maghrib de Fès,0,1,0.0,0.0,A
+MA1,22/10/2024,Raja Casablanca,FAR de Rabat,0,0,,,D
+MA1,23/10/2024,Ittihad Tanger,CR Khemis Zemamra,0,1,0.0,0.0,A
+MA1,23/10/2024,RS Berkane,JS Soualem,1,0,1.0,0.0,H
+MA1,23/10/2024,FUS de Rabat,Olympique de Safi,3,0,1.0,0.0,H
+MA1,23/10/2024,COD Meknés,Wydad AC,2,0,0.0,0.0,H
+MA1,25/10/2024,Maghrib de Fès,Raja Casablanca,0,0,,,D
+MA1,25/10/2024,Moghreb de Tétouan,Chabab Mohammédia,3,0,1.0,0.0,H
+MA1,26/10/2024,FAR de Rabat,Olympique de Safi,1,1,1.0,0.0,D
+MA1,26/10/2024,Hassania US Agadir,COD Meknés,3,0,2.0,0.0,H
+MA1,26/10/2024,Wydad AC,RS Berkane,0,1,0.0,0.0,A
+MA1,27/10/2024,CR Khemis Zemamra,FUS de Rabat,3,1,2.0,1.0,H
+MA1,27/10/2024,JS Soualem,Ittihad Tanger,2,1,0.0,1.0,H
+MA1,01/11/2024,Olympique de Safi,JS Soualem,1,0,0.0,0.0,H
+MA1,02/11/2024,RS Berkane,Moghreb de Tétouan,2,1,1.0,1.0,H
+MA1,02/11/2024,Chabab Mohammédia,Union de Touarga,0,3,0.0,2.0,A
+MA1,02/11/2024,Raja Casablanca,COD Meknés,0,0,,,D
+MA1,03/11/2024,FAR de Rabat,CR Khemis Zemamra,1,0,0.0,0.0,H
+MA1,03/11/2024,FUS de Rabat,Wydad AC,0,1,0.0,0.0,A
+MA1,03/11/2024,Ittihad Tanger,Maghrib de Fès,1,1,1.0,0.0,D
+MA1,08/11/2024,JS Soualem,FUS de Rabat,1,1,1.0,1.0,D
+MA1,09/11/2024,CR Khemis Zemamra,Olympique de Safi,2,1,1.0,1.0,H
+MA1,09/11/2024,Maghrib de Fès,FAR de Rabat,1,0,0.0,0.0,H
+MA1,09/11/2024,Moghreb de Tétouan,Raja Casablanca,0,0,,,D
+MA1,09/11/2024,Wydad AC,Ittihad Tanger,2,2,1.0,1.0,D
+MA1,10/11/2024,Hassania US Agadir,Chabab Mohammédia,2,1,2.0,1.0,H
+MA1,10/11/2024,Union de Touarga,RS Berkane,0,1,0.0,0.0,A
+MA1,22/11/2024,FAR de Rabat,Union de Touarga,1,1,1.0,1.0,D
+MA1,22/11/2024,Raja Casablanca,Wydad AC,1,1,0.0,0.0,D
+MA1,22/11/2024,Olympique de Safi,COD Meknés,3,0,0.0,0.0,H
+MA1,23/11/2024,RS Berkane,Hassania US Agadir,2,1,1.0,0.0,H
+MA1,23/11/2024,Ittihad Tanger,Moghreb de Tétouan,1,2,0.0,2.0,A
+MA1,24/11/2024,CR Khemis Zemamra,JS Soualem,0,0,,,D
+MA1,25/11/2024,FUS de Rabat,Maghrib de Fès,1,1,0.0,1.0,D
+MA1,29/11/2024,Union de Touarga,Ittihad Tanger,3,1,1.0,1.0,H
+MA1,29/11/2024,Wydad AC,Olympique de Safi,1,0,1.0,0.0,H
+MA1,30/11/2024,JS Soualem,FAR de Rabat,0,3,0.0,1.0,A
+MA1,30/11/2024,COD Meknés,Chabab Mohammédia,1,1,1.0,0.0,D
+MA1,30/11/2024,Moghreb de Tétouan,FUS de Rabat,0,2,0.0,0.0,A
+MA1,01/12/2024,Maghrib de Fès,CR Khemis Zemamra,0,1,0.0,1.0,A
+MA1,01/12/2024,Hassania US Agadir,Raja Casablanca,1,3,1.0,1.0,A
+MA1,07/12/2024,Olympique de Safi,Hassania US Agadir,0,0,,,D
+MA1,08/12/2024,JS Soualem,Maghrib de Fès,0,2,0.0,1.0,A
+MA1,08/12/2024,CR Khemis Zemamra,Moghreb de Tétouan,2,0,2.0,0.0,H
+MA1,08/12/2024,Ittihad Tanger,Chabab Mohammédia,1,1,0.0,1.0,D
+MA1,13/12/2024,Hassania US Agadir,FUS de Rabat,0,1,0.0,1.0,A
+MA1,14/12/2024,Union de Touarga,CR Khemis Zemamra,0,0,,,D
+MA1,14/12/2024,Wydad AC,JS Soualem,3,0,2.0,0.0,H
+MA1,14/12/2024,COD Meknés,Ittihad Tanger,1,0,0.0,0.0,H
+MA1,15/12/2024,Maghrib de Fès,Olympique de Safi,0,1,0.0,0.0,A
+MA1,19/12/2024,RS Berkane,COD Meknés,3,0,1.0,0.0,H
+MA1,19/12/2024,FAR de Rabat,Wydad AC,2,2,1.0,2.0,D
+MA1,19/12/2024,Raja Casablanca,Union de Touarga,2,1,0.0,1.0,H
+MA1,21/12/2024,JS Soualem,Moghreb de Tétouan,2,0,0.0,0.0,H
+MA1,22/12/2024,Olympique de Safi,Union de Touarga,2,1,2.0,0.0,H
+MA1,22/12/2024,Raja Casablanca,Chabab Mohammédia,3,0,2.0,0.0,H
+MA1,22/12/2024,RS Berkane,Maghrib de Fès,2,0,1.0,0.0,H
+MA1,22/12/2024,FAR de Rabat,Hassania US Agadir,2,1,2.0,1.0,H
+MA1,23/12/2024,FUS de Rabat,COD Meknés,5,1,3.0,1.0,H
+MA1,23/12/2024,CR Khemis Zemamra,Wydad AC,0,0,,,D
+MA1,25/12/2024,Chabab Mohammédia,RS Berkane,0,2,0.0,0.0,A
+MA1,25/12/2024,Moghreb de Tétouan,FAR de Rabat,1,2,0.0,0.0,A
+MA1,28/12/2024,CR Khemis Zemamra,COD Meknés,3,2,2.0,1.0,H
+MA1,28/12/2024,Ittihad Tanger,Hassania US Agadir,1,0,1.0,0.0,H
+MA1,28/12/2024,FUS de Rabat,Union de Touarga,2,0,1.0,0.0,H
+MA1,28/12/2024,Wydad AC,Maghrib de Fès,1,4,1.0,1.0,A
+MA1,29/12/2024,Olympique de Safi,Moghreb de Tétouan,1,0,0.0,0.0,H
+MA1,29/12/2024,FAR de Rabat,Chabab Mohammédia,2,0,2.0,0.0,H
+MA1,29/12/2024,RS Berkane,Raja Casablanca,2,0,1.0,0.0,H
+MA1,03/01/2025,Chabab Mohammédia,FUS de Rabat,0,2,0.0,0.0,A
+MA1,04/01/2025,Hassania US Agadir,JS Soualem,3,1,3.0,0.0,H
+MA1,04/01/2025,Moghreb de Tétouan,Wydad AC,1,2,0.0,2.0,A
+MA1,05/01/2025,Union de Touarga,Maghrib de Fès,0,3,0.0,0.0,A
+MA1,11/01/2025,Olympique de Safi,Chabab Mohammédia,2,1,2.0,0.0,H
+MA1,11/01/2025,JS Soualem,COD Meknés,1,1,0.0,0.0,D
+MA1,12/01/2025,Maghrib de Fès,Moghreb de Tétouan,2,1,2.0,1.0,H
+MA1,12/01/2025,CR Khemis Zemamra,Hassania US Agadir,2,0,0.0,0.0,H
+MA1,12/01/2025,Wydad AC,Union de Touarga,2,1,1.0,1.0,H
+MA1,17/01/2025,COD Meknés,Moghreb de Tétouan,1,0,1.0,0.0,H
+MA1,18/01/2025,Ittihad Tanger,FUS de Rabat,1,0,1.0,0.0,H
+MA1,18/01/2025,Union de Touarga,JS Soualem,3,1,2.0,0.0,H
+MA1,18/01/2025,Chabab Mohammédia,CR Khemis Zemamra,0,1,0.0,1.0,A
+MA1,19/01/2025,Hassania US Agadir,Maghrib de Fès,2,2,2.0,0.0,D
+MA1,23/01/2025,Raja Casablanca,Ittihad Tanger,1,1,0.0,0.0,D
+MA1,23/01/2025,COD Meknés,FAR de Rabat,2,2,0.0,1.0,D
+MA1,23/01/2025,RS Berkane,Olympique de Safi,2,2,1.0,0.0,D
+MA1,26/01/2025,Ittihad Tanger,RS Berkane,1,3,0.0,1.0,A
+MA1,26/01/2025,FUS de Rabat,Raja Casablanca,2,1,0.0,1.0,H
+MA1,30/01/2025,Raja Casablanca,Olympique de Safi,1,1,1.0,0.0,D
+MA1,30/01/2025,RS Berkane,FAR de Rabat,2,0,1.0,0.0,H
+MA1,07/02/2025,Moghreb de Tétouan,Union de Touarga,1,1,0.0,0.0,D
+MA1,07/02/2025,JS Soualem,Chabab Mohammédia,1,1,1.0,1.0,D
+MA1,08/02/2025,Maghrib de Fès,COD Meknés,1,3,1.0,1.0,A
+MA1,08/02/2025,FAR de Rabat,Ittihad Tanger,3,2,1.0,0.0,H
+MA1,09/02/2025,CR Khemis Zemamra,Raja Casablanca,1,2,0.0,1.0,A
+MA1,09/02/2025,FUS de Rabat,RS Berkane,0,1,0.0,1.0,A
+MA1,09/02/2025,Wydad AC,Hassania US Agadir,2,0,1.0,0.0,H
+MA1,14/02/2025,COD Meknés,Union de Touarga,0,0,,,D
+MA1,14/02/2025,Hassania US Agadir,Moghreb de Tétouan,1,1,0.0,1.0,D
+MA1,15/02/2025,Ittihad Tanger,Olympique de Safi,4,2,2.0,1.0,H
+MA1,15/02/2025,FUS de Rabat,FAR de Rabat,2,1,1.0,0.0,H
+MA1,15/02/2025,Raja Casablanca,JS Soualem,2,0,1.0,0.0,H
+MA1,16/02/2025,Chabab Mohammédia,Wydad AC,1,5,0.0,1.0,A
+MA1,16/02/2025,RS Berkane,CR Khemis Zemamra,1,0,0.0,0.0,H
+MA1,21/02/2025,JS Soualem,RS Berkane,0,4,0.0,1.0,A
+MA1,21/02/2025,Maghrib de Fès,Chabab Mohammédia,1,0,0.0,0.0,H
+MA1,22/02/2025,Olympique de Safi,FUS de Rabat,0,0,,,D
+MA1,22/02/2025,Wydad AC,COD Meknés,0,0,,,D
+MA1,23/02/2025,Union de Touarga,Hassania US Agadir,2,1,0.0,0.0,H
+MA1,23/02/2025,CR Khemis Zemamra,Ittihad Tanger,2,0,1.0,0.0,H
+MA1,23/02/2025,FAR de Rabat,Raja Casablanca,0,0,,,D
+MA1,27/02/2025,Ittihad Tanger,JS Soualem,1,0,0.0,0.0,H
+MA1,27/02/2025,Chabab Mohammédia,Moghreb de Tétouan,0,2,0.0,0.0,A
+MA1,27/02/2025,COD Meknés,Hassania US Agadir,1,0,0.0,0.0,H
+MA1,28/02/2025,Raja Casablanca,Maghrib de Fès,0,0,,,D
+MA1,28/02/2025,FUS de Rabat,CR Khemis Zemamra,3,0,1.0,0.0,H
+MA1,28/02/2025,Olympique de Safi,FAR de Rabat,1,1,0.0,0.0,D
+MA1,28/02/2025,RS Berkane,Wydad AC,0,0,,,D
+MA1,07/03/2025,JS Soualem,Olympique de Safi,0,1,0.0,0.0,A
+MA1,07/03/2025,Union de Touarga,Chabab Mohammédia,2,1,1.0,0.0,H
+MA1,08/03/2025,CR Khemis Zemamra,FAR de Rabat,1,2,0.0,1.0,A
+MA1,08/03/2025,Maghrib de Fès,Ittihad Tanger,1,1,1.0,0.0,D
+MA1,09/03/2025,Moghreb de Tétouan,RS Berkane,0,2,0.0,0.0,A
+MA1,09/03/2025,Wydad AC,FUS de Rabat,2,2,0.0,1.0,D
+MA1,10/03/2025,COD Meknés,Raja Casablanca,1,2,0.0,0.0,A
+MA1,14/03/2025,FAR de Rabat,Maghrib de Fès,3,1,2.0,1.0,H
+MA1,14/03/2025,Olympique de Safi,CR Khemis Zemamra,2,0,0.0,0.0,H
+MA1,15/03/2025,FUS de Rabat,JS Soualem,4,2,1.0,1.0,H
+MA1,15/03/2025,RS Berkane,Union de Touarga,1,1,0.0,0.0,D
+MA1,15/03/2025,Ittihad Tanger,Wydad AC,1,1,0.0,1.0,D
+MA1,16/03/2025,Chabab Mohammédia,Hassania US Agadir,0,4,0.0,1.0,A
+MA1,16/03/2025,Raja Casablanca,Moghreb de Tétouan,1,1,1.0,0.0,D

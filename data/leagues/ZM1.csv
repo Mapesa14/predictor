@@ -1,0 +1,919 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR
+ZM1,18/08/2023,Nkwazi,Konkola Blades,1,0,,,H
+ZM1,19/08/2023,NAPSA Stars,ZESCO United,0,1,,,A
+ZM1,19/08/2023,Nkana,Red Arrows,0,1,,,A
+ZM1,19/08/2023,Green Eagles,Mutondo Stars,0,0,,,D
+ZM1,19/08/2023,Trident,Kansanshi Dynamos,1,1,,,D
+ZM1,20/08/2023,Forest Rangers,Kabwe Warriors,1,0,,,H
+ZM1,20/08/2023,Mufulira Wanderers,Green Buffaloes,1,0,,,H
+ZM1,26/08/2023,Zanaco,Forest Rangers,1,1,,,D
+ZM1,26/08/2023,Green Buffaloes,NAPSA Stars,2,1,,,H
+ZM1,26/08/2023,Kabwe Warriors,Trident,2,1,,,H
+ZM1,26/08/2023,Konkola Blades,Green Eagles,0,0,,,D
+ZM1,26/08/2023,Kansanshi Dynamos,Mufulira Wanderers,0,0,,,D
+ZM1,27/08/2023,Mutondo Stars,Nkana,1,0,,,H
+ZM1,27/08/2023,ZESCO United,Prison Leopards,1,1,,,D
+ZM1,30/08/2023,FC MUZA,Zanaco,1,1,,,D
+ZM1,30/08/2023,Prison Leopards,Power Dynamos,0,0,,,D
+ZM1,02/09/2023,NAPSA Stars,Kansanshi Dynamos,0,0,,,D
+ZM1,02/09/2023,Green Eagles,Nkana,1,0,,,H
+ZM1,02/09/2023,Konkola Blades,Power Dynamos,0,0,,,D
+ZM1,02/09/2023,Nkwazi,ZESCO United,1,0,,,H
+ZM1,02/09/2023,Trident,Zanaco,0,2,,,A
+ZM1,02/09/2023,Mufulira Wanderers,Kabwe Warriors,2,2,,,D
+ZM1,02/09/2023,FC MUZA,Mutondo Stars,2,0,,,H
+ZM1,03/09/2023,Prison Leopards,Green Buffaloes,1,0,,,H
+ZM1,03/09/2023,Forest Rangers,Red Arrows,0,0,,,D
+ZM1,09/09/2023,Red Arrows,FC MUZA,1,1,,,D
+ZM1,09/09/2023,Power Dynamos,Nkwazi,2,1,,,H
+ZM1,16/09/2023,Red Arrows,Trident,2,0,,,H
+ZM1,16/09/2023,Green Buffaloes,Nkwazi,0,0,,,D
+ZM1,16/09/2023,Zanaco,Mufulira Wanderers,1,0,,,H
+ZM1,17/09/2023,Kabwe Warriors,NAPSA Stars,1,1,,,D
+ZM1,17/09/2023,Kansanshi Dynamos,Prison Leopards,2,1,,,H
+ZM1,17/09/2023,Mutondo Stars,Forest Rangers,3,2,,,H
+ZM1,17/09/2023,ZESCO United,Konkola Blades,3,0,,,H
+ZM1,20/09/2023,Power Dynamos,Green Eagles,2,0,,,H
+ZM1,20/09/2023,Nkana,FC MUZA,1,1,,,D
+ZM1,23/09/2023,Prison Leopards,Kabwe Warriors,1,2,,,A
+ZM1,23/09/2023,Trident,Mutondo Stars,0,0,,,D
+ZM1,23/09/2023,NAPSA Stars,Zanaco,3,0,,,H
+ZM1,23/09/2023,Nkwazi,Kansanshi Dynamos,0,0,,,D
+ZM1,23/09/2023,Konkola Blades,Green Buffaloes,1,1,,,D
+ZM1,23/09/2023,Forest Rangers,Nkana,1,0,,,H
+ZM1,23/09/2023,Mufulira Wanderers,Red Arrows,1,0,,,H
+ZM1,24/09/2023,Green Eagles,FC MUZA,0,4,,,A
+ZM1,24/09/2023,Power Dynamos,ZESCO United,2,2,,,D
+ZM1,30/09/2023,Mutondo Stars,Mufulira Wanderers,2,1,,,H
+ZM1,30/09/2023,Red Arrows,NAPSA Stars,1,0,,,H
+ZM1,30/09/2023,Zanaco,Prison Leopards,0,0,,,D
+ZM1,30/09/2023,ZESCO United,Green Eagles,3,2,,,H
+ZM1,01/10/2023,Kabwe Warriors,Nkwazi,1,1,,,D
+ZM1,01/10/2023,Nkana,Trident,0,0,,,D
+ZM1,01/10/2023,Kansanshi Dynamos,Konkola Blades,0,1,,,A
+ZM1,07/10/2023,Prison Leopards,Red Arrows,1,2,,,A
+ZM1,07/10/2023,ZESCO United,Green Buffaloes,1,0,,,H
+ZM1,07/10/2023,Mufulira Wanderers,Nkana,2,1,,,H
+ZM1,07/10/2023,Trident,FC MUZA,0,1,,,A
+ZM1,07/10/2023,Konkola Blades,Kabwe Warriors,0,2,,,A
+ZM1,08/10/2023,Power Dynamos,Kansanshi Dynamos,3,1,,,H
+ZM1,08/10/2023,Green Eagles,Forest Rangers,2,1,,,H
+ZM1,08/10/2023,NAPSA Stars,Mutondo Stars,3,2,,,H
+ZM1,08/10/2023,Nkwazi,Zanaco,1,1,,,D
+ZM1,14/10/2023,Green Buffaloes,Power Dynamos,3,1,,,H
+ZM1,14/10/2023,FC MUZA,Forest Rangers,2,2,,,D
+ZM1,20/10/2023,Green Buffaloes,Green Eagles,2,0,,,H
+ZM1,21/10/2023,Mutondo Stars,Prison Leopards,3,2,,,H
+ZM1,21/10/2023,Nkana,NAPSA Stars,1,1,,,D
+ZM1,21/10/2023,Red Arrows,Nkwazi,4,0,,,H
+ZM1,21/10/2023,Forest Rangers,Trident,1,1,,,D
+ZM1,21/10/2023,Zanaco,Konkola Blades,3,0,,,H
+ZM1,21/10/2023,FC MUZA,Mufulira Wanderers,1,0,,,H
+ZM1,22/10/2023,Kansanshi Dynamos,ZESCO United,1,1,,,D
+ZM1,22/10/2023,Kabwe Warriors,Power Dynamos,2,0,,,H
+ZM1,28/10/2023,ZESCO United,Kabwe Warriors,1,2,,,A
+ZM1,28/10/2023,Nkwazi,Mutondo Stars,2,0,,,H
+ZM1,28/10/2023,Green Eagles,Trident,2,2,,,D
+ZM1,28/10/2023,Prison Leopards,Nkana,0,1,,,A
+ZM1,28/10/2023,Konkola Blades,Red Arrows,1,1,,,D
+ZM1,28/10/2023,Mufulira Wanderers,Forest Rangers,1,1,,,D
+ZM1,28/10/2023,NAPSA Stars,FC MUZA,1,1,,,D
+ZM1,29/10/2023,Green Buffaloes,Kansanshi Dynamos,1,1,,,D
+ZM1,29/10/2023,Power Dynamos,Zanaco,1,1,,,D
+ZM1,04/11/2023,Red Arrows,Power Dynamos,1,1,,,D
+ZM1,04/11/2023,Kabwe Warriors,Green Buffaloes,3,0,,,H
+ZM1,04/11/2023,Zanaco,ZESCO United,1,1,,,D
+ZM1,04/11/2023,Trident,Mufulira Wanderers,1,2,,,A
+ZM1,04/11/2023,FC MUZA,Prison Leopards,2,0,,,H
+ZM1,04/11/2023,Forest Rangers,NAPSA Stars,1,0,,,H
+ZM1,04/11/2023,Mutondo Stars,Konkola Blades,0,1,,,A
+ZM1,05/11/2023,Kansanshi Dynamos,Green Eagles,0,2,,,A
+ZM1,05/11/2023,Nkana,Nkwazi,1,3,,,A
+ZM1,08/11/2023,Power Dynamos,Mutondo Stars,2,0,,,H
+ZM1,08/11/2023,Konkola Blades,Nkana,1,2,,,A
+ZM1,08/11/2023,ZESCO United,Red Arrows,1,0,,,H
+ZM1,08/11/2023,Prison Leopards,Forest Rangers,2,1,,,H
+ZM1,08/11/2023,NAPSA Stars,Trident,0,0,,,D
+ZM1,08/11/2023,Nkwazi,FC MUZA,2,1,,,H
+ZM1,08/11/2023,Kansanshi Dynamos,Kabwe Warriors,2,0,,,H
+ZM1,08/11/2023,Green Buffaloes,Zanaco,1,0,,,H
+ZM1,09/11/2023,Green Eagles,Mufulira Wanderers,0,0,,,D
+ZM1,11/11/2023,Kabwe Warriors,Green Eagles,0,1,,,A
+ZM1,11/11/2023,FC MUZA,Konkola Blades,0,0,,,D
+ZM1,11/11/2023,Forest Rangers,Nkwazi,1,2,,,A
+ZM1,11/11/2023,Red Arrows,Green Buffaloes,4,1,,,H
+ZM1,11/11/2023,Zanaco,Kansanshi Dynamos,1,0,,,H
+ZM1,11/11/2023,Mutondo Stars,ZESCO United,1,2,,,A
+ZM1,12/11/2023,Nkana,Power Dynamos,0,2,,,A
+ZM1,12/11/2023,Mufulira Wanderers,NAPSA Stars,2,1,,,H
+ZM1,12/11/2023,Trident,Prison Leopards,1,1,,,D
+ZM1,25/11/2023,Prison Leopards,Mufulira Wanderers,2,0,,,H
+ZM1,25/11/2023,Green Eagles,NAPSA Stars,3,0,,,H
+ZM1,25/11/2023,Kabwe Warriors,Zanaco,0,1,,,A
+ZM1,25/11/2023,Konkola Blades,Forest Rangers,1,1,,,D
+ZM1,25/11/2023,Power Dynamos,FC MUZA,1,1,,,D
+ZM1,26/11/2023,ZESCO United,Nkana,3,1,,,H
+ZM1,26/11/2023,Green Buffaloes,Mutondo Stars,0,0,,,D
+ZM1,26/11/2023,Nkwazi,Trident,1,1,,,D
+ZM1,26/11/2023,Kansanshi Dynamos,Red Arrows,2,1,,,H
+ZM1,02/12/2023,Mufulira Wanderers,Nkwazi,1,1,,,D
+ZM1,02/12/2023,NAPSA Stars,Prison Leopards,1,0,,,H
+ZM1,02/12/2023,Forest Rangers,Power Dynamos,1,0,,,H
+ZM1,02/12/2023,FC MUZA,ZESCO United,1,3,,,A
+ZM1,02/12/2023,Nkana,Green Buffaloes,2,1,,,H
+ZM1,03/12/2023,Zanaco,Green Eagles,1,1,,,D
+ZM1,03/12/2023,Red Arrows,Kabwe Warriors,1,1,,,D
+ZM1,03/12/2023,Mutondo Stars,Kansanshi Dynamos,2,0,,,H
+ZM1,03/12/2023,Trident,Konkola Blades,0,0,,,D
+ZM1,09/12/2023,Kabwe Warriors,Mutondo Stars,0,2,,,A
+ZM1,09/12/2023,Green Eagles,Prison Leopards,4,0,,,H
+ZM1,09/12/2023,Konkola Blades,Mufulira Wanderers,2,0,,,H
+ZM1,09/12/2023,ZESCO United,Forest Rangers,1,1,,,D
+ZM1,09/12/2023,Green Buffaloes,FC MUZA,1,1,,,D
+ZM1,09/12/2023,Nkwazi,NAPSA Stars,0,2,,,A
+ZM1,09/12/2023,Power Dynamos,Trident,0,0,,,D
+ZM1,10/12/2023,Kansanshi Dynamos,Nkana,0,0,,,D
+ZM1,10/12/2023,Zanaco,Red Arrows,1,2,,,A
+ZM1,16/12/2023,FC MUZA,Kansanshi Dynamos,1,0,,,H
+ZM1,16/12/2023,Mufulira Wanderers,Power Dynamos,1,3,,,A
+ZM1,16/12/2023,Prison Leopards,Nkwazi,0,1,,,A
+ZM1,16/12/2023,NAPSA Stars,Konkola Blades,0,0,,,D
+ZM1,16/12/2023,Red Arrows,Green Eagles,1,2,,,A
+ZM1,16/12/2023,Forest Rangers,Green Buffaloes,2,0,,,H
+ZM1,16/12/2023,Trident,ZESCO United,2,3,,,A
+ZM1,17/12/2023,Nkana,Kabwe Warriors,0,1,,,A
+ZM1,17/12/2023,Mutondo Stars,Zanaco,1,0,,,H
+ZM1,22/12/2023,Red Arrows,Mutondo Stars,3,1,,,H
+ZM1,23/12/2023,Green Buffaloes,Trident,2,0,,,H
+ZM1,23/12/2023,Green Eagles,Nkwazi,0,1,,,A
+ZM1,23/12/2023,Konkola Blades,Prison Leopards,1,1,,,D
+ZM1,23/12/2023,Zanaco,Nkana,0,1,,,A
+ZM1,23/12/2023,Power Dynamos,NAPSA Stars,1,1,,,D
+ZM1,23/12/2023,ZESCO United,Mufulira Wanderers,1,1,,,D
+ZM1,24/12/2023,Kansanshi Dynamos,Forest Rangers,0,0,,,D
+ZM1,24/12/2023,Kabwe Warriors,FC MUZA,0,0,,,D
+ZM1,29/12/2023,Green Buffaloes,Mufulira Wanderers,2,1,,,H
+ZM1,30/12/2023,Konkola Blades,Nkwazi,2,1,,,H
+ZM1,30/12/2023,Kansanshi Dynamos,Trident,2,1,,,H
+ZM1,30/12/2023,Kabwe Warriors,Forest Rangers,1,0,,,H
+ZM1,30/12/2023,Power Dynamos,Prison Leopards,1,0,,,H
+ZM1,30/12/2023,Mutondo Stars,Green Eagles,1,2,,,A
+ZM1,30/12/2023,Zanaco,FC MUZA,0,0,,,D
+ZM1,30/12/2023,Red Arrows,Nkana,1,0,,,H
+ZM1,31/12/2023,ZESCO United,NAPSA Stars,1,0,,,H
+ZM1,06/01/2024,NAPSA Stars,Green Buffaloes,2,1,,,H
+ZM1,06/01/2024,Nkwazi,Power Dynamos,0,3,,,A
+ZM1,06/01/2024,Green Eagles,Konkola Blades,0,1,,,A
+ZM1,06/01/2024,FC MUZA,Red Arrows,1,4,,,A
+ZM1,06/01/2024,Nkana,Mutondo Stars,2,1,,,H
+ZM1,06/01/2024,Forest Rangers,Zanaco,1,1,,,D
+ZM1,07/01/2024,Prison Leopards,ZESCO United,1,0,,,H
+ZM1,10/01/2024,Trident,Kabwe Warriors,0,1,,,A
+ZM1,10/01/2024,Mufulira Wanderers,Kansanshi Dynamos,0,0,,,D
+ZM1,12/01/2024,Power Dynamos,Konkola Blades,1,1,,,D
+ZM1,13/01/2024,Mutondo Stars,FC MUZA,0,1,,,A
+ZM1,13/01/2024,Nkana,Green Eagles,0,2,,,A
+ZM1,13/01/2024,Green Buffaloes,Prison Leopards,1,1,,,D
+ZM1,13/01/2024,Red Arrows,Forest Rangers,2,0,,,H
+ZM1,13/01/2024,Kabwe Warriors,Mufulira Wanderers,2,3,,,A
+ZM1,13/01/2024,ZESCO United,Nkwazi,2,0,,,H
+ZM1,14/01/2024,Kansanshi Dynamos,NAPSA Stars,1,0,,,H
+ZM1,14/01/2024,Zanaco,Trident,2,1,,,H
+ZM1,17/02/2024,Trident,Red Arrows,0,1,,,A
+ZM1,17/02/2024,Forest Rangers,Mutondo Stars,2,1,,,H
+ZM1,17/02/2024,Prison Leopards,Kansanshi Dynamos,2,1,,,H
+ZM1,17/02/2024,Mufulira Wanderers,Zanaco,5,0,,,H
+ZM1,17/02/2024,FC MUZA,Nkana,0,1,,,A
+ZM1,17/02/2024,Nkwazi,Green Buffaloes,2,1,,,H
+ZM1,17/02/2024,NAPSA Stars,Kabwe Warriors,1,0,,,H
+ZM1,17/02/2024,Konkola Blades,ZESCO United,1,1,,,D
+ZM1,18/02/2024,Green Eagles,Power Dynamos,0,4,,,A
+ZM1,24/02/2024,Zanaco,NAPSA Stars,0,0,,,D
+ZM1,24/02/2024,Kabwe Warriors,Prison Leopards,0,0,,,D
+ZM1,24/02/2024,Red Arrows,Mufulira Wanderers,0,0,,,D
+ZM1,24/02/2024,Kansanshi Dynamos,Nkwazi,1,1,,,D
+ZM1,24/02/2024,Nkana,Forest Rangers,1,1,,,D
+ZM1,24/02/2024,FC MUZA,Green Eagles,1,0,,,H
+ZM1,24/02/2024,Green Buffaloes,Konkola Blades,4,2,,,H
+ZM1,25/02/2024,Mutondo Stars,Trident,0,1,,,A
+ZM1,25/02/2024,ZESCO United,Power Dynamos,1,1,,,D
+ZM1,02/03/2024,Nkwazi,Kabwe Warriors,1,0,,,H
+ZM1,02/03/2024,Trident,Nkana,1,2,,,A
+ZM1,02/03/2024,Prison Leopards,Zanaco,0,1,,,A
+ZM1,02/03/2024,NAPSA Stars,Red Arrows,0,1,,,A
+ZM1,02/03/2024,Forest Rangers,FC MUZA,0,1,,,A
+ZM1,02/03/2024,Green Eagles,ZESCO United,1,1,,,D
+ZM1,02/03/2024,Power Dynamos,Green Buffaloes,1,0,,,H
+ZM1,02/03/2024,Konkola Blades,Kansanshi Dynamos,1,0,,,H
+ZM1,03/03/2024,Mufulira Wanderers,Mutondo Stars,0,0,,,D
+ZM1,09/03/2024,Nkana,Mufulira Wanderers,2,1,,,H
+ZM1,09/03/2024,FC MUZA,Trident,1,0,,,H
+ZM1,09/03/2024,Green Buffaloes,ZESCO United,0,1,,,A
+ZM1,09/03/2024,Kabwe Warriors,Konkola Blades,1,0,,,H
+ZM1,09/03/2024,Kansanshi Dynamos,Power Dynamos,0,1,,,A
+ZM1,09/03/2024,Red Arrows,Prison Leopards,2,0,,,H
+ZM1,09/03/2024,Zanaco,Nkwazi,1,1,,,D
+ZM1,10/03/2024,Forest Rangers,Green Eagles,1,1,,,D
+ZM1,10/03/2024,Mutondo Stars,NAPSA Stars,3,0,,,H
+ZM1,16/03/2024,Green Eagles,Green Buffaloes,1,3,,,A
+ZM1,16/03/2024,Trident,Forest Rangers,1,3,,,A
+ZM1,16/03/2024,Mufulira Wanderers,FC MUZA,0,2,,,A
+ZM1,16/03/2024,Power Dynamos,Kabwe Warriors,0,0,,,D
+ZM1,16/03/2024,NAPSA Stars,Nkana,1,0,,,H
+ZM1,16/03/2024,Konkola Blades,Zanaco,0,0,,,D
+ZM1,16/03/2024,Prison Leopards,Mutondo Stars,0,1,,,A
+ZM1,16/03/2024,Nkwazi,Red Arrows,0,1,,,A
+ZM1,17/03/2024,ZESCO United,Kansanshi Dynamos,2,1,,,H
+ZM1,01/04/2024,Mutondo Stars,Nkwazi,0,1,,,A
+ZM1,03/04/2024,Zanaco,Power Dynamos,0,0,,,D
+ZM1,03/04/2024,Red Arrows,Konkola Blades,2,0,,,H
+ZM1,03/04/2024,Kansanshi Dynamos,Green Buffaloes,0,0,,,D
+ZM1,03/04/2024,Nkana,Prison Leopards,0,0,,,D
+ZM1,03/04/2024,Forest Rangers,Mufulira Wanderers,1,0,,,H
+ZM1,04/04/2024,Kabwe Warriors,ZESCO United,0,0,,,D
+ZM1,04/04/2024,FC MUZA,NAPSA Stars,1,0,,,H
+ZM1,04/04/2024,Trident,Green Eagles,4,1,,,H
+ZM1,06/04/2024,Konkola Blades,Mutondo Stars,0,0,,,D
+ZM1,06/04/2024,Nkwazi,Nkana,0,0,,,D
+ZM1,06/04/2024,Power Dynamos,Red Arrows,0,1,,,A
+ZM1,07/04/2024,Prison Leopards,FC MUZA,3,2,,,H
+ZM1,07/04/2024,NAPSA Stars,Forest Rangers,1,0,,,H
+ZM1,07/04/2024,ZESCO United,Zanaco,2,2,,,D
+ZM1,07/04/2024,Green Eagles,Kansanshi Dynamos,4,1,,,H
+ZM1,07/04/2024,Green Buffaloes,Kabwe Warriors,1,0,,,H
+ZM1,07/04/2024,Mufulira Wanderers,Trident,0,1,,,A
+ZM1,17/04/2024,Forest Rangers,Prison Leopards,1,1,,,D
+ZM1,17/04/2024,Nkana,Konkola Blades,2,1,,,H
+ZM1,17/04/2024,Mutondo Stars,Power Dynamos,0,1,,,A
+ZM1,17/04/2024,Trident,NAPSA Stars,1,1,,,D
+ZM1,17/04/2024,Kabwe Warriors,Kansanshi Dynamos,2,1,,,H
+ZM1,17/04/2024,Zanaco,Green Buffaloes,1,1,,,D
+ZM1,18/04/2024,Red Arrows,ZESCO United,2,0,,,H
+ZM1,18/04/2024,Mufulira Wanderers,Green Eagles,0,1,,,A
+ZM1,20/04/2024,Power Dynamos,Nkana,0,2,,,A
+ZM1,20/04/2024,Nkwazi,Forest Rangers,1,1,,,D
+ZM1,21/04/2024,Prison Leopards,Trident,1,1,,,D
+ZM1,21/04/2024,ZESCO United,Mutondo Stars,0,0,,,D
+ZM1,21/04/2024,NAPSA Stars,Mufulira Wanderers,1,1,,,D
+ZM1,21/04/2024,Konkola Blades,FC MUZA,2,0,,,H
+ZM1,21/04/2024,Green Buffaloes,Red Arrows,0,0,,,D
+ZM1,21/04/2024,Green Eagles,Kabwe Warriors,1,1,,,D
+ZM1,21/04/2024,Kansanshi Dynamos,Zanaco,2,1,,,H
+ZM1,24/04/2024,FC MUZA,Nkwazi,3,0,,,H
+ZM1,27/04/2024,Nkana,ZESCO United,0,0,,,D
+ZM1,27/04/2024,Forest Rangers,Konkola Blades,0,0,,,D
+ZM1,27/04/2024,Red Arrows,Kansanshi Dynamos,1,0,,,H
+ZM1,27/04/2024,NAPSA Stars,Green Eagles,1,0,,,H
+ZM1,28/04/2024,FC MUZA,Power Dynamos,3,2,,,H
+ZM1,28/04/2024,Zanaco,Kabwe Warriors,2,1,,,H
+ZM1,28/04/2024,Mufulira Wanderers,Prison Leopards,2,0,,,H
+ZM1,28/04/2024,Mutondo Stars,Green Buffaloes,3,0,,,H
+ZM1,04/05/2024,Trident,Nkwazi,1,3,,,A
+ZM1,15/05/2024,Konkola Blades,Trident,0,1,,,A
+ZM1,15/05/2024,Kansanshi Dynamos,Mutondo Stars,1,0,,,H
+ZM1,15/05/2024,Kabwe Warriors,Red Arrows,1,0,,,H
+ZM1,15/05/2024,Green Eagles,Zanaco,0,1,,,A
+ZM1,15/05/2024,Prison Leopards,NAPSA Stars,0,0,,,D
+ZM1,15/05/2024,Power Dynamos,Forest Rangers,5,0,,,H
+ZM1,15/05/2024,Nkwazi,Mufulira Wanderers,0,1,,,A
+ZM1,15/05/2024,ZESCO United,FC MUZA,2,1,,,H
+ZM1,16/05/2024,Green Buffaloes,Nkana,0,0,,,D
+ZM1,18/05/2024,Trident,Power Dynamos,0,0,,,D
+ZM1,18/05/2024,Mufulira Wanderers,Konkola Blades,1,0,,,H
+ZM1,18/05/2024,Prison Leopards,Green Eagles,2,0,,,H
+ZM1,18/05/2024,Red Arrows,Zanaco,1,0,,,H
+ZM1,18/05/2024,NAPSA Stars,Nkwazi,1,2,,,A
+ZM1,18/05/2024,Forest Rangers,ZESCO United,0,0,,,D
+ZM1,18/05/2024,Mutondo Stars,Kabwe Warriors,1,1,,,D
+ZM1,19/05/2024,Nkana,Kansanshi Dynamos,1,0,,,H
+ZM1,19/05/2024,FC MUZA,Green Buffaloes,0,0,,,D
+ZM1,25/05/2024,Green Eagles,Red Arrows,0,0,,,D
+ZM1,25/05/2024,Kabwe Warriors,Nkana,2,0,,,H
+ZM1,25/05/2024,Kansanshi Dynamos,FC MUZA,2,0,,,H
+ZM1,25/05/2024,Konkola Blades,NAPSA Stars,1,1,,,D
+ZM1,25/05/2024,Nkwazi,Prison Leopards,0,1,,,A
+ZM1,25/05/2024,Power Dynamos,Mufulira Wanderers,1,0,,,H
+ZM1,25/05/2024,Zanaco,Mutondo Stars,0,1,,,A
+ZM1,25/05/2024,ZESCO United,Trident,5,1,,,H
+ZM1,26/05/2024,Green Buffaloes,Forest Rangers,1,0,,,H
+ZM1,01/06/2024,Trident,Green Buffaloes,1,1,,,D
+ZM1,01/06/2024,Prison Leopards,Konkola Blades,1,2,,,A
+ZM1,01/06/2024,Nkwazi,Green Eagles,2,1,,,H
+ZM1,01/06/2024,Nkana,Zanaco,0,0,,,D
+ZM1,01/06/2024,Mufulira Wanderers,ZESCO United,2,0,,,H
+ZM1,01/06/2024,FC MUZA,Kabwe Warriors,0,1,,,A
+ZM1,01/06/2024,Mutondo Stars,Red Arrows,0,1,,,A
+ZM1,01/06/2024,Forest Rangers,Kansanshi Dynamos,4,0,,,H
+ZM1,01/06/2024,NAPSA Stars,Power Dynamos,1,1,,,D
+ZM1,18/08/2024,Nkwazi,Mutondo Stars,2,0,,,H
+ZM1,18/08/2024,Nchanga Rangers,FC MUZA,3,0,,,H
+ZM1,18/08/2024,Mufulira Wanderers,Power Dynamos,1,2,,,A
+ZM1,18/08/2024,Nkana,Lumwana Radiants,0,0,,,D
+ZM1,18/08/2024,Green Eagles,Kabwe Warriors,1,1,,,D
+ZM1,18/08/2024,Forest Rangers,Atletico Lusaka,3,1,,,H
+ZM1,18/08/2024,Indeni,Zanaco,0,2,,,A
+ZM1,24/08/2024,Kabwe Warriors,Nchanga Rangers,2,0,,,H
+ZM1,24/08/2024,Lumwana Radiants,Green Eagles,0,1,,,A
+ZM1,24/08/2024,FC MUZA,Mufulira Wanderers,0,0,,,D
+ZM1,25/08/2024,Atletico Lusaka,NAPSA Stars,1,1,,,D
+ZM1,25/08/2024,Zanaco,Forest Rangers,1,1,,,D
+ZM1,25/08/2024,Mutondo Stars,Nkana,1,1,,,D
+ZM1,25/08/2024,Green Buffaloes,Indeni,4,0,,,H
+ZM1,28/08/2024,Nkwazi,NAPSA Stars,0,1,,,A
+ZM1,28/08/2024,Nchanga Rangers,Lumwana Radiants,4,0,,,H
+ZM1,28/08/2024,Indeni,Power Dynamos,0,0,,,D
+ZM1,28/08/2024,Forest Rangers,Green Buffaloes,0,0,,,D
+ZM1,28/08/2024,Red Arrows,FC MUZA,1,0,,,H
+ZM1,28/08/2024,Green Eagles,Mutondo Stars,1,1,,,D
+ZM1,29/08/2024,Zanaco,Atletico Lusaka,0,1,,,A
+ZM1,31/08/2024,Mufulira Wanderers,Kabwe Warriors,0,0,,,D
+ZM1,31/08/2024,Power Dynamos,Forest Rangers,1,1,,,D
+ZM1,01/09/2024,Green Buffaloes,Zanaco,2,1,,,H
+ZM1,01/09/2024,Mutondo Stars,Nchanga Rangers,1,1,,,D
+ZM1,01/09/2024,FC MUZA,Indeni,3,1,,,H
+ZM1,01/09/2024,Atletico Lusaka,Nkwazi,0,0,,,D
+ZM1,01/09/2024,Nkana,ZESCO United,0,1,,,A
+ZM1,05/09/2024,NAPSA Stars,ZESCO United,0,1,,,A
+ZM1,05/09/2024,Red Arrows,Green Buffaloes,1,0,,,H
+ZM1,08/09/2024,Power Dynamos,Red Arrows,0,0,,,D
+ZM1,11/09/2024,ZESCO United,Green Eagles,1,0,,,H
+ZM1,12/09/2024,Lumwana Radiants,Mufulira Wanderers,0,2,,,A
+ZM1,14/09/2024,NAPSA Stars,Nkana,0,1,,,A
+ZM1,18/09/2024,ZESCO United,Nkwazi,1,1,,,D
+ZM1,21/09/2024,Nchanga Rangers,ZESCO United,1,2,,,A
+ZM1,21/09/2024,Mufulira Wanderers,Mutondo Stars,0,2,,,A
+ZM1,21/09/2024,Indeni,Kabwe Warriors,0,1,,,A
+ZM1,21/09/2024,Green Eagles,NAPSA Stars,1,1,,,D
+ZM1,21/09/2024,Forest Rangers,FC MUZA,2,2,,,D
+ZM1,21/09/2024,Green Buffaloes,Atletico Lusaka,0,0,,,D
+ZM1,21/09/2024,Zanaco,Power Dynamos,1,1,,,D
+ZM1,22/09/2024,Nkana,Nkwazi,0,0,,,D
+ZM1,28/09/2024,Power Dynamos,Green Buffaloes,1,2,,,A
+ZM1,28/09/2024,Kabwe Warriors,Forest Rangers,2,2,,,D
+ZM1,28/09/2024,Lumwana Radiants,Indeni,2,1,,,H
+ZM1,28/09/2024,Nkwazi,Green Eagles,0,0,,,D
+ZM1,29/09/2024,NAPSA Stars,Nchanga Rangers,3,0,,,H
+ZM1,29/09/2024,Atletico Lusaka,Nkana,2,1,,,H
+ZM1,29/09/2024,FC MUZA,Zanaco,2,2,,,D
+ZM1,29/09/2024,ZESCO United,Mufulira Wanderers,2,0,,,H
+ZM1,29/09/2024,Mutondo Stars,Red Arrows,3,1,,,H
+ZM1,03/10/2024,Red Arrows,Lumwana Radiants,0,0,,,D
+ZM1,05/10/2024,Zanaco,Kabwe Warriors,0,2,,,A
+ZM1,05/10/2024,Green Buffaloes,FC MUZA,0,1,,,A
+ZM1,05/10/2024,Green Eagles,Nkana,2,1,,,H
+ZM1,05/10/2024,Indeni,Mutondo Stars,0,1,,,A
+ZM1,05/10/2024,Mufulira Wanderers,NAPSA Stars,1,0,,,H
+ZM1,05/10/2024,Nchanga Rangers,Nkwazi,1,1,,,D
+ZM1,05/10/2024,Power Dynamos,Atletico Lusaka,5,0,,,H
+ZM1,06/10/2024,Red Arrows,ZESCO United,2,0,,,H
+ZM1,06/10/2024,Forest Rangers,Lumwana Radiants,2,1,,,H
+ZM1,19/10/2024,Nkwazi,Mufulira Wanderers,2,1,,,H
+ZM1,19/10/2024,FC MUZA,Power Dynamos,0,1,,,A
+ZM1,19/10/2024,NAPSA Stars,Red Arrows,1,0,,,H
+ZM1,19/10/2024,Kabwe Warriors,Green Buffaloes,1,1,,,D
+ZM1,19/10/2024,Lumwana Radiants,Zanaco,0,0,,,D
+ZM1,20/10/2024,Mutondo Stars,Forest Rangers,2,1,,,H
+ZM1,20/10/2024,ZESCO United,Indeni,1,0,,,H
+ZM1,20/10/2024,Atletico Lusaka,Green Eagles,1,0,,,H
+ZM1,23/10/2024,Nkana,Nchanga Rangers,0,0,,,D
+ZM1,26/10/2024,Zanaco,Mutondo Stars,1,1,,,D
+ZM1,26/10/2024,Nchanga Rangers,Green Eagles,1,2,,,A
+ZM1,26/10/2024,FC MUZA,Atletico Lusaka,2,0,,,H
+ZM1,26/10/2024,Mufulira Wanderers,Nkana,1,3,,,A
+ZM1,26/10/2024,Red Arrows,Nkwazi,1,0,,,H
+ZM1,26/10/2024,Green Buffaloes,Lumwana Radiants,2,0,,,H
+ZM1,26/10/2024,Forest Rangers,ZESCO United,2,2,,,D
+ZM1,26/10/2024,Indeni,NAPSA Stars,1,1,,,D
+ZM1,27/10/2024,Power Dynamos,Kabwe Warriors,2,1,,,H
+ZM1,30/10/2024,Kabwe Warriors,Red Arrows,0,2,,,A
+ZM1,02/11/2024,NAPSA Stars,Forest Rangers,0,0,,,D
+ZM1,02/11/2024,Lumwana Radiants,Power Dynamos,0,2,,,A
+ZM1,02/11/2024,Kabwe Warriors,FC MUZA,3,0,,,H
+ZM1,02/11/2024,Green Eagles,Mufulira Wanderers,1,0,,,H
+ZM1,02/11/2024,Nkwazi,Indeni,1,0,,,H
+ZM1,02/11/2024,Nkana,Red Arrows,3,1,,,H
+ZM1,02/11/2024,Atletico Lusaka,Nchanga Rangers,0,0,,,D
+ZM1,03/11/2024,Mutondo Stars,Green Buffaloes,1,4,,,A
+ZM1,03/11/2024,ZESCO United,Zanaco,0,0,,,D
+ZM1,09/11/2024,FC MUZA,Lumwana Radiants,2,1,,,H
+ZM1,09/11/2024,Zanaco,NAPSA Stars,0,1,,,A
+ZM1,09/11/2024,Red Arrows,Green Eagles,1,1,,,D
+ZM1,09/11/2024,Kabwe Warriors,Atletico Lusaka,3,0,,,H
+ZM1,09/11/2024,Indeni,Nkana,0,3,,,A
+ZM1,09/11/2024,Forest Rangers,Nkwazi,0,2,,,A
+ZM1,09/11/2024,Mufulira Wanderers,Nchanga Rangers,2,0,,,H
+ZM1,10/11/2024,Green Buffaloes,ZESCO United,1,1,,,D
+ZM1,10/11/2024,Power Dynamos,Mutondo Stars,1,0,,,H
+ZM1,23/11/2024,Green Eagles,Indeni,2,1,,,H
+ZM1,23/11/2024,Lumwana Radiants,Kabwe Warriors,0,1,,,A
+ZM1,23/11/2024,NAPSA Stars,Green Buffaloes,1,2,,,A
+ZM1,23/11/2024,Nchanga Rangers,Red Arrows,1,0,,,H
+ZM1,23/11/2024,ZESCO United,Power Dynamos,2,0,,,H
+ZM1,23/11/2024,Nkwazi,Zanaco,0,0,,,D
+ZM1,24/11/2024,Mutondo Stars,FC MUZA,0,1,,,A
+ZM1,24/11/2024,Nkana,Forest Rangers,2,0,,,H
+ZM1,24/11/2024,Atletico Lusaka,Mufulira Wanderers,0,0,,,D
+ZM1,27/11/2024,Green Buffaloes,Nkwazi,1,2,,,A
+ZM1,27/11/2024,Indeni,Nchanga Rangers,0,0,,,D
+ZM1,27/11/2024,FC MUZA,ZESCO United,0,0,,,D
+ZM1,27/11/2024,Power Dynamos,NAPSA Stars,3,1,,,H
+ZM1,27/11/2024,Red Arrows,Mufulira Wanderers,1,1,,,D
+ZM1,27/11/2024,Zanaco,Nkana,1,0,,,H
+ZM1,27/11/2024,Kabwe Warriors,Mutondo Stars,1,0,,,H
+ZM1,28/11/2024,Lumwana Radiants,Atletico Lusaka,0,2,,,A
+ZM1,28/11/2024,Forest Rangers,Green Eagles,0,1,,,A
+ZM1,30/11/2024,ZESCO United,Kabwe Warriors,0,2,,,A
+ZM1,30/11/2024,NAPSA Stars,FC MUZA,1,1,,,D
+ZM1,30/11/2024,Nkana,Green Buffaloes,3,0,,,H
+ZM1,01/12/2024,Nkwazi,Power Dynamos,1,3,,,A
+ZM1,01/12/2024,Atletico Lusaka,Red Arrows,0,2,,,A
+ZM1,01/12/2024,Nchanga Rangers,Forest Rangers,1,0,,,H
+ZM1,01/12/2024,Green Eagles,Zanaco,3,3,,,D
+ZM1,01/12/2024,Mufulira Wanderers,Indeni,2,1,,,H
+ZM1,01/12/2024,Mutondo Stars,Lumwana Radiants,0,2,,,A
+ZM1,07/12/2024,Zanaco,Nchanga Rangers,1,1,,,D
+ZM1,07/12/2024,Power Dynamos,Nkana,1,2,,,A
+ZM1,07/12/2024,Green Buffaloes,Green Eagles,1,1,,,D
+ZM1,07/12/2024,Kabwe Warriors,NAPSA Stars,0,0,,,D
+ZM1,07/12/2024,Lumwana Radiants,ZESCO United,1,1,,,D
+ZM1,07/12/2024,FC MUZA,Nkwazi,0,0,,,D
+ZM1,08/12/2024,Indeni,Red Arrows,1,2,,,A
+ZM1,08/12/2024,Mutondo Stars,Atletico Lusaka,1,0,,,H
+ZM1,08/12/2024,Forest Rangers,Mufulira Wanderers,0,1,,,A
+ZM1,14/12/2024,Atletico Lusaka,Indeni,2,1,,,H
+ZM1,14/12/2024,Nkwazi,Kabwe Warriors,1,0,,,H
+ZM1,14/12/2024,ZESCO United,Mutondo Stars,2,0,,,H
+ZM1,14/12/2024,Green Eagles,Power Dynamos,1,1,,,D
+ZM1,14/12/2024,Mufulira Wanderers,Zanaco,0,0,,,D
+ZM1,14/12/2024,Nkana,FC MUZA,2,0,,,H
+ZM1,14/12/2024,Nchanga Rangers,Green Buffaloes,0,0,,,D
+ZM1,15/12/2024,NAPSA Stars,Lumwana Radiants,0,1,,,A
+ZM1,15/12/2024,Red Arrows,Forest Rangers,1,0,,,H
+ZM1,18/12/2024,Power Dynamos,Nchanga Rangers,0,1,,,A
+ZM1,18/12/2024,Kabwe Warriors,Nkana,1,1,,,D
+ZM1,18/12/2024,FC MUZA,Green Eagles,0,0,,,D
+ZM1,18/12/2024,Atletico Lusaka,ZESCO United,1,1,,,D
+ZM1,18/12/2024,Green Buffaloes,Mufulira Wanderers,1,1,,,D
+ZM1,19/12/2024,Mutondo Stars,NAPSA Stars,1,1,,,D
+ZM1,19/12/2024,Zanaco,Red Arrows,2,2,,,D
+ZM1,19/12/2024,Forest Rangers,Indeni,2,1,,,H
+ZM1,19/12/2024,Lumwana Radiants,Nkwazi,1,0,,,H
+ZM1,21/12/2024,Power Dynamos,Mufulira Wanderers,0,1,,,A
+ZM1,21/12/2024,FC MUZA,Nchanga Rangers,2,0,,,H
+ZM1,21/12/2024,Kabwe Warriors,Green Eagles,1,2,,,A
+ZM1,22/12/2024,Mutondo Stars,Nkwazi,0,1,,,A
+ZM1,22/12/2024,ZESCO United,NAPSA Stars,0,0,,,D
+ZM1,22/12/2024,Zanaco,Indeni,2,3,,,A
+ZM1,22/12/2024,Lumwana Radiants,Nkana,0,0,,,D
+ZM1,22/12/2024,Atletico Lusaka,Forest Rangers,3,2,,,H
+ZM1,22/12/2024,Green Buffaloes,Red Arrows,0,0,,,D
+ZM1,11/01/2025,Nkana,Mutondo Stars,2,0,,,H
+ZM1,11/01/2025,Nchanga Rangers,Kabwe Warriors,0,1,,,A
+ZM1,11/01/2025,Indeni,Green Buffaloes,0,0,,,D
+ZM1,11/01/2025,Mufulira Wanderers,FC MUZA,4,1,,,H
+ZM1,11/01/2025,Red Arrows,Power Dynamos,3,2,,,H
+ZM1,11/01/2025,NAPSA Stars,Atletico Lusaka,0,0,,,D
+ZM1,11/01/2025,Forest Rangers,Zanaco,2,0,,,H
+ZM1,12/01/2025,Green Eagles,Lumwana Radiants,0,1,,,A
+ZM1,12/01/2025,Nkwazi,ZESCO United,2,2,,,D
+ZM1,18/01/2025,Green Buffaloes,Forest Rangers,2,3,,,A
+ZM1,18/01/2025,Kabwe Warriors,Mufulira Wanderers,3,0,,,H
+ZM1,18/01/2025,Lumwana Radiants,Nchanga Rangers,2,1,,,H
+ZM1,18/01/2025,FC MUZA,Red Arrows,0,0,,,D
+ZM1,18/01/2025,Power Dynamos,Indeni,3,1,,,H
+ZM1,18/01/2025,Atletico Lusaka,Zanaco,0,2,,,A
+ZM1,18/01/2025,NAPSA Stars,Nkwazi,1,1,,,D
+ZM1,19/01/2025,Mutondo Stars,Green Eagles,2,1,,,H
+ZM1,19/01/2025,ZESCO United,Nkana,2,0,,,H
+ZM1,25/01/2025,Nkana,NAPSA Stars,0,1,,,A
+ZM1,25/01/2025,Forest Rangers,Power Dynamos,0,0,,,D
+ZM1,25/01/2025,Red Arrows,Kabwe Warriors,1,1,,,D
+ZM1,25/01/2025,Indeni,FC MUZA,1,0,,,H
+ZM1,25/01/2025,Mufulira Wanderers,Lumwana Radiants,2,0,,,H
+ZM1,26/01/2025,Nchanga Rangers,Mutondo Stars,1,1,,,D
+ZM1,26/01/2025,Zanaco,Green Buffaloes,4,1,,,H
+ZM1,26/01/2025,Green Eagles,ZESCO United,0,1,,,A
+ZM1,26/01/2025,Nkwazi,Atletico Lusaka,2,1,,,H
+ZM1,01/02/2025,Nkwazi,Nkana,1,1,,,D
+ZM1,01/02/2025,NAPSA Stars,Green Eagles,0,0,,,D
+ZM1,01/02/2025,Lumwana Radiants,Red Arrows,0,1,,,A
+ZM1,01/02/2025,FC MUZA,Forest Rangers,2,0,,,H
+ZM1,01/02/2025,Power Dynamos,Zanaco,4,0,,,H
+ZM1,01/02/2025,ZESCO United,Nchanga Rangers,1,1,,,D
+ZM1,01/02/2025,Atletico Lusaka,Green Buffaloes,0,1,,,A
+ZM1,02/02/2025,Mutondo Stars,Mufulira Wanderers,0,1,,,A
+ZM1,02/02/2025,Kabwe Warriors,Indeni,3,1,,,H
+ZM1,08/02/2025,Green Buffaloes,Power Dynamos,0,2,,,A
+ZM1,08/02/2025,Green Eagles,Nkwazi,0,1,,,A
+ZM1,08/02/2025,Indeni,Lumwana Radiants,0,1,,,A
+ZM1,08/02/2025,Nchanga Rangers,NAPSA Stars,0,0,,,D
+ZM1,08/02/2025,Nkana,Atletico Lusaka,5,1,,,H
+ZM1,08/02/2025,Red Arrows,Mutondo Stars,0,0,,,D
+ZM1,08/02/2025,Forest Rangers,Kabwe Warriors,1,1,,,D
+ZM1,09/02/2025,Mufulira Wanderers,ZESCO United,0,1,,,A
+ZM1,09/02/2025,Zanaco,FC MUZA,0,2,,,A
+ZM1,15/02/2025,Nkwazi,Nchanga Rangers,2,1,,,H
+ZM1,15/02/2025,Atletico Lusaka,Power Dynamos,0,2,,,A
+ZM1,15/02/2025,NAPSA Stars,Mufulira Wanderers,1,0,,,H
+ZM1,15/02/2025,FC MUZA,Green Buffaloes,0,1,,,A
+ZM1,15/02/2025,Mutondo Stars,Indeni,2,1,,,H
+ZM1,15/02/2025,Kabwe Warriors,Zanaco,1,0,,,H
+ZM1,15/02/2025,Lumwana Radiants,Forest Rangers,1,1,,,D
+ZM1,15/02/2025,ZESCO United,Red Arrows,1,0,,,H
+ZM1,16/02/2025,Nkana,Green Eagles,1,0,,,H
+ZM1,22/02/2025,Nchanga Rangers,Nkana,2,0,,,H
+ZM1,22/02/2025,Forest Rangers,Mutondo Stars,0,0,,,D
+ZM1,22/02/2025,Green Eagles,Atletico Lusaka,1,2,,,A
+ZM1,22/02/2025,Indeni,ZESCO United,0,0,,,D
+ZM1,22/02/2025,Mufulira Wanderers,Nkwazi,2,1,,,H
+ZM1,23/02/2025,Green Buffaloes,Kabwe Warriors,1,0,,,H
+ZM1,23/02/2025,Red Arrows,NAPSA Stars,1,0,,,H
+ZM1,23/02/2025,Power Dynamos,FC MUZA,2,0,,,H
+ZM1,23/02/2025,Zanaco,Lumwana Radiants,1,0,,,H
+ZM1,01/03/2025,Nkwazi,Red Arrows,0,0,,,D
+ZM1,01/03/2025,Atletico Lusaka,FC MUZA,2,1,,,H
+ZM1,01/03/2025,NAPSA Stars,Indeni,1,0,,,H
+ZM1,01/03/2025,Mutondo Stars,Zanaco,1,2,,,A
+ZM1,01/03/2025,ZESCO United,Forest Rangers,0,0,,,D
+ZM1,01/03/2025,Kabwe Warriors,Power Dynamos,1,3,,,A
+ZM1,01/03/2025,Green Eagles,Nchanga Rangers,2,2,,,D
+ZM1,02/03/2025,Nkana,Mufulira Wanderers,1,0,,,H
+ZM1,03/03/2025,Lumwana Radiants,Green Buffaloes,2,0,,,H
+ZM1,08/03/2025,FC MUZA,Kabwe Warriors,2,0,,,H
+ZM1,08/03/2025,Nchanga Rangers,Atletico Lusaka,0,0,,,D
+ZM1,08/03/2025,Power Dynamos,Lumwana Radiants,2,0,,,H
+ZM1,08/03/2025,Mufulira Wanderers,Green Eagles,2,1,,,H
+ZM1,08/03/2025,Green Buffaloes,Mutondo Stars,1,0,,,H
+ZM1,08/03/2025,Forest Rangers,NAPSA Stars,0,0,,,D
+ZM1,08/03/2025,Zanaco,ZESCO United,2,1,,,H
+ZM1,08/03/2025,Indeni,Nkwazi,0,0,,,D
+ZM1,09/03/2025,Red Arrows,Nkana,1,2,,,A
+ZM1,12/03/2025,Nkana,Indeni,4,1,,,H
+ZM1,12/03/2025,NAPSA Stars,Zanaco,1,0,,,H
+ZM1,12/03/2025,Green Eagles,Red Arrows,1,1,,,D
+ZM1,12/03/2025,Atletico Lusaka,Kabwe Warriors,0,0,,,D
+ZM1,12/03/2025,ZESCO United,Green Buffaloes,1,0,,,H
+ZM1,12/03/2025,Nkwazi,Forest Rangers,0,0,,,D
+ZM1,12/03/2025,Nchanga Rangers,Mufulira Wanderers,1,0,,,H
+ZM1,12/03/2025,Lumwana Radiants,FC MUZA,1,1,,,D
+ZM1,12/03/2025,Mutondo Stars,Power Dynamos,0,2,,,A
+ZM1,22/03/2025,Mufulira Wanderers,Atletico Lusaka,3,0,,,H
+ZM1,22/03/2025,Forest Rangers,Nkana,1,1,,,D
+ZM1,26/03/2025,Red Arrows,Nchanga Rangers,2,1,,,H
+ZM1,26/03/2025,FC MUZA,Mutondo Stars,1,1,,,D
+ZM1,26/03/2025,Kabwe Warriors,Lumwana Radiants,2,0,,,H
+ZM1,26/03/2025,Green Buffaloes,NAPSA Stars,2,2,,,D
+ZM1,26/03/2025,Indeni,Green Eagles,1,2,,,A
+ZM1,29/03/2025,Zanaco,Nkwazi,1,3,,,A
+ZM1,30/03/2025,Power Dynamos,ZESCO United,1,0,,,H
+ZM1,02/04/2025,ZESCO United,FC MUZA,1,0,,,H
+ZM1,02/04/2025,Mutondo Stars,Kabwe Warriors,0,0,,,D
+ZM1,02/04/2025,Atletico Lusaka,Lumwana Radiants,1,2,,,A
+ZM1,02/04/2025,Nkwazi,Green Buffaloes,2,0,,,H
+ZM1,02/04/2025,Nkana,Zanaco,2,2,,,D
+ZM1,02/04/2025,Nchanga Rangers,Indeni,1,0,,,H
+ZM1,02/04/2025,Mufulira Wanderers,Red Arrows,1,0,,,H
+ZM1,02/04/2025,Green Eagles,Forest Rangers,1,1,,,D
+ZM1,03/04/2025,NAPSA Stars,Power Dynamos,0,2,,,A
+ZM1,09/04/2025,Lumwana Radiants,Mutondo Stars,0,1,,,A
+ZM1,09/04/2025,Forest Rangers,Nchanga Rangers,0,0,,,D
+ZM1,09/04/2025,Green Buffaloes,Nkana,0,1,,,A
+ZM1,09/04/2025,Indeni,Mufulira Wanderers,1,0,,,H
+ZM1,09/04/2025,Kabwe Warriors,ZESCO United,0,1,,,A
+ZM1,09/04/2025,Power Dynamos,Nkwazi,2,0,,,H
+ZM1,09/04/2025,Red Arrows,Atletico Lusaka,0,1,,,A
+ZM1,09/04/2025,Zanaco,Green Eagles,1,0,,,H
+ZM1,12/04/2025,FC MUZA,NAPSA Stars,0,0,,,D
+ZM1,19/04/2025,Atletico Lusaka,Mutondo Stars,1,2,,,A
+ZM1,19/04/2025,Red Arrows,Indeni,2,1,,,H
+ZM1,19/04/2025,Green Eagles,Green Buffaloes,2,2,,,D
+ZM1,19/04/2025,NAPSA Stars,Kabwe Warriors,2,2,,,D
+ZM1,19/04/2025,Nchanga Rangers,Zanaco,2,0,,,H
+ZM1,19/04/2025,Nkwazi,FC MUZA,1,2,,,A
+ZM1,19/04/2025,Mufulira Wanderers,Forest Rangers,0,1,,,A
+ZM1,20/04/2025,Nkana,Power Dynamos,1,1,,,D
+ZM1,21/04/2025,ZESCO United,Lumwana Radiants,1,0,,,H
+ZM1,03/05/2025,Zanaco,Mufulira Wanderers,2,0,,,H
+ZM1,03/05/2025,Power Dynamos,Green Eagles,1,0,,,H
+ZM1,03/05/2025,FC MUZA,Nkana,5,2,,,H
+ZM1,03/05/2025,Lumwana Radiants,NAPSA Stars,0,2,,,A
+ZM1,03/05/2025,Indeni,Atletico Lusaka,0,2,,,A
+ZM1,03/05/2025,Green Buffaloes,Nchanga Rangers,0,0,,,D
+ZM1,03/05/2025,Forest Rangers,Red Arrows,0,1,,,A
+ZM1,04/05/2025,Kabwe Warriors,Nkwazi,1,1,,,D
+ZM1,04/05/2025,Mutondo Stars,ZESCO United,1,0,,,H
+ZM1,17/05/2025,ZESCO United,Atletico Lusaka,3,2,,,H
+ZM1,17/05/2025,Nkwazi,Lumwana Radiants,0,2,,,A
+ZM1,17/05/2025,Nkana,Kabwe Warriors,2,0,,,H
+ZM1,17/05/2025,Nchanga Rangers,Power Dynamos,1,1,,,D
+ZM1,17/05/2025,Red Arrows,Zanaco,1,0,,,H
+ZM1,17/05/2025,Mufulira Wanderers,Green Buffaloes,1,2,,,A
+ZM1,17/05/2025,Indeni,Forest Rangers,1,3,,,A
+ZM1,17/05/2025,Green Eagles,FC MUZA,1,0,,,H
+ZM1,17/05/2025,NAPSA Stars,Mutondo Stars,0,0,,,D
+ZM1,16/08/2025,Kansanshi Dynamos,Kabwe Warriors,0,0,,,D
+ZM1,16/08/2025,Mines United,Mufulira Wanderers,1,2,,,A
+ZM1,16/08/2025,FC MUZA,Zanaco,0,0,,,D
+ZM1,16/08/2025,NAPSA Stars,Green Eagles,0,2,,,A
+ZM1,16/08/2025,Nchanga Rangers,Mutondo Stars,2,0,,,H
+ZM1,16/08/2025,ZESCO United,Konkola Blades,0,3,,,A
+ZM1,16/08/2025,Nkwazi,Green Buffaloes,1,2,,,A
+ZM1,16/08/2025,Prison Leopards,Nkana,0,0,,,D
+ZM1,23/08/2025,Red Arrows,Mines United,4,1,,,H
+ZM1,23/08/2025,Zanaco,Kansanshi Dynamos,1,0,,,H
+ZM1,23/08/2025,Nkana,Nkwazi,1,1,,,D
+ZM1,23/08/2025,ZESCO United,Mutondo Stars,3,0,,,H
+ZM1,23/08/2025,Konkola Blades,FC MUZA,0,2,,,A
+ZM1,23/08/2025,Kabwe Warriors,Prison Leopards,0,0,,,D
+ZM1,23/08/2025,Mufulira Wanderers,NAPSA Stars,0,0,,,D
+ZM1,24/08/2025,Green Buffaloes,Power Dynamos,1,2,,,A
+ZM1,24/08/2025,Green Eagles,Nchanga Rangers,0,1,,,A
+ZM1,30/08/2025,NAPSA Stars,Red Arrows,1,1,,,D
+ZM1,30/08/2025,Nkana,Green Buffaloes,0,3,,,A
+ZM1,30/08/2025,Prison Leopards,Zanaco,0,1,,,A
+ZM1,30/08/2025,Kansanshi Dynamos,Konkola Blades,1,1,,,D
+ZM1,30/08/2025,FC MUZA,Mutondo Stars,1,0,,,H
+ZM1,30/08/2025,ZESCO United,Green Eagles,1,1,,,D
+ZM1,31/08/2025,Nkwazi,Kabwe Warriors,0,0,,,D
+ZM1,31/08/2025,Mines United,Power Dynamos,0,0,,,D
+ZM1,31/08/2025,Nchanga Rangers,Mufulira Wanderers,2,0,,,H
+ZM1,13/09/2025,Kabwe Warriors,Nkana,1,0,,,H
+ZM1,13/09/2025,Red Arrows,Nchanga Rangers,2,0,,,H
+ZM1,13/09/2025,Power Dynamos,NAPSA Stars,2,0,,,H
+ZM1,13/09/2025,Mufulira Wanderers,ZESCO United,0,1,,,A
+ZM1,13/09/2025,Konkola Blades,Prison Leopards,1,1,,,D
+ZM1,13/09/2025,Green Buffaloes,Mines United,2,0,,,H
+ZM1,13/09/2025,Green Eagles,FC MUZA,0,1,,,A
+ZM1,14/09/2025,Zanaco,Nkwazi,1,1,,,D
+ZM1,14/09/2025,Mutondo Stars,Kansanshi Dynamos,1,0,,,H
+ZM1,20/09/2025,Kabwe Warriors,Green Buffaloes,1,0,,,H
+ZM1,20/09/2025,Kansanshi Dynamos,Green Eagles,0,1,,,A
+ZM1,20/09/2025,Nkwazi,Konkola Blades,0,1,,,A
+ZM1,20/09/2025,FC MUZA,Mufulira Wanderers,0,1,,,A
+ZM1,21/09/2025,NAPSA Stars,Mines United,1,0,,,H
+ZM1,21/09/2025,Nkana,Zanaco,0,1,,,A
+ZM1,21/09/2025,Prison Leopards,Mutondo Stars,1,1,,,D
+ZM1,26/09/2025,Konkola Blades,Nkana,0,0,,,D
+ZM1,26/09/2025,Mutondo Stars,Nkwazi,1,0,,,H
+ZM1,26/09/2025,Mufulira Wanderers,Kansanshi Dynamos,0,0,,,D
+ZM1,27/09/2025,Red Arrows,FC MUZA,1,0,,,H
+ZM1,27/09/2025,Green Buffaloes,NAPSA Stars,0,0,,,D
+ZM1,27/09/2025,Green Eagles,Prison Leopards,2,2,,,D
+ZM1,27/09/2025,Mines United,Nchanga Rangers,1,2,,,A
+ZM1,28/09/2025,Zanaco,Kabwe Warriors,3,2,,,H
+ZM1,03/10/2025,Zanaco,Green Buffaloes,1,1,,,D
+ZM1,04/10/2025,Nkana,Mutondo Stars,0,0,,,D
+ZM1,04/10/2025,FC MUZA,Power Dynamos,0,0,,,D
+ZM1,04/10/2025,Nkwazi,Green Eagles,1,1,,,D
+ZM1,04/10/2025,Kabwe Warriors,Konkola Blades,1,0,,,H
+ZM1,05/10/2025,Prison Leopards,Mufulira Wanderers,0,1,,,A
+ZM1,05/10/2025,Kansanshi Dynamos,Red Arrows,1,1,,,D
+ZM1,05/10/2025,ZESCO United,Mines United,5,0,,,H
+ZM1,05/10/2025,Nchanga Rangers,NAPSA Stars,1,1,,,D
+ZM1,11/10/2025,Power Dynamos,Red Arrows,1,2,,,A
+ZM1,17/10/2025,Mufulira Wanderers,Nkwazi,1,1,,,D
+ZM1,18/10/2025,NAPSA Stars,Kansanshi Dynamos,1,1,,,D
+ZM1,18/10/2025,Green Buffaloes,Nchanga Rangers,1,1,,,D
+ZM1,19/10/2025,Mines United,FC MUZA,0,1,,,A
+ZM1,19/10/2025,Mutondo Stars,Kabwe Warriors,1,2,,,A
+ZM1,19/10/2025,Green Eagles,Nkana,2,0,,,H
+ZM1,19/10/2025,Red Arrows,Prison Leopards,3,1,,,H
+ZM1,19/10/2025,Konkola Blades,Zanaco,0,1,,,A
+ZM1,25/10/2025,FC MUZA,NAPSA Stars,3,2,,,H
+ZM1,25/10/2025,Konkola Blades,Green Buffaloes,2,0,,,H
+ZM1,25/10/2025,Nkwazi,Red Arrows,0,0,,,D
+ZM1,25/10/2025,Kansanshi Dynamos,Mines United,1,1,,,D
+ZM1,25/10/2025,Nkana,Mufulira Wanderers,0,1,,,A
+ZM1,26/10/2025,Zanaco,Mutondo Stars,2,0,,,H
+ZM1,29/10/2025,Nchanga Rangers,Power Dynamos,0,1,,,A
+ZM1,30/10/2025,NAPSA Stars,ZESCO United,1,0,,,H
+ZM1,01/11/2025,Mines United,Prison Leopards,2,2,,,D
+ZM1,01/11/2025,Green Eagles,Zanaco,1,0,,,H
+ZM1,01/11/2025,Red Arrows,Nkana,3,0,,,H
+ZM1,01/11/2025,Mutondo Stars,Konkola Blades,1,2,,,A
+ZM1,01/11/2025,Mufulira Wanderers,Kabwe Warriors,0,1,,,A
+ZM1,02/11/2025,Nchanga Rangers,FC MUZA,1,0,,,H
+ZM1,02/11/2025,Green Buffaloes,ZESCO United,2,1,,,H
+ZM1,02/11/2025,Power Dynamos,Nkwazi,1,0,,,H
+ZM1,05/11/2025,Power Dynamos,ZESCO United,1,0,,,H
+ZM1,07/11/2025,Mutondo Stars,Green Buffaloes,0,0,,,D
+ZM1,08/11/2025,Prison Leopards,NAPSA Stars,2,0,,,H
+ZM1,08/11/2025,FC MUZA,ZESCO United,0,0,,,D
+ZM1,08/11/2025,Nkana,Power Dynamos,1,1,,,D
+ZM1,08/11/2025,Nkwazi,Mines United,2,1,,,H
+ZM1,09/11/2025,Konkola Blades,Green Eagles,0,0,,,D
+ZM1,09/11/2025,Kansanshi Dynamos,Nchanga Rangers,1,0,,,H
+ZM1,09/11/2025,Kabwe Warriors,Red Arrows,0,1,,,A
+ZM1,09/11/2025,Zanaco,Mufulira Wanderers,1,0,,,H
+ZM1,13/11/2025,Power Dynamos,Kansanshi Dynamos,2,0,,,H
+ZM1,13/11/2025,Kabwe Warriors,Green Eagles,0,0,,,D
+ZM1,21/11/2025,NAPSA Stars,Nkwazi,0,0,,,D
+ZM1,22/11/2025,Green Buffaloes,FC MUZA,1,5,,,A
+ZM1,22/11/2025,Mines United,Nkana,1,1,,,D
+ZM1,22/11/2025,Mufulira Wanderers,Konkola Blades,2,0,,,H
+ZM1,22/11/2025,Nchanga Rangers,Prison Leopards,2,0,,,H
+ZM1,23/11/2025,Green Eagles,Mutondo Stars,1,1,,,D
+ZM1,23/11/2025,Red Arrows,Zanaco,2,1,,,H
+ZM1,29/11/2025,Kansanshi Dynamos,FC MUZA,0,0,,,D
+ZM1,30/11/2025,Nkwazi,Nchanga Rangers,0,1,,,A
+ZM1,30/11/2025,Konkola Blades,Red Arrows,1,1,,,D
+ZM1,30/11/2025,Mutondo Stars,Mufulira Wanderers,0,0,,,D
+ZM1,30/11/2025,Green Eagles,Green Buffaloes,1,1,,,D
+ZM1,30/11/2025,Kabwe Warriors,Mines United,2,0,,,H
+ZM1,30/11/2025,Nkana,NAPSA Stars,1,0,,,H
+ZM1,03/12/2025,Prison Leopards,Power Dynamos,1,1,,,D
+ZM1,06/12/2025,NAPSA Stars,Kabwe Warriors,2,0,,,H
+ZM1,06/12/2025,ZESCO United,Nkwazi,0,1,,,A
+ZM1,06/12/2025,Mines United,Zanaco,1,0,,,H
+ZM1,06/12/2025,Mufulira Wanderers,Green Eagles,1,0,,,H
+ZM1,06/12/2025,Green Buffaloes,Kansanshi Dynamos,1,1,,,D
+ZM1,07/12/2025,Power Dynamos,Konkola Blades,2,1,,,H
+ZM1,07/12/2025,Nchanga Rangers,Nkana,1,1,,,D
+ZM1,07/12/2025,Red Arrows,Mutondo Stars,2,0,,,H
+ZM1,07/12/2025,FC MUZA,Prison Leopards,1,1,,,D
+ZM1,13/12/2025,Power Dynamos,Kabwe Warriors,1,1,,,D
+ZM1,13/12/2025,ZESCO United,Red Arrows,3,1,,,H
+ZM1,17/12/2025,ZESCO United,Nchanga Rangers,0,0,,,D
+ZM1,20/12/2025,Zanaco,Power Dynamos,1,0,,,H
+ZM1,20/12/2025,ZESCO United,Kansanshi Dynamos,2,0,,,H
+ZM1,24/12/2025,Prison Leopards,ZESCO United,0,0,,,D
+ZM1,10/01/2026,Mutondo Stars,Power Dynamos,0,2,,,A
+ZM1,11/01/2026,Nkana,ZESCO United,2,1,,,H
+ZM1,14/01/2026,Power Dynamos,Green Eagles,1,0,,,H
+ZM1,15/01/2026,Zanaco,NAPSA Stars,0,2,,,A
+ZM1,17/01/2026,ZESCO United,Kabwe Warriors,1,0,,,H
+ZM1,17/01/2026,Konkola Blades,Mines United,1,1,,,D
+ZM1,17/01/2026,Prison Leopards,Kansanshi Dynamos,0,3,,,A
+ZM1,17/01/2026,Nkwazi,FC MUZA,2,2,,,D
+ZM1,18/01/2026,Green Eagles,Red Arrows,1,0,,,H
+ZM1,18/01/2026,Mufulira Wanderers,Power Dynamos,0,1,,,A
+ZM1,24/01/2026,Green Buffaloes,Prison Leopards,2,1,,,H
+ZM1,24/01/2026,Kansanshi Dynamos,Nkwazi,1,0,,,H
+ZM1,24/01/2026,Mines United,Mutondo Stars,0,0,,,D
+ZM1,24/01/2026,FC MUZA,Nkana,0,1,,,A
+ZM1,24/01/2026,NAPSA Stars,Konkola Blades,0,0,,,D
+ZM1,24/01/2026,Nchanga Rangers,Zanaco,0,0,,,D
+ZM1,24/01/2026,Red Arrows,Mufulira Wanderers,1,0,,,H
+ZM1,28/01/2026,Kabwe Warriors,Nchanga Rangers,0,1,,,A
+ZM1,28/01/2026,Mufulira Wanderers,Green Buffaloes,2,1,,,H
+ZM1,31/01/2026,Nkwazi,Prison Leopards,2,0,,,H
+ZM1,31/01/2026,Nkana,Kansanshi Dynamos,1,0,,,H
+ZM1,31/01/2026,Kabwe Warriors,FC MUZA,1,0,,,H
+ZM1,31/01/2026,Green Eagles,Mines United,0,1,,,A
+ZM1,31/01/2026,Konkola Blades,Nchanga Rangers,1,0,,,H
+ZM1,01/02/2026,Mutondo Stars,NAPSA Stars,1,1,,,D
+ZM1,01/02/2026,Green Buffaloes,Red Arrows,0,0,,,D
+ZM1,06/02/2026,Mufulira Wanderers,Mines United,1,0,,,H
+ZM1,06/02/2026,Mutondo Stars,Nchanga Rangers,0,0,,,D
+ZM1,06/02/2026,Nkana,Prison Leopards,2,0,,,H
+ZM1,07/02/2026,Kabwe Warriors,Kansanshi Dynamos,1,1,,,D
+ZM1,07/02/2026,Green Eagles,NAPSA Stars,1,0,,,H
+ZM1,07/02/2026,Zanaco,FC MUZA,0,1,,,A
+ZM1,07/02/2026,Green Buffaloes,Nkwazi,0,0,,,D
+ZM1,11/02/2026,Prison Leopards,Kabwe Warriors,1,0,,,H
+ZM1,11/02/2026,Kansanshi Dynamos,Zanaco,1,0,,,H
+ZM1,11/02/2026,Nkwazi,Nkana,0,1,,,A
+ZM1,11/02/2026,Mines United,Red Arrows,1,1,,,D
+ZM1,12/02/2026,NAPSA Stars,Mufulira Wanderers,0,1,,,A
+ZM1,12/02/2026,FC MUZA,Konkola Blades,1,1,,,D
+ZM1,12/02/2026,Nchanga Rangers,Green Eagles,1,1,,,D
+ZM1,14/02/2026,Kabwe Warriors,Nkwazi,4,0,,,H
+ZM1,14/02/2026,Green Buffaloes,Nkana,1,0,,,H
+ZM1,15/02/2026,Red Arrows,NAPSA Stars,2,0,,,H
+ZM1,15/02/2026,Mutondo Stars,FC MUZA,2,1,,,H
+ZM1,15/02/2026,Zanaco,Prison Leopards,3,0,,,H
+ZM1,15/02/2026,Konkola Blades,Kansanshi Dynamos,2,1,,,H
+ZM1,15/02/2026,Mufulira Wanderers,Nchanga Rangers,0,1,,,A
+ZM1,19/02/2026,Zanaco,ZESCO United,1,2,,,A
+ZM1,21/02/2026,Nkana,Kabwe Warriors,0,1,,,A
+ZM1,21/02/2026,NAPSA Stars,Power Dynamos,1,3,,,A
+ZM1,21/02/2026,Kansanshi Dynamos,Mutondo Stars,1,1,,,D
+ZM1,21/02/2026,Mines United,Green Buffaloes,1,1,,,D
+ZM1,21/02/2026,FC MUZA,Green Eagles,1,2,,,A
+ZM1,21/02/2026,Nchanga Rangers,Red Arrows,2,1,,,H
+ZM1,22/02/2026,Nkwazi,Zanaco,0,1,,,A
+ZM1,22/02/2026,ZESCO United,Mufulira Wanderers,1,2,,,A
+ZM1,22/02/2026,Prison Leopards,Konkola Blades,1,1,,,D
+ZM1,26/02/2026,Red Arrows,Power Dynamos,0,0,,,D
+ZM1,26/02/2026,Konkola Blades,ZESCO United,1,0,,,H
+ZM1,28/02/2026,Mufulira Wanderers,FC MUZA,1,0,,,H
+ZM1,28/02/2026,Zanaco,Nkana,2,0,,,H
+ZM1,28/02/2026,Mines United,NAPSA Stars,0,1,,,A
+ZM1,01/03/2026,Red Arrows,ZESCO United,3,1,,,H
+ZM1,01/03/2026,Green Eagles,Kansanshi Dynamos,2,1,,,H
+ZM1,01/03/2026,Green Buffaloes,Kabwe Warriors,0,2,,,A
+ZM1,01/03/2026,Mutondo Stars,Prison Leopards,2,0,,,H
+ZM1,01/03/2026,Power Dynamos,Nchanga Rangers,3,1,,,H
+ZM1,05/03/2026,Power Dynamos,Green Buffaloes,3,0,,,H
+ZM1,05/03/2026,Mutondo Stars,ZESCO United,1,0,,,H
+ZM1,07/03/2026,Prison Leopards,Green Eagles,3,0,,,H
+ZM1,07/03/2026,Nkana,Konkola Blades,2,0,,,H
+ZM1,07/03/2026,Nchanga Rangers,Mines United,3,0,,,H
+ZM1,07/03/2026,FC MUZA,Red Arrows,2,1,,,H
+ZM1,07/03/2026,Kansanshi Dynamos,Mufulira Wanderers,2,0,,,H
+ZM1,08/03/2026,Nkwazi,Mutondo Stars,1,1,,,D
+ZM1,08/03/2026,ZESCO United,Power Dynamos,2,3,,,A
+ZM1,08/03/2026,NAPSA Stars,Green Buffaloes,1,1,,,D
+ZM1,11/03/2026,Mutondo Stars,Nkana,1,1,,,D
+ZM1,11/03/2026,Green Eagles,Nkwazi,1,0,,,H
+ZM1,11/03/2026,Konkola Blades,Kabwe Warriors,2,1,,,H
+ZM1,11/03/2026,Red Arrows,Kansanshi Dynamos,1,0,,,H
+ZM1,11/03/2026,Mufulira Wanderers,Prison Leopards,1,0,,,H
+ZM1,12/03/2026,NAPSA Stars,Nchanga Rangers,0,1,,,A
+ZM1,12/03/2026,Green Buffaloes,Zanaco,1,1,,,D
+ZM1,12/03/2026,Power Dynamos,FC MUZA,4,2,,,H
+ZM1,14/03/2026,Prison Leopards,Red Arrows,0,0,,,D
+ZM1,14/03/2026,Nkana,Green Eagles,0,0,,,D
+ZM1,15/03/2026,FC MUZA,Mines United,1,0,,,H
+ZM1,15/03/2026,Kabwe Warriors,Mutondo Stars,1,0,,,H
+ZM1,15/03/2026,Nkwazi,Mufulira Wanderers,1,1,,,D
+ZM1,15/03/2026,Nchanga Rangers,Green Buffaloes,1,2,,,A
+ZM1,15/03/2026,Zanaco,Konkola Blades,1,1,,,D
+ZM1,18/03/2026,Mines United,Kansanshi Dynamos,1,1,,,D
+ZM1,19/03/2026,Mufulira Wanderers,Nkana,1,1,,,D
+ZM1,19/03/2026,Green Eagles,Kabwe Warriors,1,1,,,D
+ZM1,19/03/2026,Red Arrows,Nkwazi,0,0,,,D
+ZM1,19/03/2026,Green Buffaloes,Konkola Blades,0,0,,,D
+ZM1,19/03/2026,NAPSA Stars,FC MUZA,1,2,,,A
+ZM1,19/03/2026,Mutondo Stars,Zanaco,0,2,,,A
+ZM1,20/03/2026,Power Dynamos,Prison Leopards,1,1,,,D
+ZM1,20/03/2026,Nchanga Rangers,ZESCO United,0,1,,,A
+ZM1,28/03/2026,Konkola Blades,Nkwazi,0,1,,,A
+ZM1,01/04/2026,Nkana,Red Arrows,1,2,,,A
+ZM1,01/04/2026,Kansanshi Dynamos,NAPSA Stars,3,2,,,H
+ZM1,01/04/2026,Konkola Blades,Mutondo Stars,1,1,,,D
+ZM1,01/04/2026,ZESCO United,Green Buffaloes,1,0,,,H
+ZM1,01/04/2026,Prison Leopards,Mines United,3,0,,,H
+ZM1,08/04/2026,FC MUZA,Nchanga Rangers,2,1,,,H
+ZM1,08/04/2026,Kabwe Warriors,Mufulira Wanderers,2,0,,,H
+ZM1,08/04/2026,Power Dynamos,Mines United,3,0,,,H
+ZM1,11/04/2026,Green Buffaloes,Mutondo Stars,1,1,,,D
+ZM1,11/04/2026,Mines United,Nkwazi,0,1,,,A
+ZM1,11/04/2026,NAPSA Stars,Prison Leopards,1,0,,,H
+ZM1,11/04/2026,Power Dynamos,Nkana,1,0,,,H
+ZM1,12/04/2026,ZESCO United,FC MUZA,0,0,,,D
+ZM1,12/04/2026,Red Arrows,Kabwe Warriors,3,1,,,H
+ZM1,12/04/2026,Nchanga Rangers,Kansanshi Dynamos,1,2,,,A
+ZM1,12/04/2026,Green Eagles,Konkola Blades,1,1,,,D
+ZM1,12/04/2026,Mufulira Wanderers,Zanaco,2,0,,,H
+ZM1,15/04/2026,Nkana,Mines United,3,1,,,H
+ZM1,15/04/2026,Nkwazi,NAPSA Stars,2,1,,,H
+ZM1,15/04/2026,Mutondo Stars,Green Eagles,0,1,,,A
+ZM1,15/04/2026,Kabwe Warriors,Power Dynamos,0,3,,,A
+ZM1,16/04/2026,Prison Leopards,Nchanga Rangers,1,0,,,H
+ZM1,16/04/2026,Konkola Blades,Mufulira Wanderers,2,0,,,H
+ZM1,16/04/2026,Kansanshi Dynamos,ZESCO United,0,1,,,A
+ZM1,16/04/2026,FC MUZA,Green Buffaloes,0,0,,,D
+ZM1,22/04/2026,Nkwazi,Power Dynamos,0,1,,,A
+ZM1,22/04/2026,Zanaco,Green Eagles,1,2,,,A
+ZM1,23/04/2026,ZESCO United,NAPSA Stars,1,1,,,D
+ZM1,29/04/2026,Green Buffaloes,Green Eagles,1,0,,,H
+ZM1,29/04/2026,Mines United,Kabwe Warriors,0,1,,,A
+ZM1,29/04/2026,Mufulira Wanderers,Mutondo Stars,1,0,,,H
+ZM1,29/04/2026,FC MUZA,Kansanshi Dynamos,0,3,,,A
+ZM1,29/04/2026,Power Dynamos,Zanaco,2,0,,,H
+ZM1,29/04/2026,Red Arrows,Konkola Blades,1,1,,,D
+ZM1,29/04/2026,ZESCO United,Prison Leopards,1,1,,,D
+ZM1,29/04/2026,Nchanga Rangers,Nkwazi,1,0,,,H
+ZM1,30/04/2026,NAPSA Stars,Nkana,1,1,,,D
+ZM1,02/05/2026,Kansanshi Dynamos,Green Buffaloes,1,0,,,H
+ZM1,02/05/2026,Konkola Blades,Power Dynamos,1,2,,,A
+ZM1,02/05/2026,Prison Leopards,FC MUZA,0,2,,,A
+ZM1,02/05/2026,Zanaco,Mines United,2,0,,,H
+ZM1,02/05/2026,Mutondo Stars,Red Arrows,1,0,,,H
+ZM1,03/05/2026,Green Eagles,Mufulira Wanderers,2,0,,,H
+ZM1,03/05/2026,Nkwazi,ZESCO United,1,1,,,D
+ZM1,03/05/2026,Kabwe Warriors,NAPSA Stars,1,0,,,H
+ZM1,03/05/2026,Nkana,Nchanga Rangers,0,1,,,A
+ZM1,06/05/2026,Zanaco,Red Arrows,0,0,,,D
+ZM1,06/05/2026,Kansanshi Dynamos,Power Dynamos,0,0,,,D
+ZM1,07/05/2026,Green Eagles,ZESCO United,1,0,,,H
+ZM1,08/05/2026,Nchanga Rangers,Kabwe Warriors,1,1,,,D
+ZM1,12/05/2026,NAPSA Stars,Zanaco,2,0,,,H
+ZM1,13/05/2026,ZESCO United,Nkana,0,1,,,A
+ZM1,13/05/2026,Power Dynamos,Mutondo Stars,2,2,,,D
+ZM1,13/05/2026,Green Buffaloes,Mufulira Wanderers,1,0,,,H
+ZM1,13/05/2026,Kansanshi Dynamos,Prison Leopards,1,0,,,H
+ZM1,14/05/2026,Red Arrows,Green Eagles,2,1,,,H
+ZM1,14/05/2026,Mines United,Konkola Blades,1,2,,,A
+ZM1,16/05/2026,Kabwe Warriors,ZESCO United,0,1,,,A
+ZM1,16/05/2026,Zanaco,Nchanga Rangers,1,0,,,H
+ZM1,17/05/2026,Mufulira Wanderers,Red Arrows,0,0,,,D
+ZM1,17/05/2026,Prison Leopards,Green Buffaloes,1,0,,,H
+ZM1,17/05/2026,Nkwazi,Kansanshi Dynamos,1,0,,,H
+ZM1,17/05/2026,Nkana,FC MUZA,1,2,,,A
+ZM1,17/05/2026,Mutondo Stars,Mines United,3,1,,,H
+ZM1,17/05/2026,Green Eagles,Power Dynamos,0,1,,,A
+ZM1,17/05/2026,Konkola Blades,NAPSA Stars,0,0,,,D
+ZM1,20/05/2026,FC MUZA,Nkwazi,0,1,,,A
+ZM1,20/05/2026,Kabwe Warriors,Zanaco,0,0,,,D
+ZM1,20/05/2026,Mines United,ZESCO United,1,2,,,A
+ZM1,22/05/2026,Mines United,Green Eagles,1,0,,,H
+ZM1,22/05/2026,Red Arrows,Green Buffaloes,2,0,,,H
+ZM1,23/05/2026,Kansanshi Dynamos,Nkana,0,0,,,D
+ZM1,23/05/2026,Power Dynamos,Mufulira Wanderers,2,0,,,H
+ZM1,23/05/2026,Nchanga Rangers,Konkola Blades,1,2,,,A
+ZM1,24/05/2026,Prison Leopards,Nkwazi,1,0,,,H
+ZM1,24/05/2026,ZESCO United,Zanaco,6,1,,,H
+ZM1,24/05/2026,FC MUZA,Kabwe Warriors,2,1,,,H
+ZM1,24/05/2026,NAPSA Stars,Mutondo Stars,1,0,,,H
