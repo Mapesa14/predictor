@@ -798,6 +798,29 @@ def cmd_refresh_openfootball(a):
           "with the football-data pool automatically.")
 
 
+def cmd_refresh_tanzania(a):
+    """Third source: the NBC Premier League, from the league's own site.
+
+    Neither feed carries it - openfootball stops in June 2026 and football-data
+    has never covered Africa - so without this the home league is the one
+    competition in the product with no dates and no kick-off times.
+    """
+    from . import adapters, tanzania
+    try:
+        r = tanzania.sync(a.root, url=a.url)
+    except ValueError as e:
+        print("tanzania: %s" % e)
+        return
+    print("%s  %d events read from %s" % (tanzania.DIV, r["events"], a.url))
+    print("   results  %3d on file (%d published on the page) -> %s"
+          % (r["results"], r["scraped_results"], r["results_file"]))
+    print("   fixtures %3d, next %s -> %s"
+          % (r["fixtures"], r["next_fixture"], r["fixtures_file"]))
+    written, _ = adapters.build_csvs(a.raw, a.outdir)
+    print("   rebuilt %s.csv: %d rows, latest result %s"
+          % (tanzania.DIV, written.get(tanzania.DIV, 0), r["latest_result"]))
+
+
 def cmd_leagues(a):
     df = loader.load(a.data)
     g = df.groupby("Div").agg(matches=("Date", "size"), first=("Date", "min"),
@@ -943,6 +966,22 @@ def build_parser():
         os.path.dirname(__file__), os.pardir, "data", "leagues"),
                    help="where rebuilt league CSVs go (default data/leagues)")
     s.set_defaults(func=cmd_refresh_openfootball)
+
+    s = sub.add_parser("refresh-tanzania",
+                       help="results and dated fixtures for the NBC Premier "
+                            "League, from ligikuu.co.tz (third source)")
+    s.add_argument("--url", default="https://ligikuu.co.tz/",
+                   help="league homepage to read (default ligikuu.co.tz)")
+    s.add_argument("--root", default=os.path.join(
+        os.path.dirname(__file__), os.pardir),
+                   help="project root holding data/manual (default: the repo)")
+    s.add_argument("--raw", default=os.path.join(
+        os.path.dirname(__file__), os.pardir, "data", "raw"),
+                   help="where openfootball txt files are kept (default data/raw)")
+    s.add_argument("--outdir", default=os.path.join(
+        os.path.dirname(__file__), os.pardir, "data", "leagues"),
+                   help="where rebuilt league CSVs go (default data/leagues)")
+    s.set_defaults(func=cmd_refresh_tanzania)
 
     s = sub.add_parser("table", help="team attack and defence ratings")
     common(s)

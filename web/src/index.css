@@ -291,3 +291,17 @@ details.sum table { margin: 0 0 8px; }
 @media (prefers-reduced-motion: reduce) {
   .match em.live { animation: none; }
 }
+/* Lazily-priced pairing groups and the not-built-yet routes */
+.disclose {
+  background: none; border: 0; padding: 0; cursor: pointer;
+  font: inherit; color: inherit; letter-spacing: inherit;
+}
+.disclose:focus-visible { outline: 2px solid var(--spot); outline-offset: 3px; }
+.pairgroup { margin-bottom: 6px; }
+.soonbox {
+  border-left: 3px solid var(--spot);
+  padding: 14px 0 2px 16px;
+  margin: 18px 0 26px;
+  max-width: 64ch;
+}
+.soonbox .note + .note { margin-top: 10px; }

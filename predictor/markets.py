@@ -185,15 +185,26 @@ def combined(m) -> dict:
 
 
 def score_grid(ft: np.ndarray, max_goals: int = 5) -> list[list[float]]:
-    """The 0..max_goals x 0..max_goals slice of one matrix, renormalised.
+    """The 0..max_goals x 0..max_goals slice of one matrix, as it stands.
 
     Same shape as the card's signature graphic: rows are home goals, columns
-    away goals, cell value the (rounded) probability of that exact scoreline.
+    away goals, cell value the probability of that exact scoreline.
+
+    Deliberately *not* renormalised. The slice holds about 97% of the mass, so
+    scaling it to sum to one inflated every cell by roughly 3% and made the
+    grid disagree with the correct-score list about the very same scoreline -
+    which breaks the one property the whole card rests on, that every market is
+    read off a single distribution. The missing few per cent is real: it is the
+    chance of a scoreline with more than `max_goals` for one side.
     """
-    g = ft[: max_goals + 1, : max_goals + 1]
-    g = np.asarray(g, dtype=float)
-    g /= max(float(g.sum()), 1e-12)
+    g = np.asarray(ft[: max_goals + 1, : max_goals + 1], dtype=float)
     return [[round(float(v), 6) for v in row] for row in g]
+
+
+def score_grid_remainder(ft: np.ndarray, max_goals: int = 5) -> float:
+    """Probability of a scoreline outside the grid, so the card can say so."""
+    g = np.asarray(ft[: max_goals + 1, : max_goals + 1], dtype=float)
+    return float(max(0.0, 1.0 - g.sum()))
 
 
 def summary(ft: np.ndarray, first=None, second=None) -> dict:

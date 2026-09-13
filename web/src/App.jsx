@@ -11,9 +11,14 @@ function useHash() {
 }
 
 function useFetch(url) {
-  const [state, setState] = useState({ loading: true, data: null, error: null });
+  const [state, setState] = useState({ loading: !!url, data: null, error: null });
   useEffect(() => {
     let alive = true;
+    // A null url means "not yet" — used by sections that load on demand.
+    if (!url) {
+      setState({ loading: false, data: null, error: null });
+      return;
+    }
     setState((s) => ({ ...s, loading: true, error: null }));
     fetch(url)
       .then((r) => {
@@ -91,8 +96,19 @@ function LiveChip({ m, live }) {
 
 const pct = (p) => Math.round(p * 100) + "%";
 
+/** The slate keys 1X2 as "1"/"X"/"2"; a card keys it "H"/"D"/"A". Accept both:
+ *  reading the wrong one silently yields NaN, and every card then reported
+ *  "close to a coin toss" no matter how lopsided the fixture actually was. */
+function as1X2(res) {
+  if (!res) return { "1": NaN, X: NaN, "2": NaN };
+  if (res["1"] !== undefined) return res;
+  return { "1": res.H, X: res.D, "2": res.A };
+}
+
 function confLevel(res) {
-  const p = Math.max(res["1"], res.X, res["2"]);
+  const r = as1X2(res);
+  const p = Math.max(r["1"], r.X, r["2"]);
+  if (!(p > 0)) return "Not rated";
   if (p >= 0.5) return "Clear";
   if (p >= 0.38) return "Slight lean";
   return "Close to a coin toss";
@@ -241,35 +257,11 @@ function Slate() {
         <section className="pairings">
           <div className="shead">
             <h2>Head-to-head ratings — not scheduled fixtures</h2>
-            <span className="n">{data.pairings.reduce((n, g) => n + g.matches.length, 0)}</span>
+            <span className="n">{data.pairings.reduce((n, g) => n + g.count, 0)}</span>
             <div className="rule" />
           </div>
-          <p className="note">These pairings have no published kick-off in the loaded schedule. They appear nowhere under "Today's fixtures"; treat them as ratings of a matchup, not a fixture.</p>
-          {data.pairings.map((g) => (
-            <div key={g.code}>
-              <div className="shead">
-                <h2>{g.league}</h2>
-                <div className="rule" />
-              </div>
-              <table>
-                <thead>
-                  <tr><th>Match</th><th className="num">1</th><th className="num">X</th><th className="num">2</th></tr>
-                </thead>
-                <tbody>
-                  {g.matches.map((m, mi) => (
-                    <tr key={mi}>
-                      <td><span className="hm">{m.home}</span> <span className="vs">v</span> <span className="aw">{m.away}</span>
-                        {m.new && <em className="new"> new</em>}
-                      </td>
-                      <td className={"num" + (m.pick === "1" ? " win" : "")}>{pct(m.p["1"])}</td>
-                      <td className={"num" + (m.pick === "X" ? " win" : "")}>{pct(m.p.X)}</td>
-                      <td className={"num" + (m.pick === "2" ? " win" : "")}>{pct(m.p["2"])}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ))}
+          <p className="note">These pairings have no published kick-off in the loaded schedule. They appear nowhere under "Today's fixtures"; treat them as ratings of a matchup, not a fixture. Each league is priced only when you open it.</p>
+          {data.pairings.map((g) => <PairingGroup key={g.code} g={g} />)}
         </section>
       )}
 
@@ -285,6 +277,55 @@ function tierOf(s) {
   if (s.market_used) return ["PRICED", "closed price folded into the forecast"];
   if (s.home_new || s.away_new) return ["BRIDGED", "one or both clubs rated from another league"];
   return ["FULL", "both clubs regulars in this division"];
+}
+
+/** One league's unplayed pairings, priced only when the reader opens it.
+ *
+ * Shipping all of them with the slate meant ~2,000 model fits and a
+ * 42-second, 324KB response for a screen whose real content is a few
+ * dozen fixtures. */
+function PairingGroup({ g }) {
+  const [open, setOpen] = useState(false);
+  const { loading, data, error } = useFetch(
+    open ? "/api/pairings?div=" + encodeURIComponent(g.code) + "&limit=60" : null);
+  return (
+    <div className="pairgroup">
+      <div className="shead">
+        <h2>
+          <button className="disclose" aria-expanded={open}
+            onClick={() => setOpen(!open)}>
+            {open ? "−" : "+"} {g.league}
+          </button>
+        </h2>
+        <span className="n">{g.count}</span>
+        <div className="rule" />
+      </div>
+      {open && loading && <p className="note">Rating {g.count} pairings…</p>}
+      {open && error && <p className="note">Couldn't rate these: {error}</p>}
+      {open && data && (
+        <>
+          <table>
+            <thead>
+              <tr><th>Match</th><th className="num">1</th><th className="num">X</th><th className="num">2</th></tr>
+            </thead>
+            <tbody>
+              {data.matches.map((m, mi) => (
+                <tr key={mi}>
+                  <td><span className="hm">{m.home}</span> <span className="vs">v</span> <span className="aw">{m.away}</span></td>
+                  <td className={"num" + (m.pick === "1" ? " win" : "")}>{pct(m.p["1"])}</td>
+                  <td className={"num" + (m.pick === "X" ? " win" : "")}>{pct(m.p.X)}</td>
+                  <td className={"num" + (m.pick === "2" ? " win" : "")}>{pct(m.p["2"])}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {data.total > data.shown && (
+            <p className="note">Showing {data.shown} of {data.total}.</p>
+          )}
+        </>
+      )}
+    </div>
+  );
 }
 
 function Row({ label, cells }) {
@@ -385,6 +426,7 @@ function Card() {
 
 function CardBody({ s, ko, lg, neutral, setNeutral }) {
   const [tier, tierNote] = tierOf(s);
+  const r123 = as1X2(s.result);
   const fc = s.totals; // {'0.5':{over,under},...}
   const ladder = Object.keys(fc).sort((x, y) => Number(x) - Number(y));
   const cs = s.correct_scores || [];
@@ -408,9 +450,10 @@ function CardBody({ s, ko, lg, neutral, setNeutral }) {
 
       <div className="bar">
         {[["1", "Home"], ["X", "Draw"], ["2", "Away"]].map(([k, letter]) => (
-          <div key={k} className={"seg" + (s.pick === k ? " pick" : "")} style={{ flex: s.result[k] }}>
+          <div key={k} className={"seg" + (s.pick === k ? " pick" : "")}
+            style={{ flex: r123[k] }}>
             <i>{letter}</i>
-            <b>{pct(s.result[k])}</b>
+            <b>{pct(r123[k])}</b>
           </div>
         ))}
       </div>
@@ -511,19 +554,41 @@ function CardBody({ s, ko, lg, neutral, setNeutral }) {
         </table>
       </Sum>
 
-      <Sum title="Half time">
-        <table className="markets">
-          <tbody>
-            <Row label="HT 1" cells={[pct(s.ht_result.H)]} />
-            <Row label="HT X" cells={[pct(s.ht_result.D)]} />
-            <Row label="HT 2" cells={[pct(s.ht_result.A)]} />
-            <Row label="HT over 0.5 / under" cells={[pct(s.ht_totals["0.5"].over), pct(s.ht_totals["0.5"].under)]} />
-            <Row label="HT over 1.5 / under" cells={[pct(s.ht_totals["1.5"].over), pct(s.ht_totals["1.5"].under)]} />
-            <Row label="HT over 2.5 / under" cells={[pct(s.ht_totals["2.5"].over), pct(s.ht_totals["2.5"].under)]} />
-            <Row label="Most goals in" cells={[s.half_most_goals]} />
-          </tbody>
-        </table>
-      </Sum>
+      {/* Half-time markets need half-time scores in the source data, and not
+          every competition publishes them - the Tanzanian league publishes
+          none. Say so rather than render a block of blanks, and never read the
+          fields unguarded: doing that took the whole card down to the error
+          boundary the first time a TZ1 fixture was opened. */}
+      {s.ht_result ? (
+        <Sum title="Half time">
+          <table className="markets">
+            <tbody>
+              <Row label="HT 1" cells={[pct(s.ht_result.H)]} />
+              <Row label="HT X" cells={[pct(s.ht_result.D)]} />
+              <Row label="HT 2" cells={[pct(s.ht_result.A)]} />
+              {["0.5", "1.5", "2.5"].map((ln) => (
+                s.ht_totals && s.ht_totals[ln] ? (
+                  <Row key={ln} label={"HT over " + ln + " / under"}
+                    cells={[pct(s.ht_totals[ln].over), pct(s.ht_totals[ln].under)]} />
+                ) : null
+              ))}
+              {s.half_most_goals && <>
+                <Row label="More goals in the first half"
+                  cells={[pct(s.half_most_goals.first)]} />
+                <Row label="More goals in the second half"
+                  cells={[pct(s.half_most_goals.second)]} />
+                <Row label="Same number in each half"
+                  cells={[pct(s.half_most_goals.equal)]} />
+              </>}
+            </tbody>
+          </table>
+        </Sum>
+      ) : (
+        <p className="note">
+          No half-time markets here: {lg || "this competition"} does not publish
+          half-time scores, so there is nothing to fit them on.
+        </p>
+      )}
 
       {s.market_used && (
         <p className="note">Forecast blended {Math.round(s.market_weight * 100)}% with the closing price — so "1/X/2" is closer to a fair price than a raw model read.</p>
@@ -555,7 +620,7 @@ function TopNav({ hash }) {
   const items = [
     ["#/", "Today"],
     ["#/market", "Model vs market"],
-    ["#/club", "Club", "soon"],
+    ["#/club", "Club"],
     ["#/record", "Record", "soon"],
     ["#/fixtures", "My fixtures", "soon"],
   ];
@@ -604,10 +669,17 @@ function MarketScreen() {
       <TopNav hash={window.location.hash} />
 
       <p className="sumline">
-        <b>{priced}</b> fixtures with a closing price · the model sits at or above the price's own pick on <b>{ahead}</b> of them.
+        <b>{priced}</b> fixtures with a closing price · on <b>{ahead}</b> the model
+        rates its own pick at least 5 points higher than the market does.
       </p>
       <p className="note" style={{ marginTop: 8 }}>
-        Implied probabilities carry the bookmaker's margin (the over-round). A model number above the implied one is a fairness signal, not a licence — averaged across thousands of bets the model still trails the price. See <a href="#/record">Record</a> when it exists for the track record.
+        The market column is the closing price with the bookmaker's margin
+        removed (de-vigged by Shin's method), so it is a fair probability, not
+        a price you could take. A gap is <b>not</b> a value signal: measured over
+        5,948 walk-forward matches, the wider the disagreement the more often
+        the model was the one in the wrong — at gaps above 15 points its pick
+        won 24.6% of the time against the market's 44.7%. Read this page as a
+        list of fixtures the model may be misjudging.
       </p>
 
       {rows.length > 0 && (
@@ -662,9 +734,154 @@ function MarketScreen() {
   );
 }
 
+function ClubScreen() {
+  const lg = useFetch("/api/leagues");
+  const [div, setDiv] = useState("E0");
+  const { loading, data, error } = useFetch("/api/clubs?div=" + div);
+  const codes = lg.data ? [...new Set(lg.data.map((d) => d.code))].sort() : [];
+  if (lg.loading) return <p className="note">Loading leagues…</p>;
+  return (
+    <div>
+      <header className="masthead">
+        <div>
+          <h1>Club <b>ratings</b></h1>
+          <p className="sub">Where each side stands in its division, on the model's numbers</p>
+        </div>
+        <div className="tools"><Theme /></div>
+      </header>
+      <TopNav hash={window.location.hash} />
+
+      <div className="tools" style={{ marginTop: 10 }}>
+        <select className="sel" value={div} onChange={(e) => setDiv(e.target.value)}>
+          {codes.map((c) => <option key={c} value={c}>{c}</option>)}
+        </select>
+      </div>
+
+      {data && (
+        <section>
+          <div className="shead">
+            <h2>{data.note ? "Not fitted yet" : data.league + " · strength"}</h2>
+            <div className="rule" />
+          </div>
+          {data.note && <p className="note">{data.note}</p>}
+          {data.clubs.length > 0 && (
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Club</th>
+                  <th className="num">GF&nbsp;vs&nbsp;avg</th>
+                  <th className="num">GA&nbsp;vs&nbsp;avg</th>
+                  <th className="num">Goals/game</th>
+                  <th className="num">Str</th>
+                  <th className="num">Played</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.clubs.map((c, i) => (
+                  <tr key={c.team}>
+                    <td className="dom">{i + 1}</td>
+                    <td>
+                      <span className="hm" style={{ fontSize: 15 }}>{c.team}</span>
+                      {c.source !== data.code && <em className="new"> {c.source === "prior" ? "prior" : "bridged"}</em>}
+                    </td>
+                    <td className="num">{c.gf_home.toFixed(2)}</td>
+                    <td className="num">{c.ga.toFixed(2)}</td>
+                    <td className="num">{c.goals.toFixed(2)}</td>
+                    <td className={"num" + (c.str >= 0 ? " win" : "")}>{(c.str >= 0 ? "+" : "") + c.str}</td>
+                    <td className="num">{c.played}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+          <p className="note" style={{ marginTop: 12 }}>
+            GF/GA are expected goals for and against a league-average opponent, from the same
+            ratings that drive every forecast. "Str" is logged attack minus defensive solidity —
+            useful for comparing sides, not a prediction of any single game.
+          </p>
+        </section>
+      )}
+    </div>
+  );
+}
+
+/** A route that is advertised but not built yet.
+ *
+ * These two used to fall through to the fixtures list, so tapping them looked
+ * like a broken link. Saying plainly what is missing is better than pretending
+ * the tap did nothing. */
+function NotBuiltYet({ title, sub, children }) {
+  return (
+    <div>
+      <header className="masthead">
+        <div>
+          <h1>{title}</h1>
+          <p className="sub">{sub}</p>
+        </div>
+        <div className="tools"><Theme /></div>
+      </header>
+      <TopNav hash={window.location.hash} />
+      <section className="soonbox">{children}</section>
+      <p><a className="back" href="#/">← Today's fixtures</a></p>
+    </div>
+  );
+}
+
+function RecordScreen() {
+  return (
+    <NotBuiltYet title={<>Track <b>record</b></>}
+      sub="Every prediction, published before kick-off — not built yet">
+      <p className="note">
+        This page will list every forecast as it was published before kick-off,
+        never edited afterwards, with realised accuracy and calibration by
+        competition. It is deliberately empty rather than showing a record
+        assembled after the fact, which would prove nothing.
+      </p>
+      <p className="note">
+        It needs one thing first: a store that writes each day's slate at
+        publication time and never rewrites it. Until that exists, the honest
+        answer is that there is no track record to show.
+      </p>
+      <p className="note">
+        What is already measured, on historical data, is in the project README:
+        over 5,948 walk-forward matches the engine scores 0.9739 log-loss alone
+        and 0.9568 blended with the closing price, against the price's own
+        0.9558. It matches the market; it does not beat it.
+      </p>
+    </NotBuiltYet>
+  );
+}
+
+function MyFixturesScreen() {
+  return (
+    <NotBuiltYet title={<>My <b>fixtures</b></>}
+      sub="Upload your own list and have it rated — not built yet">
+      <p className="note">
+        This page will take a pasted list, a CSV or a spreadsheet and rate every
+        fixture in it with the same engine that drives the cards.
+      </p>
+      <p className="note">
+        The part that has to be right before it ships is name matching. A loose
+        match silently rates a <em>different club</em> and looks confident doing
+        it — the engine already refuses fuzzy matching in bulk, and this screen
+        will show you exactly what each name was matched to, block anything
+        ambiguous until you choose, and list anything it could not find rather
+        than dropping it quietly.
+      </p>
+      <p className="note">
+        In the meantime, any two clubs can be rated from the <a href="#/club">Club</a> page.
+      </p>
+    </NotBuiltYet>
+  );
+}
+
 export default function App() {
   const hash = useHash();
   if (hash.startsWith("#/market")) return <MarketScreen />;
+  if (hash.startsWith("#/club")) return <ClubScreen />;
   if (hash.startsWith("#/card")) return <Card />;
+  if (hash.startsWith("#/record")) return <RecordScreen />;
+  if (hash.startsWith("#/fixtures")) return <MyFixturesScreen />;
   return <Slate />;
 }

@@ -175,3 +175,33 @@ def test_rho_lifts_the_draw_without_breaking_the_total():
     b = markets.result(model.score_matrix_from_rates(1.4, 1.3, -0.12))
     assert b["D"] > a["D"]
     assert sum(b.values()) == pytest.approx(1.0)
+
+
+# ------------------------------------------------ the card's signature grid
+@pytest.mark.parametrize("lam,mu", RATES)
+def test_score_grid_agrees_with_the_matrix_it_came_from(lam, mu):
+    """The grid and the correct-score list must never disagree about a score.
+
+    The grid was renormalised over its 6x6 slice once, which inflated every
+    cell by about 3% and had the heatmap and the correct-score list printing
+    different numbers for the same scoreline.
+    """
+    m = model.score_matrix_from_rates(lam, mu, -0.08)
+    g = markets.score_grid(m, max_goals=5)
+    for h in range(6):
+        for a in range(6):
+            assert g[h][a] == pytest.approx(m[h][a], abs=1e-6)
+    top = markets.correct_scores(m, 1)[0]
+    if top[0] <= 5 and top[1] <= 5:
+        assert g[top[0]][top[1]] == pytest.approx(top[2], abs=1e-6)
+
+
+@pytest.mark.parametrize("lam,mu", RATES)
+def test_score_grid_remainder_completes_the_grid(lam, mu):
+    m = model.score_matrix_from_rates(lam, mu, -0.08)
+    g = markets.score_grid(m, max_goals=5)
+    rest = markets.score_grid_remainder(m, max_goals=5)
+    # the grid is rounded to 6dp per cell, so 36 cells carry a little slack
+    total = sum(sum(r) for r in g) + rest
+    assert total == pytest.approx(1.0, abs=1e-4)
+    assert rest >= 0.0

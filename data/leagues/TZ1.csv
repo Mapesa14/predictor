@@ -175,9 +175,9 @@ TZ1,14/04/2024,Namungo FC,Azam FC,0,2,,,A
 TZ1,16/04/2024,Mtibwa Sugar FC,KMC FC,0,1,,,A
 TZ1,16/04/2024,Dodoma Jiji FC,JKT Tanzania FC,0,0,,,D
 TZ1,17/04/2024,Geita Gold FC,Tanzania Prisons FC,0,0,,,D
-TZ1,17/04/2024,Namungo FC,Coastal Union FC,1,0,,,H
-TZ1,17/04/2024,Azam FC,Mashujaa FC,0,0,,,D
 TZ1,17/04/2024,Tabora United FC,Kagera Sugar FC,0,3,,,A
+TZ1,17/04/2024,Azam FC,Mashujaa FC,0,0,,,D
+TZ1,17/04/2024,Namungo FC,Coastal Union FC,1,0,,,H
 TZ1,18/04/2024,Ihefu FC,Singida Big Stars FC,1,1,,,D
 TZ1,20/04/2024,Young Africans SC,Simba SC,2,1,,,H
 TZ1,21/04/2024,Tabora United FC,Geita Gold FC,0,0,,,D
@@ -194,51 +194,51 @@ TZ1,04/05/2024,JKT Tanzania FC,Geita Gold FC,2,0,,,H
 TZ1,04/05/2024,Singida Big Stars FC,Dodoma Jiji FC,2,0,,,H
 TZ1,04/05/2024,KMC FC,Kagera Sugar FC,0,0,,,D
 TZ1,05/05/2024,Mashujaa FC,Young Africans SC,0,1,,,A
-TZ1,06/05/2024,Coastal Union FC,Tanzania Prisons FC,0,0,,,D
-TZ1,06/05/2024,Simba SC,Tabora United FC,2,0,,,H
-TZ1,06/05/2024,Mtibwa Sugar FC,Azam FC,0,2,,,A
 TZ1,06/05/2024,Ihefu FC,Namungo FC,2,0,,,H
+TZ1,06/05/2024,Mtibwa Sugar FC,Azam FC,0,2,,,A
+TZ1,06/05/2024,Simba SC,Tabora United FC,2,0,,,H
+TZ1,06/05/2024,Coastal Union FC,Tanzania Prisons FC,0,0,,,D
 TZ1,08/05/2024,Mashujaa FC,KMC FC,3,0,,,H
 TZ1,08/05/2024,Young Africans SC,Kagera Sugar FC,1,0,,,H
-TZ1,09/05/2024,Mtibwa Sugar FC,Tabora United FC,3,0,,,H
-TZ1,09/05/2024,Ihefu FC,JKT Tanzania FC,0,0,,,D
 TZ1,09/05/2024,Azam FC,Simba SC,0,3,,,A
+TZ1,09/05/2024,Ihefu FC,JKT Tanzania FC,0,0,,,D
+TZ1,09/05/2024,Mtibwa Sugar FC,Tabora United FC,3,0,,,H
+TZ1,10/05/2024,Namungo FC,Geita Gold FC,2,0,,,H
 TZ1,10/05/2024,Coastal Union FC,Singida Big Stars FC,2,0,,,H
 TZ1,10/05/2024,Dodoma Jiji FC,Tanzania Prisons FC,0,0,,,D
-TZ1,10/05/2024,Namungo FC,Geita Gold FC,2,0,,,H
 TZ1,12/05/2024,Tabora United FC,Mashujaa FC,1,0,,,H
 TZ1,12/05/2024,Kagera Sugar FC,Simba SC,1,1,,,D
 TZ1,12/05/2024,KMC FC,Azam FC,1,2,,,A
+TZ1,13/05/2024,JKT Tanzania FC,Singida Big Stars FC,1,1,,,D
 TZ1,13/05/2024,Tanzania Prisons FC,Ihefu FC,0,1,,,A
 TZ1,13/05/2024,Mtibwa Sugar FC,Young Africans SC,1,3,,,A
-TZ1,13/05/2024,JKT Tanzania FC,Singida Big Stars FC,1,1,,,D
-TZ1,14/05/2024,Dodoma Jiji FC,Namungo FC,0,0,,,D
 TZ1,14/05/2024,Geita Gold FC,Coastal Union FC,0,0,,,D
+TZ1,14/05/2024,Dodoma Jiji FC,Namungo FC,0,0,,,D
 TZ1,16/05/2024,KMC FC,Singida Big Stars FC,1,0,,,H
 TZ1,17/05/2024,Dodoma Jiji FC,Simba SC,0,1,,,A
-TZ1,20/05/2024,Tanzania Prisons FC,Mashujaa FC,1,2,,,A
 TZ1,20/05/2024,Mtibwa Sugar FC,Namungo FC,0,0,,,D
+TZ1,20/05/2024,Tanzania Prisons FC,Mashujaa FC,1,2,,,A
+TZ1,21/05/2024,Kagera Sugar FC,Coastal Union FC,1,2,,,A
 TZ1,21/05/2024,JKT Tanzania FC,Azam FC,0,2,,,A
 TZ1,21/05/2024,Simba SC,Geita Gold FC,4,1,,,H
-TZ1,21/05/2024,Kagera Sugar FC,Coastal Union FC,1,2,,,A
 TZ1,22/05/2024,Tabora United FC,Ihefu FC,1,1,,,D
 TZ1,22/05/2024,Dodoma Jiji FC,Young Africans SC,0,4,,,A
-TZ1,25/05/2024,Azam FC,Kagera Sugar FC,5,1,,,H
-TZ1,25/05/2024,Coastal Union FC,JKT Tanzania FC,0,0,,,D
+TZ1,25/05/2024,Singida Big Stars FC,Geita Gold FC,2,1,,,H
+TZ1,25/05/2024,Simba SC,KMC FC,1,0,,,H
+TZ1,25/05/2024,Young Africans SC,Tabora United FC,3,0,,,H
+TZ1,25/05/2024,Namungo FC,Tanzania Prisons FC,2,2,,,D
 TZ1,25/05/2024,Ihefu FC,Dodoma Jiji FC,0,2,,,A
 TZ1,25/05/2024,Mashujaa FC,Mtibwa Sugar FC,3,2,,,H
-TZ1,25/05/2024,Namungo FC,Tanzania Prisons FC,2,2,,,D
-TZ1,25/05/2024,Simba SC,KMC FC,1,0,,,H
-TZ1,25/05/2024,Singida Big Stars FC,Geita Gold FC,2,1,,,H
-TZ1,25/05/2024,Young Africans SC,Tabora United FC,3,0,,,H
-TZ1,28/05/2024,Young Africans SC,Tanzania Prisons FC,4,1,,,H
+TZ1,25/05/2024,Coastal Union FC,JKT Tanzania FC,0,0,,,D
+TZ1,25/05/2024,Azam FC,Kagera Sugar FC,5,1,,,H
 TZ1,28/05/2024,Singida Big Stars FC,Kagera Sugar FC,2,3,,,A
 TZ1,28/05/2024,Namungo FC,Tabora United FC,3,2,,,H
-TZ1,28/05/2024,Simba SC,JKT Tanzania FC,2,0,,,H
-TZ1,28/05/2024,Ihefu FC,Mtibwa Sugar FC,5,1,,,H
+TZ1,28/05/2024,Mashujaa FC,Dodoma Jiji FC,3,0,,,H
+TZ1,28/05/2024,Young Africans SC,Tanzania Prisons FC,4,1,,,H
 TZ1,28/05/2024,Geita Gold FC,Azam FC,0,2,,,A
 TZ1,28/05/2024,Coastal Union FC,KMC FC,0,0,,,D
-TZ1,28/05/2024,Mashujaa FC,Dodoma Jiji FC,3,0,,,H
+TZ1,28/05/2024,Ihefu FC,Mtibwa Sugar FC,5,1,,,H
+TZ1,28/05/2024,Simba SC,JKT Tanzania FC,2,0,,,H
 TZ1,16/08/2024,Pamba Jiji FC,Tanzania Prisons FC,0,0,,,D
 TZ1,17/08/2024,Mashujaa FC,Dodoma Jiji FC,1,0,,,H
 TZ1,18/08/2024,KenGold FC,Singida Black Stars FC,1,3,,,A
@@ -249,9 +249,9 @@ TZ1,24/08/2024,Pamba Jiji FC,Dodoma Jiji FC,0,0,,,D
 TZ1,25/08/2024,Namungo FC,Tabora United FC,1,2,,,A
 TZ1,25/08/2024,Simba SC,Singida Fountain Gate FC,4,0,,,H
 TZ1,28/08/2024,JKT Tanzania FC,Azam FC,0,0,,,D
-TZ1,29/08/2024,KMC FC,Coastal Union FC,1,1,,,D
-TZ1,29/08/2024,Kagera Sugar FC,Young Africans SC,0,2,,,A
 TZ1,29/08/2024,Namungo FC,Singida Fountain Gate FC,0,2,,,A
+TZ1,29/08/2024,Kagera Sugar FC,Young Africans SC,0,2,,,A
+TZ1,29/08/2024,KMC FC,Coastal Union FC,1,1,,,D
 TZ1,11/09/2024,Tabora United FC,Kagera Sugar FC,1,0,,,H
 TZ1,11/09/2024,Singida Fountain Gate FC,KenGold FC,2,1,,,H
 TZ1,12/09/2024,Dodoma Jiji FC,Namungo FC,1,0,,,H
@@ -260,33 +260,33 @@ TZ1,13/09/2024,Coastal Union FC,Mashujaa FC,0,1,,,A
 TZ1,14/09/2024,Azam FC,Pamba Jiji FC,0,0,,,D
 TZ1,14/09/2024,Tabora United FC,Tanzania Prisons FC,0,0,,,D
 TZ1,15/09/2024,Singida Fountain Gate FC,Dodoma Jiji FC,2,2,,,D
-TZ1,16/09/2024,KMC FC,KenGold FC,1,0,,,H
 TZ1,16/09/2024,Kagera Sugar FC,JKT Tanzania FC,0,0,,,D
+TZ1,16/09/2024,KMC FC,KenGold FC,1,0,,,H
 TZ1,17/09/2024,Coastal Union FC,Namungo FC,0,2,,,A
 TZ1,17/09/2024,Pamba Jiji FC,Singida Black Stars FC,0,1,,,A
 TZ1,19/09/2024,KMC FC,Azam FC,0,4,,,A
-TZ1,20/09/2024,Kagera Sugar FC,KenGold FC,2,0,,,H
 TZ1,20/09/2024,Tabora United FC,Singida Fountain Gate FC,1,3,,,A
+TZ1,20/09/2024,Kagera Sugar FC,KenGold FC,2,0,,,H
 TZ1,21/09/2024,Tanzania Prisons FC,Dodoma Jiji FC,0,0,,,D
 TZ1,21/09/2024,Pamba Jiji FC,Mashujaa FC,2,2,,,D
-TZ1,22/09/2024,Azam FC,Coastal Union FC,1,0,,,H
 TZ1,22/09/2024,JKT Tanzania FC,KMC FC,0,0,,,D
+TZ1,22/09/2024,Azam FC,Coastal Union FC,1,0,,,H
 TZ1,25/09/2024,KenGold FC,Young Africans SC,0,1,,,A
 TZ1,25/09/2024,JKT Tanzania FC,Coastal Union FC,2,1,,,H
 TZ1,26/09/2024,Azam FC,Simba SC,0,2,,,A
 TZ1,27/09/2024,Singida Fountain Gate FC,Kagera Sugar FC,3,1,,,H
-TZ1,28/09/2024,Namungo FC,Tanzania Prisons FC,1,0,,,H
 TZ1,28/09/2024,KenGold FC,Tabora United FC,1,1,,,D
 TZ1,28/09/2024,Coastal Union FC,Pamba Jiji FC,2,0,,,H
-TZ1,29/09/2024,Singida Black Stars FC,JKT Tanzania FC,1,1,,,D
-TZ1,29/09/2024,Young Africans SC,KMC FC,1,0,,,H
+TZ1,28/09/2024,Namungo FC,Tanzania Prisons FC,1,0,,,H
 TZ1,29/09/2024,Dodoma Jiji FC,Simba SC,0,1,,,A
+TZ1,29/09/2024,Singida Black Stars FC,JKT Tanzania FC,1,1,,,D
 TZ1,29/09/2024,Mashujaa FC,Azam FC,0,0,,,D
+TZ1,29/09/2024,Young Africans SC,KMC FC,1,0,,,H
 TZ1,01/10/2024,Tanzania Prisons FC,Singida Fountain Gate FC,3,2,,,H
 TZ1,02/10/2024,Dodoma Jiji FC,Tabora United FC,2,0,,,H
-TZ1,03/10/2024,KMC FC,Kagera Sugar FC,1,0,,,H
-TZ1,03/10/2024,Young Africans SC,Pamba Jiji FC,4,0,,,H
 TZ1,03/10/2024,Namungo FC,Azam FC,0,1,,,A
+TZ1,03/10/2024,Young Africans SC,Pamba Jiji FC,4,0,,,H
+TZ1,03/10/2024,KMC FC,Kagera Sugar FC,1,0,,,H
 TZ1,04/10/2024,KenGold FC,JKT Tanzania FC,1,0,,,H
 TZ1,04/10/2024,Mashujaa FC,Singida Black Stars FC,0,1,,,A
 TZ1,04/10/2024,Simba SC,Coastal Union FC,2,2,,,D
@@ -314,11 +314,11 @@ TZ1,29/10/2024,KenGold FC,Dodoma Jiji FC,2,2,,,D
 TZ1,30/10/2024,Singida Black Stars FC,Young Africans SC,0,1,,,A
 TZ1,31/10/2024,KMC FC,Namungo FC,1,0,,,H
 TZ1,01/11/2024,Mashujaa FC,Simba SC,0,1,,,A
-TZ1,02/11/2024,Young Africans SC,Azam FC,0,1,,,A
 TZ1,02/11/2024,Singida Black Stars FC,Coastal Union FC,0,0,,,D
+TZ1,02/11/2024,Young Africans SC,Azam FC,0,1,,,A
 TZ1,03/11/2024,Tanzania Prisons FC,KenGold FC,1,0,,,H
-TZ1,04/11/2024,Kagera Sugar FC,Dodoma Jiji FC,2,1,,,H
 TZ1,04/11/2024,Tabora United FC,Mashujaa FC,1,0,,,H
+TZ1,04/11/2024,Kagera Sugar FC,Dodoma Jiji FC,2,1,,,H
 TZ1,05/11/2024,Singida Fountain Gate FC,Pamba Jiji FC,1,3,,,A
 TZ1,06/11/2024,Simba SC,KMC FC,4,0,,,H
 TZ1,07/11/2024,Young Africans SC,Tabora United FC,1,3,,,A
@@ -326,30 +326,30 @@ TZ1,22/11/2024,Pamba Jiji FC,Simba SC,0,1,,,A
 TZ1,23/11/2024,KenGold FC,Coastal Union FC,1,1,,,D
 TZ1,23/11/2024,Mashujaa FC,Namungo FC,1,0,,,H
 TZ1,23/11/2024,Azam FC,Kagera Sugar FC,1,0,,,H
-TZ1,24/11/2024,Dodoma Jiji FC,KMC FC,2,1,,,H
 TZ1,24/11/2024,JKT Tanzania FC,Tanzania Prisons FC,1,0,,,H
+TZ1,24/11/2024,Dodoma Jiji FC,KMC FC,2,1,,,H
 TZ1,25/11/2024,Tabora United FC,Singida Black Stars FC,2,2,,,D
 TZ1,28/11/2024,Azam FC,Singida Black Stars FC,2,1,,,H
 TZ1,29/11/2024,Singida Fountain Gate FC,JKT Tanzania FC,0,1,,,A
 TZ1,29/11/2024,KMC FC,Tabora United FC,0,2,,,A
-TZ1,30/11/2024,Namungo FC,Young Africans SC,0,2,,,A
 TZ1,30/11/2024,Mashujaa FC,Kagera Sugar FC,1,1,,,D
+TZ1,30/11/2024,Namungo FC,Young Africans SC,0,2,,,A
 TZ1,01/12/2024,Pamba Jiji FC,KenGold FC,1,0,,,H
 TZ1,01/12/2024,Dodoma Jiji FC,Azam FC,1,3,,,A
 TZ1,02/12/2024,Coastal Union FC,Tanzania Prisons FC,2,1,,,H
 TZ1,05/12/2024,Kagera Sugar FC,Tanzania Prisons FC,0,0,,,D
-TZ1,11/12/2024,Kagera Sugar FC,Namungo FC,1,1,,,D
 TZ1,11/12/2024,JKT Tanzania FC,Pamba Jiji FC,0,0,,,D
+TZ1,11/12/2024,Kagera Sugar FC,Namungo FC,1,1,,,D
 TZ1,12/12/2024,Singida Black Stars FC,Dodoma Jiji FC,2,1,,,H
 TZ1,12/12/2024,KMC FC,Mashujaa FC,0,0,,,D
 TZ1,13/12/2024,Singida Fountain Gate FC,Coastal Union FC,3,2,,,H
 TZ1,13/12/2024,Tabora United FC,Azam FC,2,1,,,H
 TZ1,15/12/2024,JKT Tanzania FC,Mashujaa FC,0,0,,,D
 TZ1,15/12/2024,KenGold FC,Namungo FC,2,3,,,A
-TZ1,16/12/2024,Tanzania Prisons FC,Singida Black Stars FC,0,2,,,A
 TZ1,16/12/2024,KMC FC,Pamba Jiji FC,1,0,,,H
-TZ1,17/12/2024,Tabora United FC,Coastal Union FC,1,1,,,D
+TZ1,16/12/2024,Tanzania Prisons FC,Singida Black Stars FC,0,2,,,A
 TZ1,17/12/2024,Azam FC,Singida Fountain Gate FC,2,0,,,H
+TZ1,17/12/2024,Tabora United FC,Coastal Union FC,1,1,,,D
 TZ1,18/12/2024,Simba SC,KenGold FC,2,0,,,H
 TZ1,19/12/2024,Young Africans SC,Mashujaa FC,3,2,,,H
 TZ1,20/12/2024,Namungo FC,JKT Tanzania FC,0,0,,,D
@@ -357,41 +357,41 @@ TZ1,21/12/2024,Kagera Sugar FC,Simba SC,2,5,,,A
 TZ1,22/12/2024,Young Africans SC,Tanzania Prisons FC,4,0,,,H
 TZ1,24/12/2024,Singida Black Stars FC,KenGold FC,2,1,,,H
 TZ1,24/12/2024,Simba SC,JKT Tanzania FC,1,0,,,H
-TZ1,25/12/2024,Singida Fountain Gate FC,Namungo FC,1,2,,,A
 TZ1,25/12/2024,Dodoma Jiji FC,Young Africans SC,0,4,,,A
+TZ1,25/12/2024,Singida Fountain Gate FC,Namungo FC,1,2,,,A
 TZ1,26/12/2024,Tanzania Prisons FC,Pamba Jiji FC,1,0,,,H
 TZ1,27/12/2024,Azam FC,JKT Tanzania FC,3,1,,,H
-TZ1,28/12/2024,Singida Black Stars FC,Simba SC,0,1,,,A
 TZ1,28/12/2024,Dodoma Jiji FC,Mashujaa FC,3,1,,,H
+TZ1,28/12/2024,Singida Black Stars FC,Simba SC,0,1,,,A
 TZ1,29/12/2024,Young Africans SC,Singida Fountain Gate FC,5,0,,,H
 TZ1,29/12/2024,Coastal Union FC,KMC FC,1,1,,,D
 TZ1,01/02/2025,Young Africans SC,Kagera Sugar FC,4,0,,,H
 TZ1,02/02/2025,Tabora United FC,Simba SC,0,3,,,A
-TZ1,05/02/2025,Young Africans SC,KenGold FC,6,1,,,H
 TZ1,05/02/2025,Tabora United FC,Namungo FC,2,1,,,H
+TZ1,05/02/2025,Young Africans SC,KenGold FC,6,1,,,H
+TZ1,06/02/2025,Azam FC,KMC FC,2,0,,,H
+TZ1,06/02/2025,Singida Fountain Gate FC,Simba SC,1,1,,,D
 TZ1,06/02/2025,Dodoma Jiji FC,Pamba Jiji FC,0,1,,,A
 TZ1,06/02/2025,Tanzania Prisons FC,Mashujaa FC,2,1,,,H
-TZ1,06/02/2025,Singida Fountain Gate FC,Simba SC,1,1,,,D
-TZ1,06/02/2025,Azam FC,KMC FC,2,0,,,H
 TZ1,07/02/2025,Coastal Union FC,JKT Tanzania FC,2,1,,,H
 TZ1,07/02/2025,Singida Black Stars FC,Kagera Sugar FC,2,2,,,D
-TZ1,09/02/2025,Namungo FC,Dodoma Jiji FC,2,2,,,D
 TZ1,09/02/2025,Pamba Jiji FC,Azam FC,1,0,,,H
+TZ1,09/02/2025,Namungo FC,Dodoma Jiji FC,2,2,,,D
 TZ1,10/02/2025,JKT Tanzania FC,Young Africans SC,0,0,,,D
-TZ1,10/02/2025,KMC FC,Singida Black Stars FC,2,0,,,H
 TZ1,10/02/2025,KenGold FC,Singida Fountain Gate FC,2,0,,,H
-TZ1,11/02/2025,Mashujaa FC,Coastal Union FC,0,0,,,D
-TZ1,11/02/2025,Simba SC,Tanzania Prisons FC,3,0,,,H
+TZ1,10/02/2025,KMC FC,Singida Black Stars FC,2,0,,,H
 TZ1,11/02/2025,Kagera Sugar FC,Tabora United FC,1,2,,,A
+TZ1,11/02/2025,Simba SC,Tanzania Prisons FC,3,0,,,H
+TZ1,11/02/2025,Mashujaa FC,Coastal Union FC,0,0,,,D
 TZ1,13/02/2025,JKT Tanzania FC,Singida Black Stars FC,0,1,,,A
 TZ1,14/02/2025,Tabora United FC,KenGold FC,1,1,,,D
 TZ1,14/02/2025,KMC FC,Young Africans SC,1,6,,,A
 TZ1,14/02/2025,Tanzania Prisons FC,Namungo FC,0,1,,,A
 TZ1,14/02/2025,Kagera Sugar FC,Singida Fountain Gate FC,3,0,,,H
-TZ1,15/02/2025,Azam FC,Mashujaa FC,2,0,,,H
 TZ1,15/02/2025,Pamba Jiji FC,Coastal Union FC,2,0,,,H
-TZ1,17/02/2025,Young Africans SC,Singida Black Stars FC,2,1,,,H
+TZ1,15/02/2025,Azam FC,Mashujaa FC,2,0,,,H
 TZ1,17/02/2025,Singida Fountain Gate FC,Tabora United FC,0,0,,,D
+TZ1,17/02/2025,Young Africans SC,Singida Black Stars FC,2,1,,,H
 TZ1,18/02/2025,KMC FC,JKT Tanzania FC,0,2,,,A
 TZ1,18/02/2025,KenGold FC,Kagera Sugar FC,1,0,,,H
 TZ1,18/02/2025,Dodoma Jiji FC,Tanzania Prisons FC,3,2,,,H
@@ -400,49 +400,49 @@ TZ1,19/02/2025,Mashujaa FC,Pamba Jiji FC,2,0,,,H
 TZ1,19/02/2025,Namungo FC,Simba SC,0,3,,,A
 TZ1,21/02/2025,Tanzania Prisons FC,Tabora United FC,1,1,,,D
 TZ1,21/02/2025,JKT Tanzania FC,Kagera Sugar FC,2,0,,,H
-TZ1,22/02/2025,KenGold FC,KMC FC,1,1,,,D
 TZ1,22/02/2025,Dodoma Jiji FC,Singida Fountain Gate FC,1,0,,,H
+TZ1,22/02/2025,KenGold FC,KMC FC,1,1,,,D
 TZ1,23/02/2025,Singida Black Stars FC,Pamba Jiji FC,2,2,,,D
 TZ1,23/02/2025,Mashujaa FC,Young Africans SC,0,5,,,A
 TZ1,23/02/2025,Namungo FC,Coastal Union FC,0,0,,,D
 TZ1,24/02/2025,Simba SC,Azam FC,2,2,,,D
-TZ1,26/02/2025,Kagera Sugar FC,KMC FC,0,0,,,D
 TZ1,26/02/2025,Singida Fountain Gate FC,Tanzania Prisons FC,1,0,,,H
 TZ1,26/02/2025,Singida Black Stars FC,Mashujaa FC,3,0,,,H
-TZ1,27/02/2025,JKT Tanzania FC,KenGold FC,1,1,,,D
+TZ1,26/02/2025,Kagera Sugar FC,KMC FC,0,0,,,D
 TZ1,27/02/2025,Azam FC,Namungo FC,1,1,,,D
+TZ1,27/02/2025,JKT Tanzania FC,KenGold FC,1,1,,,D
 TZ1,28/02/2025,Tabora United FC,Dodoma Jiji FC,1,0,,,H
 TZ1,28/02/2025,Pamba Jiji FC,Young Africans SC,0,3,,,A
 TZ1,01/03/2025,Coastal Union FC,Simba SC,0,3,,,A
 TZ1,05/03/2025,KenGold FC,Mashujaa FC,2,2,,,D
-TZ1,06/03/2025,KMC FC,Singida Fountain Gate FC,1,2,,,A
 TZ1,06/03/2025,Azam FC,Tanzania Prisons FC,4,0,,,H
+TZ1,06/03/2025,KMC FC,Singida Fountain Gate FC,1,2,,,A
 TZ1,06/03/2025,Namungo FC,Singida Black Stars FC,0,1,,,A
 TZ1,07/03/2025,Dodoma Jiji FC,Coastal Union FC,0,0,,,D
-TZ1,07/03/2025,Kagera Sugar FC,Pamba Jiji FC,2,1,,,H
 TZ1,07/03/2025,Tabora United FC,JKT Tanzania FC,1,2,,,A
+TZ1,07/03/2025,Kagera Sugar FC,Pamba Jiji FC,2,1,,,H
 TZ1,14/03/2025,Simba SC,Dodoma Jiji FC,6,0,,,H
 TZ1,02/04/2025,Pamba Jiji FC,Namungo FC,1,1,,,D
 TZ1,02/04/2025,Tabora United FC,Young Africans SC,0,3,,,A
 TZ1,02/04/2025,Singida Fountain Gate FC,Singida Black Stars FC,0,3,,,A
 TZ1,02/04/2025,KMC FC,Tanzania Prisons FC,3,2,,,H
-TZ1,03/04/2025,Kagera Sugar FC,Coastal Union FC,2,1,,,H
-TZ1,03/04/2025,KenGold FC,Azam FC,0,2,,,A
 TZ1,03/04/2025,JKT Tanzania FC,Dodoma Jiji FC,2,2,,,D
+TZ1,03/04/2025,KenGold FC,Azam FC,0,2,,,A
+TZ1,03/04/2025,Kagera Sugar FC,Coastal Union FC,2,1,,,H
 TZ1,05/04/2025,Pamba Jiji FC,Tabora United FC,1,0,,,H
 TZ1,05/04/2025,Mashujaa FC,Singida Fountain Gate FC,3,0,,,H
-TZ1,06/04/2025,Dodoma Jiji FC,KenGold FC,3,0,,,H
 TZ1,06/04/2025,Tanzania Prisons FC,Kagera Sugar FC,1,0,,,H
 TZ1,06/04/2025,Singida Black Stars FC,Azam FC,1,0,,,H
+TZ1,06/04/2025,Dodoma Jiji FC,KenGold FC,3,0,,,H
 TZ1,06/04/2025,Namungo FC,KMC FC,2,1,,,H
 TZ1,07/04/2025,Young Africans SC,Coastal Union FC,1,0,,,H
 TZ1,08/04/2025,Pamba Jiji FC,Singida Fountain Gate FC,1,1,,,D
-TZ1,09/04/2025,KenGold FC,Tanzania Prisons FC,1,3,,,A
 TZ1,09/04/2025,Dodoma Jiji FC,Kagera Sugar FC,2,0,,,H
-TZ1,10/04/2025,Mashujaa FC,Tabora United FC,3,0,,,H
-TZ1,10/04/2025,Azam FC,Young Africans SC,1,2,,,A
-TZ1,10/04/2025,Coastal Union FC,Singida Black Stars FC,2,1,,,H
+TZ1,09/04/2025,KenGold FC,Tanzania Prisons FC,1,3,,,A
 TZ1,10/04/2025,JKT Tanzania FC,Namungo FC,2,2,,,D
+TZ1,10/04/2025,Mashujaa FC,Tabora United FC,3,0,,,H
+TZ1,10/04/2025,Coastal Union FC,Singida Black Stars FC,2,1,,,H
+TZ1,10/04/2025,Azam FC,Young Africans SC,1,2,,,A
 TZ1,18/04/2025,KMC FC,Dodoma Jiji FC,2,1,,,H
 TZ1,18/04/2025,Tanzania Prisons FC,JKT Tanzania FC,3,2,,,H
 TZ1,19/04/2025,Singida Black Stars FC,Tabora United FC,3,0,,,H
@@ -456,31 +456,31 @@ TZ1,08/05/2025,Simba SC,Pamba Jiji FC,5,1,,,H
 TZ1,11/05/2025,KMC FC,Simba SC,1,2,,,A
 TZ1,12/05/2025,Tanzania Prisons FC,Coastal Union FC,2,1,,,H
 TZ1,12/05/2025,Kagera Sugar FC,Mashujaa FC,0,1,,,A
-TZ1,13/05/2025,Azam FC,Dodoma Jiji FC,5,0,,,H
 TZ1,13/05/2025,Young Africans SC,Namungo FC,3,0,,,H
 TZ1,13/05/2025,KenGold FC,Pamba Jiji FC,0,2,,,A
+TZ1,13/05/2025,Azam FC,Dodoma Jiji FC,5,0,,,H
 TZ1,13/05/2025,JKT Tanzania FC,Singida Fountain Gate FC,3,1,,,H
 TZ1,14/05/2025,Tabora United FC,KMC FC,0,1,,,A
 TZ1,28/05/2025,Simba SC,Singida Black Stars FC,1,0,,,H
+TZ1,18/06/2025,Namungo FC,Kagera Sugar FC,0,0,,,D
 TZ1,18/06/2025,Azam FC,Tabora United FC,5,0,,,H
 TZ1,18/06/2025,Coastal Union FC,Singida Fountain Gate FC,1,0,,,H
 TZ1,18/06/2025,Dodoma Jiji FC,Singida Black Stars FC,1,2,,,A
 TZ1,18/06/2025,KenGold FC,Simba SC,0,5,,,A
 TZ1,18/06/2025,Mashujaa FC,KMC FC,1,1,,,D
-TZ1,18/06/2025,Namungo FC,Kagera Sugar FC,0,0,,,D
 TZ1,18/06/2025,Pamba Jiji FC,JKT Tanzania FC,1,0,,,H
 TZ1,18/06/2025,Tanzania Prisons FC,Young Africans SC,0,5,,,A
-TZ1,22/06/2025,Young Africans SC,Dodoma Jiji FC,5,0,,,H
 TZ1,22/06/2025,Singida Black Stars FC,Tanzania Prisons FC,3,3,,,D
 TZ1,22/06/2025,Simba SC,Kagera Sugar FC,1,0,,,H
 TZ1,22/06/2025,Pamba Jiji FC,KMC FC,1,1,,,D
-TZ1,22/06/2025,Singida Fountain Gate FC,Azam FC,2,3,,,A
+TZ1,22/06/2025,Young Africans SC,Dodoma Jiji FC,5,0,,,H
 TZ1,22/06/2025,Mashujaa FC,JKT Tanzania FC,0,0,,,D
 TZ1,22/06/2025,Coastal Union FC,Tabora United FC,1,1,,,D
+TZ1,22/06/2025,Singida Fountain Gate FC,Azam FC,2,3,,,A
 TZ1,22/06/2025,Namungo FC,KenGold FC,5,0,,,H
 TZ1,25/06/2025,Young Africans SC,Simba SC,2,0,,,H
-TZ1,17/09/2025,KMC FC,Dodoma Jiji FC,1,0,,,H
 TZ1,17/09/2025,Coastal Union FC,Tanzania Prisons FC,1,0,,,H
+TZ1,17/09/2025,KMC FC,Dodoma Jiji FC,1,0,,,H
 TZ1,18/09/2025,Singida Fountain Gate FC,Mbeya City FC,0,1,,,A
 TZ1,18/09/2025,Mashujaa FC,JKT Tanzania FC,1,1,,,D
 TZ1,18/09/2025,Namungo FC,Pamba Jiji FC,1,1,,,D
@@ -492,67 +492,67 @@ TZ1,23/09/2025,KMC FC,Singida Black Stars FC,0,1,,,A
 TZ1,24/09/2025,Young Africans SC,Pamba Jiji FC,3,0,,,H
 TZ1,24/09/2025,Azam FC,Mbeya City FC,2,0,,,H
 TZ1,25/09/2025,Simba SC,Singida Fountain Gate FC,3,0,,,H
-TZ1,27/09/2025,Tanzania Prisons FC,KMC FC,1,0,,,H
 TZ1,27/09/2025,Dodoma Jiji FC,Coastal Union FC,2,0,,,H
-TZ1,28/09/2025,Pamba Jiji FC,TRA United SC,0,0,,,D
+TZ1,27/09/2025,Tanzania Prisons FC,KMC FC,1,0,,,H
 TZ1,28/09/2025,Mtibwa Sugar FC,Singida Fountain Gate FC,2,0,,,H
+TZ1,28/09/2025,Pamba Jiji FC,TRA United SC,0,0,,,D
 TZ1,30/09/2025,Singida Black Stars FC,Mashujaa FC,1,0,,,H
 TZ1,30/09/2025,Mbeya City FC,Young Africans SC,0,0,,,D
-TZ1,01/10/2025,Simba SC,Namungo FC,3,0,,,H
 TZ1,01/10/2025,JKT Tanzania FC,Azam FC,1,1,,,D
+TZ1,01/10/2025,Simba SC,Namungo FC,3,0,,,H
 TZ1,17/10/2025,Pamba Jiji FC,Mashujaa FC,2,1,,,H
 TZ1,17/10/2025,Singida Fountain Gate FC,Dodoma Jiji FC,1,0,,,H
 TZ1,18/10/2025,KMC FC,Mbeya City FC,0,3,,,A
-TZ1,19/10/2025,Mtibwa Sugar FC,Coastal Union FC,0,0,,,D
 TZ1,19/10/2025,JKT Tanzania FC,Namungo FC,1,1,,,D
+TZ1,19/10/2025,Mtibwa Sugar FC,Coastal Union FC,0,0,,,D
 TZ1,21/10/2025,Mbeya City FC,Tanzania Prisons FC,1,2,,,A
+TZ1,22/10/2025,TRA United SC,Mashujaa FC,0,0,,,D
 TZ1,22/10/2025,Dodoma Jiji FC,Mtibwa Sugar FC,0,0,,,D
 TZ1,22/10/2025,Coastal Union FC,Singida Fountain Gate FC,1,1,,,D
-TZ1,22/10/2025,TRA United SC,Mashujaa FC,0,0,,,D
 TZ1,24/10/2025,Mbeya City FC,JKT Tanzania FC,2,2,,,D
 TZ1,25/10/2025,Mashujaa FC,Namungo FC,1,0,,,H
-TZ1,25/10/2025,Dodoma Jiji FC,Pamba Jiji FC,0,3,,,A
 TZ1,25/10/2025,Singida Fountain Gate FC,KMC FC,1,0,,,H
+TZ1,25/10/2025,Dodoma Jiji FC,Pamba Jiji FC,0,3,,,A
 TZ1,28/10/2025,Young Africans SC,Mtibwa Sugar FC,2,0,,,H
 TZ1,08/11/2025,Pamba Jiji FC,Singida Black Stars FC,1,1,,,D
 TZ1,08/11/2025,JKT Tanzania FC,Simba SC,1,2,,,A
-TZ1,09/11/2025,Young Africans SC,KMC FC,4,1,,,H
 TZ1,09/11/2025,Namungo FC,Azam FC,1,1,,,D
+TZ1,09/11/2025,Young Africans SC,KMC FC,4,1,,,H
 TZ1,21/11/2025,Namungo FC,Dodoma Jiji FC,2,0,,,H
 TZ1,21/11/2025,KMC FC,JKT Tanzania FC,0,1,,,A
-TZ1,22/11/2025,TRA United SC,Tanzania Prisons FC,1,0,,,H
 TZ1,22/11/2025,Mashujaa FC,Mbeya City FC,1,0,,,H
+TZ1,22/11/2025,TRA United SC,Tanzania Prisons FC,1,0,,,H
 TZ1,23/11/2025,Pamba Jiji FC,Singida Fountain Gate FC,1,0,,,H
 TZ1,25/11/2025,KMC FC,Mtibwa Sugar FC,0,0,,,D
-TZ1,26/11/2025,Coastal Union FC,Mbeya City FC,2,0,,,H
 TZ1,26/11/2025,Singida Fountain Gate FC,Tanzania Prisons FC,1,0,,,H
 TZ1,26/11/2025,JKT Tanzania FC,TRA United SC,1,0,,,H
+TZ1,26/11/2025,Coastal Union FC,Mbeya City FC,2,0,,,H
 TZ1,28/11/2025,Mashujaa FC,Dodoma Jiji FC,0,0,,,D
-TZ1,29/11/2025,Mtibwa Sugar FC,TRA United SC,2,1,,,H
 TZ1,29/11/2025,Pamba Jiji FC,KMC FC,3,0,,,H
+TZ1,29/11/2025,Mtibwa Sugar FC,TRA United SC,2,1,,,H
 TZ1,30/11/2025,Singida Fountain Gate FC,JKT Tanzania FC,0,2,,,A
 TZ1,30/11/2025,Mbeya City FC,Namungo FC,0,1,,,A
 TZ1,01/12/2025,Mashujaa FC,Coastal Union FC,0,0,,,D
-TZ1,03/12/2025,JKT Tanzania FC,Mtibwa Sugar FC,0,0,,,D
 TZ1,03/12/2025,Azam FC,Singida Black Stars FC,0,0,,,D
-TZ1,04/12/2025,Simba SC,Mbeya City FC,3,0,,,H
+TZ1,03/12/2025,JKT Tanzania FC,Mtibwa Sugar FC,0,0,,,D
 TZ1,04/12/2025,Young Africans SC,Singida Fountain Gate FC,2,0,,,H
+TZ1,04/12/2025,Simba SC,Mbeya City FC,3,0,,,H
 TZ1,06/12/2025,Tanzania Prisons FC,Pamba Jiji FC,0,0,,,D
 TZ1,06/12/2025,Singida Black Stars FC,TRA United SC,1,3,,,A
-TZ1,07/12/2025,Simba SC,Azam FC,0,2,,,A
 TZ1,07/12/2025,Coastal Union FC,Young Africans SC,0,1,,,A
+TZ1,07/12/2025,Simba SC,Azam FC,0,2,,,A
 TZ1,16/01/2026,Dodoma Jiji FC,Singida Black Stars FC,1,1,,,D
 TZ1,17/01/2026,Azam FC,Coastal Union FC,3,0,,,H
 TZ1,18/01/2026,Simba SC,Mtibwa Sugar FC,1,1,,,D
 TZ1,19/01/2026,Young Africans SC,Mashujaa FC,6,0,,,H
-TZ1,20/01/2026,Singida Black Stars FC,JKT Tanzania FC,0,1,,,A
 TZ1,20/01/2026,Azam FC,Singida Fountain Gate FC,0,0,,,D
+TZ1,20/01/2026,Singida Black Stars FC,JKT Tanzania FC,0,1,,,A
 TZ1,21/01/2026,Mtibwa Sugar FC,Mbeya City FC,2,1,,,H
 TZ1,22/01/2026,Dodoma Jiji FC,Tanzania Prisons FC,1,0,,,H
 TZ1,23/01/2026,Namungo FC,Coastal Union FC,1,0,,,H
 TZ1,23/01/2026,TRA United SC,KMC FC,3,0,,,H
-TZ1,25/01/2026,Tanzania Prisons FC,JKT Tanzania FC,0,0,,,D
 TZ1,25/01/2026,Mtibwa Sugar FC,Pamba Jiji FC,1,0,,,H
+TZ1,25/01/2026,Tanzania Prisons FC,JKT Tanzania FC,0,0,,,D
 TZ1,27/01/2026,Coastal Union FC,KMC FC,1,1,,,D
 TZ1,27/01/2026,Young Africans SC,Dodoma Jiji FC,3,1,,,H
 TZ1,29/01/2026,Azam FC,TRA United SC,2,0,,,H
@@ -566,42 +566,42 @@ TZ1,02/02/2026,JKT Tanzania FC,Pamba Jiji FC,3,0,,,H
 TZ1,03/02/2026,Mbeya City FC,Dodoma Jiji FC,1,1,,,D
 TZ1,03/02/2026,KMC FC,Mashujaa FC,1,0,,,H
 TZ1,04/02/2026,Singida Fountain Gate FC,Namungo FC,1,1,,,D
-TZ1,06/02/2026,Tanzania Prisons FC,Mashujaa FC,0,0,,,D
 TZ1,06/02/2026,Pamba Jiji FC,Coastal Union FC,3,0,,,H
+TZ1,06/02/2026,Tanzania Prisons FC,Mashujaa FC,0,0,,,D
 TZ1,07/02/2026,TRA United SC,Mbeya City FC,0,2,,,A
 TZ1,07/02/2026,Mtibwa Sugar FC,Namungo FC,1,1,,,D
 TZ1,08/02/2026,Dodoma Jiji FC,KMC FC,2,1,,,H
 TZ1,09/02/2026,JKT Tanzania FC,Mashujaa FC,1,0,,,H
 TZ1,10/02/2026,Pamba Jiji FC,Namungo FC,1,0,,,H
 TZ1,10/02/2026,Tanzania Prisons FC,Coastal Union FC,1,4,,,A
-TZ1,11/02/2026,Singida Black Stars FC,Singida Fountain Gate FC,1,0,,,H
 TZ1,11/02/2026,KMC FC,Simba SC,0,2,,,A
+TZ1,11/02/2026,Singida Black Stars FC,Singida Fountain Gate FC,1,0,,,H
 TZ1,12/02/2026,Dodoma Jiji FC,TRA United SC,3,0,,,H
 TZ1,13/02/2026,JKT Tanzania FC,Coastal Union FC,1,1,,,D
 TZ1,13/02/2026,Mtibwa Sugar FC,Mashujaa FC,1,3,,,A
 TZ1,14/02/2026,Tanzania Prisons FC,Namungo FC,3,2,,,H
 TZ1,22/02/2026,Mtibwa Sugar FC,Singida Black Stars FC,1,3,,,A
-TZ1,22/02/2026,Tanzania Prisons FC,Simba SC,0,2,,,A
 TZ1,22/02/2026,KMC FC,Azam FC,0,2,,,A
 TZ1,22/02/2026,Namungo FC,Young Africans SC,0,1,,,A
+TZ1,22/02/2026,Tanzania Prisons FC,Simba SC,0,2,,,A
+TZ1,25/02/2026,Dodoma Jiji FC,Simba SC,0,0,,,D
 TZ1,25/02/2026,Young Africans SC,JKT Tanzania FC,5,0,,,H
 TZ1,25/02/2026,Azam FC,Mtibwa Sugar FC,3,0,,,H
-TZ1,25/02/2026,Dodoma Jiji FC,Simba SC,0,0,,,D
-TZ1,26/02/2026,Namungo FC,Singida Black Stars FC,1,1,,,D
 TZ1,26/02/2026,Singida Fountain Gate FC,TRA United SC,1,4,,,A
+TZ1,26/02/2026,Namungo FC,Singida Black Stars FC,1,1,,,D
 TZ1,01/03/2026,Young Africans SC,Simba SC,0,0,,,D
 TZ1,02/03/2026,Pamba Jiji FC,Azam FC,2,2,,,D
 TZ1,02/03/2026,Singida Black Stars FC,Coastal Union FC,1,0,,,H
 TZ1,03/03/2026,Mbeya City FC,Singida Fountain Gate FC,0,1,,,A
-TZ1,05/03/2026,Singida Black Stars FC,Young Africans SC,0,3,,,A
 TZ1,05/03/2026,Tanzania Prisons FC,Azam FC,0,0,,,D
-TZ1,11/03/2026,Singida Black Stars FC,Simba SC,1,2,,,A
-TZ1,11/03/2026,TRA United SC,Namungo FC,2,0,,,H
+TZ1,05/03/2026,Singida Black Stars FC,Young Africans SC,0,3,,,A
 TZ1,11/03/2026,Dodoma Jiji FC,Azam FC,0,3,,,A
+TZ1,11/03/2026,TRA United SC,Namungo FC,2,0,,,H
+TZ1,11/03/2026,Singida Black Stars FC,Simba SC,1,2,,,A
 TZ1,12/03/2026,Tanzania Prisons FC,Young Africans SC,0,1,,,A
 TZ1,13/03/2026,Mashujaa FC,Singida Fountain Gate FC,1,1,,,D
-TZ1,15/03/2026,Azam FC,Young Africans SC,0,0,,,D
 TZ1,15/03/2026,Mbeya City FC,Singida Black Stars FC,1,4,,,A
+TZ1,15/03/2026,Azam FC,Young Africans SC,0,0,,,D
 TZ1,18/03/2026,TRA United SC,Young Africans SC,0,0,,,D
 TZ1,18/03/2026,Tanzania Prisons FC,Singida Black Stars FC,1,2,,,A
 TZ1,19/03/2026,Pamba Jiji FC,Simba SC,1,1,,,D
@@ -610,21 +610,21 @@ TZ1,21/03/2026,Mtibwa Sugar FC,Young Africans SC,1,1,,,D
 TZ1,22/03/2026,Simba SC,TRA United SC,3,0,,,H
 TZ1,01/04/2026,Singida Black Stars FC,Azam FC,1,2,,,A
 TZ1,02/04/2026,Simba SC,Coastal Union FC,2,0,,,H
-TZ1,03/04/2026,Dodoma Jiji FC,Singida Fountain Gate FC,3,0,,,H
 TZ1,03/04/2026,Mbeya City FC,KMC FC,3,2,,,H
+TZ1,03/04/2026,Dodoma Jiji FC,Singida Fountain Gate FC,3,0,,,H
 TZ1,04/04/2026,Namungo FC,JKT Tanzania FC,2,2,,,D
 TZ1,04/04/2026,Young Africans SC,Tanzania Prisons FC,3,0,,,H
 TZ1,04/04/2026,Mashujaa FC,Pamba Jiji FC,0,0,,,D
-TZ1,05/04/2026,Azam FC,Simba SC,0,0,,,D
 TZ1,05/04/2026,TRA United SC,Singida Black Stars FC,2,0,,,H
+TZ1,05/04/2026,Azam FC,Simba SC,0,0,,,D
 TZ1,06/04/2026,Coastal Union FC,Mtibwa Sugar FC,1,1,,,D
 TZ1,08/04/2026,Pamba Jiji FC,Young Africans SC,0,3,,,A
 TZ1,08/04/2026,Singida Black Stars FC,KMC FC,1,0,,,H
 TZ1,09/04/2026,Mbeya City FC,Azam FC,0,0,,,D
 TZ1,09/04/2026,TRA United SC,Simba SC,0,0,,,D
 TZ1,14/04/2026,KMC FC,Tanzania Prisons FC,1,1,,,D
-TZ1,15/04/2026,Singida Fountain Gate FC,Simba SC,0,3,,,A
 TZ1,15/04/2026,Coastal Union FC,Dodoma Jiji FC,3,1,,,H
+TZ1,15/04/2026,Singida Fountain Gate FC,Simba SC,0,3,,,A
 TZ1,16/04/2026,Mashujaa FC,Singida Black Stars FC,1,1,,,D
 TZ1,16/04/2026,Young Africans SC,Mbeya City FC,6,0,,,H
 TZ1,17/04/2026,TRA United SC,Pamba Jiji FC,1,0,,,H
@@ -632,8 +632,8 @@ TZ1,17/04/2026,Azam FC,JKT Tanzania FC,3,0,,,H
 TZ1,18/04/2026,Singida Fountain Gate FC,Mtibwa Sugar FC,2,1,,,H
 TZ1,19/04/2026,Namungo FC,Simba SC,1,3,,,A
 TZ1,30/04/2026,JKT Tanzania FC,KMC FC,1,0,,,H
-TZ1,30/04/2026,Singida Fountain Gate FC,Pamba Jiji FC,1,2,,,A
 TZ1,30/04/2026,Mbeya City FC,Mashujaa FC,0,0,,,D
+TZ1,30/04/2026,Singida Fountain Gate FC,Pamba Jiji FC,1,2,,,A
 TZ1,01/05/2026,Dodoma Jiji FC,Namungo FC,0,0,,,D
 TZ1,01/05/2026,Tanzania Prisons FC,TRA United SC,0,3,,,A
 TZ1,02/05/2026,Coastal Union FC,Singida Black Stars FC,2,1,,,H
@@ -641,47 +641,47 @@ TZ1,02/05/2026,Mtibwa Sugar FC,Azam FC,0,3,,,A
 TZ1,03/05/2026,Simba SC,Young Africans SC,2,2,,,D
 TZ1,04/05/2026,Mashujaa FC,TRA United SC,1,0,,,H
 TZ1,04/05/2026,Tanzania Prisons FC,Mbeya City FC,1,2,,,A
-TZ1,05/05/2026,Singida Fountain Gate FC,Coastal Union FC,3,2,,,H
 TZ1,05/05/2026,Azam FC,Namungo FC,1,0,,,H
 TZ1,05/05/2026,Singida Black Stars FC,Pamba Jiji FC,3,1,,,H
+TZ1,05/05/2026,Singida Fountain Gate FC,Coastal Union FC,3,2,,,H
+TZ1,06/05/2026,Mtibwa Sugar FC,Dodoma Jiji FC,0,1,,,A
 TZ1,06/05/2026,KMC FC,Young Africans SC,0,1,,,A
 TZ1,06/05/2026,Simba SC,JKT Tanzania FC,1,0,,,H
-TZ1,06/05/2026,Mtibwa Sugar FC,Dodoma Jiji FC,0,1,,,A
 TZ1,08/05/2026,TRA United SC,Azam FC,4,1,,,H
 TZ1,08/05/2026,Namungo FC,Mashujaa FC,0,0,,,D
-TZ1,09/05/2026,Young Africans SC,Coastal Union FC,3,0,,,H
 TZ1,09/05/2026,JKT Tanzania FC,Mbeya City FC,1,0,,,H
+TZ1,09/05/2026,Young Africans SC,Coastal Union FC,3,0,,,H
 TZ1,09/05/2026,Singida Black Stars FC,Mtibwa Sugar FC,4,0,,,H
 TZ1,10/05/2026,Pamba Jiji FC,Dodoma Jiji FC,0,0,,,D
 TZ1,10/05/2026,KMC FC,Singida Fountain Gate FC,2,3,,,A
 TZ1,10/05/2026,Simba SC,Tanzania Prisons FC,4,0,,,H
 TZ1,12/05/2026,Singida Black Stars FC,Namungo FC,1,0,,,H
 TZ1,12/05/2026,TRA United SC,JKT Tanzania FC,1,1,,,D
-TZ1,13/05/2026,Dodoma Jiji FC,Young Africans SC,3,2,,,H
 TZ1,13/05/2026,Mbeya City FC,Coastal Union FC,0,2,,,A
+TZ1,13/05/2026,Dodoma Jiji FC,Young Africans SC,3,2,,,H
+TZ1,14/05/2026,Azam FC,Pamba Jiji FC,2,0,,,H
+TZ1,14/05/2026,Mashujaa FC,Simba SC,0,3,,,A
 TZ1,14/05/2026,Tanzania Prisons FC,Singida Fountain Gate FC,1,0,,,H
 TZ1,14/05/2026,Mtibwa Sugar FC,KMC FC,4,3,,,H
-TZ1,14/05/2026,Mashujaa FC,Simba SC,0,3,,,A
-TZ1,14/05/2026,Azam FC,Pamba Jiji FC,2,0,,,H
-TZ1,20/05/2026,Dodoma Jiji FC,Mashujaa FC,1,1,,,D
 TZ1,20/05/2026,TRA United SC,Mtibwa Sugar FC,2,1,,,H
 TZ1,20/05/2026,KMC FC,Pamba Jiji FC,0,1,,,A
+TZ1,20/05/2026,Dodoma Jiji FC,Mashujaa FC,1,1,,,D
+TZ1,21/05/2026,JKT Tanzania FC,Singida Fountain Gate FC,2,2,,,D
 TZ1,21/05/2026,Coastal Union FC,Simba SC,1,2,,,A
 TZ1,21/05/2026,Namungo FC,Mbeya City FC,1,1,,,D
-TZ1,21/05/2026,JKT Tanzania FC,Singida Fountain Gate FC,2,2,,,D
-TZ1,22/05/2026,Young Africans SC,Singida Black Stars FC,3,0,,,H
 TZ1,22/05/2026,Azam FC,Tanzania Prisons FC,2,0,,,H
+TZ1,22/05/2026,Young Africans SC,Singida Black Stars FC,3,0,,,H
 TZ1,24/05/2026,Mtibwa Sugar FC,JKT Tanzania FC,2,2,,,D
 TZ1,24/05/2026,TRA United SC,Singida Fountain Gate FC,1,2,,,A
 TZ1,24/05/2026,Simba SC,Dodoma Jiji FC,1,0,,,H
 TZ1,24/05/2026,Coastal Union FC,Mashujaa FC,1,0,,,H
 TZ1,25/05/2026,Young Africans SC,Namungo FC,3,1,,,H
 TZ1,25/05/2026,Azam FC,KMC FC,3,0,,,H
-TZ1,26/05/2026,Pamba Jiji FC,Tanzania Prisons FC,2,3,,,A
 TZ1,26/05/2026,Singida Black Stars FC,Mbeya City FC,4,1,,,H
+TZ1,26/05/2026,Pamba Jiji FC,Tanzania Prisons FC,2,3,,,A
 TZ1,12/06/2026,KMC FC,TRA United SC,0,1,,,A
-TZ1,12/06/2026,Coastal Union FC,Namungo FC,1,1,,,D
 TZ1,12/06/2026,Singida Fountain Gate FC,Azam FC,0,2,,,A
+TZ1,12/06/2026,Coastal Union FC,Namungo FC,1,1,,,D
 TZ1,13/06/2026,Mbeya City FC,Mtibwa Sugar FC,1,0,,,H
 TZ1,13/06/2026,Mashujaa FC,Young Africans SC,0,2,,,A
 TZ1,13/06/2026,JKT Tanzania FC,Singida Black Stars FC,1,2,,,A
@@ -695,27 +695,37 @@ TZ1,17/06/2026,Mbeya City FC,Simba SC,0,1,,,A
 TZ1,18/06/2026,Pamba Jiji FC,Mtibwa Sugar FC,4,0,,,H
 TZ1,18/06/2026,JKT Tanzania FC,Tanzania Prisons FC,0,1,,,A
 TZ1,18/06/2026,Singida Fountain Gate FC,Young Africans SC,0,2,,,A
-TZ1,24/06/2026,Young Africans SC,Azam FC,3,0,,,H
+TZ1,24/06/2026,TRA United SC,Coastal Union FC,1,1,,,D
 TZ1,24/06/2026,Dodoma Jiji FC,JKT Tanzania FC,0,0,,,D
 TZ1,24/06/2026,KMC FC,Namungo FC,2,3,,,A
 TZ1,24/06/2026,Mtibwa Sugar FC,Simba SC,0,3,,,A
 TZ1,24/06/2026,Pamba Jiji FC,Mbeya City FC,0,2,,,A
 TZ1,24/06/2026,Singida Black Stars FC,Tanzania Prisons FC,3,1,,,H
 TZ1,24/06/2026,Singida Fountain Gate FC,Mashujaa FC,0,1,,,A
-TZ1,24/06/2026,TRA United SC,Coastal Union FC,1,1,,,D
-TZ1,27/06/2026,Simba SC,Singida Black Stars FC,2,0,,,H
-TZ1,27/06/2026,Pamba Jiji FC,JKT Tanzania FC,1,2,,,A
-TZ1,27/06/2026,Namungo FC,Singida Fountain Gate FC,0,0,,,D
-TZ1,27/06/2026,Coastal Union FC,Azam FC,0,2,,,A
+TZ1,24/06/2026,Young Africans SC,Azam FC,3,0,,,H
 TZ1,27/06/2026,Dodoma Jiji FC,Mbeya City FC,1,1,,,D
 TZ1,27/06/2026,Tanzania Prisons FC,Mtibwa Sugar FC,2,1,,,H
-TZ1,27/06/2026,Mashujaa FC,KMC FC,2,0,,,H
 TZ1,27/06/2026,Young Africans SC,TRA United SC,3,0,,,H
-TZ1,30/06/2026,Mbeya City FC,TRA United SC,0,0,,,D
+TZ1,27/06/2026,Simba SC,Singida Black Stars FC,2,0,,,H
+TZ1,27/06/2026,Coastal Union FC,Azam FC,0,2,,,A
+TZ1,27/06/2026,Namungo FC,Singida Fountain Gate FC,0,0,,,D
+TZ1,27/06/2026,Mashujaa FC,KMC FC,2,0,,,H
+TZ1,27/06/2026,Pamba Jiji FC,JKT Tanzania FC,1,2,,,A
+TZ1,30/06/2026,Singida Fountain Gate FC,Singida Black Stars FC,4,3,,,H
 TZ1,30/06/2026,Namungo FC,Mtibwa Sugar FC,2,1,,,H
-TZ1,30/06/2026,Mashujaa FC,Tanzania Prisons FC,0,1,,,A
+TZ1,30/06/2026,Mbeya City FC,TRA United SC,0,0,,,D
 TZ1,30/06/2026,Simba SC,KMC FC,1,0,,,H
+TZ1,30/06/2026,JKT Tanzania FC,Young Africans SC,0,3,,,A
 TZ1,30/06/2026,Coastal Union FC,Pamba Jiji FC,2,1,,,H
 TZ1,30/06/2026,Azam FC,Dodoma Jiji FC,2,0,,,H
-TZ1,30/06/2026,JKT Tanzania FC,Young Africans SC,0,3,,,A
-TZ1,30/06/2026,Singida Fountain Gate FC,Singida Black Stars FC,4,3,,,H
+TZ1,30/06/2026,Mashujaa FC,Tanzania Prisons FC,0,1,,,A
+TZ1,01/09/2026,Singida Black Stars FC,Namungo FC,3,2,,,H
+TZ1,04/09/2026,TRA United SC,Mbeya City FC,0,0,,,D
+TZ1,04/09/2026,Dodoma Jiji FC,Mashujaa FC,1,0,,,H
+TZ1,05/09/2026,JKT Tanzania FC,Pamba Jiji FC,3,0,,,H
+TZ1,06/09/2026,Polisi Tanzania,Coastal Union FC,1,2,,,A
+TZ1,07/09/2026,Azam FC,Namungo FC,2,0,,,H
+TZ1,09/09/2026,Mashujaa FC,Singida Black Stars FC,2,1,,,H
+TZ1,11/09/2026,Dodoma Jiji FC,Namungo FC,1,0,,,H
+TZ1,12/09/2026,Coastal Union FC,JKT Tanzania FC,2,1,,,H
+TZ1,12/09/2026,Polisi Tanzania,Mbeya City FC,2,0,,,H

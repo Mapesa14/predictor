@@ -62,6 +62,15 @@ def overround(odds) -> float:
 
 
 # ------------------------------------------------------- price -> goal rates
+# Inverting a price into goal rates is a least-squares solve, and the single
+# most expensive thing a priced fixture does. The same closing prices come back
+# every time a slate is recomputed, so identical inputs are answered from a
+# memo. Bounded and cleared wholesale rather than evicted one at a time: prices
+# move on, and there is nothing to gain from keeping the oldest of them.
+_RATE_MEMO: dict = {}
+_RATE_MEMO_MAX = 20000
+
+
 def implied_rates(p_home: float, p_draw: float, p_away: float, rho: float = 0.0,
                   p_over25: float | None = None,
                   guess: tuple[float, float] = (1.4, 1.2),
@@ -72,6 +81,20 @@ def implied_rates(p_home: float, p_draw: float, p_away: float, rho: float = 0.0,
     blended forecast is still a single distribution, so no two markets on the
     card can contradict each other.
     """
+    key = (p_home, p_draw, p_away, rho, p_over25, tuple(guess), max_goals)
+    hit = _RATE_MEMO.get(key)
+    if hit is not None:
+        return hit
+    out = _solve_implied_rates(p_home, p_draw, p_away, rho, p_over25,
+                               guess, max_goals)
+    if len(_RATE_MEMO) >= _RATE_MEMO_MAX:
+        _RATE_MEMO.clear()
+    _RATE_MEMO[key] = out
+    return out
+
+
+def _solve_implied_rates(p_home, p_draw, p_away, rho, p_over25,
+                         guess, max_goals):
     target = np.log(np.clip([p_home, p_draw, p_away], 1e-6, 1.0))
 
     def residual(x):

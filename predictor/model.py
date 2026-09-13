@@ -350,6 +350,10 @@ class BlendedModel:
         return self.goals.mean_defence
 
     @property
+    def base(self):
+        return self.goals.base
+
+    @property
     def carried(self):
         return self.goals.carried
 

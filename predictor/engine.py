@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import difflib
+import glob
+import math
 import os
 from datetime import datetime
 
@@ -42,9 +44,24 @@ class Predictor:
         self._models: dict[str, dict[str, model.GoalModel]] = {}
 
     # ------------------------------------------------------------- plumbing
+    # `self.df` is set once and never mutated, so everything derived from it is
+    # settled and worth holding on to. These caches are filled on first use
+    # rather than in `__init__` because a Predictor is also built by `__new__`
+    # in the tests, and because laziness and eagerness are identical for a
+    # frame that cannot change. Each one exists for a measured reason: a slate
+    # asks for them once per division and twice per fixture, and recomputing
+    # them came to more than fitting all thirty models did.
+    def _memo(self, name: str, make):
+        got = self.__dict__.get(name)
+        if got is None:
+            got = self.__dict__[name] = make()
+        return got
+
     @property
     def divs(self) -> list[str]:
-        return sorted(set(self.df["Div"]), key=lambda d: (d not in leagues.TOP_10, d))
+        return self._memo("_divs", lambda: sorted(
+            set(self.df["Div"].unique()),
+            key=lambda d: (d not in leagues.TOP_10, d)))
 
     def models(self, div: str) -> dict[str, model.GoalModel]:
         if div not in self._models:
@@ -59,6 +76,33 @@ class Predictor:
                     self._carry_ratings_up(div, gm)
             self._models[div] = m
         return self._models[div]
+
+    def clubs(self, div: str) -> list[dict]:
+        """Rating table for one division.
+
+        Each club's attack and defence are read the same way a fixture is
+        (own record, carried rating, or the promoted prior), then expressed as
+        expected goals against a league-average opponent. `str` is the logged
+        strength index (attack minus defence), higher is better.
+        """
+        fm = self.models(div)["FT"]
+        ha, base = fm.home_adv, fm.base
+        rows = []
+        for t in fm.teams:
+            atk, dfs = fm._team(t)
+            rows.append({
+                "team": t,
+                "attack": round(atk, 3),
+                "defence": round(dfs, 3),
+                "str": round(atk - dfs, 3),
+                "gf_home": round(math.exp(ha + atk + base), 2),
+                "ga": round(math.exp(dfs + base), 2),
+                "goals": round(math.exp(0.5 * (ha + atk + base + dfs + base)), 2),
+                "played": fm.played.get(t, 0),
+                "source": fm.rating_source(t),
+            })
+        rows.sort(key=lambda r: r["str"], reverse=True)
+        return rows
 
     def _carry_ratings_up(self, div: str, gm) -> None:
         """Give a club promoted into `div` the rating it earned below.
@@ -151,16 +195,32 @@ class Predictor:
                 uniq.append(v)
         return uniq
 
+    def teams(self, div: str | None = None) -> list[str]:
+        """Every club in one division (or all of them), cached."""
+        cache = self._memo("_teams", dict)
+        if div not in cache:
+            cache[div] = loader.teams(self.df, div)
+        return cache[div]
+
+    def _folded_pool(self, div: str | None) -> list[tuple]:
+        """(name, div, casefolded, accent-folded) for every club, cached.
+
+        Case-folding a whole division for every name resolved was a third of
+        the cost of a slate: two clubs per fixture, forty-odd fixtures, the
+        same few hundred strings folded again each time.
+        """
+        cache = self._memo("_pool", dict)
+        if div not in cache:
+            cache[div] = [(t, d, t.casefold(), t.casefold().translate(self.FOLD))
+                          for d in ([div] if div else self.divs)
+                          for t in self.teams(d)]
+        return cache[div]
+
     def resolve(self, name: str, div: str | None = None,
                 fuzzy: bool = True) -> tuple[str, str]:
         """Match a typed team name to a real one, and say which league it is in."""
-        pool = []
-        for d in ([div] if div else self.divs):
-            for t in loader.teams(self.df, d):
-                pool.append((t, d))
         starts = contains = []
-        folded = [(t, d, t.casefold(), t.casefold().translate(self.FOLD))
-                  for t, d in pool]
+        folded = self._folded_pool(div)
         for key in self._variants(name):
             for col in (2, 3):        # as written, then accent-folded
                 exact = [x for x in folded if x[col] == key]
@@ -174,8 +234,8 @@ class Predictor:
                     return contains[0][0], contains[0][1]
             starts = [(x[0], x[1]) for x in starts]
             contains = [(x[0], x[1]) for x in contains]
+        names = [x[0] for x in folded]
         if fuzzy:
-            names = [x[0] for x in pool]
             close = difflib.get_close_matches(name, names, n=2,
                                               cutoff=self.FUZZY_CUTOFF)
             if close:
@@ -183,11 +243,11 @@ class Predictor:
                 runner = (difflib.SequenceMatcher(None, name, close[1]).ratio()
                           if len(close) > 1 else 0.0)
                 if len(close) == 1 or best - runner >= self.FUZZY_MARGIN:
-                    return next(x for x in pool if x[0] == close[0])
+                    hit = next(x for x in folded if x[0] == close[0])
+                    return hit[0], hit[1]
         opts = sorted({x[0] for x in (starts or contains)})[:10]
         if not opts:
-            opts = difflib.get_close_matches(name, [x[0] for x in pool], n=5,
-                                             cutoff=0.5)
+            opts = difflib.get_close_matches(name, names, n=5, cutoff=0.5)
         hint = ("  Did you mean: " + ", ".join(opts)) if opts else ""
         raise SystemExit("Unknown team: %r%s" % (name, hint))
 
@@ -241,6 +301,7 @@ class Predictor:
         f2 = self._half(ms.get("2H"), h, a, neutral, scale)
         s = markets.summary(ft, f1, f2)
         s["score_grid"] = markets.score_grid(ft)
+        s["score_grid_other"] = markets.score_grid_remainder(ft)
 
         # what the model said on its own, before the price was folded in
         pure = markets.summary(model.score_matrix_from_rates(lam, mu, fm.rho))
@@ -419,11 +480,44 @@ class Predictor:
         return s
 
     # ------------------------------------------------------------- schedule
+    def _fixtures(self, fixtures_csv: str | None) -> pd.DataFrame:
+        """The whole schedule, read from disk at most once per change.
+
+        A slate asks for the schedule once per division, and every one of those
+        calls re-read and re-parsed the same feed plus every overlay file -
+        thirty round trips to the disk for one answer, and the single largest
+        cost in the response. The mtimes are the cache key, so an offline
+        `refresh-fixtures` is still picked up without a restart.
+        """
+        cache = os.path.join(self.root, "fixtures.csv")
+        over = fixtures.default_overlay_dir()
+        paths = [p for p in (fixtures_csv, cache) if p] + \
+            sorted(glob.glob(os.path.join(over, "*.csv")))
+        key = tuple((p, os.path.getmtime(p)) if os.path.exists(p) else (p, None)
+                    for p in paths)
+        got = self.__dict__.get("_fx_cache")
+        if got is None or got[0] != key:
+            got = self.__dict__["_fx_cache"] = (
+                key, fixtures.load_any(fixtures_csv, cache))
+        return got[1]
+
     def schedule(self, div: str | None = None, days: int = 14,
                  fixtures_csv: str | None = None) -> pd.DataFrame:
-        cache = os.path.join(self.root, "fixtures.csv")
-        fx = fixtures.load_any(fixtures_csv, cache)
-        return fixtures.upcoming(self.df, fx, div, days, self.as_of)
+        fx = self._fixtures(fixtures_csv)
+        return fixtures.upcoming(self.df, fx, div, days, self.as_of,
+                                 remaining_fn=self._remaining)
+
+    def _remaining(self, _df, div: str) -> pd.DataFrame:
+        """The round-robin remainder for one division, computed once.
+
+        It is a function of results already on disk, and `self.df` does not
+        change under us. Handed out as a copy so a caller that annotates or
+        filters it cannot corrupt the next reader's view.
+        """
+        cache = self._memo("_rem", dict)
+        if div not in cache:
+            cache[div] = fixtures.remaining(self.df, div)
+        return cache[div].copy()
 
     def form(self, team: str, div: str | None = None, n: int = 6) -> pd.DataFrame:
         t, d = self.resolve(team, div)

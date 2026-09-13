@@ -14,7 +14,7 @@ import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from predictor import leagues
+from predictor import leagues, market
 from predictor.engine import Predictor
 from service import live
 
@@ -80,6 +80,36 @@ if AUTO_REFRESH_HOURS > 0:
     import threading
     threading.Thread(target=_auto_refresh_loop, daemon=True).start()
     print("auto-refresh every %.1fh" % AUTO_REFRESH_HOURS, flush=True)
+
+
+# ---- warm-up ---------------------------------------------------------------
+# Fitting every division on the first request made the slate a ~45s cold start.
+# Fit all divisions in the background at boot, then precompute the default
+# slates so the first real request is served from the cache.
+import threading as _t
+import time as _time
+
+_slate_cache: dict = {}
+_SLATE_TTL = 60.0
+
+
+def _warmup():
+    try:
+        p = predictor()
+        for d in p.divs:
+            p.models(d)
+        print("warm-up: %d divisions fitted" % len(p.divs), flush=True)
+        for days in (1, 2):
+            try:
+                _cached_slate(days, None)
+            except Exception as e:
+                print("warm-up slate %d failed: %r" % (days, e), flush=True)
+        print("warm-up: default slates cached", flush=True)
+    except Exception as e:
+        print("warm-up failed: %r" % e, flush=True)
+
+
+_t.Thread(target=_warmup, daemon=True).start()
 
 
 def live_fetcher() -> live.LiveFetcher | None:
@@ -155,8 +185,18 @@ def _jsonable(v):
     return v
 
 
+# What zone a kick-off time is published in, per source. football-data.co.uk
+# quotes everything in UK time, which is why that is the default; the Tanzanian
+# overlay comes from the league's own site and is already East Africa Time.
+# Converting an EAT time as if it were UK time put tonight's Pamba Jiji kick-off
+# at 18:00 instead of 16:00 - two hours late, for the one league the user can
+# actually walk to.
+SOURCE_TZ = {"TZ1": EAT}
+DEFAULT_SOURCE_TZ = ZoneInfo("Europe/London")
+
+
 def _local_kickoff(f) -> tuple[datetime | None, str]:
-    """Kick-off in East Africa Time, from the feed's UK date (and time if set)."""
+    """Kick-off in East Africa Time, from the source's date (and time if set)."""
     if pd.isna(f.get("Date")):
         return None, ""
     d = f["Date"]
@@ -169,8 +209,8 @@ def _local_kickoff(f) -> tuple[datetime | None, str]:
         t = None
     if t is None:
         return None, d.strftime("%a %d %b")
-    uk = ZoneInfo("Europe/London")
-    dt = datetime.combine(d, t, tzinfo=uk).astimezone(EAT)
+    src = SOURCE_TZ.get(f.get("Div"), DEFAULT_SOURCE_TZ)
+    dt = datetime.combine(d, t, tzinfo=src).astimezone(EAT)
     return dt, dt.strftime("%a %d %b %H:%M")
 
 
@@ -194,7 +234,23 @@ def slate(days: int = 2, league: str | None = None):
     Rule 2 of UI-PROMPT.md: a fixture must have a published kick-off time.
     Round-robin fallbacks carry a `note` and no time; they are returned in a
     clearly-separated `pairings` surface and are never shown as fixtures.
+    Cached per data stamp, so repeated hits are milliseconds.
     """
+    return _cached_slate(days, league)
+
+
+def _cached_slate(days: int, league: str | None):
+    stamp = _data_stamp(ROOT)
+    now = _time.time()
+    hit = _slate_cache.get((days, league))
+    if hit and hit["stamp"] == stamp and (now - hit["at"]) < _SLATE_TTL:
+        return hit["payload"]
+    payload = _compute_slate(days, league)
+    _slate_cache[(days, league)] = {"stamp": stamp, "at": now, "payload": payload}
+    return payload
+
+
+def _compute_slate(days: int, league: str | None):
     p = predictor()
     divs = [league] if league else p.divs
     groups, pair_groups, skipped = [], [], []
@@ -232,11 +288,18 @@ def slate(days: int = 2, league: str | None = None):
             mk = None
             if odds is not None:
                 try:
-                    avg = [float(f["AvgH"]), float(f["AvgD"]), float(f["AvgA"])]
-                    inv = [1.0 / x for x in avg]
-                    tot = sum(inv)
-                    mk = {"1": inv[0] / tot, "X": inv[1] / tot, "2": inv[2] / tot}
-                except Exception:
+                    # Shin - the same de-vig the engine blends with and the
+                    # backtest benchmarks against. Normalising 1/odds instead
+                    # is a different quantity, up to 2.9 points apart on a
+                    # lopsided market, and the comparison surface exists
+                    # precisely to show gaps of about that size.
+                    q = market.devig([float(f["AvgH"]), float(f["AvgD"]),
+                                      float(f["AvgA"])], "shin")
+                    mk = {"1": float(q[0]), "X": float(q[1]), "2": float(q[2])}
+                except (ValueError, TypeError, KeyError):
+                    # Only bad prices are tolerated here. A blanket `except`
+                    # once swallowed a NameError and silently emptied the
+                    # market column on every fixture.
                     mk = None
             matches.append({
                 "div": d,
@@ -260,32 +323,64 @@ def slate(days: int = 2, league: str | None = None):
                 "country": leagues.country(d),
                 "matches": sorted(matches, key=lambda m: m["date"]),
             })
+        # Pairings are counted here but priced only when a reader opens one.
+        # Pricing all of them inline meant ~2,000 fits and a 42-second, 324KB
+        # response for a screen whose real content is a few dozen fixtures.
         if len(pairings):
-            pair_rows = []
-            for _, f in pairings.iterrows():
-                try:
-                    s = p.predict(f["HomeTeam"], f["AwayTeam"], d,
-                                  allow_new=True)
-                except SystemExit:
-                    continue
-                r = s["result"]
-                pick = max(r, key=r.get)
-                pair_rows.append({
-                    "home": s["home"], "away": s["away"],
-                    "pick": {"H": "1", "D": "X", "A": "2"}[pick],
-                    "p": {"1": r["H"], "X": r["D"], "2": r["A"]},
-                    "note": (f.get("note") or "") if has_note else "",
-                })
-            if pair_rows:
-                pair_groups.append({
-                    "code": d, "league": leagues.name(d),
-                    "country": leagues.country(d),
-                    "matches": pair_rows,
-                })
+            pair_groups.append({
+                "code": d, "league": leagues.name(d),
+                "country": leagues.country(d),
+                "count": int(len(pairings)),
+                "note": next((n for n in pairings.get("note", pd.Series(dtype=str))
+                              if isinstance(n, str) and n), "") if has_note else "",
+            })
     groups.sort(key=lambda g: _group_order(g["code"]))
     pair_groups.sort(key=lambda g: _group_order(g["code"]))
     return {"generated": datetime.now(EAT).isoformat(),
             "groups": groups, "pairings": pair_groups, "skipped": skipped}
+
+
+@app.get("/api/pairings")
+def pairings(div: str, days: int = 2, limit: int = 60):
+    """Head-to-head ratings for one division, priced on demand.
+
+    These are not fixtures: they are the pairings a league has not played yet,
+    with no published kick-off. Kept off the slate so opening the app does not
+    pay for two thousand predictions nobody asked for.
+    """
+    p = predictor()
+    if div not in p.divs:
+        return {"code": div, "league": leagues.name(div), "matches": [],
+                "note": "no data loaded for %s" % div}
+    sched = p.schedule(div, days)
+    if not len(sched):
+        return {"code": div, "league": leagues.name(div), "matches": [], "note": ""}
+    has_note = "note" in sched.columns
+    real = sched
+    if "Date" in sched.columns:
+        real = real[real["Date"].notna()]
+    if "Time" in sched.columns:
+        real = real[real["Time"].notna()]
+    if has_note:
+        real = real[real["note"].isna()]
+    rows = sched[~sched.index.isin(real.index)]
+    out = []
+    for _, f in rows.head(max(1, limit)).iterrows():
+        try:
+            s = p.predict(f["HomeTeam"], f["AwayTeam"], div, allow_new=True)
+        except SystemExit:
+            continue
+        r = s["result"]
+        pick = max(r, key=r.get)
+        out.append({
+            "home": s["home"], "away": s["away"],
+            "pick": {"H": "1", "D": "X", "A": "2"}[pick],
+            "p": {"1": r["H"], "X": r["D"], "2": r["A"]},
+            "note": (f.get("note") or "") if has_note else "",
+        })
+    return {"code": div, "league": leagues.name(div),
+            "country": leagues.country(div), "matches": out,
+            "total": int(len(rows)), "shown": len(out)}
 
 
 @app.get("/api/live")
@@ -322,6 +417,18 @@ def api_live_leagues(search: str):
 def card(home: str, away: str, div: str | None = None, neutral: bool = False):
     s = predictor().predict(home, away, div, neutral=neutral, allow_new=bool(div))
     return _jsonable(s)
+
+
+@app.get("/api/clubs")
+def clubs(div: str):
+    """Rating table for one division, strongest first."""
+    p = predictor()
+    try:
+        rows = p.clubs(div)
+    except SystemExit as e:
+        return {"code": div, "league": leagues.name(div), "clubs": [],
+                "note": "can't fit %s yet: %s" % (div, e)}
+    return {"code": div, "league": leagues.name(div), "clubs": rows}
 
 
 @app.get("/api/leagues")

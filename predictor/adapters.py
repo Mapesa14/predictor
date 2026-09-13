@@ -103,17 +103,59 @@ def parse_football_txt(path: str, div: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def build_csvs(raw_dir: str, out_dir: str) -> dict:
-    """Convert every `<DIV>_<season>.txt` under raw_dir into one CSV per league."""
+def _overlay(overlay_dir: str, div: str):
+    """Hand-entered results for one division, if any.
+
+    `build_csvs` rewrites each league's CSV from the source files, so anything
+    entered by another route is destroyed on the next refresh. That is how the
+    Tanzanian 2026/27 season vanished once: openfootball's file stops in June
+    2026, the current results came from the league's own site, and the next
+    refresh wiped them - taking the whole competition out of the product,
+    because a finished season has no unplayed pairings left to fall back on.
+
+    Overlay rows live outside the rebuild and are merged back in every time.
+    """
+    path = os.path.join(overlay_dir or "", "%s.csv" % div)
+    if not overlay_dir or not os.path.isfile(path):
+        return None
+    df = pd.read_csv(path)
+    if not len(df):
+        return None
+    df["Div"] = div
+    df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y", errors="coerce")
+    for c in ("FTHG", "FTAG", "HTHG", "HTAG"):
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce")
+    return df.dropna(subset=["Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"])
+
+
+def build_csvs(raw_dir: str, out_dir: str, overlay_dir: str | None = None) -> dict:
+    """Convert every `<DIV>_<season>.txt` under raw_dir into one CSV per league.
+
+    Results in `overlay_dir/<DIV>.csv` are merged in afterwards and survive
+    every rebuild; source rows win on a clash.
+    """
     os.makedirs(out_dir, exist_ok=True)
+    if overlay_dir is None:
+        overlay_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                   "..", "data", "manual")
     by_div: dict[str, list] = {}
     for path in sorted(glob.glob(os.path.join(raw_dir, "*.txt"))):
         div = os.path.basename(path).split("_")[0]
         df = parse_football_txt(path, div)
         if len(df):
             by_div.setdefault(div, []).append(df)
+    # a division may exist only as an overlay
+    if os.path.isdir(overlay_dir):
+        for path in sorted(glob.glob(os.path.join(overlay_dir, "*.csv"))):
+            by_div.setdefault(os.path.splitext(os.path.basename(path))[0], [])
     written, all_merges = {}, {}
     for div, parts in by_div.items():
+        extra = _overlay(overlay_dir, div)
+        if extra is not None:
+            parts = list(parts) + [extra]
+        if not parts:
+            continue
         df = pd.concat(parts, ignore_index=True)
         df, merges = canonicalise(df)
         all_merges.update(merges)

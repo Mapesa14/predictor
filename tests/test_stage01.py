@@ -12,7 +12,7 @@ import pytest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from predictor import leagues, model  # noqa: E402
+from predictor import adapters, leagues, model  # noqa: E402
 from predictor.engine import Predictor  # noqa: E402
 
 TEAMS = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"]
@@ -223,3 +223,59 @@ def test_a_carried_rating_beats_the_prior_as_the_fallback(sim):
     m.carried["Newtown"] = "YY"
     assert m._team("Newtown") == (0.4, m.mean_defence - 0.3)
     assert m.rating_source("Newtown") == "YY"
+
+
+# ------------------------------------------------- manual results overlay
+def test_overlay_results_survive_a_rebuild(tmp_path):
+    """A refresh rebuilds each league CSV from source; hand-entered results
+    must not be destroyed by it.
+
+    This is how the Tanzanian 2026/27 season disappeared once: openfootball's
+    file ends in June 2026, the live results came from the league's own site,
+    and the next refresh wiped them. A finished season has no unplayed pairings
+    left, so the whole competition vanished from the product.
+    """
+    raw, out, manual = tmp_path / "raw", tmp_path / "out", tmp_path / "manual"
+    for d in (raw, out, manual):
+        d.mkdir()
+    (raw / "ZZ1_2025-26.txt").write_text(
+        "= Test league 2025/26\n\n\u25aa Matchday 1\n"
+        "  Sat Sep 20 2025\n"
+        "    15:00  Alpha FC   v Bravo FC   2-1 (1-0)\n",
+        encoding="utf-8")
+    (manual / "ZZ1.csv").write_text(
+        "Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG\n"
+        "ZZ1,05/09/2026,Charlie FC,Delta FC,3,0,,\n",
+        encoding="utf-8")
+
+    written, _ = adapters.build_csvs(str(raw), str(out), overlay_dir=str(manual))
+    got = pd.read_csv(out / "ZZ1.csv")
+    assert written["ZZ1"] == 2
+    assert set(got["HomeTeam"]) == {"Alpha FC", "Charlie FC"}
+
+    # and again, to prove the overlay is not consumed by the first rebuild
+    adapters.build_csvs(str(raw), str(out), overlay_dir=str(manual))
+    assert len(pd.read_csv(out / "ZZ1.csv")) == 2
+
+
+def test_overlay_can_carry_a_division_with_no_source_file(tmp_path):
+    raw, out, manual = tmp_path / "raw", tmp_path / "out", tmp_path / "manual"
+    for d in (raw, out, manual):
+        d.mkdir()
+    (manual / "YY1.csv").write_text(
+        "Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG\n"
+        "YY1,05/09/2026,Echo FC,Foxtrot FC,1,1,,\n",
+        encoding="utf-8")
+    written, _ = adapters.build_csvs(str(raw), str(out), overlay_dir=str(manual))
+    assert written["YY1"] == 1
+
+
+def test_the_tanzanian_overlay_is_present_and_current():
+    """The live Tanzanian season only exists as an overlay; guard it."""
+    repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(repo, "data", "manual", "TZ1.csv")
+    assert os.path.isfile(path), "data/manual/TZ1.csv is missing"
+    df = pd.read_csv(path)
+    df["Date"] = pd.to_datetime(df["Date"], format="%d/%m/%Y")
+    assert (df["Date"] >= pd.Timestamp("2026-07-01")).all()
+    assert len(df) >= 8

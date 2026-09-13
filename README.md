@@ -247,6 +247,32 @@ order:
    per round. Split-format leagues (Scotland, Belgium, Greece) are flagged,
    because their remaining pairings are not a reliable schedule.
 
+Whichever of 1–2 is used, `data/manual/fixtures/*.csv` is merged on top. That
+overlay exists because `refresh-fixtures` rewrites the cache wholesale, and the
+feed is European: without it, a competition outside Europe drops straight to
+level 3 and loses its dates, kick-off times and prices.
+
+### Tanzania
+
+The NBC Premier League has no feed behind it. openfootball's file stops in June
+2026, football-data has never covered Africa, and the aggregators kept serving
+the *previous* Tanzanian season well after this one kicked off. The league's own
+site is the authority:
+
+```bash
+python predict.py refresh-tanzania
+```
+
+That reads `ligikuu.co.tz`, writes results to `data/manual/TZ1.csv` and dated
+fixtures to `data/manual/fixtures/TZ1.csv`, then rebuilds the league CSV. Two
+rules it will not bend: results are **merged**, never replaced (the homepage
+publishes a window, not the season — it carried eight of the ten results on
+file), and an unrecognised club name **stops the import** rather than being
+matched to the nearest thing. Kick-off times are published in East Africa Time
+and the service knows it; every other source is read as UK time, which would
+put a 16:00 Dar es Salaam kick-off on the card at 18:00. The site publishes no
+half-time scores, so TZ1 cards carry no half-time markets and say why.
+
 Once fixtures are loaded, `slate` predicts the lot:
 
 ```bash

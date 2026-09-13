@@ -7,9 +7,13 @@ Three sources, in order of preference:
 
 Source 3 needs no network at all: in a league where everyone plays everyone
 home and away, whatever pairing has not been played yet is still to come.
+
+On top of whichever of 1-2 is used sits `data/manual/fixtures/`, an overlay for
+competitions the European feed does not cover at all (see `overlay`).
 """
 from __future__ import annotations
 
+import glob
 import os
 from datetime import datetime
 
@@ -73,15 +77,58 @@ def refresh(dest: str, url: str = FEED_URL) -> str:
     return dest
 
 
-def load_any(path: str | None, cache: str) -> pd.DataFrame:
-    """Read the given fixtures file, else a previously downloaded cache, else empty."""
+def overlay(overlay_dir: str | None) -> pd.DataFrame:
+    """Hand-kept fixtures for competitions the feed does not carry.
+
+    football-data's feed is European. Anything else with a real published
+    schedule - the Tanzanian top flight above all - is written here by its own
+    adapter and merged on every load, because `refresh` overwrites the cache
+    wholesale and would otherwise drop those competitions back to bare
+    round-robin pairings with no date, time or price.
+    """
+    empty = pd.DataFrame(columns=["Div", "Date", "HomeTeam", "AwayTeam"])
+    if not overlay_dir or not os.path.isdir(overlay_dir):
+        return empty
+    parts = []
+    for p in sorted(glob.glob(os.path.join(overlay_dir, "*.csv"))):
+        try:
+            f = from_csv(p)
+        except Exception:
+            continue
+        if len(f):
+            parts.append(f)
+    return pd.concat(parts, ignore_index=True) if parts else empty
+
+
+def default_overlay_dir() -> str:
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "..", "data", "manual", "fixtures")
+
+
+def load_any(path: str | None, cache: str,
+             overlay_dir: str | None = None) -> pd.DataFrame:
+    """The given fixtures file, else a downloaded cache, else empty - with the
+    overlay merged on top either way."""
+    if overlay_dir is None:
+        overlay_dir = default_overlay_dir()
+    base = pd.DataFrame(columns=["Div", "Date", "HomeTeam", "AwayTeam"])
     for p in (path, cache):
         if p and os.path.exists(p):
             try:
-                return from_csv(p)
+                base = from_csv(p)
+                break
             except Exception:
                 continue
-    return pd.DataFrame(columns=["Div", "Date", "HomeTeam", "AwayTeam"])
+    extra = overlay(overlay_dir)
+    if not len(extra):
+        return base
+    if not len(base):
+        return extra
+    merged = pd.concat([base, extra], ignore_index=True)
+    # the overlay is the authority on the competitions it covers
+    merged = merged.drop_duplicates(subset=["Div", "Date", "HomeTeam", "AwayTeam"],
+                                    keep="last")
+    return merged.sort_values("Date").reset_index(drop=True)
 
 
 def current_season(df: pd.DataFrame, div: str) -> str:
@@ -124,9 +171,17 @@ def _matchdays(pairs):
 
 
 def upcoming(df: pd.DataFrame, fx: pd.DataFrame, div: str | None = None,
-             days: int = 14, as_of: datetime | None = None) -> pd.DataFrame:
-    """Scheduled fixtures inside the next `days`, falling back to the round robin."""
+             days: int = 14, as_of: datetime | None = None,
+             remaining_fn=None) -> pd.DataFrame:
+    """Scheduled fixtures inside the next `days`, falling back to the round robin.
+
+    `remaining_fn(df, div)` lets a caller substitute a cached round robin. The
+    remainder depends only on results already on disk, so recomputing it for
+    every division on every request - two thousand pairings, ordered into
+    rounds, to be counted and thrown away - was half the cost of a slate.
+    """
     as_of = as_of or datetime.now()
+    rem = remaining_fn or remaining
     if len(fx):
         f = fx[(fx["Date"] >= pd.Timestamp(as_of).normalize()) &
                (fx["Date"] <= pd.Timestamp(as_of) + pd.Timedelta(days=days))]
@@ -135,7 +190,7 @@ def upcoming(df: pd.DataFrame, fx: pd.DataFrame, div: str | None = None,
         if len(f):
             return f.reset_index(drop=True)
     divs = [div] if div else sorted(set(df["Div"]) & set(leagues.LEAGUES))
-    parts = [remaining(df, d) for d in divs]
+    parts = [rem(df, d) for d in divs]
     parts = [p for p in parts if len(p)]
     return pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(
         columns=["Div", "Date", "HomeTeam", "AwayTeam", "note"])
