@@ -1,0 +1,17 @@
+.git
+.venv
+web/node_modules
+web/android
+web/dist
+scratch
+tests
+data/raw
+*.pdf
+__pycache__
+.pytest_cache
+
+# Local runtime state that must never be baked into an image.
+data/record/live.db
+data/record/live.db-*
+soccerdata
+.env

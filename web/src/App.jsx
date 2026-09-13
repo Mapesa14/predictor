@@ -80,7 +80,10 @@ function useLive(interval = 60000) {
 }
 
 function LiveChip({ m, live }) {
-  if (!live || !live.enabled) return null;
+  // A stale snapshot is worse than none. The server stops polling once no
+  // match is in play, so the last reading of a finished game would otherwise
+  // sit on the card as "88'" indefinitely.
+  if (!live || !live.enabled || live.stale) return null;
   const row = live.matches.find((lm) => subMatch(lm.home, m.home) && subMatch(lm.away, m.away));
   if (!row) return null;
   const st = row.status;

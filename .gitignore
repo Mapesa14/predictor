@@ -21,3 +21,21 @@ web/android/local.properties
 web/android/.idea/
 web/android/app/src/main/assets/public/
 web/android/capacitor-cordova-android-plugins/
+
+# Secrets. The service reads LIVE_API_KEY and DATABASE_URL from the
+# environment; a local .env holding them must never be committed.
+.env
+.env.*
+!.env.example
+web/.env
+web/.env.*
+!web/.env.example
+
+# The live-score budget ledger when no DATABASE_URL is set. Local runtime
+# state - unlike the record beside it, which is committed by design.
+data/record/live.db
+data/record/live.db-*
+
+# The default mount for the European pool in docker compose. Downloaded
+# football-data.co.uk CSVs; the user's own copy, not source.
+soccerdata/

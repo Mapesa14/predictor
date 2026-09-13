@@ -29,7 +29,7 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 
-from . import backtest, leagues, loader
+from . import backtest, db, leagues, loader
 
 # Written once per fixture and never touched again. The market columns hold the
 # de-vigged closing probabilities *as they stood at publication*: the price
@@ -68,9 +68,8 @@ def _link(prev: str, row: dict) -> str:
     return hashlib.sha256((prev + "|" + _canon(row)).encode("utf-8")).hexdigest()
 
 
-def verify(root: str) -> dict:
-    """Walk the chain, and name the first row that does not match its hash."""
-    df = load(root)
+def _check_chain(df: pd.DataFrame) -> dict:
+    """Walk a chain held in any frame, naming the first row that breaks it."""
     if df.empty:
         return {"ok": True, "rows": 0, "note": "nothing published yet"}
     prev = GENESIS
@@ -86,20 +85,163 @@ def verify(root: str) -> dict:
             "note": "every row matches the hash chain"}
 
 
+def verify(root: str) -> dict:
+    """Walk the chain in whichever store is configured."""
+    return _check_chain(load(root))
+
+
+def migrate(root: str, eng=None) -> dict:
+    """Copy a file record into the database without restarting its chain.
+
+    Switching on DATABASE_URL otherwise begins an empty table: publishing
+    carries on from GENESIS, and every prediction already on file is orphaned
+    from the record the product shows - its entire history, which is the only
+    thing that makes it worth anything. So the rows move across verbatim, with
+    their original `published_at`, `prev` and `hash`, and the chain is checked
+    on both sides.
+
+    Refuses rather than guesses in the two cases that cannot be reconciled
+    automatically: a file whose own chain is already broken, and a database
+    that holds rows the file does not. Safe to run repeatedly; rows published
+    to the file since the last run are appended.
+    """
+    eng = eng or db.engine()
+    if eng is None:
+        raise RuntimeError("no DATABASE_URL set - there is no database to "
+                           "migrate into")
+    src = FileStore(root).read()
+    src_chain = _check_chain(src)
+    if not src_chain["ok"]:
+        return {"ok": False, "migrated": 0, "rows": 0,
+                "reason": "the file record is broken, so nothing was copied: "
+                          + src_chain["note"]}
+    db.create_all(eng)
+    dst_store = DbStore(eng)
+    dst = dst_store.read()
+    src_h = [str(h) for h in src["hash"]] if len(src) else []
+    dst_h = [str(h) for h in dst["hash"]] if len(dst) else []
+    if dst_h == src_h:
+        return {"ok": True, "migrated": 0, "rows": len(dst_h),
+                "reason": "already migrated - the database holds exactly the "
+                          "file's %d rows" % len(dst_h)}
+    if len(dst_h) > len(src_h) or src_h[:len(dst_h)] != dst_h:
+        return {"ok": False, "migrated": 0, "rows": len(dst_h),
+                "reason": "the database record has diverged from the file "
+                          "(%d rows there, %d on file, not a common prefix); "
+                          "refusing to splice two chains together"
+                          % (len(dst_h), len(src_h))}
+    rows = []
+    for _, r in src.iloc[len(dst_h):].iterrows():
+        row = {}
+        for c in COLUMNS:
+            v = r[c]
+            row[c] = None if isinstance(v, float) and pd.isna(v) else v
+        rows.append(row)
+    dst_store.append(rows)
+    after = _check_chain(dst_store.read())
+    return {"ok": after["ok"], "migrated": len(rows), "rows": after["rows"],
+            "reason": after["note"]}
+
+
 # ---------------------------------------------------------------- storage
 _NUM = ["pH", "pD", "pA", "pOver25", "pBTTS", "xgH", "xgA", "mk1", "mkX", "mk2"]
 
 
+class FileStore:
+    """An append-only CSV. Right for one machine, wrong for two.
+
+    Two workers appending to the same file interleave their writes and break
+    the chain, which is the whole reason the database backend exists.
+    """
+
+    def __init__(self, root: str):
+        self.root = root
+        self.path = path(root)
+
+    def read(self) -> pd.DataFrame:
+        if not os.path.isfile(self.path):
+            return pd.DataFrame(columns=COLUMNS)
+        df = pd.read_csv(self.path, dtype={"prev": str, "hash": str,
+                                           "score": str, "date": str})
+        for c in _NUM:
+            if c in df.columns:
+                df[c] = pd.to_numeric(df[c], errors="coerce")
+        return df
+
+    def append(self, rows: list) -> int:
+        if not rows:
+            return 0
+        os.makedirs(os.path.dirname(self.path), exist_ok=True)
+        pd.DataFrame(rows, columns=COLUMNS).to_csv(
+            self.path, mode="a", header=not os.path.isfile(self.path),
+            index=False)
+        return len(rows)
+
+    def describe(self) -> str:
+        return "file:%s" % self.path
+
+
+class DbStore:
+    """The same rows in a table, for when more than one process writes them.
+
+    Reading the last hash and inserting after it has to be one atomic step or
+    two publishers produce two rows claiming the same predecessor. Postgres
+    gets a transaction-scoped advisory lock; SQLite serialises writers itself.
+    The unique index on `hash` is the backstop that turns a lost race into a
+    failed insert rather than a silently forked chain.
+    """
+
+    LOCK_ID = 4711_2026        # arbitrary, but stable: the record's own lock
+
+    def __init__(self, eng):
+        self.engine = eng
+
+    def read(self) -> pd.DataFrame:
+        from sqlalchemy import select
+        cols = [db.predictions.c[c] for c in COLUMNS]
+        with self.engine.connect() as c:
+            rows = c.execute(
+                select(*cols).order_by(db.predictions.c.id)).mappings().all()
+        df = pd.DataFrame([dict(r) for r in rows], columns=COLUMNS)
+        for col in _NUM:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+        for col in ("prev", "hash", "score", "date"):
+            df[col] = df[col].astype(object).where(df[col].notna(), "")
+        return df
+
+    def append(self, rows: list) -> int:
+        if not rows:
+            return 0
+        with self.engine.begin() as c:
+            c.execute(db.predictions.insert(), rows)
+        return len(rows)
+
+    def lock(self, conn) -> None:
+        if self.engine.dialect.name == "postgresql":
+            from sqlalchemy import text
+            conn.execute(text("SELECT pg_advisory_xact_lock(:k)"),
+                         {"k": self.LOCK_ID})
+
+    def describe(self) -> str:
+        return "db:%s" % self.engine.dialect.name
+
+
+def store(root: str):
+    """The file store, unless a database is configured.
+
+    `root` is still the argument every caller passes, so switching backends is
+    one environment variable and no code change anywhere upstream.
+    """
+    eng = db.engine()
+    return DbStore(eng) if eng is not None else FileStore(root)
+
+
 def load(root: str) -> pd.DataFrame:
-    p = path(root)
-    if not os.path.isfile(p):
-        return pd.DataFrame(columns=COLUMNS)
-    df = pd.read_csv(p, dtype={"prev": str, "hash": str, "score": str,
-                               "date": str})
-    for c in _NUM:
-        if c in df.columns:
-            df[c] = pd.to_numeric(df[c], errors="coerce")
-    return df
+    return store(root).read()
+
+
+def backend(root: str) -> str:
+    return store(root).describe()
 
 
 def _key(div, date, home, away) -> tuple:
@@ -119,7 +261,8 @@ def publish(rows, root: str, as_of: datetime | None = None) -> dict:
     else:
         now = now.tz_convert("UTC")
 
-    have = load(root)
+    st = store(root)
+    have = st.read()
     seen = {_key(r["div"], r["date"], r["home"], r["away"])
             for _, r in have.iterrows()} if len(have) else set()
     prev = str(have["hash"].iloc[-1]) if len(have) else GENESIS
@@ -162,15 +305,11 @@ def publish(rows, root: str, as_of: datetime | None = None) -> dict:
         seen.add(k)
         written.append(row)
 
-    if written:
-        p = path(root)
-        os.makedirs(os.path.dirname(p), exist_ok=True)
-        header = not os.path.isfile(p)
-        pd.DataFrame(written, columns=COLUMNS).to_csv(
-            p, mode="a", header=header, index=False)
+    st.append(written)
     return {"written": len(written), "already_recorded": dup,
             "refused_already_started": started, "refused_no_kickoff": undated,
-            "file": path(root), "total": int(len(have)) + len(written)}
+            "file": path(root), "backend": st.describe(),
+            "total": int(len(have)) + len(written)}
 
 
 def _f(v):

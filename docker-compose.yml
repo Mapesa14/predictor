@@ -1,0 +1,72 @@
+# A complete local stack: Postgres, the API, and the built web app.
+#
+#   docker compose up --build
+#   → web on http://localhost:8080, API on http://localhost:8000
+#
+# This is also the shape of a small production deployment. The only pieces that
+# change are where the secrets come from and putting TLS in front — the phone
+# app cannot talk to plain http at all.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: predictor
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-devonly}
+      POSTGRES_DB: predictor
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    healthcheck:
+      # The API's warm-up runs migrations on boot, so it must not start until
+      # Postgres is actually accepting connections, not merely running.
+      test: ["CMD-SHELL", "pg_isready -U predictor -d predictor"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://predictor:${POSTGRES_PASSWORD:-devonly}@db:5432/predictor
+      # Still set, and still a volume: with DATABASE_URL the record lives in
+      # Postgres, but dropping DATABASE_URL must not silently start writing the
+      # record into a container layer that disappears on the next deploy.
+      RECORD_ROOT: /var/lib/predictor
+      FOOTBALL_DATA: /data/soccer
+      # Live scores. Substituted from the .env file beside this compose file -
+      # never hard-coded here, and never given to the web container: the key
+      # belongs to the API alone. Empty means live scores stay off.
+      LIVE_API_KEY: ${LIVE_API_KEY:-}
+    volumes:
+      - record:/var/lib/predictor
+      # The European pool: football-data.co.uk results and the fixtures feed.
+      # Set SOCCER_DATA_DIR in .env to the folder you already have, or leave it
+      # unset and fill ./soccerdata with:
+      #   docker compose exec api python predict.py update --since 2023
+      # Read-write, because refreshes merge new results into it. Long syntax
+      # so a Windows drive letter and spaces in the path both survive.
+      - type: bind
+        source: ${SOCCER_DATA_DIR:-./soccerdata}
+        target: /data/soccer
+        bind:
+          create_host_path: true
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  web:
+    image: nginx:alpine
+    depends_on: [api]
+    volumes:
+      - ./web/dist:/usr/share/nginx/html:ro
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+volumes:
+  dbdata:
+  record:

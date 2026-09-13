@@ -13,7 +13,11 @@ from .engine import (DEFAULT_EDGE_SCALE, DEFAULT_GOAL_SHRINK,
                      DEFAULT_MARKET_WEIGHT, DEFAULT_WEIGHTS,
                      DEFAULT_XI, Predictor)
 
-DEFAULT_DATA = os.environ.get("SOCCER_DATA", r"D:\Downloads July 2026\SoccerData")
+# FOOTBALL_DATA is what the service reads; SOCCER_DATA was the CLI's own name
+# for the same folder. Honour both, service's first, so a container that sets
+# one variable does not leave the CLI pointing at a Windows download path.
+DEFAULT_DATA = (os.environ.get("FOOTBALL_DATA") or os.environ.get("SOCCER_DATA")
+                or r"D:\Downloads July 2026\SoccerData")
 
 
 def _jsonable(s):
@@ -941,6 +945,82 @@ def cmd_record_verify(a):
     print("%d row(s) on file" % r["rows"])
 
 
+def cmd_record_migrate(a):
+    """Copy the file record into DATABASE_URL, keeping its hash chain intact.
+
+    Run once when switching storage. Without it the database starts empty and
+    publishing restarts the chain, orphaning everything already published.
+    """
+    from . import db, record
+    if db.url() is None:
+        print("Set DATABASE_URL first - there is no database to migrate into.")
+        return
+    try:
+        r = record.migrate(a.repo)
+    except RuntimeError as e:
+        print("refused: %s" % e)
+        return
+    print(("OK   " if r["ok"] else "FAIL ") + r["reason"])
+    print("%d row(s) copied, %d now in the database"
+          % (r["migrated"], r.get("rows", 0)))
+
+
+def cmd_live_leagues(a):
+    """Look up API-Football league ids. Spends one request of the live budget.
+
+    Admin only, and deliberately a CLI command rather than an HTTP route: as a
+    public endpoint any visitor could spend the day's quota with it.
+    """
+    from service import live
+    if not live.configured():
+        print("Set LIVE_API_KEY first - this asks API-Football directly.")
+        return
+    try:
+        rows = live.find_leagues(" ".join(a.query))
+    except RuntimeError as e:
+        print("refused: %s" % e)
+        return
+    if not rows:
+        print("no leagues match %r" % " ".join(a.query))
+    else:
+        print("%-8s%-34s%-10s%s" % ("Id", "League", "Type", "Country"))
+        print("-" * 64)
+        for r in rows:
+            print("%-8s%-34s%-10s%s" % (r["id"], (r["name"] or "")[:33],
+                                        r["type"] or "", r["country"] or ""))
+    b = live.budget(live.default_store())
+    print("\nlive budget: %d of %d available in the rolling 24h (%d held back)"
+          % (b["available"], b["daily_limit"], b["reserve"]))
+    print("Put the ids you want in LIVE_LEAGUES, or correct DIV_LEAGUES in "
+          "service/live.py.")
+
+
+def cmd_live_status(a):
+    """The live-score budget, without spending any of it."""
+    from service import live
+    s = live.status()
+    if not s.get("enabled"):
+        print("Live scores are off: LIVE_API_KEY is not set on the service.")
+        return
+    if s.get("error"):
+        print("live store unavailable: %s" % s["error"])
+        return
+    b = s["budget"]
+    print("used in the last 24h  %d of %d  (reserve %d)"
+          % (b["used_24h"], b["daily_limit"], b["reserve"]))
+    print("available now         %d" % b["available"])
+    print("provider says left    %s" % (b["provider_remaining"]
+                                          if b["provider_remaining"] is not None
+                                          else "not reported yet"))
+    print("last minute           %d of %d" % (b["used_last_minute"],
+                                              b["minute_limit"]))
+    print("cooling down until    %s" % (b["cooling_down_until"] or "-"))
+    print("last attempt          %s" % (s["last_attempt"] or "never"))
+    print("snapshot age          %s" % ("%ds" % s["snapshot_age_s"]
+                                          if s["snapshot_age_s"] is not None
+                                          else "no snapshot yet"))
+
+
 def cmd_leagues(a):
     df = loader.load(a.data)
     g = df.groupby("Div").agg(matches=("Date", "size"), first=("Date", "min"),
@@ -1125,6 +1205,22 @@ def build_parser():
                        help="check the record's hash chain for tampering")
     record_args(s)
     s.set_defaults(func=cmd_record_verify)
+
+    s = sub.add_parser("record-migrate",
+                       help="copy the file record into DATABASE_URL, keeping "
+                            "its hash chain (run once when switching)")
+    record_args(s)
+    s.set_defaults(func=cmd_record_migrate)
+
+    s = sub.add_parser("live-leagues",
+                       help="look up API-Football league ids "
+                            "(spends one request of the live budget)")
+    s.add_argument("query", nargs="+", help="search text, e.g. tanzania")
+    s.set_defaults(func=cmd_live_leagues)
+
+    s = sub.add_parser("live-status",
+                       help="live-score budget and last call (spends nothing)")
+    s.set_defaults(func=cmd_live_status)
 
     s = sub.add_parser("table", help="team attack and defence ratings")
     common(s)

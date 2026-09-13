@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest==9.1.1
+# Icon generation only (web/tools/icons.py); not needed to run the service.
+pillow==12.3.0
+# Validating docker-compose.yml without Docker installed.
+pyyaml

@@ -14,7 +14,7 @@ import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from predictor import leagues, market, record
+from predictor import db, leagues, market, record
 from predictor.engine import Predictor
 from service import live
 
@@ -28,7 +28,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"],
                    allow_methods=["*"], allow_headers=["*"])
 
 _p: Predictor | None = None
-_live: live.LiveFetcher | None = None
+_warm = {"done": False, "at": None}
 
 
 def predictor() -> Predictor:
@@ -95,6 +95,15 @@ _SLATE_TTL = 60.0
 
 def _warmup():
     try:
+        if db.url():
+            # create_all creates what is missing and leaves existing tables
+            # alone, so running it on every boot is safe.
+            try:
+                db.create_all()
+                print("database: tables ready (%s)" % db.engine().dialect.name,
+                      flush=True)
+            except Exception as e:
+                print("database: could not initialise: %r" % e, flush=True)
         p = predictor()
         for d in p.divs:
             p.models(d)
@@ -105,6 +114,13 @@ def _warmup():
             except Exception as e:
                 print("warm-up slate %d failed: %r" % (days, e), flush=True)
         print("warm-up: default slates cached", flush=True)
+        _warm["done"] = True
+        _warm["at"] = datetime.now(EAT).isoformat()
+        # Live scores start only once the slate exists, because the slate's
+        # kick-off times are what decide whether a provider call is worth it.
+        if live.configured():
+            live.start_refresher(_kickoffs_today)
+            print("live scores: refresher started", flush=True)
     except Exception as e:
         print("warm-up failed: %r" % e, flush=True)
 
@@ -112,16 +128,24 @@ def _warmup():
 _t.Thread(target=_warmup, daemon=True).start()
 
 
-def live_fetcher() -> live.LiveFetcher | None:
-    global _live
-    key = os.environ.get("LIVE_API_KEY", "").strip()
-    if not key:
-        return None
-    if _live is None:
-        ids = [int(x) for x in
-               os.environ.get("LIVE_LEAGUES", "").split(",") if x.strip()]
-        _live = live.LiveFetcher(key, leagues=ids or None)
-    return _live
+def _kickoffs_today() -> list:
+    """Every kick-off on today's slate, for the live refresher's in-play test.
+
+    Read from the cached slate rather than recomputed, so asking every minute
+    is free. A fixture with no published time has no kick-off and cannot put
+    the refresher into play.
+    """
+    try:
+        slate = _cached_slate(1, None)
+    except Exception:
+        return []
+    out = []
+    for g in slate.get("groups", []):
+        for m in g.get("matches", []):
+            ts = pd.to_datetime(m.get("date"), errors="coerce", utc=True)
+            if not pd.isna(ts):
+                out.append(ts.to_pydatetime())
+    return out
 
 
 # ---- team-name matching for the live join ---------------------------------
@@ -202,6 +226,40 @@ def _local_kickoff(f) -> tuple[datetime | None, str]:
 @app.get("/health")
 def health():
     return {"ok": True}
+
+
+@app.get("/api/health")
+def api_health():
+    """Liveness plus what a deploy actually needs to know.
+
+    Under /api/ so it answers through the same proxy as everything else - the
+    nginx config forwards only /api/, which left the bare /health unreachable
+    from outside - and so the container healthcheck has a real route to probe.
+    Always 200 while the process is up: a slow warm-up or a missing key is
+    reported rather than treated as down, or an orchestrator would restart the
+    service in a loop during the eleven-second model fit.
+    """
+    return {"ok": True, "warm": _warm["done"], "warm_at": _warm["at"],
+            "data": _data_status(),
+            "database": db.healthy(), "live": live.status()}
+
+
+def _data_status() -> dict | None:
+    """Which match data actually loaded, so a half-mounted deploy is visible.
+
+    The loader never fails when the European pool is missing: it merges the
+    bundled African and Nordic divisions with an empty mount, serves fifteen
+    divisions instead of thirty, and every endpoint answers 200. That is the
+    failure this exists to surface. It reads the engine already loaded and
+    never triggers a load, so a health check during warm-up stays instant.
+    """
+    p = _p
+    if p is None:
+        return None
+    have = set(p.df["Div"].unique())
+    return {"root": ROOT, "divisions": len(have), "matches": int(len(p.df)),
+            "missing_top10": [d for d in leagues.TOP_10 if d not in have],
+            "fixtures_feed": os.path.exists(os.path.join(ROOT, "fixtures.csv"))}
 
 
 def _group_order(code: str) -> tuple:
@@ -402,33 +460,22 @@ def pairings(div: str, days: int = 2, limit: int = 60):
 
 
 @app.get("/api/live")
-def api_live(date: str | None = None):
-    """Latest live/FT scores from the provider. Empty when no key is set.
+def api_live():
+    """The latest live scores - read from the database, never from the provider.
 
-    Joins against nothing here: the PWA keys the rows by (home, away) after
-    normalising names, so a mismatch simply means no live chip, never a wrong
-    score on a fixture.
+    Every open client polls this once a minute. If it could trigger a provider
+    call, a few open tabs would spend API-Football's free day in minutes - and
+    the version this replaces did exactly that, 38 leagues one request each, so
+    one cold page load was nearly four times the 10-a-minute cap. It now only
+    reads the last snapshot; one background refresher decides when the
+    provider is worth a request. See service/live.py.
+
+    The PWA still matches rows on both team names, so a mismatch means no
+    live chip, never a score on the wrong fixture. League search, which used
+    to be a public route here that any visitor could spend quota with, is now
+    the admin-only `predict.py live-leagues`.
     """
-    d = date or datetime.now(EAT).strftime("%Y-%m-%d")
-    fetcher = live_fetcher()
-    if fetcher is None:
-        return {"provider": "api-football", "enabled": False,
-                "date": d, "matches": [],
-                "note": "set LIVE_API_KEY to enable live scores"}
-    matches = fetcher.fetch_date(d)
-    return {"provider": "api-football", "enabled": True,
-            "date": d, "matches": matches,
-            "leagues": len(fetcher.leagues)}
-
-
-@app.get("/api/live/leagues")
-def api_live_leagues(search: str):
-    """Provider-side league search, to fix DIV_LEAGUES / LIVE_LEAGUES ids."""
-    fetcher = live_fetcher()
-    if fetcher is None:
-        return {"enabled": False,
-                "note": "set LIVE_API_KEY to enable live scores"}
-    return {"enabled": True, "results": live.find_leagues(search, fetcher.key)}
+    return live.read()
 
 
 @app.get("/api/card")

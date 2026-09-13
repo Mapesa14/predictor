@@ -1,0 +1,11 @@
+# Runtime. Pinned to what the test suite actually ran against.
+fastapi==0.141.1
+uvicorn==0.52.4
+numpy==2.5.2
+pandas==3.0.5
+scipy==1.18.1
+reportlab==5.0.1
+SQLAlchemy==2.0.52
+# Only needed when DATABASE_URL points at Postgres; harmless otherwise. The
+# binary wheel avoids needing libpq and a compiler in the image.
+psycopg[binary]==3.3.5
