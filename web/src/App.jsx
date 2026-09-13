@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { api, apiBase, setApiBase, isNative, nativePlatform } from "./api.js";
 
 function useHash() {
   const [hash, setHash] = useState(window.location.hash || "#/");
@@ -67,7 +68,7 @@ function useLive(interval = 60000) {
   useEffect(() => {
     let alive = true;
     const poll = () =>
-      fetch("/api/live")
+      fetch(api("/api/live"))
         .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
         .then((d) => alive && setLive(d))
         .catch(() => alive && setLive((prev) => prev || { enabled: false }));
@@ -142,7 +143,7 @@ function Slate() {
   const [lg, setLg] = useState("");
   const [conf, setConf] = useState("");
   const live = useLive();
-  const { loading, data, error } = useFetch("/api/slate?days=" + days);
+  const { loading, data, error } = useFetch(api("/api/slate?days=" + days));
 
   if (loading) return <p className="note">Loading the slate…</p>;
   if (error) return <p className="note">Can't reach the service: {error}. Is it running on :8000?</p>;
@@ -287,7 +288,7 @@ function tierOf(s) {
 function PairingGroup({ g }) {
   const [open, setOpen] = useState(false);
   const { loading, data, error } = useFetch(
-    open ? "/api/pairings?div=" + encodeURIComponent(g.code) + "&limit=60" : null);
+    open ? api("/api/pairings?div=" + encodeURIComponent(g.code) + "&limit=60") : null);
   return (
     <div className="pairgroup">
       <div className="shead">
@@ -410,8 +411,8 @@ function Card() {
   const ko = params.get("ko") || "";
   const lg = params.get("lg") || "";
   const [neutral, setNeutral] = useState(false);
-  const url = "/api/card?home=" + encodeURIComponent(home) + "&away=" + encodeURIComponent(away) +
-    "&div=" + encodeURIComponent(div) + (neutral ? "&neutral=1" : "");
+  const url = api("/api/card?home=" + encodeURIComponent(home) + "&away=" + encodeURIComponent(away) +
+    "&div=" + encodeURIComponent(div) + (neutral ? "&neutral=1" : ""));
   const { loading, data, error } = useFetch(url);
 
   return (
@@ -621,7 +622,7 @@ function TopNav({ hash }) {
     ["#/", "Today"],
     ["#/market", "Model vs market"],
     ["#/club", "Club"],
-    ["#/record", "Record", "soon"],
+    ["#/record", "Record"],
     ["#/fixtures", "My fixtures", "soon"],
   ];
   return (
@@ -639,7 +640,7 @@ function TopNav({ hash }) {
 
 function MarketScreen() {
   const live = useLive();
-  const { loading, data, error } = useFetch("/api/slate?days=3");
+  const { loading, data, error } = useFetch(api("/api/slate?days=3"));
   if (loading) return <p className="note">Loading the slate…</p>;
   if (error) return <p className="note">Can't reach the service: {error}</p>;
 
@@ -735,9 +736,9 @@ function MarketScreen() {
 }
 
 function ClubScreen() {
-  const lg = useFetch("/api/leagues");
+  const lg = useFetch(api("/api/leagues"));
   const [div, setDiv] = useState("E0");
-  const { loading, data, error } = useFetch("/api/clubs?div=" + div);
+  const { loading, data, error } = useFetch(api("/api/clubs?div=" + div));
   const codes = lg.data ? [...new Set(lg.data.map((d) => d.code))].sort() : [];
   if (lg.loading) return <p className="note">Loading leagues…</p>;
   return (
@@ -832,7 +833,7 @@ const dp = (v, n = 4) => (v === null || v === undefined || Number.isNaN(v)
   ? "—" : Number(v).toFixed(n));
 
 function RecordScreen() {
-  const { loading, data, error } = useFetch("/api/record");
+  const { loading, data, error } = useFetch(api("/api/record"));
   const empty = data && !data.published;
 
   return (
@@ -1013,12 +1014,108 @@ function MyFixturesScreen() {
   );
 }
 
+function SettingsScreen() {
+  const [value, setValue] = useState(apiBase());
+  const [saved, setSaved] = useState(false);
+  const [probe, setProbe] = useState(null);
+
+  async function check() {
+    setProbe("checking");
+    try {
+      const r = await fetch((value.replace(/\/+$/, "") || "") + "/api/leagues");
+      setProbe(r.ok ? "ok" : "HTTP " + r.status);
+    } catch (e) {
+      setProbe(e.message || "unreachable");
+    }
+  }
+
+  return (
+    <div>
+      <header className="masthead">
+        <div>
+          <h1><b>Settings</b></h1>
+          <p className="sub">Where this app looks for the prediction service</p>
+        </div>
+        <div className="tools"><Theme /></div>
+      </header>
+      <TopNav hash={window.location.hash} />
+
+      <section className="soonbox">
+        <p className="note">
+          The phone app and the service are separate things: the app is on the
+          handset, the model runs on a server. If this is wrong or empty, every
+          screen will sit empty however good the model is.
+        </p>
+        <label className="fieldlabel" htmlFor="apibase">Service address</label>
+        <input id="apibase" className="field" value={value} spellCheck="false"
+          autoCapitalize="off" autoCorrect="off" inputMode="url"
+          placeholder="https://api.example.com"
+          onChange={(e) => { setValue(e.target.value); setSaved(false); setProbe(null); }} />
+        <div className="btnrow">
+          <button className="btn" onClick={check}>Test</button>
+          <button className="btn primary" onClick={() => setSaved(setApiBase(value))}>
+            Save
+          </button>
+        </div>
+        {probe === "checking" && <p className="note">Testing…</p>}
+        {probe === "ok" && <p className="chainok">✓ The service answered.</p>}
+        {probe && probe !== "ok" && probe !== "checking" &&
+          <p className="chainbad">⚠ No answer: {probe}</p>}
+        {saved && <p className="note">Saved. Pull any screen again to reload.</p>}
+        <p className="note">
+          It must be <b>https</b> on a phone — Android blocks plain http by
+          default, and the request will fail with no visible error. Leave it
+          empty in a browser, where the app and the service share an origin.
+        </p>
+        <p className="note">
+          Running as: <b>{isNative ? nativePlatform() : "web"}</b>
+          {apiBase() ? <> · currently <code>{apiBase()}</code></> : <> · using this page's origin</>}
+        </p>
+      </section>
+      <p><a className="back" href="#/">← Today's fixtures</a></p>
+    </div>
+  );
+}
+
+/** Android's hardware back button.
+ *
+ * Without this the button closes the app from any screen, which feels broken:
+ * on a phone, back means "up one screen" and only exits from the top. A hash
+ * route deeper than the root goes back in history; the root lets the system
+ * do what it would anyway (minimise). */
+function useHardwareBack() {
+  useEffect(() => {
+    if (!isNative || !window.Capacitor || !window.Capacitor.Plugins ||
+        !window.Capacitor.Plugins.App) return;
+    const app = window.Capacitor.Plugins.App;
+    const handle = app.addListener("backButton", ({ canGoBack }) => {
+      const atRoot = !window.location.hash || window.location.hash === "#/";
+      if (atRoot || !canGoBack) app.exitApp();
+      else window.history.back();
+    });
+    return () => { Promise.resolve(handle).then((h) => h && h.remove()); };
+  }, []);
+}
+
 export default function App() {
   const hash = useHash();
+  useHardwareBack();
+  useEffect(() => {
+    // Lets the stylesheet add status-bar and gesture-bar padding only where
+    // there is a status bar to avoid.
+    if (isNative) document.documentElement.classList.add("native");
+    // A phone build with no service address is not broken, it is unconfigured
+    // - but it looks identical: every screen simply empty. Send the first
+    // launch to Settings instead of to a blank list of fixtures.
+    if (isNative && !apiBase() && !window.location.hash.startsWith("#/settings")) {
+      window.location.hash = "#/settings";
+    }
+  }, []);
   if (hash.startsWith("#/market")) return <MarketScreen />;
   if (hash.startsWith("#/club")) return <ClubScreen />;
   if (hash.startsWith("#/card")) return <Card />;
   if (hash.startsWith("#/record")) return <RecordScreen />;
+  if (hash.startsWith("#/settings")) return <SettingsScreen />;
   if (hash.startsWith("#/fixtures")) return <MyFixturesScreen />;
   return <Slate />;
 }

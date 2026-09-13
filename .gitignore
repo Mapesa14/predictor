@@ -10,3 +10,14 @@ web/node_modules/
 scratch/*.json
 scratch/*.html
 scratch/*.bak
+
+# Capacitor: generated native project state. The android/ project itself is
+# tracked (it carries icons, manifest and config edits), but not its build
+# output, local SDK path or the web assets copied in at sync time.
+web/android/.gradle/
+web/android/build/
+web/android/app/build/
+web/android/local.properties
+web/android/.idea/
+web/android/app/src/main/assets/public/
+web/android/capacitor-cordova-android-plugins/

@@ -1,0 +1,17 @@
+{
+  "appId": "tz.co.predictor.app",
+  "appName": "Football Predictor",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": false
+  },
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0d1117"
+    }
+  }
+}

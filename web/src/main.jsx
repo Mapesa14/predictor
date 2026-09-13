@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
+import { isNative } from "./api.js";
 import "./index.css";
 
 /** One bad field should cost one screen, not the whole app.
@@ -35,7 +36,11 @@ createRoot(document.getElementById("root")).render(
   <Boundary><App /></Boundary>
 );
 
-if ("serviceWorker" in navigator) {
+// The service worker is what makes the *web* app installable and offline-
+// capable. In the native shell it is worse than useless: Capacitor already
+// serves the bundle from the device, so a second cache layer only adds a way
+// for a stale build to survive an app update.
+if ("serviceWorker" in navigator && !isNative) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("/sw.js").catch(() => {});
   });

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Football Predictor</string>
+    <string name="title_activity_main">Football Predictor</string>
+    <string name="package_name">tz.co.predictor.app</string>
+    <string name="custom_url_scheme">tz.co.predictor.app</string>
+</resources>

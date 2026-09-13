@@ -329,3 +329,47 @@ details.sum table { margin: 0 0 8px; }
   --okbg: #16301c; --okink: #7fd394;
   --badbg: #33150f; --badink: #f0a18e;
 }
+
+/* ---- native shell ---------------------------------------------------------
+   Only applied inside Capacitor (App adds .native to <html>). The WebView is
+   edge-to-edge, so without this the masthead sits under the status bar and the
+   footer under the gesture bar. env() is zero on a device with neither. */
+html.native body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+/* A phone is touched, not clicked: give the tab strip and links real targets. */
+html.native .tabs a { padding: 10px 12px; }
+html.native .btn { min-height: 44px; }
+
+.fieldlabel {
+  display: block;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin: 14px 0 6px;
+}
+.field {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.btnrow { display: flex; gap: 8px; margin-top: 12px; }
+.btn {
+  font: inherit;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+.btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
