@@ -828,28 +828,165 @@ function NotBuiltYet({ title, sub, children }) {
   );
 }
 
+const dp = (v, n = 4) => (v === null || v === undefined || Number.isNaN(v)
+  ? "—" : Number(v).toFixed(n));
+
 function RecordScreen() {
+  const { loading, data, error } = useFetch("/api/record");
+  const empty = data && !data.published;
+
   return (
-    <NotBuiltYet title={<>Track <b>record</b></>}
-      sub="Every prediction, published before kick-off — not built yet">
-      <p className="note">
-        This page will list every forecast as it was published before kick-off,
-        never edited afterwards, with realised accuracy and calibration by
-        competition. It is deliberately empty rather than showing a record
-        assembled after the fact, which would prove nothing.
+    <div>
+      <header className="masthead">
+        <div>
+          <h1>Track <b>record</b></h1>
+          <p className="sub">Every prediction, published before kick-off, never edited after</p>
+        </div>
+        <div className="tools"><Theme /></div>
+      </header>
+      <TopNav hash={window.location.hash} />
+
+      {loading && <p className="note">Settling the record…</p>}
+      {error && <p className="note">Record failed to load: {error}</p>}
+
+      {empty && (
+        <section className="soonbox">
+          <p className="note">
+            Nothing published yet. The record only counts predictions written
+            down before kick-off, so it starts filling from the next time the
+            slate is frozen — there is no way to backfill it, which is the
+            point.
+          </p>
+        </section>
+      )}
+
+      {data && data.published > 0 && (
+        <>
+          <p className="note">
+            <b>{data.published}</b> predictions published, <b>{data.settled}</b> settled,{" "}
+            <b>{data.pending}</b> still to play. First published{" "}
+            {String(data.first_published || "").slice(0, 10)}.
+          </p>
+
+          {/* The integrity claim, checkable rather than asserted. Every row is
+              hashed against the one before it, so an edit anywhere shows up. */}
+          <p className={data.chain && data.chain.ok ? "chainok" : "chainbad"}>
+            {data.chain && data.chain.ok
+              ? "✓ Hash chain intact across all " + data.chain.rows +
+                " rows — nothing has been edited, reordered or removed since publication."
+              : "⚠ " + (data.chain ? data.chain.note : "chain could not be checked")}
+          </p>
+
+          {data.settled === 0 ? (
+            <section className="soonbox">
+              <p className="note">
+                Nothing has finished yet. Accuracy appears here as results land;
+                until then there is only the list of what was called in advance.
+              </p>
+            </section>
+          ) : (
+            <>
+              <Sum title="Accuracy so far">
+                <table className="markets">
+                  <tbody>
+                    <Row label="Matches settled" cells={[String(data.overall.n)]} />
+                    <Row label="Log-loss (1X2)" cells={[dp(data.overall.logloss_1x2)]} />
+                    <Row label="RPS" cells={[dp(data.overall.rps)]} />
+                    <Row label="Favourite came in" cells={[pct(data.overall.acc)]} />
+                    {data.market && data.market.n_with_price && <>
+                      <Row label={"Closing price, log-loss (" + data.market.n_with_price + " rows)"}
+                        cells={[dp(data.market.logloss_market)]} />
+                      <Row label="Model on those same rows"
+                        cells={[dp(data.market.logloss_model_same_rows)]} />
+                    </>}
+                  </tbody>
+                </table>
+                <p className="note">
+                  Lower log-loss is better. The model is measured against the
+                  price on exactly the rows that carry a price — scoring the
+                  model on everything and the price on its own subset is the
+                  oldest way to flatter a model.
+                </p>
+              </Sum>
+
+              {data.calibration.length > 0 && (
+                <Sum title="Calibration — did 70% mean 70%?">
+                  <table className="markets">
+                    <thead><tr><th>Band</th><th>N</th><th>Said</th><th>Happened</th></tr></thead>
+                    <tbody>
+                      {data.calibration.map((b) => (
+                        <tr key={b.bin}>
+                          <td>{b.bin}</td><td>{b.n}</td>
+                          <td>{pct(b.predicted)}</td><td>{pct(b.realised)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  <p className="note">
+                    On the favourite in each match. The two right-hand columns
+                    should track each other; where they don't, the model is
+                    over- or under-confident in that band.
+                  </p>
+                </Sum>
+              )}
+
+              {data.by_league.length > 0 && (
+                <Sum title="By competition">
+                  <table className="markets">
+                    <thead><tr><th>League</th><th>N</th><th>Log-loss</th><th>Hit</th></tr></thead>
+                    <tbody>
+                      {data.by_league.map((r) => (
+                        <tr key={r.div}>
+                          <td>{r.league}</td><td>{r.n}</td>
+                          <td>{dp(r.logloss)}</td><td>{pct(r.acc)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </Sum>
+              )}
+
+              <Sum title="The last 40 settled">
+                <table className="markets">
+                  <thead>
+                    <tr><th>Kick-off</th><th>Match</th><th>Called</th><th>Result</th></tr>
+                  </thead>
+                  <tbody>
+                    {data.recent.map((m, i) => (
+                      <tr key={i}>
+                        <td>{String(m.kickoff).slice(0, 16).replace("T", " ")}</td>
+                        <td>{m.home} v {m.away}</td>
+                        <td>{m.pick} @ {pct(m.p[m.pick])}{m.predicted_score ? " · " + m.predicted_score : ""}</td>
+                        {/* The two calls are scored separately on purpose. A
+                            match can land the exact scoreline while the 1X2
+                            pick misses — the most likely single score is not
+                            the most likely outcome — and one tick covering
+                            both would read as a contradiction. */}
+                        <td>
+                          {m.score}{" "}
+                          <span className={m.correct ? "hit" : "miss"}>
+                            1X2 {m.correct ? "✓" : "✗"}
+                          </span>
+                          {m.exact && <span className="hit"> · score ✓</span>}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </Sum>
+            </>
+          )}
+        </>
+      )}
+
+      <p className="note" style={{ marginTop: 20 }}>
+        For context, on historical data: over 5,948 walk-forward matches the
+        engine scores 0.9739 log-loss alone and 0.9568 blended with the closing
+        price, against the price's own 0.9558. It matches the market; it does
+        not beat it.
       </p>
-      <p className="note">
-        It needs one thing first: a store that writes each day's slate at
-        publication time and never rewrites it. Until that exists, the honest
-        answer is that there is no track record to show.
-      </p>
-      <p className="note">
-        What is already measured, on historical data, is in the project README:
-        over 5,948 walk-forward matches the engine scores 0.9739 log-loss alone
-        and 0.9568 blended with the closing price, against the price's own
-        0.9558. It matches the market; it does not beat it.
-      </p>
-    </NotBuiltYet>
+      <p><a className="back" href="#/">← Today's fixtures</a></p>
+    </div>
   );
 }
 

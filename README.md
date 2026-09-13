@@ -273,6 +273,41 @@ and the service knows it; every other source is read as UK time, which would
 put a 16:00 Dar es Salaam kick-off on the card at 18:00. The site publishes no
 half-time scores, so TZ1 cards carry no half-time markets and say why.
 
+## The public record
+
+Backtests are self-reported. The record is not: it writes down what was
+predicted **before** kick-off and never touches it again.
+
+```bash
+python predict.py record-publish      # run this on a schedule, before the games
+python predict.py record              # predicted, then what happened
+python predict.py record-verify       # has the file been edited?
+```
+
+Three rules make it worth something:
+
+- **A fixture that has already started is refused.** So is one with no
+  published kick-off time — without a time there is nothing for the prediction
+  to predate. Both refusals are counted and reported, never silent.
+- **No row is ever rewritten.** Publishing again adds new fixtures and leaves
+  existing ones exactly as they were, so the command is safe on a cron.
+- **Outcomes are never stored.** Settlement is a join against the same results
+  the engine fits on, recomputed on every read, so there is no outcome column
+  anyone could quietly correct.
+
+Every row carries a SHA-256 of itself chained to the hash of the row before it.
+Edit a probability, delete a loss, reorder the file, and `record-verify` names
+the first row that breaks — "unedited" is checkable rather than promised.
+
+The store is an append-only CSV at `data/record/predictions.csv`. In a
+deployment set `RECORD_ROOT` to a persistent volume: it is the one piece of
+state that cannot be regenerated if it is lost.
+
+Accuracy comes from the same `backtest.score` and `backtest.calibration` the
+walk-forward evaluation uses, and the model is compared to the closing price
+only on the rows that carry one — scoring the model on everything and the price
+on its own subset is the oldest way to flatter a model.
+
 Once fixtures are loaded, `slate` predicts the lot:
 
 ```bash

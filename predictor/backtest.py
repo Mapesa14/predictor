@@ -165,6 +165,11 @@ def score(bt: pd.DataFrame) -> dict:
         "logloss_btts": _binary_ll(bt["pBTTS"], bt["btts"]),
         "brier_ou25": float(np.mean((bt["pOver25"] - bt["over25"]) ** 2)),
     }
+    # A frame need not carry prices at all: the published record holds the
+    # de-vigged probabilities instead, and African divisions have no price in
+    # the first place. Missing columns mean no market comparison, not an error.
+    if not {"AvgH", "AvgD", "AvgA"}.issubset(bt.columns):
+        return out
     odds = bt[["AvgH", "AvgD", "AvgA"]].apply(pd.to_numeric, errors="coerce")
     ok = odds.notna().all(axis=1)
     if ok.sum() > 50:

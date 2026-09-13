@@ -305,3 +305,27 @@ details.sum table { margin: 0 0 8px; }
   max-width: 64ch;
 }
 .soonbox .note + .note { margin-top: 10px; }
+
+/* The record's integrity line: the one claim on the page that can be checked
+   rather than believed, so it gets to look like a verdict. */
+.chainok, .chainbad {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 12px 0 18px;
+}
+.chainok { background: var(--okbg, #e7f3e9); color: var(--okink, #1f6b31); }
+.chainbad { background: var(--badbg, #fbe9e7); color: var(--badink, #a32b16); }
+.markets td.hit { color: var(--okink, #1f6b31); }
+.markets td.miss { color: var(--ink3); }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --okbg: #16301c; --okink: #7fd394;
+    --badbg: #33150f; --badink: #f0a18e;
+  }
+}
+:root[data-theme="dark"] {
+  --okbg: #16301c; --okink: #7fd394;
+  --badbg: #33150f; --badink: #f0a18e;
+}

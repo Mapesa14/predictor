@@ -54,6 +54,52 @@ def label(div):
     return f"{m[0]} ({m[1]})" if m else div
 
 
+# ---------------------------------------------------------- kick-off times
+# What zone a source publishes kick-off times in. football-data.co.uk quotes
+# everything in UK time, which is why that is the default; the Tanzanian
+# overlay comes from the league's own site and is already East Africa Time.
+#
+# This lives here, with the rest of the per-division metadata, because the web
+# service and the CLI both need it and must agree. They did not, once: the
+# service converted while the CLI read the raw feed time, so the same fixture
+# was 16:00 on the card and 18:00 in the record.
+SOURCE_TZ = {"TZ1": "Africa/Dar_es_Salaam"}
+DEFAULT_SOURCE_TZ = "Europe/London"
+DISPLAY_TZ = "Africa/Dar_es_Salaam"
+
+
+def source_tz(div):
+    return SOURCE_TZ.get(div, DEFAULT_SOURCE_TZ)
+
+
+def kickoff(div, date, time=None, to_tz=DISPLAY_TZ):
+    """A fixture's kick-off as a tz-aware datetime, or None if no time is set.
+
+    `date` is the fixture date, `time` the published "HH:MM" in that
+    competition's own zone. No time means no kick-off, and the caller gets None
+    rather than a silent midnight: an invented time is worse than none at all,
+    especially in a record that claims to predate the match.
+    """
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    import pandas as pd
+
+    if date is None or time is None:
+        return None
+    if isinstance(time, float) and pd.isna(time):
+        return None
+    d = pd.Timestamp(date)
+    if pd.isna(d):
+        return None
+    try:
+        t = pd.to_datetime(str(time), format="%H:%M").time()
+    except (TypeError, ValueError):
+        return None
+    src = datetime.combine(d.date(), t, tzinfo=ZoneInfo(source_tz(div)))
+    return src.astimezone(ZoneInfo(to_tz))
+
+
 # Divisions that promote and relegate into each other, strongest first. Only
 # ladders where both rungs are actually loaded can transfer ratings.
 LADDERS = [["E0", "E1", "E2", "E3", "EC"]]

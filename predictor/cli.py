@@ -8,7 +8,7 @@ from datetime import datetime
 
 import pandas as pd
 
-from . import backtest, fixtures, leagues, loader, model, report
+from . import backtest, fixtures, leagues, loader, market, model, report
 from .engine import (DEFAULT_EDGE_SCALE, DEFAULT_GOAL_SHRINK,
                      DEFAULT_MARKET_WEIGHT, DEFAULT_WEIGHTS,
                      DEFAULT_XI, Predictor)
@@ -28,6 +28,14 @@ def _jsonable(s):
         else:
             out[k] = v
     return out
+
+
+def _pred(a) -> Predictor:
+    """A Predictor built from the shared flags."""
+    return Predictor(a.data, xi=a.xi, as_of=_asof(a),
+                     goal_shrink=a.goal_shrink, edge_scale=a.edge_scale,
+                     use_ladder=not a.no_ladder, weights=_weights(a),
+                     market_weight=a.market_weight)
 
 
 def _split_match(args):
@@ -821,6 +829,118 @@ def cmd_refresh_tanzania(a):
           % (tanzania.DIV, written.get(tanzania.DIV, 0), r["latest_result"]))
 
 
+def _slate_rows(p, days: int):
+    """The coming fixtures, shaped exactly as the service's slate shapes them.
+
+    Only fixtures with a published kick-off: the record's whole claim is that
+    the prediction predates the match, and without a time there is nothing to
+    predate.
+    """
+    rows = []
+    for d in p.divs:
+        sched = p.schedule(d, days)
+        if not len(sched) or "Date" not in sched.columns:
+            continue
+        real = sched[sched["Date"].notna()]
+        if "Time" not in real.columns:
+            continue
+        real = real[real["Time"].notna()]
+        for _, f in real.iterrows():
+            odds = f if pd.notna(f.get("AvgH")) else None
+            try:
+                s = p.predict(f["HomeTeam"], f["AwayTeam"], d,
+                              allow_new=True, odds=odds)
+            except SystemExit:
+                continue
+            i, j, _ = s["correct_scores"][0]
+            r = s["result"]
+            mk = None
+            if odds is not None:
+                try:
+                    q = market.devig([float(f["AvgH"]), float(f["AvgD"]),
+                                      float(f["AvgA"])], "shin")
+                    mk = {"1": float(q[0]), "X": float(q[1]), "2": float(q[2])}
+                except (ValueError, TypeError, KeyError):
+                    mk = None
+            ko = leagues.kickoff(d, f["Date"], f.get("Time"))
+            if ko is None:
+                continue
+            rows.append({
+                "div": d, "league": leagues.name(d),
+                "date": ko.isoformat(),
+                "home": s["home"], "away": s["away"],
+                "p": {"1": r["H"], "X": r["D"], "2": r["A"]},
+                "market": mk,
+                "o25": s["totals"][2.5]["over"], "btts": s["btts"]["yes"],
+                "score": "%d-%d" % (i, j),
+                "xg": "%.2f-%.2f" % (s["exp_home"], s["exp_away"]),
+            })
+    return rows
+
+
+def cmd_record_publish(a):
+    """Freeze the coming fixtures into the append-only record."""
+    from . import record
+    p = _pred(a)
+    rows = _slate_rows(p, a.days)
+    r = record.publish(rows, a.repo)
+    print("wrote %d new prediction(s) to %s" % (r["written"], r["file"]))
+    print("   already recorded  %d" % r["already_recorded"])
+    print("   refused, started  %d" % r["refused_already_started"])
+    print("   refused, no time  %d" % r["refused_no_kickoff"])
+    print("   total on file     %d" % r["total"])
+    print("\nA row is never rewritten. Re-run this as often as you like.")
+
+
+def cmd_record(a):
+    """Show the record: what was predicted, and what happened."""
+    from . import record
+    p = _pred(a)
+    s = record.summary(a.repo, p.df)
+    if not s["published"]:
+        print("Nothing published yet. Run `record-publish` before kick-off; "
+              "the record only counts what was written down first.")
+        return
+    print("Published %d  ·  settled %d  ·  pending %d  ·  since %s"
+          % (s["published"], s["settled"], s["pending"],
+             (s["first_published"] or "")[:10]))
+    c = s["chain"]
+    print("Chain: %s (%s)" % ("intact" if c["ok"] else "BROKEN", c["note"]))
+    o, m = s["overall"], s["market"]
+    if o:
+        print("\n%-22s %8s %8s %8s" % ("", "log-loss", "RPS", "hit rate"))
+        print("%-22s %8.4f %8.4f %7.1f%%"
+              % ("model", o["logloss_1x2"], o["rps"], 100 * o["acc"]))
+        if m:
+            print("%-22s %8.4f %8.4f %7.1f%%   (on the %d rows with a price)"
+                  % ("closing price", m["logloss_market"], m["rps_market"],
+                     100 * m["acc_market"], m["n_with_price"]))
+            print("%-22s %8.4f" % ("model, same rows",
+                                   m["logloss_model_same_rows"]))
+    if s["by_league"]:
+        print("\n%-6s%-26s%7s%10s%9s" % ("Code", "League", "N", "log-loss", "Hit"))
+        print("-" * 60)
+        for r in s["by_league"][:15]:
+            print("%-6s%-26s%7d%10.4f%8.1f%%"
+                  % (r["div"], r["league"][:25], r["n"], r["logloss"],
+                     100 * r["acc"]))
+    if s["calibration"]:
+        print("\nCalibration on the favourite")
+        print("%-16s%7s%12s%11s" % ("Band", "N", "Predicted", "Realised"))
+        print("-" * 46)
+        for b in s["calibration"]:
+            print("%-16s%7d%11.1f%%%10.1f%%"
+                  % (b["bin"], b["n"], 100 * b["predicted"],
+                     100 * b["realised"]))
+
+
+def cmd_record_verify(a):
+    from . import record
+    r = record.verify(a.repo)
+    print(("OK   " if r["ok"] else "FAIL ") + r["note"])
+    print("%d row(s) on file" % r["rows"])
+
+
 def cmd_leagues(a):
     df = loader.load(a.data)
     g = df.groupby("Div").agg(matches=("Date", "size"), first=("Date", "min"),
@@ -982,6 +1102,29 @@ def build_parser():
         os.path.dirname(__file__), os.pardir, "data", "leagues"),
                    help="where rebuilt league CSVs go (default data/leagues)")
     s.set_defaults(func=cmd_refresh_tanzania)
+
+    def record_args(sp):
+        sp.add_argument("--repo", default=os.path.join(
+            os.path.dirname(__file__), os.pardir),
+            help="where data/record lives (default: the repo)")
+
+    s = sub.add_parser("record-publish",
+                       help="freeze the coming fixtures into the append-only "
+                            "public record (only ones yet to kick off)")
+    record_args(s)
+    s.add_argument("--days", type=int, default=2,
+                   help="how far ahead to publish (default 2)")
+    s.set_defaults(func=cmd_record_publish)
+
+    s = sub.add_parser("record",
+                       help="the public record: predicted, then what happened")
+    record_args(s)
+    s.set_defaults(func=cmd_record)
+
+    s = sub.add_parser("record-verify",
+                       help="check the record's hash chain for tampering")
+    record_args(s)
+    s.set_defaults(func=cmd_record_verify)
 
     s = sub.add_parser("table", help="team attack and defence ratings")
     common(s)

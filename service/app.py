@@ -14,7 +14,7 @@ import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from predictor import leagues, market
+from predictor import leagues, market, record
 from predictor.engine import Predictor
 from service import live
 
@@ -185,32 +185,17 @@ def _jsonable(v):
     return v
 
 
-# What zone a kick-off time is published in, per source. football-data.co.uk
-# quotes everything in UK time, which is why that is the default; the Tanzanian
-# overlay comes from the league's own site and is already East Africa Time.
-# Converting an EAT time as if it were UK time put tonight's Pamba Jiji kick-off
-# at 18:00 instead of 16:00 - two hours late, for the one league the user can
-# actually walk to.
-SOURCE_TZ = {"TZ1": EAT}
-DEFAULT_SOURCE_TZ = ZoneInfo("Europe/London")
-
-
 def _local_kickoff(f) -> tuple[datetime | None, str]:
-    """Kick-off in East Africa Time, from the source's date (and time if set)."""
+    """Kick-off in East Africa Time, and its label. See `leagues.kickoff`.
+
+    The per-competition source zone lives in the library, not here, so the CLI
+    that writes the public record converts identically.
+    """
     if pd.isna(f.get("Date")):
         return None, ""
-    d = f["Date"]
-    if f.get("Time"):
-        try:
-            t = pd.to_datetime(f["Time"], format="%H:%M").time()
-        except (TypeError, ValueError):
-            t = None
-    else:
-        t = None
-    if t is None:
-        return None, d.strftime("%a %d %b")
-    src = SOURCE_TZ.get(f.get("Div"), DEFAULT_SOURCE_TZ)
-    dt = datetime.combine(d, t, tzinfo=src).astimezone(EAT)
+    dt = leagues.kickoff(f.get("Div"), f["Date"], f.get("Time"))
+    if dt is None:
+        return None, pd.Timestamp(f["Date"]).strftime("%a %d %b")
     return dt, dt.strftime("%a %d %b %H:%M")
 
 
@@ -338,6 +323,39 @@ def _compute_slate(days: int, league: str | None):
     pair_groups.sort(key=lambda g: _group_order(g["code"]))
     return {"generated": datetime.now(EAT).isoformat(),
             "groups": groups, "pairings": pair_groups, "skipped": skipped}
+
+
+# ---- the public record ------------------------------------------------------
+# Where the record lives. Deliberately not ROOT: the results pool is a data
+# directory that gets re-downloaded and swapped, and the record has to outlive
+# that. RECORD_ROOT overrides it, which is what a deployment wants - the record
+# is the one piece of state that must sit on a persistent volume and survive
+# every redeploy, because it cannot be regenerated.
+REPO = os.environ.get("RECORD_ROOT") or \
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+@app.post("/api/record/publish")
+def record_publish(days: int = 2):
+    """Freeze today's slate into the record. Only fixtures still to kick off.
+
+    Safe to call repeatedly - a fixture already recorded is skipped, and one
+    that has started is refused. Meant for a scheduler a few times a day.
+    """
+    slate = _cached_slate(days, None)
+    rows = [m for g in slate["groups"] for m in g["matches"]]
+    return record.publish(rows, REPO)
+
+
+@app.get("/api/record")
+def record_summary():
+    """What was predicted, what happened, and whether the file was touched."""
+    return _jsonable(record.summary(REPO, predictor().df))
+
+
+@app.get("/api/record/verify")
+def record_verify():
+    return record.verify(REPO)
 
 
 @app.get("/api/pairings")

@@ -9,3 +9,4 @@ fixtures.csv
 web/node_modules/
 scratch/*.json
 scratch/*.html
+scratch/*.bak
