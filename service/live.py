@@ -28,7 +28,10 @@ Four rules keep it inside the budget:
      database, against a rolling 24-hour window. Rolling rather than calendar
      day because the provider's reset time is not verified here, and a rolling
      window cannot overspend whenever the reset actually falls. Charging on
-     attempt covers the undocumented case of failed calls also counting.
+     attempt covers the undocumented case of failed calls also counting. The
+     one exception is a call that provably never left the machine - a DNS,
+     connection or certificate failure - which is recorded but not charged,
+     so a broken network cannot spend the day (see `_never_sent`).
 
 When the provider signals a limit - HTTP 429, or a 200 whose `errors` object
 mentions one - the refresher stops for an hour rather than retrying into a
@@ -54,6 +57,8 @@ from __future__ import annotations
 
 import json
 import os
+import socket
+import ssl
 import threading
 import time
 import urllib.error
@@ -62,7 +67,7 @@ import urllib.request
 from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 
-from sqlalchemy import create_engine, func, select, text
+from sqlalchemy import create_engine, func, or_, select, text
 
 from predictor import db
 
@@ -94,10 +99,21 @@ LOCK_ID = 4711_2027                     # distinct from the record's lock
 STATUS_LIVE = {"1H", "HT", "2H", "ET", "BT", "P", "INT", "LIVE"}
 STATUS_FT = {"FT", "AET", "PEN"}
 
-# API-Football league ids per product division. The European top tens are
-# confident; the deep-African ids are best guesses. A wrong id only means a
-# missing chip - the frontend matches on both team names, so it can never put
-# a score on the wrong fixture. Correct them with `predict.py live-leagues`.
+# API-Football league ids per product division, every one checked against the
+# provider's own /leagues list (1,244 leagues) on 2026-09-13 by country and
+# exact league name.
+#
+# The first real poll showed why that check was needed. 19 of the ids that
+# were here before pointed at the wrong competition: Tanzania's 509 was a South
+# African cup, so Tanzanian live scores could never have appeared; the CAF
+# Champions League and Confederation Cup were Belgian amateur divisions;
+# Portugal's second tier was Thai League 2; Algeria was Vietnam's V.League 1;
+# Rwanda was Finland's Veikkausliiga. Norway, Austria, Czechia and Ukraine had
+# no id at all. A wrong id cannot put a score on the wrong fixture - the chip
+# matches both team names - but it silently drops the right league and fills
+# the snapshot with ones we do not carry.
+#
+# Re-check with `predict.py live-leagues <country>` if a league stops showing.
 DIV_LEAGUES = {
     "E0": 39, "E1": 40, "E2": 41, "E3": 42, "EC": 43,
     "D1": 78, "D2": 79,
@@ -105,16 +121,19 @@ DIV_LEAGUES = {
     "F1": 61, "F2": 62,
     "SP1": 140, "SP2": 141,
     "N1": 88, "N2": 89,
-    "B1": 144, "B2": 584,
+    "B1": 144, "B2": 145,              # Challenger Pro League
     "T1": 203,
     "G1": 197,
-    "SC0": 179, "SC1": 180, "SC2": 181, "SC3": 182,
-    "P1": 94, "P2": 297,
-    "TZ1": 509,
-    "EG1": 233, "DZ1": 340, "MA1": 200, "ZA1": 368,
-    "NG1": 157, "GH1": 265, "KE1": 1085, "UG1": 424,
-    "ZM1": 948, "RW1": 244,
-    "CAFCC": 691, "CAFCL": 690,
+    "SC0": 179, "SC1": 180, "SC2": 183, "SC3": 184,
+    "P1": 94, "P2": 95,                # Segunda Liga
+    "NOR1": 103, "AUT1": 218, "CZE1": 345, "UKR1": 333,
+    "TZ1": 567,                        # Ligi kuu Bara - the NBC Premier League
+    "EG1": 233, "DZ1": 186, "MA1": 200, "ZA1": 288,
+    "NG1": 399, "GH1": 570, "KE1": 276, "UG1": 585,
+    "ZM1": 400,
+    "RW1": 405,                        # listed as "National Soccer League",
+                                       # the only Rwandan league the provider has
+    "CAFCL": 12, "CAFCC": 20,
 }
 
 
@@ -145,12 +164,41 @@ def _naive_utc(dt):
 
 
 # ------------------------------------------------------------- transport
+_ctx = None
+
+
+def _tls_context() -> ssl.SSLContext:
+    """Certificate verification against certifi's bundle - never switched off.
+
+    Found on the first real run with a key. Python here builds certificate
+    chains from the Windows store through OpenSSL, which chose an expired
+    cross-signed certificate for API-Football's host and refused it
+    ("certificate has expired"), while curl, using the OS's own verifier,
+    found the valid chain. certifi ships a current Mozilla bundle without those
+    expired cross-signs, and it is the same bundle on every platform, so the
+    Linux container verifies exactly as a developer's laptop does.
+
+    Without certifi the system default is used, and verification is still on.
+    Turning it off is not an option: this request carries the API key, and an
+    unverified connection hands it to anyone in the middle.
+    """
+    global _ctx
+    if _ctx is None:
+        try:
+            import certifi
+            _ctx = ssl.create_default_context(cafile=certifi.where())
+        except ImportError:
+            _ctx = ssl.create_default_context()
+    return _ctx
+
+
 def http_get(url: str, headers: dict, timeout: int = 20):
     """(status, headers, body). An HTTP error is a response, not an exception:
     a 429 carries exactly the headers that say how much quota is left."""
     req = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
+        with urllib.request.urlopen(req, timeout=timeout,
+                                    context=_tls_context()) as r:
             return r.status, {k.lower(): v for k, v in r.headers.items()}, r.read()
     except urllib.error.HTTPError as e:
         hdrs = {k.lower(): v for k, v in e.headers.items()} if e.headers else {}
@@ -198,6 +246,38 @@ def _short(errors) -> str:
     return json.dumps(errors)[:200] if errors else ""
 
 
+def _never_sent(exc) -> bool:
+    """True only when the request provably never reached the provider.
+
+    A DNS lookup that failed, a refused connection, or a TLS certificate that
+    did not verify all happen before one byte of the HTTP request is written -
+    so before the key leaves the machine, and before the provider can count
+    anything. Those are not charged to the budget.
+
+    Found on the first real run: Python rejected API-Football's certificate
+    chain while curl accepted it, and every retry during a match was charged. A
+    few hours of that would have spent the whole day and kept live scores off
+    for 24 hours after the network recovered.
+
+    Deliberately narrow. A timeout is not here - it can fire after the request
+    went out, and the provider may have billed it - and neither is any other
+    SSL error, which can happen mid-response.
+    """
+    reason = getattr(exc, "reason", None)
+    inner = reason if isinstance(reason, BaseException) else exc
+    return isinstance(inner, (ssl.SSLCertVerificationError, socket.gaierror,
+                              ConnectionRefusedError))
+
+
+def _describe(exc) -> str:
+    """The failure's real cause, for the ledger. URLError hides it in `reason`.
+
+    Never includes request headers, so it cannot carry the key."""
+    reason = getattr(exc, "reason", None)
+    inner = reason if isinstance(reason, BaseException) else exc
+    return ("%s: %s" % (type(inner).__name__, inner))[:200]
+
+
 # ----------------------------------------------------------------- storage
 _TABLES = [db.provider_calls, db.live_snapshot]
 
@@ -211,9 +291,14 @@ class LiveStore:
 
     # -- ledger
     def spent_since(self, since: datetime) -> int:
+        """Requests that count against the plan: every attempt except those
+        that provably never reached the provider (see `_never_sent`). Those
+        still count as attempts for spacing, so failing is not a licence to
+        retry every tick."""
         t = db.provider_calls
         q = (select(func.count()).select_from(t)
-             .where(t.c.provider == PROVIDER, t.c.called_at >= since))
+             .where(t.c.provider == PROVIDER, t.c.called_at >= since,
+                    or_(t.c.note.is_(None), ~t.c.note.like("unsent:%"))))
         with self.engine.connect() as c:
             return int(c.execute(q).scalar() or 0)
 
@@ -491,10 +576,13 @@ def _call(store: LiveStore, now: datetime, transport) -> dict:
     try:
         status, headers, raw = transport(BASE + endpoint, _headers(), 20)
     except Exception as e:
+        unsent = _never_sent(e)
         store.finish_call(call_id, None, False, None, None,
-                          "network: %s" % type(e).__name__)
-        return {"called": True, "ok": False,
-                "reason": "network error: %s" % type(e).__name__}
+                          ("unsent: " if unsent else "network: ") + _describe(e))
+        return {"called": not unsent, "ok": False,
+                "reason": ("never reached the provider, not charged: "
+                           if unsent else "network error, charged: ")
+                          + _describe(e)}
 
     hdr = {str(k).lower(): v for k, v in (headers or {}).items()}
     rem_day = _to_int(hdr.get("x-ratelimit-requests-remaining"))
@@ -563,6 +651,9 @@ def status(store=None, now=None) -> dict:
         snap = store.latest_snapshot()
         return {"enabled": True, "budget": budget(store, now),
                 "last_attempt": last.isoformat() + "Z" if last else None,
+                # What the last call actually came back with. The first real
+                # failure was only diagnosable by querying the ledger by hand.
+                "last_result": store._latest(db.provider_calls.c.note),
                 "snapshot_age_s": int((now - snap["fetched_at"]).total_seconds())
                 if snap else None,
                 "refresher": bool(_refresher and _refresher.is_alive())}
@@ -604,6 +695,10 @@ def find_leagues(query: str, store=None, now=None, transport=None,
     spend the quota with it. It still goes through the ledger and still
     refuses when the budget is gone, because it spends the same requests.
     """
+    if not configured():
+        # Sending an empty key header gets "Invalid API key" back and is still
+        # a request on the ledger - which is exactly how it was first found.
+        raise RuntimeError("LIVE_API_KEY is not set - nothing was sent")
     store = store or default_store()
     now = _naive_utc(now) or utcnow()
     b = budget(store, now)
@@ -614,8 +709,14 @@ def find_leagues(query: str, store=None, now=None, transport=None,
         raise RuntimeError("live budget spent for the rolling 24 hours")
     endpoint = "/leagues?" + urllib.parse.urlencode({"search": query})
     call_id = store.begin_call(endpoint, now)
-    status_code, headers, raw = (transport or http_get)(BASE + endpoint,
-                                                        _headers(), 20)
+    try:
+        status_code, headers, raw = (transport or http_get)(BASE + endpoint,
+                                                            _headers(), 20)
+    except Exception as e:
+        store.finish_call(call_id, None, False, None, None,
+                          ("unsent: " if _never_sent(e) else "network: ")
+                          + _describe(e))
+        raise RuntimeError("league search failed: %s" % _describe(e))
     hdr = {str(k).lower(): v for k, v in (headers or {}).items()}
     body = _json(raw)
     errors = body.get("errors") if isinstance(body, dict) else None

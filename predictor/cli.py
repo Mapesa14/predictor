@@ -13,6 +13,11 @@ from .engine import (DEFAULT_EDGE_SCALE, DEFAULT_GOAL_SHRINK,
                      DEFAULT_MARKET_WEIGHT, DEFAULT_WEIGHTS,
                      DEFAULT_XI, Predictor)
 
+from . import envfile  # noqa: E402
+
+# A local .env, for running without docker compose; real variables still win.
+envfile.load()
+
 # FOOTBALL_DATA is what the service reads; SOCCER_DATA was the CLI's own name
 # for the same folder. Honour both, service's first, so a container that sets
 # one variable does not leave the CLI pointing at a Windows download path.
@@ -1016,9 +1021,56 @@ def cmd_live_status(a):
                                               b["minute_limit"]))
     print("cooling down until    %s" % (b["cooling_down_until"] or "-"))
     print("last attempt          %s" % (s["last_attempt"] or "never"))
+    print("last result           %s" % (s.get("last_result") or "-"))
     print("snapshot age          %s" % ("%ds" % s["snapshot_age_s"]
                                           if s["snapshot_age_s"] is not None
                                           else "no snapshot yet"))
+
+
+def cmd_tips(a):
+    """The coming clear picks: short list, long list, and what to avoid."""
+    from . import tips
+    p = _pred(a)
+    out = tips.build(_slate_rows(p, a.days))
+
+    def show(title, rows, dc=False):
+        print("\n%s (%d)" % (title, len(rows)))
+        if not rows:
+            print("   none")
+            return
+        for c in rows:
+            ko = (c["kickoff"] or "")[:16].replace("T", " ")
+            match = (str(c["home"]) + " v " + str(c["away"]))[:42]
+            price = ("  price %3.0f%%" % (100 * c["market_p"])
+                     if c["market_p"] is not None else "  unpriced")
+            extra = ("  double chance %3.0f%%" % (100 * c["p_double_chance"])
+                     if dc and c["p_double_chance"] else "")
+            print("   %-16s %-42s %-22s %3.0f%%%s%s"
+                  % (ko, match, ("-> " + str(c["side"]))[:22], 100 * c["p"],
+                     price, extra))
+
+    show("BANKERS - short list: favourite 75%+, price agrees", out["bankers"],
+         dc=True)
+    acca = out["accumulator"]
+    if acca:
+        dc = acca["all_win_double_chance"]
+        print("   all %d winning together: %.0f%%%s"
+              % (acca["legs"], 100 * acca["all_win"],
+                 "   (as double chances: %.0f%%)" % (100 * dc) if dc else ""))
+    show("LONG LIST - favourite 65%+, price agrees", out["long_list"])
+    show("UNPRICED - no price to check against, not yet benchmarked",
+         out["unpriced"])
+    show("AVOID - the model and the price back different sides", out["avoid"])
+    for n in out["notes"]:
+        print("\nnote: " + n)
+    e = tips.EVIDENCE
+    print("\nMeasured on %s." % e["source"])
+    print("   75%%+ favourites won %.1f%%, but flat-stake return was %+.1f%%: "
+          "hit rate is not profit." % (100 * e["bankers"]["hit"],
+                                       100 * e["bankers"]["flat_return"]))
+    print("   A week's top 4 all won in %.1f%% of weeks; top 8 in %.1f%%."
+          % (100 * e["accumulator_all_won"]["4"],
+             100 * e["accumulator_all_won"]["8"]))
 
 
 def cmd_leagues(a):
@@ -1211,6 +1263,12 @@ def build_parser():
                             "its hash chain (run once when switching)")
     record_args(s)
     s.set_defaults(func=cmd_record_migrate)
+
+    s = sub.add_parser("tips",
+                       help="clear picks: short list, long list, what to avoid")
+    s.add_argument("--days", type=int, default=2,
+                   help="how far ahead to look (default 2)")
+    s.set_defaults(func=cmd_tips)
 
     s = sub.add_parser("live-leagues",
                        help="look up API-Football league ids "

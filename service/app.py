@@ -14,9 +14,15 @@ import pandas as pd
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from predictor import db, leagues, market, record
-from predictor.engine import Predictor
-from service import live
+from predictor import envfile
+
+# Before anything reads the environment: a local .env supplies LIVE_API_KEY and
+# friends when running without docker compose. Real variables still win.
+envfile.load()
+
+from predictor import db, leagues, market, record, tips  # noqa: E402
+from predictor.engine import Predictor  # noqa: E402
+from service import live  # noqa: E402
 
 ROOT = os.environ.get("FOOTBALL_DATA", r"D:\Downloads July 2026\SoccerData")
 EAT = ZoneInfo("Africa/Dar_es_Salaam")
@@ -409,6 +415,29 @@ def record_publish(days: int = 2):
 def record_summary():
     """What was predicted, what happened, and whether the file was touched."""
     return _jsonable(record.summary(REPO, predictor().df))
+
+
+@app.get("/api/tips")
+def api_tips(days: int = 2):
+    """Clear picks from the slate: a short list, a long list, and what to avoid.
+
+    Built from the same cached slate the fixtures screen uses, so a tip can
+    never disagree with its own card. Carries the measurement behind the rules
+    and how those rules have done on the published record, because a list of
+    "strong" picks with no evidence attached is exactly the tipster page this
+    product exists not to be. See predictor/tips.py.
+    """
+    slate = _cached_slate(days, None)
+    rows = [m for g in slate.get("groups", []) for m in g.get("matches", [])]
+    out = tips.build(rows)
+    try:
+        settled = record.settle(record.load(REPO), predictor().df)
+        out["record"] = tips.record_performance(settled)
+    except Exception as e:
+        out["record"] = {"error": "%s: %s" % (type(e).__name__, e)}
+    out["days"] = days
+    out["generated"] = slate.get("generated")
+    return _jsonable(out)
 
 
 @app.get("/api/record/verify")

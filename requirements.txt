@@ -9,3 +9,5 @@ SQLAlchemy==2.0.52
 # Only needed when DATABASE_URL points at Postgres; harmless otherwise. The
 # binary wheel avoids needing libpq and a compiler in the image.
 psycopg[binary]==3.3.5
+# Current CA bundle for verifying the live-score provider; see service/live.py.
+certifi==2026.07.22

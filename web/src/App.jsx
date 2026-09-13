@@ -217,7 +217,7 @@ function Slate() {
               </div>
             )}
             {g.matches.length > 0 && (
-              <table>
+              <table className="scrollx">
                 <thead>
                   <tr>
                     <th>Kick-off</th>
@@ -308,7 +308,7 @@ function PairingGroup({ g }) {
       {open && error && <p className="note">Couldn't rate these: {error}</p>}
       {open && data && (
         <>
-          <table>
+          <table className="scrollx">
             <thead>
               <tr><th>Match</th><th className="num">1</th><th className="num">X</th><th className="num">2</th></tr>
             </thead>
@@ -625,6 +625,7 @@ function TopNav({ hash }) {
     ["#/", "Today"],
     ["#/market", "Model vs market"],
     ["#/club", "Club"],
+    ["#/tips", "Tips"],
     ["#/record", "Record"],
     ["#/fixtures", "My fixtures", "soon"],
   ];
@@ -692,7 +693,7 @@ function MarketScreen() {
             <h2>Gap on the model's pick</h2>
             <div className="rule" />
           </div>
-          <table>
+          <table className="scrollx">
             <thead>
               <tr>
                 <th>Match</th>
@@ -769,7 +770,7 @@ function ClubScreen() {
           </div>
           {data.note && <p className="note">{data.note}</p>}
           {data.clubs.length > 0 && (
-            <table>
+            <table className="scrollx">
               <thead>
                 <tr>
                   <th></th>
@@ -951,7 +952,7 @@ function RecordScreen() {
               )}
 
               <Sum title="The last 40 settled">
-                <table className="markets">
+                <table className="markets scrollx">
                   <thead>
                     <tr><th>Kick-off</th><th>Match</th><th>Called</th><th>Result</th></tr>
                   </thead>
@@ -1014,6 +1015,195 @@ function MyFixturesScreen() {
         In the meantime, any two clubs can be rated from the <a href="#/club">Club</a> page.
       </p>
     </NotBuiltYet>
+  );
+}
+
+const pct1 = (p) => (p === null || p === undefined ? "—" : (p * 100).toFixed(1) + "%");
+
+function TipRow({ c, dc }) {
+  const card = "#/card?home=" + encodeURIComponent(c.home) + "&away=" +
+    encodeURIComponent(c.away) + "&div=" + encodeURIComponent(c.div || "") +
+    "&lg=" + encodeURIComponent(c.league || "");
+  return (
+    <tr>
+      <td>{c.kickoff_label || String(c.kickoff || "").slice(0, 16).replace("T", " ")}</td>
+      <td>
+        <a href={card}>{c.home} v {c.away}</a>
+        <div className="tipleague">{c.league}</div>
+      </td>
+      <td><b>{c.side}</b></td>
+      <td>{pct(c.p)}</td>
+      {dc && <td>{c.p_double_chance != null ? pct(c.p_double_chance) : "—"}</td>}
+      <td>{c.market_p != null ? pct(c.market_p) : "—"}</td>
+    </tr>
+  );
+}
+
+function TipTable({ rows, dc }) {
+  if (!rows || !rows.length) return <p className="note">None in this window.</p>;
+  return (
+    <div className="tipwrap">
+      <table className="markets">
+        <thead>
+          <tr>
+            <th>Kick-off</th><th>Match</th><th>Pick</th><th>Model</th>
+            {dc && <th>Double chance</th>}<th>Price</th>
+          </tr>
+        </thead>
+        <tbody>{rows.map((c, i) => <TipRow key={i} c={c} dc={dc} />)}</tbody>
+      </table>
+    </div>
+  );
+}
+
+function TipRecord({ label, r }) {
+  if (!r || !r.n) return <li>{label}: nothing settled yet.</li>;
+  return (
+    <li>
+      {label}: {r.n} settled, {pct1(r.hit)} won
+      {r.enough ? "" : " — too few to judge yet"}
+    </li>
+  );
+}
+
+/** Clear picks, with the evidence attached.
+ *
+ * The rules and the numbers behind them live in predictor/tips.py. The screen
+ * leads with what these picks are not, because the failure it has to prevent
+ * is a reader seeing "84%" and building an accumulator on it. */
+function TipsScreen() {
+  const [days, setDays] = useState(2);
+  const { loading, data, error } = useFetch(api("/api/tips?days=" + days));
+  const ev = data && data.evidence;
+  const acca = data && data.accumulator;
+
+  return (
+    <div>
+      <header className="masthead">
+        <div>
+          <h1>Clear <b>picks</b></h1>
+          <p className="sub">The strongest calls in the window — chosen by rule, with the evidence attached</p>
+        </div>
+        <div className="tools"><Theme /></div>
+      </header>
+      <TopNav hash={window.location.hash} />
+
+      <div className="tools" style={{ marginTop: 10 }}>
+        {[1, 2, 3].map((d) => (
+          <button key={d} className={"chip" + (d === days ? " on" : "")}
+            onClick={() => setDays(d)}>
+            {d === 1 ? "Today" : d + " days"}
+          </button>
+        ))}
+      </div>
+
+      <p className="tipwarn">
+        These are the model's most confident calls, not sure things. They win
+        often because they are short-priced favourites, and over thousands of
+        matches they have not beaten the bookmaker. Hit rate is not profit.
+      </p>
+
+      {loading && <p className="note">Choosing picks…</p>}
+      {error && <p className="note">Tips failed to load: {error}</p>}
+
+      {data && (
+        <>
+          {data.notes && data.notes.length > 0 && (
+            <ul className="tipnotes">
+              {data.notes.map((n, i) => <li key={i}>{n}</li>)}
+            </ul>
+          )}
+
+          <section className="tipsec">
+            <h2>Bankers — short list</h2>
+            <p className="why">
+              Favourite at 75% or more, and the closing price backs the same
+              side. Up to 8, at most 3 from one league, never padded to fill.
+              {ev && <> Historically {pct1(ev.bankers.hit)} of these won — {ev.bankers.hit_by_season.map(pct1).join(", ")} across three seasons.</>}
+            </p>
+            <TipTable rows={data.bankers} dc />
+            {acca && (
+              <p className="acca">
+                All {acca.legs} winning together: <b>{pct(acca.all_win)}</b>
+                {acca.all_win_double_chance != null && <> · as double chances: <b>{pct(acca.all_win_double_chance)}</b></>}
+              </p>
+            )}
+            {ev && (
+              <p className="why">
+                A shortlist is not a safe accumulator: the week's 4 most
+                confident picks all won in {pct1(ev.accumulator_all_won["4"])} of
+                weeks, and 8 in {pct1(ev.accumulator_all_won["8"])}. As double
+                chances, 4 all came in {pct1(ev.double_chance_all_won["4"])} of weeks.
+              </p>
+            )}
+          </section>
+
+          <section className="tipsec">
+            <h2>Long list</h2>
+            <p className="why">
+              Favourite at 65% or more, price agreeing, up to 20.
+              {ev && <> The week's top 10 won {pct1(ev.long_list.top10_hit)} on average and the top 20 {pct1(ev.long_list.top20_hit)} — but the worst week's top 10 managed {pct1(ev.long_list.worst_week_top10)}.</>}
+            </p>
+            <TipTable rows={data.long_list} />
+          </section>
+
+          <section className="tipsec">
+            <h2>Unpriced — not yet benchmarked</h2>
+            <p className="why">
+              No closing price to check the pick against, and no track record
+              yet — mostly Tanzanian and African fixtures. Shown for coverage,
+              kept out of the lists above until the public record shows how
+              they do.
+            </p>
+            <TipTable rows={data.unpriced} />
+          </section>
+
+          <section className="tipsec">
+            <h2>Avoid</h2>
+            <p className="why">
+              The model and the closing price back different sides.
+              {ev && <> Measured, the model's pick won {pct1(ev.disagree_with_price.hit)} of {ev.disagree_with_price.n} such fixtures and lost {pct1(-ev.disagree_with_price.flat_return)} of stake.</>} Listed
+              so you can see them, not so you can back them.
+            </p>
+            <TipTable rows={data.avoid} />
+          </section>
+
+          <section className="tipsec">
+            <h2>How the rule has done since publishing began</h2>
+            <p className="why">
+              Applied to every prediction in the public record, not to the
+              lists as they were shown — so it cannot be tuned after the fact.
+            </p>
+            {data.record && data.record.error ? (
+              <p className="note">Record unavailable: {data.record.error}</p>
+            ) : (
+              <ul className="evidence">
+                <TipRecord label="Banker rule" r={data.record && data.record.bankers} />
+                <TipRecord label="Long-list rule" r={data.record && data.record.long_list} />
+                <TipRecord label="Unpriced" r={data.record && data.record.unpriced} />
+                <TipRecord label="Avoid (the model's pick)" r={data.record && data.record.avoid} />
+              </ul>
+            )}
+          </section>
+
+          {ev && (
+            <section className="tipsec">
+              <h2>Where the numbers come from</h2>
+              <p className="why">
+                {ev.source}. Flat-stake return on the banker rule was{" "}
+                {(ev.bankers.flat_return * 100).toFixed(1)}%, and on the long-list
+                rule {(ev.long_list.flat_return * 100).toFixed(1)}%.
+              </p>
+            </section>
+          )}
+        </>
+      )}
+
+      <p className="note" style={{ marginTop: 24, color: "var(--ink3)" }}>
+        18+ only · Gambling can be addictive. Play responsibly.
+      </p>
+      <p><a className="back" href="#/">← Today's fixtures</a></p>
+    </div>
   );
 }
 
@@ -1117,6 +1307,7 @@ export default function App() {
   if (hash.startsWith("#/market")) return <MarketScreen />;
   if (hash.startsWith("#/club")) return <ClubScreen />;
   if (hash.startsWith("#/card")) return <Card />;
+  if (hash.startsWith("#/tips")) return <TipsScreen />;
   if (hash.startsWith("#/record")) return <RecordScreen />;
   if (hash.startsWith("#/settings")) return <SettingsScreen />;
   if (hash.startsWith("#/fixtures")) return <MyFixturesScreen />;

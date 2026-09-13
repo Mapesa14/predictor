@@ -373,3 +373,48 @@ html.native .btn { min-height: 44px; }
   cursor: pointer;
 }
 .btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* ---- tips ------------------------------------------------------------------
+   The warning is styled to be read, not skimmed past: the screen exists to show
+   strong picks, and its one job beyond that is to stop "84%" being read as
+   "safe to put in an accumulator". */
+.tipwarn {
+  background: var(--paper2);
+  border-left: 3px solid var(--badink, #a32b16);
+  padding: 10px 14px;
+  margin: 14px 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.tipnotes { margin: 0 0 14px; padding-left: 18px; color: var(--ink3); font-size: 13px; }
+.tipsec { margin: 26px 0; }
+.tipsec h2 {
+  font-size: 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.tipsec .why { color: var(--ink3); font-size: 13px; line-height: 1.5; margin: 0 0 10px; }
+.tipwrap { overflow-x: auto; }
+.tipleague { font-size: 11px; color: var(--ink3); }
+.acca { font-size: 14px; margin: 12px 0 4px; }
+.evidence { padding-left: 18px; font-size: 14px; }
+.evidence li { margin: 4px 0; }
+
+/* The tab strip scrolls within itself on a narrow screen. A sixth tab (Tips)
+   pushed it 38px past a 375px phone, and because the strip is on every screen,
+   every page scrolled sideways. Each tab also keeps to one line now, instead of
+   "Model vs market" shrinking and wrapping onto three. */
+.tabs { overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a { flex: 0 0 auto; white-space: nowrap; }
+
+/* Wide tables scroll inside themselves on a narrow screen. Two screens had no
+   scroll container at all: the fixtures tables ran 374-423px in a 375px phone,
+   depending on the day's team names, and the model-vs-market table was 596px.
+   The page itself must never scroll sideways. display:block makes the table
+   its own scroll box without a wrapper element; its rows still lay out as one
+   anonymous table, so columns stay aligned. Desktop is untouched. */
+@media (max-width: 640px) {
+  table.scrollx { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}

@@ -235,3 +235,114 @@ def test_league_search_refuses_when_the_budget_is_gone(store):
     with pytest.raises(RuntimeError):
         live.find_leagues("tanzania", store=store, now=NOW, transport=fake)
     assert fake.calls == []
+
+
+# ---------------------------------------------------- failures never sent
+# Found on the first real run with a key: Python rejected API-Football's TLS
+# certificate chain (curl accepted it), and every retry during a match was
+# charged to the budget.
+
+def cert_error():
+    import ssl
+    import urllib.error
+    return urllib.error.URLError(ssl.SSLCertVerificationError(
+        1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: "
+           "certificate has expired"))
+
+
+def test_a_certificate_failure_is_not_charged(store):
+    """TLS verification fails before any HTTP is written: the key never left
+    the machine and the provider cannot have counted it."""
+    r = live.refresh(store, NOW, IN_PLAY, Fake(raise_=cert_error()))
+    assert r["called"] is False and "not charged" in r["reason"]
+    assert store.spent_since(NOW - timedelta(hours=1)) == 0
+
+
+def test_a_dns_failure_is_not_charged(store):
+    import socket
+    import urllib.error
+    err = urllib.error.URLError(socket.gaierror(11001, "getaddrinfo failed"))
+    live.refresh(store, NOW, IN_PLAY, Fake(raise_=err))
+    assert store.spent_since(NOW - timedelta(hours=1)) == 0
+
+
+def test_a_timeout_is_charged_because_it_may_have_been_sent(store):
+    import socket
+    r = live.refresh(store, NOW, IN_PLAY, Fake(raise_=socket.timeout("read timed out")))
+    assert r["called"] is True
+    assert store.spent_since(NOW - timedelta(hours=1)) == 1
+
+
+def test_a_broken_network_cannot_drain_the_budget(store):
+    """Two hundred failed polls across a long match day leave the budget whole,
+    so live scores work the moment the network does."""
+    fake = Fake(raise_=cert_error())
+    t = NOW
+    for _ in range(200):
+        live.refresh(store, t, [t.replace(tzinfo=timezone.utc) - timedelta(minutes=30)],
+                     fake)
+        t += timedelta(seconds=live.MIN_INTERVAL + 1)
+    assert len(fake.calls) == 200
+    assert store.spent_since(t - timedelta(days=2)) == 0
+    assert live.budget(store, t)["available"] == live.DAILY_LIMIT - live.RESERVE
+
+
+def test_failures_are_still_spaced_out(store):
+    """Not charged is not free to hammer: the polling floor still applies."""
+    fake = Fake(raise_=cert_error())
+    live.refresh(store, NOW, IN_PLAY, fake)
+    live.refresh(store, NOW + timedelta(seconds=30), IN_PLAY, fake)
+    assert len(fake.calls) == 1
+
+
+def test_the_ledger_records_why_not_just_what(store):
+    """'network: URLError' was all the first real failure said."""
+    from predictor import db
+    live.refresh(store, NOW, IN_PLAY, Fake(raise_=cert_error()))
+    note = store._latest(db.provider_calls.c.note)
+    assert note.startswith("unsent:") and "certificate has expired" in note
+    assert "test-key-not-real" not in note
+
+
+
+def test_the_provider_is_only_ever_called_over_verified_tls():
+    """The request carries the API key. An unverified connection would hand it
+    to anyone in the middle, so verification must never be switched off to
+    make a certificate problem go away."""
+    import ssl
+    ctx = live._tls_context()
+    assert ctx.verify_mode == ssl.CERT_REQUIRED
+    assert ctx.check_hostname is True
+
+
+
+# ------------------------------------------------------------ league ids
+def test_every_division_we_carry_has_a_live_league_id():
+    """Norway, Austria, Czechia and Ukraine were carried with no id at all."""
+    from predictor import leagues
+    missing = sorted(set(leagues.LEAGUES) - set(live.DIV_LEAGUES))
+    assert missing == []
+
+
+def test_no_two_divisions_share_a_provider_id():
+    ids = list(live.DIV_LEAGUES.values())
+    assert len(ids) == len(set(ids))
+
+
+def test_the_ids_that_were_wrong_stay_right():
+    """Checked against the provider's own list on 2026-09-13. 509, the old
+    Tanzanian id, was a South African cup; 690 and 691, the old CAF ids, were
+    Belgian amateur divisions."""
+    assert live.DIV_LEAGUES["TZ1"] == 567
+    assert live.DIV_LEAGUES["CAFCL"] == 12
+    assert live.DIV_LEAGUES["CAFCC"] == 20
+    assert live.DIV_LEAGUES["P2"] == 95
+
+
+def test_league_search_refuses_without_a_key(store, monkeypatch):
+    monkeypatch.delenv("LIVE_API_KEY", raising=False)
+    fake = Fake()
+    with pytest.raises(RuntimeError):
+        live.find_leagues("tanzania", store=store, now=NOW, transport=fake)
+    assert fake.calls == []
+    assert store.spent_since(NOW - timedelta(hours=1)) == 0

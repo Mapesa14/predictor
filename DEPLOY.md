@@ -67,13 +67,27 @@ Frontend  ─►  /api/live  ─►  database snapshot
 4. **Every attempt is charged before it is sent**, against a rolling 24-hour
    window with 10 requests held in reserve. A 429, or a 200 whose `errors`
    mention a limit, stops polling for an hour instead of retrying into a block.
-   The provider's own remaining-quota header is trusted over our count.
+   The provider's own remaining-quota header is trusted over our count. A call
+   that provably never left the machine — a DNS, connection or certificate
+   failure — is logged but not charged, so a broken network cannot spend the
+   day and keep live scores off for 24 hours after it recovers.
 
-The honest trade-off: on the free tier, live scores update every **3 to 7
-minutes**, not in real time. The refresher spreads what is left of the budget
-across what is left of the day's play — a quiet evening polls every 3 minutes,
-a full Saturday stretches to about 7 so the budget lasts until the last final
-whistle. Real-time scores need a paid plan; raise `LIVE_DAILY_LIMIT` to match.
+If live scores stay empty while a match is on, `python predict.py live-status`
+shows the last call's result. One cause seen in practice: Python on Windows
+rejected API-Football's certificate as expired while curl accepted it, because
+OpenSSL built the chain through an expired cross-signed certificate in the OS
+store. The service now verifies against the `certifi` bundle from
+`requirements.txt` — with verification still on. Never switch it off to make a
+certificate error go away: the request carries your key.
+
+The honest trade-off: on the free tier, live scores are never real time. The
+refresher spreads what is left of the rolling 24-hour budget across all the
+play still ahead in that window, so how often it polls depends on the
+schedule. Measured on a full Sunday (2026-09-13: 45 fixtures, 13 hours of play
+ahead, 84 requests left) it polled every **9 minutes**. A quiet day with one or
+two matches sits at the 3-minute floor; a budget running low stretches toward
+the 30-minute ceiling rather than going dark. Real-time scores need a paid
+plan; raise `LIVE_DAILY_LIMIT` to match.
 
 To find a league's API-Football id (spends one request):
 
