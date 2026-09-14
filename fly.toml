@@ -1,0 +1,48 @@
+# Fly.io: one machine in Johannesburg - nearest to Dar es Salaam - one volume,
+# and the web app and the API on a single HTTPS address. See DEPLOY.md.
+#
+# The app name has to be unique across Fly; change it here if it is taken.
+app = "mapesa-predictor"
+primary_region = "jnb"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  # Everything writable lives on the volume mounted at /app/data.
+  FOOTBALL_DATA = "/app/data/soccer"
+  RECORD_ROOT = "/app"
+  PORT = "8000"
+  # The service maintains itself: football-data, the Tanzanian league site and
+  # publishing the record, first 15 minutes after boot and then every 6 hours.
+  AUTO_REFRESH_HOURS = "6"
+  AUTO_REFRESH_FIRST_MINUTES = "15"
+  # LIVE_API_KEY is a secret, not an env var: set it with `fly secrets set`.
+
+[mounts]
+  source = "predictor_data"
+  destination = "/app/data"
+  initial_size = "1gb"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  # Never sleep. A stopped machine polls no live scores, publishes no record
+  # and refreshes no data - and every wake would refit thirty divisions.
+  auto_stop_machines = "off"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    grace_period = "90s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/api/health"
+
+[[vm]]
+  # The warm service measured 166 MB resident; 256 MB leaves no headroom for
+  # the model fit or the first-boot download running beside it.
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1

@@ -1,0 +1,5 @@
+# Files that run inside Linux containers keep LF endings even on a Windows
+# checkout. With core.autocrlf on, git would otherwise write CRLF, and a script
+# whose first line ends in a carriage return fails with "/bin/sh^M: not found".
+*.sh text eol=lf
+Dockerfile text eol=lf

@@ -63,29 +63,73 @@ def _data_stamp(root: str) -> float:
     return newest
 
 
-# Optional self-learning loop: with AUTO_REFRESH_HOURS set, the service pulls
-# football-data results + the fixtures feed on its own schedule (additive only,
-# guarded by the same no-shrink rule as the CLI). Off by default: a network
-# fetch inside a server is never a silent default here.
+# Self-maintenance for a deployed service. With AUTO_REFRESH_HOURS set, one
+# background loop does what a person runs by hand locally - football-data
+# results and fixtures, the Tanzanian league site, and publishing the record -
+# first AUTO_REFRESH_FIRST_MINUTES after boot, then every AUTO_REFRESH_HOURS.
+# Off by default: a network fetch inside a server is never a silent default
+# here, and the deployment config switches it on explicitly.
 AUTO_REFRESH_HOURS = float(os.environ.get("AUTO_REFRESH_HOURS", "0") or 0)
+AUTO_REFRESH_FIRST_MINUTES = float(
+    os.environ.get("AUTO_REFRESH_FIRST_MINUTES", "15") or 15)
+_HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _refresh_cycle() -> list:
+    """One pass of everything a deployed service must do for itself.
+
+    Locally these are CLI commands someone remembers to run. Deployed, nobody
+    does, and the fixtures, results, Tanzanian data and public record would all
+    go stale within days while every endpoint still answered 200. The steps
+    are independent: a football-data outage must not stop the Tanzanian
+    refresh, and neither may stop the record being published.
+    """
+    import time
+    from predictor import adapters, refresh, tanzania
+    done = []
+    if os.path.exists(os.path.join(ROOT, ".bootstrapping")):
+        done.append("football-data: skipped, the first-boot download is still running")
+    else:
+        try:
+            rows = refresh.refresh_all(ROOT, since=time.localtime().tm_year - 1)
+            done.append("football-data: %d updates" % len(rows))
+        except Exception as e:
+            done.append("football-data failed: %r" % e)
+    try:
+        r = tanzania.sync(_HERE)
+        adapters.build_csvs(os.path.join(_HERE, "data", "raw"),
+                            os.path.join(_HERE, "data", "leagues"))
+        done.append("tanzania: %d results, %d fixtures"
+                    % (r["results"], r["fixtures"]))
+    except Exception as e:
+        done.append("tanzania failed: %r" % e)
+    try:
+        slate = _cached_slate(2, None)
+        rows = [m for g in slate.get("groups", []) for m in g.get("matches", [])]
+        r = record.publish(rows, REPO)
+        done.append("record: %d new, %d on file" % (r["written"], r["total"]))
+    except Exception as e:
+        done.append("record failed: %r" % e)
+    print("refresh cycle: " + "; ".join(done), flush=True)
+    return done
 
 
 def _auto_refresh_loop():
     import time
-    from predictor import refresh
+    time.sleep(AUTO_REFRESH_FIRST_MINUTES * 60)
     while True:
-        time.sleep(AUTO_REFRESH_HOURS * 3600)
         try:
-            refresh.refresh_all(ROOT, since=time.localtime().tm_year - 1)
-            print("auto-refresh complete", flush=True)
+            _refresh_cycle()
         except Exception as e:                       # never take the server down
-            print("auto-refresh failed: %r" % e, flush=True)
+            print("refresh cycle crashed: %r" % e, flush=True)
+        time.sleep(AUTO_REFRESH_HOURS * 3600)
 
 
 if AUTO_REFRESH_HOURS > 0:
     import threading
     threading.Thread(target=_auto_refresh_loop, daemon=True).start()
-    print("auto-refresh every %.1fh" % AUTO_REFRESH_HOURS, flush=True)
+    print("refresh cycle every %.1fh, first in %.0f min"
+          % (AUTO_REFRESH_HOURS, AUTO_REFRESH_FIRST_MINUTES), flush=True)
 
 
 # ---- warm-up ---------------------------------------------------------------
@@ -566,3 +610,15 @@ def model_strength(fm):
         deff = fm.defence.get(t, avgd)
         out.append((t, att, deff, att / deff, fm.played.get(t, 0)))
     return out
+
+
+# ---- the web app ------------------------------------------------------------
+# Served by the same process, on the same address, as the API: one deployable,
+# one HTTPS URL - which is exactly the address the phone app needs - and no
+# CORS for the browser build. Mounted last, so every route above wins and only
+# what is left falls through to the built bundle. Skipped when there is no
+# bundle, as in a checkout that has never run `npm run build`.
+WEB_DIST = os.environ.get("WEB_DIST") or os.path.join(_HERE, "web", "dist")
+if os.path.isfile(os.path.join(WEB_DIST, "index.html")):
+    from fastapi.staticfiles import StaticFiles
+    app.mount("/", StaticFiles(directory=WEB_DIST, html=True), name="web")

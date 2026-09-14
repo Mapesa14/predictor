@@ -21,6 +21,39 @@ optional: the phone app is served from `https://localhost` inside its WebView
 and Android blocks cleartext, so a plain-http API gives you an app where every
 screen is empty.
 
+## Fly.io
+
+The deployed setup: one machine in Johannesburg (`jnb`, nearest to Dar es
+Salaam), one volume, and the web app and API on a single HTTPS address. The
+config is `fly.toml`.
+
+**You** do the account parts, once:
+
+```bash
+fly auth login                       # opens the browser
+fly apps create mapesa-predictor     # if taken, pick another and edit fly.toml
+fly secrets set LIVE_API_KEY=...     # or Secrets in the Fly dashboard
+```
+
+Then deploy — this builds on Fly's servers, so Docker is not needed locally:
+
+```bash
+fly deploy --remote-only
+```
+
+The first deploy creates a 1 GB volume. On first boot the service copies the
+bundled leagues, the Tanzanian data and the record onto it, and downloads the
+European pool from football-data.co.uk in the background. It answers at once,
+but for a minute or two `/api/health` lists the European leagues under
+`data.missing_top10`; when that list is empty, it is fully up. From then on it
+keeps itself current: 15 minutes after boot, and every 6 hours after that, it
+refreshes football-data, re-reads the Tanzanian league site and publishes the
+record. Each step carries on if another fails; `fly logs` shows each cycle.
+
+Check it: `https://<your-app>.fly.dev/api/health`, then open the address in a
+browser. For the phone app, build with that address:
+`VITE_API_BASE=https://<your-app>.fly.dev npm run mobile:sync`.
+
 ## Where the API-Football key goes
 
 On the **service**, as `LIVE_API_KEY`. Nowhere else.

@@ -1,17 +1,24 @@
 .git
 .venv
-web/node_modules
-web/android
-web/dist
+.env
+.claude
 scratch
 tests
-data/raw
 *.pdf
 __pycache__
 .pytest_cache
+
+# The web app ships as its built bundle only; sources, native projects and
+# node_modules stay out. web/dist used to be excluded, when nginx served it;
+# the API serves it now.
+web/*
+!web/dist
+
+# data/raw is deliberately NOT excluded. The Tanzanian rebuild regenerates the
+# league file from it; without it, a rebuild in production would keep only the
+# current season's overlay - 10 results in place of 730.
 
 # Local runtime state that must never be baked into an image.
 data/record/live.db
 data/record/live.db-*
 soccerdata
-.env
