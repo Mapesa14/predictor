@@ -153,7 +153,7 @@ function Slate() {
 
   const ql = q.trim().toLowerCase();
   const filter = (m) =>
-    (!lg || m.div === lg) &&
+    (!lg || (m.group || m.div) === lg) &&
     (!ql || m.home.toLowerCase().includes(ql) || m.away.toLowerCase().includes(ql)) &&
     confFilter(conf)(m);
 

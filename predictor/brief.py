@@ -311,15 +311,18 @@ def build(rows, out_path: str, window_label: str, generated: datetime,
         "spread across many scorelines while draws concentrate on 1-1.")
     notes.append(
         "<b>Data.</b> Results and prices from football-data.co.uk, free for "
-        "personal use. Austrian, Norwegian, Czech, Tanzanian and other African "
-        "results, and CAF and UEFA club competition results, from openfootball "
-        "(public domain). Kick-off times are converted from UK time to %s; "
-        "fixtures from outside the feed were checked against published "
-        "schedules." % tz)
+        "personal use. Austrian, Norwegian, Czech and African results, and CAF "
+        "and UEFA club competition results, from openfootball (public domain); "
+        "current Tanzanian results and fixtures from the league's own site, "
+        "ligikuu.co.tz. Kick-off times are converted to %s from the zone each "
+        "source publishes in - UK for the football-data feed, East Africa for "
+        "the Tanzanian league site." % tz)
     extra = meta.get("notes") or []
     if extra:
         story.append(Spacer(1, 4))
-        story.append(Paragraph("Coverage this weekend", st["h2"]))
+        # Not "this weekend": briefs are built for any window, and a Tuesday
+        # brief headed with the weekend reads as a stale template.
+        story.append(Paragraph("Coverage and caveats", st["h2"]))
         for n in extra:
             story.append(Paragraph(n, st["body"]))
             story.append(Spacer(1, 3))

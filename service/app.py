@@ -103,6 +103,17 @@ def _refresh_cycle() -> list:
                     % (r["results"], r["fixtures"]))
     except Exception as e:
         done.append("tanzania failed: %r" % e)
+    if live.configured():
+        # Before the record is published, so fixtures the feed has not listed
+        # yet - midweek rounds, cups, African leagues - make it in.
+        try:
+            from service import fixtures_api
+            r = fixtures_api.sync(_HERE, predictor(), days=2)
+            done.append("api fixtures: %d leagues, %d cups%s" % (
+                r["leagues"], r["cups"],
+                (" (" + "; ".join(r["errors"]) + ")") if r["errors"] else ""))
+        except Exception as e:
+            done.append("api fixtures failed: %r" % e)
     try:
         slate = _cached_slate(2, None)
         rows = [m for g in slate.get("groups", []) for m in g.get("matches", [])]
@@ -347,6 +358,7 @@ def _compute_slate(days: int, league: str | None):
     p = predictor()
     divs = [league] if league else p.divs
     groups, pair_groups, skipped = [], [], []
+    cup_matches = {}
     for d in divs:
         if d not in p.divs:
             continue
@@ -394,7 +406,7 @@ def _compute_slate(days: int, league: str | None):
                     # once swallowed a NameError and silently emptied the
                     # market column on every fixture.
                     mk = None
-            matches.append({
+            row = {
                 "div": d,
                 "league": leagues.name(d),
                 "date": (ko or f["Date"]).isoformat(),
@@ -409,7 +421,27 @@ def _compute_slate(days: int, league: str | None):
                 "xg": "%.2f-%.2f" % (s["exp_home"], s["exp_away"]),
                 "new": bool(s["home_new"] or s["away_new"]),
                 "started": started,
-            })
+            }
+            comp = f.get("Comp")
+            if isinstance(comp, str) and comp.strip():
+                # A cup tie is priced on its division but shown as its own
+                # competition, never under the league's heading.
+                row["comp"] = row["league"] = comp.strip()
+                row["group"] = "CUP:" + comp.strip()
+                alt = f.get("ScaleAlt")
+                if isinstance(alt, str) and alt.strip():
+                    try:
+                        ra = p.predict(f["HomeTeam"], f["AwayTeam"], alt.strip(),
+                                       allow_new=True)["result"]
+                        row["scale_alt"] = {"div": alt.strip(),
+                                            "league": leagues.name(alt.strip()),
+                                            "p": {"1": ra["H"], "X": ra["D"],
+                                                  "2": ra["A"]}}
+                    except SystemExit:
+                        pass
+                cup_matches.setdefault(row["comp"], []).append(row)
+            else:
+                matches.append(row)
         if matches:
             groups.append({
                 "code": d, "league": leagues.name(d),
@@ -427,6 +459,10 @@ def _compute_slate(days: int, league: str | None):
                 "note": next((n for n in pairings.get("note", pd.Series(dtype=str))
                               if isinstance(n, str) and n), "") if has_note else "",
             })
+    for comp, ms in cup_matches.items():
+        groups.append({"code": "CUP:" + comp, "league": comp,
+                       "country": leagues.country(ms[0]["div"]),
+                       "matches": sorted(ms, key=lambda m: m["date"])})
     groups.sort(key=lambda g: _group_order(g["code"]))
     pair_groups.sort(key=lambda g: _group_order(g["code"]))
     return {"generated": datetime.now(EAT).isoformat(),

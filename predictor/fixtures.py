@@ -34,8 +34,15 @@ ODDS_COLS = ["AvgH", "AvgD", "AvgA", "B365H", "B365D", "B365A",
 
 # Optional columns a hand-built fixtures file may carry. Leg1H / Leg1A are the
 # goals the second-leg home and away sides scored in a first leg; WhenNote
-# replaces the date and time when the schedule is not yet fixed.
-EXTRA_COLS = ["Leg1H", "Leg1A", "WhenNote"]
+# replaces the date and time when the schedule is not yet fixed; Comp names a
+# cup competition whose tie is priced on the division given in Div; ScaleAlt
+# is the lower division of a tie across divisions, priced a second time so the
+# spread between the two scales can be shown.
+EXTRA_COLS = ["Leg1H", "Leg1A", "WhenNote", "Comp", "ScaleAlt"]
+
+# Fixtures fetched from API-Football by service/fixtures_api.py, beside the
+# hand-kept overlay directory.
+API_FILE = "fixtures_api.csv"
 
 
 def _norm(df: pd.DataFrame) -> pd.DataFrame:
@@ -105,13 +112,23 @@ def default_overlay_dir() -> str:
                         "..", "data", "manual", "fixtures")
 
 
-def load_any(path: str | None, cache: str,
-             overlay_dir: str | None = None) -> pd.DataFrame:
-    """The given fixtures file, else a downloaded cache, else empty - with the
-    overlay merged on top either way."""
+def load_any(path: str | None, cache: str, overlay_dir: str | None = None,
+             api_file: str | None = None) -> pd.DataFrame:
+    """The schedule: a fixtures file or the downloaded feed, gaps filled from
+    API-Football, and the hand-kept league overlays on top.
+
+    When one fixture appears in more than one source the more authoritative
+    copy is kept: a league's own site (the overlay) over football-data, which
+    carries closing prices, over API-Football, which only fills what neither
+    has. The API file sits beside the overlay directory, so a test that passes
+    its own overlay directory never picks up a real one.
+    """
+    empty = pd.DataFrame(columns=["Div", "Date", "HomeTeam", "AwayTeam"])
     if overlay_dir is None:
         overlay_dir = default_overlay_dir()
-    base = pd.DataFrame(columns=["Div", "Date", "HomeTeam", "AwayTeam"])
+    if api_file is None:
+        api_file = os.path.join(os.path.dirname(overlay_dir), API_FILE)
+    base = empty
     for p in (path, cache):
         if p and os.path.exists(p):
             try:
@@ -119,13 +136,19 @@ def load_any(path: str | None, cache: str,
                 break
             except Exception:
                 continue
+    api = empty
+    if api_file and os.path.isfile(api_file):
+        try:
+            api = from_csv(api_file)
+        except Exception:
+            api = empty
     extra = overlay(overlay_dir)
-    if not len(extra):
+    parts = [df for df in (api, base, extra) if len(df)]
+    if not parts:
         return base
-    if not len(base):
-        return extra
-    merged = pd.concat([base, extra], ignore_index=True)
-    # the overlay is the authority on the competitions it covers
+    if len(parts) == 1:
+        return parts[0]
+    merged = pd.concat(parts, ignore_index=True)
     merged = merged.drop_duplicates(subset=["Div", "Date", "HomeTeam", "AwayTeam"],
                                     keep="last")
     return merged.sort_values("Date").reset_index(drop=True)

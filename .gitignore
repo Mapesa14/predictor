@@ -39,3 +39,7 @@ data/record/live.db-*
 # The default mount for the European pool in docker compose. Downloaded
 # football-data.co.uk CSVs; the user's own copy, not source.
 soccerdata/
+
+# Fixtures fetched from API-Football at runtime (service/fixtures_api.py).
+data/manual/fixtures_api.csv
+data/manual/fixtures_api.csv.tmp

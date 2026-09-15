@@ -252,6 +252,36 @@ overlay exists because `refresh-fixtures` rewrites the cache wholesale, and the
 feed is European: without it, a competition outside Europe drops straight to
 level 3 and loses its dates, kick-off times and prices.
 
+### API-Football fixtures and cups
+
+The feed publishes once or twice a week and carries no cups, so a midweek round
+or a League Cup night can be missing from it. With `LIVE_API_KEY` set:
+
+```bash
+python predict.py refresh-fixtures-api --days 2
+```
+
+asks API-Football for today and tomorrow — **one request per day**, charged to
+the same 100-a-day budget as live scores — and writes
+`data/manual/fixtures_api.csv`. The service does this itself on every refresh
+cycle. The file only fills gaps: when a fixture is also in the feed or a league's
+own site, that copy wins (the feed has the closing price, the site the kick-off).
+
+Club names are matched strictly: a hand-checked alias
+(`service/fixtures_api.ALIASES`), then the exact name, then the name with one
+generic word (Town, FC, Utd…) dropped — and only if exactly one club is left.
+Anything else is reported and left out, never guessed. So are divisions we hold
+no results for and leagues whose results are more than 150 days old.
+
+A cup tie is shown under its competition, never its league. Both clubs in one
+division: priced on that division. English clubs in different divisions: priced
+on the higher one, with the lower division's price alongside, because the two
+scales can disagree by ten points or more for the underdog and that spread is
+the honest uncertainty. Any other cross-division tie is not priced. Cup ties
+stay **out of the tips lists and the public record** — rotated line-ups make a
+favourite least reliable where a short list leans on it, and no cup results are
+loaded to settle against.
+
 ### Tanzania
 
 The NBC Premier League has no feed behind it. openfootball's file stops in June

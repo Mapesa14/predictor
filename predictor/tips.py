@@ -134,7 +134,10 @@ def build(rows, now: datetime | None = None, banker_min: float = BANKER_MIN,
           long_max: int = LONG_MAX, league_cap: int | None = LEAGUE_CAP) -> dict:
     """The day's lists from the slate's own rows."""
     now = now or datetime.now(timezone.utc)
-    cands = [c for c in (candidate(m, now) for m in rows or []) if c]
+    # Cup ties are left out: rotated line-ups make a favourite's probability
+    # least reliable exactly where a short list would lean on it hardest.
+    cands = [c for c in (candidate(m, now) for m in rows or []
+                         if not m.get("comp")) if c]
     upcoming = [c for c in cands if not c["started"]]
     upcoming.sort(key=lambda c: (-c["p"], c["kickoff"] or ""))
 

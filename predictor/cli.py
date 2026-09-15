@@ -260,9 +260,13 @@ def cmd_brief(a):
         r = s["result"]
         pick = max(r, key=r.get)
         i, j, _ = s["correct_scores"][0]
+        is_cup = isinstance(f.get("Comp"), str) and f.get("Comp").strip() != ""
         for team, isnew, src in ((s["home"], s["home_new"], s["home_source"]),
                                  (s["away"], s["away_new"], s["away_source"])):
-            if isnew:
+            # A cup tie priced on the higher division's scale carries the lower
+            # club in, but that club is not "with no history in its division":
+            # listing Reading that way read as though it had been promoted.
+            if isnew and not is_cup:
                 promoted.append("%s (%s, %s)" % (
                     team, leagues.name(d),
                     "no lower-division record, promoted-team prior used"
@@ -270,7 +274,7 @@ def cmd_brief(a):
         conf = r[pick]
         when, time_ = _local_kickoff(f, a.tz)
         rows.append({
-            "league": leagues.label(d),
+            "league": _comp_label(f, d),
             "time": time_,
             "date": when,
             "match": "%s v %s" % (s["home"], s["away"]),
@@ -535,6 +539,20 @@ _UNLOADED_NAMES = {
 }
 
 
+def _comp_label(f, div: str) -> str:
+    """The competition a row belongs to.
+
+    A cup tie is priced on a league division's scale, so its row carries that
+    division's code - but heading it "Premier League (England)" would tell the
+    reader it is a league match. A fixtures file may name the competition in a
+    `Comp` column; otherwise the division's own label is used.
+    """
+    comp = f.get("Comp")
+    if isinstance(comp, str) and comp.strip():
+        return "%s (%s)" % (comp.strip(), leagues.country(div))
+    return leagues.label(div)
+
+
 def _is_domestic_code(div: str) -> bool:
     """A football-data league code (E0, SC2, I2...), as opposed to a cup."""
     import re
@@ -550,11 +568,14 @@ def _tz_label(tz):
 
 
 def _local_kickoff(f, tz):
-    """(date, 'HH:MM') in the reader's time zone, from a UK-time fixture row.
+    """(date, 'HH:MM') in the reader's time zone, from a fixture row.
 
-    The feed publishes UK kick-off times. Converting the full timestamp rather
-    than adding hours means a late UK kick-off correctly lands on the next
-    calendar day in East Africa.
+    Each row's time is read in its own league's source zone - UK for the
+    football-data feed, East Africa for the Tanzanian league site - via
+    `leagues.source_tz`, the same rule the service uses. Reading every row as
+    UK time put tonight's 19:00 Dar es Salaam kick-off in a brief at 21:00.
+    Converting the full timestamp rather than adding hours means a late UK
+    kick-off correctly lands on the next calendar day in East Africa.
     """
     note = f.get("WhenNote")
     if isinstance(note, str) and note.strip():
@@ -566,7 +587,8 @@ def _local_kickoff(f, tz):
     hh, mm = t.strip()[:5].split(":")
     ts = d.replace(hour=int(hh), minute=int(mm))
     try:
-        ts = ts.tz_localize("Europe/London").tz_convert(tz).tz_localize(None)
+        ts = (ts.tz_localize(leagues.source_tz(f.get("Div")))
+              .tz_convert(tz).tz_localize(None))
     except Exception:
         pass
     return ts, ts.strftime("%H:%M")
@@ -1027,6 +1049,33 @@ def cmd_live_status(a):
                                           else "no snapshot yet"))
 
 
+def cmd_refresh_fixtures_api(a):
+    """Fixtures for every league and cup the feed has not published, from
+    API-Football. One request per day fetched, through the live-score budget."""
+    from service import fixtures_api, live
+    if not live.configured():
+        print("Set LIVE_API_KEY first - this asks API-Football directly.")
+        return
+    p = _pred(a)
+    r = fixtures_api.sync(a.root, p, days=a.days)
+    print("fetched: %s" % (", ".join(r["fetched"]) or "nothing"))
+    for e in r["errors"]:
+        print("   error: " + e)
+    print("wrote %d fixtures (%d league, %d cup) -> %s"
+          % (r["rows"], r["leagues"], r["cups"], r["file"]))
+    for key, title in (
+            ("unresolved", "names not matched - add to fixtures_api.ALIASES only "
+                           "when sure which club it is"),
+            ("not_loaded", "divisions not in our data"),
+            ("stale", "leagues whose results in our data are stale"),
+            ("no_gap", "cup ties across divisions with no measured gap")):
+        items = r["report"].get(key) or []
+        if items:
+            print("\n%s (%d):" % (title, len(items)))
+            for x in items[:40]:
+                print("   " + x)
+
+
 def cmd_tips(a):
     """The coming clear picks: short list, long list, and what to avoid."""
     from . import tips
@@ -1263,6 +1312,16 @@ def build_parser():
                             "its hash chain (run once when switching)")
     record_args(s)
     s.set_defaults(func=cmd_record_migrate)
+
+    s = sub.add_parser("refresh-fixtures-api",
+                       help="fixtures for leagues and cups from API-Football "
+                            "(one request per day fetched)")
+    s.add_argument("--days", type=int, default=2,
+                   help="today and how many days after (default 2)")
+    s.add_argument("--root", default=os.path.join(
+        os.path.dirname(__file__), os.pardir),
+                   help="project root holding data/manual (default: the repo)")
+    s.set_defaults(func=cmd_refresh_fixtures_api)
 
     s = sub.add_parser("tips",
                        help="clear picks: short list, long list, what to avoid")

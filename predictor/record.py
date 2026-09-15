@@ -268,7 +268,13 @@ def publish(rows, root: str, as_of: datetime | None = None) -> dict:
     prev = str(have["hash"].iloc[-1]) if len(have) else GENESIS
 
     written, started, dup, undated = [], 0, 0, 0
+    cups = 0
     for m in rows:
+        if m.get("comp"):
+            # No cup results are loaded to settle against, so a cup tie in the
+            # record would stay pending for ever. Leagues only, until they are.
+            cups += 1
+            continue
         ko = pd.to_datetime(m.get("date"), errors="coerce", utc=True)
         if pd.isna(ko):
             # No published kick-off means no way to prove the prediction came
@@ -308,6 +314,7 @@ def publish(rows, root: str, as_of: datetime | None = None) -> dict:
     st.append(written)
     return {"written": len(written), "already_recorded": dup,
             "refused_already_started": started, "refused_no_kickoff": undated,
+            "skipped_cup": cups,
             "file": path(root), "backend": st.describe(),
             "total": int(len(have)) + len(written)}
 
