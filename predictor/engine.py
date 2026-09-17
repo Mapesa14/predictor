@@ -349,7 +349,8 @@ class Predictor:
         return hd != ad and hd in off and ad in off
 
     def predict_cross(self, home: str, away: str, neutral: bool = False,
-                      comp: str = "") -> dict:
+                      comp: str = "", home_div: str | None = None,
+                      away_div: str | None = None) -> dict:
         """Price a tie between clubs from two different domestic leagues.
 
         Domestic ratings are centred within their own league, so they are only
@@ -357,8 +358,10 @@ class Predictor:
         """
         import numpy as np
 
-        h, hdiv = self.resolve(home, None, fuzzy=False)
-        a, adiv = self.resolve(away, None, fuzzy=False)
+        # A caller that already knows each club's league passes it: a name
+        # searched across every division can land on an old season's one.
+        h, hdiv = self.resolve(home, home_div, fuzzy=False)
+        a, adiv = self.resolve(away, away_div, fuzzy=False)
         if hdiv == adiv:
             return self.predict(h, a, hdiv, neutral=neutral)
         if not self.bridge:
@@ -409,6 +412,12 @@ class Predictor:
         s["away_played"] = ma.played.get(a, 0)
         s["market_used"] = False
         s["bridge_offsets"] = (sh, sa)
+        # What the card reads from a domestic prediction, in bridge terms.
+        s["score_grid"] = markets.score_grid(ft)
+        s["pick"] = max(("1", "X", "2"), key=lambda k: s["result"].get(k, 0.0))
+        s["n_train"] = self.bridge.get("n")
+        s["home_adv"] = 0.0 if neutral else self.bridge["home_adv"]
+        s["market_weight"] = 0.0
         return s
 
     # ----------------------------------------------------------- CAF ties

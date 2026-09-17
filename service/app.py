@@ -377,9 +377,17 @@ def _compute_slate(days: int, league: str | None):
         matches = []
         for _, f in real.iterrows():
             odds = f if pd.notna(f.get("AvgH")) else None
+            away_div = f.get("AwayDiv")
+            away_div = away_div.strip() if isinstance(away_div, str) else ""
             try:
-                s = p.predict(f["HomeTeam"], f["AwayTeam"], d,
-                              allow_new=True, odds=odds)
+                if away_div and away_div != d:
+                    # A European tie: each club on its own league's ratings.
+                    s = p.predict_cross(f["HomeTeam"], f["AwayTeam"],
+                                        comp=str(f.get("Comp") or ""),
+                                        home_div=d, away_div=away_div)
+                else:
+                    s = p.predict(f["HomeTeam"], f["AwayTeam"], d,
+                                  allow_new=True, odds=odds)
             except SystemExit as e:
                 skipped.append("%s: %s v %s (%s)"
                                % (leagues.name(d), f["HomeTeam"],
@@ -422,6 +430,8 @@ def _compute_slate(days: int, league: str | None):
                 "new": bool(s["home_new"] or s["away_new"]),
                 "started": started,
             }
+            if away_div:
+                row["away_div"] = away_div
             comp = f.get("Comp")
             if isinstance(comp, str) and comp.strip():
                 # A cup tie is priced on its division but shown as its own
@@ -461,7 +471,8 @@ def _compute_slate(days: int, league: str | None):
             })
     for comp, ms in cup_matches.items():
         groups.append({"code": "CUP:" + comp, "league": comp,
-                       "country": leagues.country(ms[0]["div"]),
+                       "country": ("Europe" if ms[0].get("away_div")
+                                   else leagues.country(ms[0]["div"])),
                        "matches": sorted(ms, key=lambda m: m["date"])})
     groups.sort(key=lambda g: _group_order(g["code"]))
     pair_groups.sort(key=lambda g: _group_order(g["code"]))
@@ -588,8 +599,14 @@ def api_live():
 
 
 @app.get("/api/card")
-def card(home: str, away: str, div: str | None = None, neutral: bool = False):
-    s = predictor().predict(home, away, div, neutral=neutral, allow_new=bool(div))
+def card(home: str, away: str, div: str | None = None, neutral: bool = False,
+         away_div: str | None = None):
+    p = predictor()
+    if div and away_div and away_div != div:
+        s = p.predict_cross(home, away, neutral=neutral, home_div=div,
+                            away_div=away_div)
+    else:
+        s = p.predict(home, away, div, neutral=neutral, allow_new=bool(div))
     return _jsonable(s)
 
 

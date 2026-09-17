@@ -33,6 +33,118 @@ function useFetch(url) {
   return state;
 }
 
+// True once `loading` has lasted `wait` ms. A response that lands sooner would
+// only flash grey blocks, which reads as slower than showing nothing at all.
+function useSlow(loading, wait = 150) {
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    if (!loading) { setSlow(false); return; }
+    const t = setTimeout(() => setSlow(true), wait);
+    return () => clearTimeout(t);
+  }, [loading, wait]);
+  return slow;
+}
+
+// ---- skeleton screens ------------------------------------------------------
+// Placeholders shaped like the page that is coming, so the layout is there at
+// once and does not jump when the numbers arrive. Screen readers get the label.
+const Bone = ({ w = "100%", h = 12, style }) => (
+  <span className="bone" style={{ width: w, height: h, ...style }} />
+);
+
+function Loading({ label, show = true, children }) {
+  return (
+    <div className="skeleton" role="status" aria-busy="true">
+      <span className="vh">{label}</span>
+      {show && <div aria-hidden="true">{children}</div>}
+    </div>
+  );
+}
+
+function Lines({ widths }) {
+  return <div className="bone-lines">{widths.map((w, i) => <Bone key={i} w={w} h={11} />)}</div>;
+}
+
+const TEAM_W = [96, 72, 118, 84, 104, 66, 90, 112];
+
+function SkelTable({ rows = 5, nums = 5, kick = true }) {
+  return (
+    <table className="scrollx skel-table">
+      <tbody>
+        {Array.from({ length: rows }, (_, i) => (
+          <tr key={i}>
+            {kick && <td><Bone w={40} h={11} /></td>}
+            <td>
+              <span className="bone-match">
+                <Bone w={TEAM_W[i % 8]} h={15} />
+                <Bone w={10} h={9} />
+                <Bone w={TEAM_W[(i + 3) % 8]} h={15} />
+              </span>
+            </td>
+            {Array.from({ length: nums }, (_, j) => (
+              <td key={j} className="num"><Bone w={30} h={12} /></td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+function SkelHead({ w = 140 }) {
+  return <div className="shead"><Bone w={w} h={13} /><div className="rule" /></div>;
+}
+
+/** The real masthead and tabs - they need no data - over a skeleton body. */
+function ScreenSkeleton({ title, sub, label, show, children }) {
+  return (
+    <div>
+      <header className="masthead">
+        <div>
+          <h1>{title}</h1>
+          <p className="sub">{sub}</p>
+        </div>
+        <div className="tools"><Theme /></div>
+      </header>
+      <TopNav hash={window.location.hash} />
+      <Loading label={label} show={show}>{children}</Loading>
+    </div>
+  );
+}
+
+function SlateSkeleton({ show }) {
+  return (
+    <ScreenSkeleton title={<>Football <b>Predictor</b></>} sub={<Bone w={220} h={11} style={{ marginTop: 4 }} />}
+      label="Loading the slate…" show={show}>
+      <div className="tools" style={{ marginTop: 10 }}>
+        {[56, 64, 64, 110, 120, 150].map((w, i) => <Bone key={i} w={w} h={27} />)}
+      </div>
+      <section>
+        <SkelHead w={150} /><SkelTable rows={4} />
+        <SkelHead w={110} /><SkelTable rows={3} />
+        <SkelHead w={130} /><SkelTable rows={2} />
+      </section>
+    </ScreenSkeleton>
+  );
+}
+
+function CardSkeleton() {
+  return (
+    <div className="matchcard">
+      <div className="teams">
+        <div className="club club-h"><Bone w="80%" h={34} /><Bone w={90} h={10} style={{ marginTop: 8 }} /></div>
+        <div className="vglobe">v</div>
+        <div className="club club-a"><Bone w="70%" h={34} /><Bone w={90} h={10} style={{ marginTop: 8 }} /></div>
+      </div>
+      <div className="meta"><Bone w={90} h={12} /><Bone w={70} h={12} /><Bone w={110} h={12} /></div>
+      <Bone h={52} style={{ margin: "14px 0 6px" }} />
+      <Bone w={200} h={13} style={{ margin: "4px auto 16px" }} />
+      <Bone h={264} style={{ maxWidth: 560 }} />
+      {[160, 190, 140].map((w, i) => <div key={i} className="skel-sum"><Bone w={w} h={14} /></div>)}
+    </div>
+  );
+}
+
 // ---- live scores (best-effort; never wrongly match) ------------------------
 const ABBREV = {
   utd: "united", manu: "manchester", man: "manchester",
@@ -147,8 +259,9 @@ function Slate() {
   const [conf, setConf] = useState("");
   const live = useLive();
   const { loading, data, error } = useFetch(api("/api/slate?days=" + days));
+  const slow = useSlow(loading);
 
-  if (loading) return <p className="note">Loading the slate…</p>;
+  if (loading) return <SlateSkeleton show={slow} />;
   if (error) return <p className="note">Can't reach the service: {error}. Is it running on :8000?</p>;
 
   const ql = q.trim().toLowerCase();
@@ -234,7 +347,7 @@ function Slate() {
                     <tr key={mi}>
                       <td className="kick">{m.kickoff_label}</td>
                       <td>
-                        <a className="match" href={"#/card?home=" + encodeURIComponent(m.home) + "&away=" + encodeURIComponent(m.away) + "&div=" + m.div + "&ko=" + encodeURIComponent(m.kickoff_label) + "&lg=" + encodeURIComponent(g.league)}>
+                        <a className="match" href={"#/card?home=" + encodeURIComponent(m.home) + "&away=" + encodeURIComponent(m.away) + "&div=" + m.div + (m.away_div ? "&adiv=" + m.away_div : "") + "&ko=" + encodeURIComponent(m.kickoff_label) + "&lg=" + encodeURIComponent(g.league)}>
                           <span className="hm">{m.home}</span>
                           <span className="vs">v</span>
                           <span className="aw">{m.away}</span>
@@ -279,6 +392,7 @@ function Slate() {
 // ---- card -------------------------------------------------------------
 function tierOf(s) {
   if (s.market_used) return ["PRICED", "closed price folded into the forecast"];
+  if (s.cross) return ["BRIDGED", "clubs from two leagues, put on one scale"];
   if (s.home_new || s.away_new) return ["BRIDGED", "one or both clubs rated from another league"];
   return ["FULL", "both clubs regulars in this division"];
 }
@@ -292,6 +406,7 @@ function PairingGroup({ g }) {
   const [open, setOpen] = useState(false);
   const { loading, data, error } = useFetch(
     open ? api("/api/pairings?div=" + encodeURIComponent(g.code) + "&limit=60") : null);
+  const slow = useSlow(loading);
   return (
     <div className="pairgroup">
       <div className="shead">
@@ -304,7 +419,11 @@ function PairingGroup({ g }) {
         <span className="n">{g.count}</span>
         <div className="rule" />
       </div>
-      {open && loading && <p className="note">Rating {g.count} pairings…</p>}
+      {open && loading && (
+        <Loading label={"Rating " + g.count + " pairings…"} show={slow}>
+          <SkelTable rows={Math.min(g.count, 5)} nums={3} kick={false} />
+        </Loading>
+      )}
       {open && error && <p className="note">Couldn't rate these: {error}</p>}
       {open && data && (
         <>
@@ -411,19 +530,22 @@ function Card() {
   const home = params.get("home") || "";
   const away = params.get("away") || "";
   const div = params.get("div") || "";
+  const adiv = params.get("adiv") || "";
   const ko = params.get("ko") || "";
   const lg = params.get("lg") || "";
   const [neutral, setNeutral] = useState(false);
   const url = api("/api/card?home=" + encodeURIComponent(home) + "&away=" + encodeURIComponent(away) +
-    "&div=" + encodeURIComponent(div) + (neutral ? "&neutral=1" : ""));
+    "&div=" + encodeURIComponent(div) + (adiv ? "&away_div=" + encodeURIComponent(adiv) : "") +
+    (neutral ? "&neutral=1" : ""));
   const { loading, data, error } = useFetch(url);
+  const slow = useSlow(loading);
 
   return (
     <div>
       <p><a className="back" href="#/">← All fixtures</a></p>
-      {loading && <p className="note">Fitting the models…</p>}
+      {loading && <Loading label="Fitting the models…" show={slow}><CardSkeleton /></Loading>}
       {error && <p className="note">Card failed: {error}</p>}
-      {data && <CardBody s={data} ko={ko} lg={lg} neutral={neutral} setNeutral={setNeutral} />}
+      {data && !loading && <CardBody s={data} ko={ko} lg={lg} neutral={neutral} setNeutral={setNeutral} />}
     </div>
   );
 }
@@ -563,6 +685,13 @@ function CardBody({ s, ko, lg, neutral, setNeutral }) {
           none. Say so rather than render a block of blanks, and never read the
           fields unguarded: doing that took the whole card down to the error
           boundary the first time a TZ1 fixture was opened. */}
+      {s.cross && (
+        <p className="note">
+          Clubs from two leagues ({s.home_div} and {s.away_div}): each is rated on
+          its own league's results, and the leagues are put on one scale by
+          strength offsets measured from {s.n_train} past European matches.
+        </p>
+      )}
       {s.ht_result ? (
         <Sum title="Half time">
           <table className="markets">
@@ -645,7 +774,16 @@ function TopNav({ hash }) {
 function MarketScreen() {
   const live = useLive();
   const { loading, data, error } = useFetch(api("/api/slate?days=3"));
-  if (loading) return <p className="note">Loading the slate…</p>;
+  const slow = useSlow(loading);
+  if (loading) return (
+    <ScreenSkeleton title={<>Model vs <b>market</b></>}
+      sub="Where the model agrees with the closing price — and where it doesn't"
+      label="Loading the slate…" show={slow}>
+      <Lines widths={["55%"]} />
+      <Lines widths={["100%", "96%", "98%", "60%"]} />
+      <section><SkelHead w={170} /><SkelTable rows={6} nums={3} kick={false} /></section>
+    </ScreenSkeleton>
+  );
   if (error) return <p className="note">Can't reach the service: {error}</p>;
 
   const rows = [];
@@ -707,7 +845,7 @@ function MarketScreen() {
               {rows.map((m, i) => (
                 <tr key={i}>
                   <td>
-                    <a className="match" href={"#/card?home=" + encodeURIComponent(m.home) + "&away=" + encodeURIComponent(m.away) + "&div=" + m.div + "&ko=" + encodeURIComponent(m.kickoff_label) + "&lg=" + encodeURIComponent(m.league)}>
+                    <a className="match" href={"#/card?home=" + encodeURIComponent(m.home) + "&away=" + encodeURIComponent(m.away) + "&div=" + m.div + (m.away_div ? "&adiv=" + m.away_div : "") + "&ko=" + encodeURIComponent(m.kickoff_label) + "&lg=" + encodeURIComponent(m.league)}>
                       <span className="hm">{m.home}</span><span className="vs">v</span><span className="aw">{m.away}</span>
                       {m.new && <em className="new">new</em>}
                       <LiveChip m={m} live={live} />
@@ -743,8 +881,20 @@ function ClubScreen() {
   const lg = useFetch(api("/api/leagues"));
   const [div, setDiv] = useState("E0");
   const { loading, data, error } = useFetch(api("/api/clubs?div=" + div));
+  const slowLeagues = useSlow(lg.loading);
+  const slow = useSlow(loading);
   const codes = lg.data ? [...new Set(lg.data.map((d) => d.code))].sort() : [];
-  if (lg.loading) return <p className="note">Loading leagues…</p>;
+  const clubsSkeleton = (
+    <section><SkelHead w={180} /><SkelTable rows={10} nums={5} kick={false} /></section>
+  );
+  if (lg.loading) return (
+    <ScreenSkeleton title={<>Club <b>ratings</b></>}
+      sub="Where each side stands in its division, on the model's numbers"
+      label="Loading leagues…" show={slowLeagues}>
+      <div className="tools" style={{ marginTop: 10 }}><Bone w={70} h={27} /></div>
+      {clubsSkeleton}
+    </ScreenSkeleton>
+  );
   return (
     <div>
       <header className="masthead">
@@ -762,7 +912,8 @@ function ClubScreen() {
         </select>
       </div>
 
-      {data && (
+      {loading && <Loading label="Loading ratings…" show={slow}>{clubsSkeleton}</Loading>}
+      {data && !loading && (
         <section>
           <div className="shead">
             <h2>{data.note ? "Not fitted yet" : data.league + " · strength"}</h2>
@@ -838,6 +989,7 @@ const dp = (v, n = 4) => (v === null || v === undefined || Number.isNaN(v)
 
 function RecordScreen() {
   const { loading, data, error } = useFetch(api("/api/record"));
+  const slow = useSlow(loading);
   const empty = data && !data.published;
 
   return (
@@ -851,7 +1003,13 @@ function RecordScreen() {
       </header>
       <TopNav hash={window.location.hash} />
 
-      {loading && <p className="note">Settling the record…</p>}
+      {loading && (
+        <Loading label="Settling the record…" show={slow}>
+          <Lines widths={["70%"]} />
+          <Bone h={34} style={{ margin: "12px 0 18px" }} />
+          <section><SkelHead w={160} /><SkelTable rows={5} nums={4} kick={false} /></section>
+        </Loading>
+      )}
       {error && <p className="note">Record failed to load: {error}</p>}
 
       {empty && (
@@ -1074,6 +1232,7 @@ function TipRecord({ label, r }) {
 function TipsScreen() {
   const [days, setDays] = useState(2);
   const { loading, data, error } = useFetch(api("/api/tips?days=" + days));
+  const slow = useSlow(loading);
   const ev = data && data.evidence;
   const acca = data && data.accumulator;
 
@@ -1103,10 +1262,20 @@ function TipsScreen() {
         matches they have not beaten the bookmaker. Hit rate is not profit.
       </p>
 
-      {loading && <p className="note">Choosing picks…</p>}
+      {loading && (
+        <Loading label="Choosing picks…" show={slow}>
+          {[190, 150].map((w, i) => (
+            <section key={i} className="tipsec">
+              <Bone w={w} h={14} style={{ marginBottom: 8 }} />
+              <Lines widths={["100%", "80%"]} />
+              <SkelTable rows={4} nums={3} />
+            </section>
+          ))}
+        </Loading>
+      )}
       {error && <p className="note">Tips failed to load: {error}</p>}
 
-      {data && (
+      {data && !loading && (
         <>
           {data.notes && data.notes.length > 0 && (
             <ul className="tipnotes">

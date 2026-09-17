@@ -1061,8 +1061,8 @@ def cmd_refresh_fixtures_api(a):
     print("fetched: %s" % (", ".join(r["fetched"]) or "nothing"))
     for e in r["errors"]:
         print("   error: " + e)
-    print("wrote %d fixtures (%d league, %d cup) -> %s"
-          % (r["rows"], r["leagues"], r["cups"], r["file"]))
+    print("wrote %d fixtures (%d league, %d cup, %d European) -> %s"
+          % (r["rows"], r["leagues"], r["cups"], r.get("europe", 0), r["file"]))
     for key, title in (
             ("unresolved", "names not matched - add to fixtures_api.ALIASES only "
                            "when sure which club it is"),

@@ -9,15 +9,29 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=PT+Mono&family=Source+Sans+3:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Fonts load without blocking the first paint: on a slow connection the
+         skeleton shows at once in the fallback faces, instead of a blank screen
+         until Google answers. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=PT+Mono&family=Source+Sans+3:wght@400;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=PT+Mono&family=Source+Sans+3:wght@400;600;700&display=swap" /></noscript>
     <title>Football Predictor</title>
-    <script type="module" crossorigin src="/assets/index-C8FRwbYc.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-wF9DBllf.css">
+    <script type="module" crossorigin src="/assets/index-U6ADVQM5.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CnDpenfx.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Painted before the app's script runs, then replaced by it. -->
+      <div class="boot" aria-hidden="true">
+        <header class="masthead"><div><h1>Football <b>Predictor</b></h1></div></header>
+        <span class="bone" style="height: 32px; margin-top: 14px"></span>
+        <span class="bone" style="width: 150px; height: 13px; margin-top: 28px"></span>
+        <span class="bone" style="height: 22px; margin-top: 14px"></span>
+        <span class="bone" style="height: 22px; margin-top: 12px"></span>
+        <span class="bone" style="height: 22px; margin-top: 12px"></span>
+        <span class="bone" style="width: 110px; height: 13px; margin-top: 28px"></span>
+        <span class="bone" style="height: 22px; margin-top: 14px"></span>
+        <span class="bone" style="height: 22px; margin-top: 12px"></span>
+      </div>
+    </div>
   </body>
 </html>

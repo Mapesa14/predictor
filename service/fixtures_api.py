@@ -46,7 +46,8 @@ import pandas as pd
 from predictor import fixtures, leagues
 from service import live
 
-COLUMNS = ["Div", "Date", "Time", "HomeTeam", "AwayTeam", "Comp", "ScaleAlt"]
+COLUMNS = ["Div", "Date", "Time", "HomeTeam", "AwayTeam", "Comp", "ScaleAlt",
+           "AwayDiv"]
 
 # A league whose latest result in our data is older than this is not priced
 # from API fixtures. Long enough to cover a European summer break; short enough
@@ -63,6 +64,12 @@ CUPS = {
     206: ("Türkiye Kupası", "Turkey"), 199: ("Greek Cup", "Greece"),
     181: ("Scottish Cup", "Scotland"), 185: ("Scottish League Cup", "Scotland"),
 }
+
+# UEFA club competitions. A tie joins two countries, so it is priced by the
+# cross-league bridge (engine.predict_cross): each club on its own league's
+# ratings, the leagues put on one scale by offsets measured from past European
+# matches. Only leagues with a measured offset can take part.
+EUROPE = {2: "Champions League", 3: "Europa League", 848: "Conference League"}
 
 # Provider spelling -> the name our results use, per country. Every entry is a
 # club checked by hand against its own record; add to it from the unresolved
@@ -84,7 +91,16 @@ ALIASES = {
     },
     "Scotland": {"Heart Of Midlothian": "Hearts"},
     # Niki Volos is not Volos NFC - a different club, deliberately left out.
-    "Greece": {"Levadiakos": "Levadeiakos", "Aris Thessalonikis": "Aris"},
+    "Greece": {"Levadiakos": "Levadeiakos", "Aris Thessalonikis": "Aris",
+               "AEK Athens FC": "AEK"},
+    "Germany": {"Bayern München": "Bayern Munich", "1899 Hoffenheim": "Hoffenheim"},
+    # WSG Tirol played as WSG Wattens until its rename.
+    "Austria": {"Red Bull Salzburg": "RB Salzburg", "Rapid Vienna": "Rapid Wien", "WSG Wattens": "WSG Tirol"},
+    "Turkey": {"Beşiktaş": "Besiktas", "Kasımpaşa": "Kasimpasa"},
+    "Belgium": {"Union St. Gilloise": "St. Gilloise", "Standard Liege": "Standard"},
+    "Netherlands": {"PEC Zwolle": "Zwolle", "NEC Nijmegen": "Nijmegen"},
+    # Rangers International is the club's registered name.
+    "Nigeria": {"Enugu Rangers": "Rangers International FC"},
     # The two Sudanese clubs playing the Rwandan league as guests.
     "Rwanda": {"Al Merreikh": "Al-Merreikh (Omdurman)",
                "Al Hilal Omdurman": "Al-Hilal (Omdurman)"},
@@ -150,6 +166,38 @@ def resolve_club(p, name: str, country: str, divs: list):
     return None
 
 
+def resolve_europe(p, name: str):
+    """(team, division) for a club in a UEFA tie, or None. Never a guess.
+
+    Searched across every league with a measured bridge offset at once, so a
+    name found in two countries is two candidates, and therefore no match.
+    """
+    bridge = getattr(p, "bridge", None) or {}
+    divs = [d for d in p.divs if d in (bridge.get("offsets") or {})]
+    if not divs:
+        return None
+    for country, table in ALIASES.items():
+        target = table.get(name)
+        if target:
+            hits = {(t, d) for d in divs if leagues.country(d) == country
+                    for t in p.teams(d) if t == target}
+            return hits.pop() if len(hits) == 1 else None
+    hits = set()
+    for d in divs:
+        try:
+            hits.add(p.resolve(name, d, fuzzy=False))
+        except SystemExit:
+            pass
+    if hits:
+        return hits.pop() if len(hits) == 1 else None
+    base = _strip_generic(name)
+    if base and base != _fold(name):
+        hits = {(t, d) for d in divs for t in p.teams(d) if _fold(t) == base}
+        if len(hits) == 1:
+            return hits.pop()
+    return None
+
+
 def _scope(div: str) -> list:
     """The fixture's division first, then its ladder neighbours by distance -
     a club promoted or relegated since last season is still found."""
@@ -177,13 +225,13 @@ def _stale(last, div, when, stale_days) -> bool:
     return (when.tz_convert(None) - pd.Timestamp(d)).days > stale_days
 
 
-def _row(div, when, home, away, comp="", alt=""):
+def _row(div, when, home, away, comp="", alt="", away_div=""):
     """Date and time in the division's own source zone, the rule every reader
     of a fixtures file already applies (leagues.kickoff)."""
     local = when.tz_convert(leagues.source_tz(div))
     return {"Div": div, "Date": local.strftime("%d/%m/%Y"),
             "Time": local.strftime("%H:%M"), "HomeTeam": home, "AwayTeam": away,
-            "Comp": comp, "ScaleAlt": alt}
+            "Comp": comp, "ScaleAlt": alt, "AwayDiv": away_div}
 
 
 def build_rows(provider_fixtures, p, stale_days=STALE_DAYS):
@@ -252,6 +300,20 @@ def build_rows(provider_fixtures, p, stale_days=STALE_DAYS):
                 report["stale"].append("%s (%s)" % (label, comp))
                 continue
             rows.append(_row(div, when, h[0], a[0], comp, alt))
+
+        elif lid in EUROPE:
+            comp = EUROPE[lid]
+            h = resolve_europe(p, home)
+            a = resolve_europe(p, away)
+            missing = [n for n, r in ((home, h), (away, a)) if r is None]
+            if missing:
+                report["unresolved"].append("%s (%s): %s" % (
+                    label, comp, ", ".join(missing)))
+                continue
+            if any(_stale(last, d, when, stale_days) for d in {h[1], a[1]}):
+                report["stale"].append("%s (%s)" % (label, comp))
+                continue
+            rows.append(_row(h[1], when, h[0], a[0], comp, "", a[1]))
     return rows, report
 
 
@@ -344,7 +406,10 @@ def sync(root: str, p, days: int = 2, now=None, store=None, transport=None,
         tmp = path + ".tmp"
         out.to_csv(tmp, index=False)
         os.replace(tmp, path)
-    cups = int((out["Comp"].fillna("") != "").sum()) if len(out) else 0
+    comp_col = out["Comp"].fillna("") if len(out) else pd.Series(dtype=str)
+    europe = int(comp_col.isin(list(EUROPE.values())).sum())
+    cups = int((comp_col != "").sum()) - europe
     return {"fetched": fetched, "errors": errors, "rows": int(len(out)),
-            "leagues": int(len(out)) - cups, "cups": cups, "report": report,
+            "leagues": int(len(out)) - cups - europe, "cups": cups,
+            "europe": europe, "report": report,
             "file": path, "written": bool(fetched)}

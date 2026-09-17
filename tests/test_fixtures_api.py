@@ -222,3 +222,41 @@ def test_a_shared_town_name_is_not_a_match():
     g = make_predictor(results("G1", ["Volos NFC", "Aris", "Levadeiakos"]))
     assert fa.resolve_club(g, "Niki Volos", "Greece", ["G1"]) is None
     assert fa.resolve_club(g, "Aris Thessalonikis", "Greece", ["G1"]) == ("Aris", "G1")
+
+
+# ----------------------------------------------------------------- europe
+@pytest.fixture
+def pe(p):
+    p.bridge = {"offsets": {"E0": 0.45, "SP1": 0.24, "SC0": -0.20},
+                "intercept": -0.18, "home_adv": 0.30, "n": 439}
+    return p
+
+
+def test_a_european_tie_keeps_each_clubs_own_league(pe):
+    rows, _ = fa.build_rows([fx(3, "Tottenham", "Rayo Vallecano")], pe)
+    r = rows[0]
+    assert (r["Div"], r["AwayDiv"], r["Comp"], r["HomeTeam"], r["AwayTeam"]) == \
+        ("E0", "SP1", "Europa League", "Tottenham", "Vallecano")
+
+
+def test_a_club_from_a_league_with_no_measured_offset_is_not_priced(pe):
+    """Tanzania is loaded, but no European match ties its scale to anyone's."""
+    rows, rep = fa.build_rows([fx(3, "Young Africans SC", "Hearts")], pe)
+    assert rows == []
+    assert any("Young Africans SC" in u for u in rep["unresolved"])
+
+
+def test_the_same_name_in_two_countries_is_no_match():
+    g = make_predictor(results("E0", ["Athletic", "Leeds", "Wolves"])
+                       + results("SP1", ["Athletic", "Getafe", "Elche"]))
+    g.bridge = {"offsets": {"E0": 0.45, "SP1": 0.24}}
+    assert fa.resolve_europe(g, "Athletic") is None
+    assert fa.resolve_europe(g, "Getafe") == ("Getafe", "SP1")
+
+
+def test_sync_counts_european_ties_apart_from_cups(tmp_path, pe, store):
+    body = {"errors": [], "response": [fx(3, "Tottenham", "Rayo Vallecano"),
+                                       fx(48, "Liverpool", "Tottenham")]}
+    r = fa.sync(str(tmp_path), pe, days=1, now=NOW, store=store,
+                transport=Fake(body=body))
+    assert (r["leagues"], r["cups"], r["europe"]) == (0, 1, 1)

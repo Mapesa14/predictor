@@ -38,7 +38,7 @@ ODDS_COLS = ["AvgH", "AvgD", "AvgA", "B365H", "B365D", "B365A",
 # cup competition whose tie is priced on the division given in Div; ScaleAlt
 # is the lower division of a tie across divisions, priced a second time so the
 # spread between the two scales can be shown.
-EXTRA_COLS = ["Leg1H", "Leg1A", "WhenNote", "Comp", "ScaleAlt"]
+EXTRA_COLS = ["Leg1H", "Leg1A", "WhenNote", "Comp", "ScaleAlt", "AwayDiv"]
 
 # Fixtures fetched from API-Football by service/fixtures_api.py, beside the
 # hand-kept overlay directory.
