@@ -861,6 +861,7 @@ def cmd_refresh_tanzania(a):
 
 
 def _slate_rows(p, days: int):
+    from . import tips
     """The coming fixtures, shaped exactly as the service's slate shapes them.
 
     Only fixtures with a published kick-off: the record's whole claim is that
@@ -905,6 +906,7 @@ def _slate_rows(p, days: int):
                 "odds": ({"1": float(f["AvgH"]), "X": float(f["AvgD"]),
                           "2": float(f["AvgA"])} if mk is not None else None),
                 "o25": s["totals"][2.5]["over"], "btts": s["btts"]["yes"],
+                "markets": tips.selections(s),
                 "score": "%d-%d" % (i, j),
                 "xg": "%.2f-%.2f" % (s["exp_home"], s["exp_away"]),
             })

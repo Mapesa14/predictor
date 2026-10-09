@@ -374,6 +374,41 @@ walk-forward evaluation uses, and the model is compared to the closing price
 only on the rows that carry one — scoring the model on everything and the price
 on its own subset is the oldest way to flatter a model.
 
+### Pick categories
+
+The same fixture reads as several different bets, so the Tips screen offers
+six, each at the confidence bar its **own** walk-forward measurement supports
+(`scratch/eval_markets.py`, 8,230 matches in the ten top leagues, four seasons,
+2026-10-09). "Model said" is the average probability it gave those picks; "hit"
+is what came in.
+
+| Category | Offered at | Hit | Model said | Worst season | Per matchday |
+|---|---|---|---|---|---|
+| A goal in the match (over 0.5) | 95%+ | 97.2% | 96.3% | 97.0% | 3.5 |
+| Over 1.5 goals | 80%+ | 84.4% | 84.8% | 83.6% | 5.9 |
+| Double chance (1X / X2) | 80%+ | 89.0% | 87.5% | 88.1% | 5.9 |
+| Win (1 / 2) | 75% / 70%+ | 84.8% / 80.5% | 81.4% / 75.8% | 84.2% / 76.0% | 1.5 |
+| Over 2.5 goals | 65%+ | 71.5% | 70.9% | 68.8% | 2.2 |
+| Both teams to score (GG) | 60%+ | 61.8% | 63.6% | 61.3% | 2.7 |
+
+Three more were measured and left out, which is the point of measuring:
+
+- **Under 2.5 goals** — 67.6% at its bar, but 0.3 picks a matchday and a flat
+  stake lost 2.8%.
+- **Over 3.5 goals** — the model said 66.0%, 64.1% came in, on 0.2 a matchday.
+- **No GG** — the model said 62.5%, 57.5% came in, and one season managed
+  46.7%. A "clear pick" that loses more often than it wins in a bad year is not
+  a clear pick.
+
+Each leg is measured separately, because the home-win bar and the away-win bar
+are not the same number. Only 1X2 carries a closing price in the feed, so the
+goals lines and GG show no price rather than implying a check that never ran.
+Over 2.5 is well calibrated and still lost 1.0% flat: hit rate is not profit,
+and the screen says so where it is true.
+
+Categories are frozen and settled exactly like the 1X2 lists (see below), so
+each one builds its own public record from the day it is offered.
+
 ### Tip results
 
 The Tips screen's lists are rebuilt on every request, so on their own they

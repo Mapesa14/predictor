@@ -475,3 +475,8 @@ html.native .btn { min-height: 44px; }
 .freshfix { margin: 8px 0 0; padding-left: 18px; color: var(--ink2); font-size: 12px; }
 .freshfix code { font-family: var(--font-mono); font-size: 11px; }
 .freshbehind { color: var(--amber); }
+
+/* ---- pick categories --------------------------------------------------- */
+.catchips { margin: 4px 0 10px; }
+.catchips .catn { font-family: var(--font-mono); color: var(--ink3); margin-left: 4px; }
+.catchips .chip.on .catn { color: var(--paper); }

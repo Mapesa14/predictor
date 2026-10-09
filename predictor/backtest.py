@@ -58,19 +58,31 @@ def walk_forward(df, div: str, xi: float = 0.0018, min_train: int = 200,
         blam, bmu = market.blend_rates((lam, mu), mk, market_weight)
         m = model.score_matrix_from_rates(blam, bmu, fm.rho)
         r = markets.result(m)
-        tot = markets.totals(m, (2.5,))[2.5]
+        tot_all = markets.totals(m, (0.5, 1.5, 2.5, 3.5))
+        tot = tot_all[2.5]
         bt = markets.btts(m)
+        dc = markets.double_chance(m)
         rows.append({
             "Div": div, "Date": date, "Home": mt["HomeTeam"], "Away": mt["AwayTeam"],
             "pH": r["H"], "pD": r["D"], "pA": r["A"],
             "pOver25": tot["over"], "pBTTS": bt["yes"],
+            # every selection the tip categories can offer, from the same
+            # matrix, so one walk-forward measures them all
+            "pOver05": tot_all[0.5]["over"], "pOver15": tot_all[1.5]["over"],
+            "pOver35": tot_all[3.5]["over"], "pUnder25": tot["under"],
+            "pBTTSno": bt["no"],
+            "p1X": dc["1X"], "pX2": dc["X2"], "p12": dc["12"],
             "mH": pr["H"], "mD": pr["D"], "mA": pr["A"],
             "expH": blam, "expA": bmu, "mExpH": lam, "mExpA": mu,
             "FTR": mt["FTR"], "goals": int(mt["FTHG"] + mt["FTAG"]),
             "FTHG": int(mt["FTHG"]), "FTAG": int(mt["FTAG"]),
             "over25": int(mt["FTHG"] + mt["FTAG"] > 2.5),
+            "over05": int(mt["FTHG"] + mt["FTAG"] > 0.5),
+            "over15": int(mt["FTHG"] + mt["FTAG"] > 1.5),
+            "over35": int(mt["FTHG"] + mt["FTAG"] > 3.5),
             "btts": int(mt["FTHG"] > 0 and mt["FTAG"] > 0),
             "AvgH": mt.get("AvgH"), "AvgD": mt.get("AvgD"), "AvgA": mt.get("AvgA"),
+            "AvgO25": mt.get("Avg>2.5"), "AvgU25": mt.get("Avg<2.5"),
         })
     return pd.DataFrame(rows)
 

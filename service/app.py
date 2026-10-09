@@ -503,6 +503,7 @@ def _compute_slate(days: int, league: str | None):
                           "2": float(f["AvgA"])} if mk is not None else None),
                 "o25": s["totals"][2.5]["over"],
                 "btts": s["btts"]["yes"],
+                "markets": tips.selections(s),
                 "score": "%d-%d" % (i, j),
                 "xg": "%.2f-%.2f" % (s["exp_home"], s["exp_away"]),
                 "new": bool(s["home_new"] or s["away_new"]),

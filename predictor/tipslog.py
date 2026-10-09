@@ -32,7 +32,10 @@ from . import db, fixtures, record, tips
 
 EAT = ZoneInfo("Africa/Dar_es_Salaam")
 FREEZE_HOUR = int(os.environ.get("TIPS_FREEZE_HOUR", "10") or 10)
-LISTS = ("bankers", "long_list", "unpriced", "avoid")
+BASE_LISTS = ("bankers", "long_list", "unpriced", "avoid")
+# The 1X2 lists, then one list per pick category (goals lines, double chance,
+# GG). A category is frozen and judged exactly like the others.
+LISTS = BASE_LISTS + tuple(c["key"] for c in tips.CATEGORIES)
 DAY_MARK = "_day"
 
 COLUMNS = ["frozen_at", "day", "list", "rank", "div", "league", "date",
@@ -42,7 +45,26 @@ _NUM = ["p", "p_dc", "market_p", "odds"]
 
 FINISHED = {"FT", "AET", "PEN"}
 VOID = {"PST", "CANC", "ABD", "AWD", "WO"}
-_OUTCOME = {"1": "H", "X": "D", "2": "A"}
+
+# Every pick code the lists can carry, settled from the 90-minute score. The
+# code lives in the log's existing `pick` column, so adding categories changed
+# no column and broke no hash already written.
+_SETTLE = {
+    "1": lambda h, a: h > a,
+    "X": lambda h, a: h == a,
+    "2": lambda h, a: a > h,
+    "1X": lambda h, a: h >= a,
+    "X2": lambda h, a: a >= h,
+    "12": lambda h, a: h != a,
+    "over05": lambda h, a: h + a > 0,
+    "over15": lambda h, a: h + a > 1,
+    "over25": lambda h, a: h + a > 2,
+    "over35": lambda h, a: h + a > 3,
+    "under25": lambda h, a: h + a < 3,
+    "btts_yes": lambda h, a: h > 0 and a > 0,
+    "btts_no": lambda h, a: h == 0 or a == 0,
+}
+_1X2 = ("1", "X", "2")
 
 # What each list was offered on: the measured hit rate in tips.EVIDENCE. The
 # unpriced list has no benchmark, which is the reason it is a separate list.
@@ -52,6 +74,12 @@ PROMISED = {
     "unpriced": None,
     "avoid": tips.EVIDENCE["disagree_with_price"]["hit"],
 }
+PROMISED.update({c["key"]: c["evidence"]["hit"] for c in tips.CATEGORIES})
+
+# What each list is called on screen, so a frozen row reads the same months on.
+LABELS = {"bankers": "Bankers", "long_list": "Long list",
+          "unpriced": "Unpriced", "avoid": "Avoid"}
+LABELS.update({c["key"]: c["label"] for c in tips.CATEGORIES})
 
 
 def path(root: str) -> str:
@@ -196,9 +224,11 @@ def freeze(slate_rows, root: str, now=None) -> dict:
     rows[0].update({"frozen_at": stamp, "day": day, "list": DAY_MARK, "rank": 0,
                     "div": "", "home": "", "away": ""})
     counts = {}
+    by_cat = {c["key"]: c["picks"] for c in out.get("categories", [])}
     for name in LISTS:
-        counts[name] = len(out[name])
-        for i, c in enumerate(out[name], 1):
+        picks = out[name] if name in BASE_LISTS else by_cat.get(name, [])
+        counts[name] = len(picks)
+        for i, c in enumerate(picks, 1):
             ko = _kickoff(c.get("kickoff"))
             rows.append({
                 "frozen_at": stamp, "day": day, "list": name, "rank": i,
@@ -294,9 +324,16 @@ def settle(log: pd.DataFrame, official: pd.DataFrame,
             hg, ag, source = int(a_final[1]), int(a_final[2]), "api"
         if hg is not None:
             res = "H" if hg > ag else "A" if hg < ag else "D"
-            want = _OUTCOME.get(str(r["pick"]))
-            status = "won" if res == want else "lost"
-            dc = res in (want, "D")
+            code = str(r["pick"])
+            rule = _SETTLE.get(code)
+            if rule is None:
+                status, dc = "pending", None       # an unknown code is never a win
+            else:
+                status = "won" if rule(hg, ag) else "lost"
+                # The double chance of a 1X2 pick. Meaningless for a goals
+                # line, and left out rather than invented.
+                dc = (res in ({"1": "H", "X": "D", "2": "A"}[code], "D")
+                      if code in _1X2 else None)
         elif a is not None and a[3] in VOID:
             status, res, dc, source = "void", None, None, "api"
         else:

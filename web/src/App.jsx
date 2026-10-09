@@ -1381,6 +1381,86 @@ function TipResults() {
   );
 }
 
+/** Pick categories: goals lines, double chance, GG - one at a time.
+ *
+ * Every category shows the bar it is offered at and what that bar actually
+ * delivered, because "GG" with no number beside it is a tipster page. */
+function Categories({ cats, source, notOffered }) {
+  const [key, setKey] = useState((cats.find((c) => c.picks.length) || cats[0]).key);
+  const cat = cats.find((c) => c.key === key) || cats[0];
+  const e = cat.evidence;
+  return (
+    <>
+      <div className="tools catchips">
+        {cats.map((c) => (
+          <button key={c.key} className={"chip" + (c.key === key ? " on" : "")}
+            onClick={() => setKey(c.key)}>
+            {c.short} <b className="catn">{c.picks.length}</b>
+          </button>
+        ))}
+      </div>
+
+      <p className="why">
+        <b>{cat.label}</b> — offered at {pct(e.min)}+. Measured: {pct1(e.hit)} came
+        in, the model itself said {pct1(e.model_said)}, worst season {pct1(e.worst_season)},
+        about {e.per_matchday} picks a matchday.
+        {e.flat_return != null && <> A flat stake returned {signed(e.flat_return)}.</>}
+        {e.legs.length > 1 && <> By leg: {e.legs.map((l) => l.label + " " + pct(l.min) + "+ → " + pct1(l.hit)).join(", ")}.</>}
+      </p>
+      <p className="why">{cat.why}</p>
+
+      {cat.picks.length === 0 ? (
+        <p className="note">Nothing clears the {pct(e.min)} bar in this window. The
+          list is not lowered to fill it.</p>
+      ) : (
+        <div className="tipwrap">
+          <table className="markets">
+            <thead>
+              <tr><th>Kick-off</th><th>Match</th><th>Pick</th><th className="num">Model</th><th className="num">Price</th></tr>
+            </thead>
+            <tbody>
+              {cat.picks.map((c, i) => (
+                <tr key={i}>
+                  <td>{c.kickoff_label || String(c.kickoff || "").slice(0, 16).replace("T", " ")}</td>
+                  <td>
+                    <a href={"#/card?home=" + encodeURIComponent(c.home) + "&away=" +
+                      encodeURIComponent(c.away) + "&div=" + encodeURIComponent(c.div || "") +
+                      "&lg=" + encodeURIComponent(c.league || "")}>{c.home} v {c.away}</a>
+                    <div className="tipleague">{c.league}</div>
+                  </td>
+                  <td><b>{c.side}</b></td>
+                  <td className="num">{pct(c.p)}</td>
+                  <td className="num">{c.market_p != null ? pct(c.market_p) : "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {cat.accumulator && cat.accumulator.legs > 1 && (
+        <p className="acca">
+          The top {cat.accumulator.legs} together: <b>{pct(cat.accumulator.all_win)}</b>
+        </p>
+      )}
+
+      <details className="sum">
+        <summary>What is not offered, and why</summary>
+        <ul className="evidence">
+          {(notOffered || []).map((n, i) => (
+            <li key={i}>
+              <b>{n.label}</b> — {n.why} ({pct1(n.hit)} came in, the model said {pct1(n.model_said)},
+              {" "}{n.per_matchday} a matchday).
+            </li>
+          ))}
+        </ul>
+        <p className="why">{source}</p>
+      </details>
+    </>
+  );
+}
+
+
 function TipRecord({ label, r }) {
   if (!r || !r.n) return <li>{label}: nothing settled yet.</li>;
   return (
@@ -1449,6 +1529,19 @@ function TipsScreen() {
             <ul className="tipnotes">
               {data.notes.map((n, i) => <li key={i}>{n}</li>)}
             </ul>
+          )}
+
+          {data.categories && data.categories.length > 0 && (
+            <section className="tipsec">
+              <h2>Pick types</h2>
+              <p className="why">
+                The same fixtures read as different bets. Each type is offered
+                at the confidence bar its own measurement supports, and shows
+                what that bar delivered over four seasons.
+              </p>
+              <Categories cats={data.categories} source={data.category_source}
+                notOffered={data.not_offered} />
+            </section>
           )}
 
           <section className="tipsec">
