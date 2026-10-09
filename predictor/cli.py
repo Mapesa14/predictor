@@ -1126,6 +1126,10 @@ def cmd_refresh_fixtures_api(a):
     print("fetched: %s" % (", ".join(r["fetched"]) or "nothing"))
     for e in r["errors"]:
         print("   error: " + e)
+    if not r["written"]:
+        # Nothing fetched means nothing rewritten: what was on file still is.
+        print("nothing written - the schedule on file is untouched (%s)" % r["file"])
+        return
     print("wrote %d fixtures (%d league, %d cup, %d European) -> %s"
           % (r["rows"], r["leagues"], r["cups"], r.get("europe", 0), r["file"]))
     print("final scores kept: %d (for settling frozen tips)" % r.get("results", 0))

@@ -20,7 +20,7 @@ from predictor import envfile
 # friends when running without docker compose. Real variables still win.
 envfile.load()
 
-from predictor import db, leagues, market, record, tips  # noqa: E402
+from predictor import db, leagues, market, matchstate, record, tips  # noqa: E402
 from predictor.engine import Predictor  # noqa: E402
 from service import live  # noqa: E402
 
@@ -430,6 +430,51 @@ def _cached_slate(days: int, league: str | None):
     return payload
 
 
+# ---- what state each fixture is in ----------------------------------------
+_results_cache: dict = {"at": 0.0, "value": None}
+
+
+def _recent_results(days: int = 4) -> dict:
+    """(div, home, away) -> final score, from every source we already hold.
+
+    The official results the engine fits on win; API-Football's finals fill the
+    hours before those arrive. Cached for a minute: the slate asks per fixture.
+    """
+    now = _time.time()
+    if _results_cache["value"] is not None and now - _results_cache["at"] <= 60:
+        return _results_cache["value"]
+    out: dict = {}
+    cutoff = pd.Timestamp(datetime.now(EAT).date()) - pd.Timedelta(days=days)
+
+    def add(div, home, away, hg, ag, source):
+        if pd.isna(hg) or pd.isna(ag):
+            return
+        out[(str(div), str(home), str(away))] = {
+            "hg": int(hg), "ag": int(ag), "score": "%d-%d" % (int(hg), int(ag)),
+            "source": source}
+
+    try:                                     # API-Football finals (fresher)
+        from predictor import tipslog
+        api = tipslog.api_results(_HERE)
+        if len(api):
+            when = pd.to_datetime(api["Date"], errors="coerce")
+            for r in api[when >= cutoff].itertuples(index=False):
+                if str(getattr(r, "Status", "")) in tipslog.FINISHED:
+                    add(r.Div, r.HomeTeam, r.AwayTeam, r.FTHG, r.FTAG, "api")
+    except Exception as e:
+        print("recent results (api) failed: %r" % e, flush=True)
+    try:                                     # official, and authoritative
+        df = predictor().df
+        when = pd.to_datetime(df["Date"], errors="coerce")
+        for r in df[when >= cutoff].itertuples(index=False):
+            add(r.Div, r.HomeTeam, r.AwayTeam,
+                getattr(r, "FTHG", None), getattr(r, "FTAG", None), "official")
+    except Exception as e:
+        print("recent results (official) failed: %r" % e, flush=True)
+    _results_cache.update(at=now, value=out)
+    return out
+
+
 def _compute_slate(days: int, league: str | None):
     p = predictor()
     divs = [league] if league else p.divs
@@ -473,7 +518,10 @@ def _compute_slate(days: int, league: str | None):
             r = s["result"]
             pick = max(r, key=r.get)
             ko, label = _local_kickoff(f)
-            started = bool(ko and ko <= datetime.now(EAT))
+            now_eat = datetime.now(EAT)
+            started = bool(ko and ko <= now_eat)
+            final = _recent_results().get((d, s["home"], s["away"]))
+            state = matchstate.of(ko, now_eat, final is not None)
             mk = None
             if odds is not None:
                 try:
@@ -508,6 +556,11 @@ def _compute_slate(days: int, league: str | None):
                 "xg": "%.2f-%.2f" % (s["exp_home"], s["exp_away"]),
                 "new": bool(s["home_new"] or s["away_new"]),
                 "started": started,
+                # "started" stays what it always meant - kick-off has passed -
+                # because the record and the tip lists are built on it. What a
+                # reader sees comes from `state`, which knows a match can end.
+                "state": state,
+                "final": final,
             }
             if away_div:
                 row["away_div"] = away_div

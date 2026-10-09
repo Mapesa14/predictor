@@ -191,7 +191,18 @@ function useLive(interval = 60000) {
   return live;
 }
 
+/** Upcoming, in play, or over. A match that ended hours ago said "started"
+ *  until the day rolled over, which read as though it were still running. */
+function State({ m }) {
+  if (m.final) return <em className="ft">FT {m.final.score}</em>;
+  if (m.state === "ended") return <em className="ft">ended</em>;
+  if (m.state === "live" || m.started) return <em className="live">started</em>;
+  return null;
+}
+
 function LiveChip({ m, live }) {
+  // A final score on the row already says the match is over.
+  if (m.final) return null;
   // A stale snapshot is worse than none. The server stops polling once no
   // match is in play, so the last reading of a finished game would otherwise
   // sit on the card as "88'" indefinitely.
@@ -400,7 +411,7 @@ function Slate() {
                           <span className="vs">v</span>
                           <span className="aw">{m.away}</span>
                           {m.new && <em className="new">new</em>}
-                          {m.started && <em className="live">started</em>}
+                          <State m={m} />
                           <LiveChip m={m} live={live} />
                         </a>
                       </td>
