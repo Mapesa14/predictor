@@ -483,7 +483,9 @@ def _compute_slate(days: int, league: str | None):
     for d in divs:
         if d not in p.divs:
             continue
-        sched = p.schedule(d, days)
+        # A day wider than asked for, then filtered to whole days below: the
+        # schedule window is a rolling clock, and the reader asked for days.
+        sched = p.schedule(d, days + 1)
         if not len(sched):
             continue
         has_note = "note" in sched.columns
@@ -519,6 +521,8 @@ def _compute_slate(days: int, league: str | None):
             pick = max(r, key=r.get)
             ko, label = _local_kickoff(f)
             now_eat = datetime.now(EAT)
+            if not matchstate.on_slate(ko, now_eat, days):
+                continue                 # another day: "Today" must mean today
             started = bool(ko and ko <= now_eat)
             final = _recent_results().get((d, s["home"], s["away"]))
             state = matchstate.of(ko, now_eat, final is not None)

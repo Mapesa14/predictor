@@ -23,8 +23,28 @@ from datetime import datetime, timedelta
 FULL_MATCH_MINUTES = 130
 
 
+def window(now: datetime, days: int = 1) -> tuple:
+    """The first and last calendar day a slate of `days` covers.
+
+    "Today" has to mean today. The schedule is filtered on a rolling clock -
+    everything between midnight and this time tomorrow - which put tomorrow's
+    early kick-offs under a chip labelled Today. The reader's day is the one in
+    East Africa Time, so that is what the window counts.
+    """
+    first = now.date()
+    return first, first + timedelta(days=max(1, int(days)) - 1)
+
+
+def on_slate(kickoff, now: datetime, days: int = 1) -> bool:
+    """Is this kick-off inside the window the reader asked for?"""
+    if kickoff is None:
+        return False
+    first, last = window(now, days)
+    return first <= kickoff.date() <= last
+
+
 def of(kickoff, now: datetime, has_final: bool = False,
-       window: int = FULL_MATCH_MINUTES) -> str:
+       minutes: int = FULL_MATCH_MINUTES) -> str:
     """"upcoming", "live" or "ended" for one fixture."""
     if has_final:
         return "ended"
@@ -32,4 +52,4 @@ def of(kickoff, now: datetime, has_final: bool = False,
         return "upcoming"
     if now < kickoff:
         return "upcoming"
-    return "ended" if now >= kickoff + timedelta(minutes=window) else "live"
+    return "ended" if now >= kickoff + timedelta(minutes=minutes) else "live"

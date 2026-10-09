@@ -46,3 +46,36 @@ def test_the_cushion_outlasts_stoppage_and_a_late_kick_off():
 
 def test_a_fixture_with_no_kick_off_is_never_called_live():
     assert matchstate.of(None, at(10)) == "upcoming"
+
+
+# ------------------------------------------------------------- the window
+def test_today_means_today_not_the_next_twenty_four_hours():
+    """The bug this fixes: the schedule window ran from midnight to this time
+    tomorrow, so tomorrow's early kick-offs appeared under "Today"."""
+    now = datetime(2026, 10, 9, 20, 0, tzinfo=timezone.utc)
+    tonight = datetime(2026, 10, 9, 22, 0, tzinfo=timezone.utc)
+    tomorrow_early = datetime(2026, 10, 10, 11, 0, tzinfo=timezone.utc)
+    assert matchstate.on_slate(tonight, now, 1)
+    assert not matchstate.on_slate(tomorrow_early, now, 1)
+
+
+def test_two_days_means_today_and_tomorrow():
+    now = datetime(2026, 10, 9, 20, 0, tzinfo=timezone.utc)
+    assert matchstate.on_slate(datetime(2026, 10, 10, 11, 0, tzinfo=timezone.utc), now, 2)
+    assert not matchstate.on_slate(datetime(2026, 10, 11, 11, 0, tzinfo=timezone.utc), now, 2)
+
+
+def test_three_days_reaches_the_day_after_tomorrow():
+    now = datetime(2026, 10, 9, 6, 0, tzinfo=timezone.utc)
+    first, last = matchstate.window(now, 3)
+    assert (first.isoformat(), last.isoformat()) == ("2026-10-09", "2026-10-11")
+
+
+def test_a_kick_off_already_past_today_still_belongs_to_today():
+    """A match that ended this afternoon stays on today's slate."""
+    now = datetime(2026, 10, 9, 20, 0, tzinfo=timezone.utc)
+    assert matchstate.on_slate(datetime(2026, 10, 9, 13, 0, tzinfo=timezone.utc), now, 1)
+
+
+def test_an_undated_fixture_is_on_no_slate():
+    assert not matchstate.on_slate(None, datetime(2026, 10, 9, tzinfo=timezone.utc), 1)
