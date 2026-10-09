@@ -902,11 +902,74 @@ def _slate_rows(p, days: int):
                 "home": s["home"], "away": s["away"],
                 "p": {"1": r["H"], "X": r["D"], "2": r["A"]},
                 "market": mk,
+                "odds": ({"1": float(f["AvgH"]), "X": float(f["AvgD"]),
+                          "2": float(f["AvgA"])} if mk is not None else None),
                 "o25": s["totals"][2.5]["over"], "btts": s["btts"]["yes"],
                 "score": "%d-%d" % (i, j),
                 "xg": "%.2f-%.2f" % (s["exp_home"], s["exp_away"]),
             })
     return rows
+
+
+def cmd_doctor(a):
+    """Is every source still arriving? Exit code 1 if anything is stale, so a
+    scheduled task can shout rather than rot quietly."""
+    from . import freshness
+    here = os.path.join(os.path.dirname(__file__), os.pardir)
+    p = None if a.quick else _pred(a)
+    rep = freshness.report(a.data, a.repo, here, p)
+    mark = {"ok": "ok  ", "warn": "WARN", "stale": "STALE"}
+    print("%-5s %-38s %-22s %s" % ("", "source", "last", "note"))
+    for s in rep["sources"]:
+        print("%-5s %-38s %-22s %s" % (mark[s["level"]], s["label"][:38],
+                                       str(s["last"])[:22], s["note"]))
+    print("\n%s" % freshness.headline(rep))
+    for s in rep["sources"]:
+        if s["level"] != "ok" and s.get("fix"):
+            print("   fix: %s" % s["fix"])
+    if rep["overall"] == "stale":
+        raise SystemExit(1)
+
+
+def cmd_freeze_tips(a):
+    """Freeze today's tip lists (East Africa Time), once. The service does this
+    itself at TIPS_FREEZE_HOUR when it maintains itself."""
+    from . import tipslog
+    p = _pred(a)
+    r = tipslog.freeze(_slate_rows(p, 2), a.repo)
+    if not r["frozen"]:
+        print("%s: nothing written - %s" % (r["day"], r["reason"]))
+        return
+    c = r["counts"]
+    print("%s frozen at %s EAT: %d bankers, %d long list, %d unpriced, %d avoid -> %s"
+          % (r["day"], tipslog.eat_time(r["frozen_at"]), c["bankers"], c["long_list"],
+             c["unpriced"], c["avoid"], r["backend"]))
+
+
+def cmd_tips_results(a):
+    """How the frozen lists did, list by list."""
+    from . import tipslog
+    p = _pred(a)
+    here = os.path.join(os.path.dirname(__file__), os.pardir)
+    s = tipslog.summary(a.repo, p.df, tipslog.api_results(here), days=a.days)
+    pc = lambda v: "  -  " if v is None else "%4.1f%%" % (100 * v)
+    print("%d day(s) frozen; chain %s" % (s["frozen_days"],
+          "intact" if s["chain"]["ok"] else "BROKEN: " + s["chain"]["note"]))
+    print("\n%-10s %8s %6s %8s %8s %9s" % ("list", "settled", "won", "model",
+                                           "offered", "flat ret"))
+    for name in tipslog.LISTS:
+        t = s["totals"][name]["all"]
+        print("%-10s %8d %6s %8s %8s %9s" % (
+            name, t["settled"], pc(t["hit"]), pc(t["expected_hit"]),
+            pc(s["totals"][name]["promised_hit"]), pc(t["flat_return"])))
+    for d in s["days"]:
+        print("\n%s (frozen %s EAT)" % (d["day"], tipslog.eat_time(d["frozen_at"])))
+        for name in tipslog.LISTS:
+            for k in d["lists"][name]["picks"]:
+                print("   %-9s %-40s %-18s %3.0f%%  %-7s %s" % (
+                    name, (k["home"] + " v " + k["away"])[:40],
+                    str(k["side"])[:18], 100 * k["p"], k["status"],
+                    k["score"] or ""))
 
 
 def cmd_record_publish(a):
@@ -1057,12 +1120,13 @@ def cmd_refresh_fixtures_api(a):
         print("Set LIVE_API_KEY first - this asks API-Football directly.")
         return
     p = _pred(a)
-    r = fixtures_api.sync(a.root, p, days=a.days)
+    r = fixtures_api.sync(a.root, p, days=a.days, yesterday=a.with_yesterday)
     print("fetched: %s" % (", ".join(r["fetched"]) or "nothing"))
     for e in r["errors"]:
         print("   error: " + e)
     print("wrote %d fixtures (%d league, %d cup, %d European) -> %s"
           % (r["rows"], r["leagues"], r["cups"], r.get("europe", 0), r["file"]))
+    print("final scores kept: %d (for settling frozen tips)" % r.get("results", 0))
     for key, title in (
             ("unresolved", "names not matched - add to fixtures_api.ALIASES only "
                            "when sure which club it is"),
@@ -1289,6 +1353,25 @@ def build_parser():
             os.path.dirname(__file__), os.pardir),
             help="where data/record lives (default: the repo)")
 
+    s = sub.add_parser("doctor",
+                       help="is every source still arriving? (exit 1 if stale)")
+    record_args(s)
+    s.add_argument("--quick", action="store_true",
+                   help="skip loading the results pool (faster, less detail)")
+    s.set_defaults(func=cmd_doctor)
+
+    s = sub.add_parser("freeze-tips",
+                       help="freeze today's tip lists once, before kick-off")
+    record_args(s)
+    s.set_defaults(func=cmd_freeze_tips)
+
+    s = sub.add_parser("tips-results",
+                       help="how the frozen tip lists did")
+    record_args(s)
+    s.add_argument("--days", type=int, default=7,
+                   help="recent days to list pick by pick (default 7)")
+    s.set_defaults(func=cmd_tips_results)
+
     s = sub.add_parser("record-publish",
                        help="freeze the coming fixtures into the append-only "
                             "public record (only ones yet to kick off)")
@@ -1318,6 +1401,9 @@ def build_parser():
                             "(one request per day fetched)")
     s.add_argument("--days", type=int, default=2,
                    help="today and how many days after (default 2)")
+    s.add_argument("--with-yesterday", action="store_true",
+                   help="also fetch yesterday's final scores, once a day "
+                        "(one more request)")
     s.add_argument("--root", default=os.path.join(
         os.path.dirname(__file__), os.pardir),
                    help="project root holding data/manual (default: the repo)")

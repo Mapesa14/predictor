@@ -103,6 +103,30 @@ def parse_football_txt(path: str, div: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+# A results overlay has to carry a played result. data/manual also holds the
+# fixtures and final scores fetched from API-Football, which are neither
+# divisions nor results; before this, fixtures_api.csv crashed every rebuild.
+_RESULT_COLS = {"Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"}
+
+
+def is_results_overlay(path: str) -> bool:
+    """A results overlay for the division its filename names.
+
+    Columns alone are not enough: results_api.csv carries exactly these columns
+    for every division at once, and was rebuilt into a phantom league called
+    "results_api". The file's own Div column has to agree with its name.
+    """
+    div = os.path.splitext(os.path.basename(path))[0]
+    try:
+        head = pd.read_csv(path, nrows=50)
+    except Exception:
+        return False
+    if not _RESULT_COLS <= set(head.columns):
+        return False
+    divs = set(head["Div"].dropna().astype(str)) if "Div" in head.columns else set()
+    return not divs or divs == {div}
+
+
 def _overlay(overlay_dir: str, div: str):
     """Hand-entered results for one division, if any.
 
@@ -117,6 +141,8 @@ def _overlay(overlay_dir: str, div: str):
     """
     path = os.path.join(overlay_dir or "", "%s.csv" % div)
     if not overlay_dir or not os.path.isfile(path):
+        return None
+    if not is_results_overlay(path):
         return None
     df = pd.read_csv(path)
     if not len(df):
@@ -148,7 +174,8 @@ def build_csvs(raw_dir: str, out_dir: str, overlay_dir: str | None = None) -> di
     # a division may exist only as an overlay
     if os.path.isdir(overlay_dir):
         for path in sorted(glob.glob(os.path.join(overlay_dir, "*.csv"))):
-            by_div.setdefault(os.path.splitext(os.path.basename(path))[0], [])
+            if is_results_overlay(path):
+                by_div.setdefault(os.path.splitext(os.path.basename(path))[0], [])
     written, all_merges = {}, {}
     for div, parts in by_div.items():
         extra = _overlay(overlay_dir, div)

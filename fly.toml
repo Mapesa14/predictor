@@ -2,7 +2,7 @@
 # and the web app and the API on a single HTTPS address. See DEPLOY.md.
 #
 # The app name has to be unique across Fly; change it here if it is taken.
-app = "mapesa-predictor"
+app = "soka-prediktor"
 primary_region = "jnb"
 
 [build]
@@ -18,6 +18,8 @@ primary_region = "jnb"
   AUTO_REFRESH_HOURS = "6"
   AUTO_REFRESH_FIRST_MINUTES = "15"
   # LIVE_API_KEY is a secret, not an env var: set it with `fly secrets set`.
+  # So is ALERT_WEBHOOK_URL, where a source that stops arriving is reported;
+  # without it the alerts are printed to `fly logs` only.
 
 [mounts]
   source = "predictor_data"

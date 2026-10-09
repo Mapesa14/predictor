@@ -98,6 +98,7 @@ def candidate(m: dict, now: datetime | None = None) -> dict | None:
         return None
     pick = max(_SIDES, key=lambda k: probs[k])
     mk = _probs(m.get("market"))
+    od = m.get("odds") if isinstance(m.get("odds"), dict) else {}
     started = m.get("started")
     if started is None:
         ko = _parse(m.get("date"))
@@ -113,6 +114,9 @@ def candidate(m: dict, now: datetime | None = None) -> dict | None:
         "p": probs[pick],
         "p_double_chance": probs[pick] + probs["X"] if pick != "X" else None,
         "market_p": mk[pick] if mk else None,
+        # the bookmakers' average decimal price on the pick, margin included,
+        # so a frozen list's flat-stake return is the one a bettor would get
+        "odds": float(od[pick]) if od.get(pick) is not None else None,
         "priced": mk is not None,
         "agrees": (max(_SIDES, key=lambda k: mk[k]) == pick) if mk else None,
         "score": m.get("score"),

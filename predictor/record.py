@@ -49,10 +49,13 @@ def path(root: str) -> str:
 
 
 # ------------------------------------------------------------- hash chain
-def _canon(row: dict) -> str:
-    """One row as a deterministic string: fixed order, fixed-width floats."""
+def _canon(row: dict, cols=None) -> str:
+    """One row as a deterministic string: fixed order, fixed-width floats.
+
+    `cols` lets another append-only log (tipslog) chain its own rows the same
+    way; the record itself always uses COLUMNS."""
     parts = []
-    for c in COLUMNS:
+    for c in (cols or COLUMNS):
         if c in ("prev", "hash"):
             continue
         v = row.get(c, "")
@@ -64,18 +67,18 @@ def _canon(row: dict) -> str:
     return "|".join(parts)
 
 
-def _link(prev: str, row: dict) -> str:
-    return hashlib.sha256((prev + "|" + _canon(row)).encode("utf-8")).hexdigest()
+def _link(prev: str, row: dict, cols=None) -> str:
+    return hashlib.sha256((prev + "|" + _canon(row, cols)).encode("utf-8")).hexdigest()
 
 
-def _check_chain(df: pd.DataFrame) -> dict:
+def _check_chain(df: pd.DataFrame, cols=None) -> dict:
     """Walk a chain held in any frame, naming the first row that breaks it."""
     if df.empty:
         return {"ok": True, "rows": 0, "note": "nothing published yet"}
     prev = GENESIS
     for i, row in df.reset_index(drop=True).iterrows():
-        r = {c: row[c] for c in COLUMNS if c not in ("prev", "hash")}
-        if str(row["prev"]) != prev or _link(prev, r) != str(row["hash"]):
+        r = {c: row[c] for c in (cols or COLUMNS) if c not in ("prev", "hash")}
+        if str(row["prev"]) != prev or _link(prev, r, cols) != str(row["hash"]):
             return {"ok": False, "rows": int(len(df)), "broken_at": int(i),
                     "note": "row %d (%s v %s) has been altered, reordered or "
                             "removed since it was published"

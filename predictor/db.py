@@ -64,6 +64,32 @@ predictions = Table(
     UniqueConstraint("div", "date", "home", "away", name="uq_prediction_fixture"),
 )
 
+# ------------------------------------------------------------- frozen tips
+# Mirrors predictor/tipslog.py's CSV, chain columns included. One row per pick
+# per list per day, plus one marker row per day (list "_day", empty fixture),
+# so the unique key also stops a day being frozen twice.
+tip_lists = Table(
+    "tip_lists", metadata,
+    Column("id", Integer, primary_key=True, autoincrement=True),
+    Column("frozen_at", String(40), nullable=False),
+    Column("day", String(10), nullable=False),
+    Column("list", String(16), nullable=False),
+    Column("rank", Integer, nullable=False),
+    Column("div", String(16), nullable=False),
+    Column("league", String(80)),
+    Column("date", String(10)),
+    Column("kickoff", String(40)),
+    Column("home", String(80), nullable=False),
+    Column("away", String(80), nullable=False),
+    Column("pick", String(2)),
+    Column("side", String(80)),
+    Column("p", Float), Column("p_dc", Float), Column("market_p", Float),
+    Column("odds", Float),
+    Column("prev", String(64), nullable=False),
+    Column("hash", String(64), nullable=False, unique=True),
+    UniqueConstraint("day", "list", "div", "home", "away", name="uq_tip_pick"),
+)
+
 # ------------------------------------------------------------------ accounts
 users = Table(
     "users", metadata,

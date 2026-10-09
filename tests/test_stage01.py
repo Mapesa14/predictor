@@ -270,6 +270,47 @@ def test_overlay_can_carry_a_division_with_no_source_file(tmp_path):
     assert written["YY1"] == 1
 
 
+def test_a_file_that_is_not_results_is_ignored_beside_the_overlays(tmp_path):
+    """data/manual also holds the fixtures and final scores fetched from
+    API-Football. Neither is a results overlay: one of them crashed every
+    rebuild, which took the Tanzanian refresh down with it."""
+    raw, out, manual = tmp_path / "raw", tmp_path / "out", tmp_path / "manual"
+    for d in (raw, out, manual):
+        d.mkdir()
+    (manual / "ZZ1.csv").write_text(
+        "Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG\n"
+        "ZZ1,05/09/2026,Charlie FC,Delta FC,3,0,,\n", encoding="utf-8")
+    (manual / "fixtures_api.csv").write_text(
+        "Div,Date,Time,HomeTeam,AwayTeam,Comp,ScaleAlt,AwayDiv\n"
+        "ZZ1,06/09/2026,19:00,Echo FC,Foxtrot FC,,,\n", encoding="utf-8")
+
+    written, _ = adapters.build_csvs(str(raw), str(out), overlay_dir=str(manual))
+    assert written["ZZ1"] == 1
+    assert "fixtures_api" not in written
+    assert not (out / "fixtures_api.csv").exists()
+
+
+def test_a_results_file_for_many_divisions_is_not_a_league(tmp_path):
+    """results_api.csv holds final scores for every division at once. It has
+    the columns of an overlay, and was rebuilt into a phantom league named
+    after the file; its Div column disagrees with its name, which is the tell."""
+    raw, out, manual = tmp_path / "raw", tmp_path / "out", tmp_path / "manual"
+    for d in (raw, out, manual):
+        d.mkdir()
+    (manual / "ZZ1.csv").write_text(
+        "Div,Date,HomeTeam,AwayTeam,FTHG,FTAG\n"
+        "ZZ1,05/09/2026,Charlie FC,Delta FC,3,0\n", encoding="utf-8")
+    (manual / "results_api.csv").write_text(
+        "Div,Date,HomeTeam,AwayTeam,FTHG,FTAG\n"
+        "E0,05/09/2026,Arsenal,Leeds,1,0\n"
+        "SP1,05/09/2026,Barcelona,Elche,2,0\n", encoding="utf-8")
+
+    written, _ = adapters.build_csvs(str(raw), str(out), overlay_dir=str(manual))
+    assert "results_api" not in written
+    assert not (out / "results_api.csv").exists()
+    assert written["ZZ1"] == 1
+
+
 def test_the_tanzanian_overlay_is_present_and_current():
     """The live Tanzanian season only exists as an overlay; guard it."""
     repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

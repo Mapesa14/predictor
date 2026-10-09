@@ -303,6 +303,42 @@ and the service knows it; every other source is read as UK time, which would
 put a 16:00 Dar es Salaam kick-off on the card at 18:00. The site publishes no
 half-time scores, so TZ1 cards carry no half-time markets and say why.
 
+## Does it still work?
+
+The worst failure this product can have is not an outage. It is serving
+three-week-old fixtures in the same confident typeface as today's, which is
+exactly what happened on 2026-10-09: the feed had not downloaded since
+12 September, `refresh-tanzania` had been crashing on every run, and every
+endpoint answered 200 while the screen showed an empty day.
+
+```bash
+python predict.py doctor        # every source, and what to run if one stopped
+```
+
+`doctor` exits 1 when anything is stale, so a scheduled task can shout instead
+of rotting quietly. The same report is served at `/api/freshness`, summarised
+in `/api/health`, and shown at the top of the slate and tips screens.
+
+Two judgements, kept apart on purpose:
+
+- **Data** — the schedule, the feed, API-Football, the Tanzanian site. Stale
+  here means the numbers on screen are wrong, and the screen says so loudly.
+- **Publishing** — the public record and the frozen tip lists. Behind here is
+  an operational fault, not a reason to distrust today's slate, so it is
+  reported quietly. A banner that cries wolf over a current slate is a banner
+  nobody reads.
+
+Staleness is judged on **when a source last arrived**, never on the date of the
+last match: no league played for a fortnight in September, and nothing was
+broken. The schedule is judged on when the board runs out — a quiet day inside
+a covered window is not a fault, a schedule that ends yesterday is.
+
+A deployed service checks itself after every refresh cycle and posts anything
+broken to `ALERT_WEBHOOK_URL` (any endpoint taking `{"text": "..."}`: Slack,
+Discord with `/slack`, Google Chat). The same problem is not repeated within
+`ALERT_REPEAT_HOURS` (default 6), and a problem that clears is announced again
+if it returns. With no webhook set, alerts are printed to the log.
+
 ## The public record
 
 Backtests are self-reported. The record is not: it writes down what was
@@ -337,6 +373,34 @@ Accuracy comes from the same `backtest.score` and `backtest.calibration` the
 walk-forward evaluation uses, and the model is compared to the closing price
 only on the rows that carry one — scoring the model on everything and the price
 on its own subset is the oldest way to flatter a model.
+
+### Tip results
+
+The Tips screen's lists are rebuilt on every request, so on their own they
+could never be judged. `predictor/tipslog.py` keeps them:
+
+```bash
+python predict.py freeze-tips                          # today's lists, once
+python predict.py refresh-fixtures-api --with-yesterday  # final scores
+python predict.py tips-results                         # how the lists did
+```
+
+- **Frozen once a day, before kick-off.** A self-maintaining service freezes
+  at `TIPS_FREEZE_HOUR` (default 10:00 East Africa Time; set `TIPS_FREEZE=1` to
+  switch it on without `AUTO_REFRESH_HOURS`). A day already frozen is never
+  frozen again, and a fixture that turns up later that day is not in its lists.
+  An empty day is still recorded, so it cannot look like a gap.
+- **Results are joined, never stored.** The official sources the engine fits
+  on come first; API-Football's final scores fill what they lack
+  (`data/manual/results_api.csv`, never fitted on). When the two disagree the
+  official score is used and the pick is marked. Postponed matches are void and
+  left out of every count; a pick with no result yet is pending, never won.
+- **Judged against what was promised.** Each list shows its hit rate beside
+  the model's own average probability and the rate it was offered on, and a
+  flat 1-unit return at the bookmakers' average odds frozen with the pick.
+
+Rows are hash-chained like the record (`data/record/tips.csv`, or the
+`tip_lists` table with `DATABASE_URL`). The endpoint is `/api/tips/results`.
 
 Once fixtures are loaded, `slate` predicts the lot:
 

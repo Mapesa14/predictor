@@ -43,6 +43,9 @@ EXTRA_COLS = ["Leg1H", "Leg1A", "WhenNote", "Comp", "ScaleAlt", "AwayDiv"]
 # Fixtures fetched from API-Football by service/fixtures_api.py, beside the
 # hand-kept overlay directory.
 API_FILE = "fixtures_api.csv"
+# Final scores API-Football reported, for settling frozen tips (tipslog) where
+# the official results sources have nothing yet. Never fitted on.
+API_RESULTS_FILE = "results_api.csv"
 
 
 def _norm(df: pd.DataFrame) -> pd.DataFrame:

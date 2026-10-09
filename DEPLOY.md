@@ -13,7 +13,9 @@ Then check the one thing that fails silently:
 curl http://localhost:8000/api/health
 ```
 
-`data.missing_top10` must be an empty list. If it names E0, SP1, I1 and the rest,
+`freshness.overall` must be `ok`: `stale` names the sources that stopped
+arriving (`freshness.problems`), which is the failure that otherwise shows as a
+confident, empty page. `data.missing_top10` must be an empty list. If it names E0, SP1, I1 and the rest,
 the European pool is not mounted — see *Match data* below.
 
 Production is the same shape with real secrets and TLS in front. TLS is not
@@ -31,8 +33,9 @@ config is `fly.toml`.
 
 ```bash
 fly auth login                       # opens the browser
-fly apps create mapesa-predictor     # if taken, pick another and edit fly.toml
+fly apps create soka-prediktor       # the name in fly.toml; change both if taken
 fly secrets set LIVE_API_KEY=...     # or Secrets in the Fly dashboard
+fly secrets set ALERT_WEBHOOK_URL=...  # optional: where broken sources are reported
 ```
 
 Then deploy — this builds on Fly's servers, so Docker is not needed locally:

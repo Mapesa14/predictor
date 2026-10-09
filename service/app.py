@@ -108,9 +108,9 @@ def _refresh_cycle() -> list:
         # yet - midweek rounds, cups, African leagues - make it in.
         try:
             from service import fixtures_api
-            r = fixtures_api.sync(_HERE, predictor(), days=2)
-            done.append("api fixtures: %d leagues, %d cups%s" % (
-                r["leagues"], r["cups"],
+            r = fixtures_api.sync(_HERE, predictor(), days=2, yesterday=True)
+            done.append("api fixtures: %d leagues, %d cups, %d results%s" % (
+                r["leagues"], r["cups"], r["results"],
                 (" (" + "; ".join(r["errors"]) + ")") if r["errors"] else ""))
         except Exception as e:
             done.append("api fixtures failed: %r" % e)
@@ -121,6 +121,17 @@ def _refresh_cycle() -> list:
         done.append("record: %d new, %d on file" % (r["written"], r["total"]))
     except Exception as e:
         done.append("record failed: %r" % e)
+    try:
+        from predictor import freshness
+        from service import alerts
+        rep = freshness.report(ROOT, REPO, _HERE, _p)
+        _fresh_cache["value"], _fresh_cache["at"] = rep, _time.time()
+        a = alerts.check(REPO, rep, [d for d in done if "failed" in d])
+        done.append("freshness: %s%s" % (
+            freshness.headline(rep),
+            ("; %d alert(s) sent" % a["sent"]) if a["sent"] else ""))
+    except Exception as e:
+        done.append("freshness check failed: %r" % e)
     print("refresh cycle: " + "; ".join(done), flush=True)
     return done
 
@@ -182,8 +193,44 @@ def _warmup():
         if live.configured():
             live.start_refresher(_kickoffs_today)
             print("live scores: refresher started", flush=True)
+        if AUTO_REFRESH_HOURS > 0 or os.environ.get("TIPS_FREEZE") == "1":
+            _t.Thread(target=_tips_freeze_loop, daemon=True).start()
+            print("tips: lists freeze daily at %02d:00 EAT"
+                  % _tipslog().FREEZE_HOUR, flush=True)
     except Exception as e:
         print("warm-up failed: %r" % e, flush=True)
+
+
+def _tipslog():
+    from predictor import tipslog
+    return tipslog
+
+
+def _freeze_tips(now=None) -> dict:
+    slate = _cached_slate(2, None)
+    rows = [m for g in slate.get("groups", []) for m in g.get("matches", [])]
+    return _tipslog().freeze(rows, REPO, now)
+
+
+def _tips_freeze_loop():
+    """Freeze each day's tip lists once, at FREEZE_HOUR East Africa Time.
+
+    A service that was down at that hour freezes on its first check after it,
+    still before any fixture it lists has started - tips.build drops those.
+    """
+    tl = _tipslog()
+    while True:
+        try:
+            now = datetime.now(EAT)
+            if now.hour >= tl.FREEZE_HOUR and not tl.is_frozen(REPO, now):
+                r = _freeze_tips(now)
+                if r["frozen"]:
+                    print("tips: froze %s - %s" % (r["day"], ", ".join(
+                        "%d %s" % (n, k) for k, n in r["counts"].items())),
+                        flush=True)
+        except Exception as e:                   # never take the server down
+            print("tips freeze failed: %r" % e, flush=True)
+        _time.sleep(300)
 
 
 _t.Thread(target=_warmup, daemon=True).start()
@@ -300,9 +347,38 @@ def api_health():
     reported rather than treated as down, or an orchestrator would restart the
     service in a loop during the eleven-second model fit.
     """
+    fresh = _freshness()
     return {"ok": True, "warm": _warm["done"], "warm_at": _warm["at"],
             "data": _data_status(),
+            # Stale sources are a fault the health check must show: a service
+            # serving three-week-old fixtures answers 200 on every route.
+            "freshness": {"overall": fresh["overall"],
+                          "problems": fresh["problems"],
+                          "checked": fresh["generated"]},
             "database": db.healthy(), "live": live.status()}
+
+
+_fresh_cache: dict = {"at": 0.0, "value": None}
+
+
+def _freshness(ttl: float = 60.0) -> dict:
+    """Cached: the health check is polled every 30 seconds by the platform."""
+    from predictor import freshness
+    now = _time.time()
+    if _fresh_cache["value"] is None or now - _fresh_cache["at"] > ttl:
+        _fresh_cache["value"] = freshness.report(ROOT, REPO, _HERE, _p)
+        _fresh_cache["at"] = now
+    return _fresh_cache["value"]
+
+
+@app.get("/api/freshness")
+def api_freshness():
+    """Every source, how long since it arrived, and what to run if it stopped.
+
+    The screen shows this: an empty slate must never be indistinguishable from
+    a pipeline that stopped three weeks ago.
+    """
+    return _jsonable(_freshness())
 
 
 def _data_status() -> dict | None:
@@ -423,6 +499,8 @@ def _compute_slate(days: int, league: str | None):
                 "pick": {"H": "1", "D": "X", "A": "2"}[pick],
                 "p": {"1": r["H"], "X": r["D"], "2": r["A"]},
                 "market": mk,
+                "odds": ({"1": float(f["AvgH"]), "X": float(f["AvgD"]),
+                          "2": float(f["AvgA"])} if mk is not None else None),
                 "o25": s["totals"][2.5]["over"],
                 "btts": s["btts"]["yes"],
                 "score": "%d-%d" % (i, j),
@@ -529,6 +607,24 @@ def api_tips(days: int = 2):
     out["days"] = days
     out["generated"] = slate.get("generated")
     return _jsonable(out)
+
+
+@app.get("/api/tips/results")
+def api_tips_results(days: int = 14):
+    """The frozen daily lists, pick by pick, and how each list has done.
+
+    Judged on the lists exactly as they were shown - frozen before kick-off by
+    predictor/tipslog.py - not on the rule applied after the fact.
+    """
+    from predictor import tipslog
+    return _jsonable(tipslog.summary(REPO, predictor().df,
+                                     tipslog.api_results(_HERE), days=days))
+
+
+@app.post("/api/tips/freeze")
+def api_tips_freeze():
+    """Freeze today's lists now, if not already frozen. Safe to repeat."""
+    return _jsonable(_freeze_tips())
 
 
 @app.get("/api/record/verify")

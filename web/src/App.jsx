@@ -252,6 +252,53 @@ function Theme() {
   );
 }
 
+const FRESH_WORD = { warn: "Some data is behind", stale: "These predictions are out of date" };
+
+/** Says how fresh the data is - and shouts when it is not.
+ *
+ * The failure this prevents: on 2026-10-09 the fixtures feed had not been
+ * downloaded for three weeks and the Tanzanian scraper had been crashing, and
+ * the app showed an empty day in the same confident type as a full one. */
+function DataHealth() {
+  const { data } = useFetch(api("/api/freshness"));
+  const [open, setOpen] = useState(false);
+  if (!data) return null;
+  const bad = data.sources.filter((s) => s.level !== "ok" && s.scope === "data");
+  const behind = data.sources.filter((s) => s.level !== "ok" && s.scope === "publishing");
+  const sch = data.sources.find((s) => s.key === "schedule");
+  const feed = data.sources.find((s) => s.key === "feed");
+  // A reader is told about the numbers in front of them. The record and the
+  // frozen lists falling behind is an operational fault, reported quietly -
+  // crying wolf over a current slate teaches people to ignore the banner.
+  if (!bad.length) {
+    return (
+      <p className="freshline">
+        {sch ? sch.tomorrow + " fixtures listed for tomorrow · " : ""}
+        data refreshed {feed ? feed.last : "recently"}
+        {behind.length > 0 && <> · <span className="freshbehind">
+          behind: {behind.map((s) => s.label.toLowerCase()).join(", ")}
+        </span></>}
+      </p>
+    );
+  }
+  return (
+    <div className={"freshbox " + data.data_level}>
+      <b>{FRESH_WORD[data.data_level]}.</b>{" "}
+      {bad.map((s) => s.label + " — last " + s.last + (s.note ? " (" + s.note + ")" : "")).join("; ")}.
+      {" "}
+      <button className="disclose freshmore" onClick={() => setOpen(!open)}>
+        {open ? "hide" : "how to fix"}
+      </button>
+      {open && (
+        <ul className="freshfix">
+          {bad.concat(behind).filter((s) => s.fix).map((s) => <li key={s.key}><code>{s.fix}</code></li>)}
+          <li>Or deploy the service, which refreshes itself every 6 hours.</li>
+        </ul>
+      )}
+    </div>
+  );
+}
+
 function Slate() {
   const [days, setDays] = useState(1);
   const [q, setQ] = useState("");
@@ -287,6 +334,7 @@ function Slate() {
         <div className="tools"><Theme /></div>
       </header>
       <TopNav hash={window.location.hash} />
+      <DataHealth />
 
       <div className="tools" style={{ marginTop: 10 }}>
         {[1, 2, 3].map((n) => (
@@ -1214,6 +1262,125 @@ function TipTable({ rows, dc }) {
   );
 }
 
+const TIP_LISTS = ["bankers", "long_list", "unpriced", "avoid"];
+const TIP_LABEL = { bankers: "Bankers", long_list: "Long list", unpriced: "Unpriced", avoid: "Avoid" };
+const RES_MARK = { won: "✓", lost: "✗", void: "void", pending: "…" };
+const tally = (s) => (s && s.settled ? s.won + "/" + s.settled : "—");
+const signed = (v) => (v == null ? "—" : (v >= 0 ? "+" : "") + (v * 100).toFixed(1) + "%");
+const dayLabel = (d) => new Date(d + "T12:00:00").toLocaleDateString([], { weekday: "short", day: "numeric", month: "short" });
+
+/** One frozen day: every list as it was shown, each pick marked. */
+function TipDay({ d, open }) {
+  const shown = TIP_LISTS.filter((k) => d.lists[k].picks.length);
+  const line = ["bankers", "long_list"].filter((k) => d.lists[k].picks.length)
+    .map((k) => TIP_LABEL[k] + " " + tally(d.lists[k].stats)).join(" · ");
+  // East Africa Time, whatever the reader's clock: the freeze rule is stated in EAT.
+  const at = new Date(d.frozen_at).toLocaleTimeString([], {
+    hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Africa/Dar_es_Salaam" });
+  const acca = d.acca;
+  return (
+    <details className="sum tipday" open={open}>
+      <summary>{dayLabel(d.day)}{line ? " · " + line : ""}</summary>
+      <p className="why">
+        Frozen at {at} EAT.
+        {acca && <> {acca.legs} banker{acca.legs === 1 ? "" : "s"} together:{" "}
+          <b>{acca.all_won === null ? "not settled yet" : acca.all_won ? "all won" : "not all won"}</b>
+          {" "}(the model gave {pct(acca.expected)}).</>}
+      </p>
+      {shown.length === 0 && <p className="note">Nothing cleared the bars that day.</p>}
+      {shown.map((k) => {
+        const s = d.lists[k].stats;
+        return (
+          <div key={k} className="tipwrap">
+            <h3 className="tipdayh">
+              {TIP_LABEL[k]} — {s.settled ? s.won + " of " + s.settled + " won" : "none settled"}
+              {s.pending ? ", " + s.pending + " awaiting a result" : ""}
+              {s.void ? ", " + s.void + " void" : ""}
+            </h3>
+            <table className="markets">
+              <tbody>
+                {d.lists[k].picks.map((c, i) => (
+                  <tr key={i}>
+                    <td>{c.home} v {c.away}<div className="tipleague">{c.league}</div></td>
+                    <td><b>{c.side}</b></td>
+                    <td className="num">{pct(c.p)}</td>
+                    <td className="num">{c.score || ""}</td>
+                    <td className={"num res-" + c.status} title={c.conflict ? "API-Football reported a different score; the official one is used" : c.source || ""}>
+                      {RES_MARK[c.status]}{c.conflict ? " *" : ""}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      })}
+    </details>
+  );
+}
+
+/** How the lists did, judged on what was shown - not on the rule afterwards. */
+function TipResults() {
+  const { loading, data, error } = useFetch(api("/api/tips/results?days=14"));
+  const slow = useSlow(loading);
+  if (loading) return (
+    <Loading label="Loading past results…" show={slow}>
+      <SkelTable rows={4} nums={4} kick={false} />
+    </Loading>
+  );
+  if (error) return <p className="note">Results failed to load: {error}</p>;
+  if (!data.frozen_days) return (
+    <p className="note">
+      Nothing frozen yet. Each day's lists are saved at {String(data.freeze_hour).padStart(2, "0")}:00
+      East Africa Time and judged here once the results are in.
+    </p>
+  );
+  return (
+    <>
+      <div className="tipwrap">
+        <table className="markets">
+          <thead>
+            <tr>
+              <th>List</th><th className="num">Won</th><th className="num">Hit</th>
+              <th className="num">Model said</th><th className="num">Offered on</th>
+              <th className="num">Flat return</th>
+            </tr>
+          </thead>
+          <tbody>
+            {TIP_LISTS.map((k) => {
+              const t = data.totals[k];
+              const a = t.all;
+              return (
+                <tr key={k}>
+                  <td>
+                    {TIP_LABEL[k]}
+                    <div className="tipleague">7 days {tally(t["7"])} · 30 days {tally(t["30"])}</div>
+                  </td>
+                  <td className="num">{tally(a)}</td>
+                  <td className="num">{a.hit != null ? pct1(a.hit) : "—"}</td>
+                  <td className="num">{a.expected_hit != null ? pct1(a.expected_hit) : "—"}</td>
+                  <td className="num">{t.promised_hit != null ? pct1(t.promised_hit) : "—"}</td>
+                  <td className="num">{signed(a.flat_return)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <p className="why">
+        "Model said" is the average of the model's own probabilities on the
+        settled picks; "offered on" is the rate each list was measured at before
+        launch. Below {data.min_judgeable} settled picks a hit rate is mostly
+        luck. Flat return is 1 unit on every priced pick at the bookmakers'
+        average odds, margin included.
+        {" "}{data.chain.ok ? "✓ Frozen lists unaltered (hash chain intact)." : "⚠ " + data.chain.note}
+        {data.conflicts > 0 && <> {data.conflicts} result{data.conflicts === 1 ? "" : "s"} marked * — API-Football disagreed with the official score, which is the one used.</>}
+      </p>
+      {data.days.map((d, i) => <TipDay key={d.day} d={d} open={i === 0} />)}
+    </>
+  );
+}
+
 function TipRecord({ label, r }) {
   if (!r || !r.n) return <li>{label}: nothing settled yet.</li>;
   return (
@@ -1246,6 +1413,7 @@ function TipsScreen() {
         <div className="tools"><Theme /></div>
       </header>
       <TopNav hash={window.location.hash} />
+      <DataHealth />
 
       <div className="tools" style={{ marginTop: 10 }}>
         {[1, 2, 3].map((d) => (
@@ -1335,6 +1503,17 @@ function TipsScreen() {
               so you can see them, not so you can back them.
             </p>
             <TipTable rows={data.avoid} />
+          </section>
+
+          <section className="tipsec">
+            <h2>Results — the lists as they were shown</h2>
+            <p className="why">
+              Each day's lists are saved before the first kick-off and never
+              changed afterwards. Results come from the official sources first,
+              then API-Football's final scores. A postponed match is void and
+              left out of the counts.
+            </p>
+            <TipResults />
           </section>
 
           <section className="tipsec">

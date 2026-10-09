@@ -43,3 +43,15 @@ soccerdata/
 # Fixtures fetched from API-Football at runtime (service/fixtures_api.py).
 data/manual/fixtures_api.csv
 data/manual/fixtures_api.csv.tmp
+
+# Final scores from API-Football for settling frozen tips (tipslog), and the
+# note of which past days have been fetched. Regenerated at runtime.
+data/manual/results_api.csv
+data/manual/results_api.csv.tmp
+data/manual/results_api_state.json
+
+# Which problems have already been reported (service/alerts.py).
+data/record/alerts.json
+
+# Screenshots and scratch images from a working session.
+scratch/*.png

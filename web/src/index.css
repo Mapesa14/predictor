@@ -454,3 +454,24 @@ html.native .btn { min-height: 44px; }
 @media (max-width: 640px) {
   table.skel-table { overflow-x: hidden; }
 }
+
+/* ---- tip results ------------------------------------------------------------ */
+.res-won { color: var(--pitch); font-weight: 700; }
+.res-lost { color: var(--spot); font-weight: 700; }
+.res-pending, .res-void { color: var(--ink3); }
+.tipday summary { font-size: 13px; }
+.tipdayh { font-size: 11px; letter-spacing: 0.1em; color: var(--ink2); margin: 12px 0 4px; }
+
+/* ---- data freshness ---------------------------------------------------------
+   An empty slate and a dead pipeline look identical unless the page says which
+   one it is. Quiet when everything is current; loud when it is not. */
+.freshline { margin: 8px 2px 0; color: var(--ink3); font-size: 12px; }
+.freshbox {
+  margin: 10px 0 0; padding: 10px 12px; font-size: 13px; line-height: 1.5;
+  border-left: 3px solid var(--amber); background: var(--paper2);
+}
+.freshbox.stale { border-left-color: var(--live); }
+.freshmore { text-decoration: underline; color: var(--spot); font-size: 12px; }
+.freshfix { margin: 8px 0 0; padding-left: 18px; color: var(--ink2); font-size: 12px; }
+.freshfix code { font-family: var(--font-mono); font-size: 11px; }
+.freshbehind { color: var(--amber); }

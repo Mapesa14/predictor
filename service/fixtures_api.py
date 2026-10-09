@@ -234,12 +234,89 @@ def _row(div, when, home, away, comp="", alt="", away_div=""):
             "Comp": comp, "ScaleAlt": alt, "AwayDiv": away_div}
 
 
+# ---------------------------------------------------------------- results
+_FINISHED = {"FT", "AET", "PEN"}
+RESULT_COLUMNS = ["Div", "Date", "Kickoff", "HomeTeam", "AwayTeam", "FTHG",
+                  "FTAG", "Status", "FetchedAt"]
+RESULTS_KEEP_DAYS = 120
+
+
+def results_file(root: str) -> str:
+    return os.path.join(root, "data", "manual", fixtures.API_RESULTS_FILE)
+
+
+def _state_file(root: str) -> str:
+    return os.path.join(root, "data", "manual", "results_api_state.json")
+
+
+def _state(root: str) -> dict:
+    import json
+    try:
+        with open(_state_file(root), encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {}
+
+
+def _mark_yesterday(root: str, day: str) -> None:
+    import json
+    st = _state(root)
+    done = sorted(set(st.get("yesterday_done", [])) | {day})[-30:]
+    st["yesterday_done"] = done
+    os.makedirs(os.path.dirname(_state_file(root)), exist_ok=True)
+    with open(_state_file(root), "w", encoding="utf-8") as fh:
+        json.dump(st, fh)
+
+
+def _result(f, div, when, home, away, status):
+    """A final score (or a void) for a league fixture, else None.
+
+    The 90-minute score where the provider gives one: a 1X2 pick is settled on
+    normal time, and `goals` includes extra time."""
+    if status in _SKIP_STATUS:
+        hg = ag = None
+    elif status in _FINISHED:
+        ft = ((f.get("score") or {}).get("fulltime") or {})
+        g = f.get("goals") or {}
+        hg = ft.get("home") if ft.get("home") is not None else g.get("home")
+        ag = ft.get("away") if ft.get("away") is not None else g.get("away")
+        if hg is None or ag is None:
+            return None
+    else:
+        return None
+    utc = when.tz_convert("UTC")
+    return {"Div": div, "Date": utc.strftime("%Y-%m-%d"),
+            "Kickoff": utc.isoformat(), "HomeTeam": home, "AwayTeam": away,
+            "FTHG": hg, "FTAG": ag, "Status": status}
+
+
+def _write_results(root: str, results: list, now) -> int:
+    """Merge newly reported results into the results file; newest report wins."""
+    new = pd.DataFrame(results)
+    new["FetchedAt"] = pd.Timestamp(now).isoformat()
+    path = results_file(root)
+    if os.path.isfile(path):
+        old = pd.read_csv(path, dtype=str, keep_default_na=False, na_values=[""])
+        new = pd.concat([old.reindex(columns=RESULT_COLUMNS),
+                         new.reindex(columns=RESULT_COLUMNS)], ignore_index=True)
+    out = new.reindex(columns=RESULT_COLUMNS).drop_duplicates(
+        subset=["Div", "Date", "HomeTeam", "AwayTeam"], keep="last")
+    cutoff = (pd.Timestamp(now) - pd.Timedelta(days=RESULTS_KEEP_DAYS)).strftime("%Y-%m-%d")
+    out = out[out["Date"].astype(str) >= cutoff]
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    tmp = path + ".tmp"
+    out.to_csv(tmp, index=False)
+    os.replace(tmp, path)
+    return len(results)
+
+
 def build_rows(provider_fixtures, p, stale_days=STALE_DAYS):
     """Provider fixtures -> fixtures-file rows, and a report of what was left out."""
     ours = {v: k for k, v in live.DIV_LEAGUES.items()}
     last = p.df.groupby("Div")["Date"].max()
     rows = []
-    report = {"unresolved": [], "not_loaded": [], "stale": [], "no_gap": []}
+    report = {"unresolved": [], "not_loaded": [], "stale": [], "no_gap": [],
+              "results": []}
     for f in provider_fixtures or []:
         try:
             lg = f.get("league") or {}
@@ -252,8 +329,9 @@ def build_rows(provider_fixtures, p, stale_days=STALE_DAYS):
         if when.tzinfo is None:
             when = when.tz_localize("UTC")
         status = ((f.get("fixture") or {}).get("status") or {}).get("short")
-        if status in _SKIP_STATUS:
-            continue
+        void = status in _SKIP_STATUS
+        if void and lid not in ours:
+            continue                 # only league fixtures can be frozen tips
         label = "%s v %s" % (home, away)
 
         if lid in ours:
@@ -272,7 +350,11 @@ def build_rows(provider_fixtures, p, stale_days=STALE_DAYS):
                 report["unresolved"].append("%s (%s): %s" % (
                     label, leagues.name(div), ", ".join(missing)))
                 continue
-            rows.append(_row(div, when, h[0], a[0]))
+            res = _result(f, div, when, h[0], a[0], status)
+            if res:
+                report["results"].append(res)
+            if not void:
+                rows.append(_row(div, when, h[0], a[0]))
 
         elif lid in CUPS:
             comp, country = CUPS[lid]
@@ -369,7 +451,7 @@ def _iso(ddmmyyyy: str) -> str:
 
 
 def sync(root: str, p, days: int = 2, now=None, store=None, transport=None,
-         stale_days=STALE_DAYS) -> dict:
+         stale_days=STALE_DAYS, yesterday: bool = False) -> dict:
     """Fetch today and the next days, and rewrite the API fixtures file.
 
     A day that could not be fetched keeps whatever the file already had for it,
@@ -378,8 +460,16 @@ def sync(root: str, p, days: int = 2, now=None, store=None, transport=None,
     now = live._naive_utc(now) or live.utcnow()
     dates = [(now + timedelta(days=i)).strftime("%Y-%m-%d")
              for i in range(max(1, int(days)))]
+    # Once a day, yesterday too: its late kick-offs finished after the last
+    # fetch of it, and frozen tips on them would otherwise stay pending. One
+    # extra request a day.
+    y = (now - timedelta(days=1)).strftime("%Y-%m-%d")
+    want_y = bool(yesterday) and y not in _state(root).get("yesterday_done", [])
+    if want_y:
+        dates.insert(0, y)
     fetched, errors, rows = [], [], []
-    report = {"unresolved": [], "not_loaded": [], "stale": [], "no_gap": []}
+    report = {"unresolved": [], "not_loaded": [], "stale": [], "no_gap": [],
+              "results": []}
     for day in dates:
         try:
             got = fetch_day(day, store=store, now=now, transport=transport)
@@ -392,6 +482,10 @@ def sync(root: str, p, days: int = 2, now=None, store=None, transport=None,
         for k, v in rep.items():
             report[k].extend(v)
 
+    n_results = (_write_results(root, report["results"], now)
+                 if report["results"] else 0)
+    if want_y and y in fetched:
+        _mark_yesterday(root, y)
     path = api_file(root)
     out = pd.DataFrame(rows, columns=COLUMNS)
     if fetched:
@@ -411,5 +505,5 @@ def sync(root: str, p, days: int = 2, now=None, store=None, transport=None,
     cups = int((comp_col != "").sum()) - europe
     return {"fetched": fetched, "errors": errors, "rows": int(len(out)),
             "leagues": int(len(out)) - cups - europe, "cups": cups,
-            "europe": europe, "report": report,
+            "europe": europe, "results": n_results, "report": report,
             "file": path, "written": bool(fetched)}
