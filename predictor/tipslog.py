@@ -61,6 +61,7 @@ _SETTLE = {
     "over25": lambda h, a: h + a > 2,
     "over35": lambda h, a: h + a > 3,
     "under25": lambda h, a: h + a < 3,
+    "band13": lambda h, a: 1 <= h + a <= 3,
     "btts_yes": lambda h, a: h > 0 and a > 0,
     "btts_no": lambda h, a: h == 0 or a == 0,
 }

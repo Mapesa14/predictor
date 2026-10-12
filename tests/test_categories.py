@@ -79,9 +79,9 @@ def test_a_fixture_only_appears_where_it_clears_the_bar():
     out = tips.build([row("Man City", "Burnley", 2.6, 0.6)], now=NOW)
     assert [p["side"] for p in cat(out, "over05")["picks"]] == ["Over 0.5 goals"]
     assert [p["side"] for p in cat(out, "double_chance")["picks"]] == ["Man City or draw"]
-    # a 1-1 kind of game clears nothing
+    # a 1-1 kind of game clears nothing but the low-scoring band
     quiet = tips.build([row("Leeds", "Spurs", 0.9, 0.9)], now=NOW)
-    assert all(not c["picks"] for c in quiet["categories"])
+    assert {c["key"] for c in quiet["categories"] if c["picks"]} == {"band13"}
 
 
 def test_picks_are_ordered_by_confidence_and_capped():

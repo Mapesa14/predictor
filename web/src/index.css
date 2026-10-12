@@ -480,3 +480,12 @@ html.native .btn { min-height: 44px; }
 .catchips { margin: 4px 0 10px; }
 .catchips .catn { font-family: var(--font-mono); color: var(--ink3); margin-left: 4px; }
 .catchips .chip.on .catn { color: var(--paper); }
+
+/* ---- the coupon -------------------------------------------------------- */
+.couponbar { margin-top: 10px; gap: 8px; }
+.fieldinline {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: 600 11px var(--font-body); text-transform: uppercase;
+  letter-spacing: .08em; color: var(--ink3);
+}
+.fieldinline input { font: 400 13px var(--font-body); }

@@ -6,7 +6,7 @@ same probabilities — the front end never re-fits anything.
 from __future__ import annotations
 
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 import numpy as np
@@ -419,14 +419,15 @@ def slate(days: int = 2, league: str | None = None):
     return _cached_slate(days, league)
 
 
-def _cached_slate(days: int, league: str | None):
+def _cached_slate(days: int, league: str | None, first=None, last=None):
     stamp = _data_stamp(ROOT)
     now = _time.time()
-    hit = _slate_cache.get((days, league))
+    key = (days, league, first, last)
+    hit = _slate_cache.get(key)
     if hit and hit["stamp"] == stamp and (now - hit["at"]) < _SLATE_TTL:
         return hit["payload"]
-    payload = _compute_slate(days, league)
-    _slate_cache[(days, league)] = {"stamp": stamp, "at": now, "payload": payload}
+    payload = _compute_slate(days, league, first, last)
+    _slate_cache[key] = {"stamp": stamp, "at": now, "payload": payload}
     return payload
 
 
@@ -475,9 +476,20 @@ def _recent_results(days: int = 4) -> dict:
     return out
 
 
-def _compute_slate(days: int, league: str | None):
+# How far ahead a coupon may reach. The fixtures feed publishes about a week
+# and a half; past that the list would be mostly round-robin guesswork.
+COUPON_MAX_AHEAD = 13
+
+
+def _compute_slate(days: int, league: str | None, first=None, last=None):
     p = predictor()
     divs = [league] if league else p.divs
+    now_eat0 = datetime.now(EAT)
+    first = first or now_eat0.date()
+    last = last or matchstate.window(now_eat0, days)[1]
+    # Fetched a day wider than the window, then filtered to whole days: the
+    # schedule window is a rolling clock, and a reader asks in days.
+    span = max(1, (last - now_eat0.date()).days + 1)
     groups, pair_groups, skipped = [], [], []
     cup_matches = {}
     for d in divs:
@@ -485,7 +497,7 @@ def _compute_slate(days: int, league: str | None):
             continue
         # A day wider than asked for, then filtered to whole days below: the
         # schedule window is a rolling clock, and the reader asked for days.
-        sched = p.schedule(d, days + 1)
+        sched = p.schedule(d, span + 1)
         if not len(sched):
             continue
         has_note = "note" in sched.columns
@@ -521,7 +533,7 @@ def _compute_slate(days: int, league: str | None):
             pick = max(r, key=r.get)
             ko, label = _local_kickoff(f)
             now_eat = datetime.now(EAT)
-            if not matchstate.on_slate(ko, now_eat, days):
+            if ko is None or not (first <= ko.date() <= last):
                 continue                 # another day: "Today" must mean today
             started = bool(ko and ko <= now_eat)
             final = _recent_results().get((d, s["home"], s["away"]))
@@ -683,6 +695,41 @@ def api_tips_results(days: int = 14):
 def api_tips_freeze():
     """Freeze today's lists now, if not already frozen. Safe to repeat."""
     return _jsonable(_freeze_tips())
+
+
+def _day(s, default):
+    try:
+        return datetime.strptime(str(s)[:10], "%Y-%m-%d").date()
+    except (TypeError, ValueError):
+        return default
+
+
+@app.get("/api/coupon")
+def api_coupon(start: str | None = None, end: str | None = None,
+               style: str = "mixed", size: int = 20):
+    """A week's clear picks across a date range, one line per fixture.
+
+    The range is the reader's: Monday to Sunday by default, any window up to a
+    fortnight by request. Nothing is listed that does not clear its own
+    category's measured bar, so a quiet week is a short list rather than a
+    padded one.
+    """
+    today = datetime.now(EAT).date()
+    first = max(_day(start, today), today)
+    # Default: the rest of this week, Monday-to-Sunday as read locally.
+    last = _day(end, first + timedelta(days=6 - first.weekday()))
+    if last < first:
+        last = first
+    last = min(last, today + timedelta(days=COUPON_MAX_AHEAD))
+    slate = _cached_slate(0, None, first, last)
+    rows = [m for g in slate.get("groups", []) for m in g.get("matches", [])]
+    out = tips.coupon(rows, style=style, size=size)
+    out.update({"from": first.isoformat(), "to": last.isoformat(),
+                "days": (last - first).days + 1,
+                "fixtures_considered": len(rows),
+                "generated": slate.get("generated"),
+                "max_days_ahead": COUPON_MAX_AHEAD})
+    return _jsonable(out)
 
 
 @app.get("/api/record/verify")

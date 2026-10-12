@@ -48,6 +48,12 @@ SELECTIONS = {
     "over35":    ("pOver35", lambda b: b["over35"], "Over 3.5 goals", None),
     "btts_yes":  ("pBTTS", lambda b: b["btts"], "Both teams to score", None),
     "btts_no":   ("pBTTSno", lambda b: 1 - b["btts"], "No both teams to score", None),
+    # Total-goals bands, as the local coupons sell them
+    "band01":    ("pBand01", lambda b: (b["goals_total"] <= 1).astype(int), "0-1 goals", None),
+    "band23":    ("pBand23", lambda b: b["goals_total"].between(2, 3).astype(int), "2-3 goals", None),
+    "band46":    ("pBand46", lambda b: b["goals_total"].between(4, 6).astype(int), "4-6 goals", None),
+    "band13":    ("pBand13", lambda b: b["goals_total"].between(1, 3).astype(int), "1-3 goals", None),
+    "band24":    ("pBand24", lambda b: b["goals_total"].between(2, 4).astype(int), "2-4 goals", None),
 }
 
 THRESHOLDS = [0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]

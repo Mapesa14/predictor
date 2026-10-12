@@ -389,9 +389,10 @@ is what came in.
 | Double chance (1X / X2) | 80%+ | 89.0% | 87.5% | 88.1% | 5.9 |
 | Win (1 / 2) | 75% / 70%+ | 84.8% / 80.5% | 81.4% / 75.8% | 84.2% / 76.0% | 1.5 |
 | Over 2.5 goals | 65%+ | 71.5% | 70.9% | 68.8% | 2.2 |
+| Total goals 1-3 | 65%+ | 68.5% | 68.1% | 64.1% | 5.0 |
 | Both teams to score (GG) | 60%+ | 61.8% | 63.6% | 61.3% | 2.7 |
 
-Three more were measured and left out, which is the point of measuring:
+Five more were measured and left out, which is the point of measuring:
 
 - **Under 2.5 goals** — 67.6% at its bar, but 0.3 picks a matchday and a flat
   stake lost 2.8%.
@@ -399,6 +400,10 @@ Three more were measured and left out, which is the point of measuring:
 - **No GG** — the model said 62.5%, 57.5% came in, and one season managed
   46.7%. A "clear pick" that loses more often than it wins in a bad year is not
   a clear pick.
+- **Total goals 2-4** — 62.2%, honest but barely a lean, and GG already covers
+  that shelf.
+- **Narrow goal bands (0-1, 2-3, 4-6)** — not one of them cleared even the 55%
+  bar often enough to list.
 
 Each leg is measured separately, because the home-win bar and the away-win bar
 are not the same number. Only 1X2 carries a closing price in the feed, so the
@@ -408,6 +413,29 @@ and the screen says so where it is true.
 
 Categories are frozen and settled exactly like the 1X2 lists (see below), so
 each one builds its own public record from the day it is offered.
+
+### The coupon
+
+A week of clear picks in one list, at `/api/coupon` and under the Coupon tab:
+
+- **Any date range.** Monday to Sunday by default - today through the coming
+  Sunday - changeable to any window up to a fortnight ahead.
+- **Two styles.** *Match result only* lists nothing but wins and double
+  chances. *Mixed markets* draws on every category, including the goals lines,
+  the 1-3 band and GG.
+- **One line per fixture**, strongest first, so a coupon cannot stack three
+  bets on the same match and call that a spread.
+- **A spread rule.** No market may take more than 40% of the lines while
+  others qualify; without it every line is "over 0.5 goals", the most
+  confident selection on almost every fixture, and "mixed" means nothing. The
+  cap is relaxed only when nothing else clears its bar, and the note says so.
+- **Never padded.** A quiet week - an international break, say - gives a short
+  list and a line explaining why, rather than picks below their bar.
+- **The headline is how many land**, not that they all will: "the model
+  expects about 7.7 of these 10 to come in", with the chance of the whole list
+  landing stated plainly beside it.
+
+`predictor/tips.py` holds the rule; `tests/test_coupon.py` holds the promises.
 
 ### Tip results
 

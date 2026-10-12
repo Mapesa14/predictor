@@ -129,6 +129,12 @@ CATEGORIES = [
             "stake on every one of these lost 1.0% across four seasons.",
      "legs": [_leg("over25", "over25", "Over 2.5 goals",
                    0.65, 0.715, 0.709, 0.688, 1179, 2.2, -0.010)]},
+    {"key": "band13", "label": "Total goals 1-3", "short": "1-3 goals",
+     "max": 10,
+     "why": "At least one goal, at most three - the commonest scoreline band. "
+            "Well calibrated: the model said 68.1% and 68.5% came in.",
+     "legs": [_leg("band13", "band13", "1-3 goals",
+                   0.65, 0.685, 0.681, 0.641, 2681, 5.0)]},
     {"key": "btts", "label": "Both teams to score (GG)", "short": "GG",
      "max": 10,
      "why": "The weakest category offered, and the only one where the model "
@@ -146,6 +152,13 @@ CATEGORIES = [
 #                    managed 46.7%. A "clear pick" that loses more often than
 #                    it wins in a bad year is not a clear pick.
 NOT_OFFERED = [
+    {"label": "Total goals 2-4", "hit": 0.622, "model_said": 0.620,
+     "per_matchday": 11.5, "flat_return": None,
+     "why": "honest, but 62% is barely a lean and GG already covers that shelf"},
+    {"label": "Narrow goal bands (0-1, 2-3, 4-6)", "hit": None,
+     "model_said": None, "per_matchday": 0.0, "flat_return": None,
+     "why": "too narrow to be confident about: not one of them reached even "
+            "the 55% bar often enough to list"},
     {"label": "Under 2.5 goals", "hit": 0.676, "model_said": 0.675,
      "per_matchday": 0.3, "flat_return": -0.028,
      "why": "too rare to be a list, and a flat stake lost 2.8%"},
@@ -245,6 +258,113 @@ def categories(rows, now=None) -> list[dict]:
     return out
 
 
+# -------------------------------------------------------------- the coupon
+# A week's worth of clear picks, one line per fixture. Two rules keep it from
+# flattering itself, and both are reported rather than hidden:
+#
+#   * nothing is listed that does not clear its own category's measured bar,
+#     so a long list is short when the week is quiet;
+#   * no category may take more than CATEGORY_SHARE of the list while others
+#     are waiting. Without it every line is "over 0.5 goals" - the most
+#     confident selection on almost every fixture - and a mixed coupon is
+#     mixed in name only. The cap is relaxed only once nothing else qualifies,
+#     and the note says when that happened.
+STYLES = {
+    "normal": {"label": "Match result only",
+               "categories": ("win", "double_chance"),
+               "why": "Who wins, or the favourite not to lose."},
+    "mixed": {"label": "Mixed markets",
+              "categories": None,
+              "why": "Every category: match result, goals lines and GG."},
+}
+CATEGORY_SHARE = 0.4
+COUPON_MAX = 60
+
+
+def _leg_of(cat: dict, code: str) -> dict:
+    return next(l for l in cat["legs"] if l["code"] == code)
+
+
+def coupon(rows, style: str = "mixed", size: int = 20, now=None,
+           share: float = CATEGORY_SHARE) -> dict:
+    """One pick per fixture, strongest first, spread across categories."""
+    now = now or datetime.now(timezone.utc)
+    style = style if style in STYLES else "mixed"
+    want = STYLES[style]["categories"]
+    size = max(1, min(int(size or 20), COUPON_MAX))
+
+    pool = []
+    for cat in CATEGORIES:
+        if want is not None and cat["key"] not in want:
+            continue
+        for m in rows or []:
+            if m.get("comp"):              # cups: rotated line-ups
+                continue
+            for leg in cat["legs"]:
+                c = _cat_pick(m, leg, now)
+                if not c:
+                    continue
+                c["category"] = cat["key"]
+                c["category_label"] = cat["label"]
+                c["measured_hit"] = leg["hit"]
+                c["bar"] = leg["min"]
+                pool.append(c)
+    pool.sort(key=lambda c: (-c["p"], c["kickoff"] or ""))
+
+    cap = max(1, int(round(size * share)))
+    picks, used, per_cat, capped = [], set(), {}, 0
+    for pass_no in (1, 2):                 # second pass relaxes the spread cap
+        for c in pool:
+            if len(picks) >= size:
+                break
+            fixture = (c["div"], c["home"], c["away"], c["kickoff"])
+            if fixture in used:
+                continue
+            if pass_no == 1 and per_cat.get(c["category"], 0) >= cap:
+                capped += 1
+                continue
+            picks.append(c)
+            used.add(fixture)
+            per_cat[c["category"]] = per_cat.get(c["category"], 0) + 1
+        if len(picks) >= size:
+            break
+
+    ps = [c["p"] for c in picks]
+    notes = []
+    if len(picks) < size:
+        notes.append("Only %d selections clear their category's bar in this "
+                     "window. The list is not padded to reach %d."
+                     % (len(picks), size))
+    if capped and len(picks) >= size:
+        notes.append("%d further selections cleared their bar but were left "
+                     "out to keep any one market under %d of %d lines."
+                     % (capped, cap, size))
+    if picks:
+        notes.append("The model expects about %.1f of these %d to come in. "
+                     "All %d landing together is %s - a long list is a list, "
+                     "not an accumulator."
+                     % (sum(ps), len(ps), len(ps), _tiny(float(np.prod(ps)))))
+    return {
+        "style": style, "style_label": STYLES[style]["label"],
+        "style_why": STYLES[style]["why"], "size": size,
+        "picks": picks,
+        "expected_correct": round(sum(ps), 2) if ps else 0.0,
+        "all_win": float(np.prod(ps)) if ps else None,
+        "by_category": per_cat, "notes": notes,
+        "styles": [{"key": k, "label": v["label"], "why": v["why"]}
+                   for k, v in STYLES.items()],
+    }
+
+
+def _tiny(p: float) -> str:
+    """A probability a reader can feel, rather than 3e-07."""
+    if p >= 0.01:
+        return "%.0f%%" % (100 * p)
+    if p <= 0:
+        return "effectively zero"
+    return "about 1 in %s" % "{:,}".format(int(round(1 / p)))
+
+
 def _acca_p(ps: list) -> dict | None:
     return {"legs": len(ps), "all_win": float(np.prod(ps))} if ps else None
 
@@ -268,7 +388,12 @@ def selections(s: dict) -> dict:
         v = t.get(x) or {}
         return v.get(side)
 
-    return {"over05": line(0.5, "over"), "over15": line(1.5, "over"),
+    o05, o35 = line(0.5, "over"), line(3.5, "over")
+    return {"over05": o05, "over15": line(1.5, "over"),
+            # "total goals 1-3", as the local coupons sell it: at least one
+            # goal, at most three. No new market - it is the gap between two
+            # lines we already have.
+            "band13": (o05 - o35) if (o05 is not None and o35 is not None) else None,
             "over25": line(2.5, "over"), "under25": line(2.5, "under"),
             "over35": line(3.5, "over"),
             "btts_yes": b.get("yes"), "btts_no": b.get("no"),

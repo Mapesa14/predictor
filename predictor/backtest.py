@@ -62,6 +62,10 @@ def walk_forward(df, div: str, xi: float = 0.0018, min_train: int = 200,
         tot = tot_all[2.5]
         bt = markets.btts(m)
         dc = markets.double_chance(m)
+        # Total-goals bands, the "2-3 goals" market as sold locally. From the
+        # same matrix, so one walk-forward measures these too.
+        dist = markets._total_dist(m)
+        band = lambda lo, hi: float(dist[lo:hi + 1].sum())
         rows.append({
             "Div": div, "Date": date, "Home": mt["HomeTeam"], "Away": mt["AwayTeam"],
             "pH": r["H"], "pD": r["D"], "pA": r["A"],
@@ -72,6 +76,9 @@ def walk_forward(df, div: str, xi: float = 0.0018, min_train: int = 200,
             "pOver35": tot_all[3.5]["over"], "pUnder25": tot["under"],
             "pBTTSno": bt["no"],
             "p1X": dc["1X"], "pX2": dc["X2"], "p12": dc["12"],
+            "pBand01": band(0, 1), "pBand23": band(2, 3),
+            "pBand46": band(4, 6), "pBand7": float(dist[7:].sum()),
+            "pBand13": band(1, 3), "pBand24": band(2, 4),
             "mH": pr["H"], "mD": pr["D"], "mA": pr["A"],
             "expH": blam, "expA": bmu, "mExpH": lam, "mExpA": mu,
             "FTR": mt["FTR"], "goals": int(mt["FTHG"] + mt["FTAG"]),
@@ -80,6 +87,7 @@ def walk_forward(df, div: str, xi: float = 0.0018, min_train: int = 200,
             "over05": int(mt["FTHG"] + mt["FTAG"] > 0.5),
             "over15": int(mt["FTHG"] + mt["FTAG"] > 1.5),
             "over35": int(mt["FTHG"] + mt["FTAG"] > 3.5),
+            "goals_total": int(mt["FTHG"] + mt["FTAG"]),
             "btts": int(mt["FTHG"] > 0 and mt["FTAG"] > 0),
             "AvgH": mt.get("AvgH"), "AvgD": mt.get("AvgD"), "AvgA": mt.get("AvgA"),
             "AvgO25": mt.get("Avg>2.5"), "AvgU25": mt.get("Avg<2.5"),

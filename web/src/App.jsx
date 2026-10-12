@@ -814,6 +814,7 @@ function TopNav({ hash }) {
     ["#/market", "Model vs market"],
     ["#/club", "Club"],
     ["#/tips", "Tips"],
+    ["#/coupon", "Coupon"],
     ["#/record", "Record"],
     ["#/fixtures", "My fixtures", "soon"],
   ];
@@ -1472,6 +1473,129 @@ function Categories({ cats, source, notOffered }) {
 }
 
 
+const isoDay = (d) => d.toISOString().slice(0, 10);
+
+/** The rest of this week, Monday-to-Sunday as it is read locally. */
+function defaultRange() {
+  const now = new Date();
+  const end = new Date(now);
+  end.setDate(now.getDate() + ((7 - (now.getDay() || 7)) % 7));   // this Sunday
+  return [isoDay(now), isoDay(end)];
+}
+
+/** A week's clear picks: any date range, one style or mixed markets. */
+function CouponScreen() {
+  const [range, setRange] = useState(defaultRange);
+  const [style, setStyle] = useState("mixed");
+  const [size, setSize] = useState(20);
+  const [from, to] = range;
+  const url = api("/api/coupon?start=" + from + "&end=" + to + "&style=" + style + "&size=" + size);
+  const { loading, data, error } = useFetch(url);
+  const slow = useSlow(loading);
+
+  return (
+    <div>
+      <header className="masthead">
+        <div>
+          <h1>The <b>coupon</b></h1>
+          <p className="sub">Clear picks across a week, in the markets you choose</p>
+        </div>
+        <div className="tools"><Theme /></div>
+      </header>
+      <TopNav hash={window.location.hash} />
+      <DataHealth />
+
+      <div className="tools couponbar">
+        <label className="fieldinline">From
+          <input className="sel" type="date" value={from}
+            onChange={(e) => setRange([e.target.value, to])} />
+        </label>
+        <label className="fieldinline">To
+          <input className="sel" type="date" value={to} min={from}
+            onChange={(e) => setRange([from, e.target.value])} />
+        </label>
+        <select className="sel" value={style} onChange={(e) => setStyle(e.target.value)}>
+          <option value="mixed">Mixed markets</option>
+          <option value="normal">Match result only</option>
+        </select>
+        <select className="sel" value={size} onChange={(e) => setSize(Number(e.target.value))}>
+          {[10, 20, 30, 40, 50].map((n) => <option key={n} value={n}>{n} picks</option>)}
+        </select>
+      </div>
+
+      <p className="tipwarn">
+        A long list is a list, not an accumulator. These are the model's most
+        confident calls in each market, measured over four seasons — they are
+        not sure things, and backing all of them on one slip is how a good list
+        becomes a losing bet.
+      </p>
+
+      {loading && (
+        <Loading label="Building the coupon…" show={slow}>
+          <SkelTable rows={8} nums={3} />
+        </Loading>
+      )}
+      {error && <p className="note">Coupon failed to load: {error}</p>}
+
+      {data && !loading && (
+        <>
+          <p className="sumline">
+            <b>{data.picks.length}</b> picks from {data.fixtures_considered} fixtures,{" "}
+            {new Date(data.from + "T12:00:00").toLocaleDateString([], { day: "numeric", month: "short" })}
+            {" – "}
+            {new Date(data.to + "T12:00:00").toLocaleDateString([], { day: "numeric", month: "short" })}
+            {" · "}the model expects about <b>{data.expected_correct.toFixed(1)}</b> to come in.
+          </p>
+          {data.notes.map((n, i) => <p key={i} className="why">{n}</p>)}
+
+          {data.picks.length > 0 && (
+            <div className="tipwrap">
+              <table className="markets">
+                <thead>
+                  <tr>
+                    <th>Kick-off</th><th>Match</th><th>Pick</th>
+                    <th className="num">Model</th><th className="num">Type wins</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.picks.map((c, i) => (
+                    <tr key={i}>
+                      <td>{c.kickoff_label || String(c.kickoff || "").slice(0, 16).replace("T", " ")}</td>
+                      <td>
+                        <a href={"#/card?home=" + encodeURIComponent(c.home) + "&away=" +
+                          encodeURIComponent(c.away) + "&div=" + encodeURIComponent(c.div || "") +
+                          "&lg=" + encodeURIComponent(c.league || "")}>{c.home} v {c.away}</a>
+                        <div className="tipleague">{c.league}</div>
+                      </td>
+                      <td>
+                        <b>{c.side}</b>
+                        <div className="tipleague">{c.category_label}</div>
+                      </td>
+                      <td className="num">{pct(c.p)}</td>
+                      <td className="num">{pct1(c.measured_hit)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          <p className="why">
+            "Model" is this fixture's own probability; "type wins" is how often
+            that market came in at this bar over 8,230 measured matches. {data.style_why}
+          </p>
+        </>
+      )}
+
+      <p className="note" style={{ marginTop: 24, color: "var(--ink3)" }}>
+        18+ only · Gambling can be addictive. Play responsibly.
+      </p>
+      <p><a className="back" href="#/">← Today's fixtures</a></p>
+    </div>
+  );
+}
+
+
 function TipRecord({ label, r }) {
   if (!r || !r.n) return <li>{label}: nothing settled yet.</li>;
   return (
@@ -1760,6 +1884,7 @@ export default function App() {
   if (hash.startsWith("#/club")) return <ClubScreen />;
   if (hash.startsWith("#/card")) return <Card />;
   if (hash.startsWith("#/tips")) return <TipsScreen />;
+  if (hash.startsWith("#/coupon")) return <CouponScreen />;
   if (hash.startsWith("#/record")) return <RecordScreen />;
   if (hash.startsWith("#/settings")) return <SettingsScreen />;
   if (hash.startsWith("#/fixtures")) return <MyFixturesScreen />;
