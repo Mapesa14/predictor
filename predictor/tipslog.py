@@ -228,6 +228,9 @@ def freeze(slate_rows, root: str, now=None) -> dict:
     by_cat = {c["key"]: c["picks"] for c in out.get("categories", [])}
     for name in LISTS:
         picks = out[name] if name in BASE_LISTS else by_cat.get(name, [])
+        # Only what can be settled is frozen: a cup tie would sit pending for
+        # ever, and an unsettled pick in a record is a claim nobody can check.
+        picks = [c for c in picks if c.get("measured", True)]
         counts[name] = len(picks)
         for i, c in enumerate(picks, 1):
             ko = _kickoff(c.get("kickoff"))

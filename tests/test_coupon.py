@@ -86,16 +86,41 @@ def test_the_list_is_capped_at_the_size_asked_for():
     assert c["picks"] == sorted(c["picks"], key=lambda x: -x["p"])
 
 
+def test_measured_picks_come_before_the_labelled_ones():
+    """A European week must not push every pick with a record off the list."""
+    rows = mixed_week()
+    for m in rows[:12]:                       # most of the week is European
+        m["comp"] = "Champions League"
+    c = tips.coupon(rows, style="mixed", size=8, now=NOW)
+    flags = [p["measured"] for p in c["picks"]]
+    assert flags == sorted(flags, reverse=True), flags
+    assert any(p["measured"] for p in c["picks"])
+
+
 def test_a_size_beyond_the_maximum_is_clamped():
     c = tips.coupon(mixed_week(), size=5000, now=NOW)
     assert c["size"] == tips.COUPON_MAX
 
 
-def test_cup_ties_never_reach_the_coupon():
+def test_cup_ties_are_listed_but_carry_no_borrowed_record():
     rows = mixed_week()
     for m in rows:
-        m["comp"] = "League Cup"
-    assert tips.coupon(rows, size=20, now=NOW)["picks"] == []
+        m["comp"] = "Champions League"
+    c = tips.coupon(rows, size=20, now=NOW)
+    assert c["picks"], "a priced European tie belongs on the coupon"
+    assert c["unmeasured"] == len(c["picks"])
+    assert all(p["measured_hit"] is None for p in c["picks"])
+    assert any("no record behind them yet" in n for n in c["notes"])
+
+
+def test_a_mixed_coupon_says_how_many_lines_are_unmeasured():
+    rows = mixed_week()
+    rows[0]["comp"] = "Europa League"
+    c = tips.coupon(rows, size=20, now=NOW)
+    measured = [p for p in c["picks"] if p["measured"]]
+    assert measured and c["unmeasured"] == len(c["picks"]) - len(measured)
+    if c["unmeasured"]:
+        assert any("cup or European tie" in n for n in c["notes"])
 
 
 def test_a_match_already_under_way_is_not_offered():

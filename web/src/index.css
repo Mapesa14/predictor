@@ -489,3 +489,11 @@ html.native .btn { min-height: 44px; }
   letter-spacing: .08em; color: var(--ink3);
 }
 .fieldinline input { font: 400 13px var(--font-body); }
+
+/* A pick the model prices but nothing has measured: said once, quietly, on
+   every row it applies to. */
+.unmeasured {
+  font-style: normal; font: 700 9px var(--font-body); text-transform: uppercase;
+  letter-spacing: .06em; color: var(--amber); white-space: nowrap;
+  border: 1px solid var(--amber); padding: 1px 4px; margin-left: 6px;
+}

@@ -1274,6 +1274,16 @@ function TipTable({ rows, dc }) {
   );
 }
 
+/** A cup or European tie: priced by the same model, measured by nothing. */
+function Unmeasured({ c }) {
+  if (c.measured !== false) return null;
+  return (
+    <em className="unmeasured" title={"Priced like any other fixture, but every hit rate here was measured on domestic leagues. " + (c.comp || "This competition") + " has no record behind it yet."}>
+      not yet measured
+    </em>
+  );
+}
+
 const TIP_LISTS = ["bankers", "long_list", "unpriced", "avoid"];
 const TIP_LABEL = { bankers: "Bankers", long_list: "Long list", unpriced: "Unpriced", avoid: "Avoid" };
 const RES_MARK = { won: "✓", lost: "✗", void: "void", pending: "…" };
@@ -1440,7 +1450,10 @@ function Categories({ cats, source, notOffered }) {
                       "&lg=" + encodeURIComponent(c.league || "")}>{c.home} v {c.away}</a>
                     <div className="tipleague">{c.league}</div>
                   </td>
-                  <td><b>{c.side}</b></td>
+                  <td>
+                    <b>{c.side}</b> <Unmeasured c={c} />
+                    {c.comp && <div className="tipleague">{c.comp}</div>}
+                  </td>
                   <td className="num">{pct(c.p)}</td>
                   <td className="num">{c.market_p != null ? pct(c.market_p) : "—"}</td>
                 </tr>
@@ -1448,6 +1461,13 @@ function Categories({ cats, source, notOffered }) {
             </tbody>
           </table>
         </div>
+      )}
+
+      {cat.unmeasured > 0 && (
+        <p className="why">
+          <b>{cat.unmeasured}</b> of these {cat.unmeasured === 1 ? "is" : "are"} a
+          cup or European tie. {cat.unmeasured_note}
+        </p>
       )}
 
       {cat.accumulator && cat.accumulator.legs > 1 && (
@@ -1568,11 +1588,13 @@ function CouponScreen() {
                         <div className="tipleague">{c.league}</div>
                       </td>
                       <td>
-                        <b>{c.side}</b>
+                        <b>{c.side}</b> <Unmeasured c={c} />
                         <div className="tipleague">{c.category_label}</div>
                       </td>
                       <td className="num">{pct(c.p)}</td>
-                      <td className="num">{pct1(c.measured_hit)}</td>
+                      <td className="num">
+                        {c.measured_hit != null ? pct1(c.measured_hit) : "—"}
+                      </td>
                     </tr>
                   ))}
                 </tbody>

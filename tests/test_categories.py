@@ -98,11 +98,35 @@ def test_a_started_fixture_is_never_offered():
     assert all(not c["picks"] for c in out["categories"])
 
 
-def test_cup_ties_stay_out_of_the_categories():
+def test_a_cup_tie_is_offered_but_labelled_unmeasured():
+    """Every rate on the screen was measured on domestic leagues. A European or
+    cup tie is priced by the same model and by nothing that has been checked,
+    so it is offered with that said plainly rather than borrowing a number it
+    did not earn."""
     m = row("Man City", "Burnley", 2.6, 0.6)
-    m["comp"] = "League Cup"
+    m["comp"] = "Champions League"
     out = tips.build([m], now=NOW)
-    assert all(not c["picks"] for c in out["categories"])
+    picked = [c for cat_ in out["categories"] for c in cat_["picks"]]
+    assert picked, "a priced tie should still be offered"
+    assert all(c["measured"] is False and c["comp"] == "Champions League"
+               for c in picked)
+    assert any(c["unmeasured"] for c in out["categories"])
+
+
+def test_a_league_fixture_is_not_labelled_unmeasured():
+    out = tips.build([row("Man City", "Burnley", 2.6, 0.6)], now=NOW)
+    picked = [c for cat_ in out["categories"] for c in cat_["picks"]]
+    assert picked and all(c["measured"] is True and c["comp"] is None
+                          for c in picked)
+
+
+def test_an_unmeasured_pick_never_reaches_the_frozen_record(tmp_path):
+    """It cannot be settled - no results source carries cup results - so a
+    frozen row would sit pending for ever."""
+    m = row("Man City", "Burnley", 2.6, 0.6)
+    m["comp"] = "Champions League"
+    r = tipslog.freeze([m], str(tmp_path), now=NOW)
+    assert r["frozen"] and sum(r["counts"].values()) == 0
 
 
 def test_a_goals_pick_is_not_given_a_price_it_does_not_have():

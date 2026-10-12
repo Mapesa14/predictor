@@ -196,6 +196,12 @@ for _c in CATEGORIES:
 
 CATEGORY_MIN = {l["sel"]: l["min"] for c in CATEGORIES for l in c["legs"]}
 
+UNMEASURED_NOTE = (
+    "The model prices these the same way, but every hit rate on this screen "
+    "was measured on domestic leagues: cup and European ties have no record "
+    "behind them yet, and no results source to settle them against, so they "
+    "are marked and kept out of the published record until they do.")
+
 CATEGORY_SOURCE = ("walk-forward over 8,230 matches in the 10 top European "
                    "leagues, 2023/24 to 2026/27, measured 2026-10-09 "
                    "(scratch/eval_markets.py)")
@@ -224,10 +230,16 @@ def _cat_pick(m: dict, leg: dict, now) -> dict | None:
     code = leg["code"]
     # Only 1X2 carries a closing price in the feed. The goals lines and GG are
     # unpriced here, and say so rather than implying a check that never ran.
+    # Every rate on these screens was measured on domestic leagues. A cup or
+    # European tie is priced by the same model, and by nothing that has been
+    # checked - so it is offered, and it says so, rather than borrowing a
+    # number it did not earn.
+    comp = m.get("comp")
     return {"div": m.get("div"),
             "league": m.get("league") or leagues.name(m.get("div")),
             "kickoff": m.get("date"), "kickoff_label": m.get("kickoff_label"),
             "home": m.get("home"), "away": m.get("away"),
+            "comp": comp or None, "measured": not comp,
             "pick": code,
             "side": leg["label"] % {"home": m.get("home"), "away": m.get("away")},
             "p": p,
@@ -243,17 +255,19 @@ def categories(rows, now=None) -> list[dict]:
     for cat in CATEGORIES:
         picks = []
         for m in rows or []:
-            if m.get("comp"):          # cups: rotated line-ups, no settlement
-                continue
             for leg in cat["legs"]:
                 c = _cat_pick(m, leg, now)
                 if c:
                     picks.append(c)
-        picks.sort(key=lambda c: (-c["p"], c["kickoff"] or ""))
+        # Measured first, then the labelled ones. A European week is not
+        # allowed to push every pick with a record off the bottom of the list.
+        picks.sort(key=lambda c: (not c["measured"], -c["p"], c["kickoff"] or ""))
         picks = picks[:cat["max"]]
         out.append({"key": cat["key"], "label": cat["label"],
                     "short": cat["short"], "why": cat["why"],
                     "evidence": cat["evidence"], "picks": picks,
+                    "unmeasured": sum(1 for c in picks if not c["measured"]),
+                    "unmeasured_note": UNMEASURED_NOTE,
                     "accumulator": _acca_p([c["p"] for c in picks[:4]])})
     return out
 
@@ -298,18 +312,16 @@ def coupon(rows, style: str = "mixed", size: int = 20, now=None,
         if want is not None and cat["key"] not in want:
             continue
         for m in rows or []:
-            if m.get("comp"):              # cups: rotated line-ups
-                continue
             for leg in cat["legs"]:
                 c = _cat_pick(m, leg, now)
                 if not c:
                     continue
                 c["category"] = cat["key"]
                 c["category_label"] = cat["label"]
-                c["measured_hit"] = leg["hit"]
+                c["measured_hit"] = leg["hit"] if c["measured"] else None
                 c["bar"] = leg["min"]
                 pool.append(c)
-    pool.sort(key=lambda c: (-c["p"], c["kickoff"] or ""))
+    pool.sort(key=lambda c: (not c["measured"], -c["p"], c["kickoff"] or ""))
 
     cap = max(1, int(round(size * share)))
     picks, used, per_cat, capped = [], set(), {}, 0
@@ -330,7 +342,12 @@ def coupon(rows, style: str = "mixed", size: int = 20, now=None,
             break
 
     ps = [c["p"] for c in picks]
+    unmeasured = sum(1 for c in picks if not c["measured"])
     notes = []
+    if unmeasured:
+        notes.append("%d of these %s a cup or European tie. %s"
+                     % (unmeasured, "is" if unmeasured == 1 else "are",
+                        UNMEASURED_NOTE))
     if len(picks) < size:
         notes.append("Only %d selections clear their category's bar in this "
                      "window. The list is not padded to reach %d."
@@ -350,7 +367,7 @@ def coupon(rows, style: str = "mixed", size: int = 20, now=None,
         "picks": picks,
         "expected_correct": round(sum(ps), 2) if ps else 0.0,
         "all_win": float(np.prod(ps)) if ps else None,
-        "by_category": per_cat, "notes": notes,
+        "by_category": per_cat, "notes": notes, "unmeasured": unmeasured,
         "styles": [{"key": k, "label": v["label"], "why": v["why"]}
                    for k, v in STYLES.items()],
     }

@@ -308,9 +308,18 @@ we carry can price.
 
 Each tie is priced by the cross-league bridge: both clubs on their own league's
 ratings, the leagues put on one scale by offsets measured from past European
-matches. They appear on the slate under their competition, and stay out of the
-tip lists and the coupon, whose hit rates were measured on domestic leagues
-only.
+matches. They appear on the slate under their competition, and on the tip
+categories and the coupon **marked "not yet measured"**: every hit rate on
+those screens came from domestic leagues, and a cup tie has no record behind it
+to borrow. Three rules keep the label honest:
+
+- a labelled pick shows no hit rate at all, rather than its category's;
+- measured picks are ranked first, so a European week cannot push every pick
+  with a record off the bottom of the list;
+- nothing labelled enters the frozen lists or the public record, because no
+  results source settles a cup tie - it would sit pending for ever.
+
+They become measured the day a results source for these competitions exists.
 
 ### Tanzania
 
