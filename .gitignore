@@ -55,3 +55,7 @@ data/record/alerts.json
 
 # Screenshots and scratch images from a working session.
 scratch/*.png
+
+# European cup fixtures fetched from BBC Sport at runtime (service/bbc_fixtures.py).
+data/manual/fixtures_bbc.csv
+data/manual/fixtures_bbc.csv.tmp

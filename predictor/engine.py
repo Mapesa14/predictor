@@ -502,7 +502,8 @@ class Predictor:
         over = fixtures.default_overlay_dir()
         paths = [p for p in (fixtures_csv, cache) if p] + \
             sorted(glob.glob(os.path.join(over, "*.csv"))) + \
-            [os.path.join(os.path.dirname(over), fixtures.API_FILE)]
+            [os.path.join(os.path.dirname(over), fixtures.API_FILE),
+             os.path.join(os.path.dirname(over), fixtures.BBC_FILE)]
         key = tuple((p, os.path.getmtime(p)) if os.path.exists(p) else (p, None)
                     for p in paths)
         got = self.__dict__.get("_fx_cache")

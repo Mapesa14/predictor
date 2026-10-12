@@ -282,6 +282,36 @@ stay **out of the tips lists and the public record** — rotated line-ups make a
 favourite least reliable where a short list leans on it, and no cup results are
 loaded to settle against.
 
+### European cups, from BBC Sport
+
+football-data has never carried a Champions League tie, and API-Football - which
+did - is one suspended account away from taking the whole European programme
+with it. That happened on a Wednesday with Manchester City v Paris
+Saint-Germain and Roma v Real Madrid on the board, and the app showed neither.
+
+```bash
+python predict.py refresh-bbc --days 4
+```
+
+BBC Sport publishes each day's fixtures as server-rendered HTML: no key, no
+quota, nothing to suspend. The parser takes **only** the three UEFA club
+competitions - the domestic leagues keep coming from football-data, which
+carries the closing prices BBC does not, and two sources for one fixture is how
+a schedule starts contradicting itself. The feed and a league's own site both
+outrank it when they list the same match.
+
+Clubs are matched the way every other source is matched here: a hand-checked
+alias, the exact name, or one generic word dropped leaving exactly one club.
+Anything else is reported, never guessed - which is why a Champions League night
+lists sixteen ties and names Sabah FK and Slovan Bratislava as clubs no league
+we carry can price.
+
+Each tie is priced by the cross-league bridge: both clubs on their own league's
+ratings, the leagues put on one scale by offsets measured from past European
+matches. They appear on the slate under their competition, and stay out of the
+tip lists and the coupon, whose hit rates were measured on domestic leagues
+only.
+
 ### Tanzania
 
 The NBC Premier League has no feed behind it. openfootball's file stops in June

@@ -1146,6 +1146,23 @@ def cmd_refresh_fixtures_api(a):
                 print("   " + x)
 
 
+def cmd_refresh_bbc(a):
+    """European cup fixtures from BBC Sport. No key, no quota, no account."""
+    from service import bbc_fixtures
+    p = _pred(a)
+    r = bbc_fixtures.sync(a.root, p, days=a.days)
+    print("fetched: %s" % (", ".join(r["fetched"]) or "nothing"))
+    for e in r["errors"]:
+        print("   error: " + e)
+    if not r["written"]:
+        print("nothing written - the schedule on file is untouched (%s)" % r["file"])
+        return
+    print("wrote %d European fixtures %s -> %s"
+          % (r["rows"], r["by_comp"] or "", r["file"]))
+    for x in r["report"]["unresolved"][:40]:
+        print("   not matched: " + x)
+
+
 def cmd_tips(a):
     """The coming clear picks: short list, long list, and what to avoid."""
     from . import tips
@@ -1414,6 +1431,16 @@ def build_parser():
         os.path.dirname(__file__), os.pardir),
                    help="project root holding data/manual (default: the repo)")
     s.set_defaults(func=cmd_refresh_fixtures_api)
+
+    s = sub.add_parser("refresh-bbc",
+                       help="European cup fixtures (Champions League, Europa, "
+                            "Conference) from BBC Sport - no API key")
+    s.add_argument("--days", type=int, default=4,
+                   help="today and how many days after (default 4)")
+    s.add_argument("--root", default=os.path.join(
+        os.path.dirname(__file__), os.pardir),
+                   help="project root holding data/manual (default: the repo)")
+    s.set_defaults(func=cmd_refresh_bbc)
 
     s = sub.add_parser("tips",
                        help="clear picks: short list, long list, what to avoid")

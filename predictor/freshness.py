@@ -50,6 +50,7 @@ _LEVELS = {"ok": 0, "warn": 1, "stale": 2}
 # distrust today's predictions, and saying "this data is out of date" over a
 # perfectly current slate would train readers to ignore the warning.
 SCOPES = {"schedule": "data", "feed": "data", "api_fixtures": "data",
+          "bbc": "data",
           "tanzania": "data", "api_results": "data", "results": "data",
           "record": "publishing", "tips": "publishing"}
 
@@ -158,6 +159,10 @@ def report(data_root: str, repo: str, here: str, p=None, now=None) -> dict:
         os.path.join(here, "data", "manual", fixtures.API_FILE), now,
         warn=API_AGE_WARN, stale=API_AGE_STALE,
         fix="python predict.py refresh-fixtures-api --days 2 --with-yesterday"))
+    src.append(_source(
+        "bbc", "European cups (BBC Sport)",
+        os.path.join(here, "data", "manual", fixtures.BBC_FILE), now,
+        fix="python predict.py refresh-bbc --days 4"))
     src.append(_source(
         "tanzania", "NBC Premier League (ligikuu.co.tz)",
         os.path.join(here, "data", "manual", "TZ1.csv"), now,

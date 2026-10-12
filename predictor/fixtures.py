@@ -46,6 +46,10 @@ API_FILE = "fixtures_api.csv"
 # Final scores API-Football reported, for settling frozen tips (tipslog) where
 # the official results sources have nothing yet. Never fitted on.
 API_RESULTS_FILE = "results_api.csv"
+# European cup fixtures from BBC Sport (service/bbc_fixtures.py). football-data
+# has never carried a Champions League tie, so without this the European
+# programme is invisible whenever the API-Football account is unavailable.
+BBC_FILE = "fixtures_bbc.csv"
 
 
 def _norm(df: pd.DataFrame) -> pd.DataFrame:
@@ -145,8 +149,17 @@ def load_any(path: str | None, cache: str, overlay_dir: str | None = None,
             api = from_csv(api_file)
         except Exception:
             api = empty
+    bbc = empty
+    bbc_file = os.path.join(os.path.dirname(overlay_dir), BBC_FILE)
+    if os.path.isfile(bbc_file):
+        try:
+            bbc = from_csv(bbc_file)
+        except Exception:
+            bbc = empty
     extra = overlay(overlay_dir)
-    parts = [df for df in (api, base, extra) if len(df)]
+    # Later wins: the feed carries closing prices and a league's own site
+    # carries the kick-off, so both outrank a gap-filler.
+    parts = [df for df in (api, bbc, base, extra) if len(df)]
     if not parts:
         return base
     if len(parts) == 1:

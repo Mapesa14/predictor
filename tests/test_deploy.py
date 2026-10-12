@@ -137,10 +137,16 @@ def test_one_failing_refresh_step_does_not_stop_the_others(monkeypatch, tmp_path
     monkeypatch.setattr(svc, "_cached_slate", lambda days, league: {"groups": []})
     monkeypatch.setattr(svc.record, "publish",
                         lambda rows, root: {"written": 0, "total": 46})
+    # No step may reach the network from a test, and none may be assumed to
+    # run in a particular position: steps are independent by design.
+    from service import bbc_fixtures
+    monkeypatch.setattr(bbc_fixtures, "sync",
+                        lambda root, p, **k: {"rows": 0, "errors": []})
     done = svc._refresh_cycle()
     assert done[0].startswith("football-data failed")
-    assert done[1].startswith("tanzania: 10 results")
-    assert done[2].startswith("record:")
+    assert any(d.startswith("tanzania: 10 results") for d in done)
+    assert any(d.startswith("record:") for d in done)
+    assert any(d.startswith("bbc cups:") for d in done)
 
 
 def test_the_first_download_is_not_raced(monkeypatch, tmp_path):

@@ -103,6 +103,15 @@ def _refresh_cycle() -> list:
                     % (r["results"], r["fixtures"]))
     except Exception as e:
         done.append("tanzania failed: %r" % e)
+    try:
+        # No key and no quota, so this runs whatever else is unavailable: it is
+        # the only source of the European programme we have.
+        from service import bbc_fixtures
+        r = bbc_fixtures.sync(_HERE, predictor(), days=4)
+        done.append("bbc cups: %d fixtures%s" % (
+            r["rows"], (" (" + "; ".join(r["errors"]) + ")") if r["errors"] else ""))
+    except Exception as e:
+        done.append("bbc cups failed: %r" % e)
     if live.configured():
         # Before the record is published, so fixtures the feed has not listed
         # yet - midweek rounds, cups, African leagues - make it in.

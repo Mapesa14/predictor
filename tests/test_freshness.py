@@ -40,7 +40,8 @@ def tree(tmp_path, days_ahead=(0, 1), hours_old=1.0):
     (data / "E0.csv").write_text(
         "Div,Date,HomeTeam,AwayTeam,FTHG,FTAG\nE0,01/10/2026,A,B,1,0\n",
         encoding="utf-8")
-    for name in ("TZ1.csv", "fixtures_api.csv", "results_api.csv"):
+    for name in ("TZ1.csv", "fixtures_api.csv", "results_api.csv",
+                 "fixtures_bbc.csv"):
         (repo / "data" / "manual" / name).write_text("Div\nE0\n", encoding="utf-8")
     (repo / "data" / "record" / "predictions.csv").write_text("x\n", encoding="utf-8")
     for p in [data / "fixtures.csv", data / "E0.csv",
