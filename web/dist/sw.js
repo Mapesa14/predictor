@@ -1,8 +1,8 @@
-/* Bumped by the build (vite defines 1792764026254 into the app; this worker is
+/* Bumped by the build (vite defines 1792764787618 into the app; this worker is
    copied verbatim, so the id is stamped in at build time by build-sw.mjs).
    A fixed name meant a deploy never reached anyone already using the app:
    the shell was served from cache forever. */
-const CACHE = "predictor-1792764026254";
+const CACHE = "predictor-1792764787618";
 
 self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", (e) => {

@@ -141,3 +141,65 @@ def test_the_schedule_prefers_the_feed_over_this_filler(tmp_path):
     liv = fx[fx["HomeTeam"] == "Liverpool"]
     assert len(liv) == 1 and float(liv.iloc[0]["AvgH"]) == 2.10
     assert len(fx[fx["HomeTeam"] == "Real Madrid"]) == 1      # the gap, filled
+
+
+# ---------------------------------------------------------------- results
+DONE = (head("champions-league")
+        + '<span class="visually-hidden">Como 4 , Manchester United 1 at Full time</span>'
+        + '<span class="visually-hidden">Tottenham 0 , Liverpool 2 at Full time</span>'
+        + head("league-cup")      # a competition we do not take
+        + '<span class="visually-hidden">Reading 1 , Barnsley 0 at Full time</span>')
+
+
+def test_a_finished_tie_is_read_as_a_score():
+    got = bbc.parse_results(DONE)
+    assert {(g["home"], g["hg"], g["away"], g["ag"]) for g in got} == {
+        ("Como", 4, "Manchester United", 1), ("Tottenham", 0, "Liverpool", 2)}
+
+
+def test_extra_time_is_not_settled_as_a_ninety_minute_score():
+    """"After extra time" carries the aggregate; a 90-minute selection settled
+    on it would be quietly wrong."""
+    page = (head("champions-league")
+            + '<span class="visually-hidden">Warrenpoint 5 , Crusaders 2 After extra time</span>')
+    assert bbc.parse_results(page) == []
+
+
+def test_results_from_competitions_we_do_not_take_are_ignored():
+    assert all(g["home"] != "Reading" for g in bbc.parse_results(DONE))
+
+
+def test_results_are_written_with_the_clubs_we_know(tmp_path, p):  # noqa: F811
+    p.bridge = {"offsets": {"E0": 0.45, "SP1": 0.24}}
+    r = bbc.sync(str(tmp_path), p, days=1, back=1,
+                 now=pd.Timestamp("2026-10-23"), transport=lambda url: DONE)
+    assert r["results"] >= 1
+    got = pd.read_csv(bbc.results_file(str(tmp_path)))
+    row = got[got["HomeTeam"] == "Tottenham"].iloc[0]
+    assert (int(row["FTHG"]), int(row["FTAG"]), row["Status"]) == (0, 2, "FT")
+    assert row["Comp"] == "Champions League"
+
+
+def test_a_european_pick_is_settled_from_these_results(tmp_path, p):  # noqa: F811
+    """The whole point: a European tie now earns a win or a loss, not a
+    permanent "not yet measured"."""
+    from datetime import datetime, timezone
+    from predictor import markets, model, tips, tipslog
+    p.bridge = {"offsets": {"E0": 0.45}}
+    now = datetime(2026, 10, 23, 6, 0, tzinfo=timezone.utc)
+    s = markets.summary(model.score_matrix_from_rates(2.4, 0.6, -0.05))
+    tie = {"div": "E0", "league": "Champions League", "comp": "Champions League",
+           "date": "2026-10-23T22:00:00+03:00", "home": "Tottenham",
+           "away": "Liverpool", "p": {"1": s["result"]["H"], "X": s["result"]["D"],
+                                      "2": s["result"]["A"]},
+           "market": None, "markets": tips.selections(s)}
+    tipslog.freeze([tie], str(tmp_path), now=now)
+    bbc.sync(str(tmp_path), p, days=1, back=1, now=pd.Timestamp("2026-10-23"),
+             transport=lambda url: DONE)
+    settled = tipslog.settle(tipslog.load(str(tmp_path)),
+                             pd.DataFrame(columns=["Div", "Date", "HomeTeam",
+                                                   "AwayTeam", "FTHG", "FTAG"]),
+                             tipslog.api_results(str(tmp_path)))
+    row = settled[settled["list"] == tipslog.EUROPE].iloc[0]
+    assert row["status"] in ("won", "lost") and row["score"] == "0-2"
+    assert row["source"] == "api"        # a fetched final, not an official one

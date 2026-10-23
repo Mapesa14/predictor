@@ -59,3 +59,7 @@ scratch/*.png
 # European cup fixtures fetched from BBC Sport at runtime (service/bbc_fixtures.py).
 data/manual/fixtures_bbc.csv
 data/manual/fixtures_bbc.csv.tmp
+
+# Final scores for the European ties, fetched from BBC Sport at runtime.
+data/manual/results_bbc.csv
+data/manual/results_bbc.csv.tmp

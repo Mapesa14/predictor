@@ -1289,18 +1289,24 @@ function Unmeasured({ c }) {
   );
 }
 
+// The server decides what is frozen - the two 1X2 lists, every pick category,
+// and the cup and European ties in a list of their own. Hard-coding four here
+// hid the rest: they were being frozen and settled, and shown nowhere.
 const TIP_LISTS = ["bankers", "long_list", "unpriced", "avoid"];
 const TIP_LABEL = { bankers: "Bankers", long_list: "Long list", unpriced: "Unpriced", avoid: "Avoid" };
+const listsOf = (data) => (data && data.lists) || TIP_LISTS;
+const labelOf = (data, k) => ((data && data.labels && data.labels[k]) || TIP_LABEL[k] || k);
 const RES_MARK = { won: "✓", lost: "✗", void: "void", pending: "…" };
 const tally = (s) => (s && s.settled ? s.won + "/" + s.settled : "—");
 const signed = (v) => (v == null ? "—" : (v >= 0 ? "+" : "") + (v * 100).toFixed(1) + "%");
 const dayLabel = (d) => new Date(d + "T12:00:00").toLocaleDateString([], { weekday: "short", day: "numeric", month: "short" });
 
 /** One frozen day: every list as it was shown, each pick marked. */
-function TipDay({ d, open }) {
-  const shown = TIP_LISTS.filter((k) => d.lists[k].picks.length);
+function TipDay({ d, open, data }) {
+  const shown = listsOf(data).filter((k) => d.lists[k] && d.lists[k].picks.length);
   const line = ["bankers", "long_list"].filter((k) => d.lists[k].picks.length)
-    .map((k) => TIP_LABEL[k] + " " + tally(d.lists[k].stats)).join(" · ");
+    .filter((k) => d.lists[k])
+    .map((k) => labelOf(data, k) + " " + tally(d.lists[k].stats)).join(" · ");
   // East Africa Time, whatever the reader's clock: the freeze rule is stated in EAT.
   const at = new Date(d.frozen_at).toLocaleTimeString([], {
     hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Africa/Dar_es_Salaam" });
@@ -1320,7 +1326,7 @@ function TipDay({ d, open }) {
         return (
           <div key={k} className="tipwrap">
             <h3 className="tipdayh">
-              {TIP_LABEL[k]} — {s.settled ? s.won + " of " + s.settled + " won" : "none settled"}
+              {labelOf(data, k)} — {s.settled ? s.won + " of " + s.settled + " won" : "none settled"}
               {s.pending ? ", " + s.pending + " awaiting a result" : ""}
               {s.void ? ", " + s.void + " void" : ""}
             </h3>
@@ -1374,19 +1380,21 @@ function TipResults() {
             </tr>
           </thead>
           <tbody>
-            {TIP_LISTS.map((k) => {
+            {listsOf(data).filter((k) => data.totals[k]).map((k) => {
               const t = data.totals[k];
               const a = t.all;
               return (
                 <tr key={k}>
                   <td>
-                    {TIP_LABEL[k]}
+                    {labelOf(data, k)}
                     <div className="tipleague">7 days {tally(t["7"])} · 30 days {tally(t["30"])}</div>
                   </td>
                   <td className="num">{tally(a)}</td>
                   <td className="num">{a.hit != null ? pct1(a.hit) : "—"}</td>
                   <td className="num">{a.expected_hit != null ? pct1(a.expected_hit) : "—"}</td>
-                  <td className="num">{t.promised_hit != null ? pct1(t.promised_hit) : "—"}</td>
+                  <td className="num" title={t.promised_hit == null ? "Nothing measured this before it was offered - it is building its own record here" : ""}>
+                    {t.promised_hit != null ? pct1(t.promised_hit) : "not measured"}
+                  </td>
                   <td className="num">{signed(a.flat_return)}</td>
                 </tr>
               );
@@ -1403,7 +1411,7 @@ function TipResults() {
         {" "}{data.chain.ok ? "✓ Frozen lists unaltered (hash chain intact)." : "⚠ " + data.chain.note}
         {data.conflicts > 0 && <> {data.conflicts} result{data.conflicts === 1 ? "" : "s"} marked * — API-Football disagreed with the official score, which is the one used.</>}
       </p>
-      {data.days.map((d, i) => <TipDay key={d.day} d={d} open={i === 0} />)}
+      {data.days.map((d, i) => <TipDay key={d.day} d={d} open={i === 0} data={data} />)}
     </>
   );
 }

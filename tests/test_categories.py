@@ -120,13 +120,31 @@ def test_a_league_fixture_is_not_labelled_unmeasured():
                           for c in picked)
 
 
-def test_an_unmeasured_pick_never_reaches_the_frozen_record(tmp_path):
-    """It cannot be settled - no results source carries cup results - so a
-    frozen row would sit pending for ever."""
+def test_an_unmeasured_pick_is_frozen_in_a_list_of_its_own(tmp_path):
+    """BBC results settle these now, so they build a record from scratch -
+    kept apart, because mixing them into a category would change what that
+    category's measured rate is being compared against."""
     m = row("Man City", "Burnley", 2.6, 0.6)
     m["comp"] = "Champions League"
     r = tipslog.freeze([m], str(tmp_path), now=NOW)
-    assert r["frozen"] and sum(r["counts"].values()) == 0
+    assert r["counts"][tipslog.EUROPE] == 1
+    assert all(n == 0 for k, n in r["counts"].items() if k != tipslog.EUROPE)
+    log = tipslog.load(str(tmp_path))
+    rows = log[log["list"] != tipslog.DAY_MARK]
+    assert set(rows["list"]) == {tipslog.EUROPE}
+    assert tipslog.PROMISED[tipslog.EUROPE] is None     # nothing to live up to
+    assert tipslog.verify(str(tmp_path))["ok"]
+
+
+def test_one_line_per_european_fixture_however_many_categories_it_clears(tmp_path):
+    """The store holds one row per (day, list, fixture); a thrashing clears
+    five categories at once."""
+    m = row("Man City", "Burnley", 2.6, 0.6)
+    m["comp"] = "Champions League"
+    tipslog.freeze([m], str(tmp_path), now=NOW)
+    log = tipslog.load(str(tmp_path))
+    eu = log[log["list"] == tipslog.EUROPE]
+    assert len(eu) == 1 and eu.iloc[0]["home"] == "Man City"
 
 
 def test_a_goals_pick_is_not_given_a_price_it_does_not_have():

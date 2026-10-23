@@ -110,7 +110,8 @@ def test_cup_ties_are_listed_but_carry_no_borrowed_record():
     assert c["picks"], "a priced European tie belongs on the coupon"
     assert c["unmeasured"] == len(c["picks"])
     assert all(p["measured_hit"] is None for p in c["picks"])
-    assert any("no record behind them yet" in n for n in c["notes"])
+    note = " ".join(c["notes"])
+    assert "building a record from scratch" in note and "Cup and European" in note
 
 
 def test_a_mixed_coupon_says_how_many_lines_are_unmeasured():

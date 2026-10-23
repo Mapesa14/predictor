@@ -35,7 +35,11 @@ FREEZE_HOUR = int(os.environ.get("TIPS_FREEZE_HOUR", "10") or 10)
 BASE_LISTS = ("bankers", "long_list", "unpriced", "avoid")
 # The 1X2 lists, then one list per pick category (goals lines, double chance,
 # GG). A category is frozen and judged exactly like the others.
-LISTS = BASE_LISTS + tuple(c["key"] for c in tips.CATEGORIES)
+# Cup and European picks are frozen in one list of their own. They have no
+# pre-launch benchmark, and mixing them into a category's rows would quietly
+# change what that category's measured rate is being compared against.
+EUROPE = "europe"
+LISTS = BASE_LISTS + tuple(c["key"] for c in tips.CATEGORIES) + (EUROPE,)
 DAY_MARK = "_day"
 
 COLUMNS = ["frozen_at", "day", "list", "rank", "div", "league", "date",
@@ -76,11 +80,13 @@ PROMISED = {
     "avoid": tips.EVIDENCE["disagree_with_price"]["hit"],
 }
 PROMISED.update({c["key"]: c["evidence"]["hit"] for c in tips.CATEGORIES})
+PROMISED[EUROPE] = None          # nothing measured these before they were sold
 
 # What each list is called on screen, so a frozen row reads the same months on.
 LABELS = {"bankers": "Bankers", "long_list": "Long list",
           "unpriced": "Unpriced", "avoid": "Avoid"}
 LABELS.update({c["key"]: c["label"] for c in tips.CATEGORIES})
+LABELS[EUROPE] = "Cup and European ties"
 
 
 def path(root: str) -> str:
@@ -226,11 +232,22 @@ def freeze(slate_rows, root: str, now=None) -> dict:
                     "div": "", "home": "", "away": ""})
     counts = {}
     by_cat = {c["key"]: c["picks"] for c in out.get("categories", [])}
+    # One line per fixture in the European list: the same tie clears several
+    # categories, and the store holds one row per (day, list, fixture).
+    europe = {}
+    for cat in out.get("categories", []):
+        for c in cat["picks"]:
+            if c.get("measured", True):
+                continue
+            key = (c["div"], c["home"], c["away"])
+            if c["p"] > europe.get(key, {"p": -1})["p"]:
+                europe[key] = c
     for name in LISTS:
-        picks = out[name] if name in BASE_LISTS else by_cat.get(name, [])
-        # Only what can be settled is frozen: a cup tie would sit pending for
-        # ever, and an unsettled pick in a record is a claim nobody can check.
-        picks = [c for c in picks if c.get("measured", True)]
+        if name == EUROPE:
+            picks = sorted(europe.values(), key=lambda c: -c["p"])
+        else:
+            picks = out[name] if name in BASE_LISTS else by_cat.get(name, [])
+            picks = [c for c in picks if c.get("measured", True)]
         counts[name] = len(picks)
         for i, c in enumerate(picks, 1):
             ko = _kickoff(c.get("kickoff"))
@@ -261,16 +278,33 @@ def freeze(slate_rows, root: str, now=None) -> dict:
 
 
 # ------------------------------------------------------------- settlement
+_RESULT_COLS = ["Div", "Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG", "Status"]
+
+
 def api_results(root: str) -> pd.DataFrame:
-    """Final scores API-Football reported (service/fixtures_api.py)."""
-    f = os.path.join(root, "data", "manual", fixtures.API_RESULTS_FILE)
-    cols = ["Div", "Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG", "Status"]
-    if not os.path.isfile(f):
-        return pd.DataFrame(columns=cols)
-    df = pd.read_csv(f, dtype=str, keep_default_na=False, na_values=[""])
-    for c in ("FTHG", "FTAG"):
-        df[c] = pd.to_numeric(df[c], errors="coerce")
-    return df
+    """Final scores fetched from providers, for what the official sources lack.
+
+    Two files, one shape: API-Football's finals (service/fixtures_api.py) and
+    BBC Sport's (service/bbc_fixtures.py). The BBC file is the only thing that
+    settles a European tie, which is what lets those picks earn a record
+    instead of sitting on the lists for ever marked unmeasured.
+    """
+    parts = []
+    for name in (fixtures.API_RESULTS_FILE, fixtures.BBC_RESULTS_FILE):
+        f = os.path.join(root, "data", "manual", name)
+        if not os.path.isfile(f):
+            continue
+        try:
+            df = pd.read_csv(f, dtype=str, keep_default_na=False, na_values=[""])
+        except Exception:
+            continue
+        for c in ("FTHG", "FTAG"):
+            df[c] = pd.to_numeric(df.get(c), errors="coerce")
+        parts.append(df.reindex(columns=_RESULT_COLS))
+    if not parts:
+        return pd.DataFrame(columns=_RESULT_COLS)
+    return pd.concat(parts, ignore_index=True).drop_duplicates(
+        subset=["Div", "Date", "HomeTeam", "AwayTeam"], keep="last")
 
 
 def _index(df: pd.DataFrame, with_status: bool) -> dict:
@@ -439,6 +473,7 @@ def summary(root: str, official: pd.DataFrame, api: pd.DataFrame | None = None,
             totals[name][label] = stats(w)
     chain = record._check_chain(log, COLUMNS)
     return {"days": day_rows, "totals": totals, "freeze_hour": FREEZE_HOUR,
+            "lists": list(LISTS), "labels": dict(LABELS),
             "frozen_days": len(marks), "chain": chain,
             "backend": store(root).describe(),
             "min_judgeable": tips.MIN_JUDGEABLE,

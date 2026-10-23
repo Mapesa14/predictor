@@ -198,9 +198,11 @@ CATEGORY_MIN = {l["sel"]: l["min"] for c in CATEGORIES for l in c["legs"]}
 
 UNMEASURED_NOTE = (
     "The model prices these the same way, but every hit rate on this screen "
-    "was measured on domestic leagues: cup and European ties have no record "
-    "behind them yet, and no results source to settle them against, so they "
-    "are marked and kept out of the published record until they do.")
+    "was measured on domestic leagues, and no cup or European tie was in that "
+    "measurement. They are now frozen and settled in a list of their own, so "
+    "they are building a record from scratch - see Tips, Results, \u201cCup "
+    "and European ties\u201d. Until it is long enough to mean anything, they "
+    "carry no hit rate here.")
 
 CATEGORY_SOURCE = ("walk-forward over 8,230 matches in the 10 top European "
                    "leagues, 2023/24 to 2026/27, measured 2026-10-09 "

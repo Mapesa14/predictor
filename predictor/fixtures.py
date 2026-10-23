@@ -50,6 +50,9 @@ API_RESULTS_FILE = "results_api.csv"
 # has never carried a Champions League tie, so without this the European
 # programme is invisible whenever the API-Football account is unavailable.
 BBC_FILE = "fixtures_bbc.csv"
+# Final scores for those ties, from the same pages. Never fitted on: they
+# settle the frozen tip lists, which is how a European pick earns a record.
+BBC_RESULTS_FILE = "results_bbc.csv"
 
 
 def _norm(df: pd.DataFrame) -> pd.DataFrame:

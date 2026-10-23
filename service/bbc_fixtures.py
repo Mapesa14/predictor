@@ -58,6 +58,12 @@ _GAME = re.compile(r'>([^<>]{2,60}?) versus ([^<>]{2,60}?) kick off '
                    r'(\d{1,2}:\d{2})<')
 
 
+# A European round is played over two or three days; looking a few days back
+# catches the whole of it, and a score corrected after the night.
+RESULTS_BACK_DAYS = 4
+RESULTS_KEEP_DAYS = 180
+
+
 def file(root: str) -> str:
     return os.path.join(root, "data", "manual", fixtures.BBC_FILE)
 
@@ -115,7 +121,77 @@ def build_rows(items, p, day: str) -> tuple:
     return rows, report
 
 
-def sync(root: str, p, days: int = 3, now=None, transport=None) -> dict:
+# ---------------------------------------------------------------- results
+# A finished match reads "Como 4 , Manchester United 1 at Full time". Only
+# full time is taken: "After extra time" carries the aggregate, and settling a
+# 90-minute selection on a 120-minute score would be quietly wrong.
+_RESULT = re.compile(r'>([^<>]{2,60}?) (\d{1,2}) , ([^<>]{2,60}?) (\d{1,2}) '
+                     r'at Full time<')
+RESULT_COLUMNS = ["Div", "Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG",
+                  "Comp", "Status", "FetchedAt"]
+
+
+def results_file(root: str) -> str:
+    return os.path.join(root, "data", "manual", fixtures.BBC_RESULTS_FILE)
+
+
+def parse_results(page: str) -> list:
+    """[{comp, home, away, hg, ag}] for the competitions we take."""
+    heads = [(m.start(), m.group(1)) for m in _HEAD.finditer(page)]
+    out = []
+    for m in _RESULT.finditer(page):
+        slug = next((s for pos, s in reversed(heads) if pos < m.start()), None)
+        comp = COMPETITIONS.get(slug)
+        if not comp:
+            continue
+        home, hg, away, ag = m.groups()
+        out.append({"comp": comp, "home": _clean(home), "away": _clean(away),
+                    "hg": int(hg), "ag": int(ag)})
+    return out
+
+
+def build_results(items, p, day: str) -> tuple:
+    """Result rows for ties whose clubs we can name, and what we could not."""
+    rows, unresolved = [], []
+    when = pd.Timestamp(day).strftime("%Y-%m-%d")
+    for it in items:
+        h = fixtures_api.resolve_europe(p, it["home"])
+        a = fixtures_api.resolve_europe(p, it["away"])
+        if h is None or a is None:
+            unresolved.append("%s %d-%d %s (%s)" % (it["home"], it["hg"],
+                                                    it["ag"], it["away"],
+                                                    it["comp"]))
+            continue
+        rows.append({"Div": h[1], "Date": when, "HomeTeam": h[0],
+                     "AwayTeam": a[0], "FTHG": it["hg"], "FTAG": it["ag"],
+                     "Comp": it["comp"], "Status": "FT"})
+    return rows, unresolved
+
+
+def _write_results(root: str, rows: list, now) -> int:
+    """Merge new finals in; a corrected score replaces the one on file."""
+    if not rows:
+        return 0
+    new = pd.DataFrame(rows)
+    new["FetchedAt"] = pd.Timestamp(now).isoformat()
+    path = results_file(root)
+    if os.path.isfile(path):
+        old = pd.read_csv(path, dtype=str, keep_default_na=False, na_values=[""])
+        new = pd.concat([old.reindex(columns=RESULT_COLUMNS),
+                         new.reindex(columns=RESULT_COLUMNS)], ignore_index=True)
+    out = new.reindex(columns=RESULT_COLUMNS).drop_duplicates(
+        subset=["Div", "Date", "HomeTeam", "AwayTeam"], keep="last")
+    cutoff = (pd.Timestamp(now) - pd.Timedelta(days=RESULTS_KEEP_DAYS)).strftime("%Y-%m-%d")
+    out = out[out["Date"].astype(str) >= cutoff]
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    tmp = path + ".tmp"
+    out.to_csv(tmp, index=False)
+    os.replace(tmp, path)
+    return len(rows)
+
+
+def sync(root: str, p, days: int = 3, now=None, transport=None,
+         back: int = RESULTS_BACK_DAYS) -> dict:
     """Fetch the next few days and rewrite the BBC fixtures file.
 
     A day that could not be fetched keeps whatever the file already had, so a
@@ -127,19 +203,27 @@ def sync(root: str, p, days: int = 3, now=None, transport=None) -> dict:
         now = now.tz_convert("UTC").tz_localize(None)
     dates = [(now + timedelta(days=i)).strftime("%Y-%m-%d")
              for i in range(max(1, int(days)))]
-    rows, fetched, errors = [], [], []
-    report = {"unresolved": [], "no_bridge": []}
-    for day in dates:
+    # Yesterday and the days before it carry the scores, not fixtures.
+    past = [(now - timedelta(days=i)).strftime("%Y-%m-%d")
+            for i in range(1, max(0, int(back)) + 1)]
+    rows, results, fetched, errors = [], [], [], []
+    report = {"unresolved": [], "no_bridge": [], "results_unresolved": []}
+    for day in dates + past:
         try:
             page = fetch_day(day, transport)
         except Exception as e:
             errors.append("%s: %s" % (day, e))
             continue
-        fetched.append(day)
-        r, rep = build_rows(parse(page), p, day)
-        rows += r
-        for k, v in rep.items():
-            report[k].extend(v)
+        if day in dates:
+            fetched.append(day)
+            r, rep = build_rows(parse(page), p, day)
+            rows += r
+            for k, v in rep.items():
+                report[k].extend(v)
+        # Every page carries whatever has finished on it, today's included.
+        res, missed = build_results(parse_results(page), p, day)
+        results += res
+        report["results_unresolved"].extend(missed)
 
     path = file(root)
     out = pd.DataFrame(rows, columns=COLUMNS)
@@ -157,7 +241,9 @@ def sync(root: str, p, days: int = 3, now=None, transport=None) -> dict:
         tmp = path + ".tmp"
         out.to_csv(tmp, index=False)
         os.replace(tmp, path)
+    n_results = _write_results(root, results, now)
     return {"fetched": fetched, "errors": errors, "rows": int(len(out)),
+            "results": n_results, "results_file": results_file(root),
             "written": bool(fetched), "file": path, "report": report,
             "by_comp": dict(pd.Series([r["Comp"] for r in rows]).value_counts())
             if rows else {}}

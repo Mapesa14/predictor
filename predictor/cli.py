@@ -1159,6 +1159,7 @@ def cmd_refresh_bbc(a):
         return
     print("wrote %d European fixtures %s -> %s"
           % (r["rows"], r["by_comp"] or "", r["file"]))
+    print("final scores kept: %d -> %s" % (r["results"], r["results_file"]))
     for x in r["report"]["unresolved"][:40]:
         print("   not matched: " + x)
 

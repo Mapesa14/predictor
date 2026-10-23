@@ -319,7 +319,19 @@ to borrow. Three rules keep the label honest:
 - nothing labelled enters the frozen lists or the public record, because no
   results source settles a cup tie - it would sit pending for ever.
 
-They become measured the day a results source for these competitions exists.
+That source now exists. The same BBC pages carry the finals - "Como 4 ,
+Manchester United 1 at Full time" - and `refresh-bbc` keeps them in
+`data/manual/results_bbc.csv`, looking a few days back so a round played over
+three nights is caught whole. Only full time is taken: "After extra time"
+carries the aggregate, and settling a 90-minute selection on a 120-minute
+score would be quietly wrong.
+
+So European ties are frozen and settled like everything else, in **one list of
+their own** - mixing them into a category would change what that category's
+measured rate is being compared against. One line per fixture, because a
+thrashing clears five categories at once. The Results screen shows that list
+beside the others, with "not measured" where a benchmark would be, and it
+fills from the next round played.
 
 ### Tanzania
 
