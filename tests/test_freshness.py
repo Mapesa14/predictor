@@ -222,3 +222,40 @@ def test_a_reader_is_not_warned_about_background_tasks(tmp_path):
     rep = freshness.report(str(data), str(repo), str(repo), now=NOW)
     assert rep["data_level"] == "ok"
     assert rep["publishing_level"] == "stale" and rep["overall"] == "stale"
+
+
+# ------------------------------------------------------- the provider said no
+def test_a_suspended_account_is_named_not_papered_over(tmp_path, monkeypatch):
+    """Telling a reader to run a command while the account is suspended makes
+    the product look broken rather than blocked."""
+    from service import live
+    monkeypatch.setattr(live, "configured", lambda: True)
+    monkeypatch.setattr(live, "status", lambda: {
+        "enabled": True,
+        "last_result": 'error: {"access": "Your account is suspended."}'})
+    data, repo = tree(tmp_path)
+    rep = freshness.report(str(data), str(repo), str(repo), now=NOW)
+    api = [s for s in rep["sources"] if s["key"].startswith("api_")]
+    assert api and all("suspended" in s["note"] for s in api)
+    assert all("dashboard.api-football.com" in s["fix"] for s in api)
+    assert all("predict.py" not in s["fix"] for s in api)
+
+
+def test_a_healthy_provider_leaves_the_ordinary_fix_in_place(tmp_path, monkeypatch):
+    from service import live
+    monkeypatch.setattr(live, "configured", lambda: True)
+    monkeypatch.setattr(live, "status", lambda: {"enabled": True,
+                                                 "last_result": "ok: 3 live"})
+    data, repo = tree(tmp_path)
+    rep = freshness.report(str(data), str(repo), str(repo), now=NOW)
+    api = [s for s in rep["sources"] if s["key"] == "api_fixtures"][0]
+    assert "refresh-fixtures-api" in api["fix"] and api["note"] == ""
+
+
+def test_a_missing_key_is_said_plainly(tmp_path, monkeypatch):
+    from service import live
+    monkeypatch.setattr(live, "configured", lambda: False)
+    data, repo = tree(tmp_path)
+    rep = freshness.report(str(data), str(repo), str(repo), now=NOW)
+    api = [s for s in rep["sources"] if s["key"] == "api_results"][0]
+    assert "LIVE_API_KEY" in api["note"]

@@ -1,39 +1,33 @@
 Div,Date,Time,HomeTeam,AwayTeam
-TZ1,12/10/2026,18:00,Coastal Union FC,Singida Black Stars FC
-TZ1,13/10/2026,19:00,Simba SC,Mashujaa FC
-TZ1,13/10/2026,16:00,TRA United SC,Young Africans SC
-TZ1,16/10/2026,16:00,Singida Fountain Gate FC,Pamba Jiji FC
-TZ1,16/10/2026,19:00,Geita Gold FC,Dodoma Jiji FC
-TZ1,17/10/2026,19:00,Kagera Sugar FC,Polisi Tanzania
-TZ1,18/10/2026,19:00,JKT Tanzania FC,Mbeya City FC
 TZ1,23/10/2026,16:00,Polisi Tanzania,Pamba Jiji FC
-TZ1,24/10/2026,18:00,JKT Tanzania FC,Kagera Sugar FC
 TZ1,24/10/2026,20:30,Namungo FC,Coastal Union FC
+TZ1,24/10/2026,16:00,TRA United SC,Young Africans SC
+TZ1,24/10/2026,18:00,JKT Tanzania FC,Kagera Sugar FC
 TZ1,26/10/2026,19:00,Geita Gold FC,Singida Fountain Gate FC
-TZ1,27/10/2026,21:00,Dodoma Jiji FC,JKT Tanzania FC
 TZ1,27/10/2026,18:30,Young Africans SC,Mashujaa FC
+TZ1,27/10/2026,21:00,Dodoma Jiji FC,JKT Tanzania FC
+TZ1,28/10/2026,21:00,Coastal Union FC,Kagera Sugar FC
 TZ1,28/10/2026,16:00,Singida Fountain Gate FC,Simba SC
 TZ1,28/10/2026,18:30,Azam FC,Mbeya City FC
-TZ1,28/10/2026,21:00,Coastal Union FC,Kagera Sugar FC
-TZ1,29/10/2026,14:00,Pamba Jiji FC,Singida Black Stars FC
-TZ1,29/10/2026,16:00,TRA United SC,Geita Gold FC
 TZ1,29/10/2026,19:00,Namungo FC,Polisi Tanzania
-TZ1,31/10/2026,21:00,Coastal Union FC,Dodoma Jiji FC
+TZ1,29/10/2026,16:00,TRA United SC,Geita Gold FC
+TZ1,29/10/2026,14:00,Pamba Jiji FC,Singida Black Stars FC
 TZ1,31/10/2026,18:30,JKT Tanzania FC,Azam FC
-TZ1,01/11/2026,19:00,Young Africans SC,Kagera Sugar FC
+TZ1,31/10/2026,21:00,Coastal Union FC,Dodoma Jiji FC
 TZ1,01/11/2026,16:00,Polisi Tanzania,Geita Gold FC
+TZ1,01/11/2026,19:00,Young Africans SC,Kagera Sugar FC
 TZ1,02/11/2026,14:00,TRA United SC,Singida Fountain Gate FC
 TZ1,02/11/2026,16:15,Mbeya City FC,Singida Black Stars FC
 TZ1,02/11/2026,16:15,Mashujaa FC,Pamba Jiji FC
 TZ1,02/11/2026,19:00,Simba SC,Namungo FC
-TZ1,20/11/2026,18:30,Namungo FC,Mbeya City FC
-TZ1,20/11/2026,16:00,Polisi Tanzania,Young Africans SC
 TZ1,20/11/2026,21:00,Azam FC,Singida Black Stars FC
-TZ1,21/11/2026,18:30,JKT Tanzania FC,Simba SC
+TZ1,20/11/2026,16:00,Polisi Tanzania,Young Africans SC
+TZ1,20/11/2026,18:30,Namungo FC,Mbeya City FC
 TZ1,21/11/2026,16:00,Pamba Jiji FC,Coastal Union FC
+TZ1,21/11/2026,18:30,JKT Tanzania FC,Simba SC
 TZ1,21/11/2026,21:00,Dodoma Jiji FC,Singida Fountain Gate FC
-TZ1,22/11/2026,20:30,Geita Gold FC,Mashujaa FC
 TZ1,22/11/2026,18:00,Kagera Sugar FC,TRA United SC
+TZ1,22/11/2026,20:30,Geita Gold FC,Mashujaa FC
 TZ1,27/11/2026,16:00,Pamba Jiji FC,Namungo FC
 TZ1,27/11/2026,19:00,Kagera Sugar FC,Dodoma Jiji FC
 TZ1,28/11/2026,16:00,Mashujaa FC,TRA United SC
@@ -41,41 +35,41 @@ TZ1,29/11/2026,19:00,Geita Gold FC,Coastal Union FC
 TZ1,04/12/2026,14:00,TRA United SC,Polisi Tanzania
 TZ1,04/12/2026,16:15,Mbeya City FC,Pamba Jiji FC
 TZ1,05/12/2026,19:00,Coastal Union FC,Singida Fountain Gate FC
-TZ1,06/12/2026,19:00,Kagera Sugar FC,Namungo FC
 TZ1,06/12/2026,16:00,Mashujaa FC,JKT Tanzania FC
+TZ1,06/12/2026,19:00,Kagera Sugar FC,Namungo FC
 TZ1,11/12/2026,14:00,Pamba Jiji FC,Kagera Sugar FC
 TZ1,11/12/2026,16:15,Mbeya City FC,Coastal Union FC
 TZ1,11/12/2026,16:15,TRA United SC,Simba SC
+TZ1,12/12/2026,21:00,Azam FC,Dodoma Jiji FC
 TZ1,12/12/2026,16:00,Singida Fountain Gate FC,Polisi Tanzania
 TZ1,12/12/2026,18:30,Singida Black Stars FC,Young Africans SC
-TZ1,12/12/2026,21:00,Azam FC,Dodoma Jiji FC
-TZ1,13/12/2026,19:00,Geita Gold FC,JKT Tanzania FC
 TZ1,13/12/2026,16:00,Mashujaa FC,Namungo FC
-TZ1,29/12/2026,21:00,Dodoma Jiji FC,TRA United SC
-TZ1,29/12/2026,18:30,Kagera Sugar FC,Pamba Jiji FC
+TZ1,13/12/2026,19:00,Geita Gold FC,JKT Tanzania FC
 TZ1,29/12/2026,16:00,Namungo FC,Singida Black Stars FC
-TZ1,30/12/2026,16:00,Singida Fountain Gate FC,Geita Gold FC
+TZ1,29/12/2026,18:30,Kagera Sugar FC,Pamba Jiji FC
+TZ1,29/12/2026,21:00,Dodoma Jiji FC,TRA United SC
 TZ1,30/12/2026,19:00,Azam FC,Young Africans SC
+TZ1,30/12/2026,16:00,Singida Fountain Gate FC,Geita Gold FC
+TZ1,31/12/2026,21:00,Coastal Union FC,Mbeya City FC
 TZ1,31/12/2026,16:00,Polisi Tanzania,Simba SC
 TZ1,31/12/2026,18:30,JKT Tanzania FC,Mashujaa FC
-TZ1,31/12/2026,21:00,Coastal Union FC,Mbeya City FC
 TZ1,15/01/2027,18:00,JKT Tanzania FC,Dodoma Jiji FC
 TZ1,16/01/2027,16:00,TRA United SC,Coastal Union FC
 TZ1,16/01/2027,19:00,Geita Gold FC,Pamba Jiji FC
 TZ1,17/01/2027,16:00,Mashujaa FC,Mbeya City FC
 TZ1,22/01/2027,19:00,Dodoma Jiji FC,Mbeya City FC
 TZ1,23/01/2027,19:00,Namungo FC,Kagera Sugar FC
-TZ1,24/01/2027,14:00,Pamba Jiji FC,Mashujaa FC
 TZ1,24/01/2027,16:15,TRA United SC,JKT Tanzania FC
+TZ1,24/01/2027,14:00,Pamba Jiji FC,Mashujaa FC
 TZ1,01/02/2027,14:00,TRA United SC,Singida Black Stars FC
 TZ1,02/02/2027,14:00,Mashujaa FC,Geita Gold FC
 TZ1,02/02/2027,16:15,TRA United SC,Pamba Jiji FC
 TZ1,02/02/2027,19:00,Coastal Union FC,Simba SC
+TZ1,03/02/2027,16:00,Mbeya City FC,Namungo FC
 TZ1,03/02/2027,18:30,Singida Black Stars FC,Kagera Sugar FC
 TZ1,03/02/2027,21:00,Young Africans SC,Polisi Tanzania
-TZ1,03/02/2027,16:00,Mbeya City FC,Namungo FC
-TZ1,04/02/2027,20:30,Dodoma Jiji FC,Azam FC
 TZ1,04/02/2027,18:00,JKT Tanzania FC,Singida Fountain Gate FC
+TZ1,04/02/2027,20:30,Dodoma Jiji FC,Azam FC
 TZ1,06/02/2027,19:00,Young Africans SC,Simba SC
 TZ1,07/02/2027,16:00,Polisi Tanzania,TRA United SC
 TZ1,07/02/2027,18:30,Kagera Sugar FC,Mbeya City FC

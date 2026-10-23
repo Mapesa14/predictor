@@ -144,6 +144,40 @@ def schedule_cover(data_root: str, here: str, now=None) -> dict:
                    "refresh-fixtures-api --days 2 --with-yesterday"}
 
 
+def provider_problem() -> tuple:
+    """What API-Football last said, when what it said was no.
+
+    Telling a reader to run `refresh-fixtures-api` while the account is
+    suspended is worse than saying nothing: the command fails the same way
+    every time, and the screen looks broken rather than blocked. Returns
+    (note, fix) or (None, None) when the provider is fine.
+    """
+    try:                      # local import: service imports predictor, not back
+        from service import live
+    except Exception:
+        return None, None
+    try:
+        if not live.configured():
+            return ("No LIVE_API_KEY is set, so these never refresh.",
+                    "Set LIVE_API_KEY in .env")
+        st = live.status()
+        last = str(st.get("last_result") or "")
+        low = last.lower()
+        if "suspend" in low:
+            return ("API-Football has suspended the account, so every request "
+                    "is refused - no command here can fix that.",
+                    "Check the account at https://dashboard.api-football.com")
+        if "rate-limited" in low or "limit" in low:
+            return ("API-Football is rate-limiting the key; it clears on its "
+                    "own.", "")
+        if low.startswith("error:") or low.startswith("unsent:") or \
+                low.startswith("network:"):
+            return ("API-Football last answered: %s" % last[:120], "")
+    except Exception:
+        return None, None
+    return None, None
+
+
 def report(data_root: str, repo: str, here: str, p=None, now=None) -> dict:
     """Every source, how long since it arrived, and what to run if it stopped."""
     now = _now(now)
@@ -183,6 +217,11 @@ def report(data_root: str, repo: str, here: str, p=None, now=None) -> dict:
     if p is not None:
         src.append(_results_note(p))
 
+    note, fix = provider_problem()
+    if note:
+        for s in src:
+            if s["key"].startswith("api_"):
+                s["note"], s["fix"] = note, fix
     for s in src:
         s["scope"] = SCOPES.get(s["key"], "data")
     return {"generated": now.isoformat(),

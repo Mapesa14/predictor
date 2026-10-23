@@ -302,7 +302,12 @@ function DataHealth() {
       </button>
       {open && (
         <ul className="freshfix">
-          {bad.concat(behind).filter((s) => s.fix).map((s) => <li key={s.key}><code>{s.fix}</code></li>)}
+          {/* one line per distinct remedy: two sources from one provider
+              were listing the same command twice. */}
+          {[...new Set(bad.concat(behind).map((s) => s.fix).filter(Boolean))].map((fix) => (
+            <li key={fix}>{/^https?:/.test(fix) || !/^python /.test(fix)
+              ? fix : <code>{fix}</code>}</li>
+          ))}
           <li>Or deploy the service, which refreshes itself every 6 hours.</li>
         </ul>
       )}
